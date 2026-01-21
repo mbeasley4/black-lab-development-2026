@@ -12,8 +12,6 @@ export const metadata = {
     "Technical strategy, performance, and platform engineering insights from Black Lab Development.",
 };
 
-// export const runtime = "nodejs";
-
 export default async function ArticlesPage() {
   await dbConnect();
 

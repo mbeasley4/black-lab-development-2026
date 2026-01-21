@@ -4,6 +4,7 @@ import HomepageHero from "@/components/HomepageHero";
 import IndustriesWeServe from "@/components/IndustriesWeServe";
 import ServicesSnapshot from "@/components/ServicesSnapshot";
 import TechnologiesExperience from "@/components/TechnologiesExperiences";
+import ArticlesBlock from '@/components/ArticlesBlock';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <IndustriesWeServe />
       <CaseStudies />
       <TechnologiesExperience />
+      <ArticlesBlock />
       <CallToAction />
     </div>
   );

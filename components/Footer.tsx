@@ -22,8 +22,8 @@ export default function Footer() {
                         Explore
                     </h4>
                     <ul className="space-y-3 text-sm">
-                        <li><Link href="/industries" className="hover:text-neutral-200">Industries</Link></li>
                         <li><Link href="/services" className="hover:text-neutral-200">Services</Link></li>
+                        <li><Link href="/industries" className="hover:text-neutral-200">Industries</Link></li>
                         <li><Link href="/work" className="hover:text-neutral-200">Work</Link></li>
                         <li><Link href="/articles" className="hover:text-neutral-200">Articles</Link></li>
                         <li><Link href="/contact" className="hover:text-neutral-200">Contact</Link></li>

@@ -12,8 +12,8 @@ export default function Header() {
     const [mobileOpen, setMobileOpen] = useState(false);
 
     const navItems = [
-        ["Industries", "/industries"],
         ["Services", "/services"],
+        ["Industries", "/industries"],
         ["Work", "/work"],
         ["Articles", "/articles"],
         ["Contact", "/contact"],
