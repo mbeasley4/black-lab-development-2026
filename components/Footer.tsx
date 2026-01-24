@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="mx-auto max-w-[1500px] px-6 py-24 grid grid-cols-1 md:grid-cols-12 gap-y-16">
 
                 {/* Brand / Description */}
-                <div className="md:col-span-4">
+                <div className="md:col-span-3">
                     <h3 className="text-neutral-200 text-[15px] font-medium uppercase tracking-wide mb-6">
                         Black Lab Development
                     </h3>
@@ -17,7 +17,7 @@ export default function Footer() {
                 </div>
 
                 {/* Navigation */}
-                <div className="md:col-span-4">
+                <div className="md:col-span-3">
                     <h4 className="text-neutral-300 text-xs uppercase tracking-widest mb-5">
                         Explore
                     </h4>
@@ -31,7 +31,7 @@ export default function Footer() {
                 </div>
 
                 {/* Navigation */}
-                <div className="md:col-span-4">
+                <div className="md:col-span-3">
                     <h4 className="text-neutral-300 text-xs uppercase tracking-widest mb-5">
                         Utilities
                     </h4>
@@ -42,7 +42,7 @@ export default function Footer() {
                 </div>
 
                 {/* Contact */}
-                <div className="md:col-span-4">
+                <div className="md:col-span-3">
                     <h4 className="text-neutral-300 text-xs uppercase tracking-widest mb-5">
                         Contact
                     </h4>
