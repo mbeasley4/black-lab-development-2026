@@ -8,16 +8,29 @@ export const metadata = {
 
 const projects = [
   {
-    name: "Whole30",
-    logo: "/images/work/whole30-logo.png",
-    screenshot: "/images/work/whole30-screenshot.png",
+    name: "Blum Media Group",
+    logo: "/images/work/blum-logo.png",
+    screenshot: "/images/work/blum-screenshot.png",
     summary:
-      "Ongoing engineering and platform optimization for a high-traffic consumer brand with complex content, SEO, and performance requirements.",
+      "Designed and developed a modern, high-performance marketing website using Next.js and Vercel for fast load times, scalability, and streamlined content delivery.",
     details: [
-      "Custom WordPress architecture",
-      "SEO & Core Web Vitals optimization",
-      "High-traffic performance tuning",
-      "Custom tooling and integrations",
+      "Next.js application development",
+      "Vercel hosting and deployment pipeline",
+      "Performance and SEO optimization",
+      "Responsive UI and component-based architecture",
+    ],
+  },
+  {
+    name: "Seven Hills School",
+    logo: "/images/work/7hills-logo-v2.png",
+    screenshot: "/images/work/7hills-screenshot.jpg",
+    summary:
+      "Designed and built a custom interactive campus map plugin for WordPress, delivering an intuitive user experience backed by performant PHP and JavaScript architecture.",
+    details: [
+      "Custom WordPress plugin development",
+      "Interactive map UI built with JavaScript",
+      "Dynamic data management via WordPress admin",
+      "Performance-optimized PHP backend integration",
     ],
   },
   {
@@ -101,11 +114,37 @@ const projects = [
     logo: "/images/work/mona-logo.png",
     screenshot: "/images/work/mona-screenshot.png",
     summary:
-      "Engineering support for a fintech platform requiring reliability, scalability, and clean integration between systems.",
+      "Ongoing WordPress engineering and WooCommerce support to maintain a reliable, high-performing patient and product experience.",
     details: [
-      "Custom WordPress Plugin",
-      "API Integration",
-      "Technical leadership and execution",
+      "WordPress maintenance and feature development",
+      "WooCommerce configuration and support",
+      "Performance, security, and reliability improvements",
+    ],
+  },
+  {
+    name: "Zero Gravity",
+    logo: "/images/work/zerogravity-logo.png",
+    screenshot: "/images/work/zerogravity-screenshot.png",
+    summary:
+      "Modernized a WordPress-based digital presence through Elementor cleanup, technical SEO improvements, and eCommerce support to enhance performance and user experience.",
+    details: [
+      "Elementor structure and styling refactor",
+      "Technical SEO and site health optimization",
+      "Page speed and Core Web Vitals improvements",
+      "WooCommerce configuration and support",
+    ],
+  },
+  {
+    name: "Plastech Molding",
+    logo: "/images/work/plastechmold-logo.png",
+    screenshot: "/images/work/plastechmold-screenshot.png",
+    summary:
+      "Built and maintained a custom WordPress theme delivering a responsive, search-optimized website to support manufacturing brand visibility and lead generation.",
+    details: [
+      "Custom WordPress theme development",
+      "Responsive design implementation",
+      "SEO and site health optimization",
+      "Ongoing development and support",
     ],
   },
   {

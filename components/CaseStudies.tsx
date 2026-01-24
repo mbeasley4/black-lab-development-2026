@@ -8,25 +8,29 @@ import Image from "next/image";
 
 const caseStudies = [
     {
-        title: "Whole30 Digital Platform",
+        title: "Enterprise Digital Platform",
         summary:
             "Architected and scaled a high-traffic content and commerce ecosystem supporting thousands of daily users.",
-        image: "/images/case-studies/whole30.png",
-        href: "/work/whole30",
+        image: "/images/case-studies/enterprise.png",
+        href: "/work/",
     },
     {
         title: "Healthcare Manufacturer Website",
         summary:
             "Modernized UX and backend workflows, improving lead quality and operational efficiency.",
         image: "/images/case-studies/healthcare.png",
-        href: "/work/healthcare-manufacturer",
     },
     {
         title: "E-Commerce Product Platform",
         summary:
             "Designed and built a conversion-focused storefront with custom integrations and performance tuning.",
         image: "/images/case-studies/ecommerce.png",
-        href: "/work/ecommerce-platform",
+    },
+     {
+        title: "Email Marketing Systems",
+        summary:
+            "Implemented advanced segmentation, routing, and automation to drive customer engagement and conversions.",
+        image: "/images/case-studies/email.png",
     },
 ];
 
@@ -40,7 +44,7 @@ export default function CaseStudies() {
                 <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16 gap-8">
                     <div className="max-w-6xl">
                         <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6">
-                            Work & Case Studies
+                            Industries at Work
                         </h2>
                         <p className="text-lg text-neutral-400 leading-relaxed">
                             We partner with growth-focused organizations to build digital
@@ -51,14 +55,14 @@ export default function CaseStudies() {
                 </div>
 
                 {/* Case Studies Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-4">
                     {caseStudies.map((project) => (
                         <div
                             key={project.title}
                             className="group relative rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 transition hover:border-neutral-600"
                         >
                             {/* Image */}
-                            <div className="relative h-[300px] overflow-hidden">
+                            <div className="relative h-[220px] overflow-hidden">
                                 <Image
                                     src={project.image}
                                     alt={project.title}

@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="mx-auto max-w-[1500px] px-6 py-24 grid grid-cols-1 md:grid-cols-12 gap-y-16">
 
                 {/* Brand / Description */}
-                <div className="md:col-span-5">
+                <div className="md:col-span-4">
                     <h3 className="text-neutral-200 text-[15px] font-medium uppercase tracking-wide mb-6">
                         Black Lab Development
                     </h3>
@@ -17,7 +17,7 @@ export default function Footer() {
                 </div>
 
                 {/* Navigation */}
-                <div className="md:col-span-3">
+                <div className="md:col-span-4">
                     <h4 className="text-neutral-300 text-xs uppercase tracking-widest mb-5">
                         Explore
                     </h4>
@@ -27,6 +27,17 @@ export default function Footer() {
                         <li><Link href="/work" className="hover:text-neutral-200">Work</Link></li>
                         <li><Link href="/articles" className="hover:text-neutral-200">Articles</Link></li>
                         <li><Link href="/contact" className="hover:text-neutral-200">Contact</Link></li>
+                    </ul>
+                </div>
+
+                {/* Navigation */}
+                <div className="md:col-span-4">
+                    <h4 className="text-neutral-300 text-xs uppercase tracking-widest mb-5">
+                        Utilities
+                    </h4>
+                    <ul className="space-y-3 text-sm">
+                        <li><Link href="/monitor" className="hover:text-neutral-200">Monitor</Link></li>
+                        <li><Link href="https://fit30.blacklabdev.com" target="_blank" className="hover:text-neutral-200">Demo Community App</Link></li>
                     </ul>
                 </div>
 
