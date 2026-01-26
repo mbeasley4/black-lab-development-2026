@@ -221,9 +221,9 @@ export default function WorkPage() {
                     src={project.screenshot}
                     alt={`${project.name} screenshot`}
                     fill
-                    className="object-cover object-top opacity-90 transition group-hover:opacity-100"
+                    className="object-cover object-top opacity-100 transition group-hover:opacity-90"
                   />
-                  <div className="absolute inset-0 bg-black/35 group-hover:bg-black/20 transition" />
+                  <div className="absolute inset-0 group-hover:bg-black/30 transition" />
                 </div>
 
                 {/* Content */}

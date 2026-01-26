@@ -44,8 +44,8 @@ const HomepageHero: React.FC<HeroProps> = ({
 
             {/* Content */}
             <div className="relative z-20 flex items-center min-h-[750px]">
-                <div className="w-full max-w-[1500px] mx-auto px-6 lg:px-12">
-                    <div className="max-w-4xl text-white">
+                <div className="w-full max-w-[1500px] mx-auto px-6">
+                    <div className="max-w-5xl text-white">
                         <span className="inline-block mb-4 text-sm tracking-widest uppercase text-white/60">
                             Black Lab Development
                         </span>

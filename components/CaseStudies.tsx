@@ -47,9 +47,7 @@ export default function CaseStudies() {
                             Industries at Work
                         </h2>
                         <p className="text-lg text-neutral-400 leading-relaxed">
-                            We partner with growth-focused organizations to build digital
-                            products that drive measurable results. Here’s a look at some of
-                            our recent work.
+                            Across multiple industries, I build digital products that improve operations, engagement, and growth. Here’s a look at recent projects.
                         </p>
                     </div>
                 </div>

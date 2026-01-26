@@ -8,7 +8,7 @@ import {
 
 const services = [
     {
-        title: "Web Design & Development",
+        title: "Web Development",
         description:
             "High-performance websites built for speed, usability, and long-term scalability using modern frameworks and CMS platforms.",
         icon: Code2,
@@ -22,7 +22,7 @@ const services = [
     {
         title: "Integrated Digital Solutions",
         description:
-            "Seamless integrations that connect CRMs, APIs, and marketing platforms into a single, efficient digital ecosystem.",
+            "Seamless integrations connecting CRMs, APIs, and marketing platforms into a single, efficient digital ecosystem.",
         icon: Layers,
     },
     {
@@ -40,12 +40,10 @@ export default function ServicesSnapshot() {
                 {/* Section Header */}
                 <div className="max-w-6xl mb-16">
                     <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6">
-                        What We Do
+                        What I Do
                     </h2>
                     <p className="text-lg text-neutral-400 leading-relaxed">
-                        We design, build, and optimize digital products that perform.
-                        From high-impact websites to custom software and measurable growth
-                        strategies, we partner with teams that need results — not templates.
+                        I design, build, and optimize digital products that perform. From high-impact websites to custom software and growth-focused platforms, I work directly with teams that need results — not templates.
                     </p>
                 </div>
 
