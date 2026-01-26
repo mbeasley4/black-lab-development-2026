@@ -51,15 +51,13 @@ const HomepageHero: React.FC<HeroProps> = ({
                         </span>
 
                         <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold leading-tight mb-6">
-                            Engineering Digital Platforms
-                            <br className="hidden sm:block" />
-                            That Don’t Break at Scale
+                        The Right Technology
+                        <br className="hidden sm:block" />
+                        Designed Around Your Business
                         </h1>
 
                         <p className="text-lg md:text-xl text-white/85 mb-10 max-w-3xl">
-                            We design and build high-performance WordPress, Shopify, and custom
-                            web platforms for brands that demand reliability, speed, and clean
-                            architecture.
+                            I build digital solutions designed around how organizations actually work. From choosing the right platforms to developing custom systems, I focus on technology that fits your needs, scales with your growth, and stays reliable long-term. No unnecessary complexity — just smart, purposeful development.
                         </p>
 
                         <div className="flex flex-wrap gap-4">
