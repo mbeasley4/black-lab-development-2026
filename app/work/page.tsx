@@ -1,4 +1,5 @@
 import Image from "next/image";
+import DemoSection from "@/components/DemoSection";
 
 export const metadata = {
   title: "Work | Black Lab Development",
@@ -153,10 +154,7 @@ const projects = [
     screenshot: "/images/work/luma-screenshot.png",
     summary:
       "Engineering support for a fintech platform requiring reliability, scalability, and clean integration between systems.",
-    details: [
-      "API integrations",
-      "WordPress Plugin Development"
-    ],
+    details: ["API integrations", "WordPress Plugin Development"],
   },
 ];
 
@@ -185,27 +183,28 @@ export default function WorkPage() {
               </span>
 
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6">
-                Production Systems, Not Portfolio Pieces
+                Live Systems. Real Experiments. No Filler.
               </h1>
 
               <p className="text-lg md:text-xl text-neutral-300 leading-relaxed">
-                Selected work across healthcare, SaaS, e-commerce, and enterprise
-                platforms. These are real systems with real users, traffic, and
-                long-term operational responsibility.
+                Live production systems paired with deliberate demos built to
+                test ideas and push architectures across healthcare, SaaS,
+                e-commerce, and enterprise.
               </p>
 
               <div className="mt-10 flex flex-wrap gap-6 text-sm text-neutral-400">
-                <span>High-traffic platforms</span>
+                <span>Live traffic</span>
                 <span className="opacity-40">/</span>
                 <span>Long-term ownership</span>
                 <span className="opacity-40">/</span>
-                <span>Senior-led execution</span>
+                <span>Senior-led delivery</span>
               </div>
             </div>
           </div>
         </div>
       </section>
-
+      {/* ================= Demo ================= */}
+      <DemoSection />
       {/* ================= WORK ================= */}
       <section className="py-32">
         <div className="mx-auto max-w-[1500px] px-6">
@@ -255,7 +254,6 @@ export default function WorkPage() {
         </div>
       </section>
 
-
       {/* ================= CLOSE ================= */}
       <section className="relative overflow-hidden border-t border-neutral-900 py-28">
         {/* Background layers */}
@@ -280,16 +278,16 @@ export default function WorkPage() {
             </h2>
 
             <p className="text-neutral-300 leading-relaxed mb-6">
-              Many of these platforms have been supported and evolved over multiple
-              years — not just launched and abandoned. The focus is always on
-              stability, clarity, and systems that continue to perform as business
-              needs change.
+              Many of these platforms have been supported and evolved over
+              multiple years — not just launched and abandoned. The focus is
+              always on stability, clarity, and systems that continue to perform
+              as business needs change.
             </p>
 
             <p className="text-neutral-300 leading-relaxed mb-10">
               If you’re looking for a development partner who understands the
-              responsibility that comes with production systems, this is the kind of
-              work Black Lab Development is built around.
+              responsibility that comes with production systems, this is the
+              kind of work Black Lab Development is built around.
             </p>
 
             {/* CTA */}
