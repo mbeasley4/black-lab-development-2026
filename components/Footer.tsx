@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="mx-auto max-w-[1500px] px-6 py-24 grid grid-cols-1 md:grid-cols-12 gap-y-16">
 
                 {/* Brand / Description */}
-                <div className="md:col-span-3">
+                <div className="md:col-span-3 md:pr-12">
                     <h3 className="text-neutral-200 text-[15px] font-medium uppercase tracking-wide mb-6">
                         Black Lab Development
                     </h3>
@@ -18,7 +18,7 @@ export default function Footer() {
 
                 {/* Navigation */}
                 <div className="md:col-span-3">
-                    <h4 className="text-neutral-300 text-xs uppercase tracking-widest mb-5">
+                    <h4 className="text-neutral-300 text-xs uppercase tracking-widest mb-2">
                         Explore
                     </h4>
                     <ul className="space-y-3 text-sm">
@@ -32,14 +32,14 @@ export default function Footer() {
 
                 {/* Navigation */}
                 <div className="md:col-span-3">
-                    <h4 className="text-neutral-300 text-xs uppercase tracking-widest mb-5">
+                    <h4 className="text-neutral-300 text-sm uppercase tracking-widest mb-2">
                         Demos
                     </h4>
                     <ul className="space-y-3 text-sm">
                         <li><Link href="https://fit30.blacklabdev.com" target="_blank" className="hover:text-neutral-200">Fit30 App (Laravel + React)</Link></li>
                         <li><Link href="https://vault.blacklabdev.com" target="_blank" className="hover:text-neutral-200">Vault Cyber (Drupal)</Link></li>
                     </ul>
-                    <h4 className="text-neutral-300 text-xs uppercase tracking-widest mb-5">
+                    <h4 className="text-neutral-300 mt-6 text-sm uppercase tracking-widest mb-2">
                         Utilities
                     </h4>
                     <ul className="space-y-3 text-sm">
@@ -49,7 +49,7 @@ export default function Footer() {
 
                 {/* Contact */}
                 <div className="md:col-span-3">
-                    <h4 className="text-neutral-300 text-xs uppercase tracking-widest mb-5">
+                    <h4 className="text-neutral-300 text-sm uppercase tracking-widest mb-2">
                         Contact
                     </h4>
 
