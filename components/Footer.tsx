@@ -33,11 +33,17 @@ export default function Footer() {
                 {/* Navigation */}
                 <div className="md:col-span-3">
                     <h4 className="text-neutral-300 text-xs uppercase tracking-widest mb-5">
+                        Demos
+                    </h4>
+                    <ul className="space-y-3 text-sm">
+                        <li><Link href="https://fit30.blacklabdev.com" target="_blank" className="hover:text-neutral-200">Fit30 App (Laravel + React)</Link></li>
+                        <li><Link href="https://vault.blacklabdev.com" target="_blank" className="hover:text-neutral-200">Vault Cyber (Drupal)</Link></li>
+                    </ul>
+                    <h4 className="text-neutral-300 text-xs uppercase tracking-widest mb-5">
                         Utilities
                     </h4>
                     <ul className="space-y-3 text-sm">
                         <li><Link href="/monitor" className="hover:text-neutral-200">Monitor</Link></li>
-                        <li><Link href="https://fit30.blacklabdev.com" target="_blank" className="hover:text-neutral-200">Demo Community App</Link></li>
                     </ul>
                 </div>
 

@@ -21,63 +21,80 @@ const demos = [
 
 export default function DemoSection() {
   return (
-    <section className="bg-gradient-to-br from-yellow-100 via-orange-100 to-pink-100 py-20">
-      <div className="mx-auto max-w-6xl px-6">
+    <section className="bg-slate-900 py-24">
+      <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
-        <div className="mb-12 text-center">
-          <h2 className="text-4xl font-extrabold text-gray-900">
-            Live Demo Projects
+        <div className="mb-20 text-center">
+          <h2 className="text-4xl font-extrabold text-white">
+            Featured Demo Projects
           </h2>
-          <p className="mt-4 text-lg text-gray-700">
-            Real, production-ready applications.
+          <p className="mt-4 text-lg text-slate-300">
+            Production-ready applications built with modern frameworks.
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid gap-8 md:grid-cols-2">
-          {demos.map((demo) => (
-            <a
-              key={demo.title}
-              href={demo.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group overflow-hidden rounded-2xl bg-white shadow-lg transition hover:-translate-y-1 hover:shadow-2xl"
-            >
-              {/* Image */}
-              <div className="relative aspect-[16/10] overflow-hidden">
-                <Image
-                  src={demo.image}
-                  alt={demo.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority={false}
-                />
-              </div>
+        {/* Demo Rows */}
+        <div className="space-y-28">
+          {demos.map((demo, index) => {
+            const isReversed = index % 2 !== 0;
 
-              {/* Content */}
-              <div className="p-8">
-                <span className="inline-block rounded-full bg-black px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
-                  {demo.badge}
-                </span>
+            return (
+              <div
+                key={demo.title}
+                className={`grid items-center gap-12 md:grid-cols-2 ${
+                  isReversed ? "md:flex-row-reverse" : ""
+                }`}
+              >
+                {/* Image */}
+                <div
+                  className={`relative ${
+                    isReversed ? "md:order-2" : "md:order-1"
+                  }`}
+                >
+                  <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-white shadow-2xl">
+                    <Image
+                      src={demo.image}
+                      alt={demo.title}
+                      fill
+                      className="object-contain p-6"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
+                </div>
 
-                <h3 className="mt-4 text-2xl font-bold text-gray-900">
-                  {demo.title}
-                </h3>
-
-                <p className="mt-2 text-gray-600">
-                  {demo.description}
-                </p>
-
-                <div className="mt-6 flex items-center text-sm font-semibold text-black">
-                  View Live Demo
-                  <span className="ml-2 transition-transform group-hover:translate-x-1">
-                    →
+                {/* Content */}
+                <div
+                  className={`${
+                    isReversed ? "md:order-1" : "md:order-2"
+                  }`}
+                >
+                  <span className="inline-block rounded-full bg-slate-700 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-slate-200">
+                    {demo.badge}
                   </span>
+
+                  <h3 className="mt-6 text-3xl font-bold text-white">
+                    {demo.title}
+                  </h3>
+
+                  <p className="mt-4 max-w-xl text-lg text-slate-300">
+                    {demo.description}
+                  </p>
+
+                  <a
+                    href={demo.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-8 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-200"
+                  >
+                    View Live Demo
+                    <span className="transition-transform group-hover:translate-x-1">
+                      →
+                    </span>
+                  </a>
                 </div>
               </div>
-            </a>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
