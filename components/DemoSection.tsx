@@ -2,7 +2,15 @@ import Image from "next/image";
 
 const demos = [
   {
-    title: "Fit30 Community Platform",
+    title: "Diamond Dogs - Headless CMS (WordPress)",
+    description:
+      "Headless WordPress demo using Vue 3, Vite, and Tailwind CSS with ACF-driven flexible content blocks and dynamic page rendering.",
+    href: "https://diamond.blacklabdev.com",
+    badge: "WordPress • Headless CMS • Vue.js",
+    image: "/images/demos/diamond-dogs.png",
+  },
+  {
+    title: "Fit30 Community - Laravel & React",
     description:
       "Custom-built membership platform using Laravel and React with Stripe subscriptions, gated content, and user roles.",
     href: "https://fit30.blacklabdev.com",
@@ -10,7 +18,7 @@ const demos = [
     image: "/images/demos/fit30.png",
   },
   {
-    title: "Vault Cybersecurity Website",
+    title: "Vault Cybersecurity - Drupal 11",
     description:
       "Custom Drupal 11 website built with Paragraphs, pricing card modules, and flexible content architecture.",
     href: "https://vault.blacklabdev.com",
