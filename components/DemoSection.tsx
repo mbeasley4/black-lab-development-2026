@@ -5,7 +5,7 @@ const demos = [
     title: "Diamond Dogs - Headless CMS (WordPress)",
     description:
       "Headless WordPress demo using Vue 3, Vite, and Tailwind CSS with ACF-driven flexible content blocks and dynamic page rendering.",
-    href: "https://diamond.blacklabdev.com",
+    href: "https://dog.blacklabdev.com",
     badge: "WordPress • Headless CMS • Vue.js",
     image: "/images/demos/diamond-dogs.png",
   },
