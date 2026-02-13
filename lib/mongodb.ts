@@ -21,6 +21,7 @@ export async function dbConnect() {
     if (!global._mongooseConn) {
         global._mongooseConn = await mongoose.connect(getMongoUri(), {
             bufferCommands: false,
+            dbName: 'blacklabdev'  // ← Add this line
         });
     }
 
