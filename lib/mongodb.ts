@@ -6,11 +6,11 @@ declare global {
 }
 
 function getMongoUri(): string {
-    const uri = process.env.MONGODB_URI;
+    const uri = process.env.MONGO_DB_MONGODB_URI;
 
     if (!uri) {
         throw new Error(
-            "MONGODB_URI is not defined. Set it in your environment variables."
+            "MONGO_DB_MONGODB_URI is not defined. Set it in your environment variables."
         );
     }
 

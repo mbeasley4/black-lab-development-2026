@@ -5,7 +5,7 @@ import { Article } from "@/models/Article";
 import fs from "node:fs";
 
 async function main() {
-    console.log("Mongo URI exists:", !!process.env.MONGODB_URI);
+    console.log("Mongo URI exists:", !!process.env.MONGO_DB_MONGODB_URI);
 
     await dbConnect();
 
