@@ -1,4 +1,5 @@
-import ContactForm from "@/components/ContactForm";
+import ContactForm from "@/components/ContactForm"
+import PageHero from "@/components/PageHero"
 
 export const metadata = {
   title: "Contact Black Lab Development | Senior Web & Software Engineering",
@@ -10,52 +11,17 @@ export default function ContactPage() {
   return (
     <main className="w-full bg-black text-white">
       {/* ================= HERO ================= */}
-      <section className="relative overflow-hidden">
-        {/* Background Layers */}
-        <div className="absolute inset-0">
-          {/* Background Image */}
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('/images/contact-hero-bg.png')",
-            }}
-          />
-
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black/78" aria-hidden="true" />
-        </div>
-
-        {/* Hero Content */}
-        <div className="relative z-10 h-[450px] flex items-center">
-          <div className="mx-auto max-w-[1500px] px-6">
-            <div className="max-w-12xl">
-              <span className="inline-block mb-6 text-xs tracking-[0.3em] uppercase text-neutral-500">
-                Contact Us
-              </span>
-
-              <h1 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6">
-                Let’s Talk About Your Platform
-              </h1>
-
-              <p className="text-lg md:text-xl text-neutral-300 leading-relaxed">
-                If you’re planning a new build, modernizing an existing platform,
+      <PageHero
+        label=" Contact Us"
+        title="Let's Talk About Your"
+        titleHighlight="Platform"
+        description="If you're planning a new build, modernizing an existing platform,
                 or untangling technical debt, Black Lab Development works directly
                 with you to design and build systems that are clean, scalable,
-                and built to last.
-              </p>
-
-              {/* Individualized meta */}
-              <div className="mt-10 flex flex-wrap gap-6 text-sm text-neutral-400">
-                <span>Senior-led execution</span>
-                <span className="opacity-40">/</span>
-                <span>Production systems</span>
-                <span className="opacity-40">/</span>
-                <span>Direct collaboration</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                and built to last."
+        backgroundImage="/images/contact-hero-bg.png"
+        badges={["Senior-led execution", "Production systems", "Direct collaboration"]}
+      />
 
       {/* ================= CONTENT + FORM ================= */}
       <section className="pt-20 pb-32">

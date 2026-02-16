@@ -1,5 +1,6 @@
-import Image from "next/image";
-import DemoSection from "@/components/DemoSection";
+import Image from "next/image"
+import DemoSection from "@/components/DemoSection"
+import PageHero from "@/components/PageHero"
 
 export const metadata = {
   title: "Work | Black Lab Development",
@@ -162,47 +163,14 @@ export default function WorkPage() {
   return (
     <main className="w-full bg-black text-white">
       {/* ================= HERO ================= */}
-      <section className="relative overflow-hidden border-b border-neutral-900">
-        {/* Background layers */}
-        <div className="absolute inset-0">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('/images/work-hero-bg.png')",
-            }}
-          />
-          <div className="absolute inset-0 bg-black/75" />
-        </div>
-
-        {/* Hero content */}
-        <div className="relative z-10 h-[450px] flex items-center">
-          <div className="mx-auto max-w-[1500px] px-6">
-            <div className="max-w-12xl">
-              <span className="inline-block mb-6 text-xs tracking-[0.3em] uppercase text-neutral-500">
-                Work
-              </span>
-
-              <h1 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6">
-                Live Systems. Real Experiments. No Filler.
-              </h1>
-
-              <p className="text-lg md:text-xl text-neutral-300 leading-relaxed">
-                Live production systems paired with deliberate demos built to
-                test ideas and push architectures across healthcare, SaaS,
-                e-commerce, and enterprise.
-              </p>
-
-              <div className="mt-10 flex flex-wrap gap-6 text-sm text-neutral-400">
-                <span>Live traffic</span>
-                <span className="opacity-40">/</span>
-                <span>Long-term ownership</span>
-                <span className="opacity-40">/</span>
-                <span>Senior-led delivery</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        label="Work"
+        title="Live Systems. Real Experiments. No Filler."
+        titleHighlight="Real Experiments."
+        description="Live production systems paired with deliberate demos built to test ideas and push architectures across healthcare, SaaS, e-commerce, and enterprise."
+        backgroundImage="/images/work-hero-bg.png"
+        badges={["Live traffic", "Long-term ownership", "Senior-led delivery"]}
+      />
       {/* ================= Demo ================= */}
       <DemoSection />
       {/* ================= WORK ================= */}

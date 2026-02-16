@@ -3,6 +3,7 @@ import Image from "next/image";
 import { dbConnect } from "@/lib/mongodb";
 import { Article } from "@/models/Article";
 import AnimatedCard from "@/components/AnimatedCard";
+import PageHero from "@/components/PageHero";
 
 export const dynamic = "force-dynamic";
 
@@ -33,34 +34,14 @@ export default async function ArticlesPage() {
   return (
     <main className="w-full bg-black text-white">
       {/* HERO */}
-      <section className="relative overflow-hidden border-b border-neutral-900">
-        <div className="absolute inset-0">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('/images/articles-hero-bg.png')" }}
-          />
-          <div className="absolute inset-0 bg-black/78" />
-        </div>
-
-        <div className="relative z-10 h-[450px] flex items-center">
-          <div className="mx-auto max-w-[1500px] px-6 w-full">
-            <div className="max-w-5xl">
-              <span className="inline-block mb-6 text-xs tracking-[0.3em] uppercase text-neutral-500">
-                Articles
-              </span>
-
-              <h1 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6">
-                From the Codebase
-              </h1>
-
-              <p className="text-lg md:text-xl text-neutral-300 leading-relaxed">
-                Articles documenting technical decisions, tradeoffs, and lessons
-                learned while building systems that run under real-world conditions.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        label="Articles"
+        title="From the Codebase"
+        titleHighlight="Codebase"
+        description="Articles documenting technical decisions, tradeoffs, and lessons learned while building systems that run under real-world conditions."
+        backgroundImage="/images/articles-hero-bg.png"
+        // No badges for articles page
+      />
 
       {/* GRID */}
       <section className="py-24">

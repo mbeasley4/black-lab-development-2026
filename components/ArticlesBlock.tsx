@@ -21,59 +21,100 @@ export default async function ArticlesBlock() {
     .sort({ publishedAt: -1, createdAt: -1 })
     .select("title slug excerpt coverImage publishedAt")
     .limit(3);
-    return <section className="py-24">
-        <div className="mx-auto max-w-[1500px] px-6 py-10">
-            <h2 className="text-4xl text-white md:text-5xl font-semibold tracking-tight mb-6">Building, Learning & Sharing at Black Lab Development</h2>
-            <p>Explore our latest articles featuring development tips, technical deep dives, and behind-the-scenes insights from real projects. From scalable web apps to modern tooling and workflows, this is where we share what’s working—and why.</p>
+
+  return (
+    <section className="w-full bg-gradient-to-b from-black via-slate-950 to-blue-950/20 text-white py-24 relative overflow-hidden">
+      {/* Ambient background effects */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
+
+      <div className="mx-auto max-w-[1500px] px-6 relative z-10">
+        {/* Header */}
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-400 bg-clip-text text-transparent pb-2">
+            Building, Learning & Sharing at Black Lab Development
+          </h2>
+          <p className="text-lg text-blue-100/80 leading-relaxed max-w-4xl">
+            Explore our latest articles featuring development tips, technical deep dives, and behind-the-scenes insights from real projects. From scalable web apps to modern tooling and workflows, this is where we share what's working—and why.
+          </p>
         </div>
-        { /* Latest Articles */ }
-        <div className="mx-auto max-w-[1500px] px-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 items-stretch">
+
+        {/* Latest Articles */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {articles.map((a, index) => (
             <AnimatedCard key={a.slug} delay={index * 100}>
               <Link
                 href={`/articles/${a.slug}`}
-                className="h-full group block border border-neutral-900 rounded-xl overflow-hidden bg-neutral-950"
+                className="group h-full block border-2 border-slate-800/50 rounded-2xl overflow-hidden bg-slate-900/50 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/20"
               >
-                <div className="relative h-56">
+                {/* Image */}
+                <div className="relative h-56 overflow-hidden">
                   <Image
                     src={a.coverImage || "/images/articles/default.jpg"}
                     alt={a.title}
                     fill
-                    className="object-cover opacity-90"
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+                  
+                  {/* Top accent bar */}
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 
-                <div className="p-6 flex flex-col flex-grow">
-                  {a.publishedAt && (
-                    <time
-                      dateTime={new Date(a.publishedAt).toISOString()}
-                      className="block mb-2 text-xs uppercase tracking-widest text-neutral-500"
-                    >
-                      {formatDate(a.publishedAt)}
-                    </time>
-                  )}
+                {/* Content */}
+                <div className="p-8 flex flex-col flex-grow relative">
+                  {/* Hover gradient background */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/5 group-hover:to-blue-500/5 transition-all duration-500 rounded-b-2xl" />
 
-                  <h2 className="text-xl font-medium mb-2 group-hover:text-white transition">
-                    {a.title}
-                  </h2>
+                  <div className="relative z-10">
+                    {a.publishedAt && (
+                      <time
+                        dateTime={new Date(a.publishedAt).toISOString()}
+                        className="block mb-3 text-xs uppercase tracking-widest text-cyan-400/80 font-medium"
+                      >
+                        {formatDate(a.publishedAt)}
+                      </time>
+                    )}
 
-                  <p className="text-neutral-400 text-sm article-excerpt">
-                    {a.excerpt}
-                  </p>
+                    <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-300 group-hover:to-blue-400 group-hover:bg-clip-text transition-all duration-300 pb-1">
+                      {a.title}
+                    </h3>
+
+                    <p className="text-sm text-blue-100/70 leading-relaxed mb-4 group-hover:text-blue-50/90 transition-colors duration-300">
+                      {a.excerpt}
+                    </p>
+
+                    {/* Read article CTA */}
+                    <div className="flex items-center text-cyan-400 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-2 transition-all duration-300 mt-auto">
+                      <span className="text-sm font-semibold">Read article</span>
+                      <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
+
+                {/* Bottom accent line */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-cyan-500/0 to-transparent group-hover:via-cyan-500/100 transition-all duration-500 rounded-b-2xl" />
               </Link>
             </AnimatedCard>
           ))}
         </div>
-         {/* CTA Buttons */}
-        <div className="py-6 flex flex-col sm:flex-row items-center justify-center gap-5">
-            <Link
-                href="/articles"
-                className="inline-flex items-center justify-center rounded-md bg-white px-10 py-4 text-sm font-medium uppercase tracking-wide text-black transition hover:bg-neutral-200"
-            >
-                Explore Our Knowledge Library
-            </Link>
-        </div>
-      </section>;
 
+        {/* CTA Button */}
+        <div className="text-center">
+          <Link
+            href="/articles"
+            className="inline-flex items-center justify-center rounded-md border-2 border-cyan-500/50 bg-cyan-500/10 px-10 py-4 text-sm font-semibold uppercase tracking-wide text-cyan-300 transition-all duration-300 hover:border-cyan-400 hover:bg-cyan-500/20 hover:text-white hover:shadow-lg hover:shadow-cyan-500/30"
+          >
+            Explore Our Knowledge Library
+            <svg className="w-5 h-5 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
 }

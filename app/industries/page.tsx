@@ -1,4 +1,5 @@
-import Image from "next/image";
+import Image from "next/image"
+import PageHero from "@/components/PageHero"
 
 export const metadata = {
   title: "Industries | Black Lab Development",
@@ -100,42 +101,15 @@ export default function IndustriesPage() {
   return (
     <main className="w-full bg-black text-white">
       {/* ================= HERO ================= */}
-      <section className="relative overflow-hidden border-b border-neutral-900">
-        <div className="absolute inset-0">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('/images/industries-hero-bg.png')" }}
-          />
-          <div className="absolute inset-0 bg-black/78" />
-        </div>
+      <PageHero
+        label="Industries"
+        title="Experience Across Real-World Systems"
+        titleHighlight="Real-World Systems"
+        description="Industry experience shaped by production systems, real users, and long-term responsibility — not templates or theoretical architectures."
+        backgroundImage="/images/industries-hero-bg.png"
+        badges={["Enterprise platforms", "Regulated environments", "High-traffic systems"]}
+      />
 
-        <div className="relative z-10 h-[450px] flex items-center">
-          <div className="mx-auto max-w-[1500px] px-6 w-full">
-            <div className="max-w-6xl">
-              <span className="inline-block mb-6 text-xs tracking-[0.3em] uppercase text-neutral-500">
-                Industries
-              </span>
-
-              <h1 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6">
-                Experience Across Real-World Systems
-              </h1>
-
-              <p className="text-lg md:text-xl text-neutral-300 leading-relaxed">
-                Industry experience shaped by production systems, real users, and
-                long-term responsibility — not templates or theoretical architectures.
-              </p>
-
-              <div className="mt-10 flex flex-wrap gap-6 text-sm text-neutral-400">
-                <span>Enterprise platforms</span>
-                <span className="opacity-40">/</span>
-                <span>Regulated environments</span>
-                <span className="opacity-40">/</span>
-                <span>High-traffic systems</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
       {/* ================= INDUSTRIES ================= */}

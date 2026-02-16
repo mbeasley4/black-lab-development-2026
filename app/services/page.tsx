@@ -1,4 +1,5 @@
-import Image from "next/image";
+import Image from "next/image"
+import PageHero from "@/components/PageHero"
 
 export const metadata = {
   title: "Services | Black Lab Development",
@@ -98,48 +99,14 @@ export default function ServicesPage() {
   return (
     <main className="w-full bg-black text-white">
       {/* ================= HERO ================= */}
-      <section className="relative overflow-hidden border-b border-neutral-900">
-        {/* Background layers */}
-        <div className="absolute inset-0">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('/images/services-hero-bg.png')",
-            }}
-          />
-          <div className="absolute inset-0 bg-black/78" />
-        </div>
-
-        {/* Hero content */}
-        <div className="relative z-10 h-[450px] flex items-center">
-          <div className="mx-auto max-w-[1500px] px-6 w-full">
-            <div className="max-w-5xl">
-              <span className="inline-block mb-6 text-xs tracking-[0.3em] uppercase text-neutral-500">
-                Services
-              </span>
-
-              <h1 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6">
-                Senior-Led Engineering Services
-              </h1>
-
-              <p className="text-lg md:text-xl text-neutral-300 leading-relaxed">
-                Black Lab Development provides hands-on engineering support for teams
-                that need more than surface-level execution. Every service is delivered
-                with long-term performance, maintainability, and accountability in
-                mind.
-              </p>
-
-              <div className="mt-10 flex flex-wrap gap-6 text-sm text-neutral-400">
-                <span>Hands-on execution</span>
-                <span className="opacity-40">/</span>
-                <span>Production systems</span>
-                <span className="opacity-40">/</span>
-                <span>No templates</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        label="Services"
+        title="Senior-Led Engineering Services"
+        titleHighlight="Engineering"
+        description="Black Lab Development delivers hands-on engineering support built for long-term performance and maintainability."
+        backgroundImage="/images/services-hero-bg.png"
+        badges={["Hands-on execution", "Production systems", "No templates"]}
+      />
 
 
       {/* ================= SERVICES ================= */}
