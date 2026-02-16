@@ -19,6 +19,45 @@
   }
 }
 
+@keyframes neonBoot {
+  0% {
+    opacity: 0;
+    filter: blur(6px) brightness(0.3);
+    text-shadow: none;
+  }
+  25% {
+    opacity: 0.6;
+    filter: blur(2px) brightness(0.6);
+  }
+  45% {
+    opacity: 0.3;
+    filter: blur(4px) brightness(0.4);
+  }
+  70% {
+    opacity: 1;
+    filter: blur(0) brightness(1.1);
+    text-shadow: 0 0 6px rgba(34,211,238,.6), 0 0 14px rgba(34,211,238,.5);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0) brightness(1);
+    text-shadow: 0 0 10px rgba(34,211,238,.8), 0 0 22px rgba(34,211,238,.6);
+  }
+}
+
+@keyframes neonFlicker {
+  0% { opacity: 0; }
+  10% { opacity: .9; }
+  12% { opacity: .2; }
+  16% { opacity: .85; }
+  20% { opacity: .3; }
+  28% { opacity: 1; }
+  40% { opacity: .4; }
+  55% { opacity: 1; }
+  100% { opacity: .7; }
+}
+
+
 body {
   background: var(--background);
   color: var(--foreground);
