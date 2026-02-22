@@ -30,6 +30,54 @@ export default function Header() {
     };
 
     return (
+        <>
+        {/* Mobile Drawer Overlay */}
+        {mobileOpen && (
+            <div className="fixed inset-0 z-[60] md:hidden">
+                {/* Backdrop */}
+                <div
+                    className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+                    onClick={() => setMobileOpen(false)}
+                />
+
+                {/* Drawer panel */}
+                <nav className="absolute top-0 right-0 h-full w-72 bg-black border-l border-cyan-500/40
+                    shadow-[-4px_0_30px_rgba(34,211,238,0.15)]
+                    flex flex-col px-8 pt-24 pb-12 gap-8">
+
+                    {/* Close button */}
+                    <button
+                        type="button"
+                        onClick={() => setMobileOpen(false)}
+                        style={{ touchAction: "manipulation" }}
+                        className="absolute top-5 right-5 p-2 text-cyan-400 border border-cyan-400/60 rounded-sm
+                            hover:border-cyan-300 hover:text-cyan-300 transition-all duration-200 cursor-pointer"
+                    >
+                        <span className="block w-5 h-0.5 bg-current rotate-45 translate-y-[3px]" />
+                        <span className="block w-5 h-0.5 bg-current -rotate-45" />
+                    </button>
+
+                    {navItems.map(([label, href]) => {
+                        const active = isActive(href);
+                        return (
+                            <Link
+                                key={label}
+                                href={href}
+                                onClick={() => setMobileOpen(false)}
+                                className={`text-[20px] uppercase tracking-widest font-medium transition-all duration-300
+                                    ${active
+                                        ? "text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]"
+                                        : "text-[#e6e6e6] hover:text-cyan-300 hover:drop-shadow-[0_0_6px_rgba(34,211,238,0.5)]"
+                                    }`}
+                            >
+                                {label}
+                            </Link>
+                        );
+                    })}
+                </nav>
+            </div>
+        )}
+
         <header className="fixed top-0 z-50 w-full bg-black text-[#e6e6e6] border-b border-cyan-500/20">
             <div
                 className="mx-auto max-w-[1500px] px-6 py-4 flex items-center justify-between"
@@ -134,5 +182,6 @@ export default function Header() {
                 </button>
             </div>
         </header>
+        </>
     );
 }
