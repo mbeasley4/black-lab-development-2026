@@ -53,7 +53,7 @@ export default function Header() {
                     </div>
 
                     {/* 🔥 Cyberpunk Neon Boot-Up */}
-                    <span className="text-[18px] font-medium tracking-wide inline-flex items-baseline gap-2 uppercase">
+                    <span className="text-[14px] sm:text-[18px] font-medium tracking-wide inline-flex items-baseline gap-2 uppercase whitespace-nowrap">
                         <span
                             className={`transition-all duration-500 ${
                                 boot
