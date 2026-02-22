@@ -132,7 +132,12 @@ h3 {
 
 /* --- Spacing between hero and article body --- */
 article.prose {
-  margin-top: 4rem;
+  margin-top: 3rem;
+}
+@media (min-width:1024px) {
+  article.prose {
+    margin-top: 0;
+  }
 }
 
 /* --- Typography tuning for long-form reading --- */
@@ -243,6 +248,10 @@ article.prose {
 /* --- Horizontal rules --- */
 .prose hr {
   margin: 4rem 0;
+}
+
+.prose p {
+  margin-bottom:1.25rem;
 }
 
 /* =========================================================

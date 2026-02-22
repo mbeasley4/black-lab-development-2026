@@ -1,11 +1,21 @@
 import Link from "next/link";
 import Image from "next/image";
-import { dbConnect } from "@/lib/mongodb";
 import AnimatedCard from '@/components/AnimatedCard';
-import { Article } from "@/models/Article";
+import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
+import { SanityDocument } from "next-sanity";
+
+const POSTS_QUERY = `*[_type == "post" && defined(slug.current)] | order(publishedAt desc) [0...3] {
+  _id,
+  title,
+  slug,
+  mainImage,
+  excerpt,
+  publishedAt
+}`;
 
 export default async function ArticlesBlock() {
-  await dbConnect();
+  const articles = await client.fetch<SanityDocument[]>(POSTS_QUERY);
 
   function formatDate(date?: string | Date) {
     if (!date) return null;
@@ -17,10 +27,13 @@ export default async function ArticlesBlock() {
     });
   }
 
-  const articles = await Article.find({ status: "publish" })
-    .sort({ publishedAt: -1, createdAt: -1 })
-    .select("title slug excerpt coverImage publishedAt")
-    .limit(3);
+  function toPlainText(blocks: { _type: string; children?: { text: string }[] }[]) {
+    if (!blocks || !Array.isArray(blocks)) return "";
+    return blocks
+      .filter((b) => b._type === "block" && b.children)
+      .map((b) => b.children!.map((c) => c.text).join(""))
+      .join(" ");
+  }
 
   return (
     <section className="w-full bg-gradient-to-b from-black via-slate-950 to-blue-950/20 text-white py-24 relative overflow-hidden">
@@ -42,22 +55,22 @@ export default async function ArticlesBlock() {
         {/* Latest Articles */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {articles.map((a, index) => (
-            <AnimatedCard key={a.slug} delay={index * 100}>
+            <AnimatedCard key={a._id} delay={index * 100}>
               <Link
-                href={`/articles/${a.slug}`}
+                href={`/articles/${a.slug.current}`}
                 className="group h-full block border-2 border-slate-800/50 rounded-2xl overflow-hidden bg-slate-900/50 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/20"
               >
                 {/* Image */}
                 <div className="relative h-56 overflow-hidden">
                   <Image
-                    src={a.coverImage || "/images/articles/default.jpg"}
+                    src={a.mainImage ? urlFor(a.mainImage).width(800).url() : "/images/articles/default.jpg"}
                     alt={a.title}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
-                  
+
                   {/* Top accent bar */}
                   <div className="absolute top-0 left-0 right-0 h-1 bg-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
@@ -82,7 +95,7 @@ export default async function ArticlesBlock() {
                     </h3>
 
                     <p className="text-sm text-blue-100/70 leading-relaxed mb-4 group-hover:text-blue-50/90 transition-colors duration-300">
-                      {a.excerpt}
+                      {toPlainText(a.excerpt)}
                     </p>
 
                     {/* Read article CTA */}
