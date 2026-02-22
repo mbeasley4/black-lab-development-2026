@@ -157,41 +157,67 @@ export default async function ArticlesPage({
       />
 
       {/* GRID */}
-      <section className="py-24">
-        <div className="mx-auto max-w-[1500px] px-6">
+      <section className="py-24 relative overflow-hidden">
+        {/* Ambient neon glows */}
+        <div className="absolute top-32 left-1/4 w-175 h-175 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-32 right-1/4 w-125 h-125 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="mx-auto max-w-[1500px] px-6 relative">
+          {/* Section header */}
+          <div className="flex items-center gap-6 mb-14">
+            <div>
+              <h2 className="text-2xl font-bold text-white">All Articles</h2>
+              <p className="text-sm text-neutral-500 mt-1">{total} article{total !== 1 ? "s" : ""} published</p>
+            </div>
+            <div className="flex-1 h-px bg-linear-to-r from-cyan-500/40 via-cyan-500/10 to-transparent" />
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 items-stretch">
             {articles.map((a, index) => (
               <AnimatedCard key={a._id} delay={index * 80}>
                 <Link
                   href={`/articles/${a.slug.current}`}
-                  className="h-full group block border border-neutral-900 rounded-xl overflow-hidden bg-neutral-950"
+                  className="h-full group flex flex-col border border-neutral-800 rounded-xl overflow-hidden bg-neutral-950 transition-all duration-300 hover:border-cyan-500/50 hover:shadow-[0_0_40px_rgba(6,182,212,0.10)]"
                 >
-                  <div className="relative h-56">
+                  {/* Top accent line */}
+                  <div className="h-px bg-linear-to-r from-transparent via-cyan-500/0 to-transparent group-hover:via-cyan-500/70 transition-all duration-500" />
+
+                  <div className="relative h-56 overflow-hidden">
                     <Image
                       src={a.mainImage ? urlFor(a.mainImage).width(800).url() : "/images/articles/default.jpg"}
                       alt={a.title}
                       fill
-                      className="object-cover opacity-90"
+                      className="object-cover opacity-80 group-hover:opacity-95 group-hover:scale-[1.02] transition-all duration-500"
                     />
+                    {/* Neon tint overlay on hover */}
+                    <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-transparent to-cyan-500/0 group-hover:to-cyan-500/10 transition-all duration-500" />
+                    {/* Bottom fade into card */}
+                    <div className="absolute bottom-0 left-0 right-0 h-12 bg-linear-to-t from-neutral-950 to-transparent" />
                   </div>
 
                   <div className="p-6 flex flex-col grow">
                     {a.publishedAt && (
                       <time
                         dateTime={new Date(a.publishedAt).toISOString()}
-                        className="block mb-2 text-xs uppercase tracking-widest text-neutral-500"
+                        className="block mb-2 text-xs uppercase tracking-widest text-cyan-500/60"
                       >
                         {formatDate(a.publishedAt)}
                       </time>
                     )}
 
-                    <h2 className="text-xl font-medium mb-2 group-hover:text-white transition">
+                    <h2 className="text-xl font-medium mb-3 text-neutral-100 group-hover:text-cyan-200 transition-colors duration-200">
                       {a.title}
                     </h2>
 
-                    <p className="text-neutral-400 text-sm article-excerpt">
+                    <p className="text-neutral-400 text-sm article-excerpt grow">
                       {toPlainText(a.excerpt)}
                     </p>
+
+                    {/* Read indicator */}
+                    <div className="mt-5 pt-4 border-t border-neutral-800/60 flex items-center gap-1 text-xs font-medium text-cyan-500/0 group-hover:text-cyan-400 transition-colors duration-300">
+                      Read article
+                      <span className="inline-block translate-x-0 group-hover:translate-x-1 transition-transform duration-200">→</span>
+                    </div>
                   </div>
                 </Link>
               </AnimatedCard>

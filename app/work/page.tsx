@@ -175,27 +175,47 @@ export default function WorkPage() {
       {/* ================= Demo ================= */}
       <DemoSection />
       {/* ================= WORK ================= */}
-      <section className="py-32">
-        <div className="mx-auto max-w-[1500px] px-6">
+      <section className="py-32 relative overflow-hidden">
+        {/* Ambient neon glows */}
+        <div className="absolute top-40 left-1/3 w-175 h-175 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-40 right-1/3 w-125 h-125 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="mx-auto max-w-[1500px] px-6 relative">
+          {/* Section header */}
+          <div className="flex items-center gap-6 mb-14">
+            <div>
+              <h2 className="text-2xl font-bold text-white">Client Work</h2>
+              <p className="text-sm text-neutral-500 mt-1">{projects.length} projects</p>
+            </div>
+            <div className="flex-1 h-px bg-linear-to-r from-cyan-500/40 via-cyan-500/10 to-transparent" />
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12">
             {projects.map((project) => (
               <div
                 key={project.name}
-                className="group relative rounded-xl overflow-hidden border border-neutral-800 bg-neutral-950"
+                className="group flex flex-col rounded-xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-300 hover:border-cyan-500/50 hover:shadow-[0_0_40px_rgba(6,182,212,0.10)]"
               >
+                {/* Top accent line */}
+                <div className="h-px bg-linear-to-r from-transparent via-cyan-500/0 to-transparent group-hover:via-cyan-500/70 transition-all duration-500" />
+
                 {/* Screenshot */}
-                <div className="relative h-[260px] w-full">
+                <div className="relative h-[260px] w-full overflow-hidden">
                   <Image
                     src={project.screenshot}
                     alt={`${project.name} screenshot`}
                     fill
-                    className="object-cover object-top opacity-100 transition group-hover:opacity-90"
+                    className="object-cover object-top opacity-95 group-hover:scale-[1.02] transition-all duration-500"
                   />
-                  <div className="absolute inset-0 group-hover:bg-black/30 transition" />
+                  {/* Neon overlay */}
+                  <div className="absolute inset-0 bg-linear-to-t from-neutral-950/70 via-transparent to-cyan-500/0 group-hover:to-cyan-500/8 transition-all duration-500" />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+                  {/* Bottom fade into card */}
+                  <div className="absolute bottom-0 left-0 right-0 h-10 bg-linear-to-t from-neutral-950 to-transparent" />
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
+                <div className="p-6 flex flex-col grow">
                   {/* Logo */}
                   <div className="mb-4 h-8 flex items-center">
                     <Image
@@ -203,17 +223,20 @@ export default function WorkPage() {
                       alt={`${project.name} logo`}
                       height={20}
                       width={100}
-                      className="object-contain opacity-90"
+                      className="object-contain opacity-75 group-hover:opacity-100 transition-opacity duration-300"
                     />
                   </div>
 
-                  <p className="text-neutral-400 text-sm leading-relaxed mb-4">
+                  <p className="text-neutral-400 text-sm leading-relaxed mb-4 grow">
                     {project.summary}
                   </p>
 
-                  <ul className="space-y-1 text-neutral-500 text-xs list-disc list-inside">
+                  <ul className="space-y-1.5 text-xs mt-auto">
                     {project.details.map((item) => (
-                      <li key={item}>{item}</li>
+                      <li key={item} className="flex items-center gap-2 text-neutral-500 group-hover:text-neutral-400 transition-colors duration-200">
+                        <span className="w-1 h-1 rounded-full bg-cyan-500/60 shrink-0" />
+                        {item}
+                      </li>
                     ))}
                   </ul>
                 </div>
