@@ -117,13 +117,19 @@ export default function Header() {
 
                 {/* Mobile Toggle */}
                 <button
+                    type="button"
                     onClick={() => setMobileOpen(true)}
-                    className="md:hidden p-2 text-neutral-300 hover:text-cyan-400 transition-all duration-300 hover:drop-shadow-[0_0_6px_rgba(34,211,238,0.5)]"
+                    style={{ touchAction: "manipulation" }}
+                    className="md:hidden p-3 text-cyan-400 border border-cyan-400 rounded-sm
+                        shadow-[0_0_12px_rgba(34,211,238,0.5),inset_0_0_8px_rgba(34,211,238,0.08)]
+                        hover:shadow-[0_0_20px_rgba(34,211,238,0.8),inset_0_0_12px_rgba(34,211,238,0.15)]
+                        hover:border-cyan-300 hover:text-cyan-300
+                        active:scale-95 transition-all duration-200 cursor-pointer"
                 >
-                    <div className="space-y-1">
-                        <span className="block h-0.5 w-6 bg-current" />
-                        <span className="block h-0.5 w-6 bg-current" />
-                        <span className="block h-0.5 w-6 bg-current" />
+                    <div className="space-y-1.5">
+                        <span className="block h-0.5 w-7 bg-current" />
+                        <span className="block h-0.5 w-7 bg-current" />
+                        <span className="block h-0.5 w-7 bg-current" />
                     </div>
                 </button>
             </div>
