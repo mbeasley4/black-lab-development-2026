@@ -50,20 +50,20 @@ export default function PageHero({
       {/* Hero content */}
       <div className="relative z-10 py-20 md:py-24">
         <div className="mx-auto max-w-[1500px] px-6 w-full">
-          <div className="max-w-6xl">
+          <div className="max-w-6xl text-center md:text-left">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
               {label}
             </span>
 
             {renderTitle()}
 
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-4xl">
+            <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-4xl mx-auto md:mx-0">
               {description}
             </p>
 
             {/* Badges */}
             {badges && badges.length > 0 && (
-              <div className="mt-8 flex flex-wrap items-center gap-4">
+              <div className="mt-8 flex flex-wrap items-center gap-4 justify-center md:justify-start">
                 {badges.map((badge, index) => (
                   <div key={index} className="flex items-center gap-2">
                     {index > 0 && <span className="text-cyan-500/40">•</span>}

@@ -43,37 +43,77 @@ export default function Header() {
                 {/* Drawer panel */}
                 <nav className="absolute top-0 right-0 h-full w-72 bg-black border-l border-cyan-500/40
                     shadow-[-4px_0_30px_rgba(34,211,238,0.15)]
-                    flex flex-col px-8 pt-24 pb-12 gap-8">
+                    flex flex-col px-8 pt-6 pb-10">
 
-                    {/* Close button */}
-                    <button
-                        type="button"
+                    {/* Drawer header: logo + close */}
+                    <div className="flex items-center justify-between mb-10">
+                        <Link
+                            href="/"
+                            onClick={() => setMobileOpen(false)}
+                            className="flex items-center gap-2 group"
+                        >
+                            <div className="relative">
+                                <Image
+                                    src="/images/blacklabdevelopment.png"
+                                    alt="Black Lab Development"
+                                    width={36}
+                                    height={36}
+                                    priority
+                                    className="relative z-10"
+                                />
+                                <div className="absolute inset-0 bg-cyan-500/30 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            </div>
+                            <span className="text-[13px] font-medium tracking-wide uppercase whitespace-nowrap text-[#e6e6e6]">
+                                Black Lab <span className="text-cyan-400">Dev</span>
+                            </span>
+                        </Link>
+
+                        <button
+                            type="button"
+                            onClick={() => setMobileOpen(false)}
+                            style={{ touchAction: "manipulation" }}
+                            className="p-2 text-cyan-400 border border-cyan-400/60 rounded-sm
+                                hover:border-cyan-300 hover:text-cyan-300 transition-all duration-200 cursor-pointer"
+                        >
+                            <span className="block w-5 h-0.5 bg-current rotate-45 translate-y-0.75" />
+                            <span className="block w-5 h-0.5 bg-current -rotate-45" />
+                        </button>
+                    </div>
+
+                    {/* Nav links */}
+                    <div className="flex flex-col gap-7 flex-1">
+                        {navItems.map(([label, href]) => {
+                            const active = isActive(href);
+                            return (
+                                <Link
+                                    key={label}
+                                    href={href}
+                                    onClick={() => setMobileOpen(false)}
+                                    className={`text-[20px] uppercase tracking-widest font-medium transition-all duration-300
+                                        ${active
+                                            ? "text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]"
+                                            : "text-[#e6e6e6] hover:text-cyan-300 hover:drop-shadow-[0_0_6px_rgba(34,211,238,0.5)]"
+                                        }`}
+                                >
+                                    {label}
+                                </Link>
+                            );
+                        })}
+                    </div>
+
+                    {/* CTA */}
+                    <Link
+                        href="/contact"
                         onClick={() => setMobileOpen(false)}
-                        style={{ touchAction: "manipulation" }}
-                        className="absolute top-5 right-5 p-2 text-cyan-400 border border-cyan-400/60 rounded-sm
-                            hover:border-cyan-300 hover:text-cyan-300 transition-all duration-200 cursor-pointer"
+                        className="mt-auto block text-center py-3 px-6 uppercase tracking-widest text-[13px] font-semibold
+                            text-cyan-400 border border-cyan-400 rounded-sm
+                            shadow-[0_0_14px_rgba(34,211,238,0.4),inset_0_0_10px_rgba(34,211,238,0.06)]
+                            hover:shadow-[0_0_24px_rgba(34,211,238,0.7),inset_0_0_14px_rgba(34,211,238,0.12)]
+                            hover:text-cyan-300 hover:border-cyan-300
+                            transition-all duration-300"
                     >
-                        <span className="block w-5 h-0.5 bg-current rotate-45 translate-y-[3px]" />
-                        <span className="block w-5 h-0.5 bg-current -rotate-45" />
-                    </button>
-
-                    {navItems.map(([label, href]) => {
-                        const active = isActive(href);
-                        return (
-                            <Link
-                                key={label}
-                                href={href}
-                                onClick={() => setMobileOpen(false)}
-                                className={`text-[20px] uppercase tracking-widest font-medium transition-all duration-300
-                                    ${active
-                                        ? "text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]"
-                                        : "text-[#e6e6e6] hover:text-cyan-300 hover:drop-shadow-[0_0_6px_rgba(34,211,238,0.5)]"
-                                    }`}
-                            >
-                                {label}
-                            </Link>
-                        );
-                    })}
+                        Let&apos;s Work Together
+                    </Link>
                 </nav>
             </div>
         )}
