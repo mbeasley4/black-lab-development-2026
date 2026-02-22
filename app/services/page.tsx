@@ -1,5 +1,6 @@
 import Image from "next/image"
 import PageHero from "@/components/PageHero"
+import PageClose from "@/components/PageClose"
 
 export const metadata = {
   title: "Services | Black Lab Development",
@@ -150,59 +151,13 @@ export default function ServicesPage() {
       </section>
 
       {/* ================= CLOSE ================= */}
-      <section className="relative overflow-hidden border-t border-neutral-900 py-28">
-        {/* Background layers */}
-        <div className="absolute inset-0">
-          {/* Background image */}
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('/images/close-bg.png')",
-            }}
-          />
-
-          {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black/85" />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 mx-auto max-w-[1500px] px-6">
-          <div className="mx-auto max-w-5xl text-center">
-            <h2 className="text-2xl md:text-5xl font-bold mb-6">
-              Services Designed for Real Systems
-            </h2>
-
-            <p className="text-neutral-300 leading-relaxed mb-6">
-              Not every project needs a full rebuild. Not every problem needs a new
-              stack. Black Lab Development focuses on the work that actually moves
-              systems forward — with clear tradeoffs and practical decisions.
-            </p>
-
-            <p className="text-neutral-300 leading-relaxed mb-10">
-              If you need a senior engineer who can step into complex systems,
-              identify real issues, and execute effectively, these services are
-              designed for that kind of work.
-            </p>
-
-            {/* CTA */}
-            <div className="flex flex-wrap justify-center items-center gap-6">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-md bg-white text-black px-6 py-3 text-sm font-medium transition hover:bg-neutral-200"
-              >
-                Start a Conversation
-              </a>
-
-              <a
-                href="/work"
-                className="text-sm text-neutral-400 underline underline-offset-4 hover:text-neutral-200 transition"
-              >
-                View Work
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageClose
+        title="Services Designed for Real Systems"
+        bodyPrimary="Not every project needs a full rebuild. Not every problem needs a new stack. Black Lab Development focuses on the work that actually moves systems forward — with clear tradeoffs and practical decisions."
+        bodySecondary="If you need a senior engineer who can step into complex systems, identify real issues, and execute effectively, these services are designed for that kind of work."
+        secondaryHref="/work"
+        secondaryLabel="View Work"
+      />
 
     </main>
   );

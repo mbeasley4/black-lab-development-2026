@@ -12,7 +12,7 @@ export default function ContactPage() {
     <main className="w-full bg-black text-white">
       {/* ================= HERO ================= */}
       <PageHero
-        label=" Contact Us"
+        label=" Contact Me"
         title="Let's Talk About Your"
         titleHighlight="Platform"
         description="If you're planning a new build, modernizing an existing platform,

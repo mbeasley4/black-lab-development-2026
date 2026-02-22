@@ -1,5 +1,6 @@
 import Image from "next/image"
 import PageHero from "@/components/PageHero"
+import PageClose from "@/components/PageClose"
 
 export const metadata = {
   title: "Industries | Black Lab Development",
@@ -153,59 +154,13 @@ export default function IndustriesPage() {
       </section>
 
       {/* ================= CLOSE ================= */}
-      <section className="relative overflow-hidden border-t border-neutral-800 py-28">
-        {/* Background layers */}
-        <div className="absolute inset-0">
-          {/* Background image */}
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('/images/close-bg.png')",
-            }}
-          />
-
-          {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black/85" />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 mx-auto max-w-[1500px] px-6">
-          <div className="mx-auto max-w-5xl text-center">
-            <h2 className="text-2xl md:text-5xl font-bold mb-6">
-              Industry Experience Without Industry Lock-In
-            </h2>
-
-            <p className="text-neutral-300 leading-relaxed mb-6">
-              While each industry comes with its own constraints, the underlying
-              challenges tend to be the same: performance, maintainability, and
-              systems that continue to hold up as real usage and complexity grow.
-            </p>
-
-            <p className="text-neutral-300 leading-relaxed mb-10">
-              Black Lab Development brings cross-industry experience without forcing
-              one-size-fits-all solutions — focusing instead on what actually works
-              for your platform.
-            </p>
-
-            {/* CTA */}
-            <div className="flex flex-wrap justify-center items-center gap-6">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-md bg-white text-black px-6 py-3 text-sm font-medium transition hover:bg-neutral-200"
-              >
-                Start a Conversation
-              </a>
-
-              <a
-                href="/services"
-                className="text-sm text-neutral-400 underline underline-offset-4 hover:text-neutral-200 transition"
-              >
-                Explore Services
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageClose
+        title="Industry Experience Without Industry Lock-In"
+        bodyPrimary="While each industry comes with its own constraints, the underlying challenges tend to be the same: performance, maintainability, and systems that continue to hold up as real usage and complexity grow."
+        bodySecondary="Black Lab Development brings cross-industry experience without forcing one-size-fits-all solutions — focusing instead on what actually works for your platform."
+        secondaryHref="/services"
+        secondaryLabel="Explore Services"
+      />
 
     </main>
   );

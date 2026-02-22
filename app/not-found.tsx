@@ -34,9 +34,9 @@ export default function NotFound() {
             </h2>
             
             <p className="text-base md:text-lg lg:text-xl text-blue-50/90 mb-8 md:mb-10 leading-relaxed max-w-2xl mx-auto">
-              We tried calling it back, but it's too busy chasing 
-              <span className="inline-block mx-1">🐿️</span> 
-              squirrels in the park. Happens to the best of us.
+              I tried calling it back, but it's too busy chasing
+              <span className="inline-block mx-1">🐿️</span>
+              squirrels in the park. Happens to the best of me.
             </p>
 
             {/* Code block with matching color scheme */}

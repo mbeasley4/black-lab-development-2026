@@ -1,6 +1,7 @@
 import Image from "next/image"
 import DemoSection from "@/components/DemoSection"
 import PageHero from "@/components/PageHero"
+import PageClose from "@/components/PageClose"
 
 export const metadata = {
   title: "Work | Black Lab Development",
@@ -223,60 +224,13 @@ export default function WorkPage() {
       </section>
 
       {/* ================= CLOSE ================= */}
-      <section className="relative overflow-hidden border-t border-neutral-900 py-28">
-        {/* Background layers */}
-        <div className="absolute inset-0">
-          {/* Background image */}
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('/images/close-bg.png')",
-            }}
-          />
-
-          {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black/85" />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 mx-auto max-w-[1500px] px-6">
-          <div className="mx-auto max-w-5xl text-center">
-            <h2 className="text-2xl md:text-5xl font-bold mb-6">
-              Work Built for the Long Term
-            </h2>
-
-            <p className="text-neutral-300 leading-relaxed mb-6">
-              Many of these platforms have been supported and evolved over
-              multiple years — not just launched and abandoned. The focus is
-              always on stability, clarity, and systems that continue to perform
-              as business needs change.
-            </p>
-
-            <p className="text-neutral-300 leading-relaxed mb-10">
-              If you’re looking for a development partner who understands the
-              responsibility that comes with production systems, this is the
-              kind of work Black Lab Development is built around.
-            </p>
-
-            {/* CTA */}
-            <div className="flex flex-wrap justify-center items-center gap-6">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-md bg-white text-black px-6 py-3 text-sm font-medium transition hover:bg-neutral-200"
-              >
-                Start a Conversation
-              </a>
-
-              <a
-                href="/services"
-                className="text-sm text-neutral-400 underline underline-offset-4 hover:text-neutral-200 transition"
-              >
-                View Services
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageClose
+        title="Work Built for the Long Term"
+        bodyPrimary="Many of these platforms have been supported and evolved over multiple years — not just launched and abandoned. The focus is always on stability, clarity, and systems that continue to perform as business needs change."
+        bodySecondary="If you’re looking for a development partner who understands the responsibility that comes with production systems, this is the kind of work Black Lab Development is built around."
+        secondaryHref="/services"
+        secondaryLabel="View Services"
+      />
     </main>
   );
 }

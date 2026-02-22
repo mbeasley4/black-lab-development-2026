@@ -134,7 +134,7 @@ export default function TechnologiesExperience() {
                         Black Lab Development brings over 15 years of senior-level engineering
                         experience delivering scalable, high-traffic digital platforms for
                         agencies, enterprise brands, and growth-focused organizations.
-                        Our work spans architecture, development, integration, and long-term
+                        My work spans architecture, development, integration, and long-term
                         optimization — with a strong emphasis on performance, reliability,
                         and security.
                     </p>
@@ -195,7 +195,7 @@ export default function TechnologiesExperience() {
                                 </h3>
                             </div>
                             <p className="text-blue-100/80 leading-relaxed group-hover:text-blue-50/90 transition-colors duration-300">
-                                Our approach to development is grounded in modern security
+                                My approach to development is grounded in modern security
                                 principles, risk awareness, and long-term maintainability —
                                 especially important for healthcare, enterprise, and
                                 high-traffic platforms.

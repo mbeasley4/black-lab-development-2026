@@ -6,6 +6,7 @@ import PageHero from "@/components/PageHero";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { SanityDocument } from "next-sanity";
+import PageClose from "@/components/PageClose";
 
 export const dynamic = "force-dynamic";
 
@@ -208,6 +209,14 @@ export default async function ArticlesPage({
           )}
         </div>
       </section>
+       {/* ================= CLOSE ================= */}
+        <PageClose
+        title="The Work That Actually Moves Systems Forward"
+        bodyPrimary="Not every problem needs a new stack. Not every engagement needs a full rebuild. Black Lab Development focuses on the work that actually moves systems forward — with clear tradeoffs and practical decisions."
+        bodySecondary="If you need a senior engineer who can step into complex systems, identify real issues, and execute effectively, these services are designed for that kind of work."
+        secondaryHref="/work"
+        secondaryLabel="View Work"
+      />
     </main>
   );
 }
