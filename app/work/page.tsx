@@ -45,10 +45,7 @@ const projects = [
       "Designed and developed a dynamic news and storytelling hub for Seven Hills School, showcasing student achievements, faculty insights, and school events through a structured, engaging, and easily navigable WordPress experience.",
     details: [
       "Custom WordPress templates for news articles and editorial content",
-      "Flexible content architecture supporting multiple school divisions and categories",
       "Responsive, mobile-first layout for accessible reading across all devices",
-      "Editorial-friendly publishing workflow for non-technical staff",
-      "Integrated storytelling features including featured articles, author attribution, and rich media",
       "Optimized performance and usability to highlight ongoing student achievements and school updates",
     ],
   },
