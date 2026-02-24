@@ -38,6 +38,21 @@ const projects = [
     ],
   },
   {
+    name: "Buzzworthy",
+    logo: "/images/work/buzzworthy-logo.png",
+    screenshot: "/images/work/buzzworthy-screenshot.png",
+    summary:
+      "Designed and developed a dynamic news and storytelling hub for Seven Hills School, showcasing student achievements, faculty insights, and school events through a structured, engaging, and easily navigable WordPress experience.",
+    details: [
+      "Custom WordPress templates for news articles and editorial content",
+      "Flexible content architecture supporting multiple school divisions and categories",
+      "Responsive, mobile-first layout for accessible reading across all devices",
+      "Editorial-friendly publishing workflow for non-technical staff",
+      "Integrated storytelling features including featured articles, author attribution, and rich media",
+      "Optimized performance and usability to highlight ongoing student achievements and school updates",
+    ],
+  },
+  {
     name: "Seven Hills School",
     logo: "/images/work/7hills-logo-v2.png",
     screenshot: "/images/work/7hills-screenshot.jpg",
@@ -190,65 +205,75 @@ export default function WorkPage() {
       <DemoSection />
       {/* ================= WORK ================= */}
       <section className="py-32 relative overflow-hidden">
-        {/* Ambient neon glows */}
-        <div className="absolute top-40 left-1/3 w-175 h-175 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-40 right-1/3 w-125 h-125 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
+        {/* Ambient neon glows — layered cyan + purple + blue */}
+        <div className="absolute top-0 left-1/4 w-175 h-175 bg-cyan-500/10 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute top-1/3 right-1/5 w-125 h-125 bg-purple-600/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-0 left-1/3 w-150 h-150 bg-blue-600/10 rounded-full blur-[130px] pointer-events-none" />
 
         <div className="mx-auto max-w-[1500px] px-6 relative">
           {/* Section header */}
-          <div className="flex items-center gap-6 mb-14">
-            <div>
-              <h2 className="text-2xl font-bold text-white">Client Work</h2>
-              <p className="text-sm text-neutral-500 mt-1">{projects.length} projects</p>
-            </div>
-            <div className="flex-1 h-px bg-linear-to-r from-cyan-500/40 via-cyan-500/10 to-transparent" />
+          <div className="mb-16">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-cyan-500/40 bg-cyan-500/10 text-cyan-400 text-xs font-bold tracking-[0.2em] uppercase mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(6,182,212,1)]" />
+              {projects.length} Projects
+            </span>
+            <h2 className="text-5xl font-extrabold tracking-tight text-white">
+              Client{" "}
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-blue-400 to-purple-500">
+                Work
+              </span>
+            </h2>
+            <div className="mt-5 h-px w-64 bg-linear-to-r from-cyan-500/70 via-blue-500/30 to-transparent" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {projects.map((project) => (
               <div
                 key={project.name}
-                className="group flex flex-col rounded-xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-300 hover:border-cyan-500/50 hover:shadow-[0_0_40px_rgba(6,182,212,0.10)]"
+                className="group flex flex-col rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-300 hover:border-cyan-500/55 hover:shadow-[0_0_60px_rgba(6,182,212,0.13)]"
               >
                 {/* Top accent line */}
-                <div className="h-px bg-linear-to-r from-transparent via-cyan-500/0 to-transparent group-hover:via-cyan-500/70 transition-all duration-500" />
+                <div className="h-0.5 bg-linear-to-r from-purple-500/0 via-cyan-500/25 to-blue-500/0 group-hover:from-purple-500/50 group-hover:via-cyan-400/90 group-hover:to-blue-500/50 transition-all duration-500" />
 
                 {/* Screenshot */}
-                <div className="relative h-[260px] w-full overflow-hidden">
+                <div className="relative h-60 w-full overflow-hidden">
                   <Image
                     src={project.screenshot}
                     alt={`${project.name} screenshot`}
                     fill
-                    className="object-cover object-top opacity-95 group-hover:scale-[1.02] transition-all duration-500"
+                    className="object-cover object-top opacity-90 group-hover:scale-[1.03] transition-all duration-500"
                   />
-                  {/* Neon overlay */}
-                  <div className="absolute inset-0 bg-linear-to-t from-neutral-950/70 via-transparent to-cyan-500/0 group-hover:to-cyan-500/8 transition-all duration-500" />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
-                  {/* Bottom fade into card */}
-                  <div className="absolute bottom-0 left-0 right-0 h-10 bg-linear-to-t from-neutral-950 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-neutral-950/85 via-neutral-950/20 to-transparent" />
+                  <div className="absolute inset-0 group-hover:bg-cyan-950/10 transition-all duration-300" />
+                  <div className="absolute bottom-0 left-0 right-0 h-12 bg-linear-to-t from-neutral-950 to-transparent" />
                 </div>
 
                 {/* Content */}
                 <div className="p-6 flex flex-col grow">
-                  {/* Logo */}
-                  <div className="mb-4 h-8 flex items-center">
-                    <Image
-                      src={project.logo}
-                      alt={`${project.name} logo`}
-                      height={20}
-                      width={100}
-                      className="object-contain opacity-75 group-hover:opacity-100 transition-opacity duration-300"
-                    />
+                  {/* Logo + name */}
+                  <div className="mb-4 flex flex-col gap-1.5">
+                    <div className="h-7 flex items-center">
+                      <Image
+                        src={project.logo}
+                        alt={`${project.name} logo`}
+                        height={20}
+                        width={110}
+                        className="object-contain object-left opacity-75 group-hover:opacity-100 transition-opacity duration-300"
+                      />
+                    </div>
+                    <span className="text-[10px] font-semibold tracking-[0.18em] uppercase text-neutral-600">
+                      {project.name}
+                    </span>
                   </div>
 
-                  <p className="text-neutral-400 text-sm leading-relaxed mb-4 grow">
+                  <p className="text-neutral-300 text-sm leading-relaxed mb-5 grow">
                     {project.summary}
                   </p>
 
-                  <ul className="space-y-1.5 text-xs mt-auto">
+                  <ul className="space-y-2 text-xs mt-auto border-t border-neutral-800/70 pt-4">
                     {project.details.map((item) => (
-                      <li key={item} className="flex items-center gap-2 text-neutral-500 group-hover:text-neutral-400 transition-colors duration-200">
-                        <span className="w-1 h-1 rounded-full bg-cyan-500/60 shrink-0" />
+                      <li key={item} className="flex items-center gap-2.5 text-neutral-400 group-hover:text-neutral-300 transition-colors duration-200">
+                        <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 shadow-[0_0_5px_rgba(6,182,212,0.65)] group-hover:shadow-[0_0_8px_rgba(6,182,212,1)] shrink-0 transition-all duration-300" />
                         {item}
                       </li>
                     ))}
