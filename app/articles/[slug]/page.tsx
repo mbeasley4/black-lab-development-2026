@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PortableText } from "next-sanity";
 import { ChevronDown } from "lucide-react";
+import type { Metadata } from "next";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import ReadingProgressBar from "@/components/ReadingProgressBar";
@@ -17,8 +18,47 @@ const POST_QUERY = `*[_type == "post" && slug.current == $slug][0] {
   mainImage,
   publishedAt,
   body,
+  "excerpt": pt::text(excerpt),
   "author": author->{ name }
 }`;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const article = await client.fetch(POST_QUERY, { slug });
+
+  if (!article) {
+    return { title: "Article Not Found | Black Lab Development" };
+  }
+
+  let description: string = article.excerpt ?? "";
+
+  if (!description && article.body) {
+    description = article.body
+      .filter((block: any) => block._type === "block")
+      .map((block: any) =>
+        block.children?.map((child: any) => child.text ?? "").join("") ?? ""
+      )
+      .join(" ");
+  }
+
+  if (description.length > 157) {
+    description = description.slice(0, 157) + "...";
+  }
+
+  if (!description) {
+    description =
+      "Technical article from Black Lab Development on web engineering, performance, and platform architecture.";
+  }
+
+  return {
+    title: `${article.title} | Black Lab Development`,
+    description,
+  };
+}
 
 
 const RELATED_POSTS_QUERY = `*[_type == "post" && slug.current != $slug] | order(publishedAt desc) [0...9] {

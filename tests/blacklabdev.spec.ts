@@ -35,10 +35,13 @@ test('"View Case Studies" CTA navigates to work page', async ({ page }) => {
 
 test('homepage displays all four service areas', async ({ page }) => {
   await page.goto('/');
-  await expect(page.getByRole('heading', { name: 'Web Development' })).toBeVisible();
-  await expect(page.getByRole('heading', { name: 'SEO & Growth Marketing' })).toBeVisible();
-  await expect(page.getByRole('heading', { name: 'Integrated Digital Solutions' })).toBeVisible();
-  await expect(page.getByRole('heading', { name: 'Custom Software Engineering' })).toBeVisible();
+
+  const servicesSection = page.getByRole('heading', { name: 'What I Do' }).locator('../..');
+
+  await expect(page.getByRole('heading', { name: 'Web Development', exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'SEO & Growth Marketing', exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Integrated Digital Solutions', exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Custom Software Engineering', exact: true })).toBeVisible();
 });
 
 // ─── Industries Section ───────────────────────────────────────────────────────
@@ -133,13 +136,26 @@ test('footer copyright year is current', async ({ page }) => {
 
 test('homepage has no broken images', async ({ page }) => {
   await page.goto('/');
+
   const images = page.locator('img');
   const count = await images.count();
 
   for (let i = 0; i < count; i++) {
-    const naturalWidth = await images.nth(i).evaluate(
-      (img: HTMLImageElement) => img.naturalWidth
-    );
+    const img = images.nth(i);
+
+    // Scroll into view to trigger lazy loading
+    await img.scrollIntoViewIfNeeded();
+
+    // Wait for the image to finish loading
+    await img.evaluate((el: HTMLImageElement) => {
+      if (el.complete) return;
+      return new Promise((resolve, reject) => {
+        el.addEventListener('load', resolve);
+        el.addEventListener('error', reject);
+      });
+    });
+
+    const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
     expect(naturalWidth).toBeGreaterThan(0);
   }
 });

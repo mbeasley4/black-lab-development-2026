@@ -22,6 +22,7 @@ export default function Header() {
         ["Industries", "/industries"],
         ["Work", "/work"],
         ["Articles", "/articles"],
+        ["Contact", "/contact"],
     ] as const;
 
     const isActive = (href: string) => {
@@ -41,7 +42,7 @@ export default function Header() {
                 />
 
                 {/* Drawer panel */}
-                <nav className="absolute top-0 right-0 h-full w-72 bg-black border-l border-cyan-500/40
+                <nav className="absolute top-0 right-0 h-full w-90 bg-black border-l border-cyan-500/40
                     shadow-[-4px_0_30px_rgba(34,211,238,0.15)]
                     flex flex-col px-8 pt-6 pb-10">
 
@@ -72,7 +73,7 @@ export default function Header() {
                             type="button"
                             onClick={() => setMobileOpen(false)}
                             style={{ touchAction: "manipulation" }}
-                            className="p-2 text-cyan-400 border border-cyan-400/60 rounded-sm
+                            className="py-4 px-2 text-cyan-400 border border-cyan-400/60 rounded-sm
                                 hover:border-cyan-300 hover:text-cyan-300 transition-all duration-200 cursor-pointer"
                         >
                             <span className="block w-5 h-0.5 bg-current rotate-45 translate-y-0.75" />
@@ -178,13 +179,30 @@ export default function Header() {
                 <nav className="hidden md:flex items-center gap-10 text-[16px] uppercase tracking-widest">
                     {navItems.map(([label, href]) => {
                         const active = isActive(href);
+                        const isContact = label === "Contact";
+
+                        if (isContact) {
+                            return (
+                                <Link
+                                    key={label}
+                                    href={href}
+                                    className={`px-4 py-1.5 uppercase tracking-widest text-[14px] font-semibold rounded-sm border transition-all duration-300
+                                        ${active
+                                            ? "text-cyan-300 border-cyan-400 shadow-[0_0_18px_rgba(34,211,238,0.7),inset_0_0_10px_rgba(34,211,238,0.12)]"
+                                            : "text-cyan-400 border-cyan-400/70 shadow-[0_0_10px_rgba(34,211,238,0.35),inset_0_0_6px_rgba(34,211,238,0.06)] hover:text-cyan-300 hover:border-cyan-300 hover:shadow-[0_0_22px_rgba(34,211,238,0.75),inset_0_0_12px_rgba(34,211,238,0.12)]"
+                                        }`}
+                                >
+                                    {label}
+                                </Link>
+                            );
+                        }
 
                         return (
                             <Link key={label} href={href} className="relative group">
                                 <span
                                     className={`transition-all duration-300 ${
-                                        active 
-                                            ? "text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]" 
+                                        active
+                                            ? "text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]"
                                             : "group-hover:text-cyan-300 group-hover:drop-shadow-[0_0_6px_rgba(34,211,238,0.5)]"
                                     }`}
                                 >

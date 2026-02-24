@@ -2,9 +2,9 @@ import ContactForm from "@/components/ContactForm"
 import PageHero from "@/components/PageHero"
 
 export const metadata = {
-  title: "Contact Black Lab Development | Senior Web & Software Engineering",
+  title: "Start a Project | Black Lab Development",
   description:
-    "Contact Black Lab Development to discuss custom web development, SEO, integrations, and scalable digital platforms. Work directly with a senior engineer delivering measurable results.",
+    "Work directly with a senior engineer with 15+ years of experience. Discuss custom web development, SEO, integrations, and platform modernization for your next project.",
 };
 
 export default function ContactPage() {

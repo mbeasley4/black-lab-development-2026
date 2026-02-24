@@ -24,9 +24,9 @@ const POSTS_QUERY = `*[_type == "post" && defined(slug.current)] | order(publish
 const COUNT_QUERY = `count(*[_type == "post" && defined(slug.current)])`;
 
 export const metadata = {
-  title: "Articles | Black Lab Development",
+  title: "Engineering Articles | Black Lab Development",
   description:
-    "Technical strategy, performance, and platform engineering insights from Black Lab Development.",
+    "Technical articles on web engineering, performance, software architecture, and platform decisions from a senior engineer with 15+ years of real-world experience.",
 };
 
 function toPlainText(blocks: { _type: string; children?: { text: string }[] }[]) {

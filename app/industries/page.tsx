@@ -3,9 +3,9 @@ import PageHero from "@/components/PageHero"
 import PageClose from "@/components/PageClose"
 
 export const metadata = {
-  title: "Industries | Black Lab Development",
+  title: "Industries Served | Black Lab Development",
   description:
-    "Black Lab Development works across healthcare, SaaS, manufacturing, e-commerce, and enterprise platforms—building scalable, production-grade digital systems shaped by real-world constraints.",
+    "Senior web engineering across healthcare, SaaS, manufacturing, e-commerce, and enterprise—delivering production-grade systems shaped by real-world constraints.",
 };
 
 const industries = [

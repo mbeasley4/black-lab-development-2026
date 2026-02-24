@@ -3,9 +3,9 @@ import PageHero from "@/components/PageHero"
 import PageClose from "@/components/PageClose"
 
 export const metadata = {
-  title: "Services | Black Lab Development",
+  title: "Engineering Services | Black Lab Development",
   description:
-    "Black Lab Development provides senior-led web development, software engineering, performance optimization, and system integration services for production-grade digital platforms.",
+    "Senior-led web development, software engineering, performance optimization, and system integration services for production-grade digital platforms.",
 };
 
 const services = [
