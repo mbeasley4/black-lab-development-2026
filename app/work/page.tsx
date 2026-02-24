@@ -11,6 +11,20 @@ export const metadata = {
 
 const projects = [
   {
+    name: "The Shortening Shuttle",
+    logo: "/images/work/shortening-shuttle-logo.png",
+    screenshot: "/images/work/shortening-shuttle-screenshot.png",
+    summary:
+      "Built a custom Shopify storefront for a specialty food brand using Liquid templating and Tailwind CSS, featuring a dynamic oil savings calculator to drive customer engagement and conversions.",
+    details: [
+      "Custom Shopify theme development with Liquid",
+      "Tailwind CSS styling and responsive layout",
+      "Interactive oil savings calculator built in JavaScript",
+      "Product page and collection template customization",
+      "Brand-aligned UI with performance optimization",
+    ],
+  },
+  {
     name: "Blum Media Group",
     logo: "/images/work/blum-logo.png",
     screenshot: "/images/work/blum-screenshot.png",
