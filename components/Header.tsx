@@ -18,6 +18,7 @@ export default function Header() {
     }, []);
 
     const navItems = [
+        ["About", "/about"],
         ["Services", "/services"],
         ["Industries", "/industries"],
         ["Work", "/work"],
@@ -42,12 +43,18 @@ export default function Header() {
                 />
 
                 {/* Drawer panel */}
-                <nav className="absolute top-0 right-0 h-full w-90 bg-black border-l border-cyan-500/40
-                    shadow-[-4px_0_30px_rgba(34,211,238,0.15)]
-                    flex flex-col px-8 pt-6 pb-10">
+                <nav className="absolute top-0 right-0 h-full w-72 bg-[#03080d] border-l border-cyan-400/50
+                    shadow-[-6px_0_40px_rgba(34,211,238,0.25)]
+                    flex flex-col px-6 pt-4 pb-6 overflow-hidden">
+
+                    {/* Internal ambient glows */}
+                    <div className="pointer-events-none absolute top-0 right-0 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl" />
+                    <div className="pointer-events-none absolute bottom-16 left-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl" />
+                    {/* Top accent line */}
+                    <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-cyan-400/60 to-transparent" />
 
                     {/* Drawer header: logo + close */}
-                    <div className="flex items-center justify-between mb-10">
+                    <div className="relative z-10 flex items-center justify-between mb-6 pb-4 border-b border-cyan-500/15">
                         <Link
                             href="/"
                             onClick={() => setMobileOpen(false)}
@@ -62,10 +69,10 @@ export default function Header() {
                                     priority
                                     className="relative z-10"
                                 />
-                                <div className="absolute inset-0 bg-cyan-500/30 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                <div className="absolute inset-0 bg-cyan-500/25 blur-xl rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
                             </div>
                             <span className="text-[13px] font-medium tracking-wide uppercase whitespace-nowrap text-[#e6e6e6]">
-                                Black Lab <span className="text-cyan-400">Dev</span>
+                                Black Lab <span className="text-cyan-400 drop-shadow-[0_0_6px_rgba(34,211,238,0.7)]">Dev</span>
                             </span>
                         </Link>
 
@@ -73,8 +80,10 @@ export default function Header() {
                             type="button"
                             onClick={() => setMobileOpen(false)}
                             style={{ touchAction: "manipulation" }}
-                            className="py-4 px-2 text-cyan-400 border border-cyan-400/60 rounded-sm
-                                hover:border-cyan-300 hover:text-cyan-300 transition-all duration-200 cursor-pointer"
+                            className="py-2 px-2 text-cyan-400 border border-cyan-400/60 rounded-sm
+                                shadow-[0_0_8px_rgba(34,211,238,0.2)]
+                                hover:border-cyan-300 hover:text-cyan-300 hover:shadow-[0_0_12px_rgba(34,211,238,0.5)]
+                                transition-all duration-200 cursor-pointer"
                         >
                             <span className="block w-5 h-0.5 bg-current rotate-45 translate-y-0.75" />
                             <span className="block w-5 h-0.5 bg-current -rotate-45" />
@@ -82,22 +91,49 @@ export default function Header() {
                     </div>
 
                     {/* Nav links */}
-                    <div className="flex flex-col gap-7 flex-1">
-                        {navItems.map(([label, href]) => {
+                    <div className="relative z-10 flex flex-col flex-1">
+                        {navItems.map(([label, href], i) => {
                             const active = isActive(href);
+                            const isContact = label === "Contact";
+
+                            if (isContact) {
+                                return (
+                                    <Link
+                                        key={label}
+                                        href={href}
+                                        onClick={() => setMobileOpen(false)}
+                                        className={`mt-4 block text-center py-2.5 px-6 uppercase tracking-widest text-[12px] font-semibold rounded-sm border transition-all duration-300
+                                            ${active
+                                                ? "text-cyan-300 border-cyan-400 shadow-[0_0_18px_rgba(34,211,238,0.7),inset_0_0_10px_rgba(34,211,238,0.12)]"
+                                                : "text-cyan-400 border-cyan-400/70 shadow-[0_0_10px_rgba(34,211,238,0.3),inset_0_0_6px_rgba(34,211,238,0.06)] hover:text-cyan-300 hover:border-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.65),inset_0_0_10px_rgba(34,211,238,0.12)]"
+                                            }`}
+                                    >
+                                        {label}
+                                    </Link>
+                                );
+                            }
+
                             return (
-                                <Link
-                                    key={label}
-                                    href={href}
-                                    onClick={() => setMobileOpen(false)}
-                                    className={`text-[20px] uppercase tracking-widest font-medium transition-all duration-300
-                                        ${active
-                                            ? "text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]"
-                                            : "text-[#e6e6e6] hover:text-cyan-300 hover:drop-shadow-[0_0_6px_rgba(34,211,238,0.5)]"
-                                        }`}
-                                >
-                                    {label}
-                                </Link>
+                                <div key={label}>
+                                    {i > 0 && <div className="h-px bg-linear-to-r from-cyan-500/15 via-cyan-500/8 to-transparent" />}
+                                    <Link
+                                        href={href}
+                                        onClick={() => setMobileOpen(false)}
+                                        className={`flex items-center gap-3 py-3.5 text-[16px] uppercase tracking-widest font-medium transition-all duration-300
+                                            ${active
+                                                ? "text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]"
+                                                : "text-[#c8c8c8] hover:text-cyan-300 hover:drop-shadow-[0_0_6px_rgba(34,211,238,0.5)]"
+                                            }`}
+                                    >
+                                        <span className={`shrink-0 w-0.5 h-4 rounded-full transition-all duration-300
+                                            ${active
+                                                ? "bg-cyan-400 shadow-[0_0_6px_rgba(34,211,238,0.9)]"
+                                                : "bg-cyan-500/20 group-hover:bg-cyan-400/60"
+                                            }`}
+                                        />
+                                        {label}
+                                    </Link>
+                                </div>
                             );
                         })}
                     </div>
@@ -106,11 +142,11 @@ export default function Header() {
                     <Link
                         href="/contact"
                         onClick={() => setMobileOpen(false)}
-                        className="mt-auto block text-center py-3 px-6 uppercase tracking-widest text-[13px] font-semibold
-                            text-cyan-400 border border-cyan-400 rounded-sm
-                            shadow-[0_0_14px_rgba(34,211,238,0.4),inset_0_0_10px_rgba(34,211,238,0.06)]
-                            hover:shadow-[0_0_24px_rgba(34,211,238,0.7),inset_0_0_14px_rgba(34,211,238,0.12)]
-                            hover:text-cyan-300 hover:border-cyan-300
+                        className="relative z-10 mt-4 block text-center py-2.5 px-6 uppercase tracking-widest text-[12px] font-semibold
+                            text-white bg-linear-to-r from-cyan-500 to-blue-500 rounded-sm
+                            shadow-[0_0_20px_rgba(34,211,238,0.4)]
+                            hover:shadow-[0_0_32px_rgba(34,211,238,0.65)]
+                            hover:from-cyan-400 hover:to-blue-400
                             transition-all duration-300"
                     >
                         Let&apos;s Work Together

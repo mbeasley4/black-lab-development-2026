@@ -201,7 +201,7 @@ export default function WorkPage() {
       {/* ================= Demo ================= */}
       <DemoSection />
       {/* ================= WORK ================= */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-6 md:py-9 relative overflow-hidden">
         {/* Ambient neon glows — layered cyan + purple + blue */}
         <div className="absolute top-0 left-1/4 w-175 h-175 bg-cyan-500/10 rounded-full blur-[140px] pointer-events-none" />
         <div className="absolute top-1/3 right-1/5 w-125 h-125 bg-purple-600/10 rounded-full blur-[120px] pointer-events-none" />
@@ -209,7 +209,7 @@ export default function WorkPage() {
 
         <div className="mx-auto max-w-[1500px] px-6 relative">
           {/* Section header */}
-          <div className="mb-16">
+          <div className="mb-8 md:mb-16">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-cyan-500/40 bg-cyan-500/10 text-cyan-400 text-xs font-bold tracking-[0.2em] uppercase mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(6,182,212,1)]" />
               {projects.length} Projects

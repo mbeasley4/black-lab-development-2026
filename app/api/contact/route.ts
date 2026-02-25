@@ -18,11 +18,31 @@ const resend = new Resend(RESEND_API_KEY);
 
 export async function POST(req: Request) {
     try {
-        const { name, email, message } = await req.json();
+        const { name, email, message, turnstileToken } = await req.json();
 
         if (!name || !email || !message) {
             return NextResponse.json(
                 { error: "Missing fields" },
+                { status: 400 }
+            );
+        }
+
+        const verifyRes = await fetch(
+            "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+            {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    secret: process.env.TURNSTILE_SECRET_KEY,
+                    response: turnstileToken,
+                }),
+            }
+        );
+        const verifyData = await verifyRes.json();
+
+        if (!verifyData.success) {
+            return NextResponse.json(
+                { error: "Bot check failed" },
                 { status: 400 }
             );
         }

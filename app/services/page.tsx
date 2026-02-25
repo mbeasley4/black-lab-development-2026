@@ -5,7 +5,7 @@ import PageClose from "@/components/PageClose"
 export const metadata = {
   title: "Engineering Services | Black Lab Development",
   description:
-    "Senior-led web development, software engineering, performance optimization, and system integration services for production-grade digital platforms.",
+    "Real engineering services — no templates, no offshore handoffs, no 40-slide decks. Just senior-led development that ships and holds up.",
 };
 
 const services = [
@@ -15,13 +15,13 @@ const services = [
     description: (
       <>
         <p className="mb-4">
-          Design and development of custom websites and web applications built
-          to support real business needs. This work goes beyond templates,
-          focusing on architecture, performance, and long-term maintainability.
+          If your current site was born from a template and raised by a page builder,
+          it's probably already showing its limits. I build from the architecture out —
+          custom, deliberate, and designed to last longer than the next platform trend.
         </p>
         <p className="text-neutral-500 text-sm">
-          Common platforms include WordPress, headless CMS, Shopify, and custom
-          frameworks depending on the problem being solved.
+          WordPress, headless CMS, Shopify, or fully custom — the right tool for
+          the problem, not the one I already had open.
         </p>
       </>
     ),
@@ -32,13 +32,13 @@ const services = [
     description: (
       <>
         <p className="mb-4">
-          Hands-on engineering support for complex systems, including backend
-          development, API design, data modeling, and application architecture.
-          Engagements often involve stabilizing or extending existing systems.
+          Someone has to actually read the codebase before touching it. That's the job.
+          Backend development, API design, data modeling, and architecture decisions made
+          by an engineer who's accountable for the outcome — not just the sprint velocity.
         </p>
         <p className="text-neutral-500 text-sm">
-          Focus areas include scalability, reliability, security, and clarity
-          for teams that need systems they can trust.
+          Reliability, security, and systems your team won't dread opening — for when
+          "we'll fix it later" has quietly become a load-bearing wall.
         </p>
       </>
     ),
@@ -49,13 +49,13 @@ const services = [
     description: (
       <>
         <p className="mb-4">
-          Improving page speed, Core Web Vitals, search visibility, and overall
-          platform performance. Work is data-driven and tied directly to user
-          experience and conversion outcomes.
+          A slow site isn't a cosmetic problem — it's revenue walking out the door.
+          I dig into the actual numbers, fix what's broken at the source, and measure
+          the difference. No vague recommendations. No findings buried in a PDF.
         </p>
         <p className="text-neutral-500 text-sm">
-          Typical efforts include performance audits, SEO remediation,
-          accessibility improvements, and ongoing optimization.
+          Core Web Vitals, SEO remediation, accessibility, and performance audits —
+          real improvements with data attached, not a report you file away and forget.
         </p>
       </>
     ),
@@ -66,13 +66,13 @@ const services = [
     description: (
       <>
         <p className="mb-4">
-          Building and maintaining integrations between websites, CRMs,
-          marketing platforms, analytics tools, and third-party services.
-          The goal is reducing manual work and improving data flow.
+          If someone on your team is copy-pasting between platforms to keep the data
+          straight, that's a technical problem with a technical solution. I build the
+          connections that make systems actually talk to each other — and stay talking.
         </p>
         <p className="text-neutral-500 text-sm">
-          Common integrations include HubSpot, Marketo, Salesforce, ActiveCampaign,
-          Stripe, and custom APIs.
+          HubSpot, Salesforce, Marketo, Stripe, and whatever else is in the stack —
+          clean integrations that don't require babysitting.
         </p>
       </>
     ),
@@ -83,13 +83,13 @@ const services = [
     description: (
       <>
         <p className="mb-4">
-          Providing senior-level technical oversight for teams that need clarity
-          around architecture, tooling, and long-term direction. This often
-          starts with a detailed audit and practical recommendations.
+          Before you burn it down and rebuild, it's worth knowing what you actually have.
+          I dig into existing systems, surface the real problems, and tell you plainly
+          what to fix, what to leave alone, and what's quietly on fire.
         </p>
         <p className="text-neutral-500 text-sm">
-          Ideal for organizations replacing vendors, inheriting legacy systems,
-          or preparing for growth.
+          The go-to for teams replacing vendors, inheriting a mess, or tired of making
+          expensive guesses about their own infrastructure.
         </p>
       </>
     ),
@@ -102,51 +102,81 @@ export default function ServicesPage() {
       {/* ================= HERO ================= */}
       <PageHero
         label="Services"
-        title="Senior-Led Engineering Services"
-        titleHighlight="Engineering"
-        description="Black Lab Development delivers hands-on engineering support built for long-term performance and maintainability."
+        title="Engineering That Ships and Holds"
+        titleHighlight="Ships and Holds"
+        description="I build things that work in production — not just in a demo. Senior-led, hands-on, and allergic to solutions that look great until they don't."
         backgroundImage="/images/services-hero-bg.png"
-        badges={["Hands-on execution", "Production systems", "No templates"]}
+        badges={["No templates", "No offshore handoffs", "No 40-slide decks"]}
       />
 
 
       {/* ================= SERVICES ================= */}
-      <section className="py-32 relative overflow-hidden">
-        {/* Ambient neon glows */}
-        <div className="absolute top-40 -left-20 w-175 h-175 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-40 -right-20 w-125 h-125 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
+      <section className="py-6 md:py-9 relative overflow-hidden">
+        {/* Dot grid texture */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-25"
+          style={{
+            backgroundImage: "radial-gradient(circle, rgba(34,211,238,0.35) 1px, transparent 1px)",
+            backgroundSize: "44px 44px",
+          }}
+        />
+
+        {/* Ambient neon glows — much more aggressive */}
+        <div className="absolute top-20 -left-40 w-175 h-175 bg-cyan-500/15 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute bottom-20 -right-40 w-150 h-150 bg-blue-600/15 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-225 h-225 bg-cyan-500/5 rounded-full blur-[180px] pointer-events-none" />
+        <div className="absolute top-1/3 right-1/4 w-87.5 h-87.5 bg-violet-600/10 rounded-full blur-[90px] pointer-events-none" />
 
         <div className="mx-auto max-w-[1500px] px-6">
-          {/* Section header */}
-          <div className="flex items-center gap-6 mb-20">
+          {/* Section header — bolder */}
+          <div className="flex items-center gap-6 mb-6 md:mb-9">
             <div>
-              <h2 className="text-2xl font-bold text-white">What We Do</h2>
+              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-cyan-400 font-mono drop-shadow-[0_0_12px_rgba(34,211,238,0.9)]">
+                // Services
+              </span>
+              <h2 className="text-3xl md:text-5xl font-bold">
+                <span className="bg-linear-to-r from-white via-cyan-200 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(34,211,238,0.5)]">
+                  What I Do
+                </span>
+              </h2>
             </div>
-            <div className="flex-1 h-px bg-linear-to-r from-cyan-500/40 via-cyan-500/10 to-transparent" />
+            <div className="flex-1 h-px bg-linear-to-r from-cyan-500/80 via-cyan-500/30 to-transparent" />
           </div>
 
           <div className="space-y-0">
             {services.map((service, index) => (
               <div
                 key={service.title}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-20 relative ${
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center py-6 md:py-9 relative ${
                   index < services.length - 1
-                    ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-linear-to-r after:from-transparent after:via-neutral-800 after:to-transparent"
+                    ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-linear-to-r after:from-transparent after:via-cyan-500/30 after:to-transparent"
                     : ""
                 }`}
               >
+                {/* Giant ghost number behind each row */}
+                <div
+                  className={`absolute text-[18rem] md:text-[22rem] font-black font-mono text-cyan-500/[0.035] pointer-events-none leading-none select-none top-0 ${
+                    index % 2 === 1 ? "-right-4 text-right" : "-left-4"
+                  }`}
+                  aria-hidden="true"
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </div>
+
                 {/* Text */}
-                <div className={`max-w-xl ${index % 2 === 1 ? "lg:order-2" : ""}`}>
-                  {/* Eyebrow */}
-                  <div className="flex items-center gap-3 mb-5">
-                    <span className="text-xs font-mono tracking-[0.3em] text-cyan-500/70">
+                <div className={`max-w-xl relative ${index % 2 === 1 ? "lg:order-2" : ""}`}>
+                  {/* Eyebrow with big number */}
+                  <div className="flex items-center gap-4 mb-6">
+                    <span className="text-5xl font-black font-mono text-cyan-400/25 leading-none tracking-tighter">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <div className="h-px w-8 bg-cyan-500/40" />
+                    <div className="h-px w-14 bg-linear-to-r from-cyan-400 to-cyan-500/20 shadow-[0_0_10px_rgba(34,211,238,0.6)]" />
                   </div>
 
-                  <h2 className="text-2xl md:text-3xl font-medium mb-5 text-white">
-                    {service.title}
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-snug">
+                    <span className="bg-linear-to-r from-white via-cyan-100 to-cyan-300 bg-clip-text text-transparent">
+                      {service.title}
+                    </span>
                   </h2>
 
                   <div className="text-neutral-400 leading-relaxed">
@@ -156,7 +186,7 @@ export default function ServicesPage() {
 
                 {/* Image */}
                 <div
-                  className={`group relative h-80 w-full rounded-xl overflow-hidden border border-neutral-800 transition-all duration-300 hover:border-cyan-500/40 hover:shadow-[0_0_50px_rgba(6,182,212,0.12)] ${
+                  className={`group relative h-95 w-full rounded-xl overflow-hidden border border-cyan-500/30 shadow-[0_0_50px_rgba(6,182,212,0.12),inset_0_0_40px_rgba(6,182,212,0.03)] transition-all duration-500 hover:border-cyan-400/70 hover:shadow-[0_0_100px_rgba(6,182,212,0.35),inset_0_0_60px_rgba(6,182,212,0.06)] ${
                     index % 2 === 1 ? "lg:order-1" : ""
                   }`}
                 >
@@ -164,15 +194,33 @@ export default function ServicesPage() {
                     src={service.image}
                     alt={service.title}
                     fill
-                    className="object-cover opacity-80 group-hover:opacity-90 group-hover:scale-[1.02] transition-all duration-500"
+                    className="object-cover opacity-65 group-hover:opacity-90 group-hover:scale-[1.05] transition-all duration-700"
                   />
-                  {/* Neon tint overlay */}
-                  <div className="absolute inset-0 bg-linear-to-br from-black/50 via-black/20 to-cyan-900/10 group-hover:to-cyan-900/25 transition-all duration-500" />
+                  {/* Dark + neon tint overlay */}
+                  <div className="absolute inset-0 bg-linear-to-br from-black/65 via-black/20 to-cyan-900/20 group-hover:to-cyan-900/45 transition-all duration-500" />
+                  {/* Scanline texture */}
+                  <div
+                    className="absolute inset-0 opacity-[0.08] pointer-events-none"
+                    style={{
+                      backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.5) 2px, rgba(0,0,0,0.5) 4px)",
+                    }}
+                  />
                   {/* Top accent line */}
-                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-cyan-500/0 to-transparent group-hover:via-cyan-500/60 transition-all duration-500" />
-                  {/* Service label overlay */}
-                  <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-xs font-mono tracking-[0.2em] uppercase text-cyan-400/80">
+                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-cyan-500/50 to-transparent group-hover:via-cyan-400 transition-all duration-500" />
+                  {/* Bottom accent line */}
+                  <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-cyan-500/20 to-transparent group-hover:via-cyan-400/60 transition-all duration-500" />
+                  {/* Corner glow — top right */}
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-500/15 blur-3xl rounded-full group-hover:bg-cyan-400/35 transition-all duration-500" />
+                  {/* Corner glow — bottom left */}
+                  <div className="absolute bottom-0 left-0 w-28 h-28 bg-blue-600/10 blur-2xl rounded-full group-hover:bg-blue-500/30 transition-all duration-500" />
+                  {/* Corner brackets */}
+                  <div className="absolute top-3 left-3 w-5 h-5 border-t-2 border-l-2 border-cyan-400/50 group-hover:border-cyan-300 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute top-3 right-3 w-5 h-5 border-t-2 border-r-2 border-cyan-400/50 group-hover:border-cyan-300 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute bottom-3 left-3 w-5 h-5 border-b-2 border-l-2 border-cyan-400/50 group-hover:border-cyan-300 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute bottom-3 right-3 w-5 h-5 border-b-2 border-r-2 border-cyan-400/50 group-hover:border-cyan-300 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  {/* Service label — slides up on hover */}
+                  <div className="absolute bottom-5 left-5 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-400">
+                    <span className="text-xs font-mono tracking-[0.3em] uppercase text-cyan-300 drop-shadow-[0_0_12px_rgba(34,211,238,1)]">
                       {service.title}
                     </span>
                   </div>
@@ -185,9 +233,9 @@ export default function ServicesPage() {
 
       {/* ================= CLOSE ================= */}
       <PageClose
-        title="Services Designed for Real Systems"
-        bodyPrimary="Not every project needs a full rebuild. Not every problem needs a new stack. Black Lab Development focuses on the work that actually moves systems forward — with clear tradeoffs and practical decisions."
-        bodySecondary="If you need a senior engineer who can step into complex systems, identify real issues, and execute effectively, these services are designed for that kind of work."
+        title="No Roadmaps to Nowhere"
+        bodyPrimary="Not every problem is a rebuild. Not every slowdown needs a new framework. The best engineering decisions match the actual problem — not the fashionable solution, not the vendor pitch, not whatever worked at the last job."
+        bodySecondary="If you want someone who will dig in, tell you what's actually wrong, and do the work — not just draft a proposal — that's what these services are for."
         secondaryHref="/work"
         secondaryLabel="View Work"
       />

@@ -1,13 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 
 export default function ContactForm() {
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState<boolean | null>(null);
+    const [token, setToken] = useState<string | null>(null);
+    const turnstileRef = useRef<TurnstileInstance>(null);
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
+
+        if (!token) return;
 
         setLoading(true);
         setSuccess(null);
@@ -21,16 +26,25 @@ export default function ContactForm() {
                 name: formData.get("name"),
                 email: formData.get("email"),
                 message: formData.get("message"),
+                turnstileToken: token,
             }),
         });
 
         setLoading(false);
         setSuccess(res.ok);
 
+        turnstileRef.current?.reset();
+        setToken(null);
+
         if (res.ok) {
             e.currentTarget.reset();
         }
     }
+
+    const inputClass =
+        "w-full bg-black border border-cyan-400/40 px-4 py-3 text-white placeholder-neutral-500 " +
+        "focus:outline-none focus:border-cyan-400 focus:shadow-[0_0_16px_rgba(34,211,238,0.4)] " +
+        "transition-all duration-200";
 
     return (
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -38,7 +52,7 @@ export default function ContactForm() {
                 name="name"
                 required
                 placeholder="Name"
-                className="w-full bg-black border border-white/20 px-4 py-3"
+                className={inputClass}
             />
 
             <input
@@ -46,7 +60,7 @@ export default function ContactForm() {
                 name="email"
                 required
                 placeholder="Email"
-                className="w-full bg-black border border-white/20 px-4 py-3"
+                className={inputClass}
             />
 
             <textarea
@@ -54,19 +68,31 @@ export default function ContactForm() {
                 required
                 rows={5}
                 placeholder="Message"
-                className="w-full bg-black border border-white/20 px-4 py-3"
+                className={inputClass}
+            />
+
+            <Turnstile
+                ref={turnstileRef}
+                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+                onSuccess={setToken}
+                onExpire={() => setToken(null)}
+                onError={() => setToken(null)}
+                options={{ theme: "dark" }}
             />
 
             <button
                 type="submit"
-                disabled={loading}
-                className="border border-white px-6 py-3 uppercase tracking-widest hover:bg-white hover:text-black transition disabled:opacity-60"
+                disabled={loading || !token}
+                className="border border-cyan-400 text-cyan-400 px-6 py-3 uppercase tracking-widest
+                    shadow-[0_0_10px_rgba(34,211,238,0.3)]
+                    hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_20px_rgba(34,211,238,0.6)]
+                    transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
                 {loading ? "Sending…" : "Send Message"}
             </button>
 
             {success === true && (
-                <p className="text-green-400 text-sm">
+                <p className="text-cyan-400 text-sm">
                     Message sent successfully.
                 </p>
             )}

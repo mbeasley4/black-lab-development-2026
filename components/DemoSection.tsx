@@ -29,7 +29,7 @@ const demos = [
 
 export default function DemoSection() {
   return (
-    <section className="bg-black border-t border-b border-purple-500/20 py-28 relative overflow-hidden">
+    <section className="bg-black border-t border-b border-purple-500/20 py-6 md:py-9 relative overflow-hidden">
       {/* Ambient neon glows — purple-forward */}
       <div className="absolute top-0 left-1/4 w-175 h-175 bg-purple-600/12 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute top-1/2 right-0 w-125 h-125 bg-fuchsia-600/10 rounded-full blur-[120px] pointer-events-none" />

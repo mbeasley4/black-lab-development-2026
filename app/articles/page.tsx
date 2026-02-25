@@ -154,17 +154,18 @@ export default async function ArticlesPage({
         titleHighlight="Codebase"
         description="Articles documenting technical decisions, tradeoffs, and lessons learned while building systems that run under real-world conditions."
         backgroundImage="/images/articles-hero-bg.png"
+        badges={["Senior-led execution", "Production systems", "Direct collaboration"]}
       />
 
       {/* GRID */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-14 md:py-24 relative overflow-hidden">
         {/* Ambient neon glows */}
         <div className="absolute top-32 left-1/4 w-175 h-175 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-32 right-1/4 w-125 h-125 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="mx-auto max-w-[1500px] px-6 relative">
           {/* Section header */}
-          <div className="flex items-center gap-6 mb-14">
+          <div className="flex items-center gap-6 mb-8 md:mb-14">
             <div>
               <h2 className="text-2xl font-bold text-white">All Articles</h2>
               <p className="text-sm text-neutral-500 mt-1">{total} article{total !== 1 ? "s" : ""} published</p>

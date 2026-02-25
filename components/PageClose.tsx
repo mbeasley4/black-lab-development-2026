@@ -31,8 +31,8 @@ export default function PageClose({
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-[1500px] px-6">
-        <div className="mx-auto max-w-5xl text-center">
-          <h2 className="text-2xl md:text-5xl font-bold mb-6 bg-linear-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent pb-1 leading-tight">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="text-2xl md:text-5xl text-balance font-bold mb-6 bg-linear-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent pb-1 leading-tight">
             {title}
           </h2>
 

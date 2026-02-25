@@ -48,7 +48,7 @@ export default function PageHero({
       <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-blue-500/15 rounded-full blur-3xl" />
 
       {/* Hero content */}
-      <div className="relative z-10 py-20 md:py-24">
+      <div className="relative z-10 py-12 md:py-24">
         <div className="mx-auto max-w-[1500px] px-6 w-full">
           <div className="max-w-6xl text-center md:text-left">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">

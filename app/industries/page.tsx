@@ -5,7 +5,7 @@ import PageClose from "@/components/PageClose"
 export const metadata = {
   title: "Industries Served | Black Lab Development",
   description:
-    "Senior web engineering across healthcare, SaaS, manufacturing, e-commerce, and enterprise—delivering production-grade systems shaped by real-world constraints.",
+    "Real industry experience means knowing what breaks in production, not just what looks good in a pitch. Healthcare, SaaS, manufacturing, e-commerce, enterprise — been in the trenches.",
 };
 
 const industries = [
@@ -15,14 +15,14 @@ const industries = [
     description: (
       <>
         <p className="mb-4">
-          Experience supporting healthcare organizations and medical platforms
-          where reliability, accuracy, and long-term maintainability are
-          non-negotiable. Work often involves regulated environments, legacy
-          systems, and complex integrations.
+          Healthcare platforms don't get the luxury of "move fast and break things."
+          When the system goes down or the data is wrong, real people are affected.
+          That weight shapes how this work gets done — carefully, with an eye on what
+          lasts, not just what ships.
         </p>
         <p className="text-neutral-500 text-sm">
-          Common work includes custom CMS platforms, performance optimization,
-          integrations, and long-term technical stewardship.
+          Regulated environments, legacy system integrations, custom CMS platforms,
+          and long-term technical stewardship — with the discipline the domain demands.
         </p>
       </>
     ),
@@ -33,13 +33,14 @@ const industries = [
     description: (
       <>
         <p className="mb-4">
-          Building and modernizing SaaS platforms that need to scale alongside
-          product growth. Emphasis is placed on clean architecture, performance,
-          and avoiding technical debt that slows teams down over time.
+          SaaS companies have a habit of building fast, then spending the next two years
+          paying the tab. Technical debt compounds quietly until it doesn't — and then
+          it's all anyone talks about. I help teams clean up what they've accumulated
+          and build systems that don't become anchors.
         </p>
         <p className="text-neutral-500 text-sm">
-          Typical challenges include CRM integrations, analytics, and content
-          systems that support rapid iteration.
+          CRM integrations, analytics infrastructure, content systems, and architecture
+          that lets teams move fast without leaving a trail of wreckage.
         </p>
       </>
     ),
@@ -50,14 +51,14 @@ const industries = [
     description: (
       <>
         <p className="mb-4">
-          Supporting manufacturers and industrial companies with digital
-          platforms that are often mission-critical but historically
-          underinvested. Work frequently involves untangling legacy workflows
-          and modernizing infrastructure.
+          It's not unusual to find a manufacturer running world-class physical operations
+          on software that looks like it was built during the Clinton administration.
+          The gap between operational capability and digital infrastructure is a real
+          problem — and a solvable one, without blowing everything up to do it.
         </p>
         <p className="text-neutral-500 text-sm">
-          Focus areas include reliability, clarity, and systems that remain
-          maintainable long after launch.
+          Legacy modernization, workflow untangling, and systems that will still be
+          standing — and maintainable — long after the project is closed.
         </p>
       </>
     ),
@@ -68,13 +69,14 @@ const industries = [
     description: (
       <>
         <p className="mb-4">
-          High-traffic e-commerce platforms where performance, SEO, and
-          conversion directly impact revenue. Experience includes custom themes,
-          headless builds, and performance tuning under real customer load.
+          In e-commerce, a slow page isn't a minor inconvenience — it's a sale you
+          didn't make. Every second of load time is a customer you lost to a competitor
+          with a faster checkout. I fix the things that actually cost you money, with
+          data to prove it.
         </p>
         <p className="text-neutral-500 text-sm">
-          Platforms commonly include WordPress, Shopify, and custom integrations
-          with marketing and fulfillment systems.
+          WordPress, Shopify, headless builds, and performance tuning that holds up
+          under real traffic — not just a localhost demo.
         </p>
       </>
     ),
@@ -85,13 +87,14 @@ const industries = [
     description: (
       <>
         <p className="mb-4">
-          Working within enterprise environments where incremental, low-risk
-          improvements are often preferred over disruptive rewrites. These
-          projects require careful coordination and long-term thinking.
+          Enterprise projects have a reputation for taking forever, costing twice the
+          budget, and delivering half the scope. I don't run that playbook. Incremental,
+          low-risk, and actually shipped — because a working system beats a perfect plan
+          that's still in review.
         </p>
         <p className="text-neutral-500 text-sm">
-          This includes audits, stabilization, architectural guidance, and
-          hands-on execution.
+          Audits, stabilization, architectural guidance, and hands-on execution for
+          teams tired of consultants who hand off decks instead of working software.
         </p>
       </>
     ),
@@ -104,52 +107,82 @@ export default function IndustriesPage() {
       {/* ================= HERO ================= */}
       <PageHero
         label="Industries"
-        title="Experience Across Real-World Systems"
-        titleHighlight="Real-World Systems"
-        description="Industry experience shaped by production systems, real users, and long-term responsibility — not templates or theoretical architectures."
+        title="Earned in the Field, Not the Classroom"
+        titleHighlight="Earned in the Field"
+        description="Real industry experience means knowing what breaks in production — not just what works in a pitch deck. Different sectors, same hard problems."
         backgroundImage="/images/industries-hero-bg.png"
-        badges={["Enterprise platforms", "Regulated environments", "High-traffic systems"]}
+        badges={["Regulated environments", "High-traffic systems", "Legacy nightmares survived"]}
       />
 
 
 
       {/* ================= INDUSTRIES ================= */}
-      <section className="py-32 relative overflow-hidden">
-        {/* Ambient neon glows */}
-        <div className="absolute top-40 -left-20 w-175 h-175 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-40 -right-20 w-125 h-125 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
+      <section className="py-6 md:py-9 relative overflow-hidden">
+        {/* Dot grid texture */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-25"
+          style={{
+            backgroundImage: "radial-gradient(circle, rgba(34,211,238,0.35) 1px, transparent 1px)",
+            backgroundSize: "44px 44px",
+          }}
+        />
+
+        {/* Ambient neon glows — aggressive */}
+        <div className="absolute top-20 -left-40 w-175 h-175 bg-cyan-500/15 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute bottom-20 -right-40 w-150 h-150 bg-blue-600/15 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-225 h-225 bg-cyan-500/5 rounded-full blur-[180px] pointer-events-none" />
+        <div className="absolute top-1/3 right-1/4 w-87.5 h-87.5 bg-violet-600/10 rounded-full blur-[90px] pointer-events-none" />
 
         <div className="mx-auto max-w-[1500px] px-6">
-          {/* Section header */}
-          <div className="flex items-center gap-6 mb-20">
+          {/* Section header — bolder */}
+          <div className="flex items-center gap-6 mb-6 md:mb-9">
             <div>
-              <h2 className="text-2xl font-bold text-white">Industries Served</h2>
+              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-cyan-400 font-mono drop-shadow-[0_0_12px_rgba(34,211,238,0.9)]">
+                // Industries
+              </span>
+              <h2 className="text-3xl md:text-5xl font-bold">
+                <span className="bg-linear-to-r from-white via-cyan-200 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(34,211,238,0.5)]">
+                  Industries Served
+                </span>
+              </h2>
             </div>
-            <div className="flex-1 h-px bg-linear-to-r from-cyan-500/40 via-cyan-500/10 to-transparent" />
+            <div className="flex-1 h-px bg-linear-to-r from-cyan-500/80 via-cyan-500/30 to-transparent" />
           </div>
 
           <div className="space-y-0">
             {industries.map((industry, index) => (
               <div
                 key={industry.title}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-20 relative ${
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center py-6 md:py-9 relative ${
                   index < industries.length - 1
-                    ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-linear-to-r after:from-transparent after:via-neutral-800 after:to-transparent"
+                    ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-linear-to-r after:from-transparent after:via-cyan-500/30 after:to-transparent"
                     : ""
                 }`}
               >
+                {/* Giant ghost number behind each row */}
+                <div
+                  className={`absolute text-[18rem] md:text-[22rem] font-black font-mono text-cyan-500/[0.035] pointer-events-none leading-none select-none top-0 ${
+                    index % 2 === 1 ? "-right-4 text-right" : "-left-4"
+                  }`}
+                  aria-hidden="true"
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </div>
+
                 {/* Text */}
-                <div className={`max-w-xl ${index % 2 === 1 ? "lg:order-2" : ""}`}>
-                  {/* Eyebrow */}
-                  <div className="flex items-center gap-3 mb-5">
-                    <span className="text-xs font-mono tracking-[0.3em] text-cyan-500/70">
+                <div className={`max-w-xl relative ${index % 2 === 1 ? "lg:order-2" : ""}`}>
+                  {/* Eyebrow with big number */}
+                  <div className="flex items-center gap-4 mb-6">
+                    <span className="text-5xl font-black font-mono text-cyan-400/25 leading-none tracking-tighter">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <div className="h-px w-8 bg-cyan-500/40" />
+                    <div className="h-px w-14 bg-linear-to-r from-cyan-400 to-cyan-500/20 shadow-[0_0_10px_rgba(34,211,238,0.6)]" />
                   </div>
 
-                  <h2 className="text-2xl md:text-3xl font-medium mb-5 text-white">
-                    {industry.title}
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-snug">
+                    <span className="bg-linear-to-r from-white via-cyan-100 to-cyan-300 bg-clip-text text-transparent">
+                      {industry.title}
+                    </span>
                   </h2>
 
                   <div className="text-neutral-400 leading-relaxed">
@@ -159,7 +192,7 @@ export default function IndustriesPage() {
 
                 {/* Image */}
                 <div
-                  className={`group relative h-90 w-full rounded-xl overflow-hidden border border-neutral-800 transition-all duration-300 hover:border-cyan-500/40 hover:shadow-[0_0_50px_rgba(6,182,212,0.12)] ${
+                  className={`group relative h-95 w-full rounded-xl overflow-hidden border border-cyan-500/30 shadow-[0_0_50px_rgba(6,182,212,0.12),inset_0_0_40px_rgba(6,182,212,0.03)] transition-all duration-500 hover:border-cyan-400/70 hover:shadow-[0_0_100px_rgba(6,182,212,0.35),inset_0_0_60px_rgba(6,182,212,0.06)] ${
                     index % 2 === 1 ? "lg:order-1" : ""
                   }`}
                 >
@@ -167,15 +200,33 @@ export default function IndustriesPage() {
                     src={industry.image}
                     alt={industry.title}
                     fill
-                    className="object-cover opacity-80 group-hover:opacity-90 group-hover:scale-[1.02] transition-all duration-500"
+                    className="object-cover opacity-65 group-hover:opacity-90 group-hover:scale-[1.05] transition-all duration-700"
                   />
-                  {/* Neon tint overlay */}
-                  <div className="absolute inset-0 bg-linear-to-br from-black/50 via-black/20 to-cyan-900/10 group-hover:to-cyan-900/25 transition-all duration-500" />
+                  {/* Dark + neon tint overlay */}
+                  <div className="absolute inset-0 bg-linear-to-br from-black/65 via-black/20 to-cyan-900/20 group-hover:to-cyan-900/45 transition-all duration-500" />
+                  {/* Scanline texture */}
+                  <div
+                    className="absolute inset-0 opacity-[0.08] pointer-events-none"
+                    style={{
+                      backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.5) 2px, rgba(0,0,0,0.5) 4px)",
+                    }}
+                  />
                   {/* Top accent line */}
-                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-cyan-500/0 to-transparent group-hover:via-cyan-500/60 transition-all duration-500" />
-                  {/* Industry label overlay */}
-                  <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-xs font-mono tracking-[0.2em] uppercase text-cyan-400/80">
+                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-cyan-500/50 to-transparent group-hover:via-cyan-400 transition-all duration-500" />
+                  {/* Bottom accent line */}
+                  <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-cyan-500/20 to-transparent group-hover:via-cyan-400/60 transition-all duration-500" />
+                  {/* Corner glow — top right */}
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-500/15 blur-3xl rounded-full group-hover:bg-cyan-400/35 transition-all duration-500" />
+                  {/* Corner glow — bottom left */}
+                  <div className="absolute bottom-0 left-0 w-28 h-28 bg-blue-600/10 blur-2xl rounded-full group-hover:bg-blue-500/30 transition-all duration-500" />
+                  {/* Corner brackets */}
+                  <div className="absolute top-3 left-3 w-5 h-5 border-t-2 border-l-2 border-cyan-400/50 group-hover:border-cyan-300 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute top-3 right-3 w-5 h-5 border-t-2 border-r-2 border-cyan-400/50 group-hover:border-cyan-300 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute bottom-3 left-3 w-5 h-5 border-b-2 border-l-2 border-cyan-400/50 group-hover:border-cyan-300 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute bottom-3 right-3 w-5 h-5 border-b-2 border-r-2 border-cyan-400/50 group-hover:border-cyan-300 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  {/* Industry label — slides up on hover */}
+                  <div className="absolute bottom-5 left-5 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-400">
+                    <span className="text-xs font-mono tracking-[0.3em] uppercase text-cyan-300 drop-shadow-[0_0_12px_rgba(34,211,238,1)]">
                       {industry.title}
                     </span>
                   </div>
@@ -188,9 +239,9 @@ export default function IndustriesPage() {
 
       {/* ================= CLOSE ================= */}
       <PageClose
-        title="Industry Experience Without Industry Lock-In"
-        bodyPrimary="While each industry comes with its own constraints, the underlying challenges tend to be the same: performance, maintainability, and systems that continue to hold up as real usage and complexity grow."
-        bodySecondary="Black Lab Development brings cross-industry experience without forcing one-size-fits-all solutions — focusing instead on what actually works for your platform."
+        title="Industries Change. Bad Engineering Stays Bad."
+        bodyPrimary="The underlying problems look different in every sector, but they're usually the same problem: systems that weren't built to last, teams that inherited a mess, and platforms being asked to do more than they were designed for."
+        bodySecondary="Cross-industry experience means solving the actual problem — not just the one that matches your sector's standard playbook."
         secondaryHref="/services"
         secondaryLabel="Explore Services"
       />
