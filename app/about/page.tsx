@@ -5,7 +5,7 @@ import PageClose from "@/components/PageClose"
 export const metadata = {
   title: "About | Black Lab Development",
   description:
-    "Senior engineer with 15+ years building production-grade digital systems. No account managers, no junior hand-offs — just direct access to the person doing the work.",
+    "Senior engineer who's spent enough time in production systems to know the difference between clever and correct. No account managers, no junior hand-offs — just direct access to the engineer behind the decisions.",
 };
 
 const values = [
@@ -39,9 +39,9 @@ export default function AboutPage() {
         label="About"
         title="The Engineer Behind the Work"
         titleHighlight="Behind the Work"
-        description="15+ years building production-grade digital systems. No account managers, no junior hand-offs, no agency markup — just a senior engineer who takes full ownership of the outcome."
+        description="Deep enough in the field to know which problems are real. No middlemen, no markup — just the engineer who owns the outcome."
         backgroundImage="/images/about-hero-bg.png"
-        badges={["15+ years experience", "Direct access", "Full ownership"]}
+        badges={["Senior-led", "Direct access", "Full ownership"]}
       />
 
       {/* ================= BIO ================= */}
@@ -100,9 +100,7 @@ export default function AboutPage() {
               {/* Bio text */}
               <div className="max-w-xl">
                 <p className="text-lg text-neutral-300 leading-relaxed mb-6">
-                  I'm Michael Beasley — a senior software engineer based in Cincinnati with over 15 years
-                  of experience building digital platforms for healthcare organizations, SaaS companies,
-                  manufacturers, and enterprise brands.
+                  I'm Michael Beasley — a senior engineer in Cincinnati with enough production systems behind me to know what failure looks like before it ships.
                 </p>
                 <p className="text-neutral-400 leading-relaxed mb-6">
                   I started Black Lab Development to do the kind of engineering work I actually respect:
@@ -125,7 +123,7 @@ export default function AboutPage() {
             {/* Stats / quick facts */}
             <div className="grid grid-cols-2 gap-4">
               {[
-                { value: "15+", label: "Years of experience" },
+                { value: "15+", label: "Years in the field" },
                 { value: "50+", label: "Production systems shipped" },
                 { value: "6K+", label: "Daily users on platforms I've built" },
                 { value: "0", label: "Projects handed off to juniors" },
@@ -147,7 +145,7 @@ export default function AboutPage() {
       </section>
 
       {/* ================= THE HONEST PITCH ================= */}
-      <section className="py-16 md:py-32 relative overflow-hidden border-t border-cyan-500/10">
+      <section className="py-6 md:py-9 relative overflow-hidden border-t border-cyan-500/10">
         <div className="absolute inset-0 pointer-events-none opacity-15"
           style={{
             backgroundImage: "radial-gradient(circle, rgba(34,211,238,0.35) 1px, transparent 1px)",
@@ -232,7 +230,7 @@ export default function AboutPage() {
       </section>
 
       {/* ================= VALUES ================= */}
-      <section className="py-16 md:py-32 relative overflow-hidden border-t border-cyan-500/10">
+      <section className="py-6 md:py-9 relative overflow-hidden border-t border-cyan-500/10">
         <div className="absolute bottom-0 left-1/4 w-175 h-175 bg-blue-600/10 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="mx-auto max-w-[1500px] px-6">

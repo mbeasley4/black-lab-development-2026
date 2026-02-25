@@ -26,7 +26,7 @@ const COUNT_QUERY = `count(*[_type == "post" && defined(slug.current)])`;
 export const metadata = {
   title: "Engineering Articles | Black Lab Development",
   description:
-    "Technical articles on web engineering, performance, software architecture, and platform decisions from a senior engineer with 15+ years of real-world experience.",
+    "Technical articles on web engineering, performance, software architecture, and platform decisions — from a senior engineer with 15+ years and a low tolerance for cargo-cult thinking.",
 };
 
 function toPlainText(blocks: { _type: string; children?: { text: string }[] }[]) {

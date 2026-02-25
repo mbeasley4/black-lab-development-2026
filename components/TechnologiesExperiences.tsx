@@ -131,11 +131,11 @@ export default function TechnologiesExperience() {
                         Technologies & Experience
                     </h2>
                     <p className="text-lg text-blue-100/80 leading-relaxed">
-                        Over 15 years of senior-level engineering experience building scalable,
-                        high-traffic digital platforms for agencies, enterprise brands, and
-                        growth-focused organizations. My work spans architecture, development,
-                        integration, and long-term optimization — with a strong emphasis on
-                        performance, reliability, and security.
+                        15+ years of senior-level engineering — building scalable, high-traffic
+                        platforms for agencies, enterprise brands, and organizations that
+                        can&apos;t afford to wing it. Architecture, development, integration,
+                        and long-term optimization with a hard emphasis on performance,
+                        reliability, and security.
                     </p>
                 </div>
 

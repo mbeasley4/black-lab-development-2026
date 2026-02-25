@@ -5,7 +5,7 @@ import PageHero from "@/components/PageHero"
 export const metadata = {
   title: "Start a Project | Black Lab Development",
   description:
-    "Work directly with a senior engineer with 15+ years of experience. Discuss custom web development, SEO, integrations, and platform modernization for your next project.",
+    "Work directly with a senior engineer with 15+ years doing this — not managing it. Custom web development, SEO, integrations, and platform modernization without the agency overhead.",
 };
 
 export default function ContactPage() {
@@ -41,10 +41,10 @@ export default function ContactPage() {
             </div>
 
             <p className="text-neutral-400 leading-relaxed mb-6">
-              I'm a senior engineer with over 15 years of experience building and
-              supporting high-traffic, enterprise-grade digital platforms. Every
-              project is approached hands-on — from architecture and implementation
-              to performance and long-term maintainability.
+              I've spent 15+ years building and supporting digital platforms that
+              operate at real scale — high-traffic, enterprise-grade, and
+              unforgiving of lazy architecture. Every engagement is hands-on,
+              from system design to the last deploy.
             </p>
 
             <p className="text-neutral-400 leading-relaxed mb-6">

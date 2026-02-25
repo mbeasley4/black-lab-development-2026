@@ -9,7 +9,7 @@ import ArticlesBlock from '@/components/ArticlesBlock';
 export const metadata = {
   title: "Black Lab Development | Senior Web & Software Engineering",
   description:
-    "Senior-led web development, software engineering, and platform optimization for production-grade digital systems. 15+ years building reliable digital infrastructure.",
+    "Senior-led web development, software engineering, and platform optimization for production-grade digital systems. 15+ years of knowing what breaks and why.",
 };
 
 export default function Home() {
