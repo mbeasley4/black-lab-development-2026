@@ -158,7 +158,7 @@ export default async function ArticlesPage({
       />
 
       {/* GRID */}
-      <section className="py-14 md:py-24 relative overflow-hidden">
+      <section className="py-6 md:py-9 relative overflow-hidden">
         {/* Ambient neon glows */}
         <div className="absolute top-32 left-1/4 w-175 h-175 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-32 right-1/4 w-125 h-125 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
