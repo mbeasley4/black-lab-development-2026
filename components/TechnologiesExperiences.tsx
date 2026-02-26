@@ -37,6 +37,7 @@ const experienceAreas:experienceArea[] = [
             "WordPress (custom themes & plugins)",
             "Drupal (7 & 9)",
             "Shopify & WooCommerce",
+            "Sanity.io CMS",
             "Squarespace and custom PHP/HTML builds",
         ],
         color: "blue",
@@ -127,7 +128,7 @@ export default function TechnologiesExperience() {
             <div className="mx-auto max-w-375 px-6 relative z-10">
                 {/* Header */}
                 <div className="max-w-6xl mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 bg-linear-to-r from-cyan-400 via-blue-400 to-sky-400 bg-clip-text text-transparent">
+                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 bg-linear-to-r from-cyan-400 via-blue-400 to-sky-400 bg-clip-text text-transparent pb-1">
                         Technologies & Experience
                     </h2>
                     <p className="text-lg text-blue-100/80 leading-relaxed">
