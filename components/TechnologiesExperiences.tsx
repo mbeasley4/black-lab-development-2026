@@ -70,6 +70,7 @@ const experienceAreas:experienceArea[] = [
         items: [
             "MySQL, PostgreSQL, SQL Server, Oracle",
             "CI/CD pipelines with GitHub Actions",
+            "Playwright E2E testing and automated QA",
             "Deployment automation reducing release time by 50%",
             "Cloud hosting, scaling, and reliability",
         ],
