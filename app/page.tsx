@@ -16,8 +16,8 @@ export default function Home() {
     <div className="w-full mt-0">
       <HomepageHero />
       <ServicesSnapshot />
-      <IndustriesWeServe />
       <TechnologiesExperience />
+      <IndustriesWeServe />
       <ArticlesBlock />
       <CallToAction />
     </div>
