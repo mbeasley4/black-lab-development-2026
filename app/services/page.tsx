@@ -1,6 +1,7 @@
 import Image from "next/image"
 import PageHero from "@/components/PageHero"
 import PageClose from "@/components/PageClose"
+import CaseStudies from "@/components/CaseStudies";
 
 export const metadata = {
   title: "Engineering Services | Black Lab Development",
@@ -230,6 +231,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+      <CaseStudies />
 
       {/* ================= CLOSE ================= */}
       <PageClose

@@ -1,5 +1,4 @@
 import CallToAction from "@/components/CallToAction";
-import CaseStudies from "@/components/CaseStudies";
 import HomepageHero from "@/components/HomepageHero";
 import IndustriesWeServe from "@/components/IndustriesWeServe";
 import ServicesSnapshot from "@/components/ServicesSnapshot";
@@ -18,7 +17,6 @@ export default function Home() {
       <HomepageHero />
       <ServicesSnapshot />
       <IndustriesWeServe />
-      <CaseStudies />
       <TechnologiesExperience />
       <ArticlesBlock />
       <CallToAction />
