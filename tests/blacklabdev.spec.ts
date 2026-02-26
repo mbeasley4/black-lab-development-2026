@@ -122,7 +122,7 @@ test('footer contains nav links and contact info', async ({ page }) => {
   const footer = page.locator('footer');
   await expect(footer.getByRole('link', { name: 'Services' })).toBeVisible();
   await expect(footer.getByRole('link', { name: 'Contact' })).toBeVisible();
-  await expect(footer.getByRole('link', { name: /513/ })).toBeVisible();
+  await expect(footer.getByText(/513/)).toBeVisible();
 });
 
 test('footer copyright year is current', async ({ page }) => {
