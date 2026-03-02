@@ -5,6 +5,8 @@ import ServicesSnapshot from "@/components/ServicesSnapshot";
 import TechnologiesExperience from "@/components/TechnologiesExperiences";
 import ArticlesBlock from '@/components/ArticlesBlock';
 
+export const revalidate = 60; // re-fetch at most every 60 seconds
+
 export const metadata = {
   title: "Black Lab Development | Senior Web & Software Engineering",
   description:
