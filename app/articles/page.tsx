@@ -164,13 +164,20 @@ export default async function ArticlesPage({
         <div className="absolute bottom-32 right-1/4 w-125 h-125 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="mx-auto max-w-[1500px] px-6 relative">
-          {/* Section header */}
-          <div className="flex items-center gap-6 mb-8 md:mb-14">
+           {/* Section eyebrow */}
+          <div className="flex items-center gap-6 mb-10 md:mb-20">
             <div>
-              <h2 className="text-2xl font-bold text-white">All Articles</h2>
+              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-cyan-400 font-mono drop-shadow-[0_0_12px_rgba(34,211,238,0.9)]">
+                // Articles
+              </span>
+              <h2 className="text-3xl md:text-5xl font-bold">
+                <span className="bg-linear-to-r from-white via-cyan-200 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(34,211,238,0.5)]">
+                 All Articles
+                </span>
+              </h2>
               <p className="text-sm text-neutral-500 mt-1">{total} article{total !== 1 ? "s" : ""} published</p>
             </div>
-            <div className="flex-1 h-px bg-linear-to-r from-cyan-500/40 via-cyan-500/10 to-transparent" />
+            <div className="flex-1 h-px bg-linear-to-r from-cyan-500/80 via-cyan-500/30 to-transparent" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 items-stretch">
