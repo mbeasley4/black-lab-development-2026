@@ -45,8 +45,8 @@ const HomepageHero: React.FC<HeroProps> = ({
       />
 
       {/* Content */}
-      <div className="relative z-20 flex items-center min-h-[85vh] md:min-h-[70vh] px-4 pt-24 pb-12 md:pt-28 md:pb-16">
-        <div className="w-full px-2 md:px-6">
+      <div className="relative z-20 flex items-center min-h-[85vh] md:min-h-[70vh] px-6 pt-24 pb-12 md:pt-28 md:pb-16">
+        <div className="mx-auto max-w-375 w-full">
           <div className="text-center md:text-left">
             <span className="inline-block mb-3 md:mb-4 text-xs md:text-sm tracking-[0.2em] uppercase text-cyan-400 font-medium">
               Black Lab Development
