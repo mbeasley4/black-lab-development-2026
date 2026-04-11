@@ -123,10 +123,10 @@ export default function AboutPage() {
             {/* Stats / quick facts */}
             <div className="grid grid-cols-2 gap-4">
               {[
-                { value: "15+", label: "Years architecting digital platforms" },
+                { value: "15+", label: "Years building scalable platforms" },
                 { value: "100K+", label: "Daily users supported" },
-                { value: "3+", label: "Integrated platforms (CMS, eCom, MarTech)" },
-                { value: "90%+", label: "SEO & performance optimization gains" },
+                { value: "20K+", label: "Peak sessions handled" },
+                { value: "90%+", label: "SEO health improvement achieved" },
               ].map((stat) => (
                 <div
                   key={stat.label}
