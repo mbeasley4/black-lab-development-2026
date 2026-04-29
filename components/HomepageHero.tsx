@@ -49,18 +49,19 @@ const HomepageHero: React.FC<HeroProps> = ({
         <div className="mx-auto max-w-375 px-6 w-full">
           <div className="text-center md:text-left">
             <span className="inline-block mb-3 md:mb-4 text-xs md:text-sm tracking-[0.2em] uppercase text-cyan-400 font-medium">
-              Black Lab Development
+              B2B Website Design
             </span>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-5 md:mb-6">
-              <span className="block text-white">Right Tech.</span>
+              <span className="block text-white">Your Website Should</span>
               <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Built for How You Work.
+                Generate Pipeline —
               </span>
+              <span className="block text-white">Not Just Traffic.</span>
             </h1>
 
             <p className="text-base md:text-lg lg:text-xl text-blue-50/90 mb-8 md:mb-10 leading-relaxed max-w-2xl md:max-w-3xl">
-              I design digital solutions for how teams really operate—not how software demos pretend they do. Tech that fits, scales, and holds up long-term. No fluff. No overengineering. Just solid, purposeful builds.
+              We build B2B websites that turn skeptical buyers into qualified pipeline — engineered for long sales cycles, multiple stakeholders, and decisions that don&apos;t happen on the first visit.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
@@ -68,14 +69,14 @@ const HomepageHero: React.FC<HeroProps> = ({
                 href="/contact"
                 className="inline-flex items-center justify-center rounded-md bg-cyan-500 text-black px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold hover:bg-cyan-400 transition-colors duration-200 shadow-lg shadow-cyan-500/30"
               >
-                Start a Project
+                Get a Website Audit
               </a>
 
               <a
-                href="/work"
+                href="/services/conversion-optimization"
                 className="inline-flex items-center justify-center rounded-md border-2 border-cyan-400/60 px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold text-white hover:bg-cyan-500/10 hover:border-cyan-300 transition-all duration-200"
               >
-                View Case Studies
+                See How We Increase Conversions
               </a>
             </div>
           </div>

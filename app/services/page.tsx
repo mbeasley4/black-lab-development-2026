@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import PageHero from "@/components/PageHero"
 import PageClose from "@/components/PageClose"
 import CaseStudies from "@/components/CaseStudies";
@@ -110,6 +111,59 @@ export default function ServicesPage() {
         badges={["No templates", "No offshore handoffs", "No 40-slide decks"]}
       />
 
+
+      {/* ================= B2B CORE SERVICES ================= */}
+      <section className="py-16 border-b border-cyan-500/10 bg-slate-950/50">
+        <div className="mx-auto max-w-[1500px] px-6">
+          <div className="mb-10">
+            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+              B2B Specializations
+            </span>
+            <h2 className="text-2xl md:text-3xl font-bold text-white">Revenue-Focused Service Lines</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                label: "B2B Website Design",
+                href: "/services/b2b-website-design",
+                description: "Conversion architecture built for long sales cycles and multiple buying-committee stakeholders.",
+                color: "cyan",
+              },
+              {
+                label: "Conversion Optimization",
+                href: "/services/conversion-optimization",
+                description: "Audit, diagnose, and fix exactly why your site isn't generating qualified leads.",
+                color: "blue",
+              },
+              {
+                label: "Manufacturing Websites",
+                href: "/services/manufacturing-website-design",
+                description: "Industry-specific design for engineers, procurement, and operations buyers — built to generate RFQs.",
+                color: "emerald",
+              },
+            ].map((s) => {
+              const border = s.color === "cyan" ? "hover:border-cyan-500/60" : s.color === "blue" ? "hover:border-blue-500/60" : "hover:border-emerald-500/60";
+              const text = s.color === "cyan" ? "text-cyan-400" : s.color === "blue" ? "text-blue-400" : "text-emerald-400";
+              return (
+                <Link
+                  key={s.label}
+                  href={s.href}
+                  className={`group rounded-xl border border-slate-800 bg-slate-900/50 p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${border} flex flex-col`}
+                >
+                  <span className={`text-xs uppercase tracking-widest font-semibold mb-3 ${text}`}>{s.label}</span>
+                  <p className="text-sm text-slate-400 leading-relaxed flex-1 group-hover:text-slate-300 transition-colors duration-200">{s.description}</p>
+                  <div className={`flex items-center gap-2 mt-5 text-sm font-semibold ${text}`}>
+                    <span>Learn more</span>
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
       {/* ================= SERVICES ================= */}
       <section className="py-6 md:py-9 relative overflow-hidden">

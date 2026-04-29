@@ -1,27 +1,27 @@
 import CallToAction from "@/components/CallToAction";
 import HomepageHero from "@/components/HomepageHero";
-import IndustriesWeServe from "@/components/IndustriesWeServe";
-import ServicesSnapshot from "@/components/ServicesSnapshot";
-import TechnologiesExperience from "@/components/TechnologiesExperiences";
-import ArticlesBlock from '@/components/ArticlesBlock';
+import ProofStats from "@/components/ProofStats";
+import RevenueFramework from "@/components/RevenueFramework";
+import CoreServices from "@/components/CoreServices";
+import CaseStudies from "@/components/CaseStudies";
 
-export const revalidate = 60; // re-fetch at most every 60 seconds
+export const revalidate = 60;
 
 export const metadata = {
-  title: "Black Lab Development | Senior Web & Software Engineering",
+  title: "B2B Website Design Agency | Black Lab Development",
   description:
-    "Senior-led web development, software engineering, and platform optimization for production-grade digital systems. 15+ years of knowing what breaks and why.",
+    "We build B2B websites that generate pipeline — not just traffic. Conversion architecture, manufacturing websites, and revenue-focused builds for complex buying cycles.",
 };
 
 export default function Home() {
   return (
     <div className="w-full mt-0">
       <HomepageHero />
-      <ServicesSnapshot />
-      <TechnologiesExperience />
-      <IndustriesWeServe />
-      <ArticlesBlock />
+      <ProofStats />
+      <RevenueFramework />
+      <CoreServices />
+      <CaseStudies />
       <CallToAction />
     </div>
   );
-} 
+}

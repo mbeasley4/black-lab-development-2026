@@ -29,13 +29,11 @@ export default function CallToAction() {
             <div className="relative z-10 mx-auto max-w-[1500px] px-6">
                 <div className="mx-auto max-w-4xl text-center">
                     <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent pb-2 leading-tight">
-                        Let's Build Something That Performs
+                        Let&apos;s Turn Your Website Into a Pipeline Engine
                     </h2>
 
                     <p className="text-xl md:text-2xl text-cyan-50/90 leading-relaxed mb-12 max-w-3xl mx-auto">
-                        Whether you're modernizing an existing platform or building something
-                        new, Black Lab Development partners with teams that value thoughtful
-                        engineering, measurable results, and long-term scalability.
+                        Whether you need a full B2B website redesign, a conversion audit, or a manufacturing-focused web presence — we build for pipeline, not pageviews.
                     </p>
 
                     {/* CTA Buttons */}
@@ -44,10 +42,9 @@ export default function CallToAction() {
                             href="/contact"
                             className="group relative inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-12 py-5 text-base font-bold uppercase tracking-wide text-white transition-all duration-300 hover:from-cyan-400 hover:to-blue-400 hover:shadow-2xl hover:shadow-cyan-500/50 hover:scale-105 overflow-hidden"
                         >
-                            {/* Button glow effect */}
                             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
                             <span className="relative z-10 flex items-center gap-2">
-                                Start a Conversation
+                                Get a Website Audit
                                 <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                 </svg>
@@ -59,7 +56,7 @@ export default function CallToAction() {
                             className="group inline-flex items-center justify-center rounded-lg border-2 border-cyan-400/60 bg-cyan-500/10 px-12 py-5 text-base font-bold uppercase tracking-wide text-cyan-300 backdrop-blur-sm transition-all duration-300 hover:border-cyan-300 hover:bg-cyan-500/20 hover:text-white hover:shadow-xl hover:shadow-cyan-500/30 hover:scale-105"
                         >
                             <span className="flex items-center gap-2">
-                                View My Work
+                                View Case Studies
                                 <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
@@ -73,7 +70,7 @@ export default function CallToAction() {
                             <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
                         <p className="text-sm font-medium text-cyan-200 tracking-wide">
-                            Trusted by enterprise brands, agencies, and growth-focused teams
+                            Trusted by B2B &amp; manufacturing brands across the US
                         </p>
                     </div>
                 </div>
