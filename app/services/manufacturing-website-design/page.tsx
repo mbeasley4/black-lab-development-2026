@@ -4,9 +4,9 @@ import PageHero from "@/components/PageHero";
 import PageClose from "@/components/PageClose";
 
 export const metadata = {
-  title: "Manufacturing Website Design | Generate More Leads",
+  title: "Manufacturing Website Design | Generate RFQs & Qualified Leads",
   description:
-    "Website design for manufacturers focused on SEO, lead generation, and converting technical buyers.",
+    "Websites for manufacturers built for engineers, procurement teams, and long decision cycles — focused on SEO and lead generation.",
 };
 
 const painPoints = [

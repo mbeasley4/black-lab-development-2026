@@ -3,9 +3,9 @@ import PageHero from "@/components/PageHero"
 import PageClose from "@/components/PageClose"
 
 export const metadata = {
-  title: "Industries Served | Black Lab Development",
+  title: "B2B Website Development Across Manufacturing, SaaS & Healthcare",
   description:
-    "Real industry experience means knowing what breaks in production, not just what looks good in a pitch. Healthcare, SaaS, manufacturing, e-commerce, enterprise — been in the trenches.",
+    "Industry-specific web development for healthcare, SaaS, manufacturing, and enterprise platforms built for performance and scalability.",
 };
 
 const industries = [

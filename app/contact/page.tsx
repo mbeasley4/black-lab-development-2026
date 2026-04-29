@@ -3,9 +3,9 @@ import PageClose from "@/components/PageClose";
 import PageHero from "@/components/PageHero"
 
 export const metadata = {
-  title: "Start a Project | Black Lab Development",
+  title: "Contact a Senior Web Developer | Start Your Project",
   description:
-    "Work directly with a senior engineer with 15+ years doing this — not managing it. Custom web development, SEO, integrations, and platform modernization without the agency overhead.",
+    "Talk directly with a senior engineer about your website, platform, or optimization project. No sales layer — just real solutions.",
 };
 
 export default function ContactPage() {

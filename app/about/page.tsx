@@ -3,9 +3,9 @@ import PageHero from "@/components/PageHero"
 import PageClose from "@/components/PageClose"
 
 export const metadata = {
-  title: "About | Black Lab Development",
+  title: "Senior Web Engineer for High-Performance Platforms | Black Lab Dev",
   description:
-    "Senior engineer who's spent enough time in production systems to know the difference between clever and correct. No account managers, no junior hand-offs — just direct access to the engineer behind the decisions.",
+    "Work directly with a senior engineer with 15+ years building scalable, high-traffic systems. No middlemen — just results.",
 };
 
 const values = [

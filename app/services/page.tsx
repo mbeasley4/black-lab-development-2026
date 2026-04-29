@@ -5,9 +5,9 @@ import PageClose from "@/components/PageClose"
 import CaseStudies from "@/components/CaseStudies";
 
 export const metadata = {
-  title: "Engineering Services | Black Lab Development",
+  title: "B2B Web Development & Conversion Optimization Services | Black Lab Dev",
   description:
-    "Real engineering services — no templates, no offshore handoffs, no 40-slide decks. Just senior-led development that ships and holds up.",
+    "Senior-led web development, conversion optimization, and platform engineering built for performance, scalability, and real business impact.",
 };
 
 const services = [

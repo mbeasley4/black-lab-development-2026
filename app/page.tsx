@@ -8,9 +8,9 @@ import CaseStudies from "@/components/CaseStudies";
 export const revalidate = 60;
 
 export const metadata = {
-  title: "B2B Website Design Agency That Drives Conversions | Black Lab Dev",
+  title: "B2B Website Design Agency That Generates Pipeline | Black Lab Dev",
   description:
-    "I build B2B websites that generate leads and increase conversions. Turn your website into a revenue engine.",
+    "B2B website design focused on conversion, pipeline, and revenue. I build sites for long sales cycles, technical buyers, and real business outcomes.",
 };
 
 export default function Home() {

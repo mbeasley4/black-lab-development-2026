@@ -3,9 +3,9 @@ import PageHero from "@/components/PageHero";
 import PageClose from "@/components/PageClose";
 
 export const metadata = {
-  title: "B2B Website Conversion Optimization | Increase Leads & Revenue",
+  title: "B2B Website Conversion Optimization | Turn Traffic Into Pipeline",
   description:
-    "Turn website traffic into qualified leads with proven conversion optimization strategies for B2B companies.",
+    "Diagnose and fix why your website isn't converting. Improve messaging, UX, and CTAs to generate more qualified leads.",
 };
 
 const problems = [

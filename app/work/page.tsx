@@ -5,9 +5,9 @@ import PageHero from "@/components/PageHero"
 import PageClose from "@/components/PageClose"
 
 export const metadata = {
-  title: "Client Work & Case Studies | Black Lab Development",
+  title: "B2B Website Case Studies | Conversion & Revenue Results",
   description:
-    "Selected client work across healthcare, SaaS, e-commerce, and enterprise platforms. Senior-led engineering delivering production systems built for the long term.",
+    "Real case studies showing how B2B websites increased conversion rates, pipeline, and revenue through UX and engineering improvements.",
 };
 
 const projects = [
