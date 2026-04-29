@@ -54,6 +54,26 @@ export const postType = defineType({
       name: 'excerpt',
       type: 'blockContent',
     }),
+    defineField({
+      name: 'seo',
+      title: 'SEO',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'title',
+          title: 'SEO Title',
+          type: 'string',
+          description: 'Overrides the post title in search results. Keep under 60 characters.',
+        }),
+        defineField({
+          name: 'metaDescription',
+          title: 'Meta Description',
+          type: 'text',
+          rows: 3,
+          description: 'Shown in search results. Keep between 140–160 characters.',
+        }),
+      ],
+    }),
   ],
   preview: {
     select: {

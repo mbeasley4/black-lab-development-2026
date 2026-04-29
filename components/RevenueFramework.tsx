@@ -3,7 +3,7 @@ const steps = [
         number: "01",
         title: "Positioning",
         description:
-            "We define your ideal buyer, their real pain points, and what makes you the only logical choice. Messaging that resonates with decision-makers — not just anyone who lands on the page.",
+            "I define your ideal buyer, their real pain points, and what makes you the only logical choice. Messaging that resonates with decision-makers — not just anyone who lands on the page.",
         icon: (
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
@@ -14,7 +14,7 @@ const steps = [
         number: "02",
         title: "UX for Buyers",
         description:
-            "B2B buyers aren't consumers. We build for long sales cycles, multiple stakeholders, and the skepticism that comes with six-figure decisions — so every page earns the next click.",
+            "B2B buyers aren't consumers. I build for long sales cycles, multiple stakeholders, and the skepticism that comes with six-figure decisions — so every page earns the next click.",
         icon: (
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -36,7 +36,7 @@ const steps = [
         number: "04",
         title: "Build",
         description:
-            "Clean, fast, production-grade code. No page builders, no bloated themes. We build to perform — on Core Web Vitals, in search results, and under real traffic.",
+            "Clean, fast, production-grade code. No page builders, no bloated themes. I build to perform — on Core Web Vitals, in search results, and under real traffic.",
         icon: (
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -47,7 +47,7 @@ const steps = [
         number: "05",
         title: "Optimization",
         description:
-            "Launch is the beginning, not the end. We track what the data tells us and make continuous improvements — messaging tests, UX changes, and conversion rate work tied to real pipeline numbers.",
+            "Launch is the beginning, not the end. I track what the data tells us and make continuous improvements — messaging tests, UX changes, and conversion rate work tied to real pipeline numbers.",
         icon: (
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -76,7 +76,7 @@ export default function RevenueFramework() {
                         </span>
                     </h2>
                     <p className="text-lg text-slate-400 leading-relaxed">
-                        Most agencies hand you a site. We hand you a system. Here&apos;s the framework that turns your website from a digital brochure into your best-performing sales asset.
+                        Most agencies hand you a site. I hand you a system. Here&apos;s the framework that turns your website from a digital brochure into your best-performing sales asset.
                     </p>
                 </div>
 

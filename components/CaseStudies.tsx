@@ -138,11 +138,6 @@ export default function CaseStudies() {
                                     {/* Color accent bar at top */}
                                     <div className={`absolute top-0 left-0 right-0 h-1 ${colors.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
-                                    {/* Metric overlay — top right */}
-                                    <div className="absolute top-3 right-3 bg-black/70 backdrop-blur-sm rounded-lg px-3 py-2 text-center border border-white/10">
-                                        <div className="text-lg font-black text-white leading-none">{project.metric}</div>
-                                        <div className="text-[10px] text-slate-400 uppercase tracking-wide mt-0.5">{project.metricLabel}</div>
-                                    </div>
                                 </div>
 
                                 {/* Content */}

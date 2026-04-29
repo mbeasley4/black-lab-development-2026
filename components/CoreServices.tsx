@@ -5,7 +5,7 @@ const services = [
         label: "B2B Website Design",
         headline: "Designed for Long Sales Cycles",
         description:
-            "B2B buyers don't convert on the first visit. We build websites architected around how enterprise and mid-market buyers actually research, evaluate, and decide — with every page designed to move complex deals forward.",
+            "B2B buyers don't convert on the first visit. I build websites architected around how enterprise and mid-market buyers actually research, evaluate, and decide — with every page designed to move complex deals forward.",
         keyword: "b2b website design agency",
         href: "/services/b2b-website-design",
         cta: "See Our B2B Approach",
@@ -19,10 +19,10 @@ const services = [
         label: "Conversion Optimization",
         headline: "Traffic Without Conversions Is Just Overhead",
         description:
-            "We diagnose exactly why your site isn't converting, then systematically fix it — messaging alignment, UX friction points, CTA structure, and form strategy — measured before and after with real data.",
+            "I diagnose exactly why your site isn't converting, then systematically fix it — messaging alignment, UX friction points, CTA structure, and form strategy — measured before and after with real data.",
         keyword: "b2b website conversion optimization",
         href: "/services/conversion-optimization",
-        cta: "See How We Optimize",
+        cta: "See How I Optimize",
         color: "blue",
         accentClass: "from-blue-400 to-violet-500",
         borderClass: "group-hover:border-blue-500/60",
@@ -33,7 +33,7 @@ const services = [
         label: "Manufacturing Websites",
         headline: "Built for Engineers, Procurement, and Operations Buyers",
         description:
-            "Manufacturing buyers are technical, skeptical, and slow to decide. We build industry-specific websites that speak their language, surface the right specs, and generate RFQs — not just contact form submissions.",
+            "Manufacturing buyers are technical, skeptical, and slow to decide. I build industry-specific websites that speak their language, surface the right specs, and generate RFQs — not just contact form submissions.",
         keyword: "manufacturing website design",
         href: "/services/manufacturing-website-design",
         cta: "See Manufacturing Work",
@@ -62,7 +62,7 @@ export default function CoreServices() {
                         Core Services
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white">
-                        Three Ways We Generate
+                        Three Ways I Generate
                         <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                             Pipeline for B2B Companies
                         </span>

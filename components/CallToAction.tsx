@@ -33,7 +33,7 @@ export default function CallToAction() {
                     </h2>
 
                     <p className="text-xl md:text-2xl text-cyan-50/90 leading-relaxed mb-12 max-w-3xl mx-auto">
-                        Whether you need a full B2B website redesign, a conversion audit, or a manufacturing-focused web presence — we build for pipeline, not pageviews.
+                        Whether you need a full B2B website redesign, a conversion audit, or a manufacturing-focused web presence — I build for pipeline, not pageviews.
                     </p>
 
                     {/* CTA Buttons */}

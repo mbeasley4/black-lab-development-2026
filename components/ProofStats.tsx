@@ -14,7 +14,7 @@ const stats = [
         label: "Qualified Leads",
         detail: "3 → 27 qualified leads/month for a manufacturing client",
         href: "/services/conversion-optimization",
-        cta: "See how we do it",
+        cta: "See how I do it",
     },
     {
         value: "+320%",

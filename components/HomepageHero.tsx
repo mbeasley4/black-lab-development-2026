@@ -61,7 +61,7 @@ const HomepageHero: React.FC<HeroProps> = ({
             </h1>
 
             <p className="text-base md:text-lg lg:text-xl text-blue-50/90 mb-8 md:mb-10 leading-relaxed max-w-2xl md:max-w-3xl">
-              We build B2B websites that turn skeptical buyers into qualified pipeline — engineered for long sales cycles, multiple stakeholders, and decisions that don&apos;t happen on the first visit.
+              I build B2B websites that turn skeptical buyers into qualified pipeline — engineered for long sales cycles, multiple stakeholders, and decisions that don&apos;t happen on the first visit.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
@@ -76,7 +76,7 @@ const HomepageHero: React.FC<HeroProps> = ({
                 href="/services/conversion-optimization"
                 className="inline-flex items-center justify-center rounded-md border-2 border-cyan-400/60 px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold text-white hover:bg-cyan-500/10 hover:border-cyan-300 transition-all duration-200"
               >
-                See How We Increase Conversions
+                See How I Increase Conversions
               </a>
             </div>
           </div>

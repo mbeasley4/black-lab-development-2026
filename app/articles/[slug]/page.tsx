@@ -19,7 +19,9 @@ const POST_QUERY = `*[_type == "post" && slug.current == $slug][0] {
   publishedAt,
   body,
   "excerpt": pt::text(excerpt),
-  "author": author->{ name }
+  "author": author->{ name },
+  "seoTitle": seo.title,
+  "metaDescription": seo.metaDescription
 }`;
 
 export async function generateMetadata({
@@ -34,7 +36,11 @@ export async function generateMetadata({
     return { title: "Article Not Found | Black Lab Development" };
   }
 
-  let description: string = article.excerpt ?? "";
+  const title = article.seoTitle
+    ? article.seoTitle
+    : `${article.title} | Black Lab Development`;
+
+  let description: string = article.metaDescription ?? article.excerpt ?? "";
 
   if (!description && article.body) {
     description = article.body
@@ -45,7 +51,7 @@ export async function generateMetadata({
       .join(" ");
   }
 
-  if (description.length > 157) {
+  if (!article.metaDescription && description.length > 157) {
     description = description.slice(0, 157) + "...";
   }
 
@@ -54,10 +60,7 @@ export async function generateMetadata({
       "Technical article from Black Lab Development on web engineering, performance, and platform architecture.";
   }
 
-  return {
-    title: `${article.title} | Black Lab Development`,
-    description,
-  };
+  return { title, description };
 }
 
 

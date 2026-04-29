@@ -3,9 +3,9 @@ import PageHero from "@/components/PageHero";
 import PageClose from "@/components/PageClose";
 
 export const metadata = {
-  title: "B2B Website Design Agency | Black Lab Development",
+  title: "B2B Website Design Agency | High-Converting Websites",
   description:
-    "We build B2B websites for long sales cycles and multiple stakeholders. Not brochures — conversion-focused digital assets that generate qualified pipeline.",
+    "Custom B2B website design focused on lead generation, UX, and conversion optimization. Built for complex sales cycles.",
 };
 
 const failures = [
@@ -35,12 +35,12 @@ const approach = [
   {
     step: "01",
     title: "Buyer Research & Positioning",
-    body: "We start by understanding who actually buys from you — their role, their fears, their evaluation criteria. Then we build messaging that speaks directly to that person, not everyone.",
+    body: "I start by understanding who actually buys from you — their role, their fears, their evaluation criteria. Then I build messaging that speaks directly to that person, not everyone.",
   },
   {
     step: "02",
     title: "Multi-Stakeholder Architecture",
-    body: "We map your site to the buying committee. Each persona gets a clear path: the technical evaluator sees specs and integrations, the executive sees ROI and risk mitigation, the champion sees talking points.",
+    body: "I map your site to the buying committee. Each persona gets a clear path: the technical evaluator sees specs and integrations, the executive sees ROI and risk mitigation, the champion sees talking points.",
   },
   {
     step: "03",
@@ -50,12 +50,12 @@ const approach = [
   {
     step: "04",
     title: "Clean, Fast Build",
-    body: "We build in Next.js or Astro — no page builders, no bloated themes. Core Web Vitals scores that hold under real traffic. Code you can hand off to an internal team without needing a decoder ring.",
+    body: "I build in Next.js or Astro — no page builders, no bloated themes. Core Web Vitals scores that hold under real traffic. Code you can hand off to an internal team without needing a decoder ring.",
   },
   {
     step: "05",
     title: "Measurement & Optimization",
-    body: "We set up conversion tracking before launch, not after. Heatmaps, session recordings, and funnel analytics so we can measure what changed — and keep improving it.",
+    body: "I set up conversion tracking before launch, not after. Heatmaps, session recordings, and funnel analytics so I can measure what changed — and keep improving it.",
   },
 ];
 
@@ -72,7 +72,7 @@ export default function B2BWebsiteDesignPage() {
         label="B2B Website Design Agency"
         title="Websites Designed for How B2B Buyers Actually Buy"
         titleHighlight="B2B Buyers Actually Buy"
-        description="B2B buyers are skeptical, slow, and involve multiple people. We build websites that work for all of them — with conversion architecture engineered for long sales cycles and complex decisions."
+        description="B2B buyers are skeptical, slow, and involve multiple people. I build websites that work for all of them — with conversion architecture engineered for long sales cycles and complex decisions."
         backgroundImage="/images/services-hero-bg.png"
         badges={["Long sales cycles", "Multi-stakeholder design", "Pipeline-focused"]}
       />
@@ -123,7 +123,7 @@ export default function B2BWebsiteDesignPage() {
               Why Most B2B Websites Don&apos;t Generate Pipeline
             </h2>
             <p className="text-slate-400 leading-relaxed">
-              These aren&apos;t hypothetical problems. They&apos;re what we find on almost every B2B site we audit.
+              These aren&apos;t hypothetical problems. They&apos;re what I find on almost every B2B site I audit.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -210,8 +210,8 @@ export default function B2BWebsiteDesignPage() {
 
       <PageClose
         title="Ready to Build a Website That Generates Pipeline?"
-        bodyPrimary="Start with a website audit. We'll review your current site against the B2B buyer journey and show you exactly where pipeline is leaking — and how to fix it."
-        bodySecondary="No proposals to review. No 40-slide decks. Just a direct assessment of what's working, what isn't, and what we'd do about it."
+        bodyPrimary="Start with a website audit. I'll review your current site against the B2B buyer journey and show you exactly where pipeline is leaking — and how to fix it."
+        bodySecondary="No proposals to review. No 40-slide decks. Just a direct assessment of what's working, what isn't, and what I'd do about it."
         secondaryHref="/work"
         secondaryLabel="View Case Studies"
       />

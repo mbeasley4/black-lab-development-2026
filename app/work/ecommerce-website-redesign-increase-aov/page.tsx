@@ -2,13 +2,13 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "eCommerce Website Redesign Increased AOV 164% in 7 Days | Black Lab Development",
+  title: "eCommerce Redesign That Increased AOV 164% in 7 Days",
   description:
-    "How a conversion-focused eCommerce redesign increased average order value 164%, revenue 88%, and returning customer rate 320% — in under one week.",
+    "See how a focused website redesign increased revenue 88% and average order value 164% in just one week.",
   openGraph: {
-    title: "eCommerce Website Redesign That Increased AOV 164% in 7 Days",
+    title: "eCommerce Redesign That Increased AOV 164% in 7 Days",
     description:
-      "Most redesigns chase traffic. This one engineered buyer behavior — and moved the revenue numbers that actually matter.",
+      "See how a focused website redesign increased revenue 88% and average order value 164% in just one week.",
     type: "article",
   },
 };
@@ -208,17 +208,17 @@ export default function EcommerceAOVCaseStudy() {
         </div>
       </section>
 
-      {/* ─── WHAT WE DID ─────────────────────────────── */}
+      {/* ─── WHAT I DID ─────────────────────────────── */}
       <section className="py-20 border-b border-slate-800">
         <div className="mx-auto max-w-375 px-6">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
-              What We Did
+              What I Did
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              We Didn&apos;t Just Design a Site.
+              I Didn&apos;t Just Build a Site.
               <br />
-              <span className="text-cyan-400">We Engineered Buying Behavior.</span>
+              <span className="text-cyan-400">I Engineered Buying Behavior.</span>
             </h2>
             <p className="text-slate-400 leading-relaxed">
               Every decision was made against a specific revenue mechanic — AOV, conversion rate, or returning customer likelihood. Not against visual preferences or trend chasing.
@@ -377,7 +377,7 @@ export default function EcommerceAOVCaseStudy() {
             Want Results Like This?
           </h2>
           <p className="text-xl text-cyan-50/90 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Start with a website conversion audit. We&apos;ll identify exactly where revenue is leaking from your site — and what it would take to fix it.
+            Start with a website conversion audit. I&apos;ll identify exactly where revenue is leaking from your site — and what it would take to fix it.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <Link
@@ -390,7 +390,7 @@ export default function EcommerceAOVCaseStudy() {
               href="/services/conversion-optimization"
               className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
             >
-              See how we optimize
+              See how I optimize
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
               </svg>

@@ -4,9 +4,9 @@ import PageHero from "@/components/PageHero";
 import PageClose from "@/components/PageClose";
 
 export const metadata = {
-  title: "Manufacturing Website Design | Black Lab Development",
+  title: "Manufacturing Website Design | Generate More Leads",
   description:
-    "We build websites for manufacturers that generate RFQs and qualified leads — engineered for engineers, procurement, and operations buyers, not just anyone who clicks an ad.",
+    "Website design for manufacturers focused on SEO, lead generation, and converting technical buyers.",
 };
 
 const painPoints = [
@@ -89,22 +89,22 @@ const strategy = [
   {
     step: "01",
     title: "Buyer Persona Mapping",
-    body: "We define who your real buyers are — their role, what they need to know before reaching out, and the questions they ask at each stage of their evaluation. Then we build the site around their journey, not your org chart.",
+    body: "I define who your real buyers are — their role, what they need to know before reaching out, and the questions they ask at each stage of their evaluation. Then I build the site around their journey, not your org chart.",
   },
   {
     step: "02",
     title: "Industry SEO Architecture",
-    body: "We build keyword strategies around buyer-intent searches — specific processes, materials, industries, and geographies your buyers actually search for. Not generic terms that attract noise.",
+    body: "I build keyword strategies around buyer-intent searches — specific processes, materials, industries, and geographies your buyers actually search for. Not generic terms that attract noise.",
   },
   {
     step: "03",
     title: "Technical Content Structure",
-    body: "Engineers and procurement teams need different things from the same page. We structure content hierarchies that surface the right information to the right reader without requiring them to dig.",
+    body: "Engineers and procurement teams need different things from the same page. I structure content hierarchies that surface the right information to the right reader without requiring them to dig.",
   },
   {
     step: "04",
     title: "RFQ and Lead Flow Optimization",
-    body: "We build contact and RFQ flows that reduce friction without reducing qualification. The right form length, the right placement, the right follow-up triggers — measured against real inquiry quality.",
+    body: "I build contact and RFQ flows that reduce friction without reducing qualification. The right form length, the right placement, the right follow-up triggers — measured against real inquiry quality.",
   },
   {
     step: "05",
@@ -120,7 +120,7 @@ export default function ManufacturingWebsiteDesignPage() {
         label="Manufacturing Website Design"
         title="Websites That Generate RFQs — Not Just Visitors"
         titleHighlight="RFQs — Not Just Visitors"
-        description="Manufacturing buyers are technical, skeptical, and slow to decide. We build websites designed for how they actually evaluate vendors — not how marketing wants them to behave."
+        description="Manufacturing buyers are technical, skeptical, and slow to decide. I build websites designed for how they actually evaluate vendors — not how marketing wants them to behave."
         backgroundImage="/images/industries-hero-bg.png"
         badges={["Built for engineers", "RFQ-optimized", "Industry-specific SEO"]}
       />
@@ -163,7 +163,7 @@ export default function ManufacturingWebsiteDesignPage() {
               Three Buyers. One Website. Each Needs Different Things.
             </h2>
             <p className="text-slate-400 leading-relaxed">
-              Manufacturing purchases involve multiple stakeholders. We build sites that serve all of them without overwhelming any of them.
+              Manufacturing purchases involve multiple stakeholders. I build sites that serve all of them without overwhelming any of them.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -207,7 +207,7 @@ export default function ManufacturingWebsiteDesignPage() {
               Case Studies
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Manufacturing Websites We&apos;ve Built
+              Manufacturing Websites I&apos;ve Built
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -252,10 +252,10 @@ export default function ManufacturingWebsiteDesignPage() {
         <div className="mx-auto max-w-375 px-6">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
-              Our Approach
+              My Approach
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              How We Build Manufacturing Websites That Win Business
+              How I Build Manufacturing Websites That Win Business
             </h2>
           </div>
           <div className="space-y-12">
@@ -289,8 +289,8 @@ export default function ManufacturingWebsiteDesignPage() {
 
       <PageClose
         title="Let's Build a Website That Gets You RFQs"
-        bodyPrimary="Start with a manufacturing website audit. We'll show you exactly what buyers are finding (and not finding) on your current site, and what it would take to turn it into a lead generation asset."
-        bodySecondary="We've done this for precision manufacturers, industrial suppliers, and complex B2B operations. We know the buyer behavior. We know what it takes."
+        bodyPrimary="Start with a manufacturing website audit. I'll show you exactly what buyers are finding (and not finding) on your current site, and what it would take to turn it into a lead generation asset."
+        bodySecondary="I've done this for precision manufacturers, industrial suppliers, and complex B2B operations. I know the buyer behavior. I know what it takes."
         secondaryHref="/work"
         secondaryLabel="View Manufacturing Portfolio"
       />
