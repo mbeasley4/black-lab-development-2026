@@ -18,6 +18,17 @@ type CaseStudy = {
 
 const caseStudies: CaseStudy[] = [
     {
+        title: "eCommerce Redesign",
+        industry: "eCommerce",
+        summary:
+            "Conversion architecture overhaul that increased average order value 164% and total revenue 88% — measured within 7 days of launch.",
+        metric: "+164%",
+        metricLabel: "Avg Order Value",
+        image: "/images/work/shortening-shuttle-screenshot.png",
+        href: "/work/ecommerce-website-redesign-increase-aov",
+        color: "amber",
+    },
+    {
         title: "Faztek",
         industry: "Industrial Manufacturing",
         summary:
@@ -29,15 +40,15 @@ const caseStudies: CaseStudy[] = [
         color: "amber",
     },
     {
-        title: "Haag-Streit",
-        industry: "Healthcare Manufacturer",
+        title: "Blum Media Group",
+        industry: "Digital Marketing/Advertising Industry",
         summary:
-            "Modernized UX and messaging for a global optics manufacturer — redesigned for multiple buyer personas across clinical and procurement audiences.",
-        metric: "+180%",
+            "Designed and developed a modern, high-performance marketing website using Next.js and Vercel for fast load times, scalability, and streamlined content delivery.",
+        metric: "+100%",
         metricLabel: "Lead Quality",
-        image: "/images/work/haag-streit-screenshot.jpg",
+        image: "/images/work/blum-screenshot.png",
         href: "/work",
-        color: "blue",
+        color: "amber",
     },
     {
         title: "PlastechMold",
@@ -50,17 +61,7 @@ const caseStudies: CaseStudy[] = [
         href: "/work",
         color: "amber",
     },
-    {
-        title: "eCommerce Redesign",
-        industry: "eCommerce",
-        summary:
-            "Conversion architecture overhaul that increased average order value 164% and total revenue 88% — measured within 7 days of launch.",
-        metric: "+164%",
-        metricLabel: "Avg Order Value",
-        image: "/images/work/shortening-shuttle-screenshot.png",
-        href: "/work/ecommerce-website-redesign-increase-aov",
-        color: "blue",
-    },
+    
 ];
 
 const colorClasses = {

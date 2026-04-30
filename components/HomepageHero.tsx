@@ -49,19 +49,19 @@ const HomepageHero: React.FC<HeroProps> = ({
         <div className="mx-auto max-w-375 px-6 w-full">
           <div className="text-center md:text-left">
             <span className="inline-block mb-3 md:mb-4 text-xs md:text-sm tracking-[0.2em] uppercase text-amber-500 font-medium">
-              B2B Website Design
+              Performance-Driven Web Development
             </span>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-5 md:mb-6">
-              <span className="block text-white">Your Website Should</span>
+              <span className="block text-white">Your Website Isn't a</span>
               <span className="block text-amber-500">
-                Generate Pipeline —
+                Design Problem.
               </span>
-              <span className="block text-white">Not Just Traffic.</span>
+              <span className="block text-white">It's a Systems Problem.</span>
             </h1>
 
             <p className="text-base md:text-lg lg:text-xl text-[#e5e7eb]/80 mb-8 md:mb-10 leading-relaxed max-w-2xl md:max-w-3xl">
-              I build B2B websites that turn skeptical buyers into qualified pipeline — engineered for long sales cycles, multiple stakeholders, and decisions that don&apos;t happen on the first visit.
+              Most agencies design websites. We rebuild them to perform.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
