@@ -4,7 +4,6 @@ import DemoSection from "@/components/DemoSection"
 import PageHero from "@/components/PageHero"
 import PageClose from "@/components/PageClose"
 import { client } from "@/sanity/lib/client"
-import { urlFor } from "@/sanity/lib/image"
 
 export const dynamic = "force-dynamic"
 
@@ -206,9 +205,6 @@ const projects = [
 
 export default async function WorkPage() {
   const caseStudies = await client.fetch(CASE_STUDIES_QUERY)
-  const featured = caseStudies.find((s: any) => s.featured) ?? caseStudies[0]
-  const rest = caseStudies.filter((s: any) => s._id !== featured?._id)
-
   return (
     <main className="w-full bg-black text-white">
       {/* ================= HERO ================= */}
@@ -223,113 +219,106 @@ export default async function WorkPage() {
 
       {/* ================= CASE STUDIES ================= */}
       {caseStudies.length > 0 && (
-        <section className="py-12 border-b border-slate-800 bg-slate-950/50">
+        <section className="relative py-20 overflow-hidden border-b border-slate-800">
+          <div className="absolute top-0 left-1/4 w-175 h-100 bg-cyan-500/6 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute bottom-0 right-1/4 w-150 h-100 bg-blue-600/6 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-cyan-500/30 to-transparent" />
+
           <div className="mx-auto max-w-375 px-6">
-            <div className="mb-8">
-              <span className="inline-block text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+            {/* Section header */}
+            <div className="mb-14">
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-cyan-500/40 bg-cyan-500/10 text-cyan-400 text-xs font-bold tracking-[0.2em] uppercase mb-5">
+                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(6,182,212,1)]" />
                 Case Studies
               </span>
+              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
+                Measured by{" "}
+                <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-blue-400 to-cyan-400">
+                  Results
+                </span>
+              </h2>
+              <div className="mt-4 h-px w-48 bg-linear-to-r from-cyan-500/70 via-blue-500/30 to-transparent" />
             </div>
 
-            {/* Featured */}
-            {featured && (
-              <Link
-                href={`/work/${featured.slug?.current}`}
-                className="group block rounded-2xl border border-slate-800 bg-slate-900/50 hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 overflow-hidden mb-8"
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-2">
-                  <div className="p-10 flex flex-col justify-center">
-                    <span className="inline-block text-xs uppercase tracking-widest text-slate-500 mb-4">
-                      {featured.clientName ?? "Case Study"}{featured.industry ? ` · ${featured.industry}` : ""}
-                    </span>
-                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-snug group-hover:text-cyan-300 transition-colors duration-300">
-                      {featured.title}
-                    </h2>
-                    {featured.excerpt && (
-                      <p className="text-slate-400 leading-relaxed mb-8">{featured.excerpt}</p>
-                    )}
-                    {featured.metrics && featured.metrics.length > 0 && (
-                      <div className="flex flex-wrap gap-6 mb-8">
-                        {featured.metrics.slice(0, 4).map((m: any) => (
-                          <div key={m.label}>
-                            <div className="text-xl font-black text-cyan-400">{m.improvement}</div>
-                            <div className="text-xs text-slate-500 uppercase tracking-wide">{m.label}</div>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                    <div className="flex items-center gap-2 text-sm font-semibold text-cyan-400 group-hover:gap-3 transition-all duration-200">
-                      <span>Read the full case study</span>
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="hidden lg:flex items-center justify-center bg-linear-to-br from-cyan-950/50 via-blue-950/40 to-slate-900/50 p-10 border-l border-slate-800 relative overflow-hidden">
-                    {featured.mainImage ? (
-                      <Image
-                        src={urlFor(featured.mainImage).width(800).url()}
-                        alt={featured.mainImage.alt ?? featured.title}
-                        fill
-                        className="object-cover opacity-30"
-                      />
-                    ) : null}
-                    <div className="relative text-center">
-                      {featured.metrics?.[0] && (
-                        <>
-                          <div className="text-8xl font-black bg-linear-to-br from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-3">
-                            {featured.metrics[0].improvement}
-                          </div>
-                          <div className="text-slate-400 text-sm uppercase tracking-widest">{featured.metrics[0].label}</div>
-                          {featured.metrics[0].note && (
-                            <div className="text-slate-600 text-xs mt-2">{featured.metrics[0].note}</div>
-                          )}
-                        </>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            )}
+            <div className="space-y-8">
+              {caseStudies.map((study: any, i: number) => {
+                const isCyan = i % 2 === 0
+                return (
+                  <Link key={study._id} href={`/work/${study.slug?.current}`} className="group relative block">
+                    {/* Outer glow on hover */}
+                    <div className={`absolute -inset-px rounded-2xl blur-md transition-all duration-500 opacity-0 group-hover:opacity-100 ${isCyan ? "bg-linear-to-r from-cyan-500/40 via-blue-500/20 to-cyan-500/40" : "bg-linear-to-r from-blue-500/40 via-violet-500/20 to-blue-500/40"}`} />
 
-            {/* Additional case studies */}
-            {rest.length > 0 && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {rest.map((study: any) => (
-                  <Link
-                    key={study._id}
-                    href={`/work/${study.slug?.current}`}
-                    className="group block rounded-2xl border border-slate-800 bg-slate-900/50 hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 overflow-hidden p-8"
-                  >
-                    <span className="inline-block text-xs uppercase tracking-widest text-slate-500 mb-3">
-                      {study.clientName ?? "Case Study"}{study.industry ? ` · ${study.industry}` : ""}
-                    </span>
-                    <h2 className="text-xl font-bold text-white mb-3 leading-snug group-hover:text-cyan-300 transition-colors duration-300">
-                      {study.title}
-                    </h2>
-                    {study.excerpt && (
-                      <p className="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-2">{study.excerpt}</p>
-                    )}
-                    {study.metrics && study.metrics.length > 0 && (
-                      <div className="flex flex-wrap gap-4 mb-6">
-                        {study.metrics.slice(0, 3).map((m: any) => (
-                          <div key={m.label}>
-                            <div className="text-lg font-black text-cyan-400">{m.improvement}</div>
-                            <div className="text-xs text-slate-500 uppercase tracking-wide">{m.label}</div>
+                    <div className={`relative rounded-2xl border bg-slate-900 transition-all duration-300 overflow-hidden ${isCyan ? "border-slate-700 group-hover:border-cyan-500/70" : "border-slate-700 group-hover:border-blue-500/70"}`}>
+                      {/* Gradient top bar */}
+                      <div className={`h-1 ${isCyan ? "bg-linear-to-r from-cyan-500 via-blue-400 to-cyan-500" : "bg-linear-to-r from-blue-500 via-violet-500 to-blue-500"}`} />
+
+                      <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px]">
+                        {/* Content */}
+                        <div className="p-10 flex flex-col justify-center">
+                          <div className="flex flex-wrap items-center gap-3 mb-5">
+                            <span className={`px-3 py-1 rounded-full border text-xs font-bold tracking-widest uppercase ${isCyan ? "border-cyan-500/30 bg-cyan-500/10 text-cyan-400" : "border-blue-500/30 bg-blue-500/10 text-blue-400"}`}>
+                              Case Study
+                            </span>
+                            {study.clientName && (
+                              <span className="text-xs text-slate-500 uppercase tracking-widest">{study.clientName}</span>
+                            )}
+                            {study.industry && (
+                              <span className="text-xs text-slate-600 uppercase tracking-widest">· {study.industry}</span>
+                            )}
                           </div>
-                        ))}
+
+                          <h2 className={`text-2xl md:text-3xl font-bold text-white mb-4 leading-snug transition-colors duration-300 ${isCyan ? "group-hover:text-cyan-100" : "group-hover:text-blue-100"}`}>
+                            {study.title}
+                          </h2>
+
+                          {study.excerpt && (
+                            <p className="text-slate-400 leading-relaxed mb-8 max-w-2xl">{study.excerpt}</p>
+                          )}
+
+                          {study.metrics && study.metrics.length > 0 && (
+                            <div className="flex flex-wrap gap-8 mb-8">
+                              {study.metrics.slice(0, 4).map((m: any) => (
+                                <div key={m.label}>
+                                  <div className={`text-2xl font-black ${isCyan ? "text-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]" : "text-blue-400 drop-shadow-[0_0_10px_rgba(96,165,250,0.5)]"}`}>
+                                    {m.improvement}
+                                  </div>
+                                  <div className="text-xs text-slate-500 uppercase tracking-wide mt-0.5">{m.label}</div>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+
+                          <div className={`inline-flex items-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all duration-200 ${isCyan ? "text-cyan-400" : "text-blue-400"}`}>
+                            <span>Read the full case study</span>
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </div>
+                        </div>
+
+                        {/* Right stat panel */}
+                        <div className={`hidden lg:flex flex-col items-center justify-center border-l border-slate-800 p-10 relative overflow-hidden ${isCyan ? "bg-linear-to-b from-cyan-950/60 to-blue-950/60" : "bg-linear-to-b from-blue-950/60 to-violet-950/60"}`}>
+                          <div className="absolute inset-0 opacity-30">
+                            <div className={`absolute inset-0 ${isCyan ? "bg-linear-to-br from-cyan-500/10 to-transparent" : "bg-linear-to-br from-blue-500/10 to-transparent"}`} />
+                          </div>
+                          {study.metrics?.[0] && (
+                            <div className="relative text-center">
+                              <div className={`text-7xl font-black bg-clip-text text-transparent leading-none mb-3 ${isCyan ? "bg-linear-to-br from-cyan-400 to-blue-400 drop-shadow-[0_0_40px_rgba(34,211,238,0.3)]" : "bg-linear-to-br from-blue-400 to-violet-400 drop-shadow-[0_0_40px_rgba(96,165,250,0.3)]"}`}>
+                                {study.metrics[0].improvement}
+                              </div>
+                              <div className="text-slate-300 text-xs uppercase tracking-widest">{study.metrics[0].label}</div>
+                              {study.metrics[0].note && (
+                                <div className="text-slate-600 text-xs mt-2">{study.metrics[0].note}</div>
+                              )}
+                            </div>
+                          )}
+                        </div>
                       </div>
-                    )}
-                    <div className="flex items-center gap-2 text-sm font-semibold text-cyan-400 group-hover:gap-3 transition-all duration-200">
-                      <span>Read case study</span>
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                      </svg>
                     </div>
                   </Link>
-                ))}
-              </div>
-            )}
+                )
+              })}
+            </div>
           </div>
         </section>
       )}
