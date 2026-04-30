@@ -3,6 +3,23 @@ import Link from "next/link"
 import DemoSection from "@/components/DemoSection"
 import PageHero from "@/components/PageHero"
 import PageClose from "@/components/PageClose"
+import { client } from "@/sanity/lib/client"
+import { urlFor } from "@/sanity/lib/image"
+
+export const dynamic = "force-dynamic"
+
+const CASE_STUDIES_QUERY = `*[_type == "caseStudy"] | order(featured desc, publishedAt desc) {
+  _id,
+  title,
+  slug,
+  clientName,
+  industry,
+  excerpt,
+  tagline,
+  mainImage,
+  featured,
+  metrics
+}`
 
 export const metadata = {
   title: "B2B Website Case Studies | Conversion & Revenue Results",
@@ -187,7 +204,11 @@ const projects = [
   },
 ];
 
-export default function WorkPage() {
+export default async function WorkPage() {
+  const caseStudies = await client.fetch(CASE_STUDIES_QUERY)
+  const featured = caseStudies.find((s: any) => s.featured) ?? caseStudies[0]
+  const rest = caseStudies.filter((s: any) => s._id !== featured?._id)
+
   return (
     <main className="w-full bg-black text-white">
       {/* ================= HERO ================= */}
@@ -199,62 +220,119 @@ export default function WorkPage() {
         backgroundImage="/images/work-hero-bg.png"
         badges={["Live traffic", "Long-term ownership", "Senior-led delivery"]}
       />
-      {/* ================= FEATURED CASE STUDY ================= */}
-      <section className="py-12 border-b border-slate-800 bg-slate-950/50">
-        <div className="mx-auto max-w-[1500px] px-6">
-          <div className="mb-8">
-            <span className="inline-block text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
-              Featured Case Study
-            </span>
-          </div>
-          <Link
-            href="/work/ecommerce-website-redesign-increase-aov"
-            className="group block rounded-2xl border border-slate-800 bg-slate-900/50 hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 overflow-hidden"
-          >
-            <div className="grid grid-cols-1 lg:grid-cols-2">
-              {/* Content */}
-              <div className="p-10 flex flex-col justify-center">
-                <span className="inline-block text-xs uppercase tracking-widest text-slate-500 mb-4">eCommerce Redesign</span>
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-snug group-hover:text-cyan-300 transition-colors duration-300">
-                  eCommerce Website Redesign That Increased AOV 164% in 7 Days
-                </h2>
-                <p className="text-slate-400 leading-relaxed mb-8">
-                  Most redesigns chase traffic. This one engineered buyer behavior — and moved the revenue numbers that actually matter, visible within a week of launch.
-                </p>
-                <div className="flex flex-wrap gap-6 mb-8">
-                  {[
-                    { metric: "+164%", label: "AOV" },
-                    { metric: "+88%", label: "Revenue" },
-                    { metric: "+320%", label: "Returning Customers" },
-                    { metric: "+56%", label: "Conversion Rate" },
-                  ].map((s) => (
-                    <div key={s.label}>
-                      <div className="text-xl font-black text-cyan-400">{s.metric}</div>
-                      <div className="text-xs text-slate-500 uppercase tracking-wide">{s.label}</div>
-                    </div>
-                  ))}
-                </div>
-                <div className="flex items-center gap-2 text-sm font-semibold text-cyan-400 group-hover:gap-3 transition-all duration-200">
-                  <span>Read the full case study</span>
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
-              {/* Visual accent */}
-              <div className="hidden lg:flex items-center justify-center bg-gradient-to-br from-cyan-950/50 via-blue-950/40 to-slate-900/50 p-10 border-l border-slate-800">
-                <div className="text-center">
-                  <div className="text-8xl font-black bg-gradient-to-br from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-3">
-                    +164%
-                  </div>
-                  <div className="text-slate-400 text-sm uppercase tracking-widest">Average Order Value</div>
-                  <div className="text-slate-600 text-xs mt-2">in 7 days post-launch</div>
-                </div>
-              </div>
+
+      {/* ================= CASE STUDIES ================= */}
+      {caseStudies.length > 0 && (
+        <section className="py-12 border-b border-slate-800 bg-slate-950/50">
+          <div className="mx-auto max-w-375 px-6">
+            <div className="mb-8">
+              <span className="inline-block text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+                Case Studies
+              </span>
             </div>
-          </Link>
-        </div>
-      </section>
+
+            {/* Featured */}
+            {featured && (
+              <Link
+                href={`/work/${featured.slug?.current}`}
+                className="group block rounded-2xl border border-slate-800 bg-slate-900/50 hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 overflow-hidden mb-8"
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-2">
+                  <div className="p-10 flex flex-col justify-center">
+                    <span className="inline-block text-xs uppercase tracking-widest text-slate-500 mb-4">
+                      {featured.clientName ?? "Case Study"}{featured.industry ? ` · ${featured.industry}` : ""}
+                    </span>
+                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-snug group-hover:text-cyan-300 transition-colors duration-300">
+                      {featured.title}
+                    </h2>
+                    {featured.excerpt && (
+                      <p className="text-slate-400 leading-relaxed mb-8">{featured.excerpt}</p>
+                    )}
+                    {featured.metrics && featured.metrics.length > 0 && (
+                      <div className="flex flex-wrap gap-6 mb-8">
+                        {featured.metrics.slice(0, 4).map((m: any) => (
+                          <div key={m.label}>
+                            <div className="text-xl font-black text-cyan-400">{m.improvement}</div>
+                            <div className="text-xs text-slate-500 uppercase tracking-wide">{m.label}</div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                    <div className="flex items-center gap-2 text-sm font-semibold text-cyan-400 group-hover:gap-3 transition-all duration-200">
+                      <span>Read the full case study</span>
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="hidden lg:flex items-center justify-center bg-linear-to-br from-cyan-950/50 via-blue-950/40 to-slate-900/50 p-10 border-l border-slate-800 relative overflow-hidden">
+                    {featured.mainImage ? (
+                      <Image
+                        src={urlFor(featured.mainImage).width(800).url()}
+                        alt={featured.mainImage.alt ?? featured.title}
+                        fill
+                        className="object-cover opacity-30"
+                      />
+                    ) : null}
+                    <div className="relative text-center">
+                      {featured.metrics?.[0] && (
+                        <>
+                          <div className="text-8xl font-black bg-linear-to-br from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-3">
+                            {featured.metrics[0].improvement}
+                          </div>
+                          <div className="text-slate-400 text-sm uppercase tracking-widest">{featured.metrics[0].label}</div>
+                          {featured.metrics[0].note && (
+                            <div className="text-slate-600 text-xs mt-2">{featured.metrics[0].note}</div>
+                          )}
+                        </>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            )}
+
+            {/* Additional case studies */}
+            {rest.length > 0 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {rest.map((study: any) => (
+                  <Link
+                    key={study._id}
+                    href={`/work/${study.slug?.current}`}
+                    className="group block rounded-2xl border border-slate-800 bg-slate-900/50 hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 overflow-hidden p-8"
+                  >
+                    <span className="inline-block text-xs uppercase tracking-widest text-slate-500 mb-3">
+                      {study.clientName ?? "Case Study"}{study.industry ? ` · ${study.industry}` : ""}
+                    </span>
+                    <h2 className="text-xl font-bold text-white mb-3 leading-snug group-hover:text-cyan-300 transition-colors duration-300">
+                      {study.title}
+                    </h2>
+                    {study.excerpt && (
+                      <p className="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-2">{study.excerpt}</p>
+                    )}
+                    {study.metrics && study.metrics.length > 0 && (
+                      <div className="flex flex-wrap gap-4 mb-6">
+                        {study.metrics.slice(0, 3).map((m: any) => (
+                          <div key={m.label}>
+                            <div className="text-lg font-black text-cyan-400">{m.improvement}</div>
+                            <div className="text-xs text-slate-500 uppercase tracking-wide">{m.label}</div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                    <div className="flex items-center gap-2 text-sm font-semibold text-cyan-400 group-hover:gap-3 transition-all duration-200">
+                      <span>Read case study</span>
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* ================= Demo ================= */}
       <DemoSection />
