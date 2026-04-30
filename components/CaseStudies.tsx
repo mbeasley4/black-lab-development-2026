@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-type ThemeColor = "purple" | "violet" | "fuchsia";
+type ThemeColor = "amber" | "blue";
 
 type CaseStudy = {
   title: string;
@@ -26,7 +26,7 @@ const caseStudies: CaseStudy[] = [
         metricLabel: "Organic Traffic",
         image: "/images/work/faztek-screenshot.jpg",
         href: "/work",
-        color: "purple",
+        color: "amber",
     },
     {
         title: "Haag-Streit",
@@ -37,7 +37,7 @@ const caseStudies: CaseStudy[] = [
         metricLabel: "Lead Quality",
         image: "/images/work/haag-streit-screenshot.jpg",
         href: "/work",
-        color: "violet",
+        color: "blue",
     },
     {
         title: "PlastechMold",
@@ -48,7 +48,7 @@ const caseStudies: CaseStudy[] = [
         metricLabel: "Qualified Leads/Mo",
         image: "/images/work/plastechmold-screenshot.png",
         href: "/work",
-        color: "fuchsia",
+        color: "amber",
     },
     {
         title: "eCommerce Redesign",
@@ -59,52 +59,48 @@ const caseStudies: CaseStudy[] = [
         metricLabel: "Avg Order Value",
         image: "/images/work/shortening-shuttle-screenshot.png",
         href: "/work/ecommerce-website-redesign-increase-aov",
-        color: "purple",
+        color: "blue",
     },
 ];
 
 const colorClasses = {
-    purple: {
-        border: "group-hover:border-purple-500/60",
-        glow: "group-hover:shadow-purple-500/50",
-        overlay: "from-purple-950/80 via-slate-950/90 to-black",
-        accent: "bg-purple-500",
-        ctaText: "text-purple-400",
+    amber: {
+        border: "group-hover:border-amber-500/50",
+        glow: "group-hover:shadow-amber-500/25",
+        overlay: "from-[#111214]/80 via-slate-950/90 to-black",
+        accent: "bg-amber-500",
+        ctaText: "text-amber-500",
+        titleHover: "group-hover:text-amber-400",
+        bottomLine: "group-hover:via-amber-500",
     },
-    violet: {
-        border: "group-hover:border-violet-500/60",
-        glow: "group-hover:shadow-violet-500/50",
-        overlay: "from-violet-950/80 via-slate-950/90 to-black",
-        accent: "bg-violet-500",
-        ctaText: "text-violet-400",
-    },
-    fuchsia: {
-        border: "group-hover:border-fuchsia-500/60",
-        glow: "group-hover:shadow-fuchsia-500/50",
-        overlay: "from-fuchsia-950/80 via-slate-950/90 to-black",
-        accent: "bg-fuchsia-500",
-        ctaText: "text-fuchsia-400",
+    blue: {
+        border: "group-hover:border-blue-500/50",
+        glow: "group-hover:shadow-blue-500/25",
+        overlay: "from-[#111214]/80 via-slate-950/90 to-black",
+        accent: "bg-blue-500",
+        ctaText: "text-blue-400",
+        titleHover: "group-hover:text-blue-300",
+        bottomLine: "group-hover:via-blue-500",
     },
 };
 
 export default function CaseStudies() {
     return (
-        <section className="w-full bg-gradient-to-b from-amber-950/20 via-slate-950 to-purple-950/30 text-white py-24 relative overflow-hidden">
-            {/* Ambient background effects - COOL PURPLES */}
-            <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-purple-500/15 rounded-full blur-3xl" />
-            <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-violet-500/15 rounded-full blur-3xl" />
-            <div className="absolute top-1/2 right-1/3 w-96 h-96 bg-fuchsia-500/10 rounded-full blur-3xl" />
+        <section className="w-full bg-linear-to-b from-[#111214] via-slate-950 to-[#0b0b0c] text-white py-24 relative overflow-hidden">
+            {/* Ambient background effects */}
+            <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-amber-500/8 rounded-full blur-3xl" />
+            <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/8 rounded-full blur-3xl" />
 
-            <div className="mx-auto max-w-[1500px] px-6 relative z-10">
+            <div className="mx-auto max-w-375 px-6 relative z-10">
                 {/* Header */}
                 <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16 gap-8">
                     <div className="max-w-3xl">
-                        <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+                        <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-amber-500 font-semibold">
                             Case Studies
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white">
                             Results, Not{" "}
-                            <span className="bg-linear-to-r from-purple-400 via-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+                            <span className="text-amber-500">
                                 Brochures
                             </span>
                         </h2>
@@ -132,12 +128,11 @@ export default function CaseStudies() {
                                         fill
                                         className="object-cover object-top transition-transform duration-700 group-hover:scale-110"
                                     />
-                                    {/* Gradient overlay with color tint */}
+                                    {/* Gradient overlay */}
                                     <div className={`absolute inset-0 bg-linear-to-t ${colors.overlay} opacity-70 group-hover:opacity-50 transition-opacity duration-500`} />
 
                                     {/* Color accent bar at top */}
                                     <div className={`absolute top-0 left-0 right-0 h-1 ${colors.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-
                                 </div>
 
                                 {/* Content */}
@@ -149,7 +144,7 @@ export default function CaseStudies() {
                                         <span className="inline-block text-[10px] uppercase tracking-widest text-slate-500 mb-2">
                                             {project.industry}
                                         </span>
-                                        <h3 className="text-lg font-bold mb-2 text-white group-hover:text-transparent group-hover:bg-linear-to-r group-hover:from-purple-300 group-hover:to-fuchsia-400 group-hover:bg-clip-text transition-all duration-300">
+                                        <h3 className={`text-lg font-bold mb-2 text-white ${colors.titleHover} transition-all duration-300`}>
                                             {project.title}
                                         </h3>
                                         <p className="text-sm text-slate-400 leading-relaxed mb-4 group-hover:text-slate-300 transition-colors duration-300">
@@ -167,7 +162,7 @@ export default function CaseStudies() {
                                 </div>
 
                                 {/* Bottom accent line */}
-                                <div className={`absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-purple-500/0 to-transparent group-hover:via-purple-500 transition-all duration-500`} />
+                                <div className={`absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-transparent to-transparent ${colors.bottomLine} transition-all duration-500`} />
                             </Link>
                         );
                     })}
@@ -177,7 +172,7 @@ export default function CaseStudies() {
                 <div className="mt-16 text-center">
                     <Link
                         href="/work"
-                        className="inline-flex items-center justify-center rounded-md border-2 border-purple-500/50 bg-purple-500/10 px-8 py-4 text-sm font-semibold uppercase tracking-wide text-purple-300 transition-all duration-300 hover:border-purple-400 hover:bg-purple-500/20 hover:text-white hover:shadow-lg hover:shadow-purple-500/30"
+                        className="inline-flex items-center justify-center rounded-md border-2 border-amber-500/40 bg-amber-500/8 px-8 py-4 text-sm font-semibold uppercase tracking-wide text-amber-400 transition-all duration-300 hover:border-amber-400 hover:bg-amber-500/15 hover:text-white hover:shadow-lg hover:shadow-amber-500/20"
                     >
                         View Full Portfolio
                         <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

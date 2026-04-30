@@ -9,11 +9,10 @@ const services = [
         keyword: "b2b website design agency",
         href: "/services/b2b-website-design",
         cta: "See Our B2B Approach",
-        color: "cyan",
-        accentClass: "from-cyan-400 to-blue-500",
-        borderClass: "group-hover:border-cyan-500/60",
-        glowClass: "group-hover:shadow-cyan-500/20",
-        ctaClass: "text-cyan-400 group-hover:text-cyan-300",
+        borderClass: "group-hover:border-amber-500/50",
+        glowClass: "group-hover:shadow-amber-500/15",
+        accentClass: "from-amber-500 to-amber-400",
+        ctaClass: "text-amber-500 group-hover:text-amber-400",
     },
     {
         label: "Conversion Optimization",
@@ -23,10 +22,9 @@ const services = [
         keyword: "b2b website conversion optimization",
         href: "/services/conversion-optimization",
         cta: "See How I Optimize",
-        color: "blue",
-        accentClass: "from-blue-400 to-violet-500",
-        borderClass: "group-hover:border-blue-500/60",
-        glowClass: "group-hover:shadow-blue-500/20",
+        borderClass: "group-hover:border-blue-500/50",
+        glowClass: "group-hover:shadow-blue-500/15",
+        accentClass: "from-blue-500 to-blue-400",
         ctaClass: "text-blue-400 group-hover:text-blue-300",
     },
     {
@@ -37,33 +35,32 @@ const services = [
         keyword: "manufacturing website design",
         href: "/services/manufacturing-website-design",
         cta: "See Manufacturing Work",
-        color: "emerald",
-        accentClass: "from-emerald-400 to-cyan-500",
-        borderClass: "group-hover:border-emerald-500/60",
-        glowClass: "group-hover:shadow-emerald-500/20",
-        ctaClass: "text-emerald-400 group-hover:text-emerald-300",
+        borderClass: "group-hover:border-amber-500/50",
+        glowClass: "group-hover:shadow-amber-500/15",
+        accentClass: "from-amber-500 to-amber-400",
+        ctaClass: "text-amber-500 group-hover:text-amber-400",
     },
 ];
 
 export default function CoreServices() {
     return (
-        <section className="w-full bg-gradient-to-b from-slate-950 to-black text-white py-24 relative overflow-hidden">
-            <div className="absolute inset-0 pointer-events-none opacity-20"
+        <section className="w-full bg-linear-to-b from-slate-950 to-black text-white py-24 relative overflow-hidden">
+            <div className="absolute inset-0 pointer-events-none opacity-15"
                 style={{
-                    backgroundImage: "radial-gradient(circle, rgba(34,211,238,0.15) 1px, transparent 1px)",
+                    backgroundImage: "radial-gradient(circle, rgba(245,158,11,0.15) 1px, transparent 1px)",
                     backgroundSize: "44px 44px",
                 }}
             />
 
-            <div className="mx-auto max-w-[1500px] px-6 relative z-10">
+            <div className="mx-auto max-w-375 px-6 relative z-10">
                 {/* Header */}
                 <div className="max-w-3xl mb-16">
-                    <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+                    <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-amber-500 font-semibold">
                         Core Services
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white">
                         Three Ways I Generate
-                        <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                        <span className="block text-amber-500">
                             Pipeline for B2B Companies
                         </span>
                     </h2>
@@ -75,10 +72,10 @@ export default function CoreServices() {
                         <Link
                             key={service.label}
                             href={service.href}
-                            className={`group relative rounded-2xl border border-slate-800/60 bg-gradient-to-br from-slate-900/80 to-slate-950 p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${service.borderClass} ${service.glowClass} overflow-hidden flex flex-col`}
+                            className={`group relative rounded-2xl border border-slate-800/60 bg-linear-to-br from-slate-900/80 to-slate-950 p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${service.borderClass} ${service.glowClass} overflow-hidden flex flex-col`}
                         >
                             {/* Top accent bar */}
-                            <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${service.accentClass} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-2xl`} />
+                            <div className={`absolute top-0 left-0 right-0 h-1 bg-linear-to-r ${service.accentClass} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-2xl`} />
 
                             {/* Label */}
                             <span className={`inline-block mb-5 text-xs tracking-[0.25em] uppercase font-semibold ${service.ctaClass} transition-colors duration-300`}>
@@ -91,7 +88,7 @@ export default function CoreServices() {
                             </h3>
 
                             {/* Description */}
-                            <p className="text-sm text-slate-400 leading-relaxed mb-8 flex-1 group-hover:text-slate-300 transition-colors duration-300">
+                            <p className="text-sm text-slate-400 leading-relaxed mb-8 grow group-hover:text-slate-300 transition-colors duration-300">
                                 {service.description}
                             </p>
 

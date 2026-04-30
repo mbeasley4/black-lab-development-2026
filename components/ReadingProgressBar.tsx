@@ -20,7 +20,7 @@ export default function ReadingProgressBar() {
 
     return (
         <div
-            className="fixed top-0 left-0 z-50 h-[2px] bg-gradient-to-r from-cyan-400 to-blue-500 pointer-events-none"
+            className="fixed top-0 left-0 z-50 h-[2px] bg-gradient-to-r from-amber-500 to-amber-400 pointer-events-none"
             style={{ width: `${progress}%` }}
             aria-hidden="true"
         />

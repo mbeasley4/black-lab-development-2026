@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0b0b0c;
+  --foreground: #e5e7eb;
+  --accent: #f59e0b;
+  --accent-secondary: #3b82f6;
 }
 
 @theme inline {
@@ -10,13 +12,6 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 @keyframes neonBoot {
@@ -36,12 +31,12 @@
   70% {
     opacity: 1;
     filter: blur(0) brightness(1.1);
-    text-shadow: 0 0 6px rgba(34,211,238,.6), 0 0 14px rgba(34,211,238,.5);
+    text-shadow: 0 0 6px rgba(245,158,11,.6), 0 0 14px rgba(245,158,11,.5);
   }
   100% {
     opacity: 1;
     filter: blur(0) brightness(1);
-    text-shadow: 0 0 10px rgba(34,211,238,.8), 0 0 22px rgba(34,211,238,.6);
+    text-shadow: 0 0 10px rgba(245,158,11,.8), 0 0 22px rgba(245,158,11,.6);
   }
 }
 
@@ -145,8 +140,8 @@ article.prose {
   --tw-prose-body: #d1d5db;
   /* neutral-300 */
   --tw-prose-headings: #ffffff;
-  --tw-prose-links: #93c5fd;
-  /* blue-300 */
+  --tw-prose-links: #3b82f6;
+  /* electric blue */
   --tw-prose-bold: #ffffff;
   --tw-prose-quotes: #e5e7eb;
   --tw-prose-code: #e5e7eb;
@@ -189,8 +184,8 @@ article.prose {
 }
 
 .prose a:hover {
-  color: #bfdbfe;
-  /* blue-200 */
+  color: #93c5fd;
+  /* blue-300 */
 }
 
 /* --- Lists --- */

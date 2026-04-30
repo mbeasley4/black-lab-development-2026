@@ -29,30 +29,30 @@ const demos = [
 
 export default function DemoSection() {
   return (
-    <section className="bg-black border-t border-b border-purple-500/20 py-6 md:py-9 relative overflow-hidden">
-      {/* Ambient neon glows — purple-forward */}
-      <div className="absolute top-0 left-1/4 w-175 h-175 bg-purple-600/12 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute top-1/2 right-0 w-125 h-125 bg-fuchsia-600/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-1/3 w-150 h-150 bg-purple-500/8 rounded-full blur-[130px] pointer-events-none" />
+    <section className="bg-[#0b0b0c] border-t border-b border-amber-500/15 py-6 md:py-9 relative overflow-hidden">
+      {/* Ambient glows */}
+      <div className="absolute top-0 left-1/4 w-175 h-175 bg-amber-500/6 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 right-0 w-125 h-125 bg-blue-500/6 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/3 w-150 h-150 bg-amber-500/4 rounded-full blur-[130px] pointer-events-none" />
 
       <div className="mx-auto max-w-7xl px-6 relative">
         {/* Header */}
         <div className="mb-20 text-center">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-purple-500/40 bg-purple-500/10 text-purple-400 text-xs font-bold tracking-[0.2em] uppercase mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_8px_rgba(168,85,247,1)]" />
+          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-amber-500/35 bg-amber-500/8 text-amber-500 text-xs font-bold tracking-[0.2em] uppercase mb-5">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.9)]" />
             Live Experiments
           </span>
           <h2 className="text-5xl font-extrabold tracking-tight text-white">
             Featured{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 via-fuchsia-400 to-pink-400">
+            <span className="text-amber-500">
               Demo Projects
             </span>
           </h2>
           <p className="mt-4 text-lg text-slate-300 max-w-xl mx-auto">
             Production-ready applications built with modern frameworks.
           </p>
-          {/* Neon underline accent */}
-          <div className="mx-auto mt-6 w-32 h-px bg-linear-to-r from-transparent via-purple-500/70 to-transparent" />
+          {/* Underline accent */}
+          <div className="mx-auto mt-6 w-32 h-px bg-linear-to-r from-transparent via-amber-500/60 to-transparent" />
         </div>
 
         {/* Demo Rows */}
@@ -64,11 +64,11 @@ export default function DemoSection() {
             return (
               <div
                 key={demo.title}
-                className={`grid items-center gap-12 md:grid-cols-2`}
+                className="grid items-center gap-12 md:grid-cols-2"
               >
                 {/* Image */}
                 <div className={`group ${isReversed ? "md:order-2" : "md:order-1"}`}>
-                  <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-neutral-800 bg-white shadow-2xl transition-all duration-300 group-hover:border-purple-500/50 group-hover:shadow-[0_0_70px_rgba(168,85,247,0.20)]">
+                  <div className="relative aspect-16/10 overflow-hidden rounded-2xl border border-neutral-800 bg-white shadow-2xl transition-all duration-300 group-hover:border-amber-500/40 group-hover:shadow-[0_0_70px_rgba(245,158,11,0.15)]">
                     <Image
                       src={demo.image}
                       alt={demo.title}
@@ -76,19 +76,19 @@ export default function DemoSection() {
                       className="object-contain p-6 transition-transform duration-500 group-hover:scale-[1.02]"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
-                    {/* Purple tint on hover */}
-                    <div className="absolute inset-0 bg-purple-950/0 group-hover:bg-purple-950/10 transition-all duration-400 rounded-2xl" />
+                    {/* Amber tint on hover */}
+                    <div className="absolute inset-0 bg-amber-950/0 group-hover:bg-amber-950/5 transition-all duration-400 rounded-2xl" />
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className={`${isReversed ? "md:order-1" : "md:order-2"} relative`}>
                   {/* Ghost number */}
-                  <span className="absolute -top-8 -left-1 text-8xl font-black text-purple-500/8 select-none pointer-events-none leading-none">
+                  <span className="absolute -top-8 -left-1 text-8xl font-black text-amber-500/6 select-none pointer-events-none leading-none">
                     {num}
                   </span>
 
-                  <span className="inline-flex items-center rounded-full bg-purple-500/10 border border-purple-500/30 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-purple-300">
+                  <span className="inline-flex items-center rounded-full bg-amber-500/8 border border-amber-500/25 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-amber-400">
                     {demo.badge}
                   </span>
 
@@ -104,7 +104,7 @@ export default function DemoSection() {
                     href={demo.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group/btn mt-8 inline-flex items-center gap-2.5 rounded-lg bg-linear-to-r from-purple-600 to-fuchsia-600 px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:from-purple-500 hover:to-fuchsia-500 hover:shadow-[0_0_30px_rgba(168,85,247,0.50)]"
+                    className="group/btn mt-8 inline-flex items-center gap-2.5 rounded-lg bg-amber-500 px-6 py-3 text-sm font-semibold text-black transition-all duration-200 hover:bg-amber-400 hover:shadow-[0_0_30px_rgba(245,158,11,0.40)]"
                   >
                     View Live Demo
                     <span className="transition-transform duration-200 group-hover/btn:translate-x-1">

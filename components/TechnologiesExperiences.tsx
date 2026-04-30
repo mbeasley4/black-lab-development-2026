@@ -8,7 +8,7 @@ import {
     Award,
 } from "lucide-react";
 
-type ThemeColor = "sky" | "blue" | "cyan";
+type ThemeColor = "amber" | "blue";
 type Icon = typeof Code2 | typeof Layers | typeof Database | typeof Workflow | typeof Cloud | typeof ShieldCheck | typeof Award
 
 type experienceArea = {
@@ -18,7 +18,7 @@ type experienceArea = {
   color: ThemeColor;
 }
 
-const experienceAreas:experienceArea[] = [
+const experienceAreas: experienceArea[] = [
     {
         title: "Full-Stack Web Engineering",
         icon: Code2,
@@ -28,7 +28,7 @@ const experienceAreas:experienceArea[] = [
             "Performance optimization for large-scale applications",
             "Custom CMS and content-driven architectures",
         ],
-        color: "cyan",
+        color: "amber",
     },
     {
         title: "Enterprise CMS & Platforms",
@@ -51,7 +51,7 @@ const experienceAreas:experienceArea[] = [
             "Checkout optimization and conversion strategy",
             "Transactional messaging with 99% SMS delivery efficiency",
         ],
-        color: "sky",
+        color: "amber",
     },
     {
         title: "Integrations & Marketing Automation",
@@ -62,7 +62,7 @@ const experienceAreas:experienceArea[] = [
             "CRM-driven lead routing and segmentation",
             "Cross-platform data synchronization",
         ],
-        color: "cyan",
+        color: "blue",
     },
     {
         title: "Data, Infrastructure & CI/CD",
@@ -74,7 +74,7 @@ const experienceAreas:experienceArea[] = [
             "Deployment automation reducing release time by 50%",
             "Cloud hosting, scaling, and reliability",
         ],
-        color: "blue",
+        color: "amber",
     },
     {
         title: "Security & Compliance",
@@ -85,54 +85,49 @@ const experienceAreas:experienceArea[] = [
             "Performance, uptime, and stability monitoring",
             "Security-first mindset for enterprise and regulated environments",
         ],
-        color: "sky",
+        color: "blue",
     },
 ];
 
 const colorClasses = {
-    cyan: {
-        iconBg: "bg-cyan-500/10",
-        iconText: "text-cyan-400",
-        iconHoverBg: "group-hover:bg-cyan-500",
-        border: "group-hover:border-cyan-500/50",
-        glow: "group-hover:shadow-cyan-500/30",
-        gradient: "group-hover:from-cyan-500/10 group-hover:to-blue-500/5",
-        accent: "group-hover:via-cyan-400",
+    amber: {
+        iconBg: "bg-amber-500/10",
+        iconText: "text-amber-500",
+        iconHoverBg: "group-hover:bg-amber-500",
+        border: "group-hover:border-amber-500/50",
+        glow: "group-hover:shadow-amber-500/20",
+        gradient: "group-hover:from-amber-500/8 group-hover:to-transparent",
+        accent: "group-hover:via-amber-500",
+        titleHover: "group-hover:text-amber-400",
+        bullet: "bg-amber-500/40",
     },
     blue: {
         iconBg: "bg-blue-500/10",
         iconText: "text-blue-400",
         iconHoverBg: "group-hover:bg-blue-500",
         border: "group-hover:border-blue-500/50",
-        glow: "group-hover:shadow-blue-500/30",
-        gradient: "group-hover:from-blue-500/10 group-hover:to-cyan-500/5",
-        accent: "group-hover:via-blue-400",
-    },
-    sky: {
-        iconBg: "bg-sky-500/10",
-        iconText: "text-sky-400",
-        iconHoverBg: "group-hover:bg-sky-500",
-        border: "group-hover:border-sky-500/50",
-        glow: "group-hover:shadow-sky-500/30",
-        gradient: "group-hover:from-sky-500/10 group-hover:to-blue-500/5",
-        accent: "group-hover:via-sky-400",
+        glow: "group-hover:shadow-blue-500/20",
+        gradient: "group-hover:from-blue-500/8 group-hover:to-transparent",
+        accent: "group-hover:via-blue-500",
+        titleHover: "group-hover:text-blue-300",
+        bullet: "bg-blue-500/40",
     },
 };
 
 export default function TechnologiesExperience() {
     return (
-        <section className="w-full bg-linear-to-b from-purple-950/30 via-slate-950 to-black text-white py-24 relative overflow-hidden">
+        <section className="w-full bg-linear-to-b from-slate-950 via-slate-950 to-black text-white py-24 relative overflow-hidden">
             {/* Ambient background effects */}
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
+            <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/6 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/6 rounded-full blur-3xl" />
 
             <div className="mx-auto max-w-375 px-6 relative z-10">
                 {/* Header */}
                 <div className="max-w-6xl mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 bg-linear-to-r from-cyan-400 via-blue-400 to-sky-400 bg-clip-text text-transparent pb-1">
+                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white pb-1">
                         Technologies & Experience
                     </h2>
-                    <p className="text-lg text-blue-100/80 leading-relaxed">
+                    <p className="text-lg text-[#e5e7eb]/70 leading-relaxed">
                         15+ years of senior-level engineering — building scalable, high-traffic
                         platforms for agencies, enterprise brands, and organizations that
                         can&apos;t afford to wing it. Architecture, development, integration,
@@ -144,7 +139,7 @@ export default function TechnologiesExperience() {
                 {/* Experience Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {experienceAreas.map((area) => {
-                        const colors = colorClasses[area.color]; 
+                        const colors = colorClasses[area.color];
                         return (
                             <div
                                 key={area.title}
@@ -159,14 +154,14 @@ export default function TechnologiesExperience() {
                                         <area.icon className="h-7 w-7" strokeWidth={2.5} />
                                     </div>
 
-                                    <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-cyan-300 transition-colors duration-300">
+                                    <h3 className={`text-xl font-semibold mb-4 text-white ${colors.titleHover} transition-colors duration-300`}>
                                         {area.title}
                                     </h3>
 
                                     <ul className="space-y-2.5 text-sm text-slate-400">
                                         {area.items.map((item) => (
                                             <li key={item} className="leading-relaxed group-hover:text-slate-300 transition-colors duration-300 flex items-start">
-                                                <span className="mr-2 mt-1.5 h-1.5 w-1.5 rounded-full bg-cyan-500/50 shrink-0" />
+                                                <span className={`mr-2 mt-1.5 h-1.5 w-1.5 rounded-full ${colors.bullet} shrink-0`} />
                                                 <span>{item}</span>
                                             </li>
                                         ))}
@@ -182,20 +177,19 @@ export default function TechnologiesExperience() {
 
                 {/* Certifications & Credibility */}
                 <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div className="group rounded-2xl border-2 border-slate-800/50 bg-linear-to-br from-slate-900/50 to-blue-950/30 p-10 transition-all duration-500 hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/20 backdrop-blur-sm relative overflow-hidden">
-                        {/* Hover gradient */}
-                        <div className="absolute inset-0 bg-linear-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/5 group-hover:to-blue-500/5 transition-all duration-500" />
+                    <div className="group rounded-2xl border-2 border-slate-800/50 bg-linear-to-br from-slate-900/50 to-[#111214]/80 p-10 transition-all duration-500 hover:border-amber-500/40 hover:shadow-xl hover:shadow-amber-500/10 backdrop-blur-sm relative overflow-hidden">
+                        <div className="absolute inset-0 bg-linear-to-br from-amber-500/0 to-amber-500/0 group-hover:from-amber-500/4 group-hover:to-transparent transition-all duration-500" />
 
                         <div className="relative z-10">
                             <div className="flex items-center gap-4 mb-4">
-                                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-400 transition-all duration-500 group-hover:bg-cyan-500 group-hover:text-white group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-cyan-500/50">
+                                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-amber-500/10 text-amber-500 transition-all duration-500 group-hover:bg-amber-500 group-hover:text-black group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-amber-500/30">
                                     <Award className="h-7 w-7" strokeWidth={2.5} />
                                 </div>
-                                <h3 className="text-2xl font-semibold text-white group-hover:text-cyan-300 transition-colors duration-300">
+                                <h3 className="text-2xl font-semibold text-white group-hover:text-amber-400 transition-colors duration-300">
                                     Security-Focused Engineering
                                 </h3>
                             </div>
-                            <p className="text-blue-100/80 leading-relaxed group-hover:text-blue-50/90 transition-colors duration-300">
+                            <p className="text-[#e5e7eb]/70 leading-relaxed group-hover:text-[#e5e7eb]/90 transition-colors duration-300">
                                 My approach to development is grounded in modern security
                                 principles, risk awareness, and long-term maintainability —
                                 especially important for healthcare, enterprise, and
@@ -204,9 +198,8 @@ export default function TechnologiesExperience() {
                         </div>
                     </div>
 
-                    <div className="group rounded-2xl border-2 border-slate-800/50 bg-slate-900/50 p-10 flex items-center gap-6 transition-all duration-500 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/20 backdrop-blur-sm relative overflow-hidden">
-                        {/* Hover gradient */}
-                        <div className="absolute inset-0 bg-linear-to-br from-blue-500/0 to-cyan-500/0 group-hover:from-blue-500/5 group-hover:to-cyan-500/5 transition-all duration-500" />
+                    <div className="group rounded-2xl border-2 border-slate-800/50 bg-slate-900/50 p-10 flex items-center gap-6 transition-all duration-500 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/10 backdrop-blur-sm relative overflow-hidden">
+                        <div className="absolute inset-0 bg-linear-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/4 group-hover:to-transparent transition-all duration-500" />
 
                         <div className="relative z-10 flex items-center gap-6">
                             <img

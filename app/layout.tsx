@@ -11,7 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${interTight.variable} bg-white text-black antialiased`}>
+      <body className={`${inter.variable} ${interTight.variable} bg-[#0b0b0c] text-[#e5e7eb] antialiased`}>
         <AptabaseClientProvider>
           <Header />
           <main>{children}</main>

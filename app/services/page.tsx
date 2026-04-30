@@ -100,7 +100,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <main className="w-full bg-black text-white">
+    <main className="w-full bg-[#0b0b0c] text-white">
       {/* ================= HERO ================= */}
       <PageHero
         label="Services"
@@ -111,12 +111,11 @@ export default function ServicesPage() {
         badges={["No templates", "No offshore handoffs", "No 40-slide decks"]}
       />
 
-
       {/* ================= B2B CORE SERVICES ================= */}
-      <section className="py-16 border-b border-cyan-500/10 bg-slate-950/50">
-        <div className="mx-auto max-w-[1500px] px-6">
+      <section className="py-16 border-b border-amber-500/8 bg-[#111214]/50">
+        <div className="mx-auto max-w-375 px-6">
           <div className="mb-10">
-            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-amber-500 font-semibold">
               B2B Specializations
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-white">Revenue-Focused Service Lines</h2>
@@ -127,7 +126,7 @@ export default function ServicesPage() {
                 label: "B2B Website Design",
                 href: "/services/b2b-website-design",
                 description: "Conversion architecture built for long sales cycles and multiple buying-committee stakeholders.",
-                color: "cyan",
+                color: "amber",
               },
               {
                 label: "Conversion Optimization",
@@ -139,11 +138,11 @@ export default function ServicesPage() {
                 label: "Manufacturing Websites",
                 href: "/services/manufacturing-website-design",
                 description: "Industry-specific design for engineers, procurement, and operations buyers — built to generate RFQs.",
-                color: "emerald",
+                color: "amber",
               },
             ].map((s) => {
-              const border = s.color === "cyan" ? "hover:border-cyan-500/60" : s.color === "blue" ? "hover:border-blue-500/60" : "hover:border-emerald-500/60";
-              const text = s.color === "cyan" ? "text-cyan-400" : s.color === "blue" ? "text-blue-400" : "text-emerald-400";
+              const border = s.color === "amber" ? "hover:border-amber-500/50" : "hover:border-blue-500/50";
+              const text = s.color === "amber" ? "text-amber-500" : "text-blue-400";
               return (
                 <Link
                   key={s.label}
@@ -151,7 +150,7 @@ export default function ServicesPage() {
                   className={`group rounded-xl border border-slate-800 bg-slate-900/50 p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${border} flex flex-col`}
                 >
                   <span className={`text-xs uppercase tracking-widest font-semibold mb-3 ${text}`}>{s.label}</span>
-                  <p className="text-sm text-slate-400 leading-relaxed flex-1 group-hover:text-slate-300 transition-colors duration-200">{s.description}</p>
+                  <p className="text-sm text-slate-400 leading-relaxed grow group-hover:text-slate-300 transition-colors duration-200">{s.description}</p>
                   <div className={`flex items-center gap-2 mt-5 text-sm font-semibold ${text}`}>
                     <span>Learn more</span>
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -169,33 +168,29 @@ export default function ServicesPage() {
       <section className="py-6 md:py-9 relative overflow-hidden">
         {/* Dot grid texture */}
         <div
-          className="absolute inset-0 pointer-events-none opacity-25"
+          className="absolute inset-0 pointer-events-none opacity-15"
           style={{
-            backgroundImage: "radial-gradient(circle, rgba(34,211,238,0.35) 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(circle, rgba(245,158,11,0.20) 1px, transparent 1px)",
             backgroundSize: "44px 44px",
           }}
         />
 
-        {/* Ambient neon glows — much more aggressive */}
-        <div className="absolute top-20 -left-40 w-175 h-175 bg-cyan-500/15 rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute bottom-20 -right-40 w-150 h-150 bg-blue-600/15 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-225 h-225 bg-cyan-500/5 rounded-full blur-[180px] pointer-events-none" />
-        <div className="absolute top-1/3 right-1/4 w-87.5 h-87.5 bg-violet-600/10 rounded-full blur-[90px] pointer-events-none" />
+        {/* Ambient glows */}
+        <div className="absolute top-20 -left-40 w-175 h-175 bg-amber-500/8 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute bottom-20 -right-40 w-150 h-150 bg-blue-600/8 rounded-full blur-[120px] pointer-events-none" />
 
-        <div className="mx-auto max-w-[1500px] px-6">
-          {/* Section header — bolder */}
+        <div className="mx-auto max-w-375 px-6">
+          {/* Section header */}
           <div className="flex items-center gap-6 mb-6 md:mb-9">
             <div>
-              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-cyan-400 font-mono drop-shadow-[0_0_12px_rgba(34,211,238,0.9)]">
+              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-amber-500 font-mono drop-shadow-[0_0_12px_rgba(245,158,11,0.7)]">
                 // Services
               </span>
-              <h2 className="text-3xl md:text-5xl font-bold">
-                <span className="bg-linear-to-r from-white via-cyan-200 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(34,211,238,0.5)]">
-                  What I Do
-                </span>
+              <h2 className="text-3xl md:text-5xl font-bold text-white">
+                What I Do
               </h2>
             </div>
-            <div className="flex-1 h-px bg-linear-to-r from-cyan-500/80 via-cyan-500/30 to-transparent" />
+            <div className="flex-1 h-px bg-linear-to-r from-amber-500/60 via-amber-500/20 to-transparent" />
           </div>
 
           <div className="space-y-0">
@@ -204,13 +199,13 @@ export default function ServicesPage() {
                 key={service.title}
                 className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center py-6 md:py-9 relative ${
                   index < services.length - 1
-                    ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-linear-to-r after:from-transparent after:via-cyan-500/30 after:to-transparent"
+                    ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-linear-to-r after:from-transparent after:via-amber-500/20 after:to-transparent"
                     : ""
                 }`}
               >
-                {/* Giant ghost number behind each row */}
+                {/* Giant ghost number */}
                 <div
-                  className={`absolute text-[18rem] md:text-[22rem] font-black font-mono text-cyan-500/[0.035] pointer-events-none leading-none select-none top-0 ${
+                  className={`absolute text-[18rem] md:text-[22rem] font-black font-mono text-amber-500/3 pointer-events-none leading-none select-none top-0 ${
                     index % 2 === 1 ? "-right-4 text-right" : "-left-4"
                   }`}
                   aria-hidden="true"
@@ -220,18 +215,15 @@ export default function ServicesPage() {
 
                 {/* Text */}
                 <div className={`max-w-xl relative ${index % 2 === 1 ? "lg:order-2" : ""}`}>
-                  {/* Eyebrow with big number */}
                   <div className="flex items-center gap-4 mb-6">
-                    <span className="text-5xl font-black font-mono text-cyan-400/25 leading-none tracking-tighter">
+                    <span className="text-5xl font-black font-mono text-amber-500/20 leading-none tracking-tighter">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <div className="h-px w-14 bg-linear-to-r from-cyan-400 to-cyan-500/20 shadow-[0_0_10px_rgba(34,211,238,0.6)]" />
+                    <div className="h-px w-14 bg-linear-to-r from-amber-500/60 to-amber-500/10 shadow-[0_0_10px_rgba(245,158,11,0.4)]" />
                   </div>
 
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-snug">
-                    <span className="bg-linear-to-r from-white via-cyan-100 to-cyan-300 bg-clip-text text-transparent">
-                      {service.title}
-                    </span>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-snug text-white">
+                    {service.title}
                   </h2>
 
                   <div className="text-neutral-400 leading-relaxed">
@@ -241,7 +233,7 @@ export default function ServicesPage() {
 
                 {/* Image */}
                 <div
-                  className={`group relative h-95 w-full rounded-xl overflow-hidden border border-cyan-500/30 shadow-[0_0_50px_rgba(6,182,212,0.12),inset_0_0_40px_rgba(6,182,212,0.03)] transition-all duration-500 hover:border-cyan-400/70 hover:shadow-[0_0_100px_rgba(6,182,212,0.35),inset_0_0_60px_rgba(6,182,212,0.06)] ${
+                  className={`group relative h-95 w-full rounded-xl overflow-hidden border border-amber-500/20 shadow-[0_0_50px_rgba(245,158,11,0.08)] transition-all duration-500 hover:border-amber-500/50 hover:shadow-[0_0_100px_rgba(245,158,11,0.20)] ${
                     index % 2 === 1 ? "lg:order-1" : ""
                   }`}
                 >
@@ -251,8 +243,8 @@ export default function ServicesPage() {
                     fill
                     className="object-cover opacity-65 group-hover:opacity-90 group-hover:scale-[1.05] transition-all duration-700"
                   />
-                  {/* Dark + neon tint overlay */}
-                  <div className="absolute inset-0 bg-linear-to-br from-black/65 via-black/20 to-cyan-900/20 group-hover:to-cyan-900/45 transition-all duration-500" />
+                  {/* Dark overlay */}
+                  <div className="absolute inset-0 bg-linear-to-br from-black/65 via-black/20 to-amber-900/10 group-hover:to-amber-900/25 transition-all duration-500" />
                   {/* Scanline texture */}
                   <div
                     className="absolute inset-0 opacity-[0.08] pointer-events-none"
@@ -261,21 +253,20 @@ export default function ServicesPage() {
                     }}
                   />
                   {/* Top accent line */}
-                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-cyan-500/50 to-transparent group-hover:via-cyan-400 transition-all duration-500" />
+                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-amber-500/40 to-transparent group-hover:via-amber-500/80 transition-all duration-500" />
                   {/* Bottom accent line */}
-                  <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-cyan-500/20 to-transparent group-hover:via-cyan-400/60 transition-all duration-500" />
-                  {/* Corner glow — top right */}
-                  <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-500/15 blur-3xl rounded-full group-hover:bg-cyan-400/35 transition-all duration-500" />
-                  {/* Corner glow — bottom left */}
-                  <div className="absolute bottom-0 left-0 w-28 h-28 bg-blue-600/10 blur-2xl rounded-full group-hover:bg-blue-500/30 transition-all duration-500" />
+                  <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-amber-500/15 to-transparent group-hover:via-amber-500/50 transition-all duration-500" />
+                  {/* Corner glow */}
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-amber-500/10 blur-3xl rounded-full group-hover:bg-amber-500/25 transition-all duration-500" />
+                  <div className="absolute bottom-0 left-0 w-28 h-28 bg-blue-600/8 blur-2xl rounded-full group-hover:bg-blue-500/20 transition-all duration-500" />
                   {/* Corner brackets */}
-                  <div className="absolute top-3 left-3 w-5 h-5 border-t-2 border-l-2 border-cyan-400/50 group-hover:border-cyan-300 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
-                  <div className="absolute top-3 right-3 w-5 h-5 border-t-2 border-r-2 border-cyan-400/50 group-hover:border-cyan-300 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
-                  <div className="absolute bottom-3 left-3 w-5 h-5 border-b-2 border-l-2 border-cyan-400/50 group-hover:border-cyan-300 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
-                  <div className="absolute bottom-3 right-3 w-5 h-5 border-b-2 border-r-2 border-cyan-400/50 group-hover:border-cyan-300 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
-                  {/* Service label — slides up on hover */}
+                  <div className="absolute top-3 left-3 w-5 h-5 border-t-2 border-l-2 border-amber-500/40 group-hover:border-amber-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute top-3 right-3 w-5 h-5 border-t-2 border-r-2 border-amber-500/40 group-hover:border-amber-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute bottom-3 left-3 w-5 h-5 border-b-2 border-l-2 border-amber-500/40 group-hover:border-amber-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute bottom-3 right-3 w-5 h-5 border-b-2 border-r-2 border-amber-500/40 group-hover:border-amber-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  {/* Service label on hover */}
                   <div className="absolute bottom-5 left-5 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-400">
-                    <span className="text-xs font-mono tracking-[0.3em] uppercase text-cyan-300 drop-shadow-[0_0_12px_rgba(34,211,238,1)]">
+                    <span className="text-xs font-mono tracking-[0.3em] uppercase text-amber-400 drop-shadow-[0_0_12px_rgba(245,158,11,0.9)]">
                       {service.title}
                     </span>
                   </div>
@@ -295,7 +286,6 @@ export default function ServicesPage() {
         secondaryHref="/work"
         secondaryLabel="View Work"
       />
-
     </main>
   );
 }

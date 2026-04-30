@@ -36,18 +36,18 @@ export default async function ArticlesBlock() {
   }
 
   return (
-    <section className="w-full bg-gradient-to-b from-black via-slate-950 to-blue-950/20 text-white py-24 relative overflow-hidden">
+    <section className="w-full bg-linear-to-b from-black via-slate-950 to-[#111214] text-white py-24 relative overflow-hidden">
       {/* Ambient background effects */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/6 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-blue-500/6 rounded-full blur-3xl" />
 
-      <div className="mx-auto max-w-[1500px] px-6 relative z-10">
+      <div className="mx-auto max-w-375 px-6 relative z-10">
         {/* Header */}
         <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-400 bg-clip-text text-transparent pb-2">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white pb-2">
             Building, Learning & Sharing at Black Lab Development
           </h2>
-          <p className="text-lg text-blue-100/80 leading-relaxed max-w-4xl">
+          <p className="text-lg text-[#e5e7eb]/70 leading-relaxed max-w-4xl">
             Explore my latest articles featuring development tips, technical deep dives, and behind-the-scenes insights from real projects. From scalable web apps to modern tooling and workflows, this is where I share what's working—and why.
           </p>
         </div>
@@ -58,7 +58,7 @@ export default async function ArticlesBlock() {
             <AnimatedCard key={a._id} delay={index * 100}>
               <Link
                 href={`/articles/${a.slug.current}`}
-                className="group h-full block border-2 border-slate-800/50 rounded-2xl overflow-hidden bg-slate-900/50 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/20"
+                className="group h-full block border-2 border-slate-800/50 rounded-2xl overflow-hidden bg-slate-900/50 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-xl hover:shadow-amber-500/10"
               >
                 {/* Image */}
                 <div className="relative h-56 overflow-hidden">
@@ -69,37 +69,37 @@ export default async function ArticlesBlock() {
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
 
                   {/* Top accent bar */}
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 
                 {/* Content */}
-                <div className="p-8 flex flex-col flex-grow relative">
+                <div className="p-8 flex flex-col grow relative">
                   {/* Hover gradient background */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/5 group-hover:to-blue-500/5 transition-all duration-500 rounded-b-2xl" />
+                  <div className="absolute inset-0 bg-linear-to-br from-amber-500/0 to-amber-500/0 group-hover:from-amber-500/4 group-hover:to-transparent transition-all duration-500 rounded-b-2xl" />
 
                   <div className="relative z-10">
                     {a.publishedAt && (
                       <time
                         dateTime={new Date(a.publishedAt).toISOString()}
-                        className="block mb-3 text-xs uppercase tracking-widest text-cyan-400/80 font-medium"
+                        className="block mb-3 text-xs uppercase tracking-widest text-amber-500/70 font-medium"
                       >
                         {formatDate(a.publishedAt)}
                       </time>
                     )}
 
-                    <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-300 group-hover:to-blue-400 group-hover:bg-clip-text transition-all duration-300 pb-1">
+                    <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-amber-400 transition-all duration-300 pb-1">
                       {a.title}
                     </h3>
 
-                    <p className="text-sm text-blue-100/70 leading-relaxed mb-4 group-hover:text-blue-50/90 transition-colors duration-300">
+                    <p className="text-sm text-[#e5e7eb]/60 leading-relaxed mb-4 group-hover:text-[#e5e7eb]/80 transition-colors duration-300">
                       {toPlainText(a.excerpt)}
                     </p>
 
                     {/* Read article CTA */}
-                    <div className="flex items-center text-cyan-400 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-2 transition-all duration-300 mt-auto">
+                    <div className="flex items-center text-amber-500 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-2 transition-all duration-300 mt-auto">
                       <span className="text-sm font-semibold">Read article</span>
                       <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
@@ -109,7 +109,7 @@ export default async function ArticlesBlock() {
                 </div>
 
                 {/* Bottom accent line */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-cyan-500/0 to-transparent group-hover:via-cyan-500/100 transition-all duration-500 rounded-b-2xl" />
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-amber-500/0 to-transparent group-hover:via-amber-500/80 transition-all duration-500 rounded-b-2xl" />
               </Link>
             </AnimatedCard>
           ))}
@@ -119,7 +119,7 @@ export default async function ArticlesBlock() {
         <div className="text-center">
           <Link
             href="/articles"
-            className="inline-flex items-center justify-center rounded-md border-2 border-cyan-500/50 bg-cyan-500/10 px-10 py-4 text-sm font-semibold uppercase tracking-wide text-cyan-300 transition-all duration-300 hover:border-cyan-400 hover:bg-cyan-500/20 hover:text-white hover:shadow-lg hover:shadow-cyan-500/30"
+            className="inline-flex items-center justify-center rounded-md border-2 border-amber-500/40 bg-amber-500/8 px-10 py-4 text-sm font-semibold uppercase tracking-wide text-amber-400 transition-all duration-300 hover:border-amber-400 hover:bg-amber-500/15 hover:text-white hover:shadow-lg hover:shadow-amber-500/20"
           >
             Explore My Knowledge Library
             <svg className="w-5 h-5 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -40,7 +40,7 @@ const HomepageHero: React.FC<HeroProps> = ({
 
       {/* Overlay */}
       <div
-        className="absolute inset-0 bg-gradient-to-br from-blue-950/80 via-slate-900/85 to-black/90 z-10"
+        className="absolute inset-0 bg-linear-to-br from-[#0b0b0c]/85 via-[#111214]/80 to-black/90 z-10"
         aria-hidden="true"
       />
 
@@ -48,33 +48,33 @@ const HomepageHero: React.FC<HeroProps> = ({
       <div className="relative z-20 flex items-center min-h-[85vh] md:min-h-[70vh] pt-24 pb-12 md:pt-28 md:pb-16">
         <div className="mx-auto max-w-375 px-6 w-full">
           <div className="text-center md:text-left">
-            <span className="inline-block mb-3 md:mb-4 text-xs md:text-sm tracking-[0.2em] uppercase text-cyan-400 font-medium">
+            <span className="inline-block mb-3 md:mb-4 text-xs md:text-sm tracking-[0.2em] uppercase text-amber-500 font-medium">
               B2B Website Design
             </span>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-5 md:mb-6">
               <span className="block text-white">Your Website Should</span>
-              <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              <span className="block text-amber-500">
                 Generate Pipeline —
               </span>
               <span className="block text-white">Not Just Traffic.</span>
             </h1>
 
-            <p className="text-base md:text-lg lg:text-xl text-blue-50/90 mb-8 md:mb-10 leading-relaxed max-w-2xl md:max-w-3xl">
+            <p className="text-base md:text-lg lg:text-xl text-[#e5e7eb]/80 mb-8 md:mb-10 leading-relaxed max-w-2xl md:max-w-3xl">
               I build B2B websites that turn skeptical buyers into qualified pipeline — engineered for long sales cycles, multiple stakeholders, and decisions that don&apos;t happen on the first visit.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-md bg-cyan-500 text-black px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold hover:bg-cyan-400 transition-colors duration-200 shadow-lg shadow-cyan-500/30"
+                className="inline-flex items-center justify-center rounded-md bg-amber-500 text-black px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold hover:bg-amber-400 transition-colors duration-200 shadow-lg shadow-amber-500/25"
               >
                 Get a Website Audit
               </a>
 
               <a
                 href="/services/conversion-optimization"
-                className="inline-flex items-center justify-center rounded-md border-2 border-cyan-400/60 px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold text-white hover:bg-cyan-500/10 hover:border-cyan-300 transition-all duration-200"
+                className="inline-flex items-center justify-center rounded-md border-2 border-amber-500/50 px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold text-white hover:bg-amber-500/10 hover:border-amber-400 transition-all duration-200"
               >
                 See How I Increase Conversions
               </a>
@@ -85,7 +85,7 @@ const HomepageHero: React.FC<HeroProps> = ({
 
       {/* Scroll Down Indicator */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 animate-bounce">
-        <ChevronDown className="w-6 h-6 text-cyan-400 opacity-80" />
+        <ChevronDown className="w-6 h-6 text-amber-500 opacity-80" />
       </div>
     </section>
   );

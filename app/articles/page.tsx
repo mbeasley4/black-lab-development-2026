@@ -49,7 +49,6 @@ function formatDate(date?: string | Date) {
 function Pagination({ page, totalPages }: { page: number; totalPages: number }) {
   if (totalPages <= 1) return null;
 
-  // Build a window of page numbers around the current page
   const getPages = () => {
     if (totalPages <= 7) return Array.from({ length: totalPages }, (_, i) => i + 1);
     const pages: (number | "…")[] = [];
@@ -67,8 +66,8 @@ function Pagination({ page, totalPages }: { page: number; totalPages: number }) 
 
   const linkBase =
     "inline-flex items-center justify-center min-w-[2.25rem] h-9 px-3 rounded-md text-sm font-medium transition-colors";
-  const active = "bg-cyan-500 text-black";
-  const inactive = "border border-neutral-800 text-neutral-400 hover:border-cyan-500/40 hover:text-white";
+  const active = "bg-amber-500 text-black";
+  const inactive = "border border-neutral-800 text-neutral-400 hover:border-amber-500/40 hover:text-white";
   const disabled = "border border-neutral-900 text-neutral-700 pointer-events-none";
 
   return (
@@ -146,7 +145,7 @@ export default async function ArticlesPage({
   const totalPages = Math.ceil(total / PAGE_SIZE);
 
   return (
-    <main className="w-full bg-black text-white">
+    <main className="w-full bg-[#0b0b0c] text-white">
       {/* HERO */}
       <PageHero
         label="Articles"
@@ -159,25 +158,23 @@ export default async function ArticlesPage({
 
       {/* GRID */}
       <section className="py-6 md:py-9 relative overflow-hidden">
-        {/* Ambient neon glows */}
-        <div className="absolute top-32 left-1/4 w-175 h-175 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-32 right-1/4 w-125 h-125 bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
+        {/* Ambient glows */}
+        <div className="absolute top-32 left-1/4 w-175 h-175 bg-amber-500/4 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-32 right-1/4 w-125 h-125 bg-blue-600/4 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="mx-auto max-w-[1500px] px-6 relative">
-           {/* Section eyebrow */}
+        <div className="mx-auto max-w-375 px-6 relative">
+          {/* Section eyebrow */}
           <div className="flex items-center gap-6 mb-10 md:mb-20">
             <div>
-              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-cyan-400 font-mono drop-shadow-[0_0_12px_rgba(34,211,238,0.9)]">
+              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-amber-500 font-mono drop-shadow-[0_0_12px_rgba(245,158,11,0.7)]">
                 // Articles
               </span>
-              <h2 className="text-3xl md:text-5xl font-bold">
-                <span className="bg-linear-to-r from-white via-cyan-200 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(34,211,238,0.5)]">
-                 All Articles
-                </span>
+              <h2 className="text-3xl md:text-5xl font-bold text-white">
+                All Articles
               </h2>
               <p className="text-sm text-neutral-500 mt-1">{total} article{total !== 1 ? "s" : ""} published</p>
             </div>
-            <div className="flex-1 h-px bg-linear-to-r from-cyan-500/80 via-cyan-500/30 to-transparent" />
+            <div className="flex-1 h-px bg-linear-to-r from-amber-500/60 via-amber-500/20 to-transparent" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 items-stretch">
@@ -185,10 +182,10 @@ export default async function ArticlesPage({
               <AnimatedCard key={a._id} delay={index * 80}>
                 <Link
                   href={`/articles/${a.slug.current}`}
-                  className="h-full group flex flex-col border border-neutral-800 rounded-xl overflow-hidden bg-neutral-950 transition-all duration-300 hover:border-cyan-500/50 hover:shadow-[0_0_40px_rgba(6,182,212,0.10)]"
+                  className="h-full group flex flex-col border border-neutral-800 rounded-xl overflow-hidden bg-neutral-950 transition-all duration-300 hover:border-amber-500/40 hover:shadow-[0_0_40px_rgba(245,158,11,0.08)]"
                 >
                   {/* Top accent line */}
-                  <div className="h-px bg-linear-to-r from-transparent via-cyan-500/0 to-transparent group-hover:via-cyan-500/70 transition-all duration-500" />
+                  <div className="h-px bg-linear-to-r from-transparent via-amber-500/0 to-transparent group-hover:via-amber-500/60 transition-all duration-500" />
 
                   <div className="relative h-56 overflow-hidden">
                     <Image
@@ -197,9 +194,7 @@ export default async function ArticlesPage({
                       fill
                       className="object-cover opacity-80 group-hover:opacity-95 group-hover:scale-[1.02] transition-all duration-500"
                     />
-                    {/* Neon tint overlay on hover */}
-                    <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-transparent to-cyan-500/0 group-hover:to-cyan-500/10 transition-all duration-500" />
-                    {/* Bottom fade into card */}
+                    <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-transparent to-transparent group-hover:to-amber-500/5 transition-all duration-500" />
                     <div className="absolute bottom-0 left-0 right-0 h-12 bg-linear-to-t from-neutral-950 to-transparent" />
                   </div>
 
@@ -207,13 +202,13 @@ export default async function ArticlesPage({
                     {a.publishedAt && (
                       <time
                         dateTime={new Date(a.publishedAt).toISOString()}
-                        className="block mb-2 text-xs uppercase tracking-widest text-cyan-500/60"
+                        className="block mb-2 text-xs uppercase tracking-widest text-amber-500/50"
                       >
                         {formatDate(a.publishedAt)}
                       </time>
                     )}
 
-                    <h2 className="text-xl font-medium mb-3 text-neutral-100 group-hover:text-cyan-200 transition-colors duration-200">
+                    <h2 className="text-xl font-medium mb-3 text-neutral-100 group-hover:text-amber-400 transition-colors duration-200">
                       {a.title}
                     </h2>
 
@@ -222,7 +217,7 @@ export default async function ArticlesPage({
                     </p>
 
                     {/* Read indicator */}
-                    <div className="mt-5 pt-4 border-t border-neutral-800/60 flex items-center gap-1 text-xs font-medium text-cyan-500/0 group-hover:text-cyan-400 transition-colors duration-300">
+                    <div className="mt-5 pt-4 border-t border-neutral-800/60 flex items-center gap-1 text-xs font-medium text-amber-500/0 group-hover:text-amber-500 transition-colors duration-300">
                       Read article
                       <span className="inline-block translate-x-0 group-hover:translate-x-1 transition-transform duration-200">→</span>
                     </div>
@@ -235,7 +230,6 @@ export default async function ArticlesPage({
           {/* Pagination */}
           <Pagination page={page} totalPages={totalPages} />
 
-          {/* Page count label */}
           {totalPages > 1 && (
             <p className="text-center text-xs text-neutral-600 mt-4">
               Page {page} of {totalPages} · {total} articles
@@ -243,8 +237,8 @@ export default async function ArticlesPage({
           )}
         </div>
       </section>
-       {/* ================= CLOSE ================= */}
-        <PageClose
+      {/* ================= CLOSE ================= */}
+      <PageClose
         title="The Work That Actually Moves Systems Forward"
         bodyPrimary="Not every problem needs a new stack. Not every engagement needs a full rebuild. Black Lab Development focuses on the work that actually moves systems forward — with clear tradeoffs and practical decisions."
         bodySecondary="If you need a senior engineer who can step into complex systems, identify real issues, and execute effectively, these services are designed for that kind of work."

@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="w-full bg-black text-white">
+    <main className="w-full bg-[#0b0b0c] text-white">
       {/* ================= HERO ================= */}
       <PageHero
         label=" Contact Me"
@@ -28,16 +28,14 @@ export default function ContactPage() {
           <div className="max-w-xl">
             <div className="flex items-center gap-6 mb-6">
               <div>
-                <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-cyan-400 font-mono drop-shadow-[0_0_12px_rgba(34,211,238,0.9)]">
+                <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-amber-500 font-mono drop-shadow-[0_0_12px_rgba(245,158,11,0.7)]">
                   // About
                 </span>
-                <h2 className="text-3xl md:text-5xl font-bold">
-                  <span className="bg-linear-to-r from-white via-cyan-200 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(34,211,238,0.5)]">
-                    Work Directly With a Senior Engineer
-                  </span>
+                <h2 className="text-3xl md:text-5xl font-bold text-white">
+                  Work Directly With a Senior Engineer
                 </h2>
               </div>
-              <div className="flex-1 h-px bg-linear-to-r from-cyan-500/80 via-cyan-500/30 to-transparent" />
+              <div className="flex-1 h-px bg-linear-to-r from-amber-500/60 via-amber-500/20 to-transparent" />
             </div>
 
             <p className="text-neutral-400 leading-relaxed mb-6">
@@ -73,14 +71,14 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="rounded-2xl border border-cyan-400/50 bg-neutral-950 p-8 lg:p-10 shadow-[0_0_60px_rgba(34,211,238,0.18)]">
+          <div className="rounded-2xl border border-amber-500/40 bg-neutral-950 p-8 lg:p-10 shadow-[0_0_60px_rgba(245,158,11,0.12)]">
             <h3 className="text-2xl font-medium mb-6">
               Start the Conversation
             </h3>
 
             <p className="text-neutral-400 leading-relaxed mb-8">
-              Share a bit about your project, goals, or challenges. You’ll hear
-              back directly to discuss next steps and determine whether there’s
+              Share a bit about your project, goals, or challenges. You'll hear
+              back directly to discuss next steps and determine whether there's
               a good fit.
             </p>
 
@@ -99,10 +97,10 @@ export default function ContactPage() {
               maintainable solutions. Work ranges from WordPress and Shopify to custom
               Laravel and headless architectures."
           bodySecondary="If you need a senior engineer who combines technical leadership, business
-              insight, and hands-on execution — that’s exactly what this is."
+              insight, and hands-on execution — that's exactly what this is."
           secondaryHref="/services"
           secondaryLabel="Explore Services"
-        /> 
+        />
       </section>
     </main>
   );

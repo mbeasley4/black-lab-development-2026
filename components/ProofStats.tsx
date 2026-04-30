@@ -38,8 +38,8 @@ const logos = [
 
 export default function ProofStats() {
     return (
-        <section className="w-full bg-gradient-to-b from-black to-slate-950 text-white py-20 border-t border-cyan-500/10">
-            <div className="mx-auto max-w-[1500px] px-6">
+        <section className="w-full bg-linear-to-b from-black to-slate-950 text-white py-20 border-t border-amber-500/10">
+            <div className="mx-auto max-w-375 px-6">
 
                 {/* Stats row */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-800/40 rounded-2xl overflow-hidden border border-slate-700/40 mb-16">
@@ -48,14 +48,14 @@ export default function ProofStats() {
                             key={stat.label}
                             className="group bg-slate-900/80 px-10 py-10 text-center hover:bg-slate-900 transition-colors duration-300 flex flex-col items-center"
                         >
-                            <div className="text-5xl md:text-6xl font-black bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2 tracking-tight">
+                            <div className="text-5xl md:text-6xl font-black bg-linear-to-r from-amber-500 to-amber-300 bg-clip-text text-transparent mb-2 tracking-tight">
                                 {stat.value}
                             </div>
                             <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
                             <div className="text-sm text-slate-400 leading-relaxed mb-4">{stat.detail}</div>
                             <Link
                                 href={stat.href}
-                                className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-500 hover:text-cyan-300 transition-colors duration-200 opacity-0 group-hover:opacity-100"
+                                className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-500 hover:text-amber-400 transition-colors duration-200 opacity-0 group-hover:opacity-100"
                             >
                                 {stat.cta}
                                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">

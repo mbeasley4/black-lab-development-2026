@@ -58,20 +58,20 @@ const steps = [
 
 export default function RevenueFramework() {
     return (
-        <section className="w-full bg-gradient-to-b from-slate-950 via-blue-950/20 to-slate-950 text-white py-24 relative overflow-hidden">
+        <section className="w-full bg-linear-to-b from-slate-950 via-slate-950/80 to-slate-950 text-white py-24 relative overflow-hidden">
             {/* Ambient glows */}
-            <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-3xl -translate-y-1/2" />
-            <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-3xl -translate-y-1/2" />
+            <div className="absolute top-1/2 left-0 w-125 h-125 bg-amber-500/4 rounded-full blur-3xl -translate-y-1/2" />
+            <div className="absolute top-1/2 right-0 w-125 h-125 bg-blue-500/4 rounded-full blur-3xl -translate-y-1/2" />
 
-            <div className="mx-auto max-w-[1500px] px-6 relative z-10">
+            <div className="mx-auto max-w-375 px-6 relative z-10">
                 {/* Header */}
                 <div className="max-w-3xl mb-16">
-                    <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+                    <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-amber-500 font-semibold">
                         Our Approach
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white">
                         The Revenue-Driven
-                        <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                        <span className="block text-amber-500">
                             Website System
                         </span>
                     </h2>
@@ -83,7 +83,7 @@ export default function RevenueFramework() {
                 {/* Steps */}
                 <div className="relative">
                     {/* Connector line (desktop) */}
-                    <div className="hidden lg:block absolute left-[27px] top-12 bottom-12 w-px bg-gradient-to-b from-cyan-500/0 via-cyan-500/30 to-cyan-500/0" />
+                    <div className="hidden lg:block absolute left-[27px] top-12 bottom-12 w-px bg-linear-to-b from-amber-500/0 via-amber-500/25 to-amber-500/0" />
 
                     <div className="space-y-0">
                         {steps.map((step, i) => (
@@ -93,7 +93,7 @@ export default function RevenueFramework() {
                             >
                                 {/* Step indicator */}
                                 <div className="flex items-center gap-4 lg:block lg:pt-1">
-                                    <div className="relative flex-shrink-0 w-14 h-14 rounded-full border-2 border-slate-700 bg-slate-900 flex items-center justify-center text-cyan-400 group-hover:border-cyan-500 group-hover:bg-cyan-500/10 group-hover:text-cyan-300 transition-all duration-300 z-10">
+                                    <div className="relative flex-shrink-0 w-14 h-14 rounded-full border-2 border-slate-700 bg-slate-900 flex items-center justify-center text-amber-500 group-hover:border-amber-500 group-hover:bg-amber-500/10 group-hover:text-amber-400 transition-all duration-300 z-10">
                                         {step.icon}
                                     </div>
                                 </div>
@@ -101,10 +101,10 @@ export default function RevenueFramework() {
                                 {/* Content */}
                                 <div className="lg:pb-4">
                                     <div className="flex items-center gap-4 mb-3">
-                                        <span className="text-xs font-mono text-cyan-500/60 tracking-widest">{step.number}</span>
-                                        <div className="h-px w-8 bg-cyan-500/30" />
+                                        <span className="text-xs font-mono text-amber-500/50 tracking-widest">{step.number}</span>
+                                        <div className="h-px w-8 bg-amber-500/25" />
                                     </div>
-                                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors duration-300">
+                                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors duration-300">
                                         {step.title}
                                     </h3>
                                     <p className="text-slate-400 leading-relaxed max-w-2xl group-hover:text-slate-300 transition-colors duration-300">
@@ -114,7 +114,7 @@ export default function RevenueFramework() {
 
                                 {/* Divider between steps */}
                                 {i < steps.length - 1 && (
-                                    <div className="lg:col-span-2 h-px bg-gradient-to-r from-transparent via-slate-700/50 to-transparent" />
+                                    <div className="lg:col-span-2 h-px bg-linear-to-r from-transparent via-slate-700/50 to-transparent" />
                                 )}
                             </div>
                         ))}
