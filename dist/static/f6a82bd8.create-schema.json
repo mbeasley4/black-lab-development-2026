@@ -204,6 +204,25 @@
       {
         "name": "excerpt",
         "type": "blockContent"
+      },
+      {
+        "fields": [
+          {
+            "description": "Overrides the post title in search results. Keep under 60 characters.",
+            "name": "title",
+            "type": "string",
+            "title": "SEO Title"
+          },
+          {
+            "rows": 3,
+            "description": "Shown in search results. Keep between 140–160 characters.",
+            "name": "metaDescription",
+            "type": "text"
+          }
+        ],
+        "name": "seo",
+        "type": "object",
+        "title": "SEO"
       }
     ],
     "name": "post",
@@ -324,6 +343,130 @@
       }
     ],
     "name": "author",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "options": {
+          "source": "title"
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "name": "clientName",
+        "type": "string"
+      },
+      {
+        "name": "industry",
+        "type": "string"
+      },
+      {
+        "rows": 3,
+        "description": "Short summary shown on the /work listing page.",
+        "name": "excerpt",
+        "type": "text"
+      },
+      {
+        "description": "Hero subtitle shown below the title.",
+        "name": "tagline",
+        "type": "string"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "fields": [
+          {
+            "name": "alt",
+            "type": "string",
+            "title": "Alternative text"
+          }
+        ],
+        "name": "mainImage",
+        "type": "image"
+      },
+      {
+        "name": "publishedAt",
+        "type": "datetime"
+      },
+      {
+        "initialValue": false,
+        "name": "featured",
+        "type": "boolean"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "improvement",
+                "type": "string",
+                "title": "Improvement (e.g. +164%)"
+              },
+              {
+                "name": "label",
+                "type": "string",
+                "title": "Label (e.g. Average Order Value)"
+              },
+              {
+                "name": "value",
+                "type": "string",
+                "title": "Value (e.g. $281)"
+              },
+              {
+                "name": "note",
+                "type": "string",
+                "title": "Note (e.g. From baseline)"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "metrics",
+        "type": "array",
+        "title": "Key Metrics"
+      },
+      {
+        "name": "body",
+        "type": "blockContent"
+      },
+      {
+        "fields": [
+          {
+            "description": "Overrides the case study title in search results. Keep under 60 characters.",
+            "name": "title",
+            "type": "string",
+            "title": "SEO Title"
+          },
+          {
+            "rows": 3,
+            "description": "Shown in search results. Keep between 140–160 characters.",
+            "name": "metaDescription",
+            "type": "text"
+          }
+        ],
+        "name": "seo",
+        "type": "object",
+        "title": "SEO"
+      }
+    ],
+    "name": "caseStudy",
     "type": "document"
   }
 ]
