@@ -58,7 +58,7 @@ export default async function ArticlesBlock() {
             <AnimatedCard key={a._id} delay={index * 100}>
               <Link
                 href={`/articles/${a.slug.current}`}
-                className="group h-full block border-2 border-slate-800/50 rounded-2xl overflow-hidden bg-slate-900/50 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-xl hover:shadow-amber-500/10"
+                className="group h-full block border border-neutral-800 rounded-2xl overflow-hidden bg-neutral-950 transition-all duration-500 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-xl hover:shadow-amber-500/10"
               >
                 {/* Image */}
                 <div className="relative h-56 overflow-hidden">
@@ -69,7 +69,7 @@ export default async function ArticlesBlock() {
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-neutral-950/50 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
 
                   {/* Top accent bar */}
                   <div className="absolute top-0 left-0 right-0 h-1 bg-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -78,7 +78,7 @@ export default async function ArticlesBlock() {
                 {/* Content */}
                 <div className="p-8 flex flex-col grow relative">
                   {/* Hover gradient background */}
-                  <div className="absolute inset-0 bg-linear-to-br from-amber-500/0 to-amber-500/0 group-hover:from-amber-500/4 group-hover:to-transparent transition-all duration-500 rounded-b-2xl" />
+                  <div className="absolute inset-0 bg-linear-to-br from-amber-500/0 to-amber-500/0 group-hover:from-amber-500/3 group-hover:to-transparent transition-all duration-500 rounded-b-2xl" />
 
                   <div className="relative z-10">
                     {a.publishedAt && (

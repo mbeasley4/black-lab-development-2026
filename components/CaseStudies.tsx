@@ -29,17 +29,6 @@ const caseStudies: CaseStudy[] = [
         color: "amber",
     },
     {
-        title: "Faztek",
-        industry: "Industrial Manufacturing",
-        summary:
-            "Full website redesign targeting engineers and procurement buyers — new positioning, SEO architecture, and conversion-focused product pages.",
-        metric: "+240%",
-        metricLabel: "Organic Traffic",
-        image: "/images/work/faztek-screenshot.jpg",
-        href: "/work",
-        color: "amber",
-    },
-    {
         title: "Blum Media Group",
         industry: "Digital Marketing/Advertising Industry",
         summary:
@@ -47,6 +36,17 @@ const caseStudies: CaseStudy[] = [
         metric: "+100%",
         metricLabel: "Lead Quality",
         image: "/images/work/blum-screenshot.png",
+        href: "/work",
+        color: "amber",
+    },
+    {
+        title: "Faztek",
+        industry: "Industrial Manufacturing",
+        summary:
+            "Full website redesign targeting engineers and procurement buyers — new positioning, SEO architecture, and conversion-focused product pages.",
+        metric: "+240%",
+        metricLabel: "Organic Traffic",
+        image: "/images/work/faztek-screenshot.jpg",
         href: "/work",
         color: "amber",
     },
@@ -119,7 +119,7 @@ export default function CaseStudies() {
                             <Link
                                 key={project.title}
                                 href={project.href || "/work"}
-                                className={`group relative rounded-2xl overflow-hidden border-2 border-slate-800/50 bg-slate-900/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${colors.border} ${colors.glow} backdrop-blur-sm`}
+                                className={`group relative rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${colors.border} ${colors.glow}`}
                             >
                                 {/* Image */}
                                 <div className="relative h-55 overflow-hidden">
@@ -138,7 +138,7 @@ export default function CaseStudies() {
 
                                 {/* Content */}
                                 <div className="p-6 relative">
-                                    <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 to-transparent" />
+                                    <div className="absolute inset-0 bg-linear-to-t from-neutral-950/80 to-transparent" />
 
                                     <div className="relative z-10">
                                         {/* Industry tag */}
