@@ -18,11 +18,11 @@ export default function Header() {
     }, []);
 
     const navItems = [
-        ["About", "/about"],
         ["Services", "/services"],
         ["Industries", "/industries"],
         ["Work", "/work"],
         ["Articles", "/articles"],
+        ["About", "/about"],
         ["Contact", "/contact"],
     ] as const;
 

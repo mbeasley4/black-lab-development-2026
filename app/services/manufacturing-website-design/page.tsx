@@ -235,10 +235,10 @@ export default function ManufacturingWebsiteDesignPage() {
           </div>
           <div className="mt-10 text-center">
             <Link
-              href="/work"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
+              href="/case-studies"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-amber-500 hover:text-amber-400 transition-colors duration-200"
             >
-              View full portfolio
+              View case studies
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
               </svg>

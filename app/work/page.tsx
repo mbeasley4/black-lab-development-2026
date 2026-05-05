@@ -244,7 +244,7 @@ export default async function WorkPage() {
               {caseStudies.map((study: any, i: number) => {
                 const isAmber = i % 2 === 0
                 return (
-                  <Link key={study._id} href={`/work/${study.slug?.current}`} className="group relative block">
+                  <Link key={study._id} href={`/case-studies/${study.slug?.current}`} className="group relative block">
                     {/* Outer glow on hover */}
                     <div className={`absolute -inset-px rounded-2xl blur-md transition-all duration-500 opacity-0 group-hover:opacity-100 ${isAmber ? "bg-linear-to-r from-amber-500/30 via-amber-500/10 to-amber-500/30" : "bg-linear-to-r from-blue-500/30 via-blue-500/10 to-blue-500/30"}`} />
 

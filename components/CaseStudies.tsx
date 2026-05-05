@@ -25,7 +25,7 @@ const caseStudies: CaseStudy[] = [
         metric: "+164%",
         metricLabel: "Avg Order Value",
         image: "/images/work/shortening-shuttle-screenshot.png",
-        href: "/work/ecommerce-website-redesign-increase-aov",
+        href: "/case-studies/ecommerce-website-redesign-increase-aov",
         color: "amber",
     },
     {
@@ -36,7 +36,7 @@ const caseStudies: CaseStudy[] = [
         metric: "+100%",
         metricLabel: "Lead Quality",
         image: "/images/work/blum-screenshot.png",
-        href: "/work",
+        href: "/case-studies",
         color: "amber",
     },
     {
@@ -47,7 +47,7 @@ const caseStudies: CaseStudy[] = [
         metric: "+240%",
         metricLabel: "Organic Traffic",
         image: "/images/work/faztek-screenshot.jpg",
-        href: "/work",
+        href: "/case-studies",
         color: "amber",
     },
     {
@@ -58,7 +58,7 @@ const caseStudies: CaseStudy[] = [
         metric: "3x",
         metricLabel: "Qualified Leads/Mo",
         image: "/images/work/plastechmold-screenshot.png",
-        href: "/work",
+        href: "/case-studies",
         color: "amber",
     },
     
@@ -172,10 +172,10 @@ export default function CaseStudies() {
                 {/* View All */}
                 <div className="mt-16 text-center">
                     <Link
-                        href="/work"
+                        href="/case-studies"
                         className="inline-flex items-center justify-center rounded-md border-2 border-amber-500/40 bg-amber-500/8 px-8 py-4 text-sm font-semibold uppercase tracking-wide text-amber-400 transition-all duration-300 hover:border-amber-400 hover:bg-amber-500/15 hover:text-white hover:shadow-lg hover:shadow-amber-500/20"
                     >
-                        View Full Portfolio
+                        View All Case Studies
                         <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>

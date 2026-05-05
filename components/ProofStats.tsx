@@ -6,7 +6,7 @@ const stats = [
         value: "+164%",
         label: "Average Order Value",
         detail: "eCommerce redesign — revenue up 88% in 7 days",
-        href: "/work/ecommerce-website-redesign-increase-aov",
+        href: "/case-studies/ecommerce-website-redesign-increase-aov",
         cta: "Read the case study",
     },
     {
@@ -20,7 +20,7 @@ const stats = [
         value: "+320%",
         label: "Returning Customers",
         detail: "Post-redesign retention lift — same traffic, more revenue per visitor",
-        href: "/work/ecommerce-website-redesign-increase-aov",
+        href: "/case-studies/ecommerce-website-redesign-increase-aov",
         cta: "Full breakdown",
     },
 ];

@@ -61,7 +61,7 @@ const beforeAfter = [
     before: "Baseline",
     after: "+164%",
     note: "eCommerce redesign — read the full case study →",
-    caseStudyHref: "/work/ecommerce-website-redesign-increase-aov",
+    caseStudyHref: "/case-studies/ecommerce-website-redesign-increase-aov",
   },
   {
     label: "Qualified leads / month",
@@ -244,7 +244,7 @@ export default function ConversionOptimizationPage() {
         <div className="mx-auto max-w-375 px-6">
           <h2 className="text-2xl font-bold text-white mb-8">Related</h2>
           <div className="flex flex-wrap gap-4">
-            <Link href="/work/ecommerce-website-redesign-increase-aov" className="rounded-lg border border-cyan-500/30 bg-cyan-500/10 px-6 py-3 text-sm font-semibold text-cyan-400 hover:border-cyan-400 hover:bg-cyan-500/20 transition-all duration-200">
+            <Link href="/case-studies/ecommerce-website-redesign-increase-aov" className="rounded-lg border border-cyan-500/30 bg-cyan-500/10 px-6 py-3 text-sm font-semibold text-cyan-400 hover:border-cyan-400 hover:bg-cyan-500/20 transition-all duration-200">
               Case Study: +164% AOV in 7 Days →
             </Link>
             <Link href="/services/b2b-website-design" className="rounded-lg border border-slate-700 bg-slate-900 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200">

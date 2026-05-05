@@ -71,8 +71,8 @@ export default async function CaseStudyPage({
             {/* ── Left: text + metrics ── */}
             <div className="flex flex-col justify-center">
               <div className="mb-5 flex flex-wrap items-center gap-3">
-                <Link href="/work" className="text-xs text-slate-500 hover:text-slate-400 transition-colors">
-                  ← Work
+                <Link href="/case-studies" className="text-xs text-slate-500 hover:text-slate-400 transition-colors">
+                  ← Case Studies
                 </Link>
                 <span className="text-slate-700">/</span>
                 <span className="text-xs text-slate-500">Case Study</span>
@@ -214,7 +214,7 @@ export default async function CaseStudyPage({
               Start a Conversation
             </Link>
             <Link
-              href="/work"
+              href="/case-studies"
               className="inline-flex items-center gap-2 text-sm font-semibold text-amber-500 hover:text-amber-400 transition-colors duration-200"
             >
               View all case studies
