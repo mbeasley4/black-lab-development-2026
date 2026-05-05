@@ -3,6 +3,7 @@ import { inter, interTight } from "./fonts";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AptabaseClientProvider from "@/providers/AptabaseClientProvider";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function RootLayout({
   children,
@@ -16,6 +17,7 @@ export default function RootLayout({
           <Header />
           <main>{children}</main>
           <Footer />
+          <Analytics />
         </AptabaseClientProvider>
       </body>
     </html>
