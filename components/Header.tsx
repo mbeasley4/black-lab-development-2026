@@ -10,12 +10,29 @@ const HEADER_HEIGHT = 72; // px
 export default function Header() {
     const pathname = usePathname();
     const [mobileOpen, setMobileOpen] = useState(false);
+    const [closing, setClosing] = useState(false);
+    const [itemsReady, setItemsReady] = useState(false);
     const [boot, setBoot] = useState(false);
 
     useEffect(() => {
         const t1 = setTimeout(() => setBoot(true), 120);
         return () => clearTimeout(t1);
     }, []);
+
+    const openMenu = () => {
+        setClosing(false);
+        setMobileOpen(true);
+        setTimeout(() => setItemsReady(true), 130);
+    };
+
+    const closeMenu = () => {
+        setItemsReady(false);
+        setClosing(true);
+        setTimeout(() => {
+            setMobileOpen(false);
+            setClosing(false);
+        }, 380);
+    };
 
     const navItems = [
         ["Services", "/services"],
@@ -39,14 +56,25 @@ export default function Header() {
                 {/* Backdrop */}
                 <div
                     className="absolute inset-0 bg-black/70 backdrop-blur-sm"
-                    onClick={() => setMobileOpen(false)}
+                    style={{
+                        animation: closing
+                            ? "backdropOut 0.35s ease forwards"
+                            : "backdropIn 0.25s ease forwards",
+                    }}
+                    onClick={closeMenu}
                 />
 
                 {/* Drawer panel */}
-                <nav className="absolute top-0 right-0 h-full w-72 bg-[#111214] border-l border-amber-500/40
-                    shadow-[-6px_0_40px_rgba(245,158,11,0.2)]
-                    flex flex-col px-6 pt-4 pb-6 overflow-hidden">
-
+                <nav
+                    className="absolute top-0 right-0 h-full w-72 bg-[#111214] border-l border-amber-500/40
+                        shadow-[-6px_0_40px_rgba(245,158,11,0.25)]
+                        flex flex-col px-6 pt-4 pb-6 overflow-hidden"
+                    style={{
+                        animation: closing
+                            ? "drawerSlideOut 0.35s cubic-bezier(0.4,0,1,1) forwards"
+                            : "drawerSlideIn 0.48s cubic-bezier(0.175,0.885,0.32,1.275) forwards",
+                    }}
+                >
                     {/* Internal ambient glows */}
                     <div className="pointer-events-none absolute top-0 right-0 w-48 h-48 bg-amber-500/8 rounded-full blur-3xl" />
                     <div className="pointer-events-none absolute bottom-16 left-0 w-32 h-32 bg-blue-500/8 rounded-full blur-2xl" />
@@ -57,7 +85,7 @@ export default function Header() {
                     <div className="relative z-10 flex items-center justify-between mb-6 pb-4 border-b border-amber-500/15">
                         <Link
                             href="/"
-                            onClick={() => setMobileOpen(false)}
+                            onClick={closeMenu}
                             className="flex items-center gap-2 group"
                         >
                             <div className="relative">
@@ -79,7 +107,7 @@ export default function Header() {
 
                         <button
                             type="button"
-                            onClick={() => setMobileOpen(false)}
+                            onClick={closeMenu}
                             style={{ touchAction: "manipulation" }}
                             className="py-2 px-2 text-amber-500 border border-amber-500/60 rounded-sm
                                 shadow-[0_0_8px_rgba(245,158,11,0.15)]
@@ -96,30 +124,37 @@ export default function Header() {
                         {navItems.map(([label, href], i) => {
                             const active = isActive(href);
                             const isContact = label === "Contact";
+                            const delay = `${i * 55}ms`;
+                            const itemStyle: React.CSSProperties = {
+                                opacity: itemsReady ? 1 : 0,
+                                transform: itemsReady ? "translateX(0)" : "translateX(28px)",
+                                transition: `opacity 0.35s ease ${delay}, transform 0.38s cubic-bezier(0.2,0.8,0.4,1) ${delay}`,
+                            };
 
                             if (isContact) {
                                 return (
-                                    <Link
-                                        key={label}
-                                        href={href}
-                                        onClick={() => setMobileOpen(false)}
-                                        className={`mt-4 block text-center py-2.5 px-6 uppercase tracking-widest text-[12px] font-semibold rounded-sm border transition-all duration-300
-                                            ${active
-                                                ? "text-amber-400 border-amber-500 shadow-[0_0_18px_rgba(245,158,11,0.5),inset_0_0_10px_rgba(245,158,11,0.08)]"
-                                                : "text-amber-500 border-amber-500/60 shadow-[0_0_10px_rgba(245,158,11,0.2),inset_0_0_6px_rgba(245,158,11,0.04)] hover:text-amber-400 hover:border-amber-400 hover:shadow-[0_0_20px_rgba(245,158,11,0.45),inset_0_0_10px_rgba(245,158,11,0.08)]"
-                                            }`}
-                                    >
-                                        {label}
-                                    </Link>
+                                    <div key={label} style={itemStyle}>
+                                        <Link
+                                            href={href}
+                                            onClick={closeMenu}
+                                            className={`mt-4 block text-center py-2.5 px-6 uppercase tracking-widest text-[12px] font-semibold rounded-sm border transition-all duration-300
+                                                ${active
+                                                    ? "text-amber-400 border-amber-500 shadow-[0_0_18px_rgba(245,158,11,0.5),inset_0_0_10px_rgba(245,158,11,0.08)]"
+                                                    : "text-amber-500 border-amber-500/60 shadow-[0_0_10px_rgba(245,158,11,0.2),inset_0_0_6px_rgba(245,158,11,0.04)] hover:text-amber-400 hover:border-amber-400 hover:shadow-[0_0_20px_rgba(245,158,11,0.45),inset_0_0_10px_rgba(245,158,11,0.08)]"
+                                                }`}
+                                        >
+                                            {label}
+                                        </Link>
+                                    </div>
                                 );
                             }
 
                             return (
-                                <div key={label}>
+                                <div key={label} style={itemStyle}>
                                     {i > 0 && <div className="h-px bg-linear-to-r from-amber-500/12 via-amber-500/6 to-transparent" />}
                                     <Link
                                         href={href}
-                                        onClick={() => setMobileOpen(false)}
+                                        onClick={closeMenu}
                                         className={`flex items-center gap-3 py-3.5 text-[16px] uppercase tracking-widest font-medium transition-all duration-300
                                             ${active
                                                 ? "text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.7)]"
@@ -140,18 +175,26 @@ export default function Header() {
                     </div>
 
                     {/* CTA */}
-                    <Link
-                        href="/contact"
-                        onClick={() => setMobileOpen(false)}
-                        className="relative z-10 mt-4 block text-center py-2.5 px-6 uppercase tracking-widest text-[12px] font-semibold
-                            text-black bg-amber-500 rounded-sm
-                            shadow-[0_0_20px_rgba(245,158,11,0.35)]
-                            hover:shadow-[0_0_32px_rgba(245,158,11,0.55)]
-                            hover:bg-amber-400
-                            transition-all duration-300"
+                    <div
+                        style={{
+                            opacity: itemsReady ? 1 : 0,
+                            transform: itemsReady ? "translateX(0)" : "translateX(28px)",
+                            transition: `opacity 0.35s ease ${navItems.length * 55}ms, transform 0.38s cubic-bezier(0.2,0.8,0.4,1) ${navItems.length * 55}ms`,
+                        }}
                     >
-                        Let&apos;s Work Together
-                    </Link>
+                        <Link
+                            href="/contact"
+                            onClick={closeMenu}
+                            className="relative z-10 mt-4 block text-center py-2.5 px-6 uppercase tracking-widest text-[12px] font-semibold
+                                text-black bg-amber-500 rounded-sm
+                                shadow-[0_0_20px_rgba(245,158,11,0.35)]
+                                hover:shadow-[0_0_32px_rgba(245,158,11,0.55)]
+                                hover:bg-amber-400
+                                transition-all duration-300"
+                        >
+                            Let&apos;s Work Together
+                        </Link>
+                    </div>
                 </nav>
             </div>
         )}
@@ -164,7 +207,7 @@ export default function Header() {
                 <Link
                     href="/"
                     className="flex items-center gap-2 uppercase group"
-                    onClick={() => setMobileOpen(false)}
+                    onClick={closeMenu}
                 >
                     <div className="relative">
                         <Image
@@ -255,7 +298,7 @@ export default function Header() {
                 {/* Mobile Toggle */}
                 <button
                     type="button"
-                    onClick={() => setMobileOpen(true)}
+                    onClick={openMenu}
                     style={{ touchAction: "manipulation" }}
                     className="md:hidden p-3 text-amber-500 border border-amber-500 rounded-sm
                         shadow-[0_0_12px_rgba(245,158,11,0.4),inset_0_0_8px_rgba(245,158,11,0.06)]
