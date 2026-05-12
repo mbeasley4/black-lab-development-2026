@@ -1,13 +1,13 @@
 import Image from "next/image";
 
 const logos = [
+    { src: "/images/work/delcam-logo.svg", alt: "Delcam Capital" },
     { src: "/images/work/faztek-logo.png", alt: "Faztek" },
     { src: "/images/work/haag-streit-logo.png", alt: "Haag-Streit" },
     { src: "/images/work/melink-logo.png", alt: "Melink" },
     { src: "/images/work/plastechmold-logo.png", alt: "PlastechMold" },
     { src: "/images/work/shortening-shuttle-logo.png", alt: "The Shortening Shuttle" },
     { src: "/images/work/enduir-logo.png", alt: "Enduir" },
-    { src: "/images/work/luma-logo.png", alt: "Luma" },
     { src: "/images/work/providence-logo-w.png", alt: "Providence" },
 ];
 
@@ -28,6 +28,7 @@ export default function ProofStats() {
                                 src={logo.src}
                                 alt={logo.alt}
                                 fill
+                                unoptimized={logo.src.endsWith(".svg")}
                                 className="object-contain"
                             />
                         </div>

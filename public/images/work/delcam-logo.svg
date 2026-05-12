@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 52" fill="none">
+  <!-- Diamond mark -->
+  <path d="M15 2 L28 15 L15 28 L2 15 Z" fill="white"/>
+
+  <!-- DELCAM -->
+  <text x="40" y="21"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="19"
+    font-weight="800"
+    letter-spacing="2.5"
+    fill="white">DELCAM</text>
+
+  <!-- CAPITAL -->
+  <text x="41" y="37"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="9"
+    font-weight="400"
+    letter-spacing="5.5"
+    fill="rgba(255,255,255,0.55)">CAPITAL</text>
+</svg>
