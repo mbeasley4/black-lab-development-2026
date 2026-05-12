@@ -20,8 +20,9 @@ export default function CallToAction() {
             {/* Content */}
             <div className="relative z-10 mx-auto max-w-375 px-6">
                 <div className="mx-auto max-w-4xl text-center">
-                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-white pb-2 leading-tight">
-                        Make Your Website Work Harder
+                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 pb-2 leading-[1.05]">
+                        <span className="block text-white">Make Your Website</span>
+                        <span className="block text-amber-500 drop-shadow-[0_0_40px_rgba(245,158,11,0.4)]">Pull Its Weight</span>
                     </h2>
 
                     <p className="text-xl md:text-2xl text-[#e5e7eb]/60 leading-relaxed mb-12 max-w-2xl mx-auto">
@@ -61,7 +62,7 @@ export default function CallToAction() {
                             <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
                         <p className="text-sm font-medium text-[#e5e7eb] tracking-wide">
-                            Trusted by B2B &amp; manufacturing brands across the US
+                            Trusted by teams that expect their website to perform
                         </p>
                     </div>
                 </div>

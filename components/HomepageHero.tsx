@@ -53,12 +53,12 @@ const HomepageHero: React.FC<HeroProps> = ({
             </span>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-5 md:mb-6">
-              <span className="block text-white">Websites That</span>
-              <span className="block text-amber-500">Actually Do Their Job</span>
+              <span className="block text-white">Your Website Shouldn&apos;t Be</span>
+              <span className="block text-amber-500">the Weak Link</span>
             </h1>
 
             <p className="text-base md:text-lg lg:text-xl text-[#e5e7eb]/80 mb-8 md:mb-10 leading-relaxed max-w-2xl md:max-w-3xl">
-              Fast, scalable websites built to convert — whether you&apos;re generating leads, driving sales, or supporting growth.
+              Fast, scalable websites built to convert — across lead gen, ecommerce, and everything in between.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
