@@ -3,9 +3,9 @@ import PageHero from "@/components/PageHero";
 import PageClose from "@/components/PageClose";
 
 export const metadata = {
-  title: "WordPress Development Agency | Custom, High-Performance Builds",
+  title: "Custom WordPress Development | Fast, Clean, No Bloat | Black Lab Dev",
   description:
-    "Custom WordPress development agency building fast, scalable websites with clean code, no bloat, and performance-first architecture.",
+    "Custom WordPress development with clean code, no page builders, and performance-first architecture — built to scale and stay fast long-term.",
 };
 
 const services = [

@@ -3,9 +3,9 @@ import PageHero from "@/components/PageHero";
 import PageClose from "@/components/PageClose";
 
 export const metadata = {
-  title: "B2B Website Design for Long Sales Cycles | Generate More Pipeline",
+  title: "B2B Website Design | Built for Complex Buyers & Long Sales Cycles",
   description:
-    "Custom B2B website design built for complex buying cycles, multiple stakeholders, and higher conversion rates.",
+    "Custom B2B website design built for technical buyers, complex buying decisions, and higher-quality lead generation — no bloated builders, no shortcuts.",
 };
 
 const failures = [

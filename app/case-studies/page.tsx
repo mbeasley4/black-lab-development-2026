@@ -18,9 +18,9 @@ const CASE_STUDIES_QUERY = `*[_type == "caseStudy"] | order(featured desc, publi
 }`;
 
 export const metadata = {
-  title: "B2B Website Case Studies | Conversion & Revenue Results",
+  title: "Website Case Studies | Real Results | Black Lab Dev",
   description:
-    "Real case studies showing how B2B websites increased conversion rates, pipeline, and revenue through UX and engineering improvements.",
+    "Real results: more qualified leads, faster load times, higher conversion rates, and better search visibility across B2B and ecommerce sites.",
 };
 
 export default async function CaseStudiesPage() {

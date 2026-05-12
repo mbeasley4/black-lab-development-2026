@@ -24,9 +24,9 @@ const POSTS_QUERY = `*[_type == "post" && defined(slug.current)] | order(publish
 const COUNT_QUERY = `count(*[_type == "post" && defined(slug.current)])`;
 
 export const metadata = {
-  title: "Web Development & SEO Articles | Engineering Insights",
+  title: "Web Development & Performance Articles | Black Lab Dev",
   description:
-    "Technical articles on web development, performance, SEO, and platform architecture from a senior engineer.",
+    "Practical articles on website performance, SEO, conversion optimization, and building websites that actually drive results.",
 };
 
 function toPlainText(blocks: { _type: string; children?: { text: string }[] }[]) {

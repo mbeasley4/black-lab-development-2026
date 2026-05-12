@@ -53,15 +53,12 @@ const HomepageHero: React.FC<HeroProps> = ({
             </span>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-5 md:mb-6">
-              <span className="block text-white">Your Website Isn't a</span>
-              <span className="block text-amber-500">
-                Design Problem.
-              </span>
-              <span className="block text-white">It's a Systems Problem.</span>
+              <span className="block text-white">Websites That</span>
+              <span className="block text-amber-500">Actually Do Their Job</span>
             </h1>
 
             <p className="text-base md:text-lg lg:text-xl text-[#e5e7eb]/80 mb-8 md:mb-10 leading-relaxed max-w-2xl md:max-w-3xl">
-              Most agencies design websites. We rebuild them to perform.
+              Fast, scalable websites built to convert — whether you&apos;re generating leads, driving sales, or supporting growth.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
@@ -73,17 +70,17 @@ const HomepageHero: React.FC<HeroProps> = ({
               </a>
 
               <a
-                href="/services/conversion-optimization"
+                href="/work"
                 className="inline-flex items-center justify-center rounded-md border-2 border-amber-500/50 px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold text-white hover:bg-amber-500/10 hover:border-amber-400 transition-all duration-200"
               >
-                See How I Increase Conversions
+                View Work
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Scroll Down Indicator */}
+      {/* Scroll indicator */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 animate-bounce">
         <ChevronDown className="w-6 h-6 text-amber-500 opacity-80" />
       </div>

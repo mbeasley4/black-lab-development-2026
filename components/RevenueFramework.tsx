@@ -1,123 +1,59 @@
-const steps = [
-    {
-        number: "01",
-        title: "Positioning",
-        description:
-            "I define your ideal buyer, their real pain points, and what makes you the only logical choice. Messaging that resonates with decision-makers — not just anyone who lands on the page.",
-        icon: (
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-            </svg>
-        ),
-    },
-    {
-        number: "02",
-        title: "UX for Buyers",
-        description:
-            "B2B buyers aren't consumers. I build for long sales cycles, multiple stakeholders, and the skepticism that comes with six-figure decisions — so every page earns the next click.",
-        icon: (
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-        ),
-    },
-    {
-        number: "03",
-        title: "Conversion Architecture",
-        description:
-            "Strategic placement of CTAs, forms, and trust signals that guide buyers toward action. Not guesswork — a deliberate structure built from how B2B buying decisions actually happen.",
-        icon: (
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-            </svg>
-        ),
-    },
-    {
-        number: "04",
-        title: "Build",
-        description:
-            "Clean, fast, production-grade code. No page builders, no bloated themes. I build to perform — on Core Web Vitals, in search results, and under real traffic.",
-        icon: (
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-            </svg>
-        ),
-    },
-    {
-        number: "05",
-        title: "Optimization",
-        description:
-            "Launch is the beginning, not the end. I track what the data tells us and make continuous improvements — messaging tests, UX changes, and conversion rate work tied to real pipeline numbers.",
-        icon: (
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-            </svg>
-        ),
-    },
+const bullets = [
+    "Turn traffic into qualified leads and sales",
+    "Support complex buying journeys and user flows",
+    "Give marketing and SEO efforts something solid to work with",
 ];
 
 export default function RevenueFramework() {
     return (
-        <section className="w-full bg-linear-to-b from-slate-950 via-slate-950/80 to-slate-950 text-white py-24 relative overflow-hidden">
+        <section className="w-full bg-linear-to-b from-slate-950 to-slate-950 text-white py-24 relative overflow-hidden">
             {/* Ambient glows */}
-            <div className="absolute top-1/2 left-0 w-125 h-125 bg-amber-500/4 rounded-full blur-3xl -translate-y-1/2" />
-            <div className="absolute top-1/2 right-0 w-125 h-125 bg-blue-500/4 rounded-full blur-3xl -translate-y-1/2" />
+            <div className="absolute top-1/2 left-0 w-125 h-125 bg-amber-500/4 rounded-full blur-3xl -translate-y-1/2 pointer-events-none" />
+            <div className="absolute top-1/2 right-0 w-125 h-125 bg-blue-500/4 rounded-full blur-3xl -translate-y-1/2 pointer-events-none" />
 
             <div className="mx-auto max-w-375 px-6 relative z-10">
-                {/* Header */}
-                <div className="max-w-3xl mb-16">
-                    <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-amber-500 font-semibold">
-                        Our Approach
-                    </span>
-                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white">
-                        The Revenue-Driven
-                        <span className="block text-amber-500">
-                            Website System
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+                    {/* Left: headline */}
+                    <div>
+                        <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-amber-500 font-semibold">
+                            The Problem
                         </span>
-                    </h2>
-                    <p className="text-lg text-slate-400 leading-relaxed">
-                        Most agencies hand you a site. I hand you a system. Here&apos;s the framework that turns your website from a digital brochure into your best-performing sales asset.
-                    </p>
-                </div>
+                        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
+                            Most Websites Look Fine.
+                            <span className="block text-amber-500">That&apos;s the Problem.</span>
+                        </h2>
+                    </div>
 
-                {/* Steps */}
-                <div className="relative">
-                    {/* Connector line (desktop) */}
-                    <div className="hidden lg:block absolute left-[27px] top-12 bottom-12 w-px bg-linear-to-b from-amber-500/0 via-amber-500/25 to-amber-500/0" />
+                    {/* Right: body + bullets */}
+                    <div>
+                        <div className="mb-8 space-y-0 divide-y divide-slate-800/60">
+                            {[
+                                { text: "They launch.", dim: false },
+                                { text: "They sit there.", dim: true },
+                                { text: "They underperform.", dim: true },
+                            ].map(({ text, dim }) => (
+                                <p
+                                    key={text}
+                                    className={`py-4 text-2xl md:text-3xl font-semibold tracking-tight transition-colors duration-300 ${
+                                        dim ? "text-slate-600" : "text-white"
+                                    }`}
+                                >
+                                    {text}
+                                </p>
+                            ))}
+                        </div>
 
-                    <div className="space-y-0">
-                        {steps.map((step, i) => (
-                            <div
-                                key={step.number}
-                                className="group relative grid grid-cols-1 lg:grid-cols-[56px_1fr] gap-6 lg:gap-10 items-start py-8 lg:py-10"
-                            >
-                                {/* Step indicator */}
-                                <div className="flex items-center gap-4 lg:block lg:pt-1">
-                                    <div className="relative flex-shrink-0 w-14 h-14 rounded-full border-2 border-slate-700 bg-slate-900 flex items-center justify-center text-amber-500 group-hover:border-amber-500 group-hover:bg-amber-500/10 group-hover:text-amber-400 transition-all duration-300 z-10">
-                                        {step.icon}
-                                    </div>
-                                </div>
+                        <p className="text-slate-500 text-sm uppercase tracking-widest mb-5">We build websites that:</p>
 
-                                {/* Content */}
-                                <div className="lg:pb-4">
-                                    <div className="flex items-center gap-4 mb-3">
-                                        <span className="text-xs font-mono text-amber-500/50 tracking-widest">{step.number}</span>
-                                        <div className="h-px w-8 bg-amber-500/25" />
-                                    </div>
-                                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors duration-300">
-                                        {step.title}
-                                    </h3>
-                                    <p className="text-slate-400 leading-relaxed max-w-2xl group-hover:text-slate-300 transition-colors duration-300">
-                                        {step.description}
-                                    </p>
-                                </div>
-
-                                {/* Divider between steps */}
-                                {i < steps.length - 1 && (
-                                    <div className="lg:col-span-2 h-px bg-linear-to-r from-transparent via-slate-700/50 to-transparent" />
-                                )}
-                            </div>
-                        ))}
+                        <ul className="space-y-4">
+                            {bullets.map((item) => (
+                                <li key={item} className="flex items-start gap-3 text-slate-300 leading-relaxed">
+                                    <span className="mt-2 shrink-0 w-1.5 h-1.5 rounded-full bg-amber-500" />
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
             </div>

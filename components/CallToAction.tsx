@@ -20,12 +20,12 @@ export default function CallToAction() {
             {/* Content */}
             <div className="relative z-10 mx-auto max-w-375 px-6">
                 <div className="mx-auto max-w-4xl text-center">
-                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 text-white pb-2 leading-tight">
-                        Let&apos;s Turn Your Website Into a Pipeline Engine
+                    <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-white pb-2 leading-tight">
+                        Make Your Website Work Harder
                     </h2>
 
-                    <p className="text-xl md:text-2xl text-[#e5e7eb]/80 leading-relaxed mb-12 max-w-3xl mx-auto">
-                        Whether you need a full B2B website redesign, a conversion audit, or a manufacturing-focused web presence — I build for pipeline, not pageviews.
+                    <p className="text-xl md:text-2xl text-[#e5e7eb]/60 leading-relaxed mb-12 max-w-2xl mx-auto">
+                        Less patching. Less rebuilding. Better results.
                     </p>
 
                     {/* CTA Buttons */}
@@ -43,11 +43,11 @@ export default function CallToAction() {
                         </Link>
 
                         <Link
-                            href="/case-studies"
+                            href="/work"
                             className="group inline-flex items-center justify-center rounded-lg border-2 border-amber-500/50 bg-amber-500/8 px-12 py-5 text-base font-bold uppercase tracking-wide text-amber-400 backdrop-blur-sm transition-all duration-300 hover:border-amber-400 hover:bg-amber-500/15 hover:text-white hover:shadow-xl hover:shadow-amber-500/20 hover:scale-105"
                         >
                             <span className="flex items-center gap-2">
-                                View Case Studies
+                                View Our Work
                                 <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>

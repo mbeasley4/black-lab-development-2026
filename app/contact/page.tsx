@@ -3,9 +3,9 @@ import PageClose from "@/components/PageClose";
 import PageHero from "@/components/PageHero"
 
 export const metadata = {
-  title: "Contact a Senior Web Developer | Start Your Project",
+  title: "Get a Free Website Audit | Black Lab Dev",
   description:
-    "Talk directly with a senior engineer about your website, platform, or optimization project. No sales layer — just real solutions.",
+    "Ready to make your website work harder? Get a free audit and find out exactly what's holding back your leads, traffic, and conversions.",
 };
 
 export default function ContactPage() {

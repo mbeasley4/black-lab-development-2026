@@ -3,9 +3,9 @@ import PageHero from "@/components/PageHero"
 import PageClose from "@/components/PageClose"
 
 export const metadata = {
-  title: "B2B Website Development Across Manufacturing, SaaS & Healthcare",
+  title: "Web Development for B2B, Manufacturing & Ecommerce | Black Lab Dev",
   description:
-    "Industry-specific web development for healthcare, SaaS, manufacturing, and enterprise platforms built for performance and scalability.",
+    "Industry-specific website development for manufacturing, B2B, and ecommerce brands — built for technical buyers and real business outcomes.",
 };
 
 const industries = [
@@ -107,9 +107,9 @@ export default function IndustriesPage() {
       {/* ================= HERO ================= */}
       <PageHero
         label="Industries"
-        title="Earned in the Field, Not the Classroom"
-        titleHighlight="Earned in the Field"
-        description="Real industry experience means knowing what breaks in production — not just what works in a pitch deck. Different sectors, same hard problems."
+        title="Built for Real-World Demands"
+        titleHighlight="Real-World Demands"
+        description="We've worked across industries where performance matters — not just presentation."
         backgroundImage="/images/industries-hero-bg.png"
         badges={["Regulated environments", "High-traffic systems", "Legacy nightmares survived"]}
       />

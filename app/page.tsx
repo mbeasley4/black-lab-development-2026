@@ -1,16 +1,19 @@
-import CallToAction from "@/components/CallToAction";
 import HomepageHero from "@/components/HomepageHero";
 import ProofStats from "@/components/ProofStats";
 import RevenueFramework from "@/components/RevenueFramework";
+import Differentiation from "@/components/Differentiation";
 import CoreServices from "@/components/CoreServices";
-import CaseStudies from "@/components/CaseStudies";
+import Results from "@/components/Results";
+import Process from "@/components/Process";
+import PositioningStrike from "@/components/PositioningStrike";
+import CallToAction from "@/components/CallToAction";
 
 export const revalidate = 60;
 
 export const metadata = {
-  title: "B2B Website Design Agency That Generates Pipeline | Black Lab Dev",
+  title: "Website Design & Development Built to Convert | Black Lab Dev",
   description:
-    "B2B website design focused on conversion, pipeline, and revenue. I build sites for long sales cycles, technical buyers, and real business outcomes.",
+    "Fast, scalable websites built to convert. Whether you're generating leads, driving sales, or supporting growth — we build websites that actually do their job.",
 };
 
 export default function Home() {
@@ -19,8 +22,11 @@ export default function Home() {
       <HomepageHero />
       <ProofStats />
       <RevenueFramework />
+      <Differentiation />
       <CoreServices />
-      <CaseStudies />
+      <Results />
+      <Process />
+      <PositioningStrike />
       <CallToAction />
     </div>
   );
