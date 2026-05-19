@@ -1,4 +1,16 @@
-import Image from "next/image";
+const perfBullets = [
+    "Core Web Vitals optimized",
+    "Clean, indexable code",
+    "Structured data and SEO best practices",
+    "Built for long-term performance — not short-term patches",
+];
+
+const locations = [
+    "Cincinnati & Northern Kentucky",
+    "Chicago",
+    "Across Michigan and Massachusetts",
+    "Throughout the East Coast",
+];
 
 export default function PositioningStrike() {
     return (
@@ -8,59 +20,54 @@ export default function PositioningStrike() {
             <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-amber-500/30 to-transparent" />
 
             <div className="relative z-10 mx-auto max-w-375 px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20">
 
-                    {/* Left: text */}
+                    {/* Performance + SEO */}
                     <div>
                         <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-amber-500 font-semibold">
-                            The Bigger Picture
+                            Performance &amp; SEO
                         </span>
-
-                        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight mb-10">
-                            Built to Support Growth
+                        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight mb-8">
+                            Fast. Searchable. Built to Last.
                         </h2>
 
-                        <div className="space-y-4 max-w-xl">
-                            <p className="text-xl text-slate-400 leading-relaxed">
-                                Your website shouldn&apos;t hold back your marketing.
-                            </p>
-                            <p className="text-xl text-white leading-relaxed font-medium">
-                                It should make everything work better — from SEO and paid traffic to content and campaigns.
-                            </p>
+                        <div className="space-y-0 divide-y divide-slate-800/50 mb-8">
+                            {perfBullets.map((item) => (
+                                <div key={item} className="flex items-center gap-4 py-4">
+                                    <span className="shrink-0 w-1.5 h-1.5 rounded-full bg-amber-500" />
+                                    <p className="text-base text-slate-300">{item}</p>
+                                </div>
+                            ))}
                         </div>
 
-                        <div className="mt-10 flex items-center gap-3">
-                            <div className="h-px w-10 bg-amber-500" />
-                            <div className="h-px w-5 bg-amber-500/40" />
-                            <div className="h-px w-3 bg-amber-500/15" />
-                        </div>
+                        <p className="text-sm text-slate-500 leading-relaxed">
+                            Because speed, structure, and visibility directly impact conversions.
+                        </p>
                     </div>
 
-                    {/* Right: image */}
-                    <div className="relative">
-                        {/* Glow behind the image */}
-                        <div className="absolute -inset-4 bg-amber-500/8 rounded-3xl blur-2xl" />
+                    {/* Local SEO */}
+                    <div>
+                        <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-amber-500 font-semibold">
+                            Local &amp; Nationwide
+                        </span>
+                        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight mb-8">
+                            Trusted by Businesses Locally and Nationwide
+                        </h2>
 
-                        <div className="relative rounded-2xl overflow-hidden border border-slate-700/60 shadow-2xl shadow-black/60">
-                            {/* Browser chrome bar */}
-                            <div className="flex items-center gap-1.5 px-4 py-3 bg-slate-900 border-b border-slate-800">
-                                <span className="w-2.5 h-2.5 rounded-full bg-slate-700" />
-                                <span className="w-2.5 h-2.5 rounded-full bg-slate-700" />
-                                <span className="w-2.5 h-2.5 rounded-full bg-slate-700" />
-                                <div className="ml-3 flex-1 h-5 rounded bg-slate-800 max-w-45" />
-                            </div>
+                        <p className="text-slate-400 text-base mb-6">We work with companies in:</p>
 
-                            <Image
-                                src="/images/work/faztek-screenshot.jpg"
-                                alt="Faztek industrial website — built for technical buyers"
-                                width={800}
-                                height={520}
-                                className="w-full object-cover object-top"
-                            />
-
-                            {/* Subtle bottom fade */}
-                            <div className="absolute bottom-0 left-0 right-0 h-16 bg-linear-to-t from-slate-950/60 to-transparent" />
+                        <div className="space-y-0 divide-y divide-slate-800/50 mb-8">
+                            {locations.map((loc) => (
+                                <div key={loc} className="flex items-center gap-4 py-4">
+                                    <span className="shrink-0 w-1.5 h-1.5 rounded-full bg-amber-500" />
+                                    <p className="text-base text-slate-300">{loc}</p>
+                                </div>
+                            ))}
                         </div>
+
+                        <p className="text-sm text-slate-500 leading-relaxed">
+                            From local clinics to multi-location organizations, the goal is the same — a website that performs.
+                        </p>
                     </div>
                 </div>
             </div>

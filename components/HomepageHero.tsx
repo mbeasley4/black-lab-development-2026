@@ -52,30 +52,47 @@ const HomepageHero: React.FC<HeroProps> = ({
               Performance-Driven Web Development
             </span>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-5 md:mb-6">
-              <span className="block text-white">Your Website Shouldn&apos;t Be</span>
-              <span className="block text-amber-500">the Weak Link</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-5 md:mb-6 text-white">
+              Websites Built to Generate{" "}<br/>
+              <span className="text-amber-500">Leads, Bookings, and Pipeline</span>
             </h1>
 
-            <p className="text-base md:text-lg lg:text-xl text-[#e5e7eb]/80 mb-8 md:mb-10 leading-relaxed max-w-2xl md:max-w-3xl">
-              Fast, scalable websites built to convert — across lead gen, ecommerce, and everything in between.
+            <p className="text-base md:text-lg lg:text-xl text-[#e5e7eb]/80 mb-7 md:mb-8 leading-relaxed max-w-2xl md:max-w-3xl">
+              We design and develop high-performance websites for healthcare, education, and B2B companies — engineered to convert, rank, and load fast.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+            <ul className="flex flex-col gap-2.5 mb-8 md:mb-10">
+              {[
+                "Conversion-focused — appointments, leads, applications",
+                "Technical SEO built in — not added later",
+                "Work directly with the developer building your site",
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2.5 text-sm text-[#e5e7eb]/70">
+                  <span className="shrink-0 w-1.5 h-1.5 rounded-full bg-amber-500" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-7">
               <a
-                href="/contact"
+                href="/case-studies"
                 className="inline-flex items-center justify-center rounded-md bg-amber-500 text-black px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold hover:bg-amber-400 transition-colors duration-200 shadow-lg shadow-amber-500/25"
               >
-                Get a Website Audit
+                View Case Studies
               </a>
 
               <a
-                href="/work"
+                href="/contact"
                 className="inline-flex items-center justify-center rounded-md border-2 border-amber-500/50 px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold text-white hover:bg-amber-500/10 hover:border-amber-400 transition-all duration-200"
               >
-                View Work
+                Schedule a Call
               </a>
             </div>
+
+            <p className="text-xs text-slate-500 tracking-wide">
+              Based in Cincinnati — working with clients in Chicago, Michigan, Massachusetts, and across the East Coast
+            </p>
           </div>
         </div>
       </div>

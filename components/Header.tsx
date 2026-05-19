@@ -35,12 +35,12 @@ export default function Header() {
     };
 
     const navItems = [
-        ["Services", "/services"],
-        ["Industries", "/industries"],
-        ["Work", "/work"],
-        ["Articles", "/articles"],
-        ["About", "/about"],
-        ["Contact", "/contact"],
+        ["Website Development", "/services","nav"],
+        ["Industries", "/industries","nav"],
+        ["Case Studies", "/case-studies","nav"],
+        ["SEO & Insights", "/articles","nav"],
+        ["About", "/about","nav"],
+        ["Schedule a Call", "/contact","cta"],
     ] as const;
 
     const isActive = (href: string) => {
@@ -52,7 +52,7 @@ export default function Header() {
         <>
         {/* Mobile Drawer Overlay */}
         {mobileOpen && (
-            <div className="fixed inset-0 z-[60] md:hidden">
+            <div className="fixed inset-0 z-[60] lg:hidden">
                 {/* Backdrop */}
                 <div
                     className="absolute inset-0 bg-black/70 backdrop-blur-sm"
@@ -118,12 +118,12 @@ export default function Header() {
                             <span className="block w-5 h-0.5 bg-current -rotate-45" />
                         </button>
                     </div>
-
+ 
                     {/* Nav links */}
                     <div className="relative z-10 flex flex-col flex-1">
-                        {navItems.map(([label, href], i) => {
+                        {navItems.map(([label, href, type], i) => {
                             const active = isActive(href);
-                            const isContact = label === "Contact";
+                            const isContact = type === "cta";
                             const delay = `${i * 55}ms`;
                             const itemStyle: React.CSSProperties = {
                                 opacity: itemsReady ? 1 : 0,
@@ -250,17 +250,17 @@ export default function Header() {
                 </Link>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden md:flex items-center gap-10 text-[16px] uppercase tracking-widest">
-                    {navItems.map(([label, href]) => {
+                <nav className="hidden lg:flex items-center gap-6 text-[12px] uppercase tracking-[0.12em]">
+                    {navItems.map(([label, href, type]) => {
                         const active = isActive(href);
-                        const isContact = label === "Contact";
+                        const isContact = type === "cta";
 
                         if (isContact) {
                             return (
                                 <Link
                                     key={label}
                                     href={href}
-                                    className={`px-4 py-1.5 uppercase tracking-widest text-[14px] font-semibold rounded-sm border transition-all duration-300
+                                    className={`px-3.5 py-1.5 uppercase tracking-[0.12em] text-[11px] font-semibold rounded-sm border transition-all duration-300
                                         ${active
                                             ? "text-amber-400 border-amber-500 shadow-[0_0_18px_rgba(245,158,11,0.5),inset_0_0_10px_rgba(245,158,11,0.08)]"
                                             : "text-amber-500 border-amber-500/60 shadow-[0_0_10px_rgba(245,158,11,0.25),inset_0_0_6px_rgba(245,158,11,0.04)] hover:text-amber-400 hover:border-amber-400 hover:shadow-[0_0_22px_rgba(245,158,11,0.55),inset_0_0_12px_rgba(245,158,11,0.08)]"
@@ -300,7 +300,7 @@ export default function Header() {
                     type="button"
                     onClick={openMenu}
                     style={{ touchAction: "manipulation" }}
-                    className="md:hidden p-3 text-amber-500 border border-amber-500 rounded-sm
+                    className="lg:hidden p-3 text-amber-500 border border-amber-500 rounded-sm
                         shadow-[0_0_12px_rgba(245,158,11,0.4),inset_0_0_8px_rgba(245,158,11,0.06)]
                         hover:shadow-[0_0_20px_rgba(245,158,11,0.65),inset_0_0_12px_rgba(245,158,11,0.1)]
                         hover:border-amber-400 hover:text-amber-400

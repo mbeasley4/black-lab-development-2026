@@ -35,6 +35,21 @@ export const caseStudyType = defineType({
       options: {hotspot: true},
       fields: [defineField({name: 'alt', type: 'string', title: 'Alternative text'})],
     }),
+    defineField({
+      name: 'logo',
+      title: 'Client Logo',
+      type: 'image',
+      options: {hotspot: false},
+      fields: [defineField({name: 'alt', type: 'string', title: 'Alternative text'})],
+      description: 'Used on the portfolio card grid.',
+    }),
+    defineField({
+      name: 'details',
+      title: 'Project Details',
+      type: 'array',
+      of: [defineArrayMember({type: 'string'})],
+      description: 'Bullet points shown on the portfolio card (e.g. "Custom WordPress theme development").',
+    }),
     defineField({name: 'publishedAt', type: 'datetime'}),
     defineField({
       name: 'featured',

@@ -1,20 +1,9 @@
-const bullets = [
-    {
-        label: "Fast.",
-        detail: 'Not "optimized later" fast.',
-    },
-    {
-        label: "Clean builds —",
-        detail: "no bloated builders or patchwork fixes.",
-    },
-    {
-        label: "SEO-ready structure",
-        detail: "baked in.",
-    },
-    {
-        label: "Designed to scale",
-        detail: "without constant rebuilds.",
-    },
+const failPoints = [
+    "They look good but don't convert",
+    "They rank poorly because of weak technical foundations",
+    "They're slow, bloated, and hard to maintain",
+    "They don't guide users to take action",
+    "They create friction instead of trust",
 ];
 
 export default function Differentiation() {
@@ -29,29 +18,31 @@ export default function Differentiation() {
                     {/* Left */}
                     <div className="lg:sticky lg:top-32">
                         <span className="inline-block mb-5 text-xs tracking-[0.3em] uppercase text-amber-500 font-semibold">
-                            How We Build
+                            The Problem
                         </span>
-                        <h2 className="text-5xl md:text-6xl font-bold tracking-tight text-white leading-[1.05]">
-                            Built Right<br />From the Start
+                        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white leading-[1.1]">
+                           When Your Website<br/>
+                           <span className="text-amber-500">Has to Perform</span>
                         </h2>
-                        <p className="mt-6 text-slate-500 text-base leading-relaxed max-w-sm">
-                            Every decision made at the foundation level — so nothing needs to be undone later.
-                        </p>
                     </div>
 
                     {/* Right: bullets */}
-                    <div className="space-y-0 divide-y divide-slate-800/60">
-                        {bullets.map((item, i) => (
-                            <div key={item.label} className="group flex items-start gap-6 py-8">
+                    <div className="divide-y divide-slate-800/60">
+                        {failPoints.map((item, i) => (
+                            <div key={item} className="group flex items-start gap-6 py-8">
                                 <span className="shrink-0 text-4xl font-black text-slate-800 group-hover:text-amber-500/30 transition-colors duration-300 leading-none mt-1 select-none">
                                     {String(i + 1).padStart(2, "0")}
                                 </span>
                                 <p className="text-xl md:text-2xl text-slate-300 leading-snug font-medium group-hover:text-white transition-colors duration-300">
-                                    <span className="text-white font-bold">{item.label}</span>{" "}
-                                    <span className="text-slate-400">{item.detail}</span>
+                                    {item}
                                 </p>
                             </div>
                         ))}
+                        <div className="pt-8">
+                            <p className="text-sm text-amber-500/80 font-semibold tracking-wide uppercase">
+                                That&apos;s not a marketing problem. It&apos;s a build problem.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
