@@ -386,7 +386,7 @@ export default async function WorkPage() {
                 {/* Content */}
                 <div className="p-6 flex flex-col grow">
                   {/* Logo + name */}
-                  <div className="mb-4 flex flex-col gap-1.5">
+                  <div className="mb-4 flex flex-col gap-3">
                     <div className="h-7 flex items-center">
                       <Image
                         src={project.logo}
