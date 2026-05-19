@@ -61,17 +61,6 @@ const caseStudies: CaseStudy[] = [
         href: "/case-studies",
         color: "amber",
     },
-    {
-        title: "PlastechMold",
-        industry: "Precision Manufacturing",
-        summary:
-            "Conversion architecture overhaul for a custom injection molding firm — redesigned around RFQ generation and technical buyer journeys.",
-        metric: "3x",
-        metricLabel: "Qualified Leads/Mo",
-        image: "/images/work/plastechmold-screenshot.png",
-        href: "/case-studies",
-        color: "amber",
-    },
 ];
 
 const colorClasses = {
