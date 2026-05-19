@@ -42,6 +42,19 @@ const projects = [
     ],
   },
   {
+    name: "Rev & Rinse Auto Detailing",
+    logo: "/images/work/revandrinse-logo.png",
+    screenshot: "/images/work/revandrinse-screenshot.png",
+    summary:
+      "Brochure site for a local auto detailing business — built with Next.js and Sanity.io CMS for fast performance and easy content management.",
+    details: [
+      "Next.js application development",
+      "Sanity.io CMS integration",
+      "Performance and SEO optimization",
+      "Responsive UI and component-based architecture",
+    ],
+  },
+  {
     name: "Blum Media Group",
     logo: "/images/work/blum-logo.png",
     screenshot: "/images/work/blum-screenshot.png",
