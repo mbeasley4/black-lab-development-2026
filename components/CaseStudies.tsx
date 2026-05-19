@@ -29,6 +29,17 @@ const caseStudies: CaseStudy[] = [
         color: "amber",
     },
     {
+        title: "Rev & Rinse Auto Detailing",
+        industry: "Automotive / Local Business",
+        summary:
+            "Brochure site for a local auto detailing business — built with Next.js and Sanity.io CMS for fast performance and easy content management.",
+        metric: "",
+        metricLabel: "",
+        image: "/images/work/revandrinse-screenshot.png",
+        href: "/case-studies",
+        color: "amber",
+    },
+    {
         title: "Blum Media Group",
         industry: "Digital Marketing/Advertising Industry",
         summary:
@@ -61,7 +72,6 @@ const caseStudies: CaseStudy[] = [
         href: "/case-studies",
         color: "amber",
     },
-    
 ];
 
 const colorClasses = {
