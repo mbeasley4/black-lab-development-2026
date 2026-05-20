@@ -1,11 +1,55 @@
+import type { Metadata } from "next";
 import Image from "next/image"
 import PageHero from "@/components/PageHero"
 import PageClose from "@/components/PageClose"
+import JsonLd from "@/components/JsonLd";
 
-export const metadata = {
-  title: "About Black Lab Dev | Website Development That Works",
+export const metadata: Metadata = {
+  title: "About Black Lab Dev | Senior Web Developer in Cincinnati, OH",
   description:
-    "Black Lab Dev builds fast, scalable websites that convert — for B2B, industrial, and ecommerce brands that expect more from their web presence.",
+    "Michael Beasley is a Cincinnati-based senior web developer and founder of Black Lab Development. 15+ years building scalable, revenue-focused platforms for B2B and industrial companies.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Black Lab Dev | Senior Web Developer in Cincinnati, OH",
+    description:
+      "Michael Beasley is a Cincinnati-based senior web developer and founder of Black Lab Development. 15+ years building scalable, revenue-focused platforms for B2B and industrial companies.",
+    url: "/about",
+  },
+  twitter: {
+    title: "About Black Lab Dev | Senior Web Developer in Cincinnati, OH",
+    description:
+      "Michael Beasley is a Cincinnati-based senior web developer and founder of Black Lab Development.",
+  },
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Michael Beasley",
+  jobTitle: "Senior Web Developer & Founder",
+  worksFor: {
+    "@type": "Organization",
+    name: "Black Lab Development",
+    url: "https://blacklabdevelopment.com",
+  },
+  url: "https://blacklabdevelopment.com/about",
+  image: "https://blacklabdevelopment.com/images/michael-beasley.png",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Cincinnati",
+    addressRegion: "OH",
+    addressCountry: "US",
+  },
+  knowsAbout: [
+    "B2B Website Design",
+    "Web Development",
+    "Conversion Optimization",
+    "Manufacturing Websites",
+    "Next.js",
+    "WordPress",
+    "Technical SEO",
+  ],
+  sameAs: [],
 };
 
 const values = [
@@ -33,7 +77,9 @@ const values = [
 
 export default function AboutPage() {
   return (
-    <main className="w-full bg-[#0b0b0c] text-white">
+    <>
+      <JsonLd data={personSchema} />
+      <main className="w-full bg-[#0b0b0c] text-white">
       {/* ================= HERO ================= */}
       <PageHero
         label="About"
@@ -277,6 +323,7 @@ export default function AboutPage() {
         secondaryHref="/services"
         secondaryLabel="See What I Do"
       />
-    </main>
+      </main>
+    </>
   );
 }

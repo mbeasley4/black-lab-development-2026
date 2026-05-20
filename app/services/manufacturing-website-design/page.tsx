@@ -1,12 +1,62 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import PageClose from "@/components/PageClose";
+import JsonLd from "@/components/JsonLd";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Manufacturing Website Design | Built for Technical Buyers & RFQs",
   description:
     "Websites for manufacturers built for engineers and procurement teams. SEO-ready, fast, and structured to generate qualified leads and RFQ submissions.",
+  alternates: { canonical: "/services/manufacturing-website-design" },
+  openGraph: {
+    title: "Manufacturing Website Design | Built for Technical Buyers & RFQs",
+    description:
+      "Websites for manufacturers built for engineers and procurement teams. SEO-ready, fast, and structured to generate qualified leads and RFQ submissions.",
+    url: "/services/manufacturing-website-design",
+  },
+  twitter: {
+    title: "Manufacturing Website Design | Built for Technical Buyers & RFQs",
+    description:
+      "Websites for manufacturers built for engineers and procurement teams — structured to generate RFQ submissions.",
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://blacklabdevelopment.com" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://blacklabdevelopment.com/services" },
+    { "@type": "ListItem", position: 3, name: "Manufacturing Website Design", item: "https://blacklabdevelopment.com/services/manufacturing-website-design" },
+  ],
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Manufacturing Website Design",
+  serviceType: "Web Design",
+  description:
+    "Websites for manufacturers built for engineers and procurement teams. SEO-ready, fast, and structured to generate qualified leads and RFQ submissions.",
+  provider: {
+    "@type": "Organization",
+    name: "Black Lab Development",
+    url: "https://blacklabdevelopment.com",
+    telephone: "+15135204362",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Cincinnati",
+      addressRegion: "OH",
+      addressCountry: "US",
+    },
+  },
+  areaServed: [
+    { "@type": "City", name: "Cincinnati" },
+    { "@type": "Country", name: "United States" },
+  ],
+  url: "https://blacklabdevelopment.com/services/manufacturing-website-design",
 };
 
 const painPoints = [
@@ -115,7 +165,9 @@ const strategy = [
 
 export default function ManufacturingWebsiteDesignPage() {
   return (
-    <main className="w-full bg-black text-white">
+    <>
+      <JsonLd data={[breadcrumbSchema, serviceSchema]} />
+      <main className="w-full bg-black text-white">
       <PageHero
         label="Manufacturing Website Design"
         title="Websites That Generate RFQs — Not Just Visitors"
@@ -294,6 +346,7 @@ export default function ManufacturingWebsiteDesignPage() {
         secondaryHref="/work"
         secondaryLabel="View Manufacturing Portfolio"
       />
-    </main>
+      </main>
+    </>
   );
 }

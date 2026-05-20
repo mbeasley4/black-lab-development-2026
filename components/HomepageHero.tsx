@@ -1,5 +1,8 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
+import { createTimeline, stagger, set } from "animejs";
 
 interface HeroProps {
   backgroundMobileImage?: string;
@@ -14,6 +17,44 @@ const HomepageHero: React.FC<HeroProps> = ({
   backgroundVideoMp4 = "/videos/homepage-hero-bg.mp4",
   backgroundVideoWebm = "/videos/homepage-hero-bg.webm",
 }) => {
+  const eyebrowRef = useRef<HTMLSpanElement>(null);
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const paraRef = useRef<HTMLParagraphElement>(null);
+  const bulletsRef = useRef<HTMLUListElement>(null);
+  const ctasRef = useRef<HTMLDivElement>(null);
+  const creditRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    const bulletItems = bulletsRef.current
+      ? (Array.from(bulletsRef.current.children) as HTMLElement[])
+      : [];
+
+    const els = [
+      eyebrowRef.current,
+      headingRef.current,
+      paraRef.current,
+      ...bulletItems,
+      ctasRef.current,
+      creditRef.current,
+    ].filter((el): el is HTMLElement => el !== null);
+
+    set(els, { opacity: 0, translateY: 15 });
+
+    const tl = createTimeline({
+      defaults: { ease: "outExpo", duration: 600 },
+    });
+
+    tl
+      .add(eyebrowRef.current!, { opacity: 1, translateY: 0 }, 0)
+      .add(headingRef.current!, { opacity: 1, translateY: 0, duration: 750 }, 150)
+      .add(paraRef.current!, { opacity: 1, translateY: 0 }, 450)
+      .add(bulletItems, { opacity: 1, translateY: 0, duration: 500, delay: stagger(60) }, 620)
+      .add(ctasRef.current!, { opacity: 1, translateY: 0, duration: 500 }, 860)
+      .add(creditRef.current!, { opacity: 1, translateY: 0, duration: 400 }, 1020);
+
+    return () => { tl.cancel(); };
+  }, []);
+
   return (
     <section className="relative w-full min-h-[85vh] md:min-h-[70vh] overflow-hidden">
       {/* Desktop Video Background */}
@@ -48,20 +89,29 @@ const HomepageHero: React.FC<HeroProps> = ({
       <div className="relative z-20 flex items-center min-h-[85vh] md:min-h-[70vh] pt-24 pb-12 md:pt-28 md:pb-16">
         <div className="mx-auto max-w-375 px-6 w-full">
           <div className="text-center md:text-left">
-            <span className="inline-block mb-3 md:mb-4 text-xs md:text-sm tracking-[0.2em] uppercase text-amber-500 font-medium">
+            <span
+              ref={eyebrowRef}
+              className="inline-block mb-3 md:mb-4 text-xs md:text-sm tracking-[0.2em] uppercase text-amber-500 font-medium"
+            >
               Performance-Driven Web Development
             </span>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-5 md:mb-6 text-white">
+            <h1
+              ref={headingRef}
+              className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-5 md:mb-6 text-white"
+            >
               Websites Built to Generate{" "}<br/>
               <span className="text-amber-500">Leads, Bookings, and Pipeline</span>
             </h1>
 
-            <p className="text-base md:text-lg lg:text-xl text-[#e5e7eb]/80 mb-7 md:mb-8 leading-relaxed max-w-2xl md:max-w-3xl">
+            <p
+              ref={paraRef}
+              className="text-base md:text-lg lg:text-xl text-[#e5e7eb]/80 mb-7 md:mb-8 leading-relaxed max-w-2xl md:max-w-3xl"
+            >
               We design and develop high-performance websites for healthcare, education, and B2B companies — engineered to convert, rank, and load fast.
             </p>
 
-            <ul className="flex flex-col gap-2.5 mb-8 md:mb-10">
+            <ul ref={bulletsRef} className="flex flex-col gap-2.5 mb-8 md:mb-10">
               {[
                 "Conversion-focused — appointments, leads, applications",
                 "Technical SEO built in — not added later",
@@ -74,7 +124,7 @@ const HomepageHero: React.FC<HeroProps> = ({
               ))}
             </ul>
 
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-7">
+            <div ref={ctasRef} className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-7">
               <a
                 href="/case-studies"
                 className="inline-flex items-center justify-center rounded-md bg-amber-500 text-black px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold hover:bg-amber-400 transition-colors duration-200 shadow-lg shadow-amber-500/25"
@@ -90,7 +140,10 @@ const HomepageHero: React.FC<HeroProps> = ({
               </a>
             </div>
 
-            <p className="text-xs text-slate-500 tracking-wide">
+            <p
+              ref={creditRef}
+              className="text-xs text-slate-500 tracking-wide"
+            >
               Based in Cincinnati — working with clients in Chicago, Michigan, Massachusetts, and across the East Coast
             </p>
           </div>

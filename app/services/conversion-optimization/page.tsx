@@ -1,11 +1,58 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import PageClose from "@/components/PageClose";
+import JsonLd from "@/components/JsonLd";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Website Conversion Optimization | More Leads, Better Results",
   description:
     "Fix what's stopping your website from converting. Better structure, clearer messaging, and smarter CTAs — measured before and after with real data.",
+  alternates: { canonical: "/services/conversion-optimization" },
+  openGraph: {
+    title: "Website Conversion Optimization | More Leads, Better Results",
+    description:
+      "Fix what's stopping your website from converting. Better structure, clearer messaging, and smarter CTAs — measured before and after with real data.",
+    url: "/services/conversion-optimization",
+  },
+  twitter: {
+    title: "Website Conversion Optimization | More Leads, Better Results",
+    description:
+      "Fix what's stopping your website from converting — measured before and after with real data.",
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://blacklabdevelopment.com" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://blacklabdevelopment.com/services" },
+    { "@type": "ListItem", position: 3, name: "Conversion Optimization", item: "https://blacklabdevelopment.com/services/conversion-optimization" },
+  ],
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "B2B Website Conversion Optimization",
+  serviceType: "Conversion Rate Optimization",
+  description:
+    "Fix what's stopping your website from converting. Better structure, clearer messaging, and smarter CTAs — measured before and after with real data.",
+  provider: {
+    "@type": "Organization",
+    name: "Black Lab Development",
+    url: "https://blacklabdevelopment.com",
+    telephone: "+15135204362",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Cincinnati",
+      addressRegion: "OH",
+      addressCountry: "US",
+    },
+  },
+  areaServed: { "@type": "Country", name: "United States" },
+  url: "https://blacklabdevelopment.com/services/conversion-optimization",
 };
 
 const problems = [
@@ -85,7 +132,9 @@ const beforeAfter = [
 
 export default function ConversionOptimizationPage() {
   return (
-    <main className="w-full bg-black text-white">
+    <>
+      <JsonLd data={[breadcrumbSchema, serviceSchema]} />
+      <main className="w-full bg-black text-white">
       <PageHero
         label="B2B Website Conversion Optimization"
         title="Traffic Without Conversions Is Just Overhead"
@@ -264,6 +313,7 @@ export default function ConversionOptimizationPage() {
         secondaryHref="/work"
         secondaryLabel="View Case Studies"
       />
-    </main>
+      </main>
+    </>
   );
 }

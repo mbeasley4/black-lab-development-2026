@@ -1,13 +1,36 @@
+import type { Metadata } from "next";
 import Image from "next/image"
 import Link from "next/link"
 import PageHero from "@/components/PageHero"
 import PageClose from "@/components/PageClose"
 import CaseStudies from "@/components/CaseStudies";
+import JsonLd from "@/components/JsonLd";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Web Development & Conversion Optimization Services | Black Lab Dev",
   description:
     "Custom website development, lead generation, ecommerce optimization, site speed improvements, and technical SEO — built right from the start.",
+  alternates: { canonical: "/services" },
+  openGraph: {
+    title: "Web Development & Conversion Optimization Services | Black Lab Dev",
+    description:
+      "Custom website development, lead generation, ecommerce optimization, site speed improvements, and technical SEO — built right from the start.",
+    url: "/services",
+  },
+  twitter: {
+    title: "Web Development & Conversion Optimization Services | Black Lab Dev",
+    description:
+      "Custom website development, conversion optimization, and technical SEO for B2B companies.",
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://blacklabdevelopment.com" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://blacklabdevelopment.com/services" },
+  ],
 };
 
 const services = [
@@ -100,7 +123,9 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <main className="w-full bg-[#0b0b0c] text-white">
+    <>
+      <JsonLd data={breadcrumbSchema} />
+      <main className="w-full bg-[#0b0b0c] text-white">
       {/* ================= HERO ================= */}
       <PageHero
         label="Services"
@@ -276,6 +301,82 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+      {/* ================= PROCESS ================= */}
+      <section className="py-16 md:py-24 border-t border-amber-500/8 bg-[#0d0d0f] relative overflow-hidden">
+        {/* Ambient glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-48 bg-amber-500/5 blur-[100px] pointer-events-none" />
+
+        <div className="mx-auto max-w-375 px-6">
+          {/* Section header */}
+          <div className="flex items-center gap-6 mb-12 md:mb-16">
+            <div>
+              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-amber-500 font-mono drop-shadow-[0_0_12px_rgba(245,158,11,0.7)]">
+                // How I Work
+              </span>
+              <h2 className="text-3xl md:text-5xl font-bold text-white">
+                The Process
+              </h2>
+            </div>
+            <div className="flex-1 h-px bg-linear-to-r from-amber-500/60 via-amber-500/20 to-transparent" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-amber-500/8 rounded-xl overflow-hidden border border-amber-500/10">
+            {[
+              {
+                step: "01",
+                title: "Discovery",
+                body: "Before writing a line of code I need to understand what you're actually trying to solve — the business goal, the technical constraints, and where the current setup is failing. We talk, I ask uncomfortable questions, and we figure out if we're a fit.",
+              },
+              {
+                step: "02",
+                title: "Architecture",
+                body: "I map out the technical approach: stack, integrations, data model, and anything that's going to bite you later if you get it wrong early. No code yet — just a clear plan so nothing gets built twice.",
+              },
+              {
+                step: "03",
+                title: "Build",
+                body: "Hands on keyboard. I build incrementally, keep you looped in on real progress (not status theater), and make decisions in the open. You'll see working software early and often, not at the end of a long runway.",
+              },
+              {
+                step: "04",
+                title: "Review & QA",
+                body: "Everything gets tested against real scenarios — not just happy paths. Performance, accessibility, cross-browser behavior, and the edge cases that always show up in production. I find the problems before your users do.",
+              },
+              {
+                step: "05",
+                title: "Launch",
+                body: "Deployment is planned, not improvised. DNS, caching, redirects, monitoring — the details that make the difference between a clean cutover and a 2 a.m. fire. I stay available through go-live.",
+              },
+              {
+                step: "06",
+                title: "Iterate",
+                body: "Shipping isn't the finish line. I track what the data shows after launch, flag what needs attention, and keep improving. If something isn't working, you'll hear it from me first — not from your bounce rate.",
+              },
+            ].map((item) => (
+              <div
+                key={item.step}
+                className="bg-[#0d0d0f] p-8 md:p-10 group hover:bg-[#111214] transition-colors duration-300 relative"
+              >
+                <div className="flex items-start gap-5 mb-5">
+                  <span className="text-4xl font-black font-mono text-amber-500/20 leading-none tracking-tighter group-hover:text-amber-500/40 transition-colors duration-300 shrink-0 pt-1">
+                    {item.step}
+                  </span>
+                  <div className="h-px w-10 bg-linear-to-r from-amber-500/50 to-amber-500/10 mt-5 shrink-0" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-amber-100 transition-colors duration-300">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-neutral-500 leading-relaxed group-hover:text-neutral-400 transition-colors duration-300">
+                  {item.body}
+                </p>
+                {/* Bottom accent on hover */}
+                <div className="absolute bottom-0 left-8 right-8 h-px bg-linear-to-r from-transparent via-amber-500/0 to-transparent group-hover:via-amber-500/30 transition-all duration-500" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <CaseStudies />
 
       {/* ================= CLOSE ================= */}
@@ -286,6 +387,7 @@ export default function ServicesPage() {
         secondaryHref="/work"
         secondaryLabel="View Work"
       />
-    </main>
+      </main>
+    </>
   );
 }

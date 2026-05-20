@@ -1,16 +1,56 @@
+import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm"
 import PageClose from "@/components/PageClose";
 import PageHero from "@/components/PageHero"
+import JsonLd from "@/components/JsonLd";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Get a Free Website Audit | Black Lab Dev",
   description:
-    "Ready to make your website work harder? Get a free audit and find out exactly what's holding back your leads, traffic, and conversions.",
+    "Ready to make your website work harder? Get a free website audit from a senior web developer in Cincinnati, OH — find out exactly what's holding back your leads and conversions.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Get a Free Website Audit | Black Lab Dev",
+    description:
+      "Ready to make your website work harder? Get a free audit and find out exactly what's holding back your leads, traffic, and conversions.",
+    url: "/contact",
+  },
+  twitter: {
+    title: "Get a Free Website Audit | Black Lab Dev",
+    description:
+      "Get a free website audit from a senior web developer in Cincinnati, OH.",
+  },
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Black Lab Development",
+  url: "https://blacklabdevelopment.com",
+  telephone: "+15135204362",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Cincinnati",
+    addressRegion: "OH",
+    addressCountry: "US",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+15135204362",
+    contactType: "sales",
+    availableLanguage: "en",
+  },
+  areaServed: [
+    { "@type": "City", name: "Cincinnati" },
+    { "@type": "Country", name: "United States" },
+  ],
 };
 
 export default function ContactPage() {
   return (
-    <main className="w-full bg-[#0b0b0c] text-white">
+    <>
+      <JsonLd data={localBusinessSchema} />
+      <main className="w-full bg-[#0b0b0c] text-white">
       {/* ================= HERO ================= */}
       <PageHero
         label=" Contact Me"
@@ -102,6 +142,7 @@ export default function ContactPage() {
           secondaryLabel="Explore Services"
         />
       </section>
-    </main>
+      </main>
+    </>
   );
 }

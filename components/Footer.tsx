@@ -81,6 +81,8 @@ export default function Footer() {
                         513.520.4362
                     </span>
 
+                    <p className="text-sm text-neutral-500 mt-1">Cincinnati, OH</p>
+
                     <Link
                         href="/contact"
                         className="inline-block mt-6 text-sm text-amber-500 border-b border-amber-500/40 hover:text-amber-400 hover:border-amber-400 transition"

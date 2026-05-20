@@ -1,11 +1,58 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import PageClose from "@/components/PageClose";
+import JsonLd from "@/components/JsonLd";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "B2B Website Design | Built for Complex Buyers & Long Sales Cycles",
   description:
     "Custom B2B website design built for technical buyers, complex buying decisions, and higher-quality lead generation — no bloated builders, no shortcuts.",
+  alternates: { canonical: "/services/b2b-website-design" },
+  openGraph: {
+    title: "B2B Website Design | Built for Complex Buyers & Long Sales Cycles",
+    description:
+      "Custom B2B website design built for technical buyers, complex buying decisions, and higher-quality lead generation — no bloated builders, no shortcuts.",
+    url: "/services/b2b-website-design",
+  },
+  twitter: {
+    title: "B2B Website Design | Built for Complex Buyers & Long Sales Cycles",
+    description:
+      "Custom B2B website design built for technical buyers, complex buying decisions, and higher-quality lead generation.",
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://blacklabdevelopment.com" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://blacklabdevelopment.com/services" },
+    { "@type": "ListItem", position: 3, name: "B2B Website Design", item: "https://blacklabdevelopment.com/services/b2b-website-design" },
+  ],
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "B2B Website Design",
+  serviceType: "Web Design",
+  description:
+    "Custom B2B website design built for technical buyers, complex buying decisions, and higher-quality lead generation — no bloated builders, no shortcuts.",
+  provider: {
+    "@type": "Organization",
+    name: "Black Lab Development",
+    url: "https://blacklabdevelopment.com",
+    telephone: "+15135204362",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Cincinnati",
+      addressRegion: "OH",
+      addressCountry: "US",
+    },
+  },
+  areaServed: { "@type": "Country", name: "United States" },
+  url: "https://blacklabdevelopment.com/services/b2b-website-design",
 };
 
 const failures = [
@@ -67,7 +114,9 @@ const results = [
 
 export default function B2BWebsiteDesignPage() {
   return (
-    <main className="w-full bg-black text-white">
+    <>
+      <JsonLd data={[breadcrumbSchema, serviceSchema]} />
+      <main className="w-full bg-black text-white">
       <PageHero
         label="B2B Website Design Agency"
         title="Websites Designed for How B2B Buyers Actually Buy"
@@ -215,6 +264,7 @@ export default function B2BWebsiteDesignPage() {
         secondaryHref="/work"
         secondaryLabel="View Case Studies"
       />
-    </main>
+      </main>
+    </>
   );
 }
