@@ -137,7 +137,7 @@ const organizationSchema = {
       },
     ],
   },
-  sameAs: [],
+  sameAs: ["https://www.linkedin.com/company/blacklabdevelopment/"],
 };
 
 const websiteSchema = {

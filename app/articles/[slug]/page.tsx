@@ -61,7 +61,13 @@ export async function generateMetadata({
       "Technical article from Black Lab Development on web engineering, performance, and platform architecture.";
   }
 
-  return { title, description };
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `https://blacklabdev.com/articles/${slug}`,
+    },
+  };
 }
 
 
