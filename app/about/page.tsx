@@ -25,24 +25,24 @@ export const metadata: Metadata = {
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": "https://blacklabdevelopment.com/about#michael-beasley",
+  "@id": "https://blacklabdev.com/about#michael-beasley",
   name: "Michael Beasley",
   jobTitle: "Senior Web Developer & Founder",
   description:
     "Michael Beasley is a Cincinnati-based senior web developer with 15+ years of experience building scalable, revenue-focused digital platforms for B2B and industrial companies. Founder of Black Lab Development.",
   worksFor: {
     "@type": "Organization",
-    "@id": "https://blacklabdevelopment.com/#business",
+    "@id": "https://blacklabdev.com/#business",
     name: "Black Lab Development",
-    url: "https://blacklabdevelopment.com",
+    url: "https://blacklabdev.com",
   },
   founder: {
     "@type": "Organization",
     name: "Black Lab Development",
-    url: "https://blacklabdevelopment.com",
+    url: "https://blacklabdev.com",
   },
-  url: "https://blacklabdevelopment.com/about",
-  image: "https://blacklabdevelopment.com/images/michael-beasley.png",
+  url: "https://blacklabdev.com/about",
+  image: "https://blacklabdev.com/images/michael-beasley.png",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Cincinnati",

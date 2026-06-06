@@ -27,9 +27,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://blacklabdevelopment.com" },
-    { "@type": "ListItem", position: 2, name: "Services", item: "https://blacklabdevelopment.com/services" },
-    { "@type": "ListItem", position: 3, name: "Manufacturing Website Design", item: "https://blacklabdevelopment.com/services/manufacturing-website-design" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://blacklabdev.com" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://blacklabdev.com/services" },
+    { "@type": "ListItem", position: 3, name: "Manufacturing Website Design", item: "https://blacklabdev.com/services/manufacturing-website-design" },
   ],
 };
 
@@ -43,7 +43,7 @@ const serviceSchema = {
   provider: {
     "@type": "Organization",
     name: "Black Lab Development",
-    url: "https://blacklabdevelopment.com",
+    url: "https://blacklabdev.com",
     telephone: "+15135204362",
     address: {
       "@type": "PostalAddress",
@@ -56,7 +56,7 @@ const serviceSchema = {
     { "@type": "City", name: "Cincinnati" },
     { "@type": "Country", name: "United States" },
   ],
-  url: "https://blacklabdevelopment.com/services/manufacturing-website-design",
+  url: "https://blacklabdev.com/services/manufacturing-website-design",
 };
 
 const faqSchema = {

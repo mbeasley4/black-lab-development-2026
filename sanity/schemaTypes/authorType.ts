@@ -26,6 +26,12 @@ export const authorType = defineType({
       },
     }),
     defineField({
+      name: 'url',
+      title: 'Author URL',
+      type: 'url',
+      description: 'Public profile URL used in structured data (e.g. https://blacklabdev.com/about)',
+    }),
+    defineField({
       name: 'bio',
       type: 'array',
       of: [

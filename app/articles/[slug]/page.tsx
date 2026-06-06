@@ -13,13 +13,14 @@ export const dynamic = "force-dynamic";
 
 const POST_QUERY = `*[_type == "post" && slug.current == $slug][0] {
   _id,
+  _updatedAt,
   title,
   slug,
   mainImage,
   publishedAt,
   body,
   "excerpt": pt::text(excerpt),
-  "author": author->{ name },
+  "author": author->{ name, "url": url },
   "seoTitle": seo.title,
   "metaDescription": seo.metaDescription
 }`;
@@ -73,16 +74,25 @@ const RELATED_POSTS_QUERY = `*[_type == "post" && slug.current != $slug] | order
   publishedAt
 }`;
 
-function estimateReadTime(body: any[]): number {
-    if (!body) return 0;
-    const text = body
+function extractText(body: any[]): string {
+    if (!body) return "";
+    return body
         .filter((block: any) => block._type === "block")
         .map((block: any) =>
             block.children?.map((child: any) => child.text ?? "").join("") ?? ""
         )
         .join(" ");
+}
+
+function estimateReadTime(body: any[]): number {
+    const text = extractText(body);
     const words = text.trim().split(/\s+/).filter(Boolean).length;
     return Math.max(1, Math.ceil(words / 200));
+}
+
+function countWords(body: any[]): number {
+    const text = extractText(body);
+    return text.trim().split(/\s+/).filter(Boolean).length;
 }
 
 
@@ -112,12 +122,48 @@ export default async function ArticlePage({
     }
 
     const readTime = estimateReadTime(article.body);
+    const wordCount = countWords(article.body);
     const shuffledRelated = [...relatedArticles]
         .sort(() => Math.random() - 0.5)
         .slice(0, 3);
 
+    const description = article.metaDescription ?? article.excerpt ?? "";
+    const canonicalUrl = `https://blacklabdev.com/articles/${article.slug.current}`;
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": article.title,
+        "description": description,
+        "datePublished": article.publishedAt,
+        "dateModified": article._updatedAt ?? article.publishedAt,
+        "wordCount": wordCount,
+        "url": canonicalUrl,
+        ...(article.mainImage && {
+            "image": urlFor(article.mainImage).width(1200).url(),
+        }),
+        "author": {
+            "@type": "Person",
+            "name": article.author?.name ?? "Black Lab Development",
+            "url": article.author?.url ?? "https://blacklabdev.com/about",
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Black Lab Development",
+            "url": "https://blacklabdev.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://blacklabdev.com/images/blacklabdevelopment.png",
+            },
+        },
+    };
+
     return (
         <main className="bg-black text-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <ReadingProgressBar />
 
             {/* ================= CINEMATIC HERO ================= */}

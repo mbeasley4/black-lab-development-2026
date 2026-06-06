@@ -10,6 +10,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: "/",
       },
     ],
-    sitemap: "https://blacklabdevelopment.com/sitemap.xml",
+    sitemap: "https://blacklabdev.com/sitemap.xml",
   };
 }

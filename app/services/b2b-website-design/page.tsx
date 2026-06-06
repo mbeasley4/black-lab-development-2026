@@ -26,9 +26,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://blacklabdevelopment.com" },
-    { "@type": "ListItem", position: 2, name: "Services", item: "https://blacklabdevelopment.com/services" },
-    { "@type": "ListItem", position: 3, name: "B2B Website Design", item: "https://blacklabdevelopment.com/services/b2b-website-design" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://blacklabdev.com" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://blacklabdev.com/services" },
+    { "@type": "ListItem", position: 3, name: "B2B Website Design", item: "https://blacklabdev.com/services/b2b-website-design" },
   ],
 };
 
@@ -89,7 +89,7 @@ const serviceSchema = {
   provider: {
     "@type": "Organization",
     name: "Black Lab Development",
-    url: "https://blacklabdevelopment.com",
+    url: "https://blacklabdev.com",
     telephone: "+15135204362",
     address: {
       "@type": "PostalAddress",
@@ -99,7 +99,7 @@ const serviceSchema = {
     },
   },
   areaServed: { "@type": "Country", name: "United States" },
-  url: "https://blacklabdevelopment.com/services/b2b-website-design",
+  url: "https://blacklabdev.com/services/b2b-website-design",
 };
 
 const failures = [

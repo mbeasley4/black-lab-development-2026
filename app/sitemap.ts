@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { client } from "@/sanity/lib/client";
 
-const BASE_URL = "https://blacklabdevelopment.com";
+const BASE_URL = "https://blacklabdev.com";
 
 async function getArticleSlugs(): Promise<string[]> {
   return client.fetch<string[]>(

@@ -33,14 +33,14 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "ProfessionalService"],
-  "@id": "https://blacklabdevelopment.com/#business",
+  "@id": "https://blacklabdev.com/#business",
   name: "Black Lab Development",
-  url: "https://blacklabdevelopment.com",
+  url: "https://blacklabdev.com",
   logo: {
     "@type": "ImageObject",
-    url: "https://blacklabdevelopment.com/images/blacklabdevelopment.png",
+    url: "https://blacklabdev.com/images/blacklabdevelopment.png",
   },
-  image: "https://blacklabdevelopment.com/images/homepage-hero-bg.png",
+  image: "https://blacklabdev.com/images/homepage-hero-bg.png",
   description:
     "B2B website design and pipeline generation agency serving Cincinnati, OH and clients nationwide. Specializing in manufacturing websites, B2B design, and conversion optimization.",
   telephone: "+15135204362",
@@ -65,12 +65,12 @@ const organizationSchema = {
   priceRange: "$$",
   founder: {
     "@type": "Person",
-    "@id": "https://blacklabdevelopment.com/about#michael-beasley",
+    "@id": "https://blacklabdev.com/about#michael-beasley",
     name: "Michael Beasley",
   },
   employee: {
     "@type": "Person",
-    "@id": "https://blacklabdevelopment.com/about#michael-beasley",
+    "@id": "https://blacklabdev.com/about#michael-beasley",
     name: "Michael Beasley",
     jobTitle: "Senior Web Developer & Founder",
   },
@@ -90,7 +90,7 @@ const organizationSchema = {
         itemOffered: {
           "@type": "Service",
           name: "B2B Website Design",
-          url: "https://blacklabdevelopment.com/services/b2b-website-design",
+          url: "https://blacklabdev.com/services/b2b-website-design",
           description:
             "Custom B2B website design built for technical buyers, complex buying decisions, and higher-quality lead generation.",
         },
@@ -100,7 +100,7 @@ const organizationSchema = {
         itemOffered: {
           "@type": "Service",
           name: "Website Conversion Optimization",
-          url: "https://blacklabdevelopment.com/services/conversion-optimization",
+          url: "https://blacklabdev.com/services/conversion-optimization",
           description:
             "Audit, diagnose, and fix why your site isn't generating qualified leads — measured before and after with real data.",
         },
@@ -110,7 +110,7 @@ const organizationSchema = {
         itemOffered: {
           "@type": "Service",
           name: "Manufacturing Website Design",
-          url: "https://blacklabdevelopment.com/services/manufacturing-website-design",
+          url: "https://blacklabdev.com/services/manufacturing-website-design",
           description:
             "Industry-specific website design for manufacturers — built to generate RFQs from engineers and procurement teams.",
         },
@@ -120,7 +120,7 @@ const organizationSchema = {
         itemOffered: {
           "@type": "Service",
           name: "Custom Web Development",
-          url: "https://blacklabdevelopment.com/services",
+          url: "https://blacklabdev.com/services",
           description:
             "Custom website and web application development — WordPress, headless CMS, Next.js, or fully custom.",
         },
@@ -130,7 +130,7 @@ const organizationSchema = {
         itemOffered: {
           "@type": "Service",
           name: "Technical SEO & Performance",
-          url: "https://blacklabdevelopment.com/services",
+          url: "https://blacklabdev.com/services",
           description:
             "Core Web Vitals, technical SEO remediation, and performance optimization with measurable results.",
         },
@@ -144,7 +144,7 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Black Lab Development",
-  url: "https://blacklabdevelopment.com",
+  url: "https://blacklabdev.com",
 };
 
 const faqSchema = {
@@ -196,7 +196,7 @@ const faqSchema = {
       name: "How do I get started with Black Lab Development?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Start with a free website audit. Share a bit about your project through our contact form at blacklabdevelopment.com/contact and you'll hear back directly to discuss fit, goals, and next steps.",
+        text: "Start with a free website audit. Share a bit about your project through our contact form at blacklabdev.com/contact and you'll hear back directly to discuss fit, goals, and next steps.",
       },
     },
   ],

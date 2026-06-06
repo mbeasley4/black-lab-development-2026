@@ -28,8 +28,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://blacklabdevelopment.com" },
-    { "@type": "ListItem", position: 2, name: "Services", item: "https://blacklabdevelopment.com/services" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://blacklabdev.com" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://blacklabdev.com/services" },
   ],
 };
 
@@ -46,10 +46,10 @@ const serviceListSchema = {
       item: {
         "@type": "Service",
         name: "Custom Web Development",
-        url: "https://blacklabdevelopment.com/services",
+        url: "https://blacklabdev.com/services",
         description:
           "Custom website development built from the architecture out — WordPress, headless CMS, Shopify, or fully custom. No templates, no page builders.",
-        provider: { "@type": "Organization", "@id": "https://blacklabdevelopment.com/#business" },
+        provider: { "@type": "Organization", "@id": "https://blacklabdev.com/#business" },
       },
     },
     {
@@ -58,10 +58,10 @@ const serviceListSchema = {
       item: {
         "@type": "Service",
         name: "Software Engineering & Architecture",
-        url: "https://blacklabdevelopment.com/services",
+        url: "https://blacklabdev.com/services",
         description:
           "Backend development, API design, data modeling, and architecture decisions with full accountability for the outcome.",
-        provider: { "@type": "Organization", "@id": "https://blacklabdevelopment.com/#business" },
+        provider: { "@type": "Organization", "@id": "https://blacklabdev.com/#business" },
       },
     },
     {
@@ -70,10 +70,10 @@ const serviceListSchema = {
       item: {
         "@type": "Service",
         name: "Performance, SEO & Optimization",
-        url: "https://blacklabdevelopment.com/services",
+        url: "https://blacklabdev.com/services",
         description:
           "Core Web Vitals, technical SEO remediation, accessibility, and performance audits — real improvements with data attached.",
-        provider: { "@type": "Organization", "@id": "https://blacklabdevelopment.com/#business" },
+        provider: { "@type": "Organization", "@id": "https://blacklabdev.com/#business" },
       },
     },
     {
@@ -82,10 +82,10 @@ const serviceListSchema = {
       item: {
         "@type": "Service",
         name: "Integrations & Automation",
-        url: "https://blacklabdevelopment.com/services",
+        url: "https://blacklabdev.com/services",
         description:
           "HubSpot, Salesforce, Marketo, Stripe, and custom API integrations — clean connections that don't require babysitting.",
-        provider: { "@type": "Organization", "@id": "https://blacklabdevelopment.com/#business" },
+        provider: { "@type": "Organization", "@id": "https://blacklabdev.com/#business" },
       },
     },
     {
@@ -94,10 +94,10 @@ const serviceListSchema = {
       item: {
         "@type": "Service",
         name: "Platform Audits & Technical Leadership",
-        url: "https://blacklabdevelopment.com/services",
+        url: "https://blacklabdev.com/services",
         description:
           "Deep-dive audits of existing systems — surfaces the real problems and tells you plainly what to fix, what to leave alone, and what's quietly on fire.",
-        provider: { "@type": "Organization", "@id": "https://blacklabdevelopment.com/#business" },
+        provider: { "@type": "Organization", "@id": "https://blacklabdev.com/#business" },
       },
     },
   ],

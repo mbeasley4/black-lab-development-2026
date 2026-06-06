@@ -26,7 +26,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "Black Lab Development",
-  url: "https://blacklabdevelopment.com",
+  url: "https://blacklabdev.com",
   telephone: "+15135204362",
   address: {
     "@type": "PostalAddress",

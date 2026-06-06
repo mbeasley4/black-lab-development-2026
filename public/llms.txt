@@ -1,0 +1,37 @@
+# Black Lab Development
+
+> B2B website design and pipeline generation agency based in Cincinnati, OH. We build fast, conversion-focused websites for B2B companies — specializing in manufacturing, industrial, and technical markets.
+
+Black Lab Development is a boutique web agency led by Michael Beasley, a senior web developer with deep experience in B2B pipeline generation, Core Web Vitals performance, and technical SEO. We work directly with founders, marketing directors, and sales teams — no account managers, no outsourcing.
+
+## Services
+
+- **B2B Website Design** — Custom websites designed for technical buyers, complex sales cycles, and pipeline generation. We focus on lead quality, not just traffic. https://blacklabdev.com/services/b2b-website-design
+- **Manufacturing Website Design** — Industry-specific websites for manufacturers built to generate RFQs from engineers and procurement teams. We understand complex products, long sales cycles, and the specs buyers need before they call. https://blacklabdev.com/services/manufacturing-website-design
+- **Conversion Optimization** — Audit, diagnose, and fix why your site isn't generating qualified leads. We measure before and after with real data. https://blacklabdev.com/services/conversion-optimization
+- **Custom Web Development** — WordPress, headless CMS, Next.js, and fully custom web applications. https://blacklabdev.com/services
+
+## Articles (SEO & Insights)
+
+Practical articles on B2B website strategy, Core Web Vitals, SEO, and conversion optimization — written for marketing and sales leaders at B2B companies.
+
+https://blacklabdev.com/articles
+
+## About
+
+Michael Beasley — Senior Web Developer & Founder, Black Lab Development
+Based in Cincinnati, OH. Serving B2B clients nationwide.
+https://blacklabdev.com/about
+
+## Contact
+
+https://blacklabdev.com/contact
+Phone: +1 (513) 520-4362
+
+## Key Facts
+
+- Founded by a senior engineer (not a salesperson)
+- Specializes in B2B companies in manufacturing, industrial, and technical sectors
+- Based in Cincinnati, OH; serves clients nationwide
+- Focuses on pipeline generation, not just traffic or vanity metrics
+- Services include web design, development, SEO, and conversion optimization
