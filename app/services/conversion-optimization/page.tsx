@@ -32,6 +32,53 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Why is my website getting traffic but not generating leads?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The most common causes are positioning that's too broad (your site speaks to everyone so it resonates with no one), CTAs generating the wrong contacts, service pages that don't answer specific buyer questions, and content without a clear next step. Conversion optimization diagnoses which of these is killing your pipeline and fixes it with data — not guesswork.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What does conversion optimization actually involve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "It starts with a data-driven audit of analytics, heatmaps, session recordings, and funnel data to identify exactly where buyers drop off. From there: messaging alignment against your ideal buyer persona, UX friction removal, CTA and form optimization, and structured A/B testing to measure lift in qualified leads — not just raw conversion rate.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you need to rebuild my website to improve conversions?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. Most conversion problems don't require a full rebuild. UX friction removal, CTA repositioning, copy rewrites, and form redesigns can produce significant lift without touching the underlying architecture. A full redesign is only recommended when the positioning, information architecture, or technical foundation is the root cause.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long before I see results from conversion optimization?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Initial improvements from messaging alignment, CTA optimization, and friction removal are typically measurable within 30–60 days. One manufacturing client went from 3 to 27 qualified leads per month within a 90-day engagement. Results depend on current baseline traffic volume and how significant the conversion blockers are.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you measure success in a conversion optimization engagement?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Success is measured in qualified leads and pipeline — not just raw conversion rate or traffic. Conversion tracking is set up before any changes go live, giving a clear before/after baseline. A/B tests run on headlines, CTAs, page layouts, and form designs to attribute specific lift to specific changes.",
+      },
+    },
+  ],
+};
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -133,7 +180,7 @@ const beforeAfter = [
 export default function ConversionOptimizationPage() {
   return (
     <>
-      <JsonLd data={[breadcrumbSchema, serviceSchema]} />
+      <JsonLd data={[breadcrumbSchema, serviceSchema, faqSchema]} />
       <main className="w-full bg-black text-white">
       <PageHero
         label="B2B Website Conversion Optimization"

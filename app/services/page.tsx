@@ -33,6 +33,76 @@ const breadcrumbSchema = {
   ],
 };
 
+const serviceListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Web Design & Development Services",
+  description: "B2B website design, development, and optimization services from Black Lab Development in Cincinnati, OH.",
+  numberOfItems: 5,
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      item: {
+        "@type": "Service",
+        name: "Custom Web Development",
+        url: "https://blacklabdevelopment.com/services",
+        description:
+          "Custom website development built from the architecture out — WordPress, headless CMS, Shopify, or fully custom. No templates, no page builders.",
+        provider: { "@type": "Organization", "@id": "https://blacklabdevelopment.com/#business" },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      item: {
+        "@type": "Service",
+        name: "Software Engineering & Architecture",
+        url: "https://blacklabdevelopment.com/services",
+        description:
+          "Backend development, API design, data modeling, and architecture decisions with full accountability for the outcome.",
+        provider: { "@type": "Organization", "@id": "https://blacklabdevelopment.com/#business" },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      item: {
+        "@type": "Service",
+        name: "Performance, SEO & Optimization",
+        url: "https://blacklabdevelopment.com/services",
+        description:
+          "Core Web Vitals, technical SEO remediation, accessibility, and performance audits — real improvements with data attached.",
+        provider: { "@type": "Organization", "@id": "https://blacklabdevelopment.com/#business" },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      item: {
+        "@type": "Service",
+        name: "Integrations & Automation",
+        url: "https://blacklabdevelopment.com/services",
+        description:
+          "HubSpot, Salesforce, Marketo, Stripe, and custom API integrations — clean connections that don't require babysitting.",
+        provider: { "@type": "Organization", "@id": "https://blacklabdevelopment.com/#business" },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 5,
+      item: {
+        "@type": "Service",
+        name: "Platform Audits & Technical Leadership",
+        url: "https://blacklabdevelopment.com/services",
+        description:
+          "Deep-dive audits of existing systems — surfaces the real problems and tells you plainly what to fix, what to leave alone, and what's quietly on fire.",
+        provider: { "@type": "Organization", "@id": "https://blacklabdevelopment.com/#business" },
+      },
+    },
+  ],
+};
+
 const services = [
   {
     title: "Custom Web Development",
@@ -124,7 +194,7 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
-      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={[breadcrumbSchema, serviceListSchema]} />
       <main className="w-full bg-[#0b0b0c] text-white">
       {/* ================= HERO ================= */}
       <PageHero

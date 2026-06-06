@@ -32,6 +32,53 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Why don't most B2B websites generate pipeline?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most B2B sites are designed to impress, not convert. They lack clear next steps for buyers, speak with one voice to multiple stakeholders, and use generic positioning that doesn't differentiate from competitors. B2B buyers visit a site 5–8 times before reaching out — and most sites aren't built to answer the different questions each visit brings.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How is B2B website design different from consumer website design?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "B2B websites must earn trust over weeks or months, across 3–7 people who all have veto power. Consumer websites optimize for impulse decisions. B2B websites need to address technical evaluators, economic buyers, and internal champions simultaneously — with content that holds up across a 3–9 month sales cycle.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What does a B2B website redesign process look like?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "It starts with buyer research and positioning to understand who actually buys from you. Then multi-stakeholder architecture maps each persona's path through the site. From there: conversion-first design, a clean build in Next.js or Astro, and measurement setup before launch so results can be tracked and improved.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What results can I expect from a B2B website redesign?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Across B2B redesign engagements, average results include a 180% conversion rate lift, a 43% drop in bounce rate, and significant increases in qualified lead volume. One manufacturing client went from 3 to 27 qualified leads per month within 90 days of launch. Individual results vary based on current site performance and market.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you work with B2B companies outside of Cincinnati?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Black Lab Development is based in Cincinnati, OH, but works with B2B companies across the United States. The engagement is fully remote-friendly — you work directly with the engineer, not a project manager relay.",
+      },
+    },
+  ],
+};
+
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -115,7 +162,7 @@ const results = [
 export default function B2BWebsiteDesignPage() {
   return (
     <>
-      <JsonLd data={[breadcrumbSchema, serviceSchema]} />
+      <JsonLd data={[breadcrumbSchema, serviceSchema, faqSchema]} />
       <main className="w-full bg-black text-white">
       <PageHero
         label="B2B Website Design Agency"

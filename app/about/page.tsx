@@ -25,9 +25,18 @@ export const metadata: Metadata = {
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": "https://blacklabdevelopment.com/about#michael-beasley",
   name: "Michael Beasley",
   jobTitle: "Senior Web Developer & Founder",
+  description:
+    "Michael Beasley is a Cincinnati-based senior web developer with 15+ years of experience building scalable, revenue-focused digital platforms for B2B and industrial companies. Founder of Black Lab Development.",
   worksFor: {
+    "@type": "Organization",
+    "@id": "https://blacklabdevelopment.com/#business",
+    name: "Black Lab Development",
+    url: "https://blacklabdevelopment.com",
+  },
+  founder: {
     "@type": "Organization",
     name: "Black Lab Development",
     url: "https://blacklabdevelopment.com",
@@ -38,7 +47,28 @@ const personSchema = {
     "@type": "PostalAddress",
     addressLocality: "Cincinnati",
     addressRegion: "OH",
+    postalCode: "45202",
     addressCountry: "US",
+  },
+  hasOccupation: {
+    "@type": "Occupation",
+    name: "Web Developer",
+    occupationLocation: {
+      "@type": "City",
+      name: "Cincinnati",
+    },
+    description:
+      "Senior web developer specializing in B2B website design, conversion optimization, and digital platform architecture for manufacturing and industrial companies.",
+    skills: [
+      "B2B Website Design",
+      "Conversion Rate Optimization",
+      "Manufacturing Website Design",
+      "Next.js",
+      "WordPress",
+      "Technical SEO",
+      "Software Architecture",
+      "HubSpot Integration",
+    ],
   },
   knowsAbout: [
     "B2B Website Design",
@@ -48,6 +78,9 @@ const personSchema = {
     "Next.js",
     "WordPress",
     "Technical SEO",
+    "Software Architecture",
+    "Pipeline Generation",
+    "Lead Generation",
   ],
   sameAs: [],
 };
@@ -85,7 +118,7 @@ export default function AboutPage() {
         label="About"
         title="The Engineer Behind the Work"
         titleHighlight="Behind the Work"
-        description="Deep enough in the field to know which problems are real. No middlemen, no markup — just the engineer who owns the outcome."
+        description="I'm Michael Beasley — a senior web developer based in Cincinnati, Ohio with 15+ years of experience building scalable B2B and industrial platforms. No middlemen, no markup — just the engineer who owns the outcome."
         backgroundImage="/images/about-hero-bg.png"
         badges={["Senior-led", "Direct access", "Full ownership"]}
       />
@@ -113,8 +146,14 @@ export default function AboutPage() {
                 // Background
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-white">
-                Who I Am
+                Michael Beasley
               </h2>
+              <p className="mt-2 text-base text-neutral-400 font-medium">
+                Senior Web Developer &amp; Founder — Black Lab Development
+              </p>
+              <p className="mt-1 text-sm text-amber-500/80 font-mono tracking-wide">
+                Cincinnati, Ohio
+              </p>
             </div>
             <div className="flex-1 h-px bg-linear-to-r from-amber-500/60 via-amber-500/20 to-transparent" />
           </div>
@@ -130,7 +169,7 @@ export default function AboutPage() {
                 <div className="relative w-full h-full rounded-2xl overflow-hidden border border-amber-500/25 shadow-[0_0_40px_rgba(245,158,11,0.12)]">
                   <Image
                     src="/images/michael-beasley.png"
-                    alt="Michael Beasley"
+                    alt="Michael Beasley, senior web developer and founder of Black Lab Development, based in Cincinnati, Ohio"
                     fill
                     className="object-cover object-top"
                     priority
@@ -141,10 +180,13 @@ export default function AboutPage() {
               {/* Bio text */}
               <div className="max-w-xl">
                 <p className="text-lg text-neutral-300 leading-relaxed mb-6">
-                  I'm Michael Beasley — a senior engineer in Cincinnati with enough production systems behind me to know what failure looks like before it ships.
+                  I'm Michael Beasley — a senior web developer and software engineer based in Cincinnati,
+                  Ohio. I have over 15 years of experience building production-grade B2B platforms,
+                  manufacturing websites, and digital infrastructure that handles real traffic, real data,
+                  and real business pressure.
                 </p>
                 <p className="text-neutral-400 leading-relaxed mb-6">
-                  I started Black Lab Development to do the kind of engineering work I actually respect:
+                  I founded Black Lab Development to do the kind of engineering work I actually respect:
                   direct engagement with complex problems, decisions made by the person who understands the
                   system, and outcomes tied to real business results — not billable hours.
                 </p>

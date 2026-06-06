@@ -32,7 +32,8 @@ export const metadata: Metadata = {
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": ["LocalBusiness", "ProfessionalService"],
+  "@id": "https://blacklabdevelopment.com/#business",
   name: "Black Lab Development",
   url: "https://blacklabdevelopment.com",
   logo: {
@@ -45,8 +46,10 @@ const organizationSchema = {
   telephone: "+15135204362",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "Cincinnati",
     addressLocality: "Cincinnati",
     addressRegion: "OH",
+    postalCode: "45202",
     addressCountry: "US",
   },
   geo: {
@@ -62,13 +65,77 @@ const organizationSchema = {
   priceRange: "$$",
   founder: {
     "@type": "Person",
+    "@id": "https://blacklabdevelopment.com/about#michael-beasley",
     name: "Michael Beasley",
+  },
+  employee: {
+    "@type": "Person",
+    "@id": "https://blacklabdevelopment.com/about#michael-beasley",
+    name: "Michael Beasley",
+    jobTitle: "Senior Web Developer & Founder",
   },
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+15135204362",
     contactType: "sales",
     availableLanguage: "en",
+    contactOption: "TollFree",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "B2B Web Design & Development Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "B2B Website Design",
+          url: "https://blacklabdevelopment.com/services/b2b-website-design",
+          description:
+            "Custom B2B website design built for technical buyers, complex buying decisions, and higher-quality lead generation.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Website Conversion Optimization",
+          url: "https://blacklabdevelopment.com/services/conversion-optimization",
+          description:
+            "Audit, diagnose, and fix why your site isn't generating qualified leads — measured before and after with real data.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Manufacturing Website Design",
+          url: "https://blacklabdevelopment.com/services/manufacturing-website-design",
+          description:
+            "Industry-specific website design for manufacturers — built to generate RFQs from engineers and procurement teams.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Custom Web Development",
+          url: "https://blacklabdevelopment.com/services",
+          description:
+            "Custom website and web application development — WordPress, headless CMS, Next.js, or fully custom.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Technical SEO & Performance",
+          url: "https://blacklabdevelopment.com/services",
+          description:
+            "Core Web Vitals, technical SEO remediation, and performance optimization with measurable results.",
+        },
+      },
+    ],
   },
   sameAs: [],
 };
@@ -80,10 +147,65 @@ const websiteSchema = {
   url: "https://blacklabdevelopment.com",
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What does Black Lab Development do?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Black Lab Development is a B2B website design and pipeline generation agency based in Cincinnati, OH. We build custom websites, optimize conversions, and design digital experiences for B2B companies — with a focus on manufacturing, industrial, and technical buyers.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Who is Black Lab Development best for?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We specialize in B2B companies — particularly manufacturers, industrial service providers, and technical organizations — that need websites built for complex buying decisions, multiple stakeholders, and longer sales cycles.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you work with companies outside of Cincinnati?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. While we're based in Cincinnati, OH, we work with B2B and manufacturing companies across the United States. Our process is fully remote-friendly, with direct communication between you and the engineer doing the work.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What makes Black Lab Development different from a typical web agency?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You work directly with a senior engineer — not a project manager relaying messages or a junior developer assigned after the sale. Every engagement involves direct communication, hands-on technical leadership, and full accountability for the outcome.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What platforms do you build on?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We build primarily on Next.js, WordPress, and Astro — chosen based on the project's requirements, not a preferred stack. We also work with headless CMS platforms, Shopify, and custom architectures when the problem calls for it.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I get started with Black Lab Development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Start with a free website audit. Share a bit about your project through our contact form at blacklabdevelopment.com/contact and you'll hear back directly to discuss fit, goals, and next steps.",
+      },
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <>
-      <JsonLd data={[organizationSchema, websiteSchema]} />
+      <JsonLd data={[organizationSchema, websiteSchema, faqSchema]} />
       <div className="w-full mt-0">
         <HomepageHero />
         <ProofStats />

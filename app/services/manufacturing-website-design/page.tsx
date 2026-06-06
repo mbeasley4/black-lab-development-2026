@@ -59,6 +59,53 @@ const serviceSchema = {
   url: "https://blacklabdevelopment.com/services/manufacturing-website-design",
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What makes a manufacturing website different from other B2B sites?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Manufacturing buyers — engineers, procurement managers, and operations leads — need technical specificity fast. They're evaluating capabilities, tolerances, certifications, and lead times, not brand stories. A manufacturing website must surface specs, process descriptions, and RFQ paths quickly, for buyers who won't wait for a phone call to get basic answers.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why don't most manufacturing websites generate RFQs?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most manufacturing sites are digital catalogs — they list capabilities, post a phone number, and wait. Buyers who can't quickly find the information they need to evaluate a vendor move on. The absence of clear capability pages, technical content, industry-specific SEO, and low-friction RFQ forms is what kills pipeline.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you generate more RFQ submissions through a website?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "By building the site around how procurement and engineering teams actually evaluate vendors: buyer persona mapping to define what each role needs, industry SEO targeting buyer-intent searches (specific processes, materials, and geographies), technical content structured for both engineers and procurement, and low-friction RFQ forms that reduce submission barriers without sacrificing lead quality.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do manufacturers need a custom website or can they use a template?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Templates create generic positioning — and if your site looks like your five nearest competitors, buyers can't differentiate you. Manufacturing websites need capability-specific content architecture, industry SEO, and conversion paths designed for technical buyers. That's hard to achieve with a template built for everyone.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you work with manufacturers outside of Cincinnati?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Black Lab Development is based in Cincinnati, OH, but works with manufacturers and industrial companies nationwide. The engagement is fully remote-friendly — you work directly with the engineer, not a project manager relay.",
+      },
+    },
+  ],
+};
+
 const painPoints = [
   {
     title: "Your website was built for visibility, not pipeline",
@@ -166,7 +213,7 @@ const strategy = [
 export default function ManufacturingWebsiteDesignPage() {
   return (
     <>
-      <JsonLd data={[breadcrumbSchema, serviceSchema]} />
+      <JsonLd data={[breadcrumbSchema, serviceSchema, faqSchema]} />
       <main className="w-full bg-black text-white">
       <PageHero
         label="Manufacturing Website Design"
