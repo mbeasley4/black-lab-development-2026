@@ -7,7 +7,8 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "vercel-screenshot", allow: "/" },
       {
         userAgent: ["GPTBot", "ClaudeBot", "CCBot", "anthropic-ai", "Google-Extended", "Amazonbot"],
-        disallow: "/",
+        allow: "/",
+        disallow: ["/api/", "/studio/"],
       },
     ],
     sitemap: "https://blacklabdev.com/sitemap.xml",
