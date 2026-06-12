@@ -1,11 +1,24 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import PageClose from "@/components/PageClose";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Custom WordPress Development | Fast, Clean, No Bloat | Black Lab Dev",
   description:
     "Custom WordPress development with clean code, no page builders, and performance-first architecture — built to scale and stay fast long-term.",
+  alternates: { canonical: "/wordpress-development" },
+  openGraph: {
+    title: "Custom WordPress Development | Fast, Clean, No Bloat | Black Lab Dev",
+    description:
+      "Custom WordPress development with clean code, no page builders, and performance-first architecture — built to scale and stay fast long-term.",
+    url: "/wordpress-development",
+  },
+  twitter: {
+    title: "Custom WordPress Development | Fast, Clean, No Bloat | Black Lab Dev",
+    description:
+      "Custom WordPress development with clean code, no page builders, and performance-first architecture — built to scale and stay fast long-term.",
+  },
 };
 
 const services = [
@@ -99,9 +112,23 @@ const performancePoints = [
   { label: "Clean HTML structure", detail: "Semantic markup that search engines and assistive technologies can parse." },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
 export default function WordPressDevelopmentPage() {
   return (
     <main className="w-full bg-[#0b0b0c] text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <PageHero
         label="WordPress Development Agency"
         title="WordPress Development Agency for Custom, High-Performance Websites"
@@ -298,7 +325,7 @@ export default function WordPressDevelopmentPage() {
               </p>
               <div className="mt-8">
                 <Link
-                  href="/website-performance-optimization"
+                  href="/services/website-performance-optimization"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-amber-500 hover:text-amber-400 transition-colors duration-200"
                 >
                   Learn more about performance optimization →
@@ -415,22 +442,22 @@ export default function WordPressDevelopmentPage() {
           <h2 className="text-lg font-bold text-white mb-6">Related Services</h2>
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/shopify-development"
+              href="/services"
               className="rounded-lg border border-amber-500/30 bg-amber-500/8 px-6 py-3 text-sm font-semibold text-amber-400 hover:border-amber-400 hover:bg-amber-500/15 transition-all duration-200"
             >
-              Shopify Development →
+              All Services →
             </Link>
             <Link
-              href="/custom-web-development"
+              href="/services/b2b-website-design"
               className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
             >
-              Custom Web Development →
+              B2B Website Design →
             </Link>
             <Link
-              href="/website-performance-optimization"
+              href="/services/website-performance-optimization"
               className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
             >
-              Website Performance Optimization →
+              Website Performance →
             </Link>
           </div>
         </div>
@@ -440,7 +467,7 @@ export default function WordPressDevelopmentPage() {
         title="Work With a WordPress Development Partner That Builds It Right"
         bodyPrimary="If your current site is slow, hard to manage, or limiting your growth — it's time for a better foundation. We build WordPress sites that perform, scale, and stay maintainable for years."
         bodySecondary="No bloated themes. No page builders. Just clean, performant WordPress built the right way."
-        secondaryHref="/work"
+        secondaryHref="/case-studies"
         secondaryLabel="View Case Studies"
       />
     </main>

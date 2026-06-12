@@ -52,7 +52,7 @@ export default function NotFound() {
               </a>
 
               <a
-                href="/work"
+                href="/case-studies"
                 className="inline-flex items-center justify-center rounded-md border-2 border-amber-500/60 px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold text-white hover:bg-amber-500/10 hover:border-amber-400 transition-all duration-200"
               >
                 View Case Studies

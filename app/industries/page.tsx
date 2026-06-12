@@ -1,11 +1,24 @@
+import type { Metadata } from "next";
 import Image from "next/image"
 import PageHero from "@/components/PageHero"
 import PageClose from "@/components/PageClose"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Web Development for B2B, Manufacturing & Ecommerce | Black Lab Dev",
   description:
     "Industry-specific website development for manufacturing, B2B, and ecommerce brands — built for technical buyers and real business outcomes.",
+  alternates: { canonical: "/industries" },
+  openGraph: {
+    title: "Web Development for B2B, Manufacturing & Ecommerce | Black Lab Dev",
+    description:
+      "Industry-specific website development for manufacturing, B2B, and ecommerce brands — built for technical buyers and real business outcomes.",
+    url: "/industries",
+  },
+  twitter: {
+    title: "Web Development for B2B, Manufacturing & Ecommerce | Black Lab Dev",
+    description:
+      "Industry-specific website development for manufacturing, B2B, and ecommerce brands — built for technical buyers and real business outcomes.",
+  },
 };
 
 const industries = [

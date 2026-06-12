@@ -9,7 +9,7 @@ import { urlFor } from "@/sanity/lib/image";
 import ReadingProgressBar from "@/components/ReadingProgressBar";
 import AnimatedCard from "@/components/AnimatedCard";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 const POST_QUERY = `*[_type == "post" && slug.current == $slug][0] {
   _id,
@@ -136,33 +136,45 @@ export default async function ArticlePage({
     const description = article.metaDescription ?? article.excerpt ?? "";
     const canonicalUrl = `https://blacklabdev.com/articles/${article.slug.current}`;
 
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": article.title,
-        "description": description,
-        "datePublished": article.publishedAt,
-        "dateModified": article._updatedAt ?? article.publishedAt,
-        "wordCount": wordCount,
-        "url": canonicalUrl,
-        ...(article.mainImage && {
-            "image": urlFor(article.mainImage).width(1200).url(),
-        }),
-        "author": {
-            "@type": "Person",
-            "name": article.author?.name ?? "Black Lab Development",
-            "url": article.author?.url ?? "https://blacklabdev.com/about",
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Black Lab Development",
-            "url": "https://blacklabdev.com",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://blacklabdev.com/images/blacklabdevelopment.png",
+    const jsonLd = [
+        {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": article.title,
+            "description": description,
+            "datePublished": article.publishedAt,
+            "dateModified": article._updatedAt ?? article.publishedAt,
+            "wordCount": wordCount,
+            "url": canonicalUrl,
+            ...(article.mainImage && {
+                "image": urlFor(article.mainImage).width(1200).url(),
+            }),
+            "author": {
+                "@type": "Person",
+                "name": article.author?.name ?? "Black Lab Development",
+                "url": article.author?.url ?? "https://blacklabdev.com/about",
+            },
+            "publisher": {
+                "@type": "Organization",
+                "@id": "https://blacklabdev.com/#business",
+                "name": "Black Lab Development",
+                "url": "https://blacklabdev.com",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://blacklabdev.com/images/blacklabdevelopment.png",
+                },
             },
         },
-    };
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://blacklabdev.com" },
+                { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://blacklabdev.com/articles" },
+                { "@type": "ListItem", "position": 3, "name": article.title, "item": canonicalUrl },
+            ],
+        },
+    ];
 
     return (
         <main className="bg-black text-white">

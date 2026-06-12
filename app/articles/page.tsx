@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -23,10 +24,22 @@ const POSTS_QUERY = `*[_type == "post" && defined(slug.current)] | order(publish
 
 const COUNT_QUERY = `count(*[_type == "post" && defined(slug.current)])`;
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Web Development & Performance Articles | Black Lab Dev",
   description:
     "Practical articles on website performance, SEO, conversion optimization, and building websites that actually drive results.",
+  alternates: { canonical: "/articles" },
+  openGraph: {
+    title: "Web Development & Performance Articles | Black Lab Dev",
+    description:
+      "Practical articles on website performance, SEO, conversion optimization, and building websites that actually drive results.",
+    url: "/articles",
+  },
+  twitter: {
+    title: "Web Development & Performance Articles | Black Lab Dev",
+    description:
+      "Practical articles on website performance, SEO, conversion optimization, and building websites that actually drive results.",
+  },
 };
 
 function toPlainText(blocks: { _type: string; children?: { text: string }[] }[]) {
@@ -242,7 +255,7 @@ export default async function ArticlesPage({
         title="The Work That Actually Moves Systems Forward"
         bodyPrimary="Not every problem needs a new stack. Not every engagement needs a full rebuild. Black Lab Development focuses on the work that actually moves systems forward — with clear tradeoffs and practical decisions."
         bodySecondary="If you need a senior engineer who can step into complex systems, identify real issues, and execute effectively, these services are designed for that kind of work."
-        secondaryHref="/work"
+        secondaryHref="/case-studies"
         secondaryLabel="View Work"
       />
     </main>

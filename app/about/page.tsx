@@ -82,7 +82,7 @@ const personSchema = {
     "Pipeline Generation",
     "Lead Generation",
   ],
-  sameAs: [],
+  sameAs: ["https://www.linkedin.com/company/blacklabdevelopment/"],
 };
 
 const values = [

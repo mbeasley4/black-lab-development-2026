@@ -308,7 +308,7 @@ export default function B2BWebsiteDesignPage() {
         title="Ready to Build a Website That Generates Pipeline?"
         bodyPrimary="Start with a website audit. I'll review your current site against the B2B buyer journey and show you exactly where pipeline is leaking — and how to fix it."
         bodySecondary="No proposals to review. No 40-slide decks. Just a direct assessment of what's working, what isn't, and what I'd do about it."
-        secondaryHref="/work"
+        secondaryHref="/case-studies"
         secondaryLabel="View Case Studies"
       />
       </main>

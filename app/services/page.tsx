@@ -454,7 +454,7 @@ export default function ServicesPage() {
         title="No Roadmaps to Nowhere"
         bodyPrimary="Not every problem is a rebuild. Not every slowdown needs a new framework. The best engineering decisions match the actual problem — not the fashionable solution, not the vendor pitch, not whatever worked at the last job."
         bodySecondary="If you want someone who will dig in, tell you what's actually wrong, and do the work — not just draft a proposal — that's what these services are for."
-        secondaryHref="/work"
+        secondaryHref="/case-studies"
         secondaryLabel="View Work"
       />
       </main>

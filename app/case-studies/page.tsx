@@ -1,9 +1,10 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import PageClose from "@/components/PageClose";
 import { client } from "@/sanity/lib/client";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 const CASE_STUDIES_QUERY = `*[_type == "caseStudy"] | order(featured desc, publishedAt desc) {
   _id,
@@ -17,10 +18,22 @@ const CASE_STUDIES_QUERY = `*[_type == "caseStudy"] | order(featured desc, publi
   metrics
 }`;
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Website Case Studies | Real Results | Black Lab Dev",
   description:
     "Real results: more qualified leads, faster load times, higher conversion rates, and better search visibility across B2B and ecommerce sites.",
+  alternates: { canonical: "/case-studies" },
+  openGraph: {
+    title: "Website Case Studies | Real Results | Black Lab Dev",
+    description:
+      "Real results: more qualified leads, faster load times, higher conversion rates, and better search visibility across B2B and ecommerce sites.",
+    url: "/case-studies",
+  },
+  twitter: {
+    title: "Website Case Studies | Real Results | Black Lab Dev",
+    description:
+      "Real results: more qualified leads, faster load times, higher conversion rates, and better search visibility across B2B and ecommerce sites.",
+  },
 };
 
 // TODO: Migrate these into Sanity as caseStudy documents (type: "project")

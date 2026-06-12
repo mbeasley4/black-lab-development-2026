@@ -6,7 +6,7 @@ import Image from "next/image";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 const CASE_STUDY_QUERY = `*[_type == "caseStudy" && slug.current == $slug][0] {
   _id,
@@ -35,6 +35,12 @@ export async function generateMetadata({
   return {
     title: study.seoTitle || `${study.title} | Black Lab Development`,
     description: study.metaDescription || study.excerpt || "",
+    alternates: { canonical: `https://blacklabdev.com/case-studies/${slug}` },
+    openGraph: {
+      title: study.seoTitle || `${study.title} | Black Lab Development`,
+      description: study.metaDescription || study.excerpt || "",
+      url: `https://blacklabdev.com/case-studies/${slug}`,
+    },
   };
 }
 
@@ -55,9 +61,50 @@ export default async function CaseStudyPage({
   if (!study) return notFound();
 
   const heroMetrics = study.metrics?.slice(0, 3) ?? [];
+  const canonicalUrl = `https://blacklabdev.com/case-studies/${study.slug.current}`;
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: study.title,
+    description: study.excerpt || "",
+    datePublished: study.publishedAt,
+    url: canonicalUrl,
+    mainEntityOfPage: canonicalUrl,
+    ...(study.mainImage && {
+      image: urlFor(study.mainImage).width(1200).url(),
+    }),
+    author: {
+      "@type": "Person",
+      name: "Michael Beasley",
+      url: "https://blacklabdev.com/about",
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": "https://blacklabdev.com/#business",
+      name: "Black Lab Development",
+      url: "https://blacklabdev.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://blacklabdev.com/images/blacklabdevelopment.png",
+      },
+    },
+    about: study.industry || undefined,
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://blacklabdev.com" },
+      { "@type": "ListItem", position: 2, name: "Case Studies", item: "https://blacklabdev.com/case-studies" },
+      { "@type": "ListItem", position: 3, name: study.title, item: canonicalUrl },
+    ],
+  };
 
   return (
     <main className="w-full bg-[#0b0b0c] text-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema]) }} />
       {/* ─── HERO ─────────────────────────────────────── */}
       <section className="relative overflow-hidden border-b border-amber-500/20 bg-[#0b0b0c]">
         {/* Ambient glows */}
