@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { inter, interTight } from "./fonts";
 import Header from "@/components/Header";
@@ -31,6 +31,13 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
   },
+};
+
+// Drives the <meta name="theme-color"> tag — controls mobile browser chrome
+// color to match the site's near-black background for a cohesive brand feel.
+export const viewport: Viewport = {
+  themeColor: "#0b0b0c",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({

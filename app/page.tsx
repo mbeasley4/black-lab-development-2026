@@ -46,7 +46,6 @@ const organizationSchema = {
   telephone: "+15135204362",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Cincinnati",
     addressLocality: "Cincinnati",
     addressRegion: "OH",
     postalCode: "45202",
@@ -143,8 +142,11 @@ const organizationSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": "https://blacklabdev.com/#website",
   name: "Black Lab Development",
   url: "https://blacklabdev.com",
+  publisher: { "@type": "Organization", "@id": "https://blacklabdev.com/#business" },
+  inLanguage: "en-US",
 };
 
 const faqSchema = {

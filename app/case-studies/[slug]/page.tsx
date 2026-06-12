@@ -10,6 +10,7 @@ export const revalidate = 3600;
 
 const CASE_STUDY_QUERY = `*[_type == "caseStudy" && slug.current == $slug][0] {
   _id,
+  _updatedAt,
   title,
   slug,
   clientName,
@@ -32,14 +33,33 @@ export async function generateMetadata({
   const { slug } = await params;
   const study = await client.fetch(CASE_STUDY_QUERY, { slug });
   if (!study) return { title: "Case Study | Black Lab Development" };
+  const canonical = `https://blacklabdev.com/case-studies/${slug}`;
+  const title = study.seoTitle || `${study.title} | Black Lab Development`;
+  const description = study.metaDescription || study.excerpt || "";
+  // Per-case-study social card from its own mainImage; falls back to the
+  // site-wide default OG image (set in the root layout) when absent.
+  const ogImage = study.mainImage
+    ? urlFor(study.mainImage).width(1200).height(630).fit("crop").url()
+    : undefined;
+
   return {
-    title: study.seoTitle || `${study.title} | Black Lab Development`,
-    description: study.metaDescription || study.excerpt || "",
-    alternates: { canonical: `https://blacklabdev.com/case-studies/${slug}` },
+    title,
+    description,
+    alternates: { canonical },
     openGraph: {
-      title: study.seoTitle || `${study.title} | Black Lab Development`,
-      description: study.metaDescription || study.excerpt || "",
-      url: `https://blacklabdev.com/case-studies/${slug}`,
+      type: "article",
+      title,
+      description,
+      url: canonical,
+      ...(ogImage && {
+        images: [{ url: ogImage, width: 1200, height: 630, alt: study.title }],
+      }),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      ...(ogImage && { images: [ogImage] }),
     },
   };
 }
@@ -69,8 +89,10 @@ export default async function CaseStudyPage({
     headline: study.title,
     description: study.excerpt || "",
     datePublished: study.publishedAt,
+    dateModified: study._updatedAt ?? study.publishedAt,
+    inLanguage: "en-US",
     url: canonicalUrl,
-    mainEntityOfPage: canonicalUrl,
+    mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
     ...(study.mainImage && {
       image: urlFor(study.mainImage).width(1200).url(),
     }),

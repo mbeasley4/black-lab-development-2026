@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import PageClose from "@/components/PageClose";
+import JsonLd from "@/components/JsonLd";
 import { client } from "@/sanity/lib/client";
 
 export const revalidate = 3600;
@@ -230,8 +231,40 @@ const projects = [
 export default async function CaseStudiesPage() {
   const caseStudies = await client.fetch(CASE_STUDIES_QUERY);
 
+  // CollectionPage + ItemList exposes the case-study set as a structured,
+  // ordered list for rich results and AI answer engines.
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Website Case Studies",
+    description:
+      "Real results: more qualified leads, faster load times, higher conversion rates, and better search visibility across B2B and ecommerce sites.",
+    url: "https://blacklabdev.com/case-studies",
+    isPartOf: { "@type": "WebSite", "@id": "https://blacklabdev.com/#website", name: "Black Lab Development", url: "https://blacklabdev.com" },
+    publisher: { "@type": "Organization", "@id": "https://blacklabdev.com/#business" },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: caseStudies.map((study: any, i: number) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `https://blacklabdev.com/case-studies/${study.slug?.current}`,
+        name: study.title,
+      })),
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://blacklabdev.com" },
+      { "@type": "ListItem", position: 2, name: "Case Studies", item: "https://blacklabdev.com/case-studies" },
+    ],
+  };
+
   return (
     <main className="w-full bg-[#0b0b0c] text-white">
+      <JsonLd data={[collectionSchema, breadcrumbSchema]} />
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden border-b border-amber-500/20">

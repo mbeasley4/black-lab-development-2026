@@ -8,6 +8,7 @@ import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { SanityDocument } from "next-sanity";
 import PageClose from "@/components/PageClose";
+import JsonLd from "@/components/JsonLd";
 
 export const dynamic = "force-dynamic";
 
@@ -157,8 +158,43 @@ export default async function ArticlesPage({
 
   const totalPages = Math.ceil(total / PAGE_SIZE);
 
+  // CollectionPage describes the listing; the nested Blog + ItemList give crawlers
+  // and AI engines an explicit, ordered map of the posts on this page.
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Web Development & Performance Articles",
+    description:
+      "Practical articles on website performance, SEO, conversion optimization, and building websites that actually drive results.",
+    url: "https://blacklabdev.com/articles",
+    isPartOf: { "@type": "WebSite", "@id": "https://blacklabdev.com/#website", name: "Black Lab Development", url: "https://blacklabdev.com" },
+    publisher: { "@type": "Organization", "@id": "https://blacklabdev.com/#business" },
+    mainEntity: {
+      "@type": "Blog",
+      name: "Black Lab Development Articles",
+      url: "https://blacklabdev.com/articles",
+      blogPost: articles.map((a) => ({
+        "@type": "BlogPosting",
+        headline: a.title,
+        url: `https://blacklabdev.com/articles/${a.slug.current}`,
+        ...(a.publishedAt && { datePublished: a.publishedAt }),
+        ...(a.mainImage && { image: urlFor(a.mainImage).width(1200).url() }),
+      })),
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://blacklabdev.com" },
+      { "@type": "ListItem", position: 2, name: "Articles", item: "https://blacklabdev.com/articles" },
+    ],
+  };
+
   return (
     <main className="w-full bg-[#0b0b0c] text-white">
+      <JsonLd data={[collectionSchema, breadcrumbSchema]} />
       {/* HERO */}
       <PageHero
         label="Articles"

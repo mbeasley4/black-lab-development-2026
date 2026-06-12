@@ -61,11 +61,35 @@ export async function generateMetadata({
       "Technical article from Black Lab Development on web engineering, performance, and platform architecture.";
   }
 
+  const canonical = `https://blacklabdev.com/articles/${slug}`;
+  // Use the article's own mainImage as the social share card so each post
+  // gets a unique OG/Twitter image instead of falling back to the site default.
+  const ogImage = article.mainImage
+    ? urlFor(article.mainImage).width(1200).height(630).fit("crop").url()
+    : undefined;
+
   return {
     title,
     description,
     alternates: {
-      canonical: `https://blacklabdev.com/articles/${slug}`,
+      canonical,
+    },
+    openGraph: {
+      type: "article",
+      title,
+      description,
+      url: canonical,
+      publishedTime: article.publishedAt ?? undefined,
+      authors: [article.author?.url ?? "https://blacklabdev.com/about"],
+      ...(ogImage && {
+        images: [{ url: ogImage, width: 1200, height: 630, alt: article.title }],
+      }),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      ...(ogImage && { images: [ogImage] }),
     },
   };
 }
@@ -136,6 +160,24 @@ export default async function ArticlePage({
     const description = article.metaDescription ?? article.excerpt ?? "";
     const canonicalUrl = `https://blacklabdev.com/articles/${article.slug.current}`;
 
+    // For the visible byline we want an internal, client-side navigation. The
+    // stored author URL is an absolute blacklabdev.com URL (used as-is in the
+    // structured data / OG tags), so collapse it to a same-origin pathname here
+    // and fall back to /about.
+    const authorHref = (() => {
+        const url = article.author?.url;
+        if (!url) return "/about";
+        try {
+            const parsed = new URL(url);
+            if (parsed.hostname.replace(/^www\./, "") === "blacklabdev.com") {
+                return `${parsed.pathname}${parsed.search}${parsed.hash}` || "/about";
+            }
+            return url;
+        } catch {
+            return url.startsWith("/") ? url : "/about";
+        }
+    })();
+
     const jsonLd = [
         {
             "@context": "https://schema.org",
@@ -145,7 +187,9 @@ export default async function ArticlePage({
             "datePublished": article.publishedAt,
             "dateModified": article._updatedAt ?? article.publishedAt,
             "wordCount": wordCount,
+            "inLanguage": "en-US",
             "url": canonicalUrl,
+            "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
             ...(article.mainImage && {
                 "image": urlFor(article.mainImage).width(1200).url(),
             }),
@@ -227,7 +271,15 @@ export default async function ArticlePage({
                                 {article.author?.name && (
                                     <>
                                         <span className="text-cyan-500/40">·</span>
-                                        <span>by {article.author.name}</span>
+                                        <span>
+                                            by{" "}
+                                            <Link
+                                                href={authorHref}
+                                                className="rounded-sm underline decoration-transparent underline-offset-2 transition-colors duration-200 hover:text-neutral-200 hover:decoration-current focus-visible:text-neutral-200 focus-visible:decoration-current focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/50"
+                                            >
+                                                {article.author.name}
+                                            </Link>
+                                        </span>
                                     </>
                                 )}
                                 {readTime > 0 && (
