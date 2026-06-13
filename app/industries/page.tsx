@@ -3,6 +3,7 @@ import Image from "next/image"
 import PageHero from "@/components/PageHero"
 import PageClose from "@/components/PageClose"
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Web Development for B2B, Manufacturing & Ecommerce | Black Lab Dev",
@@ -117,9 +118,28 @@ const industries = [
   },
 ];
 
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://blacklabdev.com/industries#webpage",
+  name: "Web Development for B2B, Manufacturing & Ecommerce",
+  url: "https://blacklabdev.com/industries",
+  description:
+    "Industry-specific website development for manufacturing, B2B, and ecommerce brands — built for technical buyers and real business outcomes.",
+  publisher: { "@type": "Organization", "@id": "https://blacklabdev.com/#business" },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://blacklabdev.com" },
+      { "@type": "ListItem", position: 2, name: "Industries", item: "https://blacklabdev.com/industries" },
+    ],
+  },
+};
+
 export default function IndustriesPage() {
   return (
     <main className="w-full bg-[#0b0b0c] text-white">
+      <JsonLd data={webPageSchema} />
       {/* ================= HERO ================= */}
       <PageHero
         label="Industries"

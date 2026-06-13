@@ -6,6 +6,7 @@ import Image from "next/image";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
+import JsonLd from "@/components/JsonLd";
 
 export const revalidate = 3600;
 
@@ -123,7 +124,7 @@ export default async function CaseStudyPage({
 
   return (
     <main className="w-full bg-[#0b0b0c] text-white">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema]) }} />
+      <JsonLd data={[articleSchema, breadcrumbSchema]} />
       {/* ─── HERO ─────────────────────────────────────── */}
       <section className="relative overflow-hidden border-b border-amber-500/20 bg-[#0b0b0c]">
         {/* Ambient glows */}

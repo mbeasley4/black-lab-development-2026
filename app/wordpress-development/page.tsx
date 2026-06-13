@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import PageClose from "@/components/PageClose";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Custom WordPress Development | Fast, Clean, No Bloat | Black Lab Dev",
@@ -115,6 +116,19 @@ const performancePoints = [
   { label: "Clean HTML structure", detail: "Semantic markup that search engines and assistive technologies can parse." },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://blacklabdev.com/wordpress-development#service",
+  name: "Custom WordPress Development",
+  url: "https://blacklabdev.com/wordpress-development",
+  description:
+    "Custom WordPress development with clean code, no page builders, and performance-first architecture — built to scale and stay fast long-term.",
+  provider: { "@type": "Organization", "@id": "https://blacklabdev.com/#business" },
+  areaServed: { "@type": "Country", name: "United States" },
+  serviceType: "WordPress Development",
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -128,10 +142,7 @@ const faqSchema = {
 export default function WordPressDevelopmentPage() {
   return (
     <main className="w-full bg-[#0b0b0c] text-white">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <JsonLd data={[serviceSchema, faqSchema]} />
       <PageHero
         label="WordPress Development Agency"
         title="WordPress Development Agency for Custom, High-Performance Websites"

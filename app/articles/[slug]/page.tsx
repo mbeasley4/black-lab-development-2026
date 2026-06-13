@@ -9,6 +9,7 @@ import { urlFor } from "@/sanity/lib/image";
 import ReadingProgressBar from "@/components/ReadingProgressBar";
 import AnimatedCard from "@/components/AnimatedCard";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
+import JsonLd from "@/components/JsonLd";
 
 export const revalidate = 3600;
 
@@ -219,10 +220,7 @@ export default async function ArticlePage({
 
     return (
         <main className="bg-black text-white">
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
+            <JsonLd data={jsonLd} />
             <ReadingProgressBar />
 
             {/* ================= CINEMATIC HERO ================= */}
