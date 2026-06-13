@@ -15,9 +15,9 @@ export default function ProofStats() {
     return (
         <section className="w-full bg-black text-white py-14 border-t border-amber-500/10 border-b border-b-slate-800/60">
             <div className="mx-auto max-w-375 px-6 text-center">
-                <p className="text-xs uppercase tracking-[0.28em] text-slate-500 mb-10">
-                    Built for teams that expect their website to actually perform
-                </p>
+                <h2 className="text-md uppercase tracking-[0.28em] text-slate-500 mb-10">
+                    Trusted by growing businesses and organizations
+                </h2>
                 <div className="flex flex-wrap items-center justify-center gap-8 md:gap-14">
                     {logos.map((logo) => (
                         <div
