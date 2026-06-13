@@ -5,6 +5,7 @@ import PageClose from "@/components/PageClose";
 import QuickAnswerBlock from "@/components/QuickAnswerBlock";
 import LabFramework from "@/components/LabFramework";
 import JsonLd from "@/components/JsonLd";
+import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
   title: "Custom Web Development | Next.js, Headless & WordPress | Black Lab Dev",
@@ -16,11 +17,13 @@ export const metadata: Metadata = {
     description:
       "Bespoke web development in Next.js, headless CMS, and WordPress. Built for businesses that have outgrown templates — clean architecture, no bloat, built to last.",
     url: "/services/custom-web-development",
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     title: "Custom Web Development | Next.js, Headless & WordPress | Black Lab Dev",
     description:
       "Bespoke web development in Next.js, headless CMS, and WordPress — built for businesses that have outgrown templates.",
+    images: [DEFAULT_OG_IMAGE.url],
   },
 };
 

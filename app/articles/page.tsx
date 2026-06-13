@@ -9,6 +9,7 @@ import { urlFor } from "@/sanity/lib/image";
 import { SanityDocument } from "next-sanity";
 import PageClose from "@/components/PageClose";
 import JsonLd from "@/components/JsonLd";
+import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const dynamic = "force-dynamic";
 
@@ -35,11 +36,13 @@ export const metadata: Metadata = {
     description:
       "Practical articles on website performance, SEO, conversion optimization, and building websites that actually drive results.",
     url: "/articles",
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     title: "Web Development & Performance Articles | Black Lab Dev",
     description:
       "Practical articles on website performance, SEO, conversion optimization, and building websites that actually drive results.",
+    images: [DEFAULT_OG_IMAGE.url],
   },
 };
 

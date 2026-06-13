@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import PageClose from "@/components/PageClose";
 import JsonLd from "@/components/JsonLd";
+import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
   title: "Cincinnati Web Developer | B2B & Manufacturing Websites | Black Lab Dev",
@@ -14,11 +15,13 @@ export const metadata: Metadata = {
     description:
       "Cincinnati-based web developer specializing in B2B and manufacturing websites. Michael Beasley — 15+ years building revenue-focused platforms for Ohio and Tri-State companies.",
     url: "/cincinnati-web-developer",
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     title: "Cincinnati Web Developer | B2B & Manufacturing Websites | Black Lab Dev",
     description:
       "Cincinnati-based web developer specializing in B2B and manufacturing websites — 15+ years building revenue-focused platforms.",
+    images: [DEFAULT_OG_IMAGE.url],
   },
 };
 

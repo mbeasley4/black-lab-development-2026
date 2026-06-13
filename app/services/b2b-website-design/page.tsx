@@ -5,6 +5,7 @@ import PageClose from "@/components/PageClose";
 import QuickAnswerBlock from "@/components/QuickAnswerBlock";
 import LabFramework from "@/components/LabFramework";
 import JsonLd from "@/components/JsonLd";
+import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
   title: "B2B Website Design | Built for Complex Buyers & Long Sales Cycles",
@@ -16,11 +17,13 @@ export const metadata: Metadata = {
     description:
       "Custom B2B website design built for technical buyers, complex buying decisions, and higher-quality lead generation — no bloated builders, no shortcuts.",
     url: "/services/b2b-website-design",
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     title: "B2B Website Design | Built for Complex Buyers & Long Sales Cycles",
     description:
       "Custom B2B website design built for technical buyers, complex buying decisions, and higher-quality lead generation.",
+    images: [DEFAULT_OG_IMAGE.url],
   },
 };
 

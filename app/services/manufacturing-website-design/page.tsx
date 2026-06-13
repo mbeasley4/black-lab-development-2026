@@ -6,6 +6,7 @@ import PageClose from "@/components/PageClose";
 import QuickAnswerBlock from "@/components/QuickAnswerBlock";
 import LabFramework from "@/components/LabFramework";
 import JsonLd from "@/components/JsonLd";
+import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
   title: "Manufacturing Website Design | Built for Technical Buyers & RFQs",
@@ -17,11 +18,13 @@ export const metadata: Metadata = {
     description:
       "Websites for manufacturers built for engineers and procurement teams. SEO-ready, fast, and structured to generate qualified leads and RFQ submissions.",
     url: "/services/manufacturing-website-design",
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     title: "Manufacturing Website Design | Built for Technical Buyers & RFQs",
     description:
       "Websites for manufacturers built for engineers and procurement teams — structured to generate RFQ submissions.",
+    images: [DEFAULT_OG_IMAGE.url],
   },
 };
 

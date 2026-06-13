@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero"
 import PageClose from "@/components/PageClose"
 import LabFramework from "@/components/LabFramework"
 import JsonLd from "@/components/JsonLd";
+import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
   title: "About Black Lab Dev | Senior Web Developer in Cincinnati, OH",
@@ -16,11 +17,13 @@ export const metadata: Metadata = {
     description:
       "Michael Beasley is a Cincinnati-based senior web developer and founder of Black Lab Development. 15+ years building scalable, revenue-focused platforms for B2B and industrial companies.",
     url: "/about",
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     title: "About Black Lab Dev | Senior Web Developer in Cincinnati, OH",
     description:
       "Michael Beasley is a Cincinnati-based senior web developer and founder of Black Lab Development.",
+    images: [DEFAULT_OG_IMAGE.url],
   },
 };
 

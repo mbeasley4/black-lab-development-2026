@@ -22,14 +22,15 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/homepage-hero-bg.png",
-        width: 1200,
-        height: 630,
+        width: 1554,
+        height: 867,
         alt: "Black Lab Development — B2B Website Design & Pipeline Generation",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/images/homepage-hero-bg.png"],
   },
 };
 

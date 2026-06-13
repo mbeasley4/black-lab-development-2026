@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
+import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const revalidate = 3600;
 
@@ -36,11 +37,9 @@ export async function generateMetadata({
   const canonical = `https://blacklabdev.com/case-studies/${slug}`;
   const title = study.seoTitle || `${study.title} | Black Lab Development`;
   const description = study.metaDescription || study.excerpt || "";
-  // Per-case-study social card from its own mainImage; falls back to the
-  // site-wide default OG image (set in the root layout) when absent.
   const ogImage = study.mainImage
-    ? urlFor(study.mainImage).width(1200).height(630).fit("crop").url()
-    : undefined;
+    ? { url: urlFor(study.mainImage).width(1200).height(630).fit("crop").url(), width: 1200, height: 630, alt: study.title }
+    : DEFAULT_OG_IMAGE;
 
   return {
     title,
@@ -51,15 +50,13 @@ export async function generateMetadata({
       title,
       description,
       url: canonical,
-      ...(ogImage && {
-        images: [{ url: ogImage, width: 1200, height: 630, alt: study.title }],
-      }),
+      images: [ogImage],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      ...(ogImage && { images: [ogImage] }),
+      images: [ogImage.url],
     },
   };
 }

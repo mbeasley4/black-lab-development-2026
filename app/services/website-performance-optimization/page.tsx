@@ -5,6 +5,7 @@ import PageClose from "@/components/PageClose";
 import QuickAnswerBlock from "@/components/QuickAnswerBlock";
 import LabFramework from "@/components/LabFramework";
 import JsonLd from "@/components/JsonLd";
+import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
   title: "Website Performance Optimization & Core Web Vitals | Black Lab Dev",
@@ -16,11 +17,13 @@ export const metadata: Metadata = {
     description:
       "Fix slow load times, failing Core Web Vitals, and technical SEO issues that cost you rankings and revenue. Measurable speed improvements — not Lighthouse theater.",
     url: "/services/website-performance-optimization",
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     title: "Website Performance Optimization & Core Web Vitals | Black Lab Dev",
     description:
       "Fix slow load times, failing Core Web Vitals, and technical SEO issues — measurable improvements, not Lighthouse theater.",
+    images: [DEFAULT_OG_IMAGE.url],
   },
 };
 

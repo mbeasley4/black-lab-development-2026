@@ -5,6 +5,7 @@ import PageClose from "@/components/PageClose";
 import QuickAnswerBlock from "@/components/QuickAnswerBlock";
 import LabFramework from "@/components/LabFramework";
 import JsonLd from "@/components/JsonLd";
+import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
   title: "Website Conversion Optimization | More Leads, Better Results",
@@ -16,11 +17,13 @@ export const metadata: Metadata = {
     description:
       "Fix what's stopping your website from converting. Better structure, clearer messaging, and smarter CTAs — measured before and after with real data.",
     url: "/services/conversion-optimization",
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     title: "Website Conversion Optimization | More Leads, Better Results",
     description:
       "Fix what's stopping your website from converting — measured before and after with real data.",
+    images: [DEFAULT_OG_IMAGE.url],
   },
 };
 

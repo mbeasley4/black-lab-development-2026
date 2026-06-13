@@ -3,6 +3,7 @@ import ContactForm from "@/components/ContactForm"
 import PageClose from "@/components/PageClose";
 import PageHero from "@/components/PageHero"
 import JsonLd from "@/components/JsonLd";
+import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
   title: "Get a Free Website Audit | Black Lab Dev",
@@ -14,11 +15,13 @@ export const metadata: Metadata = {
     description:
       "Ready to make your website work harder? Get a free audit and find out exactly what's holding back your leads, traffic, and conversions.",
     url: "/contact",
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     title: "Get a Free Website Audit | Black Lab Dev",
     description:
       "Get a free website audit from a senior web developer in Cincinnati, OH.",
+    images: [DEFAULT_OG_IMAGE.url],
   },
 };
 

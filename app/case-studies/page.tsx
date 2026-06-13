@@ -4,6 +4,7 @@ import Link from "next/link";
 import PageClose from "@/components/PageClose";
 import JsonLd from "@/components/JsonLd";
 import { client } from "@/sanity/lib/client";
+import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const revalidate = 3600;
 
@@ -29,11 +30,13 @@ export const metadata: Metadata = {
     description:
       "Real results: more qualified leads, faster load times, higher conversion rates, and better search visibility across B2B and ecommerce sites.",
     url: "/case-studies",
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     title: "Website Case Studies | Real Results | Black Lab Dev",
     description:
       "Real results: more qualified leads, faster load times, higher conversion rates, and better search visibility across B2B and ecommerce sites.",
+    images: [DEFAULT_OG_IMAGE.url],
   },
 };
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import PageClose from "@/components/PageClose";
+import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
   title: "Custom WordPress Development | Fast, Clean, No Bloat | Black Lab Dev",
@@ -13,11 +14,13 @@ export const metadata: Metadata = {
     description:
       "Custom WordPress development with clean code, no page builders, and performance-first architecture — built to scale and stay fast long-term.",
     url: "/wordpress-development",
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     title: "Custom WordPress Development | Fast, Clean, No Bloat | Black Lab Dev",
     description:
       "Custom WordPress development with clean code, no page builders, and performance-first architecture — built to scale and stay fast long-term.",
+    images: [DEFAULT_OG_IMAGE.url],
   },
 };
 

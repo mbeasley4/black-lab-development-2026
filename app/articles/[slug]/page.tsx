@@ -8,6 +8,7 @@ import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import ReadingProgressBar from "@/components/ReadingProgressBar";
 import AnimatedCard from "@/components/AnimatedCard";
+import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const revalidate = 3600;
 
@@ -62,11 +63,9 @@ export async function generateMetadata({
   }
 
   const canonical = `https://blacklabdev.com/articles/${slug}`;
-  // Use the article's own mainImage as the social share card so each post
-  // gets a unique OG/Twitter image instead of falling back to the site default.
   const ogImage = article.mainImage
-    ? urlFor(article.mainImage).width(1200).height(630).fit("crop").url()
-    : undefined;
+    ? { url: urlFor(article.mainImage).width(1200).height(630).fit("crop").url(), width: 1200, height: 630, alt: article.title }
+    : DEFAULT_OG_IMAGE;
 
   return {
     title,
@@ -81,15 +80,13 @@ export async function generateMetadata({
       url: canonical,
       publishedTime: article.publishedAt ?? undefined,
       authors: [article.author?.url ?? "https://blacklabdev.com/about"],
-      ...(ogImage && {
-        images: [{ url: ogImage, width: 1200, height: 630, alt: article.title }],
-      }),
+      images: [ogImage],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      ...(ogImage && { images: [ogImage] }),
+      images: [ogImage.url],
     },
   };
 }

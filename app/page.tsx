@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import HomepageHero from "@/components/HomepageHero";
 import ProofStats from "@/components/ProofStats";
 import RevenueFramework from "@/components/RevenueFramework";
@@ -24,11 +25,13 @@ export const metadata: Metadata = {
     description:
       "Fast, scalable websites built to convert. Whether you're generating leads, driving sales, or supporting growth — we build websites that actually do their job.",
     url: "/",
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     title: "B2B Website Design & Pipeline Generation | Black Lab Dev",
     description:
       "Fast, scalable websites built to convert. Whether you're generating leads, driving sales, or supporting growth — we build websites that actually do their job.",
+    images: [DEFAULT_OG_IMAGE.url],
   },
 };
 

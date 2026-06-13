@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image"
 import PageHero from "@/components/PageHero"
 import PageClose from "@/components/PageClose"
+import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
   title: "Web Development for B2B, Manufacturing & Ecommerce | Black Lab Dev",
@@ -13,11 +14,13 @@ export const metadata: Metadata = {
     description:
       "Industry-specific website development for manufacturing, B2B, and ecommerce brands — built for technical buyers and real business outcomes.",
     url: "/industries",
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     title: "Web Development for B2B, Manufacturing & Ecommerce | Black Lab Dev",
     description:
       "Industry-specific website development for manufacturing, B2B, and ecommerce brands — built for technical buyers and real business outcomes.",
+    images: [DEFAULT_OG_IMAGE.url],
   },
 };
 
