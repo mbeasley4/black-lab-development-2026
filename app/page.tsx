@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import HomepageHero from "@/components/HomepageHero";
 import ProofStats from "@/components/ProofStats";
 import RevenueFramework from "@/components/RevenueFramework";
@@ -6,6 +7,7 @@ import Differentiation from "@/components/Differentiation";
 import CoreServices from "@/components/CoreServices";
 import Results from "@/components/Results";
 import Process from "@/components/Process";
+import LabFramework from "@/components/LabFramework";
 import PositioningStrike from "@/components/PositioningStrike";
 import CallToAction from "@/components/CallToAction";
 import JsonLd from "@/components/JsonLd";
@@ -216,6 +218,38 @@ export default function Home() {
         <CoreServices />
         <Results />
         <Process />
+        <LabFramework />
+
+        {/* FAQ section — AI-extractable, structured for answer engines */}
+        <section className="w-full py-24 border-t border-slate-800/60 bg-black" aria-labelledby="faq-heading">
+          <div className="mx-auto max-w-375 px-6">
+            <div className="max-w-2xl mb-14">
+              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+                Common Questions
+              </span>
+              <h2 id="faq-heading" className="text-3xl md:text-4xl font-bold text-white">
+                Frequently Asked Questions
+              </h2>
+            </div>
+            <div className="max-w-3xl space-y-4">
+              {faqSchema.mainEntity.map((faq) => (
+                <div key={faq.name} className="rounded-xl border border-slate-800 bg-slate-900/50 p-7">
+                  <h3 className="text-base font-semibold text-white mb-3">{faq.name}</h3>
+                  <p className="text-sm text-slate-400 leading-relaxed">{faq.acceptedAnswer.text}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-10">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-md bg-cyan-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-cyan-400 transition-colors duration-200 shadow-lg shadow-cyan-500/25"
+              >
+                Start with a Free Audit →
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <PositioningStrike />
         <CallToAction />
       </div>

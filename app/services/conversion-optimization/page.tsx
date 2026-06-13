@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import PageClose from "@/components/PageClose";
+import QuickAnswerBlock from "@/components/QuickAnswerBlock";
+import LabFramework from "@/components/LabFramework";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
@@ -74,6 +76,22 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "Success is measured in qualified leads and pipeline — not just raw conversion rate or traffic. Conversion tracking is set up before any changes go live, giving a clear before/after baseline. A/B tests run on headlines, CTAs, page layouts, and form designs to attribute specific lift to specific changes.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does conversion optimization cost?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A focused conversion audit engagement runs $1,500–$3,500 and produces a prioritized findings report with specific recommendations. Full implementation — messaging rewrites, CTA redesigns, form rebuilds, and A/B testing setup — typically ranges from $4,000 to $12,000 depending on scope. Engagements start with the audit so you know what you're paying to fix before committing to the implementation.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Who needs conversion optimization?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Any B2B company getting traffic but not generating qualified leads. The most common candidates are businesses spending on SEO or ads without proportional pipeline growth, companies whose sales team says leads are low-quality or poorly qualified, and organizations whose service pages get views but rarely produce inquiries. If you have traffic and no conversions, the problem is almost always conversion architecture — not traffic volume.",
       },
     },
   ],
@@ -191,6 +209,11 @@ export default function ConversionOptimizationPage() {
         badges={["Audit-first approach", "Measured before & after", "No vanity metrics"]}
       />
 
+      <QuickAnswerBlock
+        question="What is website conversion optimization?"
+        answer="Website conversion optimization is the process of diagnosing and fixing why a website isn't generating qualified leads or revenue. It starts with a data-driven audit of analytics, heatmaps, and session recordings to identify exactly where buyers drop off. Fixes include messaging alignment against buyer personas, UX friction removal, CTA and form redesigns, and structured A/B testing — measured in qualified lead volume, not vanity metrics."
+      />
+
       {/* The core problem */}
       <section className="py-20 border-b border-slate-800">
         <div className="mx-auto max-w-375 px-6">
@@ -224,7 +247,7 @@ export default function ConversionOptimizationPage() {
                   "Trust signals buried 3 scrolls below the fold",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-slate-400">
-                    <svg className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-5 h-5 text-red-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
                     {item}
@@ -332,6 +355,28 @@ export default function ConversionOptimizationPage() {
           <p className="text-xs text-slate-600 mt-4 text-center">
             Metrics represent client results. Individual results vary based on current site state, industry, and traffic volume.
           </p>
+        </div>
+      </section>
+
+      <LabFramework />
+
+      {/* FAQ section */}
+      <section className="py-20 border-b border-slate-800" aria-labelledby="cro-faq-heading">
+        <div className="mx-auto max-w-375 px-6">
+          <div className="max-w-2xl mb-12">
+            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+              Common Questions
+            </span>
+            <h2 id="cro-faq-heading" className="text-3xl font-bold text-white">Frequently Asked Questions</h2>
+          </div>
+          <div className="max-w-3xl space-y-4">
+            {faqSchema.mainEntity.map((faq) => (
+              <div key={faq.name} className="rounded-xl border border-slate-800 bg-slate-900/50 p-7">
+                <h3 className="text-base font-semibold text-white mb-3">{faq.name}</h3>
+                <p className="text-sm text-slate-400 leading-relaxed">{faq.acceptedAnswer.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

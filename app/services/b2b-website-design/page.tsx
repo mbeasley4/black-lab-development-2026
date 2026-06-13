@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import PageClose from "@/components/PageClose";
+import QuickAnswerBlock from "@/components/QuickAnswerBlock";
+import LabFramework from "@/components/LabFramework";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
@@ -74,6 +76,22 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "Yes. Black Lab Development is based in Cincinnati, OH, but works with B2B companies across the United States. The engagement is fully remote-friendly — you work directly with the engineer, not a project manager relay.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does B2B website design cost?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "B2B website design engagements at Black Lab Development typically range from $8,000 to $35,000 depending on scope, content complexity, and integration requirements. The investment starts with a free website audit so you know exactly what you're getting and why before committing to anything.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does a B2B website redesign take?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most B2B website redesigns run 8–14 weeks from signed contract to launch. Timeline depends on content readiness, stakeholder review cycles, and integration complexity. Every project starts with a clear timeline scoped before work begins — no surprises discovered mid-build.",
       },
     },
   ],
@@ -171,6 +189,11 @@ export default function B2BWebsiteDesignPage() {
         description="B2B buyers are skeptical, slow, and involve multiple people. I build websites that work for all of them — with conversion architecture engineered for long sales cycles and complex decisions."
         backgroundImage="/images/services-hero-bg.png"
         badges={["Long sales cycles", "Multi-stakeholder design", "Pipeline-focused"]}
+      />
+
+      <QuickAnswerBlock
+        question="What is B2B website design?"
+        answer="B2B website design is the process of building websites optimized for long sales cycles, multiple stakeholders, and complex buying decisions. Unlike consumer websites, B2B sites must earn trust over 3–9 months across 6–8 decision-makers with different roles, questions, and objections. An effective B2B website converts technical evaluators, economic buyers, and internal champions simultaneously — with conversion architecture engineered for how B2B buyers actually evaluate vendors."
       />
 
       {/* What makes B2B different */}
@@ -277,7 +300,7 @@ export default function B2BWebsiteDesignPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-800/40 rounded-2xl overflow-hidden border border-slate-700/40">
             {results.map((r) => (
               <div key={r.label} className="bg-slate-900 px-10 py-10 text-center">
-                <div className="text-5xl font-black bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">{r.metric}</div>
+                <div className="text-5xl font-black bg-linear-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">{r.metric}</div>
                 <div className="text-lg font-semibold text-white mb-2">{r.label}</div>
                 <div className="text-sm text-slate-400">{r.detail}</div>
               </div>
@@ -286,6 +309,28 @@ export default function B2BWebsiteDesignPage() {
           <p className="text-xs text-slate-600 mt-4 text-center">
             Metrics represent client results across B2B redesign engagements. Individual results vary.
           </p>
+        </div>
+      </section>
+
+      <LabFramework />
+
+      {/* FAQ section */}
+      <section className="py-20 border-b border-slate-800" aria-labelledby="b2b-faq-heading">
+        <div className="mx-auto max-w-375 px-6">
+          <div className="max-w-2xl mb-12">
+            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+              Common Questions
+            </span>
+            <h2 id="b2b-faq-heading" className="text-3xl font-bold text-white">Frequently Asked Questions</h2>
+          </div>
+          <div className="max-w-3xl space-y-4">
+            {faqSchema.mainEntity.map((faq) => (
+              <div key={faq.name} className="rounded-xl border border-slate-800 bg-slate-900/50 p-7">
+                <h3 className="text-base font-semibold text-white mb-3">{faq.name}</h3>
+                <p className="text-sm text-slate-400 leading-relaxed">{faq.acceptedAnswer.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

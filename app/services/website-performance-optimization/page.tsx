@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import PageClose from "@/components/PageClose";
+import QuickAnswerBlock from "@/components/QuickAnswerBlock";
+import LabFramework from "@/components/LabFramework";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
@@ -100,6 +102,22 @@ const faqSchema = {
         text: "Yes, directly. Google's own research shows that a 1-second improvement in mobile load time increases conversion rates by up to 27%. For B2B sites, where buyers are evaluating multiple vendors, a slow site is a signal of broader organizational competence. Across performance engagements, the clients who see the biggest conversion lifts are the ones where speed was the primary friction — buyers were leaving before the page finished loading.",
       },
     },
+    {
+      "@type": "Question",
+      name: "How long does website performance optimization take?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A focused performance audit takes 3–5 business days and produces a prioritized list of root causes and recommended fixes. Implementation of identified issues typically runs 2–6 weeks depending on the number of root causes and whether platform changes are required. Results in Core Web Vitals data are measurable within 28 days of changes going live, which is how long Google's CrUX data takes to reflect field improvements.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What businesses need website performance optimization?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Any business where website speed directly affects revenue — eCommerce stores losing sales to abandoned carts, B2B companies where a slow site signals incompetence to technical buyers, or any site seeing declining organic rankings due to poor Core Web Vitals. Sites built on Elementor, Divi, WPBakery, or other page builders are the most common candidates, as those platforms generate excessive markup and JavaScript that's hard to optimize without a rebuild.",
+      },
+    },
   ],
 };
 
@@ -156,6 +174,11 @@ export default function WebsitePerformanceOptimizationPage() {
           description="I fix the root causes of slow load times, failing Core Web Vitals, and technical SEO issues that cost you rankings and revenue — measured before and after, not guessed at."
           backgroundImage="/images/services-hero-bg.png"
           badges={["Core Web Vitals", "Real-user performance", "Not Lighthouse theater"]}
+        />
+
+        <QuickAnswerBlock
+          question="What is website performance optimization?"
+          answer="Website performance optimization is the process of diagnosing and fixing technical issues that slow page load times, harm Core Web Vitals scores, and reduce search rankings. It targets root causes — unoptimized images, render-blocking scripts, excessive JavaScript bundles, missing caching headers, and slow server response times — measured against real-user data from Google's Chrome User Experience Report (CrUX), not lab simulations. A 1-second improvement in mobile load time increases conversion rates by up to 27%."
         />
 
         {/* Hero CTAs */}
@@ -331,6 +354,8 @@ export default function WebsitePerformanceOptimizationPage() {
             </div>
           </div>
         </section>
+
+        <LabFramework />
 
         {/* Related */}
         <section className="py-16 border-b border-slate-800">

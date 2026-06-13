@@ -3,6 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import PageClose from "@/components/PageClose";
+import QuickAnswerBlock from "@/components/QuickAnswerBlock";
+import LabFramework from "@/components/LabFramework";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
@@ -101,6 +103,22 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "Yes. Black Lab Development is based in Cincinnati, OH, but works with manufacturers and industrial companies nationwide. The engagement is fully remote-friendly — you work directly with the engineer, not a project manager relay.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does a manufacturing website cost?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Manufacturing website projects at Black Lab Development typically range from $10,000 to $40,000 depending on the number of capability pages, content complexity, RFQ workflow requirements, and integration needs (ERP, distributor portals, CAD file downloads). Engagements start with a free audit of your current site so scope and pricing are grounded in what you actually need, not a templated package.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does a manufacturing website take to build?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most manufacturing website builds run 8–16 weeks from signed contract to launch. The timeline is driven by the number of capability and industry pages that need technical content written, stakeholder review cycles, and any custom RFQ or integration work. A clear project timeline is scoped before work begins — manufacturing buyers expect partners who deliver on time.",
       },
     },
   ],
@@ -224,6 +242,11 @@ export default function ManufacturingWebsiteDesignPage() {
         badges={["Built for engineers", "RFQ-optimized", "Industry-specific SEO"]}
       />
 
+      <QuickAnswerBlock
+        question="What is manufacturing website design?"
+        answer="Manufacturing website design is the process of building websites specifically for manufacturers that need to generate RFQ submissions from engineers, procurement managers, and operations leads. It requires technical content architecture surfacing certifications, tolerances, materials, and lead times quickly — alongside buyer-specific information pathways, industry-focused SEO targeting buyer-intent searches, and low-friction RFQ forms. Generic B2B templates fail manufacturing buyers because they don't surface technical specifications fast enough."
+      />
+
       {/* Pain points */}
       <section className="py-20 border-b border-slate-800">
         <div className="mx-auto max-w-375 px-6">
@@ -284,7 +307,7 @@ export default function ManufacturingWebsiteDesignPage() {
                   <ul className="space-y-2">
                     {buyer.needs.map((need) => (
                       <li key={need} className="flex items-start gap-2 text-sm text-slate-400">
-                        <svg className={`w-4 h-4 flex-shrink-0 mt-0.5 ${textColor}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg className={`w-4 h-4 shrink-0 mt-0.5 ${textColor}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                         </svg>
                         {need}
@@ -319,7 +342,7 @@ export default function ManufacturingWebsiteDesignPage() {
                     fill
                     className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/40 to-transparent" />
                   <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-sm rounded-lg px-3 py-1.5">
                     <span className="text-sm font-bold text-cyan-400">{cs.result}</span>
                   </div>
@@ -365,6 +388,28 @@ export default function ManufacturingWebsiteDesignPage() {
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                   <p className="text-slate-400 leading-relaxed">{item.body}</p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <LabFramework />
+
+      {/* FAQ section */}
+      <section className="py-20 border-b border-slate-800" aria-labelledby="mfg-faq-heading">
+        <div className="mx-auto max-w-375 px-6">
+          <div className="max-w-2xl mb-12">
+            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+              Common Questions
+            </span>
+            <h2 id="mfg-faq-heading" className="text-3xl font-bold text-white">Frequently Asked Questions</h2>
+          </div>
+          <div className="max-w-3xl space-y-4">
+            {faqSchema.mainEntity.map((faq) => (
+              <div key={faq.name} className="rounded-xl border border-slate-800 bg-slate-900/50 p-7">
+                <h3 className="text-base font-semibold text-white mb-3">{faq.name}</h3>
+                <p className="text-sm text-slate-400 leading-relaxed">{faq.acceptedAnswer.text}</p>
               </div>
             ))}
           </div>

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import PageClose from "@/components/PageClose";
+import QuickAnswerBlock from "@/components/QuickAnswerBlock";
+import LabFramework from "@/components/LabFramework";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
@@ -100,6 +102,22 @@ const faqSchema = {
         text: "That's a design requirement, not an afterthought. Every project includes a content management layer your team can actually use — whether that's a headless CMS, WordPress, or a purpose-built admin interface. I document what I build and hand it off in a state your team can own.",
       },
     },
+    {
+      "@type": "Question",
+      name: "How much does custom web development cost?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Custom web development projects at Black Lab Development range from $12,000 for focused rebuilds to $60,000+ for complex platforms with custom integrations, multiple audience types, and extensive content systems. Every engagement starts with a technical review of your current setup — scope and pricing reflect what you actually need, not a standard package.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Should I choose custom development or WordPress?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "WordPress is the right choice when editorial flexibility and content updates are the priority — and when a custom-built theme (not a page builder) handles the presentation layer. Custom Next.js or headless development makes sense when performance, complex integrations, or multi-channel content delivery are requirements. The decision is driven by what your project actually needs, not by a preferred technology stack.",
+      },
+    },
   ],
 };
 
@@ -194,6 +212,11 @@ export default function CustomWebDevelopmentPage() {
           description="Bespoke builds in Next.js, headless CMS, and WordPress — for businesses that have outgrown the ceiling of themes, page builders, and plugin-heavy setups."
           backgroundImage="/images/services-hero-bg.png"
           badges={["No page builders", "Clean architecture", "Built to hand off"]}
+        />
+
+        <QuickAnswerBlock
+          question="What is custom web development?"
+          answer="Custom web development means building a website or web application from purpose-written code — without relying on page builders, pre-built themes, or plugin-heavy setups that constrain performance and maintainability. It's the right choice when a project's requirements exceed what an off-the-shelf platform can deliver: custom integrations, specific performance targets, or long-term maintainability by an internal team. Platforms include Next.js, headless CMS (Sanity, Contentful), and custom WordPress themes."
         />
 
         {/* Hero CTAs */}
@@ -352,6 +375,8 @@ export default function CustomWebDevelopmentPage() {
             </div>
           </div>
         </section>
+
+        <LabFramework />
 
         {/* Related */}
         <section className="py-16 border-b border-slate-800">

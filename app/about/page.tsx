@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image"
+import Link from "next/link"
 import PageHero from "@/components/PageHero"
 import PageClose from "@/components/PageClose"
+import LabFramework from "@/components/LabFramework"
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
@@ -85,6 +87,45 @@ const personSchema = {
   sameAs: ["https://www.linkedin.com/company/blacklabdevelopment/"],
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Who is Michael Beasley?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Michael Beasley is a senior web developer and founder of Black Lab Development, based in Cincinnati, Ohio. He has 15+ years of experience building B2B websites, manufacturing platforms, and revenue-focused digital infrastructure. He specializes in conversion architecture, technical SEO, and custom development in Next.js and WordPress for industrial and B2B companies.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is Black Lab Development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Black Lab Development is a B2B website design and pipeline generation agency based in Cincinnati, OH. Founded by Michael Beasley, the agency specializes in manufacturing website design, B2B conversion optimization, and custom web development for companies whose websites need to generate qualified leads and support complex buying decisions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the LAB Framework?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The LAB Framework is Black Lab Development's proprietary delivery methodology: Learn (understand business goals, users, and technical constraints), Architect (define the content strategy, conversion paths, and integration map), and Build (develop, optimize, and launch with measurement in place before go-live). The framework ensures every engagement produces predictable outcomes rather than depending on who happens to be assigned to the project.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why hire a freelance developer instead of an agency?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "When you hire an agency, you pay for a sales team, a project manager, account management overhead, and a junior developer assigned after the senior who sold the project closes the deal. With Black Lab Development, you work directly with the person writing the code, making architecture decisions, and accountable for whether it works in production. There's no translation layer where requirements get distorted — direct access, senior-level thinking on every decision.",
+      },
+    },
+  ],
+};
+
 const values = [
   {
     label: "01",
@@ -111,7 +152,7 @@ const values = [
 export default function AboutPage() {
   return (
     <>
-      <JsonLd data={personSchema} />
+      <JsonLd data={[personSchema, faqSchema]} />
       <main className="w-full bg-[#0b0b0c] text-white">
       {/* ================= HERO ================= */}
       <PageHero
@@ -353,6 +394,42 @@ export default function AboutPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================= LAB FRAMEWORK ================= */}
+      <LabFramework />
+
+      {/* ================= FAQ ================= */}
+      <section className="py-12 md:py-16 relative overflow-hidden border-t border-amber-500/8" aria-labelledby="about-faq-heading">
+        <div className="mx-auto max-w-375 px-6">
+          <div className="flex items-center gap-6 mb-10">
+            <div>
+              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-amber-500 font-mono drop-shadow-[0_0_12px_rgba(245,158,11,0.7)]">
+                // Common Questions
+              </span>
+              <h2 id="about-faq-heading" className="text-3xl md:text-4xl font-bold text-white">
+                Frequently Asked Questions
+              </h2>
+            </div>
+            <div className="flex-1 h-px bg-linear-to-r from-amber-500/60 via-amber-500/20 to-transparent" />
+          </div>
+          <div className="max-w-3xl space-y-4">
+            {faqSchema.mainEntity.map((faq) => (
+              <div key={faq.name} className="rounded-xl border border-amber-500/15 bg-[#111214]/50 p-7 hover:border-amber-500/35 transition-colors duration-300">
+                <h3 className="text-base font-semibold text-white mb-3">{faq.name}</h3>
+                <p className="text-sm text-neutral-400 leading-relaxed">{faq.acceptedAnswer.text}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-md border-2 border-amber-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-amber-500/10 hover:border-amber-400 transition-all duration-200"
+            >
+              Get in Touch →
+            </Link>
           </div>
         </div>
       </section>

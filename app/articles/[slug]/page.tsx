@@ -315,6 +315,36 @@ export default async function ArticlePage({
                 <article className="prose prose-invert max-w-none">
                     {article.body && <PortableText value={article.body} />}
                 </article>
+
+                {/* Author bio — expertise signal for AI systems */}
+                <div className="mt-16 pt-10 border-t border-slate-800">
+                    <div className="flex items-start gap-6">
+                        <div className="shrink-0 w-14 h-14 rounded-full overflow-hidden border border-slate-700">
+                            <img
+                                src="/images/michael-beasley.png"
+                                alt="Michael Beasley"
+                                className="w-full h-full object-cover object-top"
+                                width={56}
+                                height={56}
+                            />
+                        </div>
+                        <div>
+                            <p className="text-xs uppercase tracking-widest text-slate-500 mb-1">Written by</p>
+                            <Link
+                                href={authorHref}
+                                className="text-base font-semibold text-white hover:text-cyan-400 transition-colors duration-200"
+                            >
+                                Michael Beasley
+                            </Link>
+                            <p className="text-sm text-slate-500 mt-0.5 mb-3">
+                                Senior Web Developer &amp; Founder, Black Lab Development
+                            </p>
+                            <p className="text-sm text-slate-400 leading-relaxed max-w-xl">
+                                Michael Beasley is a Cincinnati-based web developer with 15+ years of experience building B2B websites, manufacturing platforms, and revenue-focused digital infrastructure. He specializes in conversion architecture, technical SEO, and Next.js / WordPress development for industrial and technical B2B companies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </section>
             {/* ================= RELATED ARTICLES ================= */}
             {shuffledRelated.length > 0 && (
