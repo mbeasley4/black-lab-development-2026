@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import AptabaseClientProvider from "@/providers/AptabaseClientProvider";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { localBusinessSchema } from "@/app/lib/schema";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://blacklabdev.com"),
@@ -48,6 +49,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+      </head>
       <body className={`${inter.variable} ${interTight.variable} bg-[#0b0b0c] text-[#e5e7eb] antialiased`}>
         <AptabaseClientProvider>
           <Header />
