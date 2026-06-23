@@ -224,33 +224,79 @@ export default function Home() {
         <LabFramework />
 
         {/* FAQ section — AI-extractable, structured for answer engines */}
-        <section className="w-full py-24 border-t border-slate-800/60 bg-black" aria-labelledby="faq-heading">
-          <div className="mx-auto max-w-375 px-6">
-            <div className="max-w-2xl mb-14">
+        <section className="w-full py-28 border-t border-cyan-500/20 relative overflow-hidden" aria-labelledby="faq-heading">
+          {/* Hexagonal grid background */}
+          <div className="absolute inset-0 pointer-events-none opacity-[0.04]" aria-hidden="true">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="hex-grid" width="56" height="100" patternUnits="userSpaceOnUse" patternTransform="scale(1.5)">
+                  <path d="M28 2 L50 18 L50 50 L28 66 L6 50 L6 18 Z" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-cyan-400" />
+                  <path d="M28 34 L50 50 L50 82 L28 98 L6 82 L6 50 Z" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-cyan-400" />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#hex-grid)" />
+            </svg>
+          </div>
+
+          {/* Ambient glows */}
+          <div className="absolute top-0 left-1/4 w-125 h-125 bg-cyan-500/8 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute bottom-0 right-1/4 w-100 h-100 bg-blue-500/6 rounded-full blur-[100px] pointer-events-none" />
+
+          {/* Top accent line */}
+          <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-cyan-500/40 to-transparent" />
+
+          <div className="mx-auto max-w-375 px-6 relative z-10">
+            <div className="text-center mb-16">
               <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
                 Common Questions
               </span>
-              <h2 id="faq-heading" className="text-3xl md:text-4xl font-bold text-white">
-                Frequently Asked Questions
+              <h2 id="faq-heading" className="text-3xl md:text-5xl font-bold text-white mb-4">
+                Frequently Asked{" "}
+                <span className="text-cyan-400 drop-shadow-[0_0_12px_rgba(34,211,238,0.5)]">
+                  Questions
+                </span>
               </h2>
+              <div className="mt-4 mx-auto w-20 h-px bg-linear-to-r from-transparent via-cyan-500 to-transparent" />
             </div>
-            <div className="max-w-3xl space-y-4">
-              {faqSchema.mainEntity.map((faq) => (
-                <div key={faq.name} className="rounded-xl border border-slate-800 bg-slate-900/50 p-7">
-                  <h3 className="text-base font-semibold text-white mb-3">{faq.name}</h3>
-                  <p className="text-sm text-slate-400 leading-relaxed">{faq.acceptedAnswer.text}</p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-slate-800/30 rounded-2xl overflow-hidden border border-slate-800/40">
+              {faqSchema.mainEntity.map((faq, i) => (
+                <div
+                  key={faq.name}
+                  className="group relative bg-slate-950/80 hover:bg-cyan-500/5 p-8 md:p-10 transition-colors duration-300 overflow-hidden"
+                >
+                  {/* Background number */}
+                  <div className="absolute top-3 right-5 text-[5rem] font-black font-mono text-cyan-500/3 group-hover:text-cyan-500/8 transition-colors duration-500 leading-none select-none pointer-events-none">
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
+
+                  <div className="relative z-10">
+                    <div className="flex items-start gap-4 mb-4">
+                      <span className="shrink-0 mt-0.5 flex h-7 w-7 items-center justify-center rounded-md bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-bold">
+                        Q
+                      </span>
+                      <h3 className="text-base font-semibold text-white group-hover:text-cyan-300 transition-colors duration-300 leading-snug">
+                        {faq.name}
+                      </h3>
+                    </div>
+                    <p className="text-sm text-slate-400 leading-relaxed pl-11">{faq.acceptedAnswer.text}</p>
+                  </div>
                 </div>
               ))}
             </div>
-            <div className="mt-10">
+
+            <div className="mt-12 text-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-md bg-cyan-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-cyan-400 transition-colors duration-200 shadow-lg shadow-cyan-500/25"
+                className="inline-flex items-center justify-center rounded-md bg-cyan-500 text-black px-8 py-4 text-sm font-semibold hover:bg-cyan-400 transition-colors duration-200 shadow-lg shadow-cyan-500/25"
               >
                 Start with a Free Audit →
               </Link>
             </div>
           </div>
+
+          {/* Bottom accent line */}
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-cyan-500/40 to-transparent" />
         </section>
 
         <PositioningStrike />
