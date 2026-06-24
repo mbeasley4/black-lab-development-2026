@@ -4,6 +4,7 @@ import PageHero from "@/components/PageHero";
 import PageClose from "@/components/PageClose";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import JsonLd from "@/components/JsonLd";
+import FaqSection from "@/components/FaqSection";
 
 export const metadata: Metadata = {
   title: "Custom WordPress Development | Fast, Clean, No Bloat | Black Lab Dev",
@@ -430,25 +431,10 @@ export default function WordPressDevelopmentPage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-20 bg-[#111214] border-b border-slate-800">
-        <div className="mx-auto max-w-375 px-6">
-          <div className="max-w-2xl mb-12">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-amber-500 font-semibold">
-              Common Questions
-            </span>
-            <h2 className="text-3xl font-bold text-white">Frequently Asked Questions</h2>
-          </div>
-          <div className="max-w-3xl space-y-4">
-            {faqs.map((faq) => (
-              <div key={faq.q} className="rounded-xl border border-neutral-800 bg-neutral-950 p-7">
-                <h3 className="text-base font-semibold text-white mb-3">{faq.q}</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">{faq.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FaqSection
+        accent="amber"
+        faqs={faqs.map((faq) => ({ question: faq.q, answer: faq.a }))}
+      />
 
       {/* Internal links */}
       <section className="py-16 border-b border-slate-800">

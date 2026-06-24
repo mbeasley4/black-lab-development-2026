@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero"
 import PageClose from "@/components/PageClose"
 import LabFramework from "@/components/LabFramework"
 import JsonLd from "@/components/JsonLd";
+import FaqSection from "@/components/FaqSection";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
@@ -405,37 +406,11 @@ export default function AboutPage() {
       <LabFramework />
 
       {/* ================= FAQ ================= */}
-      <section className="py-12 md:py-16 relative overflow-hidden border-t border-amber-500/8" aria-labelledby="about-faq-heading">
-        <div className="mx-auto max-w-375 px-6">
-          <div className="flex items-center gap-6 mb-10">
-            <div>
-              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-amber-500 font-mono drop-shadow-[0_0_12px_rgba(245,158,11,0.7)]">
-                // Common Questions
-              </span>
-              <h2 id="about-faq-heading" className="text-3xl md:text-4xl font-bold text-white">
-                Frequently Asked Questions
-              </h2>
-            </div>
-            <div className="flex-1 h-px bg-linear-to-r from-amber-500/60 via-amber-500/20 to-transparent" />
-          </div>
-          <div className="max-w-3xl space-y-4">
-            {faqSchema.mainEntity.map((faq) => (
-              <div key={faq.name} className="rounded-xl border border-amber-500/15 bg-[#111214]/50 p-7 hover:border-amber-500/35 transition-colors duration-300">
-                <h3 className="text-base font-semibold text-white mb-3">{faq.name}</h3>
-                <p className="text-sm text-neutral-400 leading-relaxed">{faq.acceptedAnswer.text}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-10">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-md border-2 border-amber-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-amber-500/10 hover:border-amber-400 transition-all duration-200"
-            >
-              Get in Touch →
-            </Link>
-          </div>
-        </div>
-      </section>
+      <FaqSection
+        headingId="about-faq-heading"
+        accent="amber"
+        faqs={faqSchema.mainEntity.map((faq) => ({ question: faq.name, answer: faq.acceptedAnswer.text }))}
+      />
 
       {/* ================= CLOSE ================= */}
       <PageClose

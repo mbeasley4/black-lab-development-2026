@@ -5,6 +5,7 @@ import PageClose from "@/components/PageClose";
 import QuickAnswerBlock from "@/components/QuickAnswerBlock";
 import LabFramework from "@/components/LabFramework";
 import JsonLd from "@/components/JsonLd";
+import FaqSection from "@/components/FaqSection";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
@@ -363,25 +364,10 @@ export default function ConversionOptimizationPage() {
 
       <LabFramework />
 
-      {/* FAQ section */}
-      <section className="py-20 border-b border-slate-800" aria-labelledby="cro-faq-heading">
-        <div className="mx-auto max-w-375 px-6">
-          <div className="max-w-2xl mb-12">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
-              Common Questions
-            </span>
-            <h2 id="cro-faq-heading" className="text-3xl font-bold text-white">Frequently Asked Questions</h2>
-          </div>
-          <div className="max-w-3xl space-y-4">
-            {faqSchema.mainEntity.map((faq) => (
-              <div key={faq.name} className="rounded-xl border border-slate-800 bg-slate-900/50 p-7">
-                <h3 className="text-base font-semibold text-white mb-3">{faq.name}</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">{faq.acceptedAnswer.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FaqSection
+        headingId="cro-faq-heading"
+        faqs={faqSchema.mainEntity.map((faq) => ({ question: faq.name, answer: faq.acceptedAnswer.text }))}
+      />
 
       {/* Related */}
       <section className="py-20 border-b border-slate-800">
