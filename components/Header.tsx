@@ -47,6 +47,12 @@ const SERVICE_CARDS: ServiceCard[] = [
         description: "Industrial sites that generate RFQs and distributor leads.",
         image: "/images/services/technical-leadership.png",
     },
+    {
+        title: "WordPress Development",
+        href: "/wordpress-development",
+        description: "Custom themes, no page builders — clean and maintainable.",
+        image: "/images/services/web-development.png",
+    },
 ];
 
 // Quick-link list (right column of the megamenu)
@@ -517,11 +523,11 @@ export default function Header() {
                     <nav
                         ref={navRef}
                         aria-label="Primary navigation"
-                        className="hidden lg:flex items-center gap-6 text-[12px] uppercase tracking-[0.12em]"
+                        className="relative hidden lg:flex items-center gap-6 text-[12px] uppercase tracking-[0.12em]"
                     >
                         {/* Services (megamenu) */}
                         <div
-                            className="relative"
+                            className="static"
                             onMouseEnter={() => handleMegaEnter("services")}
                             onMouseLeave={handleMegaLeave}
                         >
@@ -555,108 +561,86 @@ export default function Header() {
                             <div
                                 role="region"
                                 aria-label="Services menu"
-                                className={`absolute left-1/2 top-full -translate-x-1/2 mt-4 w-210 max-w-[92vw]
-                                    transition-all duration-200 ease-out origin-top
+                                onMouseEnter={() => handleMegaEnter("services")}
+                                onMouseLeave={handleMegaLeave}
+                                className={`absolute right-0 top-full pt-4 w-225 max-w-[92vw]
+                                    transition-all duration-200 ease-out origin-top-right
                                     ${openMega === "services"
                                         ? "opacity-100 translate-y-0 pointer-events-auto"
                                         : "opacity-0 -translate-y-2 pointer-events-none"
                                     }`}
                             >
-                                <div className="relative overflow-hidden rounded-md bg-[#111214] border border-amber-500/20 shadow-[0_24px_60px_-12px_rgba(0,0,0,0.8),0_0_40px_rgba(245,158,11,0.12)]">
+                                <div className="relative overflow-hidden rounded-lg bg-[#111214] border border-amber-500/20 shadow-[0_24px_60px_-12px_rgba(0,0,0,0.8),0_0_40px_rgba(245,158,11,0.12)]">
                                     {/* Top accent line */}
                                     <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-amber-500/70 to-transparent" />
-                                    {/* Background texture */}
-                                    <div
-                                        aria-hidden
-                                        className="pointer-events-none absolute inset-0 opacity-[0.04] bg-cover bg-center"
-                                        style={{ backgroundImage: "url(/images/services-hero-bg.png)" }}
-                                    />
-                                    {/* Ambient glow */}
+                                    {/* Ambient glows */}
                                     <div className="pointer-events-none absolute -top-10 right-10 w-56 h-56 bg-amber-500/10 rounded-full blur-3xl" />
+                                    <div className="pointer-events-none absolute bottom-0 left-10 w-40 h-40 bg-amber-500/6 rounded-full blur-3xl" />
 
-                                    <div className="relative grid grid-cols-[1.55fr_1fr]">
-                                        {/* Left: featured cards */}
-                                        <div className="p-5 grid grid-cols-2 gap-2.5">
-                                            {SERVICE_CARDS.map((card) => {
-                                                const active = isActive(card.href);
-                                                return (
-                                                    <Link
-                                                        key={card.href}
-                                                        href={card.href}
-                                                        onClick={() => setOpenMega(null)}
-                                                        className={`group/card relative flex items-start gap-3 rounded-md border p-3 transition-all duration-200
-                                                            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/70
-                                                            ${active
-                                                                ? "border-amber-500/50 bg-amber-500/6"
-                                                                : "border-white/5 hover:border-amber-500/40 hover:bg-amber-500/4"
-                                                            }`}
-                                                    >
-                                                        <span className="relative shrink-0 w-10 h-10 rounded-md bg-black/40 border border-amber-500/15 overflow-hidden flex items-center justify-center group-hover/card:border-amber-500/40 transition-colors duration-200">
-                                                            <Image
-                                                                src={card.image}
-                                                                alt=""
-                                                                width={28}
-                                                                height={28}
-                                                                className="object-contain"
-                                                            />
-                                                        </span>
-                                                        <span className="min-w-0">
-                                                            <span className="flex items-center gap-1 text-[11px] font-semibold uppercase tracking-widest text-[#e5e7eb] group-hover/card:text-amber-400 transition-colors duration-200">
-                                                                {card.title}
-                                                                <span
-                                                                    aria-hidden
-                                                                    className="opacity-0 -translate-x-1 group-hover/card:opacity-100 group-hover/card:translate-x-0 transition-all duration-200 text-amber-500"
-                                                                >
-                                                                    →
-                                                                </span>
-                                                            </span>
-                                                            <span className="mt-1 block text-[11px] normal-case tracking-normal leading-snug text-[#9a9a9a]">
-                                                                {card.description}
-                                                            </span>
-                                                        </span>
-                                                    </Link>
-                                                );
-                                            })}
-                                        </div>
-
-                                        {/* Right: quick links */}
-                                        <div className="relative p-5 border-l border-amber-500/10 bg-black/20">
-                                            <p className="text-[10px] uppercase tracking-[0.22em] text-amber-500/80 mb-3">
-                                                All Services
-                                            </p>
-                                            <ul className="flex flex-col gap-0.5">
-                                                {SERVICE_LINKS.map((s) => {
-                                                    const active = isActive(s.href);
-                                                    return (
-                                                        <li key={s.href}>
-                                                            <Link
-                                                                href={s.href}
-                                                                onClick={() => setOpenMega(null)}
-                                                                className={`group/link flex items-center gap-2 py-1.5 text-[12px] normal-case tracking-normal transition-colors duration-200 rounded-sm
-                                                                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/70
-                                                                    ${active ? "text-amber-500" : "text-[#b8b8b8] hover:text-amber-400"}`}
+                                    {/* 3-column card grid */}
+                                    <div className="relative p-5 grid grid-cols-3 gap-3">
+                                        {SERVICE_CARDS.map((card) => {
+                                            const active = isActive(card.href);
+                                            return (
+                                                <Link
+                                                    key={card.href}
+                                                    href={card.href}
+                                                    onClick={() => setOpenMega(null)}
+                                                    className={`group/card relative flex flex-col gap-3 rounded-lg border p-5 transition-all duration-200
+                                                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/70
+                                                        ${active
+                                                            ? "border-amber-500/50 bg-amber-500/6"
+                                                            : "border-white/5 hover:border-amber-500/40 hover:bg-amber-500/4"
+                                                        }`}
+                                                >
+                                                    <span className="relative shrink-0 w-11 h-11 rounded-lg bg-black/40 border border-amber-500/15 overflow-hidden flex items-center justify-center group-hover/card:border-amber-500/40 transition-colors duration-200">
+                                                        <Image
+                                                            src={card.image}
+                                                            alt=""
+                                                            width={30}
+                                                            height={30}
+                                                            className="object-contain"
+                                                        />
+                                                    </span>
+                                                    <span>
+                                                        <span className="flex items-center gap-1 text-[12px] font-semibold uppercase tracking-wide text-[#e5e7eb] group-hover/card:text-amber-400 transition-colors duration-200 leading-tight">
+                                                            {card.title}
+                                                            <span
+                                                                aria-hidden
+                                                                className="opacity-0 -translate-x-1 group-hover/card:opacity-100 group-hover/card:translate-x-0 transition-all duration-200 text-amber-500"
                                                             >
-                                                                <span className={`w-1 h-1 rounded-full transition-all duration-200 ${active ? "bg-amber-500" : "bg-amber-500/30 group-hover/link:bg-amber-500"}`} />
-                                                                {s.label}
-                                                            </Link>
-                                                        </li>
-                                                    );
-                                                })}
-                                            </ul>
-                                        </div>
+                                                                →
+                                                            </span>
+                                                        </span>
+                                                        <span className="mt-1.5 block text-[12px] normal-case tracking-normal leading-relaxed text-[#9a9a9a]">
+                                                            {card.description}
+                                                        </span>
+                                                    </span>
+                                                </Link>
+                                            );
+                                        })}
                                     </div>
 
-                                    {/* Footer: Cincinnati local SEO link */}
+                                    {/* Footer */}
                                     <div className="relative border-t border-amber-500/10 px-5 py-3 flex items-center justify-between bg-black/30">
-                                        <Link
-                                            href="/cincinnati-web-developer"
-                                            onClick={() => setOpenMega(null)}
-                                            className="group/loc inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.16em] text-[#9a9a9a] hover:text-amber-400 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/70"
-                                        >
-                                            <span aria-hidden className="text-amber-500">◆</span>
-                                            Cincinnati Web Developer
-                                            <span aria-hidden className="opacity-0 -translate-x-1 group-hover/loc:opacity-100 group-hover/loc:translate-x-0 transition-all duration-200">→</span>
-                                        </Link>
+                                        <div className="flex items-center gap-5">
+                                            <Link
+                                                href="/services"
+                                                onClick={() => setOpenMega(null)}
+                                                className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.16em] text-[#b8b8b8] hover:text-amber-400 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/70"
+                                            >
+                                                All Services →
+                                            </Link>
+                                            <span className="w-px h-3 bg-amber-500/15" />
+                                            <Link
+                                                href="/cincinnati-web-developer"
+                                                onClick={() => setOpenMega(null)}
+                                                className="group/loc inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.16em] text-[#9a9a9a] hover:text-amber-400 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/70"
+                                            >
+                                                <span aria-hidden className="text-amber-500">◆</span>
+                                                Cincinnati Web Developer
+                                            </Link>
+                                        </div>
                                         <Link
                                             href="/contact"
                                             onClick={() => setOpenMega(null)}
