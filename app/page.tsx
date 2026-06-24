@@ -11,6 +11,7 @@ import LabFramework from "@/components/LabFramework";
 import PositioningStrike from "@/components/PositioningStrike";
 import CallToAction from "@/components/CallToAction";
 import FounderStrip from "@/components/FounderStrip";
+import Testimonial from "@/components/Testimonial";
 import FaqSection from "@/components/FaqSection";
 import JsonLd from "@/components/JsonLd";
 
@@ -221,6 +222,7 @@ export default function Home() {
         <Differentiation />
         <CoreServices />
         <Results />
+        <Testimonial />
         <Process />
         <FounderStrip />
         <LabFramework />

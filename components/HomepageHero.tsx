@@ -90,6 +90,8 @@ const HomepageHero: React.FC<HeroProps> = ({
         className="absolute inset-0 bg-linear-to-br from-[#0b0b0c]/85 via-[#111214]/80 to-black/90 z-10"
         aria-hidden="true"
       />
+      {/* Brand accent glow */}
+      <div className="absolute bottom-0 left-1/4 w-150 h-150 bg-volt-500/6 rounded-full blur-[160px] z-10 pointer-events-none" />
 
       {/* Content */}
       <div className="relative z-20 flex items-center min-h-[90vh] md:min-h-[75vh] pt-24 pb-12 md:pt-28 md:pb-16">

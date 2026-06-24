@@ -6,24 +6,28 @@ const caseStudies = [
         metric: "312%",
         outcome: "More appointment bookings",
         detail: "Cincinnati practice, 6 months post-launch",
+        href: "/case-studies",
     },
     {
         industry: "Ecommerce Brand",
         metric: "164%",
         outcome: "Increase in average order value",
         detail: "Redesign + CRO, measured in first 7 days",
+        href: "/case-studies/ecommerce-website-redesign-increase-aov",
     },
     {
         industry: "Manufacturing Company",
         metric: "4.2×",
         outcome: "More qualified RFQs",
         detail: "Industrial website rebuild",
+        href: "/case-studies",
     },
     {
         industry: "B2B SaaS",
         metric: "68%",
         outcome: "Faster page load times",
         detail: "Performance optimization engagement",
+        href: "/case-studies",
     },
 ];
 
@@ -56,7 +60,7 @@ export default function Results() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
                     {caseStudies.map((item) => (
-                        <div key={item.industry} className="group flex flex-col p-8 rounded-2xl border border-slate-800/60 bg-slate-900/40 hover:border-volt-500/40 hover:bg-volt-500/5 transition-all duration-300">
+                        <Link key={item.industry} href={item.href} className="group flex flex-col p-8 rounded-2xl border border-slate-800/60 bg-slate-900/40 hover:border-volt-500/40 hover:bg-volt-500/5 transition-all duration-300">
                             <p className="text-xs uppercase tracking-widest text-slate-600 mb-4 group-hover:text-volt-500/60 transition-colors duration-200">
                                 {item.industry}
                             </p>
@@ -69,7 +73,10 @@ export default function Results() {
                             <p className="text-xs text-slate-500 mt-auto">
                                 {item.detail}
                             </p>
-                        </div>
+                            <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-volt-500 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                                Read the story →
+                            </span>
+                        </Link>
                     ))}
                 </div>
 

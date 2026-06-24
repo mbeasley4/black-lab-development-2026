@@ -432,7 +432,7 @@ export default function WordPressDevelopmentPage() {
       </section>
 
       <FaqSection
-        accent="volt"
+       
         faqs={faqs.map((faq) => ({ question: faq.q, answer: faq.a }))}
       />
 

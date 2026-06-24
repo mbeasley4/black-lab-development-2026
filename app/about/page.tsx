@@ -408,7 +408,7 @@ export default function AboutPage() {
       {/* ================= FAQ ================= */}
       <FaqSection
         headingId="about-faq-heading"
-        accent="volt"
+       
         faqs={faqSchema.mainEntity.map((faq) => ({ question: faq.name, answer: faq.acceptedAnswer.text }))}
       />
 
