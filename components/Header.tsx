@@ -12,46 +12,38 @@ type ServiceCard = {
     title: string;
     href: string;
     description: string;
-    image: string;
 };
 
-// Featured service cards (left column of the megamenu)
 const SERVICE_CARDS: ServiceCard[] = [
     {
         title: "Custom Web Development",
         href: "/services/custom-web-development",
         description: "Next.js, headless & WordPress builds engineered for speed.",
-        image: "/images/services/web-development.png",
     },
     {
         title: "B2B Website Design",
         href: "/services/b2b-website-design",
         description: "Conversion-focused sites that win complex sales cycles.",
-        image: "/images/services/software-architecture.png",
     },
     {
         title: "Performance Optimization",
         href: "/services/website-performance-optimization",
         description: "Core Web Vitals, sub-second loads & technical SEO.",
-        image: "/images/services/performance-seo.png",
     },
     {
         title: "Conversion Optimization",
         href: "/services/conversion-optimization",
         description: "Turn more of your existing traffic into qualified leads.",
-        image: "/images/services/integrations.png",
     },
     {
         title: "Manufacturing Website Design",
         href: "/services/manufacturing-website-design",
         description: "Industrial sites that generate RFQs and distributor leads.",
-        image: "/images/services/technical-leadership.png",
     },
     {
         title: "WordPress Development",
         href: "/wordpress-development",
         description: "Custom themes, no page builders — clean and maintainable.",
-        image: "/images/services/web-development.png",
     },
 ];
 
@@ -593,28 +585,17 @@ export default function Header() {
                                                             : "border-white/5 hover:border-amber-500/40 hover:bg-amber-500/4"
                                                         }`}
                                                 >
-                                                    <span className="relative shrink-0 w-11 h-11 rounded-lg bg-black/40 border border-amber-500/15 overflow-hidden flex items-center justify-center group-hover/card:border-amber-500/40 transition-colors duration-200">
-                                                        <Image
-                                                            src={card.image}
-                                                            alt=""
-                                                            width={30}
-                                                            height={30}
-                                                            className="object-contain"
-                                                        />
+                                                    <span className="flex items-center gap-1 text-[12px] font-semibold uppercase tracking-wide text-[#e5e7eb] group-hover/card:text-amber-400 transition-colors duration-200 leading-tight">
+                                                        {card.title}
+                                                        <span
+                                                            aria-hidden
+                                                            className="opacity-0 -translate-x-1 group-hover/card:opacity-100 group-hover/card:translate-x-0 transition-all duration-200 text-amber-500"
+                                                        >
+                                                            →
+                                                        </span>
                                                     </span>
-                                                    <span>
-                                                        <span className="flex items-center gap-1 text-[12px] font-semibold uppercase tracking-wide text-[#e5e7eb] group-hover/card:text-amber-400 transition-colors duration-200 leading-tight">
-                                                            {card.title}
-                                                            <span
-                                                                aria-hidden
-                                                                className="opacity-0 -translate-x-1 group-hover/card:opacity-100 group-hover/card:translate-x-0 transition-all duration-200 text-amber-500"
-                                                            >
-                                                                →
-                                                            </span>
-                                                        </span>
-                                                        <span className="mt-1.5 block text-[12px] normal-case tracking-normal leading-relaxed text-[#9a9a9a]">
-                                                            {card.description}
-                                                        </span>
+                                                    <span className="mt-1.5 block text-[12px] normal-case tracking-normal leading-relaxed text-[#9a9a9a]">
+                                                        {card.description}
                                                     </span>
                                                 </Link>
                                             );
