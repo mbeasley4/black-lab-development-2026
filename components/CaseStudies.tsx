@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-type ThemeColor = "amber" | "blue";
+type ThemeColor = "volt" | "blue";
 
 type CaseStudy = {
   title: string;
@@ -26,7 +26,7 @@ const caseStudies: CaseStudy[] = [
         metricLabel: "Avg Order Value",
         image: "/images/work/shortening-shuttle-screenshot.png",
         href: "/case-studies/ecommerce-website-redesign-increase-aov",
-        color: "amber",
+        color: "volt",
     },
     {
         title: "Rev & Rinse Auto Detailing",
@@ -37,7 +37,7 @@ const caseStudies: CaseStudy[] = [
         metricLabel: "",
         image: "/images/work/revandrinse-screenshot.png",
         href: "/case-studies",
-        color: "amber",
+        color: "volt",
     },
     {
         title: "Blum Media Group",
@@ -48,7 +48,7 @@ const caseStudies: CaseStudy[] = [
         metricLabel: "Lead Quality",
         image: "/images/work/blum-screenshot.png",
         href: "/case-studies",
-        color: "amber",
+        color: "volt",
     },
     {
         title: "Faztek",
@@ -59,19 +59,19 @@ const caseStudies: CaseStudy[] = [
         metricLabel: "Organic Traffic",
         image: "/images/work/faztek-screenshot.jpg",
         href: "/case-studies",
-        color: "amber",
+        color: "volt",
     },
 ];
 
 const colorClasses = {
-    amber: {
-        border: "group-hover:border-amber-500/50",
-        glow: "group-hover:shadow-amber-500/25",
+    volt: {
+        border: "group-hover:border-volt-500/50",
+        glow: "group-hover:shadow-volt-500/25",
         overlay: "from-[#111214]/80 via-slate-950/90 to-black",
-        accent: "bg-amber-500",
-        ctaText: "text-amber-500",
-        titleHover: "group-hover:text-amber-400",
-        bottomLine: "group-hover:via-amber-500",
+        accent: "bg-volt-500",
+        ctaText: "text-volt-500",
+        titleHover: "group-hover:text-volt-400",
+        bottomLine: "group-hover:via-volt-500",
     },
     blue: {
         border: "group-hover:border-blue-500/50",
@@ -88,19 +88,19 @@ export default function CaseStudies() {
     return (
         <section className="w-full bg-linear-to-b from-[#111214] via-slate-950 to-[#0b0b0c] text-white py-24 relative overflow-hidden">
             {/* Ambient background effects */}
-            <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-amber-500/8 rounded-full blur-3xl" />
+            <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-volt-500/8 rounded-full blur-3xl" />
             <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/8 rounded-full blur-3xl" />
 
             <div className="mx-auto max-w-375 px-6 relative z-10">
                 {/* Header */}
                 <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16 gap-8">
                     <div className="max-w-3xl">
-                        <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-amber-500 font-semibold">
+                        <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
                             Case Studies
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white">
                             Results, Not{" "}
-                            <span className="text-amber-500">
+                            <span className="text-volt-500">
                                 Brochures
                             </span>
                         </h2>
@@ -172,7 +172,7 @@ export default function CaseStudies() {
                 <div className="mt-16 text-center">
                     <Link
                         href="/case-studies"
-                        className="inline-flex items-center justify-center rounded-md border-2 border-amber-500/40 bg-amber-500/8 px-8 py-4 text-sm font-semibold uppercase tracking-wide text-amber-400 transition-all duration-300 hover:border-amber-400 hover:bg-amber-500/15 hover:text-white hover:shadow-lg hover:shadow-amber-500/20"
+                        className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 bg-volt-500/8 px-8 py-4 text-sm font-semibold uppercase tracking-wide text-volt-400 transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white hover:shadow-lg hover:shadow-volt-500/20"
                     >
                         View All Case Studies
                         <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

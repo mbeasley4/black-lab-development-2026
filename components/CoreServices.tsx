@@ -34,20 +34,20 @@ export default function CoreServices() {
             <div
                 className="absolute inset-0 pointer-events-none opacity-[0.07]"
                 style={{
-                    backgroundImage: "radial-gradient(circle, rgba(245,158,11,0.2) 1px, transparent 1px)",
+                    backgroundImage: "radial-gradient(circle, rgba(227,245,68,0.2) 1px, transparent 1px)",
                     backgroundSize: "44px 44px",
                 }}
             />
-            <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-amber-500/20 to-transparent" />
+            <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/20 to-transparent" />
 
             <div className="mx-auto max-w-375 px-6 relative z-10">
                 <div className="mb-16">
-                    <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-amber-500 font-semibold">
+                    <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
                         My Approach
                     </span>
                     <h2 className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-4">
                         Built Differently —<br/>
-                        <span className="text-amber-500">Because It Is</span>
+                        <span className="text-volt-500">Because It Is</span>
                     </h2>
                     <p className="text-lg text-slate-400 max-w-xl">
                         This isn&apos;t a traditional agency model.
@@ -58,20 +58,20 @@ export default function CoreServices() {
                     {edges.map((edge, i) => (
                         <div
                             key={edge.label}
-                            className="group relative flex flex-col p-8 rounded-2xl border border-slate-800/60 bg-slate-900/40 hover:border-amber-500/40 hover:bg-amber-500/5 transition-all duration-300 overflow-hidden"
+                            className="group relative flex flex-col p-8 rounded-2xl border border-slate-800/60 bg-slate-900/40 hover:border-volt-500/40 hover:bg-volt-500/5 transition-all duration-300 overflow-hidden"
                         >
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/4 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-y-1/2 translate-x-1/2" />
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-volt-500/4 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-y-1/2 translate-x-1/2" />
 
                             <div className="flex items-start justify-between mb-6">
-                                <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 group-hover:bg-amber-500/20 group-hover:border-amber-500/40 transition-all duration-300">
+                                <div className="w-10 h-10 rounded-lg bg-volt-500/10 border border-volt-500/20 flex items-center justify-center text-volt-400 group-hover:bg-volt-500/20 group-hover:border-volt-500/40 transition-all duration-300">
                                     {edge.icon}
                                 </div>
-                                <span className="text-xs font-mono text-slate-700 group-hover:text-amber-500/40 transition-colors duration-300">
+                                <span className="text-xs font-mono text-slate-700 group-hover:text-volt-500/40 transition-colors duration-300">
                                     0{i + 1}
                                 </span>
                             </div>
 
-                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors duration-200 leading-snug">
+                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-volt-400 transition-colors duration-200 leading-snug">
                                 {edge.label}
                             </h3>
                             <p className="text-sm text-slate-500 leading-relaxed flex-1 group-hover:text-slate-400 transition-colors duration-200">

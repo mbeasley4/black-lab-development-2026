@@ -1,9 +1,8 @@
-// app/fonts.ts
-import { Inter, Inter_Tight } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 
-export const interTight = Inter_Tight({
+export const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: ["500", "600", "700"],
   variable: "--font-heading",
   display: "swap",
 });

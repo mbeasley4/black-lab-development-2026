@@ -13,7 +13,7 @@ const logos = [
 
 export default function ProofStats() {
     return (
-        <section className="w-full bg-black text-white py-14 border-t border-amber-500/10 border-b border-b-slate-800/60">
+        <section className="w-full bg-black text-white py-14 border-t border-volt-500/10 border-b border-b-slate-800/60">
             <div className="mx-auto max-w-375 px-6 text-center">
                 <h2 className="text-md uppercase tracking-[0.28em] text-slate-500 mb-10">
                     Trusted by growing businesses and organizations
@@ -28,6 +28,7 @@ export default function ProofStats() {
                                 src={logo.src}
                                 alt={logo.alt}
                                 fill
+                                sizes="(max-width: 768px) 160px, 240px"
                                 unoptimized={logo.src.endsWith(".svg")}
                                 className="object-contain"
                             />

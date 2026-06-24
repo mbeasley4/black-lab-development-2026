@@ -71,14 +71,14 @@ export default function ContactPage() {
           <div className="max-w-xl">
             <div className="flex items-center gap-6 mb-6">
               <div>
-                <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-amber-500 font-mono drop-shadow-[0_0_12px_rgba(245,158,11,0.7)]">
+                <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono drop-shadow-[0_0_12px_rgba(227,245,68,0.7)]">
                   // About
                 </span>
                 <h2 className="text-3xl md:text-5xl font-bold text-white">
                   Work Directly With a Senior Engineer
                 </h2>
               </div>
-              <div className="flex-1 h-px bg-linear-to-r from-amber-500/60 via-amber-500/20 to-transparent" />
+              <div className="flex-1 h-px bg-linear-to-r from-volt-500/60 via-volt-500/20 to-transparent" />
             </div>
 
             <p className="text-neutral-400 leading-relaxed mb-6">
@@ -114,7 +114,7 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="rounded-2xl border border-amber-500/40 bg-neutral-950 p-8 lg:p-10 shadow-[0_0_60px_rgba(245,158,11,0.12)]">
+          <div className="rounded-2xl border border-volt-500/40 bg-neutral-950 p-8 lg:p-10 shadow-[0_0_60px_rgba(227,245,68,0.12)]">
             <h3 className="text-2xl font-medium mb-6">
               Start the Conversation
             </h3>

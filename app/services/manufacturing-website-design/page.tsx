@@ -362,7 +362,7 @@ export default function ManufacturingWebsiteDesignPage() {
           <div className="mt-10 text-center">
             <Link
               href="/case-studies"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-amber-500 hover:text-amber-400 transition-colors duration-200"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-volt-500 hover:text-volt-400 transition-colors duration-200"
             >
               View case studies
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

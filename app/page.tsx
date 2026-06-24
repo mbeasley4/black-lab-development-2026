@@ -10,6 +10,7 @@ import Process from "@/components/Process";
 import LabFramework from "@/components/LabFramework";
 import PositioningStrike from "@/components/PositioningStrike";
 import CallToAction from "@/components/CallToAction";
+import FounderStrip from "@/components/FounderStrip";
 import FaqSection from "@/components/FaqSection";
 import JsonLd from "@/components/JsonLd";
 
@@ -160,18 +161,26 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What does Black Lab Development do?",
+      name: "How long does a typical project take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Black Lab Development is a B2B website design and pipeline generation agency based in Cincinnati, OH. We build custom websites, optimize conversions, and design digital experiences for B2B companies — with a focus on manufacturing, industrial, and technical buyers.",
+        text: "Most projects launch in 6–10 weeks. Smaller optimization engagements (conversion audits, performance work) can be completed in 2–4 weeks. Timelines depend on scope and content readiness — we'll give you an honest estimate before anything starts.",
       },
     },
     {
       "@type": "Question",
-      name: "Who is Black Lab Development best for?",
+      name: "What's the typical investment for a project?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We specialize in B2B companies — particularly manufacturers, industrial service providers, and technical organizations — that need websites built for complex buying decisions, multiple stakeholders, and longer sales cycles.",
+        text: "Custom website builds typically start at $8,000–$15,000. Conversion optimization and performance engagements start at $3,000–$6,000. Every project is scoped based on your goals, not a one-size-fits-all package. We'll provide a clear, fixed quote upfront.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What do you need from me to get started?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A conversation about your business goals, your current pain points, and access to your existing site (if applicable). We handle discovery, strategy, and technical planning — you don't need a brief, wireframes, or a spec document to get started.",
       },
     },
     {
@@ -184,26 +193,18 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "What makes Black Lab Development different from a typical web agency?",
+      name: "What happens after launch?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You work directly with a senior engineer — not a project manager relaying messages or a junior developer assigned after the sale. Every engagement involves direct communication, hands-on technical leadership, and full accountability for the outcome.",
+        text: "We don't disappear after go-live. Every project includes a post-launch support window, performance monitoring, and a handoff your team can actually maintain. Ongoing retainers for optimization, content, and technical support are available if needed.",
       },
     },
     {
       "@type": "Question",
-      name: "What platforms do you build on?",
+      name: "How is working with you different from a typical agency?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We build primarily on Next.js, WordPress, and Astro — chosen based on the project's requirements, not a preferred stack. We also work with headless CMS platforms, Shopify, and custom architectures when the problem calls for it.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do I get started with Black Lab Development?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Start with a free website audit. Share a bit about your project through our contact form at blacklabdev.com/contact and you'll hear back directly to discuss fit, goals, and next steps.",
+        text: "You work directly with a senior engineer — not a project manager relaying messages or a junior developer assigned after the sale. Fewer handoffs means faster decisions, fewer gaps, and better outcomes. Every engagement involves direct communication and full accountability.",
       },
     },
   ],
@@ -221,6 +222,7 @@ export default function Home() {
         <CoreServices />
         <Results />
         <Process />
+        <FounderStrip />
         <LabFramework />
 
         <FaqSection

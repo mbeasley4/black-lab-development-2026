@@ -8,7 +8,7 @@ import {
     Award,
 } from "lucide-react";
 
-type ThemeColor = "amber" | "blue";
+type ThemeColor = "volt" | "blue";
 type Icon = typeof Code2 | typeof Layers | typeof Database | typeof Workflow | typeof Cloud | typeof ShieldCheck | typeof Award
 
 type experienceArea = {
@@ -28,7 +28,7 @@ const experienceAreas: experienceArea[] = [
             "Performance optimization for large-scale applications",
             "Custom CMS and content-driven architectures",
         ],
-        color: "amber",
+        color: "volt",
     },
     {
         title: "Enterprise CMS & Platforms",
@@ -51,7 +51,7 @@ const experienceAreas: experienceArea[] = [
             "Checkout optimization and conversion strategy",
             "Transactional messaging with 99% SMS delivery efficiency",
         ],
-        color: "amber",
+        color: "volt",
     },
     {
         title: "Integrations & Marketing Automation",
@@ -74,7 +74,7 @@ const experienceAreas: experienceArea[] = [
             "Deployment automation reducing release time by 50%",
             "Cloud hosting, scaling, and reliability",
         ],
-        color: "amber",
+        color: "volt",
     },
     {
         title: "Security & Compliance",
@@ -90,16 +90,16 @@ const experienceAreas: experienceArea[] = [
 ];
 
 const colorClasses = {
-    amber: {
-        iconBg: "bg-amber-500/10",
-        iconText: "text-amber-500",
-        iconHoverBg: "group-hover:bg-amber-500",
-        border: "group-hover:border-amber-500/50",
-        glow: "group-hover:shadow-amber-500/20",
-        gradient: "group-hover:from-amber-500/8 group-hover:to-transparent",
-        accent: "group-hover:via-amber-500",
-        titleHover: "group-hover:text-amber-400",
-        bullet: "bg-amber-500/40",
+    volt: {
+        iconBg: "bg-volt-500/10",
+        iconText: "text-volt-500",
+        iconHoverBg: "group-hover:bg-volt-500",
+        border: "group-hover:border-volt-500/50",
+        glow: "group-hover:shadow-volt-500/20",
+        gradient: "group-hover:from-volt-500/8 group-hover:to-transparent",
+        accent: "group-hover:via-volt-500",
+        titleHover: "group-hover:text-volt-400",
+        bullet: "bg-volt-500/40",
     },
     blue: {
         iconBg: "bg-blue-500/10",
@@ -118,7 +118,7 @@ export default function TechnologiesExperience() {
     return (
         <section className="w-full bg-linear-to-b from-slate-950 via-slate-950 to-black text-white py-24 relative overflow-hidden">
             {/* Ambient background effects */}
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/6 rounded-full blur-3xl" />
+            <div className="absolute top-0 left-1/4 w-96 h-96 bg-volt-500/6 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/6 rounded-full blur-3xl" />
 
             <div className="mx-auto max-w-375 px-6 relative z-10">
@@ -177,15 +177,15 @@ export default function TechnologiesExperience() {
 
                 {/* Certifications & Credibility */}
                 <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div className="group rounded-2xl border-2 border-slate-800/50 bg-linear-to-br from-slate-900/50 to-[#111214]/80 p-10 transition-all duration-500 hover:border-amber-500/40 hover:shadow-xl hover:shadow-amber-500/10 backdrop-blur-sm relative overflow-hidden">
-                        <div className="absolute inset-0 bg-linear-to-br from-amber-500/0 to-amber-500/0 group-hover:from-amber-500/4 group-hover:to-transparent transition-all duration-500" />
+                    <div className="group rounded-2xl border-2 border-slate-800/50 bg-linear-to-br from-slate-900/50 to-[#111214]/80 p-10 transition-all duration-500 hover:border-volt-500/40 hover:shadow-xl hover:shadow-volt-500/10 backdrop-blur-sm relative overflow-hidden">
+                        <div className="absolute inset-0 bg-linear-to-br from-volt-500/0 to-volt-500/0 group-hover:from-volt-500/4 group-hover:to-transparent transition-all duration-500" />
 
                         <div className="relative z-10">
                             <div className="flex items-center gap-4 mb-4">
-                                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-amber-500/10 text-amber-500 transition-all duration-500 group-hover:bg-amber-500 group-hover:text-black group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-amber-500/30">
+                                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-volt-500/10 text-volt-500 transition-all duration-500 group-hover:bg-volt-500 group-hover:text-black group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-volt-500/30">
                                     <Award className="h-7 w-7" strokeWidth={2.5} />
                                 </div>
-                                <h3 className="text-2xl font-semibold text-white group-hover:text-amber-400 transition-colors duration-300">
+                                <h3 className="text-2xl font-semibold text-white group-hover:text-volt-400 transition-colors duration-300">
                                     Security-Focused Engineering
                                 </h3>
                             </div>

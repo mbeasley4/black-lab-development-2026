@@ -83,8 +83,8 @@ function Pagination({ page, totalPages }: { page: number; totalPages: number }) 
 
   const linkBase =
     "inline-flex items-center justify-center min-w-[2.25rem] h-9 px-3 rounded-md text-sm font-medium transition-colors";
-  const active = "bg-amber-500 text-black";
-  const inactive = "border border-neutral-800 text-neutral-400 hover:border-amber-500/40 hover:text-white";
+  const active = "bg-volt-500 text-black";
+  const inactive = "border border-neutral-800 text-neutral-400 hover:border-volt-500/40 hover:text-white";
   const disabled = "border border-neutral-900 text-neutral-700 pointer-events-none";
 
   return (
@@ -211,14 +211,14 @@ export default async function ArticlesPage({
       {/* GRID */}
       <section className="py-6 md:py-9 relative overflow-hidden">
         {/* Ambient glows */}
-        <div className="absolute top-32 left-1/4 w-175 h-175 bg-amber-500/4 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-32 left-1/4 w-175 h-175 bg-volt-500/4 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-32 right-1/4 w-125 h-125 bg-blue-600/4 rounded-full blur-3xl pointer-events-none" />
 
         <div className="mx-auto max-w-375 px-6 relative">
           {/* Section eyebrow */}
           <div className="flex items-center gap-6 mb-10 md:mb-20">
             <div>
-              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-amber-500 font-mono drop-shadow-[0_0_12px_rgba(245,158,11,0.7)]">
+              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono drop-shadow-[0_0_12px_rgba(227,245,68,0.7)]">
                 // Articles
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-white">
@@ -226,7 +226,7 @@ export default async function ArticlesPage({
               </h2>
               <p className="text-sm text-neutral-500 mt-1">{total} article{total !== 1 ? "s" : ""} published</p>
             </div>
-            <div className="flex-1 h-px bg-linear-to-r from-amber-500/60 via-amber-500/20 to-transparent" />
+            <div className="flex-1 h-px bg-linear-to-r from-volt-500/60 via-volt-500/20 to-transparent" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 items-stretch">
@@ -234,10 +234,10 @@ export default async function ArticlesPage({
               <AnimatedCard key={a._id} delay={index * 80}>
                 <Link
                   href={`/articles/${a.slug.current}`}
-                  className="h-full group flex flex-col border border-neutral-800 rounded-xl overflow-hidden bg-neutral-950 transition-all duration-300 hover:border-amber-500/40 hover:shadow-[0_0_40px_rgba(245,158,11,0.08)]"
+                  className="h-full group flex flex-col border border-neutral-800 rounded-xl overflow-hidden bg-neutral-950 transition-all duration-300 hover:border-volt-500/40 hover:shadow-[0_0_40px_rgba(227,245,68,0.08)]"
                 >
                   {/* Top accent line */}
-                  <div className="h-px bg-linear-to-r from-transparent via-amber-500/0 to-transparent group-hover:via-amber-500/60 transition-all duration-500" />
+                  <div className="h-px bg-linear-to-r from-transparent via-volt-500/0 to-transparent group-hover:via-volt-500/60 transition-all duration-500" />
 
                   <div className="relative h-56 overflow-hidden">
                     <Image
@@ -246,7 +246,7 @@ export default async function ArticlesPage({
                       fill
                       className="object-cover opacity-80 group-hover:opacity-95 group-hover:scale-[1.02] transition-all duration-500"
                     />
-                    <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-transparent to-transparent group-hover:to-amber-500/5 transition-all duration-500" />
+                    <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-transparent to-transparent group-hover:to-volt-500/5 transition-all duration-500" />
                     <div className="absolute bottom-0 left-0 right-0 h-12 bg-linear-to-t from-neutral-950 to-transparent" />
                   </div>
 
@@ -254,13 +254,13 @@ export default async function ArticlesPage({
                     {a.publishedAt && (
                       <time
                         dateTime={new Date(a.publishedAt).toISOString()}
-                        className="block mb-2 text-xs uppercase tracking-widest text-amber-500/50"
+                        className="block mb-2 text-xs uppercase tracking-widest text-volt-500/50"
                       >
                         {formatDate(a.publishedAt)}
                       </time>
                     )}
 
-                    <h2 className="text-xl font-medium mb-3 text-neutral-100 group-hover:text-amber-400 transition-colors duration-200">
+                    <h2 className="text-xl font-medium mb-3 text-neutral-100 group-hover:text-volt-400 transition-colors duration-200">
                       {a.title}
                     </h2>
 
@@ -269,7 +269,7 @@ export default async function ArticlesPage({
                     </p>
 
                     {/* Read indicator */}
-                    <div className="mt-5 pt-4 border-t border-neutral-800/60 flex items-center gap-1 text-xs font-medium text-amber-500/0 group-hover:text-amber-500 transition-colors duration-300">
+                    <div className="mt-5 pt-4 border-t border-neutral-800/60 flex items-center gap-1 text-xs font-medium text-volt-500/0 group-hover:text-volt-500 transition-colors duration-300">
                       Read article
                       <span className="inline-block translate-x-0 group-hover:translate-x-1 transition-transform duration-200">→</span>
                     </div>

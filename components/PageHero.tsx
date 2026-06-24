@@ -24,14 +24,14 @@ export default function PageHero({
     return (
       <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-white leading-tight">
         {parts[0]}
-        <span className="text-amber-500">{titleHighlight}</span>
+        <span className="text-volt-500">{titleHighlight}</span>
         {parts[1]}
       </h1>
     );
   };
 
   return (
-    <section className="relative overflow-hidden border-b border-amber-500/15">
+    <section className="relative overflow-hidden border-b border-volt-500/15">
       {/* Background layers */}
       <div className="absolute inset-0">
         <div
@@ -42,14 +42,14 @@ export default function PageHero({
       </div>
 
       {/* Subtle ambient glow */}
-      <div className="absolute top-0 right-1/4 w-100 h-100 bg-amber-500/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 right-1/4 w-100 h-100 bg-volt-500/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-1/4 w-100 h-100 bg-blue-500/10 rounded-full blur-3xl" />
 
       {/* Hero content */}
       <div className="relative z-10 py-12 md:py-24">
         <div className="mx-auto max-w-375 px-6 w-full">
           <div className="max-w-6xl text-center md:text-left">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-amber-500 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
               {label}
             </span>
 
@@ -64,8 +64,8 @@ export default function PageHero({
               <div className="mt-8 flex flex-wrap items-center gap-4 justify-center md:justify-start">
                 {badges.map((badge, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    {index > 0 && <span className="text-amber-500/40">•</span>}
-                    <div className="flex items-center gap-2 text-sm text-amber-400">
+                    {index > 0 && <span className="text-volt-500/40">•</span>}
+                    <div className="flex items-center gap-2 text-sm text-volt-400">
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                         <path
                           fillRule="evenodd"
@@ -84,7 +84,7 @@ export default function PageHero({
       </div>
 
       {/* Bottom accent line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-amber-500/40 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
     </section>
   );
 }

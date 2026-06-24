@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { inter, interTight } from "./fonts";
+import { inter, spaceGrotesk } from "./fonts";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AptabaseClientProvider from "@/providers/AptabaseClientProvider";
@@ -55,7 +55,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       </head>
-      <body className={`${inter.variable} ${interTight.variable} bg-[#0b0b0c] text-[#e5e7eb] antialiased`}>
+      <body className={`${inter.variable} ${spaceGrotesk.variable} bg-[#0b0b0c] text-[#e5e7eb] antialiased`}>
         <AptabaseClientProvider>
           <Header />
           <main>{children}</main>

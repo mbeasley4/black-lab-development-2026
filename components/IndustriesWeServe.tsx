@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import { Url } from "next/dist/shared/lib/router/router";
 
-type ThemeColor = "amber" | "blue";
+type ThemeColor = "volt" | "blue";
 type Icon = typeof ShoppingCart | typeof GraduationCap | typeof Factory | typeof Stethoscope | typeof Building2 | typeof Cpu;
 
 type Industry = {
@@ -27,7 +27,7 @@ const industries: Industry[] = [
             "Scalable platforms, marketing sites, and custom tools built for fast-moving product teams and startups.",
         icon: Cpu,
         href: "/industries/technology",
-        color: "amber",
+        color: "volt",
     },
     {
         title: "E-Commerce & Retail",
@@ -43,7 +43,7 @@ const industries: Industry[] = [
             "User-friendly platforms, content-driven experiences, and systems designed for learning at scale.",
         icon: GraduationCap,
         href: "/industries/education",
-        color: "amber",
+        color: "volt",
     },
     {
         title: "Manufacturing & Industrial",
@@ -51,7 +51,7 @@ const industries: Industry[] = [
             "Robust digital solutions for complex operations, distributors, and industrial product companies.",
         icon: Factory,
         href: "/industries/manufacturing",
-        color: "amber",
+        color: "volt",
     },
     {
         title: "Healthcare & Life Sciences",
@@ -67,21 +67,21 @@ const industries: Industry[] = [
             "High-trust websites and systems for consultancies, financial firms, and service-driven businesses.",
         icon: Building2,
         href: "/industries/professional-services",
-        color: "amber",
+        color: "volt",
     },
 ];
 
 const colorClasses = {
-    amber: {
-        iconBg: "bg-amber-500/15",
-        iconText: "text-amber-500",
-        iconHoverBg: "group-hover:bg-amber-500",
-        border: "group-hover:border-amber-500",
-        glow: "group-hover:shadow-amber-500/30",
-        gradient: "group-hover:from-amber-500/15 group-hover:to-transparent",
-        accent: "group-hover:via-amber-500",
-        ctaText: "text-amber-500 group-hover:text-amber-400",
-        ctaArrow: "stroke-amber-500 group-hover:stroke-amber-400",
+    volt: {
+        iconBg: "bg-volt-500/15",
+        iconText: "text-volt-500",
+        iconHoverBg: "group-hover:bg-volt-500",
+        border: "group-hover:border-volt-500",
+        glow: "group-hover:shadow-volt-500/30",
+        gradient: "group-hover:from-volt-500/15 group-hover:to-transparent",
+        accent: "group-hover:via-volt-500",
+        ctaText: "text-volt-500 group-hover:text-volt-400",
+        ctaArrow: "stroke-volt-500 group-hover:stroke-volt-400",
     },
     blue: {
         iconBg: "bg-blue-500/15",
@@ -100,7 +100,7 @@ export default function IndustriesWeServe() {
     return (
         <section className="w-full bg-linear-to-b from-[#1f2328] via-[#111214] to-[#0b0b0c] text-white py-24 relative overflow-hidden">
             {/* Ambient glow effects */}
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/8 rounded-full blur-3xl" />
+            <div className="absolute top-0 left-1/4 w-96 h-96 bg-volt-500/8 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/8 rounded-full blur-3xl" />
 
             <div className="mx-auto max-w-375 px-6 relative z-10">

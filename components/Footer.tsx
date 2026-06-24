@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Footer() {
     return (
-        <footer className="bg-[#111214] border-t border-amber-500/10 text-neutral-400">
+        <footer className="bg-[#111214] border-t border-volt-500/10 text-neutral-400">
             <div className="mx-auto max-w-375 px-6 py-24 grid grid-cols-1 md:grid-cols-12 gap-y-16">
 
                 {/* Brand / Description */}
@@ -17,11 +17,11 @@ export default function Footer() {
                                 height={36}
                                 className="relative z-10"
                             />
-                            <div className="absolute inset-0 bg-amber-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            <div className="absolute inset-0 bg-volt-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         </div>
                         <div className="flex flex-col gap-1 uppercase leading-none">
                             <span className="text-[15px] font-bold tracking-tight text-neutral-200">Black Lab</span>
-                            <span className="text-[9px] font-semibold tracking-[0.3em] text-amber-500">Development</span>
+                            <span className="text-[9px] font-semibold tracking-[0.3em] text-volt-500">Development</span>
                         </div>
                     </Link>
                     <p className="max-w-md text-sm leading-relaxed">
@@ -85,7 +85,7 @@ export default function Footer() {
 
                     <Link
                         href="/contact"
-                        className="inline-block mt-6 text-sm text-amber-500 border-b border-amber-500/40 hover:text-amber-400 hover:border-amber-400 transition"
+                        className="inline-block mt-6 text-sm text-volt-500 border-b border-volt-500/40 hover:text-volt-400 hover:border-volt-400 transition"
                     >
                         Start a conversation
                     </Link>
@@ -95,7 +95,7 @@ export default function Footer() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Black Lab Development on LinkedIn"
-                        className="flex items-center gap-2 mt-4 text-base text-amber-500 hover:text-amber-400 transition"
+                        className="flex items-center gap-2 mt-4 text-base text-volt-500 hover:text-volt-400 transition"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>

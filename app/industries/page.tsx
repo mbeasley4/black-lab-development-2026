@@ -156,27 +156,27 @@ export default function IndustriesPage() {
         <div
           className="absolute inset-0 pointer-events-none opacity-15"
           style={{
-            backgroundImage: "radial-gradient(circle, rgba(245,158,11,0.20) 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(circle, rgba(227,245,68,0.20) 1px, transparent 1px)",
             backgroundSize: "44px 44px",
           }}
         />
 
         {/* Ambient glows */}
-        <div className="absolute top-20 -left-40 w-175 h-175 bg-amber-500/8 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute top-20 -left-40 w-175 h-175 bg-volt-500/8 rounded-full blur-[140px] pointer-events-none" />
         <div className="absolute bottom-20 -right-40 w-150 h-150 bg-blue-600/8 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="mx-auto max-w-375 px-6">
           {/* Section header */}
           <div className="flex items-center gap-6 mb-6 md:mb-9">
             <div>
-              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-amber-500 font-mono drop-shadow-[0_0_12px_rgba(245,158,11,0.7)]">
+              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono drop-shadow-[0_0_12px_rgba(227,245,68,0.7)]">
                 // Industries
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-white">
                 Industries Served
               </h2>
             </div>
-            <div className="flex-1 h-px bg-linear-to-r from-amber-500/60 via-amber-500/20 to-transparent" />
+            <div className="flex-1 h-px bg-linear-to-r from-volt-500/60 via-volt-500/20 to-transparent" />
           </div>
 
           <div className="space-y-0">
@@ -185,13 +185,13 @@ export default function IndustriesPage() {
                 key={industry.title}
                 className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center py-6 md:py-9 relative ${
                   index < industries.length - 1
-                    ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-linear-to-r after:from-transparent after:via-amber-500/20 after:to-transparent"
+                    ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-linear-to-r after:from-transparent after:via-volt-500/20 after:to-transparent"
                     : ""
                 }`}
               >
                 {/* Giant ghost number */}
                 <div
-                  className={`absolute text-[18rem] md:text-[22rem] font-black font-mono text-amber-500/3 pointer-events-none leading-none select-none top-0 ${
+                  className={`absolute text-[18rem] md:text-[22rem] font-black font-mono text-volt-500/3 pointer-events-none leading-none select-none top-0 ${
                     index % 2 === 1 ? "-right-4 text-right" : "-left-4"
                   }`}
                   aria-hidden="true"
@@ -202,10 +202,10 @@ export default function IndustriesPage() {
                 {/* Text */}
                 <div className={`max-w-xl relative ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                   <div className="flex items-center gap-4 mb-6">
-                    <span className="text-5xl font-black font-mono text-amber-500/20 leading-none tracking-tighter">
+                    <span className="text-5xl font-black font-mono text-volt-500/20 leading-none tracking-tighter">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <div className="h-px w-14 bg-linear-to-r from-amber-500/60 to-amber-500/10 shadow-[0_0_10px_rgba(245,158,11,0.4)]" />
+                    <div className="h-px w-14 bg-linear-to-r from-volt-500/60 to-volt-500/10 shadow-[0_0_10px_rgba(227,245,68,0.4)]" />
                   </div>
 
                   <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-snug text-white">
@@ -219,7 +219,7 @@ export default function IndustriesPage() {
 
                 {/* Image */}
                 <div
-                  className={`group relative h-95 w-full rounded-xl overflow-hidden border border-amber-500/20 shadow-[0_0_50px_rgba(245,158,11,0.08)] transition-all duration-500 hover:border-amber-500/50 hover:shadow-[0_0_100px_rgba(245,158,11,0.20)] ${
+                  className={`group relative h-95 w-full rounded-xl overflow-hidden border border-volt-500/20 shadow-[0_0_50px_rgba(227,245,68,0.08)] transition-all duration-500 hover:border-volt-500/50 hover:shadow-[0_0_100px_rgba(227,245,68,0.20)] ${
                     index % 2 === 1 ? "lg:order-1" : ""
                   }`}
                 >
@@ -229,23 +229,23 @@ export default function IndustriesPage() {
                     fill
                     className="object-cover opacity-65 group-hover:opacity-90 group-hover:scale-[1.05] transition-all duration-700"
                   />
-                  <div className="absolute inset-0 bg-linear-to-br from-black/65 via-black/20 to-amber-900/10 group-hover:to-amber-900/25 transition-all duration-500" />
+                  <div className="absolute inset-0 bg-linear-to-br from-black/65 via-black/20 to-volt-900/10 group-hover:to-volt-900/25 transition-all duration-500" />
                   <div
                     className="absolute inset-0 opacity-[0.08] pointer-events-none"
                     style={{
                       backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.5) 2px, rgba(0,0,0,0.5) 4px)",
                     }}
                   />
-                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-amber-500/40 to-transparent group-hover:via-amber-500/80 transition-all duration-500" />
-                  <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-amber-500/15 to-transparent group-hover:via-amber-500/50 transition-all duration-500" />
-                  <div className="absolute top-0 right-0 w-40 h-40 bg-amber-500/10 blur-3xl rounded-full group-hover:bg-amber-500/25 transition-all duration-500" />
+                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent group-hover:via-volt-500/80 transition-all duration-500" />
+                  <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/15 to-transparent group-hover:via-volt-500/50 transition-all duration-500" />
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-volt-500/10 blur-3xl rounded-full group-hover:bg-volt-500/25 transition-all duration-500" />
                   <div className="absolute bottom-0 left-0 w-28 h-28 bg-blue-600/8 blur-2xl rounded-full group-hover:bg-blue-500/20 transition-all duration-500" />
-                  <div className="absolute top-3 left-3 w-5 h-5 border-t-2 border-l-2 border-amber-500/40 group-hover:border-amber-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
-                  <div className="absolute top-3 right-3 w-5 h-5 border-t-2 border-r-2 border-amber-500/40 group-hover:border-amber-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
-                  <div className="absolute bottom-3 left-3 w-5 h-5 border-b-2 border-l-2 border-amber-500/40 group-hover:border-amber-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
-                  <div className="absolute bottom-3 right-3 w-5 h-5 border-b-2 border-r-2 border-amber-500/40 group-hover:border-amber-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute top-3 left-3 w-5 h-5 border-t-2 border-l-2 border-volt-500/40 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute top-3 right-3 w-5 h-5 border-t-2 border-r-2 border-volt-500/40 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute bottom-3 left-3 w-5 h-5 border-b-2 border-l-2 border-volt-500/40 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute bottom-3 right-3 w-5 h-5 border-b-2 border-r-2 border-volt-500/40 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
                   <div className="absolute bottom-5 left-5 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-400">
-                    <span className="text-xs font-mono tracking-[0.3em] uppercase text-amber-400 drop-shadow-[0_0_12px_rgba(245,158,11,0.9)]">
+                    <span className="text-xs font-mono tracking-[0.3em] uppercase text-volt-400 drop-shadow-[0_0_12px_rgba(227,245,68,0.9)]">
                       {industry.title}
                     </span>
                   </div>

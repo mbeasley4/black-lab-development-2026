@@ -187,13 +187,13 @@ export default function CincinnatiWebDeveloperPage() {
           <div className="mx-auto max-w-375 px-6 py-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-amber-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-amber-400 transition-colors duration-200 shadow-lg shadow-amber-500/25"
+              className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg shadow-volt-500/25"
             >
               Start a Conversation →
             </Link>
             <Link
               href="/case-studies"
-              className="inline-flex items-center justify-center rounded-md border-2 border-amber-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-amber-500/10 hover:border-amber-400 transition-all duration-200"
+              className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
             >
               View Cincinnati Work →
             </Link>
@@ -205,7 +205,7 @@ export default function CincinnatiWebDeveloperPage() {
           <div className="mx-auto max-w-375 px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
-                <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-amber-500 font-semibold">
+                <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
                   Based in Cincinnati
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -243,7 +243,7 @@ export default function CincinnatiWebDeveloperPage() {
         <section className="py-20 bg-[#111214] border-b border-slate-800">
           <div className="mx-auto max-w-375 px-6">
             <div className="max-w-2xl mb-14">
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-amber-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
                 Services
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -258,14 +258,14 @@ export default function CincinnatiWebDeveloperPage() {
                 <Link
                   key={service.title}
                   href={service.href}
-                  className="group rounded-2xl border border-neutral-800 bg-neutral-950 p-8 transition-all duration-300 hover:border-amber-500/40 hover:shadow-[0_0_40px_rgba(245,158,11,0.06)]"
+                  className="group rounded-2xl border border-neutral-800 bg-neutral-950 p-8 transition-all duration-300 hover:border-volt-500/40 hover:shadow-[0_0_40px_rgba(227,245,68,0.06)]"
                 >
-                  <div className="h-px bg-linear-to-r from-amber-500/0 via-amber-500/0 to-amber-500/0 group-hover:from-amber-500/40 group-hover:via-amber-500/60 group-hover:to-amber-500/0 transition-all duration-500 -mx-8 -mt-8 mb-8" />
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-amber-400 transition-colors duration-300">
+                  <div className="h-px bg-linear-to-r from-volt-500/0 via-volt-500/0 to-volt-500/0 group-hover:from-volt-500/40 group-hover:via-volt-500/60 group-hover:to-volt-500/0 transition-all duration-500 -mx-8 -mt-8 mb-8" />
+                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-volt-400 transition-colors duration-300">
                     {service.title}
                   </h3>
                   <p className="text-sm text-slate-400 leading-relaxed mb-4">{service.description}</p>
-                  <span className="text-xs font-semibold text-amber-500 group-hover:text-amber-400 transition-colors duration-200">
+                  <span className="text-xs font-semibold text-volt-500 group-hover:text-volt-400 transition-colors duration-200">
                     Learn more →
                   </span>
                 </Link>
@@ -279,7 +279,7 @@ export default function CincinnatiWebDeveloperPage() {
           <div className="mx-auto max-w-375 px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
-                <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-amber-500 font-semibold">
+                <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
                   Why Local Matters
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -301,14 +301,14 @@ export default function CincinnatiWebDeveloperPage() {
                 ].map((row, i) => (
                   <div
                     key={i}
-                    className="grid grid-cols-2 gap-4 rounded-xl border border-neutral-800 overflow-hidden group hover:border-amber-500/25 transition-all duration-300"
+                    className="grid grid-cols-2 gap-4 rounded-xl border border-neutral-800 overflow-hidden group hover:border-volt-500/25 transition-all duration-300"
                   >
                     <div className="p-4 bg-neutral-950 text-sm text-neutral-500 leading-relaxed">
                       <span className="block text-[10px] font-mono tracking-[0.3em] uppercase text-neutral-600 mb-1">Agency</span>
                       {row.agency}
                     </div>
-                    <div className="p-4 bg-[#111214]/60 text-sm text-neutral-300 leading-relaxed border-l border-amber-500/10 group-hover:border-amber-500/30 transition-colors duration-300">
-                      <span className="block text-[10px] font-mono tracking-[0.3em] uppercase text-amber-500/60 mb-1">Black Lab Dev</span>
+                    <div className="p-4 bg-[#111214]/60 text-sm text-neutral-300 leading-relaxed border-l border-volt-500/10 group-hover:border-volt-500/30 transition-colors duration-300">
+                      <span className="block text-[10px] font-mono tracking-[0.3em] uppercase text-volt-500/60 mb-1">Black Lab Dev</span>
                       {row.local}
                     </div>
                   </div>
@@ -322,7 +322,7 @@ export default function CincinnatiWebDeveloperPage() {
         <section className="py-20 bg-[#111214] border-b border-slate-800">
           <div className="mx-auto max-w-375 px-6">
             <div className="max-w-2xl mb-14">
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-amber-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
                 Cincinnati Work
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -340,9 +340,9 @@ export default function CincinnatiWebDeveloperPage() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="rounded-2xl border border-neutral-800 bg-neutral-950 px-8 py-8 text-center transition-all duration-300 hover:border-amber-500/30 hover:shadow-[0_0_40px_rgba(245,158,11,0.05)]"
+                  className="rounded-2xl border border-neutral-800 bg-neutral-950 px-8 py-8 text-center transition-all duration-300 hover:border-volt-500/30 hover:shadow-[0_0_40px_rgba(227,245,68,0.05)]"
                 >
-                  <div className="text-3xl font-black text-amber-500 drop-shadow-[0_0_10px_rgba(245,158,11,0.4)] mb-2">{item.stat}</div>
+                  <div className="text-3xl font-black text-volt-500 drop-shadow-[0_0_10px_rgba(227,245,68,0.4)] mb-2">{item.stat}</div>
                   <div className="text-sm font-semibold text-white mb-2">{item.label}</div>
                   <div className="text-xs text-slate-500 leading-relaxed">{item.detail}</div>
                 </div>
@@ -351,7 +351,7 @@ export default function CincinnatiWebDeveloperPage() {
             <div className="mt-10 text-center">
               <Link
                 href="/case-studies"
-                className="inline-flex items-center justify-center rounded-md border-2 border-amber-500/40 bg-amber-500/8 px-8 py-4 text-sm font-semibold uppercase tracking-wide text-amber-400 transition-all duration-300 hover:border-amber-400 hover:bg-amber-500/15 hover:text-white"
+                className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 bg-volt-500/8 px-8 py-4 text-sm font-semibold uppercase tracking-wide text-volt-400 transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white"
               >
                 View Full Case Studies →
               </Link>
@@ -360,7 +360,7 @@ export default function CincinnatiWebDeveloperPage() {
         </section>
 
         <FaqSection
-          accent="amber"
+          accent="volt"
           faqs={faqs.map((faq) => ({ question: faq.q, answer: faq.a }))}
         />
 

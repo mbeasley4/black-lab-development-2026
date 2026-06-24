@@ -14,7 +14,7 @@ export default function PageClose({
   secondaryLabel,
 }: PageCloseProps) {
   return (
-    <section className="relative overflow-hidden border-t border-amber-500/15 py-28">
+    <section className="relative overflow-hidden border-t border-volt-500/15 py-28">
       {/* Background layers */}
       <div className="absolute inset-0">
         <div
@@ -22,11 +22,11 @@ export default function PageClose({
           style={{ backgroundImage: "url('/images/close-bg.png')" }}
         />
         <div className="absolute inset-0 bg-linear-to-br from-[#0b0b0c] via-[#111214] to-[#1f2328]" />
-        <div className="absolute inset-0 bg-linear-to-tr from-amber-500/6 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-tr from-volt-500/6 via-transparent to-transparent" />
       </div>
 
       {/* Ambient glows */}
-      <div className="absolute top-0 left-1/4 w-125 h-125 bg-amber-500/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/4 w-125 h-125 bg-volt-500/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-125 h-125 bg-blue-500/10 rounded-full blur-3xl" />
 
       {/* Content */}
@@ -44,7 +44,7 @@ export default function PageClose({
           <div className="flex flex-wrap justify-center items-center gap-6">
             <a
               href="/contact"
-              className="group relative inline-flex items-center justify-center rounded-lg bg-amber-500 px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-black transition-all duration-300 hover:bg-amber-400 hover:shadow-xl hover:shadow-amber-500/30 hover:scale-105"
+              className="group relative inline-flex items-center justify-center rounded-lg bg-volt px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-black transition-all duration-300 hover:brightness-110 hover:shadow-xl hover:shadow-volt/30 hover:scale-105"
             >
               Start a Conversation
               <svg className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -54,7 +54,7 @@ export default function PageClose({
 
             <a
               href={secondaryHref}
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-amber-500 underline underline-offset-4 hover:text-amber-400 transition-colors duration-200"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-volt-500 underline underline-offset-4 hover:text-volt-400 transition-colors duration-200"
             >
               {secondaryLabel}
             </a>
@@ -63,7 +63,7 @@ export default function PageClose({
       </div>
 
       {/* Bottom accent line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-amber-500/40 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
     </section>
   );
 }

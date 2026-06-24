@@ -23,9 +23,11 @@ interface LabFrameworkProps {
 export default function LabFramework({ compact = false }: LabFrameworkProps) {
   return (
     <section
-      className={`w-full border-t border-slate-800/60 ${compact ? "py-16" : "py-24"} bg-slate-950/60`}
+      className={`w-full border-t border-volt-500/15 ${compact ? "py-16" : "py-28"} bg-linear-to-b from-[#0b0b0c] to-slate-950 relative overflow-hidden`}
       aria-labelledby="lab-framework-heading"
     >
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/30 to-transparent" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-175 h-175 bg-volt-500/4 rounded-full blur-[140px] pointer-events-none" />
       <div className="mx-auto max-w-375 px-6">
         <div className="mb-12">
           <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">

@@ -3,13 +3,25 @@
 :root {
   --background: #0b0b0c;
   --foreground: #e5e7eb;
-  --accent: #f59e0b;
+  --accent: #E3F544;
   --accent-secondary: #3b82f6;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-volt-50: #fbfde8;
+  --color-volt-100: #f5fac3;
+  --color-volt-200: #eef88a;
+  --color-volt-300: #e8f75e;
+  --color-volt-400: #e3f544;
+  --color-volt-500: #E3F544;
+  --color-volt-600: #c2d435;
+  --color-volt-700: #96a429;
+  --color-volt-800: #78841f;
+  --color-volt-900: #4a5216;
+  --color-volt-950: #282d0c;
+  --color-volt: #E3F544;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -31,12 +43,12 @@
   70% {
     opacity: 1;
     filter: blur(0) brightness(1.1);
-    text-shadow: 0 0 6px rgba(245,158,11,.6), 0 0 14px rgba(245,158,11,.5);
+    text-shadow: 0 0 6px rgba(227,245,68,.6), 0 0 14px rgba(227,245,68,.5);
   }
   100% {
     opacity: 1;
     filter: blur(0) brightness(1);
-    text-shadow: 0 0 10px rgba(245,158,11,.8), 0 0 22px rgba(245,158,11,.6);
+    text-shadow: 0 0 10px rgba(227,245,68,.8), 0 0 22px rgba(227,245,68,.6);
   }
 }
 
@@ -53,26 +65,24 @@
 }
 
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-body, system-ui, sans-serif);
-}
-h1,
-h2,
-h3 {
-  font-family: var(--font-heading), system-ui, sans-serif;
-}
-h1 {
-  letter-spacing: -0.025em;
-}
-
-h2 {
-  letter-spacing: -0.02em;
-}
-
-h3 {
-  letter-spacing: -0.015em;
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body, system-ui, sans-serif);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), system-ui, sans-serif;
+  }
+  h1 {
+    letter-spacing: -0.025em;
+  }
+  h2 {
+    letter-spacing: -0.02em;
+  }
+  h3 {
+    letter-spacing: -0.015em;
+  }
 }
 
 .prose h1 {

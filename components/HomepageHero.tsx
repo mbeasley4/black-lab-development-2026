@@ -11,6 +11,12 @@ interface HeroProps {
   backgroundVideoWebm?: string;
 }
 
+const HERO_STATS = [
+  { value: "312%", label: "More appointment bookings" },
+  { value: "164%", label: "Increase in AOV" },
+  { value: "<1s", label: "Average load time" },
+];
+
 const HomepageHero: React.FC<HeroProps> = ({
   backgroundMobileImage = "/images/homepage-hero-bg.png",
   backgroundImage = "/images/homepage-hero-bg-b.png",
@@ -20,20 +26,20 @@ const HomepageHero: React.FC<HeroProps> = ({
   const eyebrowRef = useRef<HTMLSpanElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
   const paraRef = useRef<HTMLParagraphElement>(null);
-  const bulletsRef = useRef<HTMLUListElement>(null);
+  const statsRef = useRef<HTMLDivElement>(null);
   const ctasRef = useRef<HTMLDivElement>(null);
   const creditRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
-    const bulletItems = bulletsRef.current
-      ? (Array.from(bulletsRef.current.children) as HTMLElement[])
+    const statItems = statsRef.current
+      ? (Array.from(statsRef.current.children) as HTMLElement[])
       : [];
 
     const els = [
       eyebrowRef.current,
       headingRef.current,
       paraRef.current,
-      ...bulletItems,
+      ...statItems,
       ctasRef.current,
       creditRef.current,
     ].filter((el): el is HTMLElement => el !== null);
@@ -48,15 +54,15 @@ const HomepageHero: React.FC<HeroProps> = ({
       .add(eyebrowRef.current!, { opacity: 1, translateY: 0 }, 0)
       .add(headingRef.current!, { opacity: 1, translateY: 0, duration: 750 }, 150)
       .add(paraRef.current!, { opacity: 1, translateY: 0 }, 450)
-      .add(bulletItems, { opacity: 1, translateY: 0, duration: 500, delay: stagger(60) }, 620)
-      .add(ctasRef.current!, { opacity: 1, translateY: 0, duration: 500 }, 860)
-      .add(creditRef.current!, { opacity: 1, translateY: 0, duration: 400 }, 1020);
+      .add(statItems, { opacity: 1, translateY: 0, duration: 500, delay: stagger(80) }, 620)
+      .add(ctasRef.current!, { opacity: 1, translateY: 0, duration: 500 }, 900)
+      .add(creditRef.current!, { opacity: 1, translateY: 0, duration: 400 }, 1060);
 
     return () => { tl.cancel(); };
   }, []);
 
   return (
-    <section className="relative w-full min-h-[85vh] md:min-h-[70vh] overflow-hidden">
+    <section className="relative w-full min-h-[90vh] md:min-h-[75vh] overflow-hidden">
       {/* Desktop Video Background */}
       <video
         className="absolute inset-0 w-full h-full object-cover z-0 hidden md:block"
@@ -86,12 +92,12 @@ const HomepageHero: React.FC<HeroProps> = ({
       />
 
       {/* Content */}
-      <div className="relative z-20 flex items-center min-h-[85vh] md:min-h-[70vh] pt-24 pb-12 md:pt-28 md:pb-16">
+      <div className="relative z-20 flex items-center min-h-[90vh] md:min-h-[75vh] pt-24 pb-12 md:pt-28 md:pb-16">
         <div className="mx-auto max-w-375 px-6 w-full">
           <div className="text-center md:text-left">
             <span
               ref={eyebrowRef}
-              className="inline-block mb-3 md:mb-4 text-xs md:text-sm tracking-[0.2em] uppercase text-amber-500 font-medium"
+              className="inline-block mb-3 md:mb-4 text-xs md:text-sm tracking-[0.2em] uppercase text-volt-500 font-medium"
             >
               Performance-Driven Web Development
             </span>
@@ -101,42 +107,46 @@ const HomepageHero: React.FC<HeroProps> = ({
               className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-5 md:mb-6 text-white"
             >
               Websites Built to Generate{" "}<br/>
-              <span className="text-amber-500">Leads, Bookings, and Pipeline</span>
+              <span className="text-volt-500">Leads, Bookings, and Pipeline</span>
             </h1>
 
             <p
               ref={paraRef}
-              className="text-base md:text-lg lg:text-xl text-[#e5e7eb]/80 mb-7 md:mb-8 leading-relaxed max-w-2xl md:max-w-3xl"
+              className="text-base md:text-lg lg:text-xl text-[#e5e7eb]/80 mb-8 md:mb-10 leading-relaxed max-w-2xl md:max-w-3xl"
             >
-              We design and develop high-performance websites for healthcare, education, and B2B companies — engineered to convert, rank, and load fast.
+              312% more appointment bookings for a Cincinnati dermatology clinic. 164% higher AOV for an ecommerce brand in 7 days. We build websites that generate measurable revenue — not just traffic.
             </p>
 
-            <ul ref={bulletsRef} className="flex flex-col gap-2.5 mb-8 md:mb-10">
-              {[
-                "Conversion-focused — appointments, leads, applications",
-                "Technical SEO built in — not added later",
-                "Work directly with the developer building your site",
-              ].map((item) => (
-                <li key={item} className="flex items-center gap-2.5 text-sm text-[#e5e7eb]/70">
-                  <span className="shrink-0 w-1.5 h-1.5 rounded-full bg-amber-500" />
-                  {item}
-                </li>
+            {/* Stat proof bar */}
+            <div ref={statsRef} className="flex flex-wrap gap-4 md:gap-6 mb-8 md:mb-10">
+              {HERO_STATS.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="flex items-center gap-3 rounded-lg border border-volt/20 bg-volt/5 backdrop-blur-sm px-5 py-3"
+                >
+                  <span className="text-2xl md:text-3xl font-bold text-volt leading-none">
+                    {stat.value}
+                  </span>
+                  <span className="text-xs text-slate-400 uppercase tracking-wide leading-tight max-w-24">
+                    {stat.label}
+                  </span>
+                </div>
               ))}
-            </ul>
+            </div>
 
             <div ref={ctasRef} className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-7">
               <a
-                href="/case-studies"
-                className="inline-flex items-center justify-center rounded-md bg-amber-500 text-black px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold hover:bg-amber-400 transition-colors duration-200 shadow-lg shadow-amber-500/25"
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-md bg-volt text-black px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-bold hover:brightness-110 transition-all duration-200 shadow-lg shadow-volt/25"
               >
-                View Case Studies
+                Get a Free Website Audit
               </a>
 
               <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-md border-2 border-amber-500/50 px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold text-white hover:bg-amber-500/10 hover:border-amber-400 transition-all duration-200"
+                href="/case-studies"
+                className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/50 px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
               >
-                Schedule a Call
+                View Case Studies
               </a>
             </div>
 
@@ -152,7 +162,7 @@ const HomepageHero: React.FC<HeroProps> = ({
 
       {/* Scroll indicator */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 animate-bounce">
-        <ChevronDown className="w-6 h-6 text-amber-500 opacity-80" />
+        <ChevronDown className="w-6 h-6 text-volt-500 opacity-80" />
       </div>
     </section>
   );

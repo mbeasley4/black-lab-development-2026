@@ -63,9 +63,9 @@ export async function generateMetadata({
 }
 
 const HERO_METRIC_STYLES = [
-  "border-amber-500/30 bg-amber-500/10 text-amber-400",
+  "border-volt-500/30 bg-volt-500/10 text-volt-400",
   "border-blue-500/30 bg-blue-500/10 text-blue-400",
-  "border-amber-400/30 bg-amber-400/8 text-amber-300",
+  "border-volt-400/30 bg-volt-400/8 text-volt-300",
 ];
 
 export default async function CaseStudyPage({
@@ -126,11 +126,11 @@ export default async function CaseStudyPage({
     <main className="w-full bg-[#0b0b0c] text-white">
       <JsonLd data={[articleSchema, breadcrumbSchema]} />
       {/* ─── HERO ─────────────────────────────────────── */}
-      <section className="relative overflow-hidden border-b border-amber-500/20 bg-[#0b0b0c]">
+      <section className="relative overflow-hidden border-b border-volt-500/20 bg-[#0b0b0c]">
         {/* Ambient glows */}
-        <div className="absolute top-0 right-0 w-175 h-175 bg-amber-500/8 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-175 h-175 bg-volt-500/8 rounded-full blur-[140px] pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-125 h-125 bg-blue-500/6 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-amber-500/25 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/25 to-transparent" />
 
         <div className="relative z-10 mx-auto max-w-375 px-6">
           <div className={`grid gap-12 items-center min-h-[82vh] py-20 md:py-24 ${study.mainImage ? "grid-cols-1 lg:grid-cols-[1fr_1.1fr]" : "grid-cols-1"}`}>
@@ -145,8 +145,8 @@ export default async function CaseStudyPage({
                 <span className="text-xs text-slate-500">Case Study</span>
               </div>
 
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-amber-500/35 bg-amber-500/8 text-amber-500 text-xs font-bold tracking-[0.2em] uppercase mb-6 w-fit">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.9)]" />
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-volt-500/35 bg-volt-500/8 text-volt-500 text-xs font-bold tracking-[0.2em] uppercase mb-6 w-fit">
+                <span className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_8px_rgba(227,245,68,0.9)]" />
                 {study.clientName ?? "Case Study"}
                 {study.industry ? ` · ${study.industry}` : ""}
               </span>
@@ -180,15 +180,15 @@ export default async function CaseStudyPage({
             {study.mainImage && (
               <div className="relative flex items-center justify-center lg:justify-end">
                 {/* Glow halo behind the frame */}
-                <div className="absolute -inset-6 bg-amber-500/10 rounded-3xl blur-3xl pointer-events-none" />
-                <div className="absolute -inset-2 bg-amber-500/5 rounded-2xl blur-xl pointer-events-none" />
+                <div className="absolute -inset-6 bg-volt-500/10 rounded-3xl blur-3xl pointer-events-none" />
+                <div className="absolute -inset-2 bg-volt-500/5 rounded-2xl blur-xl pointer-events-none" />
 
                 {/* Browser chrome frame */}
-                <div className="relative w-full max-w-2xl rounded-2xl overflow-hidden border border-amber-500/25 shadow-[0_0_80px_rgba(245,158,11,0.18),0_32px_64px_rgba(0,0,0,0.6)] ring-1 ring-white/5">
+                <div className="relative w-full max-w-2xl rounded-2xl overflow-hidden border border-volt-500/25 shadow-[0_0_80px_rgba(227,245,68,0.18),0_32px_64px_rgba(0,0,0,0.6)] ring-1 ring-white/5">
                   {/* Chrome bar */}
                   <div className="h-9 bg-neutral-900 border-b border-neutral-800 flex items-center gap-2 px-4 shrink-0">
                     <span className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-amber-500/60" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-volt-500/60" />
                     <span className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
                     <div className="ml-4 flex-1 max-w-xs h-5 bg-neutral-800 rounded-md flex items-center px-3">
                       <span className="text-[10px] text-neutral-500 truncate">{study.clientName?.toLowerCase().replace(/\s+/g, "") ?? "client"}.com</span>
@@ -213,7 +213,7 @@ export default async function CaseStudyPage({
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-amber-500/40 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
       </section>
 
       {/* ─── FULL METRICS GRID ────────────────────────── */}
@@ -221,17 +221,17 @@ export default async function CaseStudyPage({
         <section className="py-20 border-b border-slate-800">
           <div className="mx-auto max-w-375 px-6">
             <div className="max-w-2xl mb-10">
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-amber-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
                 The Results
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Key Metrics</h2>
-              <div className="mt-4 h-px w-32 bg-linear-to-r from-amber-500/60 via-amber-500/25 to-transparent" />
+              <div className="mt-4 h-px w-32 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-slate-800/40 rounded-2xl overflow-hidden border border-neutral-800">
               {study.metrics.map(
                 (m: { improvement: string; label: string; value?: string; note?: string }, i: number) => (
                   <div key={i} className="bg-neutral-950 px-8 py-8 text-center">
-                    <div className="text-4xl font-black text-amber-500 drop-shadow-[0_0_10px_rgba(245,158,11,0.4)] mb-2">
+                    <div className="text-4xl font-black text-volt-500 drop-shadow-[0_0_10px_rgba(227,245,68,0.4)] mb-2">
                       {m.improvement}
                     </div>
                     <div className="text-sm font-semibold text-white mb-1">{m.label}</div>
@@ -257,14 +257,14 @@ export default async function CaseStudyPage({
       )}
 
       {/* ─── CTA ─────────────────────────────────────── */}
-      <section className="relative overflow-hidden py-24 border-t border-amber-500/20">
+      <section className="relative overflow-hidden py-24 border-t border-volt-500/20">
         <div className="absolute inset-0 bg-linear-to-br from-[#111214] via-slate-950 to-[#0b0b0c]" />
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/8 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-volt-500/8 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/6 rounded-full blur-3xl" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-amber-500/30 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/30 to-transparent" />
 
         <div className="relative z-10 mx-auto max-w-375 px-6 text-center">
-          <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-amber-500 font-semibold">
+          <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
             Work With Us
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
@@ -276,13 +276,13 @@ export default async function CaseStudyPage({
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-amber-500 text-black px-10 py-4 text-base font-semibold hover:bg-amber-400 transition-colors duration-200 shadow-lg shadow-amber-500/25"
+              className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-10 py-4 text-base font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg shadow-volt-500/25"
             >
               Start a Conversation
             </Link>
             <Link
               href="/case-studies"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-amber-500 hover:text-amber-400 transition-colors duration-200"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-volt-500 hover:text-volt-400 transition-colors duration-200"
             >
               View all case studies
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -292,7 +292,7 @@ export default async function CaseStudyPage({
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-amber-500/40 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
       </section>
     </main>
   );
