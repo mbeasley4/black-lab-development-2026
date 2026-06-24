@@ -4,25 +4,13 @@ import React, { useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 import { createTimeline, stagger, set } from "animejs";
 
-interface HeroProps {
-  backgroundMobileImage?: string;
-  backgroundImage?: string;
-  backgroundVideoMp4?: string;
-  backgroundVideoWebm?: string;
-}
-
 const HERO_STATS = [
   { value: "312%", label: "More appointment bookings" },
   { value: "164%", label: "Increase in AOV" },
   { value: "<1s", label: "Average load time" },
 ];
 
-const HomepageHero: React.FC<HeroProps> = ({
-  backgroundMobileImage = "/images/homepage-hero-bg.png",
-  backgroundImage = "/images/homepage-hero-bg-b.png",
-  backgroundVideoMp4 = "/videos/homepage-hero-bg.mp4",
-  backgroundVideoWebm = "/videos/homepage-hero-bg.webm",
-}) => {
+const HomepageHero = () => {
   const eyebrowRef = useRef<HTMLSpanElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
   const paraRef = useRef<HTMLParagraphElement>(null);
@@ -63,25 +51,10 @@ const HomepageHero: React.FC<HeroProps> = ({
 
   return (
     <section className="relative w-full min-h-[90vh] md:min-h-[75vh] overflow-hidden">
-      {/* Desktop Video Background */}
-      <video
-        className="absolute inset-0 w-full h-full object-cover z-0 hidden md:block"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        poster={backgroundImage}
-        aria-hidden="true"
-      >
-        <source src={backgroundVideoWebm} type="video/webm" />
-        <source src={backgroundVideoMp4} type="video/mp4" />
-      </video>
-
-      {/* Mobile Image Background */}
+      {/* Background */}
       <div
-        className="absolute inset-0 bg-cover bg-center z-0 block md:hidden"
-        style={{ backgroundImage: `url(${backgroundMobileImage})` }}
+        className="absolute inset-0 bg-cover bg-center z-0"
+        style={{ backgroundImage: "url(/images/background-bld.png)" }}
         aria-hidden="true"
       />
 
