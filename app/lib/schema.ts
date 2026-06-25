@@ -35,6 +35,12 @@ export const localBusinessSchema = {
     "@id": "https://blacklabdev.com/about#michael-beasley",
     name: "Michael Beasley",
   },
+  employee: {
+    "@type": "Person",
+    "@id": "https://blacklabdev.com/about#michael-beasley",
+    name: "Michael Beasley",
+    jobTitle: "Senior Web Developer & Founder",
+  },
   knowsAbout: [
     "Next.js development",
     "WordPress development",
@@ -49,6 +55,62 @@ export const localBusinessSchema = {
     telephone: "+15135204362",
     contactType: "sales",
     availableLanguage: "en",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "B2B Web Design & Development Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "B2B Website Design",
+          url: "https://blacklabdev.com/services/b2b-website-design",
+          description:
+            "Custom B2B website design built for technical buyers, complex buying decisions, and higher-quality lead generation.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Website Conversion Optimization",
+          url: "https://blacklabdev.com/services/conversion-optimization",
+          description:
+            "Audit, diagnose, and fix why your site isn't generating qualified leads — measured before and after with real data.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Manufacturing Website Design",
+          url: "https://blacklabdev.com/services/manufacturing-website-design",
+          description:
+            "Industry-specific website design for manufacturers — built to generate RFQs from engineers and procurement teams.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Custom Web Development",
+          url: "https://blacklabdev.com/services",
+          description:
+            "Custom website and web application development — WordPress, headless CMS, Next.js, or fully custom.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Technical SEO & Performance",
+          url: "https://blacklabdev.com/services",
+          description:
+            "Core Web Vitals, technical SEO remediation, and performance optimization with measurable results.",
+        },
+      },
+    ],
   },
   sameAs: ["https://www.linkedin.com/company/blacklabdevelopment/"],
 };

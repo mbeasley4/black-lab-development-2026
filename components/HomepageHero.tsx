@@ -60,7 +60,16 @@ const HomepageHero = () => {
 
       {/* Overlay */}
       <div
-        className="absolute inset-0 bg-linear-to-br from-[#0b0b0c]/85 via-[#111214]/80 to-black/90 z-10"
+        className="absolute inset-0 bg-linear-to-br from-[#0b0b0c]/92 via-[#111214]/88 to-black/85 z-10"
+        aria-hidden="true"
+      />
+      {/* Radial mask — fades code out under the headline on the left */}
+      <div
+        className="absolute inset-0 z-10 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 80% 100% at 25% 50%, rgba(11,11,12,0.55) 0%, transparent 70%)",
+        }}
         aria-hidden="true"
       />
       {/* Brand accent glow */}

@@ -3,9 +3,9 @@
 // image when available and fall back to this constant.
 
 export const DEFAULT_OG_IMAGE = {
-  url: "/images/homepage-hero-bg.png",
-  width: 1554,
-  height: 867,
+  url: "/images/blacklabdev-og.png",
+  width: 1200,
+  height: 630,
   alt: "Black Lab Development — B2B Website Design & Pipeline Generation",
 } as const;
 

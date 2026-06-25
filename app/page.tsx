@@ -37,115 +37,6 @@ export const metadata: Metadata = {
   },
 };
 
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "ProfessionalService"],
-  "@id": "https://blacklabdev.com/#business",
-  name: "Black Lab Development",
-  url: "https://blacklabdev.com",
-  logo: {
-    "@type": "ImageObject",
-    url: "https://blacklabdev.com/images/blacklabdevelopment.png",
-  },
-  image: "https://blacklabdev.com/images/homepage-hero-bg.png",
-  description:
-    "B2B website design and pipeline generation agency serving Cincinnati, OH and clients nationwide. Specializing in manufacturing websites, B2B design, and conversion optimization.",
-  telephone: "+15135204362",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Cincinnati",
-    addressRegion: "OH",
-    postalCode: "45202",
-    addressCountry: "US",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 39.1031,
-    longitude: -84.512,
-  },
-  areaServed: [
-    { "@type": "City", name: "Cincinnati" },
-    { "@type": "AdministrativeArea", name: "Ohio" },
-    { "@type": "Country", name: "United States" },
-  ],
-  priceRange: "$$",
-  founder: {
-    "@type": "Person",
-    "@id": "https://blacklabdev.com/about#michael-beasley",
-    name: "Michael Beasley",
-  },
-  employee: {
-    "@type": "Person",
-    "@id": "https://blacklabdev.com/about#michael-beasley",
-    name: "Michael Beasley",
-    jobTitle: "Senior Web Developer & Founder",
-  },
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+15135204362",
-    contactType: "sales",
-    availableLanguage: "en",
-    contactOption: "TollFree",
-  },
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "B2B Web Design & Development Services",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "B2B Website Design",
-          url: "https://blacklabdev.com/services/b2b-website-design",
-          description:
-            "Custom B2B website design built for technical buyers, complex buying decisions, and higher-quality lead generation.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Website Conversion Optimization",
-          url: "https://blacklabdev.com/services/conversion-optimization",
-          description:
-            "Audit, diagnose, and fix why your site isn't generating qualified leads — measured before and after with real data.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Manufacturing Website Design",
-          url: "https://blacklabdev.com/services/manufacturing-website-design",
-          description:
-            "Industry-specific website design for manufacturers — built to generate RFQs from engineers and procurement teams.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Custom Web Development",
-          url: "https://blacklabdev.com/services",
-          description:
-            "Custom website and web application development — WordPress, headless CMS, Next.js, or fully custom.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Technical SEO & Performance",
-          url: "https://blacklabdev.com/services",
-          description:
-            "Core Web Vitals, technical SEO remediation, and performance optimization with measurable results.",
-        },
-      },
-    ],
-  },
-  sameAs: ["https://www.linkedin.com/company/blacklabdevelopment/"],
-};
-
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -214,7 +105,7 @@ const faqSchema = {
 export default function Home() {
   return (
     <>
-      <JsonLd data={[organizationSchema, websiteSchema, faqSchema]} />
+      <JsonLd data={[websiteSchema, faqSchema]} />
       <div className="w-full mt-0">
         <HomepageHero />
         <ProofStats />
