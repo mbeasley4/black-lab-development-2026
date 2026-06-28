@@ -334,8 +334,8 @@ export default async function CaseStudiesPage() {
                 { value: "−25%", label: "Cost Reduction", note: "Infrastructure" },
                 { value: "+50%", label: "Integrations", note: "API-driven" },
               ].map((m) => (
-                <div key={m.label} className="relative px-6 py-7 text-center group hover:bg-volt-500/5 transition-colors duration-300">
-                  <div className="text-4xl md:text-5xl font-black text-volt-400 drop-shadow-[0_0_20px_rgba(227,245,68,0.6)] mb-1.5 group-hover:drop-shadow-[0_0_32px_rgba(227,245,68,0.85)] transition-all duration-300 tabular-nums">
+                <div key={m.label} className="relative px-4 sm:px-6 py-5 sm:py-7 text-center group hover:bg-volt-500/5 transition-colors duration-300">
+                  <div className="text-2xl sm:text-4xl md:text-5xl font-black text-volt-400 drop-shadow-[0_0_20px_rgba(227,245,68,0.6)] mb-1.5 group-hover:drop-shadow-[0_0_32px_rgba(227,245,68,0.85)] transition-all duration-300 tabular-nums">
                     {m.value}
                   </div>
                   <div className="text-xs font-semibold text-white tracking-wide">{m.label}</div>

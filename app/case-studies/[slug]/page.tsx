@@ -133,7 +133,7 @@ export default async function CaseStudyPage({
         <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/25 to-transparent" />
 
         <div className="relative z-10 mx-auto max-w-375 px-6">
-          <div className={`grid gap-12 items-center min-h-[82vh] py-20 md:py-24 ${study.mainImage ? "grid-cols-1 lg:grid-cols-[1fr_1.1fr]" : "grid-cols-1"}`}>
+          <div className={`grid gap-12 items-center py-20 md:py-24 md:min-h-[82vh] ${study.mainImage ? "grid-cols-1 lg:grid-cols-[1fr_1.1fr]" : "grid-cols-1"}`}>
 
             {/* ── Left: text + metrics ── */}
             <div className="flex flex-col justify-center">
@@ -162,13 +162,13 @@ export default async function CaseStudyPage({
               )}
 
               {heroMetrics.length > 0 && (
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-3">
                   {heroMetrics.map((m: { improvement: string; label: string }, i: number) => (
                     <div
                       key={i}
-                      className={`rounded-xl border px-6 py-4 text-center min-w-27.5 ${HERO_METRIC_STYLES[i]}`}
+                      className={`rounded-xl border px-4 sm:px-6 py-4 text-center flex-1 min-w-0 ${HERO_METRIC_STYLES[i]}`}
                     >
-                      <div className="text-3xl font-black">{m.improvement}</div>
+                      <div className="text-2xl sm:text-3xl font-black">{m.improvement}</div>
                       <div className="text-xs text-slate-400 mt-1 uppercase tracking-wide">{m.label}</div>
                     </div>
                   ))}

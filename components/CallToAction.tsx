@@ -33,7 +33,7 @@ export default function CallToAction() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-12">
                         <Link
                             href="/contact"
-                            className="group relative inline-flex items-center justify-center rounded-lg bg-volt px-12 py-5 text-base font-bold uppercase tracking-wide text-black transition-all duration-300 hover:brightness-110 hover:shadow-2xl hover:shadow-volt/40 hover:scale-105"
+                            className="group relative inline-flex w-full sm:w-auto items-center justify-center rounded-lg bg-volt px-8 sm:px-12 py-5 text-base font-bold uppercase tracking-wide text-black transition-all duration-300 hover:brightness-110 hover:shadow-2xl hover:shadow-volt/40 hover:scale-105"
                         >
                             <span className="relative z-10 flex items-center gap-2">
                                 Get a Free Website Audit
@@ -45,7 +45,7 @@ export default function CallToAction() {
 
                         <Link
                             href="/case-studies"
-                            className="group inline-flex items-center justify-center rounded-lg border-2 border-volt-500/50 bg-volt-500/8 px-12 py-5 text-base font-bold uppercase tracking-wide text-volt-400 backdrop-blur-sm transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white hover:shadow-xl hover:shadow-volt-500/20 hover:scale-105"
+                            className="group inline-flex w-full sm:w-auto items-center justify-center rounded-lg border-2 border-volt-500/50 bg-volt-500/8 px-8 sm:px-12 py-5 text-base font-bold uppercase tracking-wide text-volt-400 backdrop-blur-sm transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white hover:shadow-xl hover:shadow-volt-500/20 hover:scale-105"
                         >
                             <span className="flex items-center gap-2">
                                 View Case Studies
