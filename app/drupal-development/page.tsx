@@ -7,29 +7,29 @@ import JsonLd from "@/components/JsonLd";
 import FaqSection from "@/components/FaqSection";
 
 export const metadata: Metadata = {
-  title: "Custom WordPress Development | Fast, Clean, No Bloat",
+  title: "Custom Drupal Development | Enterprise CMS, No Bloat",
   description:
-    "Custom WordPress development with clean code, no page builders, and performance-first architecture — built to scale and stay fast long-term.",
-  alternates: { canonical: "/wordpress-development" },
+    "Custom Drupal development with clean architecture, performance-first builds, and enterprise-grade content modeling — no contrib bloat, no shortcuts.",
+  alternates: { canonical: "/drupal-development" },
   openGraph: {
-    title: "Custom WordPress Development | Fast, Clean, No Bloat | Black Lab Dev",
+    title: "Custom Drupal Development | Enterprise CMS, No Bloat | Black Lab Dev",
     description:
-      "Custom WordPress development with clean code, no page builders, and performance-first architecture — built to scale and stay fast long-term.",
-    url: "/wordpress-development",
+      "Custom Drupal development with clean architecture, performance-first builds, and enterprise-grade content modeling — no contrib bloat, no shortcuts.",
+    url: "/drupal-development",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Custom WordPress Development | Fast, Clean, No Bloat | Black Lab Dev",
+    title: "Custom Drupal Development | Enterprise CMS, No Bloat | Black Lab Dev",
     description:
-      "Custom WordPress development with clean code, no page builders, and performance-first architecture — built to scale and stay fast long-term.",
+      "Custom Drupal development with clean architecture, performance-first builds, and enterprise-grade content modeling.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
 
 const services = [
   {
-    title: "Custom WordPress Development",
-    body: "We build fully custom themes tailored to your design, functionality, and performance requirements — without relying on prebuilt templates.",
+    title: "Custom Drupal Theme Development",
+    body: "We build fully custom Drupal themes tailored to your design and content architecture — no starter kits bolted together, no contrib theme overrides fighting your markup.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -37,8 +37,8 @@ const services = [
     ),
   },
   {
-    title: "Gutenberg Block Development",
-    body: "Custom blocks that give your team editorial flexibility without sacrificing performance or code quality.",
+    title: "Content Architecture & Entity Modeling",
+    body: "Drupal's entity system is powerful — when used correctly. We design content types, taxonomies, paragraphs, and entity references that scale without becoming a maintenance nightmare.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />
@@ -46,8 +46,8 @@ const services = [
     ),
   },
   {
-    title: "API & System Integrations",
-    body: "We connect WordPress with CRMs, third-party platforms, and internal systems using clean, scalable integrations.",
+    title: "Custom Module Development",
+    body: "When contrib modules don't fit cleanly — or introduce too much overhead — we build custom modules scoped to your exact requirements. Clean, testable, well-documented.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -55,8 +55,8 @@ const services = [
     ),
   },
   {
-    title: "Headless WordPress Development",
-    body: "For advanced use cases, we decouple the frontend using modern frameworks while keeping WordPress as a powerful backend CMS.",
+    title: "Headless / Decoupled Drupal",
+    body: "For teams that need Drupal's content modeling with a modern frontend. We build decoupled architectures using JSON:API or GraphQL with React or Next.js on the presentation layer.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" />
@@ -64,8 +64,8 @@ const services = [
     ),
   },
   {
-    title: "Website Performance Optimization",
-    body: "We optimize Core Web Vitals, reduce load times, and improve overall site performance — whether we built the site or not.",
+    title: "Performance & Security Hardening",
+    body: "We optimize caching layers, audit contrib dependencies, lock down permissions, and tune server-side rendering — so your Drupal site is fast and secure, not just functional.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -75,59 +75,68 @@ const services = [
 ];
 
 const processSteps = [
-  { step: "01", title: "Discovery & Requirements", body: "We start by understanding your goals, audience, and technical constraints — before writing a single line of code." },
-  { step: "02", title: "Architecture Planning", body: "Data structures, content models, and integration points are mapped out upfront. No retrofitting later." },
-  { step: "03", title: "Performance Considerations", body: "Every architectural decision is evaluated against its impact on load time, Core Web Vitals, and long-term maintainability." },
-  { step: "04", title: "Custom Development", body: "Clean, documented code with no bloated dependencies. Themes and plugins built specifically for your requirements." },
-  { step: "05", title: "Performance Optimization", body: "Asset loading, image optimization, caching strategy, and Core Web Vitals tuning before launch — not as an afterthought." },
-  { step: "06", title: "Launch & Iteration", body: "We don't disappear after go-live. We monitor, measure, and iterate based on real traffic data." },
+  { step: "01", title: "Discovery & Content Audit", body: "We start by understanding your content model, editorial workflows, and technical constraints — before writing any code or choosing any modules." },
+  { step: "02", title: "Architecture & Entity Design", body: "Content types, taxonomies, views, and integrations are mapped out upfront. No retrofitting entity references after the build is half done." },
+  { step: "03", title: "Performance Planning", body: "Caching strategy, render pipeline decisions, and asset loading are evaluated against Core Web Vitals targets from the start — not patched in post-launch." },
+  { step: "04", title: "Custom Development", body: "Clean theme code, purpose-built modules, and no unnecessary contrib dependencies. Everything built is scoped to your actual requirements." },
+  { step: "05", title: "Security & QA", body: "Permissions audit, update path verification, cross-browser testing, and accessibility review. We find the problems before your users and your security team do." },
+  { step: "06", title: "Launch & Ongoing Support", body: "Deployment is planned, not improvised. We handle module updates, security patches, and performance monitoring so your Drupal site stays healthy long-term." },
 ];
 
 const faqs = [
   {
-    q: "Why not use a WordPress theme?",
-    a: "Themes often introduce unnecessary code, CSS bloat, and JavaScript dependencies that slow down every page on your site — even pages that don't use those features. Custom builds give you exactly what you need, nothing more.",
+    q: "Why choose Drupal over WordPress?",
+    a: "Drupal excels at complex content modeling, granular access control, and enterprise-scale content architectures. If your site has multiple content types with complex relationships, role-based editorial workflows, or needs to serve content across multiple channels — Drupal's entity system handles that natively where WordPress requires layers of plugins.",
   },
   {
-    q: "How long does a WordPress project take?",
-    a: "Most projects range from 4–10 weeks depending on complexity, integrations, and content requirements. We scope accurately upfront so there are no surprises.",
+    q: "Is Drupal still relevant in 2026?",
+    a: "Drupal powers some of the largest enterprise sites in the world — government, healthcare, higher education, and Fortune 500 companies. Drupal 11 is modern, actively maintained, and has a clear roadmap. The platform is relevant when the problem requires its strengths: structured content, complex permissions, and multi-site architectures.",
   },
   {
-    q: "Can you improve an existing WordPress site?",
-    a: "Yes. We regularly audit and optimize underperforming sites — improving speed, code quality, and maintainability without necessarily starting from scratch.",
+    q: "How long does a custom Drupal project take?",
+    a: "Most Drupal builds run 8–16 weeks depending on content architecture complexity, custom module requirements, and integration scope. Enterprise projects with complex migrations or multi-site setups can extend beyond that. We scope accurately upfront — no discovery phases that turn into open-ended billing.",
   },
   {
-    q: "Do you use page builders like Elementor?",
-    a: "No. Page builders generate excessive markup, load large CSS/JS payloads, and make sites difficult to maintain at scale. We build with clean code that performs and lasts.",
+    q: "Can you improve an existing Drupal site?",
+    a: "Yes. We regularly audit and optimize underperforming Drupal installations — cleaning up contrib bloat, improving caching, fixing content architecture issues, and upgrading from older Drupal versions. Not every project needs a rebuild.",
+  },
+  {
+    q: "Do you handle Drupal migrations and upgrades?",
+    a: "Yes. Whether you're migrating from Drupal 7/8/9 to Drupal 11, moving from another CMS to Drupal, or migrating away from Drupal to a headless setup — we handle the full migration path including content, configuration, and redirects.",
+  },
+  {
+    q: "How much does custom Drupal development cost?",
+    a: "Custom Drupal projects at Black Lab Development range from $15,000 for focused rebuilds to $80,000+ for complex enterprise platforms with custom modules, multi-site architectures, and extensive content migrations. Pricing reflects actual scope — not a packaged tier.",
   },
 ];
 
 const useCases = [
-  "Marketing websites that need speed and long-term flexibility",
-  "Content-heavy platforms where editorial control matters",
-  "SEO-driven websites competing in established categories",
-  "Businesses outgrowing template-based builds",
-  "Companies needing custom integrations with internal systems",
+  "Enterprise websites with complex content models and editorial workflows",
+  "Organizations needing granular role-based access control",
+  "Multi-site architectures serving multiple brands or regions",
+  "Government, healthcare, and higher-ed sites with compliance requirements",
+  "Businesses migrating from legacy Drupal versions to Drupal 11",
+  "Teams that need structured content delivered across multiple channels",
 ];
 
 const performancePoints = [
-  { label: "Core Web Vitals optimization", detail: "LCP, CLS, and INP tuned to pass — not just pass, but score well." },
-  { label: "Minimal JavaScript overhead", detail: "We load only what's needed. No kitchen-sink plugin bundles." },
-  { label: "Efficient asset loading", detail: "Critical CSS inlined, images lazy-loaded, fonts optimized." },
-  { label: "Clean HTML structure", detail: "Semantic markup that search engines and assistive technologies can parse." },
+  { label: "Render caching & page cache optimization", detail: "Drupal's caching system is powerful but misconfused by default. We configure it correctly from day one." },
+  { label: "Minimal contrib overhead", detail: "Every contributed module is evaluated against its performance cost. If custom code is cleaner, we write it." },
+  { label: "Efficient asset loading", detail: "Libraries loaded only where needed. No global CSS/JS payloads from modules you barely use." },
+  { label: "Clean, semantic markup", detail: "Twig templates built for performance and accessibility — not generated by a theme engine you can't control." },
 ];
 
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://blacklabdev.com/wordpress-development#service",
-  name: "Custom WordPress Development",
-  url: "https://blacklabdev.com/wordpress-development",
+  "@id": "https://blacklabdev.com/drupal-development#service",
+  name: "Custom Drupal Development",
+  url: "https://blacklabdev.com/drupal-development",
   description:
-    "Custom WordPress development with clean code, no page builders, and performance-first architecture — built to scale and stay fast long-term.",
+    "Custom Drupal development with clean architecture, performance-first builds, and enterprise-grade content modeling — no contrib bloat, no shortcuts.",
   provider: { "@type": "Organization", "@id": "https://blacklabdev.com/#business" },
   areaServed: { "@type": "Country", name: "United States" },
-  serviceType: "WordPress Development",
+  serviceType: "Drupal Development",
 };
 
 const faqSchema = {
@@ -140,17 +149,17 @@ const faqSchema = {
   })),
 };
 
-export default function WordPressDevelopmentPage() {
+export default function DrupalDevelopmentPage() {
   return (
     <main className="w-full bg-[#0b0b0c] text-white">
       <JsonLd data={[serviceSchema, faqSchema]} />
       <PageHero
-        label="WordPress Development Agency"
-        title="WordPress Development Agency for Custom, High-Performance Websites"
-        titleHighlight="Custom, High-Performance Websites"
-        description="We design and build fast, scalable websites using WordPress — without bloated themes, page builders, or unnecessary plugins."
+        label="Drupal Development Agency"
+        title="Drupal Development for Enterprise-Grade Content Platforms"
+        titleHighlight="Enterprise-Grade Content Platforms"
+        description="We build custom Drupal sites with clean architecture, structured content models, and performance-first engineering — no contrib bloat, no shortcuts, no maintenance nightmares."
         backgroundImage="/images/services-hero-bg.png"
-        badges={["No page builders", "Performance-first architecture", "Clean, maintainable code"]}
+        badges={["No contrib bloat", "Enterprise content modeling", "Clean, maintainable code"]}
       />
 
       {/* Hero CTAs */}
@@ -180,24 +189,24 @@ export default function WordPressDevelopmentPage() {
                 The Problem
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-                Custom WordPress Development Built to Perform
+                Custom Drupal Development Built for Complex Content
               </h2>
               <p className="text-slate-400 leading-relaxed mb-6">
-                Most WordPress websites are slow, difficult to maintain, and overloaded with plugins. That&apos;s not a platform problem — it&apos;s a build problem.
+                Most Drupal sites are over-moduled, under-architected, and slow. That&apos;s not a platform problem — it&apos;s a build problem. Drupal&apos;s entity system and content architecture tools are best-in-class when used correctly.
               </p>
               <p className="text-slate-400 leading-relaxed mb-6">
-                At Black Lab Dev, we approach WordPress from an engineering perspective. Every site is custom-built for performance, scalability, and long-term maintainability.
+                At Black Lab Dev, we approach Drupal from an engineering perspective. Every site is custom-built with clean content modeling, purpose-built modules, and performance tuned from the architecture layer — not patched in after launch.
               </p>
               <p className="text-slate-400 leading-relaxed font-medium">
-                No shortcuts. No templates. No technical debt.
+                No contrib sprawl. No theme engine fighting your markup. No technical debt by default.
               </p>
             </div>
             <div className="space-y-4">
               {[
-                { problem: "Bloated themes", impact: "Third-party themes ship with code for features you'll never use, loaded on every page request." },
-                { problem: "Page builder dependency", impact: "Elementor and Divi create vendor lock-in, add significant JS/CSS weight, and degrade Core Web Vitals." },
-                { problem: "Plugin-heavy setups", impact: "Every plugin is a potential conflict, security risk, and performance hit — most solve problems that custom code handles cleanly." },
-                { problem: "No clear maintainability plan", impact: "Sites built without architecture discipline become hard to update and impossible to hand off." },
+                { problem: "Contrib module sprawl", impact: "Every unnecessary module is a security surface, a performance hit, and a future upgrade blocker. Most solve problems that purpose-built code handles more cleanly." },
+                { problem: "Content model complexity", impact: "Poorly designed entity relationships create editorial friction, broken views, and content that can't be reused across contexts." },
+                { problem: "Untuned caching", impact: "Drupal's cache system is powerful but misconfigured by default. Uncached or over-invalidated pages mean slow load times despite a capable platform." },
+                { problem: "Upgrade path neglect", impact: "Sites built without upgrade discipline become stuck on outdated core versions — exposed to security vulnerabilities and locked out of new features." },
               ].map((item) => (
                 <div key={item.problem} className="rounded-xl border border-neutral-800 bg-neutral-950 p-6">
                   <div className="flex items-start gap-3">
@@ -226,10 +235,10 @@ export default function WordPressDevelopmentPage() {
               What We Do
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              WordPress Development Services
+              Drupal Development Services
             </h2>
             <p className="text-slate-400 leading-relaxed">
-              Full-service WordPress development for businesses that need more than an off-the-shelf solution.
+              Full-service Drupal development for organizations that need more than a default install with a pile of contrib modules.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -259,22 +268,22 @@ export default function WordPressDevelopmentPage() {
                 Why We&apos;re Different
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-                Built Without the Bloat
+                Built Without the Contrib Bloat
               </h2>
               <p className="text-slate-400 leading-relaxed mb-6">
-                Most agencies rely on prebuilt themes, page builders, and plugin-heavy setups. We don&apos;t. Instead, we build lean, efficient WordPress sites from the ground up.
+                Most agencies install 80+ contrib modules and call it architecture. We don&apos;t. Instead, we use Drupal&apos;s core systems correctly and write custom code where contrib introduces more problems than it solves.
               </p>
               <p className="text-slate-400 leading-relaxed">
-                Your website becomes an asset — not a liability.
+                Your Drupal site becomes an asset your team can maintain — not a black box only the original agency can touch.
               </p>
             </div>
             <div className="space-y-4">
               {[
-                { label: "Faster load times", detail: "No unnecessary CSS or JavaScript shipped to every visitor on every page." },
-                { label: "Better SEO performance", detail: "Speed, structure, and clean markup — the technical foundation search engines reward." },
-                { label: "Cleaner, more maintainable code", detail: "Code that a developer can understand, modify, and extend without reverse-engineering a theme." },
-                { label: "Fewer plugin conflicts", detail: "Less surface area for security vulnerabilities and update-related breakage." },
-                { label: "Greater flexibility for future updates", detail: "A custom build adapts to your needs. A theme fights back." },
+                { label: "Faster load times", detail: "No unnecessary module overhead shipped on every request. Caching tuned from day one." },
+                { label: "Cleaner upgrade paths", detail: "Fewer contrib dependencies means fewer blockers when upgrading Drupal core." },
+                { label: "Stronger security posture", detail: "Less contrib surface area means fewer vulnerability vectors and faster security patch cycles." },
+                { label: "Better editorial experience", detail: "Content types and admin UX designed for your editors — not dictated by a module's default UI." },
+                { label: "Real maintainability", detail: "Code your next developer can read, understand, and extend without reverse-engineering a contrib stack." },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-4 rounded-xl border border-neutral-800 bg-neutral-950 p-5">
                   <div className="w-6 h-6 rounded-full bg-volt-500/15 flex items-center justify-center shrink-0 mt-0.5">
@@ -301,10 +310,10 @@ export default function WordPressDevelopmentPage() {
               Our Approach
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              A Developer-First Approach
+              Architecture First, Modules Second
             </h2>
             <p className="text-slate-400 leading-relaxed">
-              We don&apos;t design something first and try to make it work later. Every project starts with architecture planning, data structure decisions, and performance considerations — then we build.
+              We don&apos;t start with a list of contrib modules and work backwards. Every project starts with content architecture, entity relationships, and performance planning — then we build only what&apos;s needed.
             </p>
           </div>
           <div className="space-y-10">
@@ -330,13 +339,13 @@ export default function WordPressDevelopmentPage() {
                 Performance
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-                Optimized for Speed and SEO
+                Optimized for Speed and Security
               </h2>
               <p className="text-slate-400 leading-relaxed mb-6">
-                Site speed isn&apos;t just a nice-to-have — it directly impacts rankings, conversions, and user experience. Our builds focus on Core Web Vitals from day one, not as a post-launch cleanup.
+                Drupal can be fast — most Drupal sites just aren&apos;t. The difference is architecture decisions made at the right time, not performance patches applied after launch.
               </p>
               <p className="text-slate-400 leading-relaxed">
-                The result: faster sites that perform better in search and convert more users.
+                We build Drupal sites that pass Core Web Vitals, load efficiently, and maintain a strong security posture through disciplined contrib management and regular updates.
               </p>
               <div className="mt-8">
                 <Link
@@ -373,10 +382,10 @@ export default function WordPressDevelopmentPage() {
                 Use Cases
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-                When Custom WordPress Development Makes Sense
+                When Drupal Is the Right Choice
               </h2>
               <p className="text-slate-400 leading-relaxed">
-                Not every project needs a custom build — but if any of these sound familiar, a template or page builder isn&apos;t going to cut it.
+                Drupal isn&apos;t always the answer — but when you need structured content at scale, granular permissions, or multi-site architectures, it&apos;s hard to beat.
               </p>
             </div>
             <div className="space-y-3">
@@ -397,18 +406,21 @@ export default function WordPressDevelopmentPage() {
           <div className="max-w-2xl mb-14">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-volt-500/35 bg-volt-500/8 text-volt-500 text-xs font-bold tracking-[0.2em] uppercase mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_8px_rgba(227,245,68,0.9)]" />
-              Case Studies
+              Featured Build
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Recent WordPress Projects
+              Vault Cybersecurity — Drupal Build
             </h2>
+            <p className="text-slate-400 leading-relaxed">
+              A Drupal-powered cybersecurity platform with tiered service architectures, structured content modeling, and an industrial design language — built from scratch with zero contrib bloat.
+            </p>
             <div className="mt-4 h-px w-32 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { stat: "4.3s → 1.2s", label: "Load time reduction", detail: "Custom build replacing a bloated Elementor theme" },
-              { stat: "100/100", label: "Lighthouse score", detail: "Core Web Vitals passing across all pages after rebuild" },
-              { stat: "Zero", label: "Plugin conflicts", detail: "Complex data integration built with clean custom code" },
+              { stat: "Custom", label: "Entity architecture", detail: "Structured content types for tiered security service offerings" },
+              { stat: "Zero", label: "Contrib bloat", detail: "Purpose-built modules replacing off-the-shelf dependencies" },
+              { stat: "100%", label: "Custom theme", detail: "Industrial design language built from Twig templates — no starter kit" },
             ].map((item) => (
               <div key={item.label} className="rounded-2xl border border-neutral-800 bg-neutral-950 px-8 py-8 text-center transition-all duration-300 hover:border-volt-500/30 hover:shadow-[0_0_40px_rgba(227,245,68,0.05)]">
                 <div className="text-3xl font-black text-volt-500 drop-shadow-[0_0_10px_rgba(227,245,68,0.4)] mb-2">{item.stat}</div>
@@ -417,22 +429,23 @@ export default function WordPressDevelopmentPage() {
               </div>
             ))}
           </div>
-          <div className="mt-10 text-center">
-            <Link
-              href="/case-studies"
-              className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 bg-volt-500/8 px-8 py-4 text-sm font-semibold uppercase tracking-wide text-volt-400 transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white hover:shadow-lg hover:shadow-volt-500/20"
+          <div className="mt-8 text-center">
+            <a
+              href="https://vault.blacklabdev.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-volt-500 hover:text-volt-400 transition-colors duration-200"
             >
-              View Full Portfolio
-              <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              Visit vault.blacklabdev.com
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
 
       <FaqSection
-       
         faqs={faqs.map((faq) => ({ question: faq.q, answer: faq.a }))}
       />
 
@@ -448,10 +461,16 @@ export default function WordPressDevelopmentPage() {
               All Services →
             </Link>
             <Link
-              href="/services/b2b-website-design"
+              href="/wordpress-development"
               className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
             >
-              B2B Website Design →
+              WordPress Development →
+            </Link>
+            <Link
+              href="/services/custom-web-development"
+              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+            >
+              Custom Web Development →
             </Link>
             <Link
               href="/services/website-performance-optimization"
@@ -459,20 +478,14 @@ export default function WordPressDevelopmentPage() {
             >
               Website Performance →
             </Link>
-            <Link
-              href="/drupal-development"
-              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
-            >
-              Drupal Development →
-            </Link>
           </div>
         </div>
       </section>
 
       <PageClose
-        title="Work With a WordPress Development Partner That Builds It Right"
-        bodyPrimary="If your current site is slow, hard to manage, or limiting your growth — it's time for a better foundation. We build WordPress sites that perform, scale, and stay maintainable for years."
-        bodySecondary="No bloated themes. No page builders. Just clean, performant WordPress built the right way."
+        title="Work With a Drupal Development Partner That Builds It Right"
+        bodyPrimary="If your current Drupal site is slow, over-moduled, or stuck on an outdated version — it's time for a better foundation. We build Drupal platforms that perform, scale, and stay maintainable for years."
+        bodySecondary="No contrib sprawl. No theme engine compromises. Just clean, performant Drupal built the right way."
         secondaryHref="/case-studies"
         secondaryLabel="View Case Studies"
       />

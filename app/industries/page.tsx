@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image"
-import PageHero from "@/components/PageHero"
-import PageClose from "@/components/PageClose"
+import Image from "next/image";
+import Link from "next/link";
+import PageHero from "@/components/PageHero";
+import PageClose from "@/components/PageClose";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import JsonLd from "@/components/JsonLd";
 
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
 const industries = [
   {
     title: "Healthcare & Medical",
+    href: "/industries/healthcare",
     image: "/images/industries/healthcare.png",
     description: (
       <>
@@ -46,6 +48,7 @@ const industries = [
   },
   {
     title: "SaaS & Technology Platforms",
+    href: "/industries/technology",
     image: "/images/industries/saas.png",
     description: (
       <>
@@ -64,6 +67,7 @@ const industries = [
   },
   {
     title: "Manufacturing & Industrial",
+    href: "/industries/manufacturing",
     image: "/images/industries/manufacturing.png",
     description: (
       <>
@@ -82,6 +86,7 @@ const industries = [
   },
   {
     title: "E-commerce & Digital Products",
+    href: "/industries/ecommerce",
     image: "/images/industries/ecommerce.png",
     description: (
       <>
@@ -100,6 +105,7 @@ const industries = [
   },
   {
     title: "Enterprise & Internal Systems",
+    href: "/industries/professional-services",
     image: "/images/industries/enterprise.png",
     description: (
       <>
@@ -136,10 +142,26 @@ const webPageSchema = {
   },
 };
 
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Industries Served by Black Lab Development",
+  url: "https://blacklabdev.com/industries",
+  numberOfItems: 6,
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Manufacturing & Industrial", url: "https://blacklabdev.com/industries/manufacturing" },
+    { "@type": "ListItem", position: 2, name: "B2B & Professional Services", url: "https://blacklabdev.com/industries/professional-services" },
+    { "@type": "ListItem", position: 3, name: "Healthcare & Life Sciences", url: "https://blacklabdev.com/industries/healthcare" },
+    { "@type": "ListItem", position: 4, name: "SaaS & Technology", url: "https://blacklabdev.com/industries/technology" },
+    { "@type": "ListItem", position: 5, name: "Ecommerce & DTC", url: "https://blacklabdev.com/industries/ecommerce" },
+    { "@type": "ListItem", position: 6, name: "Education & Training", url: "https://blacklabdev.com/industries/education" },
+  ],
+};
+
 export default function IndustriesPage() {
   return (
     <main className="w-full bg-[#0b0b0c] text-white">
-      <JsonLd data={webPageSchema} />
+      <JsonLd data={[webPageSchema, itemListSchema]} />
       {/* ================= HERO ================= */}
       <PageHero
         label="Industries"
@@ -215,6 +237,17 @@ export default function IndustriesPage() {
                   <div className="text-neutral-400 leading-relaxed">
                     {industry.description}
                   </div>
+                  {industry.href && (
+                    <Link
+                      href={industry.href}
+                      className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-volt-500 hover:text-volt-400 transition-colors duration-200"
+                    >
+                      Explore this vertical
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  )}
                 </div>
 
                 {/* Image */}

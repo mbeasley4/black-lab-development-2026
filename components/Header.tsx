@@ -14,57 +14,64 @@ type ServiceCard = {
     description: string;
 };
 
-const SERVICE_CARDS: ServiceCard[] = [
+const DEV_SERVICES: ServiceCard[] = [
     {
-        title: "Custom Web Development",
+        title: "Custom web development",
         href: "/services/custom-web-development",
-        description: "Next.js, headless & WordPress builds engineered for speed.",
+        description: "Next.js, headless & full-stack builds engineered for speed.",
+    },
+];
+
+const PLATFORM_SERVICES: ServiceCard[] = [
+    {
+        title: "WordPress development",
+        href: "/wordpress-development",
+        description: "Custom themes, no page builders — clean and maintainable.",
     },
     {
-        title: "B2B Website Design",
-        href: "/services/b2b-website-design",
-        description: "Conversion-focused sites that win complex sales cycles.",
+        title: "Drupal development",
+        href: "/drupal-development",
+        description: "Enterprise content modeling, custom modules, no contrib bloat.",
     },
     {
-        title: "Performance Optimization",
-        href: "/services/website-performance-optimization",
-        description: "Core Web Vitals, sub-second loads & technical SEO.",
+        title: "Laravel development",
+        href: "/laravel-development",
+        description: "APIs, integrations & custom platforms — built for production.",
     },
+];
+
+const OPT_SERVICES: ServiceCard[] = [
     {
-        title: "Conversion Optimization",
+        title: "Conversion optimization",
         href: "/services/conversion-optimization",
         description: "Turn more of your existing traffic into qualified leads.",
     },
     {
-        title: "Manufacturing Website Design",
-        href: "/services/manufacturing-website-design",
-        description: "Industrial sites that generate RFQs and distributor leads.",
-    },
-    {
-        title: "WordPress Development",
-        href: "/wordpress-development",
-        description: "Custom themes, no page builders — clean and maintainable.",
+        title: "Performance optimization",
+        href: "/services/website-performance-optimization",
+        description: "Core Web Vitals, sub-second loads & technical SEO.",
     },
 ];
 
-// Quick-link list (right column of the megamenu)
+// Flat list for mobile drawer
 const SERVICE_LINKS: { label: string; href: string }[] = [
-    { label: "All Services", href: "/services" },
-    { label: "Custom Web Development", href: "/services/custom-web-development" },
-    { label: "B2B Website Design", href: "/services/b2b-website-design" },
-    { label: "Conversion Optimization", href: "/services/conversion-optimization" },
-    { label: "Manufacturing Website Design", href: "/services/manufacturing-website-design" },
-    { label: "Performance Optimization", href: "/services/website-performance-optimization" },
-    { label: "WordPress Development", href: "/wordpress-development" },
+    { label: "All services", href: "/services" },
+    { label: "Custom web development", href: "/services/custom-web-development" },
+    { label: "Conversion optimization", href: "/services/conversion-optimization" },
+    { label: "Performance optimization", href: "/services/website-performance-optimization" },
+    { label: "WordPress development", href: "/wordpress-development" },
+    { label: "Drupal development", href: "/drupal-development" },
+    { label: "Laravel development", href: "/laravel-development" },
 ];
 
-// Industries dropdown links
-const INDUSTRY_LINKS: { label: string; href: string }[] = [
-    { label: "All Industries", href: "/industries" },
-    { label: "B2B & Professional Services", href: "/industries" },
-    { label: "Manufacturing", href: "/services/manufacturing-website-design" },
-    { label: "SaaS & Technology", href: "/industries" },
-    { label: "Healthcare", href: "/industries" },
+// Industries megamenu links (verticals only — "All industries" appears in the footer)
+const INDUSTRY_LINKS: { label: string; href: string; description: string }[] = [
+    { label: "Manufacturing", href: "/industries/manufacturing", description: "RFQ generation, distributor portals, product catalogs." },
+    { label: "B2B & professional services", href: "/industries/professional-services", description: "Complex sales cycles, multiple decision makers." },
+    { label: "Healthcare", href: "/industries/healthcare", description: "Patient acquisition, booking integration, WCAG compliance." },
+    { label: "SaaS & technology", href: "/industries/technology", description: "Product-led growth, developer docs, conversion architecture." },
+    { label: "Ecommerce & DTC", href: "/industries/ecommerce", description: "Shopify, WooCommerce, headless builds, AOV optimization." },
+    { label: "Education & training", href: "/industries/education", description: "Enrollment optimization, LMS integration, accessible design." },
 ];
 
 export default function Header() {
@@ -187,15 +194,15 @@ export default function Header() {
         return pathname === href || pathname.startsWith(`${href}/`);
     };
 
-    // Services is "active" for any /services/* or /wordpress-development route
+    // Services is "active" for any /services/* or platform-specific service routes
     const servicesActive =
-        pathname.startsWith("/services") || pathname === "/wordpress-development";
+        pathname.startsWith("/services") || pathname === "/wordpress-development" || pathname === "/drupal-development" || pathname === "/laravel-development";
     const industriesActive = pathname.startsWith("/industries");
 
     // Plain top-level links (after the Services + Industries menus)
     const plainNav = [
-        { label: "Case Studies", href: "/case-studies" },
-        { label: "SEO & Insights", href: "/articles" },
+        { label: "Case studies", href: "/case-studies" },
+        { label: "SEO & insights", href: "/articles" },
         { label: "About", href: "/about" },
     ];
 
@@ -289,7 +296,7 @@ export default function Header() {
                                     onClick={() => setServicesExpanded((v) => !v)}
                                     aria-expanded={servicesExpanded}
                                     aria-controls="mobile-services-panel"
-                                    className={`w-full flex items-center justify-between gap-3 py-3.5 text-[16px] uppercase tracking-widest font-medium transition-all duration-300
+                                    className={`w-full flex items-center justify-between gap-3 py-3.5 text-[16px] tracking-normal font-medium transition-all duration-300
                                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 rounded-sm
                                         ${servicesActive
                                             ? "text-volt-500 drop-shadow-[0_0_8px_rgba(227,245,68,0.7)]"
@@ -317,7 +324,7 @@ export default function Header() {
                                                     key={s.label}
                                                     href={s.href}
                                                     onClick={closeDrawer}
-                                                    className={`py-2 text-[13px] uppercase tracking-[0.12em] transition-colors duration-200 rounded-sm
+                                                    className={`py-2 text-[14px] tracking-normal transition-colors duration-200 rounded-sm
                                                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70
                                                         ${active ? "text-volt-500" : "text-[#a8a8a8] hover:text-volt-400"}`}
                                                 >
@@ -344,7 +351,7 @@ export default function Header() {
                                     onClick={() => setIndustriesExpanded((v) => !v)}
                                     aria-expanded={industriesExpanded}
                                     aria-controls="mobile-industries-panel"
-                                    className={`w-full flex items-center justify-between gap-3 py-3.5 text-[16px] uppercase tracking-widest font-medium transition-all duration-300
+                                    className={`w-full flex items-center justify-between gap-3 py-3.5 text-[16px] tracking-normal font-medium transition-all duration-300
                                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 rounded-sm
                                         ${industriesActive
                                             ? "text-volt-500 drop-shadow-[0_0_8px_rgba(227,245,68,0.7)]"
@@ -362,9 +369,18 @@ export default function Header() {
                                 <div
                                     id="mobile-industries-panel"
                                     className="overflow-hidden transition-all duration-300 ease-out"
-                                    style={{ maxHeight: industriesExpanded ? `${INDUSTRY_LINKS.length * 44 + 8}px` : "0px" }}
+                                    style={{ maxHeight: industriesExpanded ? `${(INDUSTRY_LINKS.length + 1) * 44 + 8}px` : "0px" }}
                                 >
                                     <div className="ml-4 border-l border-volt-500/15 pl-4 py-1 flex flex-col">
+                                        <Link
+                                            href="/industries"
+                                            onClick={closeDrawer}
+                                            className={`py-2 text-[14px] tracking-normal transition-colors duration-200 rounded-sm
+                                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70
+                                                ${pathname === "/industries" ? "text-volt-500" : "text-[#a8a8a8] hover:text-volt-400"}`}
+                                        >
+                                            All industries
+                                        </Link>
                                         {INDUSTRY_LINKS.map((s) => {
                                             const active = pathname === s.href;
                                             return (
@@ -372,7 +388,7 @@ export default function Header() {
                                                     key={s.label}
                                                     href={s.href}
                                                     onClick={closeDrawer}
-                                                    className={`py-2 text-[13px] uppercase tracking-[0.12em] transition-colors duration-200 rounded-sm
+                                                    className={`py-2 text-[14px] tracking-normal transition-colors duration-200 rounded-sm
                                                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70
                                                         ${active ? "text-volt-500" : "text-[#a8a8a8] hover:text-volt-400"}`}
                                                 >
@@ -401,7 +417,7 @@ export default function Header() {
                                         <Link
                                             href={item.href}
                                             onClick={closeDrawer}
-                                            className={`flex items-center gap-3 py-3.5 text-[16px] uppercase tracking-widest font-medium transition-all duration-300
+                                            className={`flex items-center gap-3 py-3.5 text-[16px] tracking-normal font-medium transition-all duration-300
                                                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 rounded-sm
                                                 ${active
                                                     ? "text-volt-500 drop-shadow-[0_0_8px_rgba(227,245,68,0.7)]"
@@ -429,10 +445,10 @@ export default function Header() {
                                 <Link
                                     href="/cincinnati-web-developer"
                                     onClick={closeDrawer}
-                                    className="flex items-center gap-2 py-3 text-[12px] uppercase tracking-[0.18em] text-[#8a8a8a] hover:text-volt-400 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
+                                    className="flex items-center gap-2 py-3 text-[13px] tracking-normal text-[#8a8a8a] hover:text-volt-400 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
                                 >
                                     <span aria-hidden className="text-volt-500/70">◆</span>
-                                    Cincinnati Web Developer
+                                    Cincinnati web developer
                                 </Link>
                             </div>
                         </div>
@@ -448,7 +464,7 @@ export default function Header() {
                             <Link
                                 href="/contact"
                                 onClick={closeDrawer}
-                                className="relative z-10 mt-4 block text-center py-2.5 px-6 uppercase tracking-widest text-[12px] font-bold
+                                className="relative z-10 mt-4 block text-center py-2.5 px-6 tracking-wide text-[13px] font-bold
                                     text-black bg-volt rounded-sm
                                     shadow-[0_0_20px_rgba(227,245,68,0.3)]
                                     hover:shadow-[0_0_32px_rgba(227,245,68,0.5)]
@@ -456,7 +472,7 @@ export default function Header() {
                                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt/70
                                     transition-all duration-300"
                             >
-                                Let&apos;s Work Together
+                                Let&apos;s work together
                             </Link>
                         </div>
                     </nav>
@@ -515,7 +531,7 @@ export default function Header() {
                     <nav
                         ref={navRef}
                         aria-label="Primary navigation"
-                        className="relative hidden lg:flex items-center gap-6 text-[12px] uppercase tracking-[0.12em]"
+                        className="relative hidden lg:flex items-center gap-6 text-[14px] tracking-[0.01em]"
                     >
                         {/* Services (megamenu) */}
                         <div
@@ -555,88 +571,89 @@ export default function Header() {
                                 aria-label="Services menu"
                                 onMouseEnter={() => handleMegaEnter("services")}
                                 onMouseLeave={handleMegaLeave}
-                                className={`absolute right-0 top-full pt-4 w-225 max-w-[92vw]
-                                    transition-all duration-200 ease-out origin-top-right
+                                style={{ top: HEADER_HEIGHT }}
+                                className={`fixed left-1/2 -translate-x-1/2 w-full max-w-375 px-6 pt-4
+                                    transition-all duration-200 ease-out origin-top
                                     ${openMega === "services"
                                         ? "opacity-100 translate-y-0 pointer-events-auto"
                                         : "opacity-0 -translate-y-2 pointer-events-none"
                                     }`}
                             >
-                                <div className="relative overflow-hidden rounded-lg bg-[#111214] border border-volt-500/20 shadow-[0_24px_60px_-12px_rgba(0,0,0,0.8),0_0_40px_rgba(227,245,68,0.12)]">
-                                    {/* Top accent line */}
+                                <div className="relative overflow-hidden rounded-xl bg-[#111214] border border-volt-500/20 shadow-[0_24px_60px_-12px_rgba(0,0,0,0.8),0_0_40px_rgba(227,245,68,0.12)]">
                                     <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/70 to-transparent" />
-                                    {/* Ambient glows */}
-                                    <div className="pointer-events-none absolute -top-10 right-10 w-56 h-56 bg-volt-500/10 rounded-full blur-3xl" />
-                                    <div className="pointer-events-none absolute bottom-0 left-10 w-40 h-40 bg-volt-500/6 rounded-full blur-3xl" />
+                                    <div className="pointer-events-none absolute -top-10 right-1/4 w-56 h-56 bg-volt-500/10 rounded-full blur-3xl" />
+                                    <div className="pointer-events-none absolute bottom-0 left-1/4 w-40 h-40 bg-volt-500/6 rounded-full blur-3xl" />
 
-                                    {/* 3-column card grid */}
-                                    <div className="relative p-5 grid grid-cols-3 gap-3">
-                                        {SERVICE_CARDS.map((card) => {
-                                            const active = isActive(card.href);
-                                            return (
-                                                <Link
-                                                    key={card.href}
-                                                    href={card.href}
-                                                    onClick={() => setOpenMega(null)}
-                                                    className={`group/card relative flex flex-col gap-3 rounded-lg border p-5 transition-all duration-200
-                                                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70
-                                                        ${active
-                                                            ? "border-volt-500/50 bg-volt-500/6"
-                                                            : "border-white/5 hover:border-volt-500/40 hover:bg-volt-500/4"
-                                                        }`}
-                                                >
-                                                    <span className="flex items-center gap-1 text-[12px] font-semibold uppercase tracking-wide text-[#e5e7eb] group-hover/card:text-volt-400 transition-colors duration-200 leading-tight">
-                                                        {card.title}
-                                                        <span
-                                                            aria-hidden
-                                                            className="opacity-0 -translate-x-1 group-hover/card:opacity-100 group-hover/card:translate-x-0 transition-all duration-200 text-volt-500"
-                                                        >
-                                                            →
-                                                        </span>
-                                                    </span>
-                                                    <span className="mt-1.5 block text-[12px] normal-case tracking-normal leading-relaxed text-[#9a9a9a]">
-                                                        {card.description}
-                                                    </span>
-                                                </Link>
-                                            );
-                                        })}
+                                    <div className="relative grid grid-cols-3 gap-0 divide-x divide-volt-500/10">
+                                        {[
+                                            { label: "Development", items: DEV_SERVICES },
+                                            { label: "Platforms", items: PLATFORM_SERVICES },
+                                            { label: "Optimization", items: OPT_SERVICES },
+                                        ].map((group) => (
+                                            <div key={group.label} className="px-6 py-5">
+                                                <h3 className="text-[11px] font-semibold tracking-[0.15em] uppercase text-volt-500/60 mb-3">{group.label}</h3>
+                                                <div className="grid grid-cols-1 gap-0.5">
+                                                    {group.items.map((card) => {
+                                                        const active = isActive(card.href);
+                                                        return (
+                                                            <Link
+                                                                key={card.href}
+                                                                href={card.href}
+                                                                onClick={() => setOpenMega(null)}
+                                                                className={`group/card flex items-baseline justify-between gap-4 rounded-lg px-3 py-2.5 -mx-3 transition-all duration-200
+                                                                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70
+                                                                    ${active ? "bg-volt-500/6" : "hover:bg-volt-500/4"}`}
+                                                            >
+                                                                <div>
+                                                                    <span className={`text-[13px] font-medium transition-colors duration-200 ${active ? "text-volt-400" : "text-[#e5e7eb] group-hover/card:text-volt-400"}`}>
+                                                                        {card.title}
+                                                                    </span>
+                                                                    <span className="block mt-0.5 text-[12px] text-[#777] leading-relaxed">{card.description}</span>
+                                                                </div>
+                                                                <span aria-hidden className="shrink-0 text-volt-500 opacity-0 group-hover/card:opacity-100 transition-opacity duration-200 text-[13px]">→</span>
+                                                            </Link>
+                                                        );
+                                                    })}
+                                                </div>
+                                            </div>
+                                        ))}
                                     </div>
 
                                     {/* Footer */}
-                                    <div className="relative border-t border-volt-500/10 px-5 py-3 flex items-center justify-between bg-black/30">
+                                    <div className="relative border-t border-volt-500/10 mx-6 py-3 flex items-center justify-between">
                                         <div className="flex items-center gap-5">
                                             <Link
                                                 href="/services"
                                                 onClick={() => setOpenMega(null)}
-                                                className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.16em] text-[#b8b8b8] hover:text-volt-400 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
+                                                className="inline-flex items-center gap-1.5 text-[12px] text-[#b8b8b8] hover:text-volt-400 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
                                             >
-                                                All Services →
+                                                All services →
                                             </Link>
                                             <span className="w-px h-3 bg-volt-500/15" />
                                             <Link
                                                 href="/cincinnati-web-developer"
                                                 onClick={() => setOpenMega(null)}
-                                                className="group/loc inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.16em] text-[#9a9a9a] hover:text-volt-400 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
+                                                className="inline-flex items-center gap-1.5 text-[12px] text-[#9a9a9a] hover:text-volt-400 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
                                             >
                                                 <span aria-hidden className="text-volt-500">◆</span>
-                                                Cincinnati Web Developer
+                                                Cincinnati web developer
                                             </Link>
                                         </div>
                                         <Link
                                             href="/contact"
                                             onClick={() => setOpenMega(null)}
-                                            className="text-[11px] uppercase tracking-[0.16em] text-volt-500 hover:text-volt-400 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
+                                            className="text-[12px] text-volt-500 hover:text-volt-400 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
                                         >
-                                            Schedule a Call →
+                                            Schedule a call →
                                         </Link>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Industries (dropdown) */}
+                        {/* Industries (megamenu) */}
                         <div
-                            className="relative"
+                            className="static"
                             onMouseEnter={() => handleMegaEnter("industries")}
                             onMouseLeave={handleMegaLeave}
                         >
@@ -666,38 +683,70 @@ export default function Header() {
                                 />
                             </Link>
 
-                            {/* Industries dropdown panel */}
+                            {/* Industries megamenu panel */}
                             <div
                                 role="region"
                                 aria-label="Industries menu"
-                                className={`absolute left-0 top-full mt-4 w-64
+                                onMouseEnter={() => handleMegaEnter("industries")}
+                                onMouseLeave={handleMegaLeave}
+                                style={{ top: HEADER_HEIGHT }}
+                                className={`fixed left-1/2 -translate-x-1/2 w-full max-w-375 px-6 pt-4
                                     transition-all duration-200 ease-out origin-top
                                     ${openMega === "industries"
                                         ? "opacity-100 translate-y-0 pointer-events-auto"
                                         : "opacity-0 -translate-y-2 pointer-events-none"
                                     }`}
                             >
-                                <div className="relative overflow-hidden rounded-md bg-[#111214] border border-volt-500/20 shadow-[0_24px_60px_-12px_rgba(0,0,0,0.8),0_0_40px_rgba(227,245,68,0.12)]">
+                                <div className="relative overflow-hidden rounded-xl bg-[#111214] border border-volt-500/20 shadow-[0_24px_60px_-12px_rgba(0,0,0,0.8),0_0_40px_rgba(227,245,68,0.12)]">
                                     <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/70 to-transparent" />
-                                    <ul className="relative p-2">
-                                        {INDUSTRY_LINKS.map((s) => {
-                                            const active = pathname === s.href;
-                                            return (
-                                                <li key={s.label}>
+                                    <div className="pointer-events-none absolute -top-10 right-1/3 w-56 h-56 bg-volt-500/10 rounded-full blur-3xl" />
+                                    <div className="pointer-events-none absolute bottom-0 left-1/3 w-40 h-40 bg-volt-500/6 rounded-full blur-3xl" />
+
+                                    <div className="p-5">
+                                        <div className="relative grid grid-cols-3 gap-3">
+                                            {INDUSTRY_LINKS.map((s) => {
+                                                const active = pathname === s.href;
+                                                return (
                                                     <Link
+                                                        key={s.label}
                                                         href={s.href}
                                                         onClick={() => setOpenMega(null)}
-                                                        className={`group/ind flex items-center gap-2.5 px-3 py-2 rounded-sm text-[12px] normal-case tracking-normal transition-colors duration-200
+                                                        className={`group/ind flex flex-col gap-2 rounded-lg border p-5 transition-all duration-200
                                                             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70
-                                                            ${active ? "text-volt-500 bg-volt-500/6" : "text-[#b8b8b8] hover:text-volt-400 hover:bg-volt-500/4"}`}
+                                                            ${active
+                                                                ? "border-volt-500/50 bg-volt-500/6"
+                                                                : "border-white/5 hover:border-volt-500/40 hover:bg-volt-500/4"
+                                                            }`}
                                                     >
-                                                        <span className={`w-1 h-1 rounded-full transition-all duration-200 ${active ? "bg-volt-500" : "bg-volt-500/30 group-hover/ind:bg-volt-500"}`} />
-                                                        {s.label}
+                                                        <span className="flex items-center gap-1 text-[13px] font-semibold text-[#e5e7eb] group-hover/ind:text-volt-400 transition-colors duration-200">
+                                                            {s.label}
+                                                            <span aria-hidden className="opacity-0 -translate-x-1 group-hover/ind:opacity-100 group-hover/ind:translate-x-0 transition-all duration-200 text-volt-500">→</span>
+                                                        </span>
+                                                        <span className="block text-[13px] leading-relaxed text-[#9a9a9a]">
+                                                            {s.description}
+                                                        </span>
                                                     </Link>
-                                                </li>
-                                            );
-                                        })}
-                                    </ul>
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+                                    {/* Footer */}
+                                    <div className="relative border-t border-volt-500/10 mx-5 py-3 flex items-center justify-between">
+                                        <Link
+                                            href="/industries"
+                                            onClick={() => setOpenMega(null)}
+                                            className="inline-flex items-center gap-1.5 text-[12px] text-[#b8b8b8] hover:text-volt-400 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
+                                        >
+                                            All industries →
+                                        </Link>
+                                        <Link
+                                            href="/contact"
+                                            onClick={() => setOpenMega(null)}
+                                            className="text-[12px] text-volt-500 hover:text-volt-400 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
+                                        >
+                                            Schedule a call →
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -730,14 +779,14 @@ export default function Header() {
                         {/* CTA */}
                         <Link
                             href="/contact"
-                            className={`px-3.5 py-1.5 uppercase tracking-[0.12em] text-[11px] font-bold rounded-sm transition-all duration-300
+                            className={`px-3.5 py-1.5 tracking-[0.02em] text-[12px] font-bold rounded-sm transition-all duration-300
                                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt/70
                                 ${isActive("/contact")
                                     ? "bg-volt text-black shadow-[0_0_18px_rgba(227,245,68,0.4)]"
                                     : "bg-volt text-black shadow-[0_0_10px_rgba(227,245,68,0.2)] hover:brightness-110 hover:shadow-[0_0_22px_rgba(227,245,68,0.5)]"
                                 }`}
                         >
-                            Schedule a Call
+                            Schedule a call
                         </Link>
                     </nav>
 

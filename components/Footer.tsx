@@ -54,6 +54,7 @@ export default function Footer() {
                         <li><Link href="https://dog.blacklabdev.com" target="_blank" className="hover:text-neutral-200">Diamond Dogs (WordPress + Vue.js)</Link></li>
                         <li><Link href="https://fit30.blacklabdev.com" target="_blank" className="hover:text-neutral-200">Fit30 App (Laravel + React)</Link></li>
                         <li><Link href="https://vault.blacklabdev.com" target="_blank" className="hover:text-neutral-200">Vault Cyber (Drupal)</Link></li>
+                        <li><Link href="https://mntr.blacklabdev.com" target="_blank" className="hover:text-neutral-200">SiteMonitor (Laravel)</Link></li>
                     </ul>
                 </div>
 
