@@ -3,6 +3,7 @@ import "./globals.css";
 import { inter, spaceGrotesk } from "./fonts";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import NavigationProgress from "@/components/NavigationProgress";
 import AptabaseClientProvider from "@/providers/AptabaseClientProvider";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -57,6 +58,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} ${spaceGrotesk.variable} bg-[#0b0b0c] text-[#e5e7eb] antialiased`}>
         <AptabaseClientProvider>
+          <NavigationProgress />
           <Header />
           <main>{children}</main>
           <Footer />

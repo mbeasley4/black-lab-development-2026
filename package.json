@@ -22,6 +22,7 @@
     "framer-motion": "^12.42.0",
     "lucide-react": "^0.561.0",
     "next": "^16.1.6",
+    "next-nprogress-bar": "^2.4.7",
     "next-sanity": "^11.6.12",
     "react": "19.2.1",
     "react-dom": "19.2.1",

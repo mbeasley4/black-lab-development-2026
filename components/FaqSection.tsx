@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 interface FaqItem {
   question: string;
   answer: string;
@@ -9,6 +13,8 @@ interface FaqSectionProps {
 }
 
 export default function FaqSection({ faqs, headingId = "faq-heading" }: FaqSectionProps) {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
   return (
     <section className="w-full py-28 border-t border-volt-500/20 relative overflow-hidden" aria-labelledby={headingId}>
       {/* Hexagonal grid background */}
@@ -45,30 +51,50 @@ export default function FaqSection({ faqs, headingId = "faq-heading" }: FaqSecti
           <div className="mt-4 mx-auto w-20 h-px bg-linear-to-r from-transparent via-volt-500 to-transparent" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-slate-800/30 rounded-2xl overflow-hidden border border-slate-800/40">
-          {faqs.map((faq, i) => (
-            <div
-              key={faq.question}
-              className="group relative p-8 md:p-10 transition-colors duration-300 overflow-hidden bg-slate-950/80 hover:bg-volt-500/5"
-            >
-              {/* Background number */}
-              <div className="absolute top-3 right-5 text-[5rem] font-black font-mono text-volt-500/3 group-hover:text-volt-500/8 leading-none select-none pointer-events-none transition-colors duration-500">
-                {String(i + 1).padStart(2, "0")}
-              </div>
-
-              <div className="relative z-10">
-                <div className="flex items-start gap-4 mb-4">
-                  <span className="shrink-0 mt-0.5 flex h-7 w-7 items-center justify-center rounded-md bg-volt-500/10 border border-volt-500/20 text-volt-400 text-xs font-bold">
-                    Q
+        <div className="max-w-3xl mx-auto divide-y divide-slate-800/60">
+          {faqs.map((faq, i) => {
+            const isOpen = openIndex === i;
+            return (
+              <div key={faq.question} className="group">
+                <button
+                  type="button"
+                  onClick={() => setOpenIndex(isOpen ? null : i)}
+                  aria-expanded={isOpen}
+                  className="w-full flex items-center justify-between gap-6 py-6 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/50 rounded-sm"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="shrink-0 flex h-7 w-7 items-center justify-center rounded-md bg-volt-500/10 border border-volt-500/20 text-volt-400 text-xs font-bold transition-colors duration-200 group-hover:bg-volt-500/20">
+                      Q
+                    </span>
+                    <span className={`text-base font-semibold leading-snug transition-colors duration-200 ${isOpen ? "text-volt-400" : "text-white group-hover:text-volt-300"}`}>
+                      {faq.question}
+                    </span>
+                  </div>
+                  <span
+                    className={`shrink-0 flex h-6 w-6 items-center justify-center rounded-full border transition-all duration-300 ${
+                      isOpen
+                        ? "border-volt-500/60 bg-volt-500/10 text-volt-400 rotate-180"
+                        : "border-slate-700 text-slate-500 group-hover:border-volt-500/40 group-hover:text-volt-500"
+                    }`}
+                    aria-hidden="true"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5">
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
                   </span>
-                  <h3 className="text-base font-semibold text-white leading-snug transition-colors duration-300 group-hover:text-volt-300">
-                    {faq.question}
-                  </h3>
+                </button>
+
+                <div
+                  className="overflow-hidden transition-all duration-300 ease-out"
+                  style={{ maxHeight: isOpen ? "600px" : "0px", opacity: isOpen ? 1 : 0 }}
+                >
+                  <p className="text-sm text-slate-400 leading-relaxed pl-11 pb-6">
+                    {faq.answer}
+                  </p>
                 </div>
-                <p className="text-sm text-slate-400 leading-relaxed pl-11">{faq.answer}</p>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
