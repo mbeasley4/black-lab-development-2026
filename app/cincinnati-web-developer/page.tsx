@@ -97,7 +97,7 @@ const faqSchema = {
       name: "How much does a website cost for a Cincinnati business?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Engagements vary based on scope, but most Cincinnati B2B website projects run from $8,000–$30,000+ depending on complexity, custom functionality, and ongoing support needs. I scope accurately upfront so there are no surprises. The conversation starts with a free audit of your current site.",
+        text: "Engagements vary based on scope, but most Cincinnati B2B website projects run from $8,000–$30,000+ depending on complexity, custom functionality, and ongoing support needs. I scope accurately upfront so there are no surprises. The conversation starts with a discovery call.",
       },
     },
   ],
@@ -164,7 +164,7 @@ const faqs = [
   },
   {
     q: "How much does a website cost for a Cincinnati business?",
-    a: "Engagements vary based on scope, but most Cincinnati B2B website projects run from $8,000–$30,000+ depending on complexity, custom functionality, and ongoing support needs. I scope accurately upfront so there are no surprises. The conversation starts with a free audit of your current site.",
+    a: "Engagements vary based on scope, but most Cincinnati B2B website projects run from $8,000–$30,000+ depending on complexity, custom functionality, and ongoing support needs. I scope accurately upfront so there are no surprises. The conversation starts with a discovery call.",
   },
 ];
 

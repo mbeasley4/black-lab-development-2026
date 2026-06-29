@@ -226,7 +226,7 @@ export default function ManufacturingIndustryPage() {
       <PageClose
         title="Ready to Build a Website That Generates RFQs?"
         bodyPrimary="Most manufacturing websites are digital brochures — they exist, but they don't generate qualified pipeline. That gap is fixable."
-        bodySecondary="Start with a free audit. We'll identify exactly what's costing you leads and what it would take to fix it."
+        bodySecondary="Schedule a discovery call. We'll talk through exactly what's costing you leads and what it would take to fix it."
         secondaryHref="/services/manufacturing-website-design"
         secondaryLabel="View Manufacturing Service"
       />

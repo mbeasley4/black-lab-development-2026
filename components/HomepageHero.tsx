@@ -220,7 +220,7 @@ const HomepageHero = () => {
                 href="/contact"
                 className="inline-flex items-center justify-center rounded-md bg-volt text-black px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-bold hover:brightness-110 transition-all duration-200 shadow-lg shadow-volt/25"
               >
-                Get a Free Website Audit
+                Schedule a Discovery Call
               </a>
 
               <a

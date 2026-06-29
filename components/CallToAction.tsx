@@ -26,7 +26,7 @@ export default function CallToAction() {
                     </h2>
 
                     <p className="text-lg text-slate-300 max-w-2xl mx-auto mt-6 mb-12 leading-relaxed">
-                        Start with a free audit. We&apos;ll identify what&apos;s limiting your site and what it would take to fix it — no commitment required.
+                        Schedule a discovery call. We&apos;ll talk through what&apos;s limiting your site and what it would take to fix it — no commitment required.
                     </p>
 
                     {/* CTA Buttons */}
@@ -36,7 +36,7 @@ export default function CallToAction() {
                             className="group relative inline-flex w-full sm:w-auto items-center justify-center rounded-lg bg-volt px-8 sm:px-12 py-5 text-base font-bold uppercase tracking-wide text-black transition-all duration-300 hover:brightness-110 hover:shadow-2xl hover:shadow-volt/40 hover:scale-105"
                         >
                             <span className="relative z-10 flex items-center gap-2">
-                                Get a Free Website Audit
+                                Schedule a Discovery Call
                                 <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                 </svg>

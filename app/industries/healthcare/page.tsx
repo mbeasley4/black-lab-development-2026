@@ -247,7 +247,7 @@ export default function HealthcareIndustryPage() {
       <PageClose
         title="Ready to Get More Patient Bookings From Your Website?"
         bodyPrimary="Healthcare websites should be driving patient volume — not just checking a digital presence box. If yours isn't performing, that's fixable."
-        bodySecondary="Start with a free audit. We'll show you exactly what's blocking bookings and what it would take to fix it."
+        bodySecondary="Schedule a discovery call. We'll talk through exactly what's blocking bookings and what it would take to fix it."
         secondaryHref="/contact"
         secondaryLabel="Start a Conversation"
       />

@@ -114,7 +114,7 @@ const faqSchema = {
       name: "How much does a manufacturing website cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Manufacturing website projects at Black Lab Development typically range from $10,000 to $40,000 depending on the number of capability pages, content complexity, RFQ workflow requirements, and integration needs (ERP, distributor portals, CAD file downloads). Engagements start with a free audit of your current site so scope and pricing are grounded in what you actually need, not a templated package.",
+        text: "Manufacturing website projects at Black Lab Development typically range from $10,000 to $40,000 depending on the number of capability pages, content complexity, RFQ workflow requirements, and integration needs (ERP, distributor portals, CAD file downloads). Engagements start with a discovery call so scope and pricing are grounded in what you actually need, not a templated package.",
       },
     },
     {

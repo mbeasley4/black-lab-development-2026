@@ -269,7 +269,7 @@ export default function EcommerceIndustryPage() {
       <PageClose
         title="Ready to Get More Revenue From Existing Traffic?"
         bodyPrimary="Most ecommerce sites leave revenue on the table through slow pages, friction in checkout, and product pages that don't convert at the rate they should."
-        bodySecondary="Start with a free audit. We'll identify exactly what's costing you revenue and what the highest-ROI fix is."
+        bodySecondary="Schedule a discovery call. We'll talk through exactly what's costing you revenue and what the highest-ROI fix is."
         secondaryHref="/services/conversion-optimization"
         secondaryLabel="View Conversion Optimization"
       />
