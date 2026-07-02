@@ -228,13 +228,13 @@ export default function CustomWebDevelopmentPage() {
           <div className="mx-auto max-w-375 px-6 py-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-cyan-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-cyan-400 transition-colors duration-200 shadow-lg shadow-cyan-500/25"
+              className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg shadow-volt-500/25"
             >
               Start a Project →
             </Link>
             <Link
               href="/case-studies"
-              className="inline-flex items-center justify-center rounded-md border-2 border-cyan-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-200"
+              className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
             >
               View Work →
             </Link>
@@ -246,7 +246,7 @@ export default function CustomWebDevelopmentPage() {
           <div className="mx-auto max-w-375 px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
-                <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+                <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
                   Why Custom
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -284,7 +284,7 @@ export default function CustomWebDevelopmentPage() {
         <section className="py-20 bg-slate-950/50 border-b border-slate-800">
           <div className="mx-auto max-w-375 px-6">
             <div className="max-w-2xl mb-14">
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
                 Technology
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -297,7 +297,7 @@ export default function CustomWebDevelopmentPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {stack.map((item) => (
                 <div key={item.name} className="rounded-xl border border-slate-800 bg-slate-900/50 p-8">
-                  <div className="text-sm font-mono font-bold text-cyan-400 mb-3 tracking-wider">{item.name}</div>
+                  <div className="text-sm font-mono font-bold text-volt-400 mb-3 tracking-wider">{item.name}</div>
                   <p className="text-sm text-slate-400 leading-relaxed">{item.use}</p>
                 </div>
               ))}
@@ -309,7 +309,7 @@ export default function CustomWebDevelopmentPage() {
         <section className="py-20 border-b border-slate-800">
           <div className="mx-auto max-w-375 px-6">
             <div className="max-w-2xl mb-14">
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
                 Process
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -322,7 +322,7 @@ export default function CustomWebDevelopmentPage() {
             <div className="space-y-12">
               {process.map((item) => (
                 <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
-                  <div className="text-5xl font-black font-mono text-cyan-400/20 leading-none">{item.step}</div>
+                  <div className="text-5xl font-black font-mono text-volt-400/20 leading-none">{item.step}</div>
                   <div className="border-b border-slate-800 pb-12 last:border-0 last:pb-0">
                     <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                     <p className="text-slate-400 leading-relaxed">{item.body}</p>
@@ -338,7 +338,7 @@ export default function CustomWebDevelopmentPage() {
           <div className="mx-auto max-w-375 px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
-                <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+                <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
                   Is It Right For You?
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -351,7 +351,7 @@ export default function CustomWebDevelopmentPage() {
               <div className="space-y-3">
                 {useCases.map((item) => (
                   <div key={item} className="flex items-center gap-4 rounded-xl border border-slate-800 bg-slate-900/50 px-6 py-4">
-                    <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 shadow-[0_0_6px_rgba(34,211,238,0.7)] shrink-0" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_6px_rgba(34,211,238,0.7)] shrink-0" />
                     <span className="text-sm text-slate-300">{item}</span>
                   </div>
                 ))}
@@ -373,7 +373,7 @@ export default function CustomWebDevelopmentPage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/services/b2b-website-design"
-                className="rounded-lg border border-cyan-500/30 bg-cyan-500/10 px-6 py-3 text-sm font-semibold text-cyan-400 hover:border-cyan-400 hover:bg-cyan-500/20 transition-all duration-200"
+                className="rounded-lg border border-volt-500/30 bg-volt-500/10 px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200"
               >
                 B2B Website Design →
               </Link>

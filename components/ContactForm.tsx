@@ -42,8 +42,8 @@ export default function ContactForm() {
     }
 
     const inputClass =
-        "w-full bg-black border border-cyan-400/40 px-4 py-3 text-white placeholder-neutral-500 " +
-        "focus:outline-none focus:border-cyan-400 focus:shadow-[0_0_16px_rgba(34,211,238,0.4)] " +
+        "w-full bg-black border border-volt-400/40 px-4 py-3 text-white placeholder-neutral-500 " +
+        "focus:outline-none focus:border-volt-400 focus:shadow-[0_0_16px_rgba(34,211,238,0.4)] " +
         "transition-all duration-200";
 
     return (
@@ -83,16 +83,16 @@ export default function ContactForm() {
             <button
                 type="submit"
                 disabled={loading || !token}
-                className="border border-cyan-400 text-cyan-400 px-6 py-3 uppercase tracking-widest
+                className="border border-volt-400 text-volt-400 px-6 py-3 uppercase tracking-widest
                     shadow-[0_0_10px_rgba(34,211,238,0.3)]
-                    hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_20px_rgba(34,211,238,0.6)]
+                    hover:bg-volt-400 hover:text-black hover:shadow-[0_0_20px_rgba(34,211,238,0.6)]
                     transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
                 {loading ? "Sending…" : "Send Message"}
             </button>
 
             {success === true && (
-                <p className="text-cyan-400 text-sm">
+                <p className="text-volt-400 text-sm">
                     Message sent successfully.
                 </p>
             )}

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import CookieSettingsButton from "./CookieSettingsButton";
 
 export default function Footer() {
     return (
@@ -103,12 +104,22 @@ export default function Footer() {
                         </svg>
                         LinkedIn
                     </a>
+
+                    <ul className="mt-6 space-y-3 text-sm">
+                        <li><CookieSettingsButton className="hover:text-neutral-200 transition-colors">Manage Cookie Preferences</CookieSettingsButton></li>
+                    </ul>
                 </div>
             </div>
 
             {/* Bottom */}
-            <div className="pb-10 text-center text-[11px] tracking-widest uppercase text-neutral-500">
-                © {new Date().getFullYear()} Black Lab Development
+            <div className="pb-10 flex flex-col items-center justify-center gap-3 text-center text-[11px] tracking-widest uppercase text-neutral-500 sm:flex-row sm:gap-4">
+                <p>© {new Date().getFullYear()} Black Lab Development</p>
+                <span className="hidden text-neutral-700 sm:inline">•</span>
+                <Link href="/privacy" className="hover:text-neutral-300 transition-colors">Privacy Policy</Link>
+                <span className="hidden text-neutral-700 sm:inline">•</span>
+                <Link href="/terms" className="hover:text-neutral-300 transition-colors">Terms &amp; Conditions</Link>
+                <span className="hidden text-neutral-700 sm:inline">•</span>
+                <Link href="/cookies" className="hover:text-neutral-300 transition-colors">Cookie Policy</Link>
             </div>
         </footer>
     );

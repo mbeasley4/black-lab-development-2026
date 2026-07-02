@@ -223,7 +223,7 @@ export default function ConversionOptimizationPage() {
         <div className="mx-auto max-w-375 px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
                 The Real Problem
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -267,7 +267,7 @@ export default function ConversionOptimizationPage() {
       <section className="py-20 bg-slate-950/50 border-b border-slate-800">
         <div className="mx-auto max-w-375 px-6">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
               Diagnose First
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -282,7 +282,7 @@ export default function ConversionOptimizationPage() {
                   <div className="text-white font-semibold">{p.symptom}</div>
                 </div>
                 <div className="bg-slate-900/40 p-6">
-                  <div className="text-xs uppercase tracking-widest text-cyan-500/60 mb-2">Root Cause</div>
+                  <div className="text-xs uppercase tracking-widest text-volt-500/60 mb-2">Root Cause</div>
                   <div className="text-slate-400 text-sm leading-relaxed">{p.cause}</div>
                 </div>
               </div>
@@ -295,7 +295,7 @@ export default function ConversionOptimizationPage() {
       <section className="py-20 border-b border-slate-800">
         <div className="mx-auto max-w-375 px-6">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
               Our Process
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -305,7 +305,7 @@ export default function ConversionOptimizationPage() {
           <div className="space-y-12">
             {process.map((item) => (
               <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
-                <div className="text-5xl font-black font-mono text-cyan-400/20 leading-none">{item.step}</div>
+                <div className="text-5xl font-black font-mono text-volt-400/20 leading-none">{item.step}</div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                   <p className="text-slate-400 leading-relaxed">{item.body}</p>
@@ -320,7 +320,7 @@ export default function ConversionOptimizationPage() {
       <section className="py-20 bg-slate-950/50 border-b border-slate-800">
         <div className="mx-auto max-w-375 px-6">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
               Before &amp; After
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -329,7 +329,7 @@ export default function ConversionOptimizationPage() {
           </div>
           <div className="space-y-4">
             {beforeAfter.map((item) => (
-              <div key={item.label} className={`rounded-xl border bg-slate-900/50 overflow-hidden transition-colors duration-200 ${'caseStudyHref' in item ? 'border-cyan-500/30 hover:border-cyan-400/60' : 'border-slate-800'}`}>
+              <div key={item.label} className={`rounded-xl border bg-slate-900/50 overflow-hidden transition-colors duration-200 ${'caseStudyHref' in item ? 'border-volt-500/30 hover:border-volt-400/60' : 'border-slate-800'}`}>
                 <div className="grid grid-cols-3 divide-x divide-slate-800">
                   <div className="p-6 text-center">
                     <div className="text-xs uppercase tracking-widest text-slate-500 mb-2">Before</div>
@@ -341,12 +341,12 @@ export default function ConversionOptimizationPage() {
                   </div>
                   <div className="p-6 text-center">
                     <div className="text-xs uppercase tracking-widest text-slate-500 mb-2">After</div>
-                    <div className="text-3xl font-black text-cyan-400">{item.after}</div>
+                    <div className="text-3xl font-black text-volt-400">{item.after}</div>
                   </div>
                 </div>
                 <div className="px-6 pb-4 border-t border-slate-800 pt-3 text-center">
                   {'caseStudyHref' in item && item.caseStudyHref ? (
-                    <Link href={item.caseStudyHref} className="text-xs text-cyan-500 hover:text-cyan-300 transition-colors duration-200">
+                    <Link href={item.caseStudyHref} className="text-xs text-volt-500 hover:text-volt-300 transition-colors duration-200">
                       {item.note}
                     </Link>
                   ) : (
@@ -374,7 +374,7 @@ export default function ConversionOptimizationPage() {
         <div className="mx-auto max-w-375 px-6">
           <h2 className="text-2xl font-bold text-white mb-8">Related</h2>
           <div className="flex flex-wrap gap-4">
-            <Link href="/case-studies/ecommerce-website-redesign-increase-aov" className="rounded-lg border border-cyan-500/30 bg-cyan-500/10 px-6 py-3 text-sm font-semibold text-cyan-400 hover:border-cyan-400 hover:bg-cyan-500/20 transition-all duration-200">
+            <Link href="/case-studies/ecommerce-website-redesign-increase-aov" className="rounded-lg border border-volt-500/30 bg-volt-500/10 px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200">
               Case Study: +164% AOV in 7 Days →
             </Link>
             <Link href="/services/b2b-website-design" className="rounded-lg border border-slate-700 bg-slate-900 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200">

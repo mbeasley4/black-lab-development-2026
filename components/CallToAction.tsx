@@ -15,7 +15,7 @@ export default function CallToAction() {
 
             {/* Ambient glows */}
             <div className="absolute top-0 left-1/4 w-150 h-150 bg-volt-500/15 rounded-full blur-3xl animate-pulse" />
-            <div className="absolute bottom-0 right-1/4 w-150 h-150 bg-blue-500/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+            <div className="absolute bottom-0 right-1/4 w-150 h-150 bg-volt-500/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
 
             {/* Content */}
             <div className="relative z-10 mx-auto max-w-375 px-6">

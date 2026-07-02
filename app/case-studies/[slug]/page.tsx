@@ -64,7 +64,7 @@ export async function generateMetadata({
 
 const HERO_METRIC_STYLES = [
   "border-volt-500/30 bg-volt-500/10 text-volt-400",
-  "border-blue-500/30 bg-blue-500/10 text-blue-400",
+  "border-volt-500/30 bg-volt-500/10 text-volt-400",
   "border-volt-400/30 bg-volt-400/8 text-volt-300",
 ];
 
@@ -129,7 +129,7 @@ export default async function CaseStudyPage({
       <section className="relative overflow-hidden border-b border-volt-500/20 bg-[#0b0b0c]">
         {/* Ambient glows */}
         <div className="absolute top-0 right-0 w-175 h-175 bg-volt-500/8 rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-125 h-125 bg-blue-500/6 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-125 h-125 bg-volt-500/6 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/25 to-transparent" />
 
         <div className="relative z-10 mx-auto max-w-375 px-6">
@@ -260,7 +260,7 @@ export default async function CaseStudyPage({
       <section className="relative overflow-hidden py-24 border-t border-volt-500/20">
         <div className="absolute inset-0 bg-linear-to-br from-[#111214] via-slate-950 to-[#0b0b0c]" />
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-volt-500/8 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/6 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-volt-500/6 rounded-full blur-3xl" />
         <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/30 to-transparent" />
 
         <div className="relative z-10 mx-auto max-w-375 px-6 text-center">

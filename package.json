@@ -13,6 +13,7 @@
     "@anthropic-ai/claude-code": "^2.1.177",
     "@aptabase/react": "^0.4.0",
     "@marsidev/react-turnstile": "^1.4.2",
+    "@next/third-parties": "^16.2.9",
     "@sanity/icons": "^3.7.4",
     "@sanity/image-url": "^1.2.0",
     "@sanity/vision": "^4.22.0",

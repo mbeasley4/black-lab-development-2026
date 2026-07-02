@@ -102,15 +102,15 @@ const colorClasses = {
         bullet: "bg-volt-500/40",
     },
     blue: {
-        iconBg: "bg-blue-500/10",
-        iconText: "text-blue-400",
-        iconHoverBg: "group-hover:bg-blue-500",
-        border: "group-hover:border-blue-500/50",
-        glow: "group-hover:shadow-blue-500/20",
-        gradient: "group-hover:from-blue-500/8 group-hover:to-transparent",
-        accent: "group-hover:via-blue-500",
-        titleHover: "group-hover:text-blue-300",
-        bullet: "bg-blue-500/40",
+        iconBg: "bg-volt-500/10",
+        iconText: "text-volt-400",
+        iconHoverBg: "group-hover:bg-volt-500",
+        border: "group-hover:border-volt-500/50",
+        glow: "group-hover:shadow-volt-500/20",
+        gradient: "group-hover:from-volt-500/8 group-hover:to-transparent",
+        accent: "group-hover:via-volt-500",
+        titleHover: "group-hover:text-volt-300",
+        bullet: "bg-volt-500/40",
     },
 };
 
@@ -119,7 +119,7 @@ export default function TechnologiesExperience() {
         <section className="w-full bg-linear-to-b from-slate-950 via-slate-950 to-black text-white py-24 relative overflow-hidden">
             {/* Ambient background effects */}
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-volt-500/6 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/6 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-volt-500/6 rounded-full blur-3xl" />
 
             <div className="mx-auto max-w-375 px-6 relative z-10">
                 {/* Header */}
@@ -198,8 +198,8 @@ export default function TechnologiesExperience() {
                         </div>
                     </div>
 
-                    <div className="group rounded-2xl border-2 border-slate-800/50 bg-slate-900/50 p-10 flex items-center gap-6 transition-all duration-500 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/10 backdrop-blur-sm relative overflow-hidden">
-                        <div className="absolute inset-0 bg-linear-to-br from-blue-500/0 to-blue-500/0 group-hover:from-blue-500/4 group-hover:to-transparent transition-all duration-500" />
+                    <div className="group rounded-2xl border-2 border-slate-800/50 bg-slate-900/50 p-10 flex items-center gap-6 transition-all duration-500 hover:border-volt-500/40 hover:shadow-xl hover:shadow-volt-500/10 backdrop-blur-sm relative overflow-hidden">
+                        <div className="absolute inset-0 bg-linear-to-br from-volt-500/0 to-volt-500/0 group-hover:from-volt-500/4 group-hover:to-transparent transition-all duration-500" />
 
                         <div className="relative z-10 flex items-center gap-6">
                             <img
@@ -208,7 +208,7 @@ export default function TechnologiesExperience() {
                                 className="h-20 w-auto shrink-0 transition-transform duration-500 group-hover:scale-110"
                             />
                             <div>
-                                <h4 className="text-xl font-semibold mb-2 text-white group-hover:text-blue-300 transition-colors duration-300">
+                                <h4 className="text-xl font-semibold mb-2 text-white group-hover:text-volt-300 transition-colors duration-300">
                                     Google Cybersecurity Certificate
                                 </h4>
                                 <p className="text-sm text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">

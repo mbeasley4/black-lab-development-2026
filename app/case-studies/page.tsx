@@ -273,7 +273,7 @@ export default async function CaseStudiesPage() {
       <section className="relative overflow-hidden border-b border-volt-500/20">
         <div className="absolute inset-0 bg-[#0b0b0c]" />
         <div className="absolute top-0 right-0 w-175 h-125 bg-volt-500/10 rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-125 h-100 bg-blue-500/6 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-125 h-100 bg-volt-500/6 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/30 to-transparent" />
 
         <div className="relative z-10 mx-auto max-w-375 px-6 py-20 md:py-28">
@@ -422,7 +422,7 @@ export default async function CaseStudiesPage() {
       {caseStudies.length > 0 && (
         <section className="relative py-20 overflow-hidden border-b border-slate-800">
           <div className="absolute top-0 left-1/4 w-175 h-100 bg-volt-500/5 rounded-full blur-[120px] pointer-events-none" />
-          <div className="absolute bottom-0 right-1/4 w-150 h-100 bg-blue-600/5 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute bottom-0 right-1/4 w-150 h-100 bg-volt-600/5 rounded-full blur-[120px] pointer-events-none" />
 
           <div className="mx-auto max-w-375 px-6">
 
@@ -444,17 +444,17 @@ export default async function CaseStudiesPage() {
                 const primaryMetric = study.metrics?.[0];
                 return (
                   <Link key={study._id} href={`/case-studies/${study.slug?.current}`} className="group relative block">
-                    <div className={`absolute -inset-px rounded-2xl blur-lg transition-all duration-500 opacity-0 group-hover:opacity-100 ${isAmber ? "bg-linear-to-br from-volt-500/35 via-volt-500/10 to-transparent" : "bg-linear-to-br from-blue-500/35 via-blue-500/10 to-transparent"}`} />
-                    <div className={`relative h-full rounded-2xl border overflow-hidden flex flex-col transition-all duration-300 bg-neutral-950 ${isAmber ? "border-neutral-800 group-hover:border-volt-500/55" : "border-neutral-800 group-hover:border-blue-500/55"}`}>
+                    <div className={`absolute -inset-px rounded-2xl blur-lg transition-all duration-500 opacity-0 group-hover:opacity-100 ${isAmber ? "bg-linear-to-br from-volt-500/35 via-volt-500/10 to-transparent" : "bg-linear-to-br from-volt-500/35 via-volt-500/10 to-transparent"}`} />
+                    <div className={`relative h-full rounded-2xl border overflow-hidden flex flex-col transition-all duration-300 bg-neutral-950 ${isAmber ? "border-neutral-800 group-hover:border-volt-500/55" : "border-neutral-800 group-hover:border-volt-500/55"}`}>
 
                       {/* Hero metric */}
                       {primaryMetric && (
-                        <div className={`relative px-7 pt-7 pb-6 overflow-hidden ${isAmber ? "bg-linear-to-br from-volt-950/70 via-volt-950/25 to-neutral-950" : "bg-linear-to-br from-blue-950/70 via-blue-950/25 to-neutral-950"}`}>
-                          <div className={`absolute top-0 left-0 right-0 h-0.5 ${isAmber ? "bg-linear-to-r from-volt-600 via-volt-400 to-volt-600" : "bg-linear-to-r from-blue-600 via-blue-400 to-blue-600"}`} />
-                          <div className={`absolute right-5 top-1/2 -translate-y-1/2 text-[110px] font-black leading-none pointer-events-none select-none tabular-nums opacity-[0.04] ${isAmber ? "text-volt-400" : "text-blue-400"}`}>
+                        <div className={`relative px-7 pt-7 pb-6 overflow-hidden ${isAmber ? "bg-linear-to-br from-volt-950/70 via-volt-950/25 to-neutral-950" : "bg-linear-to-br from-volt-950/70 via-volt-950/25 to-neutral-950"}`}>
+                          <div className={`absolute top-0 left-0 right-0 h-0.5 ${isAmber ? "bg-linear-to-r from-volt-600 via-volt-400 to-volt-600" : "bg-linear-to-r from-volt-600 via-volt-400 to-volt-600"}`} />
+                          <div className={`absolute right-5 top-1/2 -translate-y-1/2 text-[110px] font-black leading-none pointer-events-none select-none tabular-nums opacity-[0.04] ${isAmber ? "text-volt-400" : "text-volt-400"}`}>
                             {primaryMetric.improvement}
                           </div>
-                          <div className={`relative text-5xl md:text-6xl font-black tabular-nums leading-none mb-2 transition-all duration-300 ${isAmber ? "text-volt-400 drop-shadow-[0_0_24px_rgba(227,245,68,0.55)] group-hover:drop-shadow-[0_0_36px_rgba(227,245,68,0.8)]" : "text-blue-400 drop-shadow-[0_0_24px_rgba(96,165,250,0.55)] group-hover:drop-shadow-[0_0_36px_rgba(96,165,250,0.8)]"}`}>
+                          <div className={`relative text-5xl md:text-6xl font-black tabular-nums leading-none mb-2 transition-all duration-300 ${isAmber ? "text-volt-400 drop-shadow-[0_0_24px_rgba(227,245,68,0.55)] group-hover:drop-shadow-[0_0_36px_rgba(227,245,68,0.8)]" : "text-volt-400 drop-shadow-[0_0_24px_rgba(96,165,250,0.55)] group-hover:drop-shadow-[0_0_36px_rgba(96,165,250,0.8)]"}`}>
                             {primaryMetric.improvement}
                           </div>
                           <div className="text-xs text-slate-300 uppercase tracking-[0.2em] font-semibold">{primaryMetric.label}</div>
@@ -468,13 +468,13 @@ export default async function CaseStudiesPage() {
                       <div className="p-7 flex flex-col flex-1 border-t border-slate-800/60">
                         <div className="flex flex-wrap items-center gap-2 mb-3">
                           {study.clientName && (
-                            <span className={`text-xs font-semibold uppercase tracking-widest ${isAmber ? "text-volt-500/70" : "text-blue-400/70"}`}>{study.clientName}</span>
+                            <span className={`text-xs font-semibold uppercase tracking-widest ${isAmber ? "text-volt-500/70" : "text-volt-400/70"}`}>{study.clientName}</span>
                           )}
                           {study.industry && (
                             <span className="text-xs text-slate-600 uppercase tracking-widest">· {study.industry}</span>
                           )}
                         </div>
-                        <h2 className={`text-lg md:text-xl font-bold text-white mb-3 leading-snug transition-colors duration-300 ${isAmber ? "group-hover:text-volt-100" : "group-hover:text-blue-100"}`}>
+                        <h2 className={`text-lg md:text-xl font-bold text-white mb-3 leading-snug transition-colors duration-300 ${isAmber ? "group-hover:text-volt-100" : "group-hover:text-volt-100"}`}>
                           {study.title}
                         </h2>
                         {study.excerpt && (
@@ -484,13 +484,13 @@ export default async function CaseStudiesPage() {
                           <div className="flex flex-wrap gap-4 mb-5 mt-auto">
                             {study.metrics.slice(1, 4).map((m: any) => (
                               <div key={m.label} className="flex items-baseline gap-1.5">
-                                <span className={`text-base font-black tabular-nums ${isAmber ? "text-volt-500" : "text-blue-400"}`}>{m.improvement}</span>
+                                <span className={`text-base font-black tabular-nums ${isAmber ? "text-volt-500" : "text-volt-400"}`}>{m.improvement}</span>
                                 <span className="text-[10px] text-slate-600 uppercase tracking-wide">{m.label}</span>
                               </div>
                             ))}
                           </div>
                         )}
-                        <div className={`inline-flex items-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all duration-200 mt-auto ${isAmber ? "text-volt-500" : "text-blue-400"}`}>
+                        <div className={`inline-flex items-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all duration-200 mt-auto ${isAmber ? "text-volt-500" : "text-volt-400"}`}>
                           <span>Read the full case study</span>
                           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
@@ -509,7 +509,7 @@ export default async function CaseStudiesPage() {
       {/* ── Client Work Portfolio ── */}
       <section id="portfolio" className="py-12 md:py-18 relative overflow-hidden">
         <div className="absolute top-0 left-1/4 w-175 h-175 bg-volt-500/6 rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute bottom-0 left-1/3 w-150 h-150 bg-blue-600/6 rounded-full blur-[130px] pointer-events-none" />
+        <div className="absolute bottom-0 left-1/3 w-150 h-150 bg-volt-600/6 rounded-full blur-[130px] pointer-events-none" />
 
         <div className="mx-auto max-w-375 px-6 relative">
           <div className="mb-12 md:mb-16">
@@ -530,7 +530,7 @@ export default async function CaseStudiesPage() {
                 key={project.name}
                 className="group flex flex-col rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-300 hover:border-volt-500/40 hover:shadow-[0_0_50px_rgba(227,245,68,0.08)]"
               >
-                <div className="h-0.5 bg-linear-to-r from-volt-500/0 via-volt-500/15 to-blue-500/0 group-hover:from-volt-500/40 group-hover:via-volt-500/80 group-hover:to-blue-500/40 transition-all duration-500" />
+                <div className="h-0.5 bg-linear-to-r from-volt-500/0 via-volt-500/15 to-volt-500/0 group-hover:from-volt-500/40 group-hover:via-volt-500/80 group-hover:to-volt-500/40 transition-all duration-500" />
                 <div className="relative h-44 w-full overflow-hidden">
                   <Image
                     src={project.screenshot}

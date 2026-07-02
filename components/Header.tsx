@@ -237,7 +237,7 @@ export default function Header() {
                     >
                         {/* Internal ambient glows */}
                         <div className="pointer-events-none absolute top-0 right-0 w-48 h-48 bg-volt-500/8 rounded-full blur-3xl" />
-                        <div className="pointer-events-none absolute bottom-16 left-0 w-32 h-32 bg-blue-500/8 rounded-full blur-2xl" />
+                        <div className="pointer-events-none absolute bottom-16 left-0 w-32 h-32 bg-volt-500/8 rounded-full blur-2xl" />
                         {/* Top accent line */}
                         <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/50 to-transparent" />
 

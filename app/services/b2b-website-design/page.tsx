@@ -205,7 +205,7 @@ export default function B2BWebsiteDesignPage() {
         <div className="mx-auto max-w-375 px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
                 B2B is Different
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -227,7 +227,7 @@ export default function B2BWebsiteDesignPage() {
               ].map((stat) => (
                 <div key={stat.label} className="flex items-center justify-between border-b border-slate-800 pb-4">
                   <span className="text-slate-400 text-sm">{stat.label}</span>
-                  <span className="text-cyan-400 font-bold text-lg">{stat.value}</span>
+                  <span className="text-volt-400 font-bold text-lg">{stat.value}</span>
                 </div>
               ))}
             </div>
@@ -239,7 +239,7 @@ export default function B2BWebsiteDesignPage() {
       <section className="py-20 bg-slate-950/50 border-b border-slate-800">
         <div className="mx-auto max-w-375 px-6">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
               Common Failures
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -269,7 +269,7 @@ export default function B2BWebsiteDesignPage() {
       <section className="py-20 border-b border-slate-800">
         <div className="mx-auto max-w-375 px-6">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
               Our Approach
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -279,7 +279,7 @@ export default function B2BWebsiteDesignPage() {
           <div className="space-y-12">
             {approach.map((item) => (
               <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
-                <div className="text-5xl font-black font-mono text-cyan-400/20 leading-none">{item.step}</div>
+                <div className="text-5xl font-black font-mono text-volt-400/20 leading-none">{item.step}</div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                   <p className="text-slate-400 leading-relaxed">{item.body}</p>
@@ -294,7 +294,7 @@ export default function B2BWebsiteDesignPage() {
       <section className="py-20 bg-slate-950/50 border-b border-slate-800">
         <div className="mx-auto max-w-375 px-6">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
               Results
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -304,7 +304,7 @@ export default function B2BWebsiteDesignPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-800/40 rounded-2xl overflow-hidden border border-slate-700/40">
             {results.map((r) => (
               <div key={r.label} className="bg-slate-900 px-10 py-10 text-center">
-                <div className="text-5xl font-black bg-linear-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">{r.metric}</div>
+                <div className="text-5xl font-black bg-linear-to-r from-volt-400 to-volt-400 bg-clip-text text-transparent mb-2">{r.metric}</div>
                 <div className="text-lg font-semibold text-white mb-2">{r.label}</div>
                 <div className="text-sm text-slate-400">{r.detail}</div>
               </div>
@@ -328,7 +328,7 @@ export default function B2BWebsiteDesignPage() {
         <div className="mx-auto max-w-375 px-6">
           <h2 className="text-2xl font-bold text-white mb-8">Related Services</h2>
           <div className="flex flex-wrap gap-4">
-            <Link href="/services/conversion-optimization" className="rounded-lg border border-cyan-500/30 bg-cyan-500/10 px-6 py-3 text-sm font-semibold text-cyan-400 hover:border-cyan-400 hover:bg-cyan-500/20 transition-all duration-200">
+            <Link href="/services/conversion-optimization" className="rounded-lg border border-volt-500/30 bg-volt-500/10 px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200">
               Website Conversion Optimization →
             </Link>
             <Link href="/services/manufacturing-website-design" className="rounded-lg border border-slate-700 bg-slate-900 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200">

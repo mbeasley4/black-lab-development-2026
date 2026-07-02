@@ -84,15 +84,15 @@ const colorClasses = {
         ctaArrow: "stroke-volt-500 group-hover:stroke-volt-400",
     },
     blue: {
-        iconBg: "bg-blue-500/15",
-        iconText: "text-blue-400",
-        iconHoverBg: "group-hover:bg-blue-500",
-        border: "group-hover:border-blue-400",
-        glow: "group-hover:shadow-blue-500/30",
-        gradient: "group-hover:from-blue-500/15 group-hover:to-transparent",
-        accent: "group-hover:via-blue-500",
-        ctaText: "text-blue-400 group-hover:text-blue-300",
-        ctaArrow: "stroke-blue-400 group-hover:stroke-blue-300",
+        iconBg: "bg-volt-500/15",
+        iconText: "text-volt-400",
+        iconHoverBg: "group-hover:bg-volt-500",
+        border: "group-hover:border-volt-400",
+        glow: "group-hover:shadow-volt-500/30",
+        gradient: "group-hover:from-volt-500/15 group-hover:to-transparent",
+        accent: "group-hover:via-volt-500",
+        ctaText: "text-volt-400 group-hover:text-volt-300",
+        ctaArrow: "stroke-volt-400 group-hover:stroke-volt-300",
     },
 };
 
@@ -101,7 +101,7 @@ export default function IndustriesWeServe() {
         <section className="w-full bg-linear-to-b from-[#1f2328] via-[#111214] to-[#0b0b0c] text-white py-24 relative overflow-hidden">
             {/* Ambient glow effects */}
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-volt-500/8 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/8 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-volt-500/8 rounded-full blur-3xl" />
 
             <div className="mx-auto max-w-375 px-6 relative z-10">
                 {/* Section Header */}

@@ -33,7 +33,7 @@ const localBusinessSchema = {
   name: "Black Lab Development",
   url: "https://blacklabdev.com",
   telephone: "+15135204362",
-  email: "michael@blacklabdev.com",
+  email: "mbeasley4@gmail.com",
   description:
     "Cincinnati-based web development agency specializing in B2B and manufacturing websites. Custom Next.js, WordPress, and headless CMS development for Ohio and Tri-State companies.",
   founder: { "@type": "Person", name: "Michael Beasley", url: "https://blacklabdev.com/about" },

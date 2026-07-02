@@ -32,7 +32,7 @@ export default function DemoSection() {
     <section className="bg-[#0b0b0c] border-t border-b border-volt-500/15 py-6 md:py-9 relative overflow-hidden">
       {/* Ambient glows */}
       <div className="absolute top-0 left-1/4 w-175 h-175 bg-volt-500/6 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute top-1/2 right-0 w-125 h-125 bg-blue-500/6 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 right-0 w-125 h-125 bg-volt-500/6 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-1/3 w-150 h-150 bg-volt-500/4 rounded-full blur-[130px] pointer-events-none" />
 
       <div className="mx-auto max-w-7xl px-6 relative">

@@ -190,13 +190,13 @@ export default function WebsitePerformanceOptimizationPage() {
           <div className="mx-auto max-w-375 px-6 py-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-cyan-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-cyan-400 transition-colors duration-200 shadow-lg shadow-cyan-500/25"
+              className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg shadow-volt-500/25"
             >
               Get a Performance Audit →
             </Link>
             <Link
               href="/case-studies"
-              className="inline-flex items-center justify-center rounded-md border-2 border-cyan-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-200"
+              className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
             >
               View Results →
             </Link>
@@ -208,7 +208,7 @@ export default function WebsitePerformanceOptimizationPage() {
           <div className="mx-auto max-w-375 px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
-                <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+                <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
                   The Business Case
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -232,7 +232,7 @@ export default function WebsitePerformanceOptimizationPage() {
                   { stat: "Top 3", label: "Ranking positions most impacted by Core Web Vitals changes" },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-6 border-b border-slate-800 pb-4">
-                    <span className="text-2xl font-black text-cyan-400 shrink-0 leading-none">{item.stat}</span>
+                    <span className="text-2xl font-black text-volt-400 shrink-0 leading-none">{item.stat}</span>
                     <span className="text-slate-400 text-sm leading-relaxed">{item.label}</span>
                   </div>
                 ))}
@@ -245,7 +245,7 @@ export default function WebsitePerformanceOptimizationPage() {
         <section className="py-20 bg-slate-950/50 border-b border-slate-800">
           <div className="mx-auto max-w-375 px-6">
             <div className="max-w-2xl mb-14">
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
                 Core Web Vitals
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -260,7 +260,7 @@ export default function WebsitePerformanceOptimizationPage() {
                 <div key={vital.metric} className="rounded-xl border border-slate-800 bg-slate-900/50 overflow-hidden">
                   <div className="grid grid-cols-1 md:grid-cols-[120px_1fr_1fr] divide-y md:divide-y-0 md:divide-x divide-slate-800">
                     <div className="p-6 flex flex-col items-start justify-center">
-                      <div className="text-3xl font-black font-mono text-cyan-400 mb-1">{vital.metric}</div>
+                      <div className="text-3xl font-black font-mono text-volt-400 mb-1">{vital.metric}</div>
                       <div className="text-xs text-slate-500 leading-tight">{vital.full}</div>
                       <div className="mt-3 text-xs font-mono text-green-400 bg-green-500/10 border border-green-500/20 rounded px-2 py-1">
                         Target: {vital.target}
@@ -285,7 +285,7 @@ export default function WebsitePerformanceOptimizationPage() {
         <section className="py-20 border-b border-slate-800">
           <div className="mx-auto max-w-375 px-6">
             <div className="max-w-2xl mb-14">
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
                 What Gets Fixed
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -298,8 +298,8 @@ export default function WebsitePerformanceOptimizationPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {fixes.map((item) => (
                 <div key={item.label} className="flex items-start gap-4 rounded-xl border border-slate-800 bg-slate-900/50 p-5">
-                  <div className="w-6 h-6 rounded-full bg-cyan-500/15 flex items-center justify-center shrink-0 mt-0.5">
-                    <svg className="w-3 h-3 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="w-6 h-6 rounded-full bg-volt-500/15 flex items-center justify-center shrink-0 mt-0.5">
+                    <svg className="w-3 h-3 text-volt-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -317,7 +317,7 @@ export default function WebsitePerformanceOptimizationPage() {
         <section className="py-20 bg-slate-950/50 border-b border-slate-800">
           <div className="mx-auto max-w-375 px-6">
             <div className="max-w-2xl mb-14">
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
                 Results
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -327,7 +327,7 @@ export default function WebsitePerformanceOptimizationPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-800/40 rounded-2xl overflow-hidden border border-slate-700/40">
               {results.map((r) => (
                 <div key={r.label} className="bg-slate-900 px-10 py-10 text-center">
-                  <div className="text-4xl font-black text-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.4)] mb-2">{r.metric}</div>
+                  <div className="text-4xl font-black text-volt-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.4)] mb-2">{r.metric}</div>
                   <div className="text-sm font-semibold text-white mb-2">{r.label}</div>
                   <div className="text-xs text-slate-400">{r.detail}</div>
                 </div>
@@ -352,7 +352,7 @@ export default function WebsitePerformanceOptimizationPage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/services/conversion-optimization"
-                className="rounded-lg border border-cyan-500/30 bg-cyan-500/10 px-6 py-3 text-sm font-semibold text-cyan-400 hover:border-cyan-400 hover:bg-cyan-500/20 transition-all duration-200"
+                className="rounded-lg border border-volt-500/30 bg-volt-500/10 px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200"
               >
                 Conversion Optimization →
               </Link>

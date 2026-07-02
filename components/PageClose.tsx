@@ -27,7 +27,7 @@ export default function PageClose({
 
       {/* Ambient glows */}
       <div className="absolute top-0 left-1/4 w-125 h-125 bg-volt-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-125 h-125 bg-blue-500/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-125 h-125 bg-volt-500/10 rounded-full blur-3xl" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-375 px-6">

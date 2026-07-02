@@ -32,7 +32,7 @@ export default function FaqSection({ faqs, headingId = "faq-heading" }: FaqSecti
 
       {/* Ambient glows */}
       <div className="absolute top-0 left-1/4 w-125 h-125 bg-volt-500/8 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-100 h-100 bg-blue-500/6 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-100 h-100 bg-volt-500/6 rounded-full blur-[100px] pointer-events-none" />
 
       {/* Top accent line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />

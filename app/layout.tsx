@@ -4,6 +4,12 @@ import { inter, spaceGrotesk } from "./fonts";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NavigationProgress from "@/components/NavigationProgress";
+import CookieConsent from "@/components/CookieConsent";
+import RouteChangeTracker from "@/components/RouteChangeTracker";
+import {
+  ConsentModeBootstrap,
+  GoogleTagManager,
+} from "@/components/GoogleTagManager";
 import AptabaseClientProvider from "@/providers/AptabaseClientProvider";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -51,17 +57,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Consent Mode v2 defaults must be inline before GTM loads. */}
+        <ConsentModeBootstrap />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       </head>
       <body className={`${inter.variable} ${spaceGrotesk.variable} bg-[#0b0b0c] text-[#e5e7eb] antialiased`}>
+        {/* GTM container + noscript fallback via @next/third-parties */}
+        <GoogleTagManager />
         <AptabaseClientProvider>
           <NavigationProgress />
           <Header />
           <main>{children}</main>
           <Footer />
+          <RouteChangeTracker />
+          <CookieConsent />
           <Analytics />
           <SpeedInsights />
         </AptabaseClientProvider>

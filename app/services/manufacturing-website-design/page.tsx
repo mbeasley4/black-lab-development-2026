@@ -255,7 +255,7 @@ export default function ManufacturingWebsiteDesignPage() {
       <section className="py-20 border-b border-slate-800">
         <div className="mx-auto max-w-375 px-6">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
               The Problem
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -282,7 +282,7 @@ export default function ManufacturingWebsiteDesignPage() {
       <section className="py-20 bg-slate-950/50 border-b border-slate-800">
         <div className="mx-auto max-w-375 px-6">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
               Who You&apos;re Selling To
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -295,14 +295,14 @@ export default function ManufacturingWebsiteDesignPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {buyerTypes.map((buyer) => {
               const borderColor = buyer.color === "cyan"
-                ? "border-cyan-500/30 hover:border-cyan-400"
+                ? "border-volt-500/30 hover:border-volt-400"
                 : buyer.color === "blue"
-                ? "border-blue-500/30 hover:border-blue-400"
+                ? "border-volt-500/30 hover:border-volt-400"
                 : "border-emerald-500/30 hover:border-emerald-400";
               const textColor = buyer.color === "cyan"
-                ? "text-cyan-400"
+                ? "text-volt-400"
                 : buyer.color === "blue"
-                ? "text-blue-400"
+                ? "text-volt-400"
                 : "text-emerald-400";
               return (
                 <div key={buyer.role} className={`rounded-xl border bg-slate-900/50 p-8 transition-colors duration-200 ${borderColor}`}>
@@ -329,7 +329,7 @@ export default function ManufacturingWebsiteDesignPage() {
       <section className="py-20 border-b border-slate-800">
         <div className="mx-auto max-w-375 px-6">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
               Case Studies
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -348,7 +348,7 @@ export default function ManufacturingWebsiteDesignPage() {
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/40 to-transparent" />
                   <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-sm rounded-lg px-3 py-1.5">
-                    <span className="text-sm font-bold text-cyan-400">{cs.result}</span>
+                    <span className="text-sm font-bold text-volt-400">{cs.result}</span>
                   </div>
                 </div>
                 <div className="p-6">
@@ -377,7 +377,7 @@ export default function ManufacturingWebsiteDesignPage() {
       <section className="py-20 bg-slate-950/50 border-b border-slate-800">
         <div className="mx-auto max-w-375 px-6">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-cyan-400 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
               My Approach
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -387,7 +387,7 @@ export default function ManufacturingWebsiteDesignPage() {
           <div className="space-y-12">
             {strategy.map((item) => (
               <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
-                <div className="text-5xl font-black font-mono text-cyan-400/20 leading-none">{item.step}</div>
+                <div className="text-5xl font-black font-mono text-volt-400/20 leading-none">{item.step}</div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                   <p className="text-slate-400 leading-relaxed">{item.body}</p>
@@ -410,7 +410,7 @@ export default function ManufacturingWebsiteDesignPage() {
         <div className="mx-auto max-w-375 px-6">
           <h2 className="text-2xl font-bold text-white mb-8">Related Services</h2>
           <div className="flex flex-wrap gap-4">
-            <Link href="/services/b2b-website-design" className="rounded-lg border border-cyan-500/30 bg-cyan-500/10 px-6 py-3 text-sm font-semibold text-cyan-400 hover:border-cyan-400 hover:bg-cyan-500/20 transition-all duration-200">
+            <Link href="/services/b2b-website-design" className="rounded-lg border border-volt-500/30 bg-volt-500/10 px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200">
               B2B Website Design →
             </Link>
             <Link href="/services/conversion-optimization" className="rounded-lg border border-slate-700 bg-slate-900 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200">

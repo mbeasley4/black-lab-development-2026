@@ -39,7 +39,7 @@ export default async function ArticlesBlock() {
     <section className="w-full bg-linear-to-b from-black via-slate-950 to-[#111214] text-white py-24 relative overflow-hidden">
       {/* Ambient background effects */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-volt-500/6 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-blue-500/6 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-volt-500/6 rounded-full blur-3xl" />
 
       <div className="mx-auto max-w-375 px-6 relative z-10">
         {/* Header */}

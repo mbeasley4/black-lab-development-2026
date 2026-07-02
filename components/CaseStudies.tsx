@@ -74,13 +74,13 @@ const colorClasses = {
         bottomLine: "group-hover:via-volt-500",
     },
     blue: {
-        border: "group-hover:border-blue-500/50",
-        glow: "group-hover:shadow-blue-500/25",
+        border: "group-hover:border-volt-500/50",
+        glow: "group-hover:shadow-volt-500/25",
         overlay: "from-[#111214]/80 via-slate-950/90 to-black",
-        accent: "bg-blue-500",
-        ctaText: "text-blue-400",
-        titleHover: "group-hover:text-blue-300",
-        bottomLine: "group-hover:via-blue-500",
+        accent: "bg-volt-500",
+        ctaText: "text-volt-400",
+        titleHover: "group-hover:text-volt-300",
+        bottomLine: "group-hover:via-volt-500",
     },
 };
 
@@ -89,7 +89,7 @@ export default function CaseStudies() {
         <section className="w-full bg-linear-to-b from-[#111214] via-slate-950 to-[#0b0b0c] text-white py-24 relative overflow-hidden">
             {/* Ambient background effects */}
             <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-volt-500/8 rounded-full blur-3xl" />
-            <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/8 rounded-full blur-3xl" />
+            <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-volt-500/8 rounded-full blur-3xl" />
 
             <div className="mx-auto max-w-375 px-6 relative z-10">
                 {/* Header */}

@@ -181,8 +181,8 @@ article.prose {
   --tw-prose-body: #d1d5db;
   /* neutral-300 */
   --tw-prose-headings: #ffffff;
-  --tw-prose-links: #3b82f6;
-  /* electric blue */
+  --tw-prose-links: #e3f544;
+  /* volt-500 */
   --tw-prose-bold: #ffffff;
   --tw-prose-quotes: #e5e7eb;
   --tw-prose-code: #e5e7eb;
@@ -225,8 +225,8 @@ article.prose {
 }
 
 .prose a:hover {
-  color: #93c5fd;
-  /* blue-300 */
+  color: #eef88a;
+  /* volt-200 */
 }
 
 /* --- Lists --- */

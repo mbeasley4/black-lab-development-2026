@@ -184,7 +184,7 @@ export default function AboutPage() {
 
         {/* Ambient glows */}
         <div className="absolute top-20 -left-40 w-175 h-175 bg-volt-500/8 rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute bottom-20 -right-40 w-150 h-150 bg-blue-600/8 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-20 -right-40 w-150 h-150 bg-volt-600/8 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="mx-auto max-w-375 px-6">
           {/* Section eyebrow */}
@@ -375,7 +375,7 @@ export default function AboutPage() {
 
       {/* ================= VALUES ================= */}
       <section className="py-6 md:py-9 relative overflow-hidden border-t border-volt-500/8">
-        <div className="absolute bottom-0 left-1/4 w-175 h-175 bg-blue-600/6 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute bottom-0 left-1/4 w-175 h-175 bg-volt-600/6 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="mx-auto max-w-375 px-6">
           <div className="flex items-center gap-6 mb-10 md:mb-20">

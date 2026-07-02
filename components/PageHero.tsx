@@ -43,7 +43,7 @@ export default function PageHero({
 
       {/* Subtle ambient glow */}
       <div className="absolute top-0 right-1/4 w-100 h-100 bg-volt-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-1/4 w-100 h-100 bg-blue-500/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-1/4 w-100 h-100 bg-volt-500/10 rounded-full blur-3xl" />
 
       {/* Hero content */}
       <div className="relative z-10 py-12 md:py-24">
