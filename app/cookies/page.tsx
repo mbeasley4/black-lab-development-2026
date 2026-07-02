@@ -278,7 +278,7 @@ export default function CookiePolicyPage() {
         <p>Questions about this Cookie Policy? Reach out:</p>
         <ul>
           <li>
-            Or use our <a href="/contact">contact form</a>
+            Send us a message through our <a href="/contact">contact form</a>
           </li>
         </ul>
       </LegalPageLayout>

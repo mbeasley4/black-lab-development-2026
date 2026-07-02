@@ -176,7 +176,7 @@ export default function TermsPage() {
         <ul>
           <li>Location: Cincinnati, OH</li>
           <li>
-            Or use our <a href="/contact">contact form</a>
+            Send us a message through our <a href="/contact">contact form</a>
           </li>
         </ul>
       </LegalPageLayout>
