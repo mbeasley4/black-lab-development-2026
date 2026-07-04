@@ -100,7 +100,7 @@ export default function CaseStudies() {
                 </div>
 
                 {/* Case Studies Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {caseStudies.map((project) => {
                         const colors = colorClasses[project.color];
                         return (
