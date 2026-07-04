@@ -40,25 +40,14 @@ const caseStudies: CaseStudy[] = [
         color: "volt",
     },
     {
-        title: "Blum Media Group",
-        industry: "Digital Marketing/Advertising Industry",
+        title: "Zoo Printables AI",
+        industry: "Education / EdTech",
         summary:
-            "Designed and developed a modern, high-performance marketing website using Next.js and Vercel for fast load times, scalability, and streamlined content delivery.",
-        metric: "+100%",
-        metricLabel: "Lead Quality",
-        image: "/images/work/blum-screenshot.png",
-        href: "/case-studies",
-        color: "volt",
-    },
-    {
-        title: "Faztek",
-        industry: "Industrial Manufacturing",
-        summary:
-            "Full website redesign targeting engineers and procurement buyers — new positioning, SEO architecture, and conversion-focused product pages.",
-        metric: "+240%",
-        metricLabel: "Organic Traffic",
-        image: "/images/work/faztek-screenshot.jpg",
-        href: "/case-studies",
+            "A free wildlife education platform built with SEO, AEO, and GEO architecture from day one — fact-verified content, crawlable structure, and explicit AI crawler access.",
+        metric: "",
+        metricLabel: "",
+        image: "/images/work/zooprintablesai-screenshot.png",
+        href: "/case-studies/zoo-printables-ai-seo-aeo-geo",
         color: "volt",
     },
 ];
