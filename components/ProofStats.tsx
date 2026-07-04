@@ -7,7 +7,6 @@ const logos = [
     { src: "/images/work/melink-logo.png", alt: "Melink" },
     { src: "/images/work/plastechmold-logo.png", alt: "PlastechMold" },
     { src: "/images/work/shortening-shuttle-logo.png", alt: "The Shortening Shuttle" },
-    { src: "/images/work/enduir-logo.png", alt: "Enduir" },
     { src: "/images/work/providence-logo-w.png", alt: "Providence" },
     { src: "/images/work/blum-logo.png", alt: "Blum" },
     { src: "/images/work/buzzworthy-logo.png", alt: "Buzzworthy" },
@@ -16,6 +15,7 @@ const logos = [
     { src: "/images/work/mona-logo.png", alt: "Mona" },
     { src: "/images/work/seven-logo.png", alt: "Seven" },
     { src: "/images/work/zerogravity-logo.png", alt: "Zero Gravity" },
+    { src: "/images/work/zooprintablesai-logo.png", alt: "Zoo Printables" },
 ];
 
 function LogoSet() {
