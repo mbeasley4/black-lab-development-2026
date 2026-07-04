@@ -358,7 +358,7 @@ export default async function CaseStudiesPage() {
             </div>
 
             {/* Content */}
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] divide-y lg:divide-y-0 lg:divide-x divide-slate-800/80">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] divide-y lg:divide-y-0 lg:divide-x divide-slate-800/80">
 
               {/* Left — title + description + bullets */}
               <div className="p-8 md:p-10">
