@@ -43,6 +43,19 @@ export const metadata: Metadata = {
 // TODO: Migrate these into Sanity as caseStudy documents (type: "project")
 const projects = [
   {
+    name: "Zoo Printables AI",
+    logo: "/images/work/zooprintablesai-logo.png",
+    screenshot: "/images/work/zooprintablesai-screenshot.png",
+    summary:
+      "Built a free wildlife education platform from the ground up with SEO, AEO, and GEO architecture baked in — clean crawlable URLs, fact-verified content structured for direct AI-answer extraction, and explicit crawler access for GPTBot, ClaudeBot, and PerplexityBot.",
+    details: [
+      "Next.js build with 30+ fact-verified animal landing pages",
+      "AEO content structuring for direct-answer extraction",
+      "GEO: explicit AI crawler permissions and a dynamic /llms.txt content index",
+      "Sanity.io CMS integration for the blog",
+    ],
+  },
+  {
     name: "The Shortening Shuttle",
     logo: "/images/work/shortening-shuttle-logo.png",
     screenshot: "/images/work/shortening-shuttle-screenshot.png",
@@ -228,19 +241,6 @@ const projects = [
     summary:
       "Engineering support for a fintech platform requiring reliability, scalability, and clean integration between systems.",
     details: ["API integrations", "WordPress Plugin Development"],
-  },
-  {
-    name: "Zoo Printables AI",
-    logo: "/images/work/zooprintablesai-logo.png",
-    screenshot: "/images/work/zooprintablesai-screenshot.png",
-    summary:
-      "Built a free wildlife education platform from the ground up with SEO, AEO, and GEO architecture baked in — clean crawlable URLs, fact-verified content structured for direct AI-answer extraction, and explicit crawler access for GPTBot, ClaudeBot, and PerplexityBot.",
-    details: [
-      "Next.js build with 30+ fact-verified animal landing pages",
-      "AEO content structuring for direct-answer extraction",
-      "GEO: explicit AI crawler permissions and a dynamic /llms.txt content index",
-      "Sanity.io CMS integration for the blog",
-    ],
   },
 ];
 
