@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import PageClose from "@/components/PageClose";
+import ProofStats from "@/components/ProofStats";
 import JsonLd from "@/components/JsonLd";
 import { client } from "@/sanity/lib/client";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
@@ -323,6 +324,94 @@ export default async function CaseStudiesPage() {
         <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
       </section>
 
+      <ProofStats />
+
+      {/* ── Work Accomplished ── */}
+      <section id="portfolio" className="py-20 md:py-24 relative overflow-hidden border-b border-slate-800">
+        <div className="absolute top-0 left-1/4 w-175 h-175 bg-volt-500/6 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute bottom-0 left-1/3 w-150 h-150 bg-volt-600/6 rounded-full blur-[130px] pointer-events-none" />
+
+        <div className="mx-auto max-w-375 px-6 relative">
+          <div className="mb-12 md:mb-16 max-w-3xl">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-volt-500/35 bg-volt-500/8 text-volt-500 text-xs font-bold tracking-[0.2em] uppercase mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_8px_rgba(227,245,68,0.9)]" />
+              Work Accomplished
+            </span>
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-5">
+              {projects.length}+ Projects,{" "}
+              <span className="text-volt-500">Shipped and Supported</span>
+            </h2>
+            <p className="text-lg text-slate-400 leading-relaxed">
+              15+ years building and maintaining production websites for manufacturers, healthcare providers, restaurants, and B2B platforms — on WordPress, Shopify, and custom Next.js builds.
+            </p>
+            <div className="mt-6 h-px w-64 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+            {projects.map((project) => (
+              <div
+                key={project.name}
+                className="group flex flex-col rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-300 hover:border-volt-500/40 hover:shadow-[0_0_50px_rgba(227,245,68,0.08)]"
+              >
+                <div className="h-0.5 bg-linear-to-r from-volt-500/0 via-volt-500/15 to-volt-500/0 group-hover:from-volt-500/40 group-hover:via-volt-500/80 group-hover:to-volt-500/40 transition-all duration-500" />
+                <div className="relative h-44 w-full overflow-hidden">
+                  <Image
+                    src={project.screenshot}
+                    alt={`${project.name} screenshot`}
+                    fill
+                    className="object-cover object-top opacity-90 group-hover:scale-[1.03] transition-all duration-500"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-neutral-950/85 via-neutral-950/20 to-transparent" />
+                  <div className="absolute inset-0 group-hover:bg-volt-950/5 transition-all duration-300" />
+                  <div className="absolute bottom-0 left-0 right-0 h-12 bg-linear-to-t from-neutral-950 to-transparent" />
+                </div>
+                <div className="p-5 flex flex-col grow">
+                  <div className="mb-4 flex flex-col gap-3">
+                    <div className="h-7 flex items-center">
+                      <Image
+                        src={project.logo}
+                        alt={`${project.name} logo`}
+                        height={20}
+                        width={110}
+                        className="object-contain object-left opacity-75 group-hover:opacity-100 transition-opacity duration-300"
+                      />
+                    </div>
+                    <span className="text-[10px] font-semibold tracking-[0.18em] uppercase text-neutral-600">
+                      {project.name}
+                    </span>
+                  </div>
+                  <p className="text-neutral-300 text-sm leading-relaxed mb-5 grow">
+                    {project.summary}
+                  </p>
+                  <ul className="space-y-2 text-xs mt-auto border-t border-neutral-800/70 pt-4">
+                    {project.details.map((item) => (
+                      <li key={item} className="flex items-center gap-2.5 text-neutral-400 group-hover:text-neutral-300 transition-colors duration-200">
+                        <span className="w-1.5 h-1.5 rounded-full bg-volt-500/60 shadow-[0_0_5px_rgba(227,245,68,0.5)] group-hover:shadow-[0_0_8px_rgba(227,245,68,0.8)] shrink-0 transition-all duration-300" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Case Studies intro ── */}
+      <div className="mx-auto max-w-375 px-6 pt-20 md:pt-24 pb-4">
+        <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-volt-500/35 bg-volt-500/8 text-volt-500 text-xs font-bold tracking-[0.2em] uppercase mb-5">
+          <span className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_8px_rgba(227,245,68,0.9)]" />
+          Case Studies
+        </span>
+        <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white mb-4">
+          A Closer Look, <span className="text-volt-500">With the Numbers</span>
+        </h2>
+        <p className="text-lg text-slate-400 leading-relaxed max-w-2xl">
+          A handful of engagements broken down in detail — what was built, what changed, and what it produced.
+        </p>
+      </div>
+
       {/* ── Whole30 Featured Case Study ── */}
       <section className="relative py-20 overflow-hidden border-b border-slate-800 bg-[#0e0d14]">
         <div className="absolute top-0 right-0 w-150 h-150 bg-volt-500/8 rounded-full blur-[130px] pointer-events-none" />
@@ -441,12 +530,8 @@ export default async function CaseStudiesPage() {
 
             {/* Section header */}
             <div className="mb-10">
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-volt-500/35 bg-volt-500/8 text-volt-500 text-xs font-bold tracking-[0.2em] uppercase mb-5">
-                <span className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_8px_rgba(227,245,68,0.9)]" />
-                Measured Results
-              </span>
-              <h2 className="text-3xl md:text-4xl font-black tracking-tight text-white">
-                Results That <span className="text-volt-500 drop-shadow-[0_0_30px_rgba(227,245,68,0.35)]">Speak for Themselves</span>
+              <h2 className="text-2xl md:text-3xl font-black tracking-tight text-white">
+                More Case <span className="text-volt-500 drop-shadow-[0_0_30px_rgba(227,245,68,0.35)]">Studies</span>
               </h2>
               <div className="mt-4 h-px w-48 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
             </div>
@@ -518,75 +603,6 @@ export default async function CaseStudiesPage() {
           </div>
         </section>
       )}
-
-      {/* ── Client Work Portfolio ── */}
-      <section id="portfolio" className="py-12 md:py-18 relative overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-175 h-175 bg-volt-500/6 rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute bottom-0 left-1/3 w-150 h-150 bg-volt-600/6 rounded-full blur-[130px] pointer-events-none" />
-
-        <div className="mx-auto max-w-375 px-6 relative">
-          <div className="mb-12 md:mb-16">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-volt-500/35 bg-volt-500/8 text-volt-500 text-xs font-bold tracking-[0.2em] uppercase mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_8px_rgba(227,245,68,0.9)]" />
-              {projects.length} Projects
-            </span>
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
-              Client{" "}
-              <span className="text-volt-500">Work</span>
-            </h2>
-            <div className="mt-5 h-px w-64 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-            {projects.map((project) => (
-              <div
-                key={project.name}
-                className="group flex flex-col rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-300 hover:border-volt-500/40 hover:shadow-[0_0_50px_rgba(227,245,68,0.08)]"
-              >
-                <div className="h-0.5 bg-linear-to-r from-volt-500/0 via-volt-500/15 to-volt-500/0 group-hover:from-volt-500/40 group-hover:via-volt-500/80 group-hover:to-volt-500/40 transition-all duration-500" />
-                <div className="relative h-44 w-full overflow-hidden">
-                  <Image
-                    src={project.screenshot}
-                    alt={`${project.name} screenshot`}
-                    fill
-                    className="object-cover object-top opacity-90 group-hover:scale-[1.03] transition-all duration-500"
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-neutral-950/85 via-neutral-950/20 to-transparent" />
-                  <div className="absolute inset-0 group-hover:bg-volt-950/5 transition-all duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 h-12 bg-linear-to-t from-neutral-950 to-transparent" />
-                </div>
-                <div className="p-5 flex flex-col grow">
-                  <div className="mb-4 flex flex-col gap-3">
-                    <div className="h-7 flex items-center">
-                      <Image
-                        src={project.logo}
-                        alt={`${project.name} logo`}
-                        height={20}
-                        width={110}
-                        className="object-contain object-left opacity-75 group-hover:opacity-100 transition-opacity duration-300"
-                      />
-                    </div>
-                    <span className="text-[10px] font-semibold tracking-[0.18em] uppercase text-neutral-600">
-                      {project.name}
-                    </span>
-                  </div>
-                  <p className="text-neutral-300 text-sm leading-relaxed mb-5 grow">
-                    {project.summary}
-                  </p>
-                  <ul className="space-y-2 text-xs mt-auto border-t border-neutral-800/70 pt-4">
-                    {project.details.map((item) => (
-                      <li key={item} className="flex items-center gap-2.5 text-neutral-400 group-hover:text-neutral-300 transition-colors duration-200">
-                        <span className="w-1.5 h-1.5 rounded-full bg-volt-500/60 shadow-[0_0_5px_rgba(227,245,68,0.5)] group-hover:shadow-[0_0_8px_rgba(227,245,68,0.8)] shrink-0 transition-all duration-300" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <PageClose
         title="Ready to Become the Next Case Study?"

@@ -201,8 +201,8 @@ export default function Header() {
 
     // Plain top-level links (after the Services + Industries menus)
     const plainNav = [
-        { label: "Case studies", href: "/case-studies" },
-        { label: "SEO & insights", href: "/articles" },
+        { label: "Our Work", href: "/case-studies" },
+        { label: "Insights", href: "/articles" },
         { label: "About", href: "/about" },
     ];
 
@@ -307,7 +307,7 @@ export default function Header() {
                                         <span className={`shrink-0 w-0.5 h-4 rounded-full transition-all duration-300
                                             ${servicesActive ? "bg-volt-500 shadow-[0_0_6px_rgba(227,245,68,0.8)]" : "bg-volt-500/20"}`}
                                         />
-                                        Services
+                                        What We Build
                                     </span>
                                     <Chevron open={servicesExpanded} />
                                 </button>
@@ -362,7 +362,7 @@ export default function Header() {
                                         <span className={`shrink-0 w-0.5 h-4 rounded-full transition-all duration-300
                                             ${industriesActive ? "bg-volt-500 shadow-[0_0_6px_rgba(227,245,68,0.8)]" : "bg-volt-500/20"}`}
                                         />
-                                        Industries
+                                        Who It&apos;s For
                                     </span>
                                     <Chevron open={industriesExpanded} />
                                 </button>
@@ -553,7 +553,7 @@ export default function Header() {
                                             : "group-hover:text-volt-400 group-hover:drop-shadow-[0_0_6px_rgba(227,245,68,0.4)]"
                                     }`}
                                 >
-                                    Services
+                                    What We Build
                                 </span>
                                 <Chevron open={openMega === "services"} small />
                                 <span
@@ -671,7 +671,7 @@ export default function Header() {
                                             : "group-hover:text-volt-400 group-hover:drop-shadow-[0_0_6px_rgba(227,245,68,0.4)]"
                                     }`}
                                 >
-                                    Industries
+                                    Who It&apos;s For
                                 </span>
                                 <Chevron open={openMega === "industries"} small />
                                 <span

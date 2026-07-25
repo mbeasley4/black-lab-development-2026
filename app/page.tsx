@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import HomepageHero from "@/components/HomepageHero";
-import ProofStats from "@/components/ProofStats";
 import RevenueFramework from "@/components/RevenueFramework";
 import Differentiation from "@/components/Differentiation";
 import CoreServices from "@/components/CoreServices";
@@ -108,7 +107,6 @@ export default function Home() {
       <JsonLd data={[websiteSchema, faqSchema]} />
       <div className="w-full mt-0">
         <HomepageHero />
-        <ProofStats />
         <RevenueFramework />
         <Differentiation />
         <CoreServices />
