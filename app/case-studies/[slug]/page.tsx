@@ -7,6 +7,7 @@ import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import JsonLd from "@/components/JsonLd";
+import { portableTextComponents } from "@/components/PortableTextComponents";
 
 export const revalidate = 3600;
 
@@ -250,7 +251,7 @@ export default async function CaseStudyPage({
         <section className="py-20 border-b border-slate-800">
           <div className="mx-auto max-w-225 px-6">
             <article className="prose prose-invert prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h3:text-xl prose-h2:mt-12 prose-h2:mb-4 prose-h3:mt-8 prose-h3:mb-3 prose-p:text-slate-300 prose-p:leading-relaxed prose-li:text-slate-300 prose-ul:space-y-1 prose-strong:text-white">
-              <PortableText value={study.body} />
+              <PortableText value={study.body} components={portableTextComponents} />
             </article>
           </div>
         </section>

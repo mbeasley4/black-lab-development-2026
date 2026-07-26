@@ -10,6 +10,7 @@ import ReadingProgressBar from "@/components/ReadingProgressBar";
 import AnimatedCard from "@/components/AnimatedCard";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import JsonLd from "@/components/JsonLd";
+import { portableTextComponents } from "@/components/PortableTextComponents";
 
 export const revalidate = 3600;
 
@@ -308,7 +309,7 @@ export default async function ArticlePage({
                     </Link> &gt; <span className="text-sm text-neutral-400">{article.title}</span>
                 </div>
                 <article className="prose prose-invert max-w-none">
-                    {article.body && <PortableText value={article.body} />}
+                    {article.body && <PortableText value={article.body} components={portableTextComponents} />}
                 </article>
 
                 {/* Author bio — expertise signal for AI systems */}
