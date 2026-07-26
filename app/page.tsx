@@ -68,7 +68,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "What do you need from me to get started?",
+      name: "What do you need from us to get started?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "A conversation about your business goals, your current pain points, and access to your existing site (if applicable). We handle discovery, strategy, and technical planning — you don't need a brief, wireframes, or a spec document to get started.",

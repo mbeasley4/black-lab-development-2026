@@ -48,7 +48,7 @@ export default async function ArticlesBlock() {
             Building, Learning & Sharing at Black Lab Development
           </h2>
           <p className="text-lg text-[#e5e7eb]/70 leading-relaxed max-w-4xl">
-            Explore my latest articles featuring development tips, technical deep dives, and behind-the-scenes insights from real projects. From scalable web apps to modern tooling and workflows, this is where I share what's working—and why.
+            Explore our latest articles featuring development tips, technical deep dives, and behind-the-scenes insights from real projects. From scalable web apps to modern tooling and workflows, this is where we share what's working—and why.
           </p>
         </div>
 
@@ -121,7 +121,7 @@ export default async function ArticlesBlock() {
             href="/articles"
             className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 bg-volt-500/8 px-10 py-4 text-sm font-semibold uppercase tracking-wide text-volt-400 transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white hover:shadow-lg hover:shadow-volt-500/20"
           >
-            Explore My Knowledge Library
+            Explore All Insights
             <svg className="w-5 h-5 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

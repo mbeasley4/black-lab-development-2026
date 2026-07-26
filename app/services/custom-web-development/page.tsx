@@ -79,7 +79,7 @@ const faqSchema = {
       name: "What technologies do you use for custom web development?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "I build primarily in Next.js (React) for performance-critical sites and web apps, WordPress with custom themes for content-heavy sites that need editorial flexibility, and headless CMS setups (Sanity, Contentful) when teams need structured content across multiple channels. The technology choice is driven by your actual requirements, not what I prefer to work in.",
+        text: "We build primarily in Next.js (React) for performance-critical sites and web apps, WordPress with custom themes for content-heavy sites that need editorial flexibility, and headless CMS setups (Sanity, Contentful) when teams need structured content across multiple channels. The technology choice is driven by your actual requirements, not what we prefer to work in.",
       },
     },
     {
@@ -87,7 +87,7 @@ const faqSchema = {
       name: "How long does a custom web development project take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most custom web builds run 6–14 weeks from signed contract to launch, depending on scope, content complexity, and integration requirements. I scope accurately upfront and maintain a clear timeline throughout — no surprise delays discovered mid-project.",
+        text: "Most custom web builds run 6–14 weeks from signed contract to launch, depending on scope, content complexity, and integration requirements. We scope accurately upfront and maintain a clear timeline throughout — no surprise delays discovered mid-project.",
       },
     },
     {
@@ -95,7 +95,7 @@ const faqSchema = {
       name: "Can you rebuild an existing site without starting from scratch?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Usually, yes. Many projects are incremental improvements to existing systems rather than full rebuilds. I audit what's there first, identify what's worth keeping, and only rebuild what's causing problems. Starting from scratch is sometimes right — but it's never the default recommendation.",
+        text: "Usually, yes. Many projects are incremental improvements to existing systems rather than full rebuilds. We audit what's there first, identify what's worth keeping, and only rebuild what's causing problems. Starting from scratch is sometimes right — but it's never the default recommendation.",
       },
     },
     {
@@ -103,7 +103,7 @@ const faqSchema = {
       name: "Will my team be able to maintain the site after launch?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "That's a design requirement, not an afterthought. Every project includes a content management layer your team can actually use — whether that's a headless CMS, WordPress, or a purpose-built admin interface. I document what I build and hand it off in a state your team can own.",
+        text: "That's a design requirement, not an afterthought. Every project includes a content management layer your team can actually use — whether that's a headless CMS, WordPress, or a purpose-built admin interface. We document what we build and hand it off in a state your team can own.",
       },
     },
     {
@@ -171,7 +171,7 @@ const process = [
   {
     step: "01",
     title: "Scope & Architecture",
-    body: "I start by understanding the actual requirements — not what sounds good in a kickoff presentation. Data structures, integrations, content model, and performance targets are defined before a line of code is written.",
+    body: "We start by understanding the actual requirements — not what sounds good in a kickoff presentation. Data structures, integrations, content model, and performance targets are defined before a line of code is written.",
   },
   {
     step: "02",
@@ -291,7 +291,7 @@ export default function CustomWebDevelopmentPage() {
                 The Right Tool for the Right Job
               </h2>
               <p className="text-slate-400 leading-relaxed">
-                I don&apos;t have a stack I&apos;m trying to sell you on. Technology decisions are made to fit your requirements, your team&apos;s capabilities, and your long-term maintenance needs.
+                We don&apos;t have a stack we&apos;re trying to sell you on. Technology decisions are made to fit your requirements, your team&apos;s capabilities, and your long-term maintenance needs.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -395,8 +395,8 @@ export default function CustomWebDevelopmentPage() {
 
         <PageClose
           title="Let&apos;s Build Something That Actually Works"
-          bodyPrimary="Start with a technical review of your current setup. I'll identify what's constraining you, what's worth keeping, and what it would take to build the right thing."
-          bodySecondary="No proposals first. No discovery calls that turn into sales decks. Just a direct assessment of where you are and what I&apos;d do about it."
+          bodyPrimary="Start with a technical review of your current setup. We'll identify what's constraining you, what's worth keeping, and what it would take to build the right thing."
+          bodySecondary="No proposals first. No discovery calls that turn into sales decks. Just a direct assessment of where you are and what we&apos;d do about it."
           secondaryHref="/case-studies"
           secondaryLabel="View Case Studies"
         />

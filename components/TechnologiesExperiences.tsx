@@ -190,7 +190,7 @@ export default function TechnologiesExperience() {
                                 </h3>
                             </div>
                             <p className="text-[#e5e7eb]/70 leading-relaxed group-hover:text-[#e5e7eb]/90 transition-colors duration-300">
-                                My approach to development is grounded in modern security
+                                Our approach to development is grounded in modern security
                                 principles, risk awareness, and long-term maintainability —
                                 especially important for healthcare, enterprise, and
                                 high-traffic platforms.

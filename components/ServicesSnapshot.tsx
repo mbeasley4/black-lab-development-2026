@@ -40,10 +40,10 @@ export default function ServicesSnapshot() {
                 {/* Section Header */}
                 <div className="max-w-6xl mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white">
-                        What I Do
+                        What We Do
                     </h2>
                     <p className="text-lg text-[#e5e7eb]/70 leading-relaxed">
-                        I design, build, and optimize digital products that perform. From high-impact websites to custom software and growth-focused platforms, I work directly with teams that need results — not templates.
+                        We design, build, and optimize digital products that perform. From high-impact websites to custom software and growth-focused platforms, we work directly with teams that need results — not templates.
                     </p>
                 </div>
 

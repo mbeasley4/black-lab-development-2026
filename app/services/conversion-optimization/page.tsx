@@ -147,27 +147,27 @@ const process = [
   {
     step: "01",
     title: "Conversion Audit",
-    body: "I analyze your current analytics, heatmaps, session recordings, and funnel data to identify exactly where buyers drop off and why. No assumptions — data-driven diagnosis.",
+    body: "We analyze your current analytics, heatmaps, session recordings, and funnel data to identify exactly where buyers drop off and why. No assumptions — data-driven diagnosis.",
   },
   {
     step: "02",
     title: "Messaging Alignment",
-    body: "I review your copy against your ideal buyer persona. Is it speaking to their actual pain? Addressing their objections? Using language they use — or language your marketing team invented?",
+    body: "We review your copy against your ideal buyer persona. Is it speaking to their actual pain? Addressing their objections? Using language they use — or language your marketing team invented?",
   },
   {
     step: "03",
     title: "UX Friction Removal",
-    body: "I identify every unnecessary click, confusing layout, and buried CTA. Then I fix them — simplifying paths to conversion without a full redesign.",
+    body: "We identify every unnecessary click, confusing layout, and buried CTA. Then we fix them — simplifying paths to conversion without a full redesign.",
   },
   {
     step: "04",
     title: "CTA & Form Optimization",
-    body: "I rewrite and reposition CTAs based on intent signals, and redesign forms to reduce abandonment while improving lead quality — fewer fields, better qualification.",
+    body: "We rewrite and reposition CTAs based on intent signals, and redesign forms to reduce abandonment while improving lead quality — fewer fields, better qualification.",
   },
   {
     step: "05",
     title: "A/B Testing & Measurement",
-    body: "I run structured tests on headlines, CTAs, page layouts, and form designs — measuring lift in qualified leads, not just raw conversion rate.",
+    body: "We run structured tests on headlines, CTAs, page layouts, and form designs — measuring lift in qualified leads, not just raw conversion rate.",
   },
 ];
 
@@ -208,7 +208,7 @@ export default function ConversionOptimizationPage() {
         label="B2B Website Conversion Optimization"
         title="Traffic Without Conversions Is Just Overhead"
         titleHighlight="Just Overhead"
-        description="I diagnose exactly why your B2B website isn't generating qualified leads, then systematically fix it — with data, not guesswork."
+        description="We diagnose exactly why your B2B website isn't generating qualified leads, then systematically fix it — with data, not guesswork."
         backgroundImage="/images/services-hero-bg.png"
         badges={["Audit-first approach", "Measured before & after", "No vanity metrics"]}
       />
@@ -271,7 +271,7 @@ export default function ConversionOptimizationPage() {
               Diagnose First
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Symptoms I Treat (and Their Root Causes)
+              Symptoms We Treat (and Their Root Causes)
             </h2>
           </div>
           <div className="space-y-4">
@@ -299,7 +299,7 @@ export default function ConversionOptimizationPage() {
               Our Process
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              How I Fix Conversion Problems
+              How We Fix Conversion Problems
             </h2>
           </div>
           <div className="space-y-12">
@@ -389,7 +389,7 @@ export default function ConversionOptimizationPage() {
 
       <PageClose
         title="Start With a Conversion Audit"
-        bodyPrimary="I'll review your current site and show you exactly where leads are leaking — the specific pages, specific CTAs, and specific messages that are costing you pipeline."
+        bodyPrimary="We'll review your current site and show you exactly where leads are leaking — the specific pages, specific CTAs, and specific messages that are costing you pipeline."
         bodySecondary="One focused engagement. Real findings. No proposals for things you don't need."
         secondaryHref="/case-studies"
         secondaryLabel="View Case Studies"

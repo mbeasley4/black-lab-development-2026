@@ -55,7 +55,7 @@ const industries = [
         <p className="mb-4">
           SaaS companies have a habit of building fast, then spending the next two years
           paying the tab. Technical debt compounds quietly until it doesn't — and then
-          it's all anyone talks about. I help teams clean up what they've accumulated
+          it's all anyone talks about. We help teams clean up what they've accumulated
           and build systems that don't become anchors.
         </p>
         <p className="text-neutral-500 text-sm">
@@ -93,7 +93,7 @@ const industries = [
         <p className="mb-4">
           In e-commerce, a slow page isn't a minor inconvenience — it's a sale you
           didn't make. Every second of load time is a customer you lost to a competitor
-          with a faster checkout. I fix the things that actually cost you money, with
+          with a faster checkout. We fix the things that actually cost you money, with
           data to prove it.
         </p>
         <p className="text-neutral-500 text-sm">
@@ -111,7 +111,7 @@ const industries = [
       <>
         <p className="mb-4">
           Enterprise projects have a reputation for taking forever, costing twice the
-          budget, and delivering half the scope. I don't run that playbook. Incremental,
+          budget, and delivering half the scope. We don't run that playbook. Incremental,
           low-risk, and actually shipped — because a working system beats a perfect plan
           that's still in review.
         </p>

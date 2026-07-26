@@ -79,7 +79,7 @@ const faqSchema = {
       name: "My Lighthouse score is already 90+. Why is my site still slow?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Lighthouse runs in a controlled lab environment with throttled conditions. Real-user performance — what Google actually measures through Chrome User Experience Report (CrUX) data — often diverges significantly from lab scores, especially on mobile. A 90+ Lighthouse score on desktop can coexist with failing Core Web Vitals in the field. I diagnose real-user performance, not lab theater.",
+        text: "Lighthouse runs in a controlled lab environment with throttled conditions. Real-user performance — what Google actually measures through Chrome User Experience Report (CrUX) data — often diverges significantly from lab scores, especially on mobile. A 90+ Lighthouse score on desktop can coexist with failing Core Web Vitals in the field. We diagnose real-user performance, not lab theater.",
       },
     },
     {
@@ -175,7 +175,7 @@ export default function WebsitePerformanceOptimizationPage() {
           label="Website Performance Optimization"
           title="A Slow Website Is a Business Problem, Not a Technical One"
           titleHighlight="Business Problem, Not a Technical One"
-          description="I fix the root causes of slow load times, failing Core Web Vitals, and technical SEO issues that cost you rankings and revenue — measured before and after, not guessed at."
+          description="We fix the root causes of slow load times, failing Core Web Vitals, and technical SEO issues that cost you rankings and revenue — measured before and after, not guessed at."
           backgroundImage="/images/services-hero-bg.png"
           badges={["Core Web Vitals", "Real-user performance", "Not Lighthouse theater"]}
         />
@@ -292,7 +292,7 @@ export default function WebsitePerformanceOptimizationPage() {
                 The Full Performance Stack
               </h2>
               <p className="text-slate-400 leading-relaxed">
-                Most performance problems have 3–5 root causes responsible for 80% of the slowdown. I audit for all of them — then fix the ones that move the needle.
+                Most performance problems have 3–5 root causes responsible for 80% of the slowdown. We audit for all of them — then fix the ones that move the needle.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -374,8 +374,8 @@ export default function WebsitePerformanceOptimizationPage() {
 
         <PageClose
           title="Start With a Free Performance Audit"
-          bodyPrimary="I&apos;ll review your current site against Core Web Vitals, real-user performance data, and technical SEO signals — and show you exactly what&apos;s costing you rankings and conversions."
-          bodySecondary="No proposals. No slides. Just a direct assessment of what&apos;s wrong and what I&apos;d do about it."
+          bodyPrimary="We&apos;ll review your current site against Core Web Vitals, real-user performance data, and technical SEO signals — and show you exactly what&apos;s costing you rankings and conversions."
+          bodySecondary="No proposals. No slides. Just a direct assessment of what&apos;s wrong and what we&apos;d do about it."
           secondaryHref="/case-studies"
           secondaryLabel="View Results"
         />
