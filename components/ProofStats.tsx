@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 const logos = [
+    { src: "/images/work/globeironroofing-logo.png", alt: "Globe Iron Roofing" },
     { src: "/images/work/delcam-logo.svg", alt: "Delcam Capital" },
     { src: "/images/work/faztek-logo.png", alt: "Faztek" },
     { src: "/images/work/haag-streit-logo.png", alt: "Haag-Streit" },

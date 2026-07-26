@@ -44,6 +44,19 @@ export const metadata: Metadata = {
 // TODO: Migrate these into Sanity as caseStudy documents (type: "project")
 const projects = [
   {
+    name: "Globe Iron Roofing",
+    logo: "/images/work/globeironroofing-logo.png",
+    screenshot: "/images/work/globeironroofing-screenshot.png",
+    summary:
+      "Built a custom WordPress theme for the Gutenberg block editor from the ground up — engineered for technical SEO, AEO, and GEO discoverability alongside top-tier page speed performance.",
+    details: [
+      "Custom WordPress theme built for the Gutenberg block editor",
+      "Technical SEO, AEO, and GEO architecture from day one",
+      "Page speed and Core Web Vitals optimization",
+      "Fully responsive, editor-friendly block layouts",
+    ],
+  },
+  {
     name: "Zoo Printables AI",
     logo: "/images/work/zooprintablesai-logo.png",
     screenshot: "/images/work/zooprintablesai-screenshot.png",
