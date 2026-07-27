@@ -8,19 +8,19 @@ import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
-  title: "Healthcare Web Design & Development | Black Lab Dev",
+  title: "Healthcare Web Design & Development",
   description:
     "Accessible, compliant websites for clinics, medical practices, and health device companies — built for patient acquisition, online bookings, and local visibility.",
   alternates: { canonical: "/industries/healthcare" },
   openGraph: {
-    title: "Healthcare Web Design & Development | Black Lab Dev",
+    title: "Healthcare Web Design & Development",
     description:
       "Accessible, compliant websites for clinics, medical practices, and health device companies — built for patient acquisition, online bookings, and local visibility.",
     url: "/industries/healthcare",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Healthcare Web Design & Development | Black Lab Dev",
+    title: "Healthcare Web Design & Development",
     description:
       "Accessible, compliant websites for clinics, medical practices, and health device companies — built for patient acquisition, online bookings, and local visibility.",
     images: [DEFAULT_OG_IMAGE.url],

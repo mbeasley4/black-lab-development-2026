@@ -7,20 +7,20 @@ import { legalWebPageSchema } from "@/app/lib/legal";
 const LAST_UPDATED = "July 2, 2026";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | Black Lab Development",
+  title: "Terms & Conditions",
   description:
     "The terms and conditions governing your use of blacklabdev.com, including intellectual property, disclaimers, and limitations of liability.",
   alternates: { canonical: "/terms" },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Terms & Conditions | Black Lab Development",
+    title: "Terms & Conditions",
     description:
       "The terms and conditions governing your use of blacklabdev.com, including intellectual property, disclaimers, and limitations of liability.",
     url: "/terms",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Terms & Conditions | Black Lab Development",
+    title: "Terms & Conditions",
     description: "The terms and conditions governing your use of blacklabdev.com.",
     images: [DEFAULT_OG_IMAGE.url],
   },

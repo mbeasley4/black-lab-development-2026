@@ -7,19 +7,19 @@ import FaqSection from "@/components/FaqSection";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
-  title: "Cincinnati Web Developer | B2B & Manufacturing Websites | Black Lab Dev",
+  title: "Cincinnati Web Developer | B2B & Manufacturing Websites",
   description:
     "Cincinnati-based web developer specializing in B2B and manufacturing websites. Michael Beasley — 15+ years building revenue-focused platforms for Ohio and Tri-State companies.",
   alternates: { canonical: "/cincinnati-web-developer" },
   openGraph: {
-    title: "Cincinnati Web Developer | B2B & Manufacturing Websites | Black Lab Dev",
+    title: "Cincinnati Web Developer | B2B & Manufacturing Websites",
     description:
       "Cincinnati-based web developer specializing in B2B and manufacturing websites. Michael Beasley — 15+ years building revenue-focused platforms for Ohio and Tri-State companies.",
     url: "/cincinnati-web-developer",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Cincinnati Web Developer | B2B & Manufacturing Websites | Black Lab Dev",
+    title: "Cincinnati Web Developer | B2B & Manufacturing Websites",
     description:
       "Cincinnati-based web developer specializing in B2B and manufacturing websites — 15+ years building revenue-focused platforms.",
     images: [DEFAULT_OG_IMAGE.url],

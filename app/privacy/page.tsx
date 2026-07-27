@@ -8,20 +8,20 @@ import { legalWebPageSchema } from "@/app/lib/legal";
 const LAST_UPDATED = "July 2, 2026";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Black Lab Development",
+  title: "Privacy Policy",
   description:
     "How Black Lab Development collects, uses, and protects your information, including details on cookies, analytics, and your privacy choices.",
   alternates: { canonical: "/privacy" },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Privacy Policy | Black Lab Development",
+    title: "Privacy Policy",
     description:
       "How Black Lab Development collects, uses, and protects your information, including details on cookies, analytics, and your privacy choices.",
     url: "/privacy",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Privacy Policy | Black Lab Development",
+    title: "Privacy Policy",
     description:
       "How Black Lab Development collects, uses, and protects your information.",
     images: [DEFAULT_OG_IMAGE.url],

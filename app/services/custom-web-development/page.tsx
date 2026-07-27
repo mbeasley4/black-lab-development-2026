@@ -9,19 +9,19 @@ import FaqSection from "@/components/FaqSection";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
-  title: "Custom Web Development | Next.js, Headless & WordPress | Black Lab Dev",
+  title: "Custom Web Development | Next.js, Headless & WordPress",
   description:
     "Bespoke web development in Next.js, headless CMS, and WordPress. Built for businesses that have outgrown templates — clean architecture, no bloat, built to last.",
   alternates: { canonical: "/services/custom-web-development" },
   openGraph: {
-    title: "Custom Web Development | Next.js, Headless & WordPress | Black Lab Dev",
+    title: "Custom Web Development | Next.js, Headless & WordPress",
     description:
       "Bespoke web development in Next.js, headless CMS, and WordPress. Built for businesses that have outgrown templates — clean architecture, no bloat, built to last.",
     url: "/services/custom-web-development",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Custom Web Development | Next.js, Headless & WordPress | Black Lab Dev",
+    title: "Custom Web Development | Next.js, Headless & WordPress",
     description:
       "Bespoke web development in Next.js, headless CMS, and WordPress — built for businesses that have outgrown templates.",
     images: [DEFAULT_OG_IMAGE.url],

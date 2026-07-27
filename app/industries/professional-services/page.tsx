@@ -8,19 +8,19 @@ import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
-  title: "B2B & Professional Services Web Design | Black Lab Dev",
+  title: "B2B & Professional Services Web Design",
   description:
     "Web development for consultancies, financial firms, and service businesses — high-trust sites built for complex sales cycles and pipeline-driven growth.",
   alternates: { canonical: "/industries/professional-services" },
   openGraph: {
-    title: "B2B & Professional Services Web Design | Black Lab Dev",
+    title: "B2B & Professional Services Web Design",
     description:
       "Web development for consultancies, financial firms, and service businesses — high-trust sites built for complex sales cycles and pipeline-driven growth.",
     url: "/industries/professional-services",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "B2B & Professional Services Web Design | Black Lab Dev",
+    title: "B2B & Professional Services Web Design",
     description:
       "Web development for consultancies, financial firms, and service businesses — high-trust sites built for complex sales cycles and pipeline-driven growth.",
     images: [DEFAULT_OG_IMAGE.url],

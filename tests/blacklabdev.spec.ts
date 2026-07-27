@@ -1,118 +1,129 @@
 import { test, expect } from '@playwright/test';
 
-const BASE_URL = 'http://localhost:3000';
-
 // ─── Homepage ────────────────────────────────────────────────────────────────
 
 test('has correct title and hero heading', async ({ page }) => {
   await page.goto('/');
-  await expect(page).toHaveTitle(/Black Lab Development/i);
-  await expect(page.getByRole('heading', { name: /Right Tech/i })).toBeVisible();
+  await expect(page).toHaveTitle(/Black Lab Dev/i);
+  await expect(page.getByRole('heading', { name: /Real Lessons from Real/i })).toBeVisible();
 });
 
 test('main navigation links are present', async ({ page }) => {
   await page.goto('/');
-  const nav = page.getByRole('navigation');
-  await expect(nav.getByRole('link', { name: 'Services' })).toBeVisible();
-  await expect(nav.getByRole('link', { name: 'Industries' })).toBeVisible();
-  await expect(nav.getByRole('link', { name: 'Work' })).toBeVisible();
-  await expect(nav.getByRole('link', { name: 'Articles' })).toBeVisible();
+  const nav = page.getByRole('navigation', { name: 'Primary navigation' });
+  await expect(nav.getByRole('link', { name: 'What We Build' })).toBeVisible();
+  await expect(nav.getByRole('link', { name: "Who It's For" })).toBeVisible();
+  await expect(nav.getByRole('link', { name: 'Our Work' })).toBeVisible();
+  await expect(nav.getByRole('link', { name: 'Insights' })).toBeVisible();
+  await expect(nav.getByRole('link', { name: 'About' })).toBeVisible();
 });
 
-test('"Start a Project" CTA navigates to contact page', async ({ page }) => {
+test('"Explore All Insights" CTA navigates to articles', async ({ page }) => {
   await page.goto('/');
-  await page.getByRole('link', { name: 'Start a Project' }).first().click();
+  await page.getByRole('link', { name: 'Explore All Insights' }).click();
+  await expect(page).toHaveURL(/\/articles/);
+});
+
+test('"Get in Touch" CTA navigates to contact page', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('link', { name: 'Get in Touch' }).click();
   await expect(page).toHaveURL(/\/contact/);
 });
 
-test('"View Case Studies" CTA navigates to work page', async ({ page }) => {
+test('"Our Work" nav link navigates to case studies', async ({ page }) => {
   await page.goto('/');
-  await page.getByRole('link', { name: 'View Case Studies' }).click();
-  await expect(page).toHaveURL(/\/work/);
+  const nav = page.getByRole('navigation', { name: 'Primary navigation' });
+  await nav.getByRole('link', { name: 'Our Work' }).click();
+  await expect(page).toHaveURL(/\/case-studies/);
+  await expect(page.getByRole('heading').first()).toBeVisible();
 });
 
-// ─── Services Section ─────────────────────────────────────────────────────────
-
-test('homepage displays all four service areas', async ({ page }) => {
+test('homepage featured article card navigates to the article', async ({ page }) => {
   await page.goto('/');
-
-  const servicesSection = page.getByRole('heading', { name: 'What I Do' }).locator('../..');
-
-  await expect(page.getByRole('heading', { name: 'Web Development', exact: true })).toBeVisible();
-  await expect(page.getByRole('heading', { name: 'SEO & Growth Marketing', exact: true })).toBeVisible();
-  await expect(page.getByRole('heading', { name: 'Integrated Digital Solutions', exact: true })).toBeVisible();
-  await expect(page.getByRole('heading', { name: 'Custom Software Engineering', exact: true })).toBeVisible();
+  const featured = page.locator('a[href^="/articles/"]').first();
+  await expect(featured).toBeVisible();
+  await featured.click();
+  await expect(page).toHaveURL(/\/articles\/.+/);
+  await expect(page.getByRole('heading').first()).toBeVisible();
 });
 
-// ─── Industries Section ───────────────────────────────────────────────────────
+// ─── Legacy / redirects ────────────────────────────────────────────────────────
 
-test('industry cards link to correct pages', async ({ page }) => {
+test('/work redirects to /case-studies', async ({ page }) => {
+  await page.goto('/work');
+  await expect(page).toHaveURL(/\/case-studies/);
+});
+
+// ─── Services & Industries ─────────────────────────────────────────────────────
+
+test('"What We Build" nav link navigates to services', async ({ page }) => {
   await page.goto('/');
+  const nav = page.getByRole('navigation', { name: 'Primary navigation' });
+  await nav.getByRole('link', { name: 'What We Build' }).click();
+  await expect(page).toHaveURL(/\/services/);
+  await expect(page.getByRole('heading').first()).toBeVisible();
+});
 
+test('"Who It\'s For" nav link navigates to industries', async ({ page }) => {
+  await page.goto('/');
+  const nav = page.getByRole('navigation', { name: 'Primary navigation' });
+  await nav.getByRole('link', { name: "Who It's For" }).click();
+  await expect(page).toHaveURL(/\/industries/);
+  await expect(page.getByRole('heading').first()).toBeVisible();
+});
+
+test('industry pages load with correct titles', async ({ page }) => {
   const industries = [
-    { name: 'Technology & SaaS', url: '/industries/technology' },
-    { name: 'E-Commerce & Retail', url: '/industries/ecommerce' },
-    { name: 'Healthcare & Life Sciences', url: '/industries/healthcare' },
-    { name: 'Manufacturing & Industrial', url: '/industries/manufacturing' },
+    { url: '/industries/manufacturing', name: /Manufacturing/i },
+    { url: '/industries/ecommerce', name: /Ecommerce/i },
+    { url: '/industries/healthcare', name: /Healthcare/i },
+    { url: '/industries/technology', name: /SaaS|Technology/i },
+    { url: '/industries/professional-services', name: /Professional Services/i },
+    { url: '/industries/education', name: /Education/i },
   ];
 
   for (const industry of industries) {
-    await page.goto('/');
-    await page.getByRole('link', { name: industry.name }).click();
-    await expect(page).toHaveURL(new RegExp(industry.url));
+    await page.goto(industry.url);
+    await expect(page).toHaveTitle(industry.name);
     await expect(page.getByRole('heading').first()).toBeVisible();
   }
 });
 
 // ─── Articles Section ─────────────────────────────────────────────────────────
 
-test('articles section shows recent posts', async ({ page }) => {
-  await page.goto('/');
-  await expect(page.getByRole('link', { name: /Web Development in 2025/i })).toBeVisible();
-  await expect(page.getByRole('link', { name: /Ensure Our Platform/i })).toBeVisible();
+test('articles index page loads and lists articles', async ({ page }) => {
+  await page.goto('/articles');
+  await expect(page).toHaveTitle(/Articles/i);
+  await expect(page.getByRole('heading').first()).toBeVisible();
+  await expect(page.locator('a[href^="/articles/"]').first()).toBeVisible();
 });
 
 test('article card navigates to full article', async ({ page }) => {
-  await page.goto('/');
-  await page.getByRole('link', { name: /Web Development in 2025/i }).click();
-  await expect(page).toHaveURL(/\/articles\//);
-  await expect(page.getByRole('heading').first()).toBeVisible();
-});
-
-test('"Explore My Knowledge Library" navigates to articles index', async ({ page }) => {
-  await page.goto('/');
-  await page.getByRole('link', { name: /Explore My Knowledge Library/i }).click();
-  await expect(page).toHaveURL(/\/articles/);
-});
-
-// ─── Articles Index ───────────────────────────────────────────────────────────
-
-test('articles index page loads and lists articles', async ({ page }) => {
-  await page.goto(`/articles`);
-  await expect(page).toHaveTitle(/Articles|Blog|Knowledge/i);
-  // At least one article card should be present
-  const articles = page.getByRole('link').filter({ hasText: /article|read/i });
+  await page.goto('/articles');
+  const firstArticle = page.locator('a[href^="/articles/"]').first();
+  await firstArticle.click();
+  await expect(page).toHaveURL(/\/articles\/.+/);
   await expect(page.getByRole('heading').first()).toBeVisible();
 });
 
 // ─── Contact Page ─────────────────────────────────────────────────────────────
 
 test('contact page loads with a form or CTA', async ({ page }) => {
-  await page.goto(`/contact`);
+  await page.goto('/contact');
   await expect(page).toHaveURL(/\/contact/);
   await expect(page.getByRole('heading').first()).toBeVisible();
-  // Form or email/phone contact should be visible
   const contactForm = page.locator('form');
   const phoneLink = page.getByRole('link', { name: /513/ });
   await expect(contactForm.or(phoneLink).first()).toBeVisible();
 });
 
-// ─── Work / Portfolio Page ────────────────────────────────────────────────────
+// ─── Work / Case Studies Page ──────────────────────────────────────────────────
 
-test('work page loads and shows case studies', async ({ page }) => {
-  await page.goto(`/work`);
-  await expect(page).toHaveURL(/\/work/);
+test('case studies page loads and shows past work', async ({ page }) => {
+  await page.goto('/case-studies');
+  await expect(page).toHaveURL(/\/case-studies/);
   await expect(page.getByRole('heading').first()).toBeVisible();
+  await expect(page.getByText('Globe Iron Roofing')).toBeVisible();
 });
 
 // ─── Footer ───────────────────────────────────────────────────────────────────
@@ -120,8 +131,8 @@ test('work page loads and shows case studies', async ({ page }) => {
 test('footer contains nav links and contact info', async ({ page }) => {
   await page.goto('/');
   const footer = page.locator('footer');
-  await expect(footer.getByRole('link', { name: 'Services' })).toBeVisible();
-  await expect(footer.getByRole('link', { name: 'Contact' })).toBeVisible();
+  await expect(footer.getByRole('link', { name: 'Case Studies' })).toBeVisible();
+  await expect(footer.getByRole('link', { name: 'Schedule a Call' })).toBeVisible();
   await expect(footer).toContainText('513');
 });
 
@@ -130,6 +141,17 @@ test('footer copyright year is current', async ({ page }) => {
   const footer = page.locator('footer');
   const year = new Date().getFullYear().toString();
   await expect(footer).toContainText(year);
+});
+
+// ─── SEO / Metadata regression ─────────────────────────────────────────────────
+
+test('page titles do not double up the trailing brand suffix', async ({ page }) => {
+  const pages = ['/', '/services', '/industries', '/case-studies', '/articles', '/contact', '/about', '/privacy', '/terms', '/cookies', '/cincinnati-web-developer'];
+  for (const url of pages) {
+    await page.goto(url);
+    const title = await page.title();
+    expect(title, `${url} title was: "${title}"`).not.toMatch(/Black Lab Dev(elopment)? \| Black Lab Dev\s*$/i);
+  }
 });
 
 // ─── Performance / Basics ─────────────────────────────────────────────────────
@@ -162,7 +184,7 @@ test('homepage has no broken images', async ({ page }) => {
 
 test('page responds within acceptable time', async ({ page }) => {
   const start = Date.now();
-  await page.goto(BASE_URL, { waitUntil: 'domcontentloaded' });
+  await page.goto('/', { waitUntil: 'domcontentloaded' });
   const duration = Date.now() - start;
   expect(duration).toBeLessThan(5000);
 });

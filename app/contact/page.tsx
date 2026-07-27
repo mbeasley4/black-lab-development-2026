@@ -6,19 +6,19 @@ import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
-  title: "Schedule a Discovery Call | Black Lab Dev",
+  title: "Schedule a Discovery Call",
   description:
     "Ready to make your website work harder? Schedule a discovery call with a senior web developer in Cincinnati, OH — let's talk through what's limiting your leads and conversions.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Schedule a Discovery Call | Black Lab Dev",
+    title: "Schedule a Discovery Call",
     description:
       "Ready to make your website work harder? Schedule a discovery call and let's talk through what's holding back your leads, traffic, and conversions.",
     url: "/contact",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Schedule a Discovery Call | Black Lab Dev",
+    title: "Schedule a Discovery Call",
     description:
       "Schedule a discovery call with a senior web developer in Cincinnati, OH.",
     images: [DEFAULT_OG_IMAGE.url],

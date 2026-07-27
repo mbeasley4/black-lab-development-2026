@@ -22,19 +22,19 @@ const CASE_STUDIES_QUERY = `*[_type == "caseStudy"] | order(featured desc, publi
 }`;
 
 export const metadata: Metadata = {
-  title: "Website Case Studies | Real Results | Black Lab Dev",
+  title: "Website Case Studies | Real Results",
   description:
     "Real results: more qualified leads, faster load times, higher conversion rates, and better search visibility across B2B and ecommerce sites.",
   alternates: { canonical: "/case-studies" },
   openGraph: {
-    title: "Website Case Studies | Real Results | Black Lab Dev",
+    title: "Website Case Studies | Real Results",
     description:
       "Real results: more qualified leads, faster load times, higher conversion rates, and better search visibility across B2B and ecommerce sites.",
     url: "/case-studies",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Website Case Studies | Real Results | Black Lab Dev",
+    title: "Website Case Studies | Real Results",
     description:
       "Real results: more qualified leads, faster load times, higher conversion rates, and better search visibility across B2B and ecommerce sites.",
     images: [DEFAULT_OG_IMAGE.url],

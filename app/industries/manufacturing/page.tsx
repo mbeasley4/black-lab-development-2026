@@ -8,19 +8,19 @@ import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
-  title: "Manufacturing Web Design & Development | Black Lab Dev",
+  title: "Manufacturing Web Design & Development",
   description:
     "Websites for manufacturers and industrial firms — RFQ generation, product catalogs, and distributor portals built to win engineers and procurement teams.",
   alternates: { canonical: "/industries/manufacturing" },
   openGraph: {
-    title: "Manufacturing Web Design & Development | Black Lab Dev",
+    title: "Manufacturing Web Design & Development",
     description:
       "Websites for manufacturers and industrial firms — RFQ generation, product catalogs, and distributor portals built to win engineers and procurement teams.",
     url: "/industries/manufacturing",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Manufacturing Web Design & Development | Black Lab Dev",
+    title: "Manufacturing Web Design & Development",
     description:
       "Websites for manufacturers and industrial firms — RFQ generation, product catalogs, and distributor portals built to win engineers and procurement teams.",
     images: [DEFAULT_OG_IMAGE.url],

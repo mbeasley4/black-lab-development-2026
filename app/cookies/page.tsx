@@ -8,20 +8,20 @@ import { legalWebPageSchema } from "@/app/lib/legal";
 const LAST_UPDATED = "July 2, 2026";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | Black Lab Development",
+  title: "Cookie Policy",
   description:
     "A full breakdown of the cookies and similar technologies used on blacklabdev.com, what each one does, and how to control them.",
   alternates: { canonical: "/cookies" },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Cookie Policy | Black Lab Development",
+    title: "Cookie Policy",
     description:
       "A full breakdown of the cookies and similar technologies used on blacklabdev.com, what each one does, and how to control them.",
     url: "/cookies",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Cookie Policy | Black Lab Development",
+    title: "Cookie Policy",
     description: "A full breakdown of the cookies used on blacklabdev.com.",
     images: [DEFAULT_OG_IMAGE.url],
   },

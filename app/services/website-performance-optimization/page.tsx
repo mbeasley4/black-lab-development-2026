@@ -9,19 +9,19 @@ import FaqSection from "@/components/FaqSection";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
-  title: "Website Performance Optimization & Core Web Vitals | Black Lab Dev",
+  title: "Website Performance Optimization & Core Web Vitals",
   description:
     "Fix slow load times, failing Core Web Vitals, and technical SEO issues that cost you rankings and revenue. Measurable speed improvements — not Lighthouse theater.",
   alternates: { canonical: "/services/website-performance-optimization" },
   openGraph: {
-    title: "Website Performance Optimization & Core Web Vitals | Black Lab Dev",
+    title: "Website Performance Optimization & Core Web Vitals",
     description:
       "Fix slow load times, failing Core Web Vitals, and technical SEO issues that cost you rankings and revenue. Measurable speed improvements — not Lighthouse theater.",
     url: "/services/website-performance-optimization",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Website Performance Optimization & Core Web Vitals | Black Lab Dev",
+    title: "Website Performance Optimization & Core Web Vitals",
     description:
       "Fix slow load times, failing Core Web Vitals, and technical SEO issues — measurable improvements, not Lighthouse theater.",
     images: [DEFAULT_OG_IMAGE.url],

@@ -37,12 +37,10 @@ export async function generateMetadata({
   const article = await client.fetch(POST_QUERY, { slug });
 
   if (!article) {
-    return { title: "Article Not Found | Black Lab Development" };
+    return { title: "Article Not Found" };
   }
 
-  const title = article.seoTitle
-    ? article.seoTitle
-    : `${article.title} | Black Lab Development`;
+  const title = article.seoTitle ? article.seoTitle : article.title;
 
   let description: string = article.metaDescription ?? article.excerpt ?? "";
 

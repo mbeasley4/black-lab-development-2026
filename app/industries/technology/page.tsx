@@ -8,19 +8,19 @@ import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
-  title: "SaaS & Technology Web Development | Black Lab Dev",
+  title: "SaaS & Technology Web Development",
   description:
     "Web development for SaaS and technology companies — product-led marketing sites, custom integrations, and conversion architecture that turns traffic into signups.",
   alternates: { canonical: "/industries/technology" },
   openGraph: {
-    title: "SaaS & Technology Web Development | Black Lab Dev",
+    title: "SaaS & Technology Web Development",
     description:
       "Web development for SaaS and technology companies — product-led marketing sites, custom integrations, and conversion architecture that turns traffic into signups.",
     url: "/industries/technology",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "SaaS & Technology Web Development | Black Lab Dev",
+    title: "SaaS & Technology Web Development",
     description:
       "Web development for SaaS and technology companies — product-led marketing sites, custom integrations, and conversion architecture that turns traffic into signups.",
     images: [DEFAULT_OG_IMAGE.url],

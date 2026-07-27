@@ -8,19 +8,19 @@ import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
-  title: "Education & EdTech Web Development | Black Lab Dev",
+  title: "Education & EdTech Web Development",
   description:
     "Web development for schools, training platforms, and EdTech companies — enrollment-driven design, LMS integrations, and content-rich platforms built for learning at scale.",
   alternates: { canonical: "/industries/education" },
   openGraph: {
-    title: "Education & EdTech Web Development | Black Lab Dev",
+    title: "Education & EdTech Web Development",
     description:
       "Web development for schools, training platforms, and EdTech companies — enrollment-driven design, LMS integrations, and content-rich platforms built for learning at scale.",
     url: "/industries/education",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Education & EdTech Web Development | Black Lab Dev",
+    title: "Education & EdTech Web Development",
     description:
       "Web development for schools, training platforms, and EdTech companies — enrollment-driven design, LMS integrations, and content-rich platforms built for learning at scale.",
     images: [DEFAULT_OG_IMAGE.url],

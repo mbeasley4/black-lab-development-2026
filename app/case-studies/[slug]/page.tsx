@@ -35,9 +35,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const study = await client.fetch(CASE_STUDY_QUERY, { slug });
-  if (!study) return { title: "Case Study | Black Lab Development" };
+  if (!study) return { title: "Case Study Not Found" };
   const canonical = `https://blacklabdev.com/case-studies/${slug}`;
-  const title = study.seoTitle || `${study.title} | Black Lab Development`;
+  const title = study.seoTitle || study.title;
   const description = study.metaDescription || study.excerpt || "";
   const ogImage = study.mainImage
     ? { url: urlFor(study.mainImage).width(1200).height(630).fit("crop").url(), width: 1200, height: 630, alt: study.title }

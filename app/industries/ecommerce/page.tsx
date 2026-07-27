@@ -8,19 +8,19 @@ import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
-  title: "Ecommerce & DTC Web Development | Black Lab Dev",
+  title: "Ecommerce & DTC Web Development",
   description:
     "Ecommerce and DTC web development — fast storefronts, Shopify and WooCommerce builds, and conversion optimization that closes more sales and increases AOV.",
   alternates: { canonical: "/industries/ecommerce" },
   openGraph: {
-    title: "Ecommerce & DTC Web Development | Black Lab Dev",
+    title: "Ecommerce & DTC Web Development",
     description:
       "Ecommerce and DTC web development — fast storefronts, Shopify and WooCommerce builds, and conversion optimization that closes more sales and increases AOV.",
     url: "/industries/ecommerce",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Ecommerce & DTC Web Development | Black Lab Dev",
+    title: "Ecommerce & DTC Web Development",
     description:
       "Ecommerce and DTC web development — fast storefronts, Shopify and WooCommerce builds, and conversion optimization that closes more sales and increases AOV.",
     images: [DEFAULT_OG_IMAGE.url],
