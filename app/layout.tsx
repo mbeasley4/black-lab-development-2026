@@ -65,7 +65,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} ${spaceGrotesk.variable} bg-[#0b0b0c] text-[#e5e7eb] antialiased`}>
-        {/* GTM container + noscript fallback via @next/third-parties */}
+        {/* GTM container + noscript fallback */}
         <GoogleTagManager />
         <AptabaseClientProvider>
           <NavigationProgress />

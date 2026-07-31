@@ -1,4 +1,4 @@
-import { GoogleTagManager as NextGTM } from "@next/third-parties/google";
+import Script from "next/script";
 import { CONSENT_STORAGE_KEY } from "@/lib/consent";
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
@@ -49,11 +49,36 @@ export function ConsentModeBootstrap() {
 }
 
 /**
- * Loads the GTM container via @next/third-parties (afterInteractive strategy).
+ * Hand-authored (not @next/third-parties) so the inline init snippet is a
+ * fixed, known string — its CSP script-src hash is pinned in next.config.ts
+ * and would silently break if a dependency bump reformatted the template.
  * No-ops when NEXT_PUBLIC_GTM_ID is unset — safe to include unconditionally.
- * Also renders the noscript iframe fallback automatically.
  */
 export function GoogleTagManager() {
   if (!GTM_ID) return null;
-  return <NextGTM gtmId={GTM_ID} />;
+  return (
+    <>
+      <Script
+        id="gtm-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html:
+            "(function(w,l){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});})(window,'dataLayer');",
+        }}
+      />
+      <Script
+        id="gtm-src"
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
+      />
+      <noscript>
+        <iframe
+          src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+          height="0"
+          width="0"
+          style={{ display: "none", visibility: "hidden" }}
+        />
+      </noscript>
+    </>
+  );
 }
