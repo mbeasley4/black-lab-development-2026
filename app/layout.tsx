@@ -14,6 +14,7 @@ import AptabaseClientProvider from "@/providers/AptabaseClientProvider";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { localBusinessSchema } from "@/app/lib/schema";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://blacklabdev.com"),
@@ -59,10 +60,7 @@ export default function RootLayout({
       <head>
         {/* Consent Mode v2 defaults must be inline before GTM loads. */}
         <ConsentModeBootstrap />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-        />
+        <JsonLd data={localBusinessSchema} />
       </head>
       <body className={`${inter.variable} ${spaceGrotesk.variable} bg-[#0b0b0c] text-[#e5e7eb] antialiased`}>
         {/* GTM container + noscript fallback */}

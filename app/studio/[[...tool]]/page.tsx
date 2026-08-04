@@ -10,8 +10,10 @@
 import { NextStudio } from 'next-sanity/studio'
 import config from '../../../sanity.config'
 
-export const dynamic = 'force-static'
-
+// Not force-static: the shared root layout reads headers() for the CSP
+// nonce (components/GoogleTagManager.tsx, components/JsonLd.tsx), which
+// conflicts with force-static. Studio itself is a client-rendered SPA, so
+// this only affects the initial HTML shell.
 export { metadata, viewport } from 'next-sanity/studio'
 
 export default function StudioPage() {

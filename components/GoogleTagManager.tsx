@@ -1,5 +1,6 @@
 import Script from "next/script";
 import { CONSENT_STORAGE_KEY } from "@/lib/consent";
+import { getNonce } from "@/lib/nonce";
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
@@ -39,28 +40,27 @@ try {
 `;
 
 /** Inline head script that sets Consent Mode v2 defaults before GTM loads. */
-export function ConsentModeBootstrap() {
+export async function ConsentModeBootstrap() {
+  const nonce = await getNonce();
   return (
     <script
       id="consent-mode-default"
+      nonce={nonce}
       dangerouslySetInnerHTML={{ __html: consentBootstrap }}
     />
   );
 }
 
-/**
- * Hand-authored (not @next/third-parties) so the inline init snippet is a
- * fixed, known string — its CSP script-src hash is pinned in next.config.ts
- * and would silently break if a dependency bump reformatted the template.
- * No-ops when NEXT_PUBLIC_GTM_ID is unset — safe to include unconditionally.
- */
-export function GoogleTagManager() {
+/** No-ops when NEXT_PUBLIC_GTM_ID is unset — safe to include unconditionally. */
+export async function GoogleTagManager() {
   if (!GTM_ID) return null;
+  const nonce = await getNonce();
   return (
     <>
       <Script
         id="gtm-init"
         strategy="afterInteractive"
+        nonce={nonce}
         dangerouslySetInnerHTML={{
           __html:
             "(function(w,l){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});})(window,'dataLayer');",
@@ -69,6 +69,7 @@ export function GoogleTagManager() {
       <Script
         id="gtm-src"
         strategy="afterInteractive"
+        nonce={nonce}
         src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
       />
       <noscript>
