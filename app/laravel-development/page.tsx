@@ -6,6 +6,7 @@ import PageClose from "@/components/PageClose";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import JsonLd from "@/components/JsonLd";
 import FaqSection from "@/components/FaqSection";
+import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
   title: "Custom Laravel Development | APIs, Integrations & Web Apps",
@@ -39,7 +40,7 @@ const services = [
   },
   {
     title: "Platform Integrations",
-    body: "Shopify, SlickText, Stripe, HubSpot, Salesforce — we connect Laravel to the platforms your business already runs on. Clean service classes, proper error handling, and webhook processing that doesn't break.",
+    body: "Shopify, SlickText, Stripe, HubSpot, Salesforce — I connect Laravel to the platforms your business already runs on. Clean service classes, proper error handling, and webhook processing that doesn't break.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -76,12 +77,12 @@ const services = [
 ];
 
 const processSteps = [
-  { step: "01", title: "Requirements & Data Modeling", body: "We define the domain model, integration points, and data flow before writing code. Eloquent relationships, migration strategy, and API contracts are planned upfront." },
+  { step: "01", title: "Requirements & Data Modeling", body: "I define the domain model, integration points, and data flow before writing code. Eloquent relationships, migration strategy, and API contracts are planned upfront." },
   { step: "02", title: "Architecture & Service Design", body: "Clean service classes, repository patterns where they earn their keep, and a folder structure that scales. No god controllers, no 500-line models." },
   { step: "03", title: "Integration Engineering", body: "Third-party APIs get their own service layers with proper error handling, retry logic, and webhook verification. Shopify webhooks, SMS delivery callbacks, payment events — handled correctly." },
   { step: "04", title: "Build & Test", body: "Feature tests for critical paths, unit tests for business logic, and integration tests for third-party connections. Code is deployed with confidence, not crossed fingers." },
   { step: "05", title: "Queue, Cache & Performance", body: "Redis-backed queues for async processing, proper cache invalidation, and database query optimization. The app stays fast as data grows." },
-  { step: "06", title: "Deploy & Monitor", body: "CI/CD pipeline, environment configuration, error tracking, and performance monitoring. We don't disappear after deployment — we make sure it runs." },
+  { step: "06", title: "Deploy & Monitor", body: "CI/CD pipeline, environment configuration, error tracking, and performance monitoring. I don't disappear after deployment — I make sure it runs." },
 ];
 
 const faqs = [
@@ -95,19 +96,19 @@ const faqs = [
   },
   {
     q: "How do you handle third-party integrations like Shopify and SlickText?",
-    a: "Every integration gets its own service class with proper error handling, retry logic, and webhook verification. We don't scatter API calls across controllers. Integration failures are logged, retried where appropriate, and surfaced to admins — not silently swallowed.",
+    a: "Every integration gets its own service class with proper error handling, retry logic, and webhook verification. I don't scatter API calls across controllers. Integration failures are logged, retried where appropriate, and surfaced to admins — not silently swallowed.",
   },
   {
     q: "Do you build frontends too, or just the Laravel backend?",
-    a: "Both. We build full-stack applications with Laravel APIs powering React or Vue frontends, as well as Laravel apps with Blade/Livewire for admin tools and internal platforms. The frontend choice depends on your team and your users.",
+    a: "Both. I build full-stack applications with Laravel APIs powering React or Vue frontends, as well as Laravel apps with Blade/Livewire for admin tools and internal platforms. The frontend choice depends on your team and your users.",
   },
   {
     q: "How long does a custom Laravel project take?",
-    a: "Most Laravel projects run 6–14 weeks depending on integration complexity, data modeling requirements, and frontend scope. API-first builds with clean integrations can ship faster. Complex platforms with multiple third-party connections and admin interfaces take longer. We scope accurately upfront.",
+    a: "Most Laravel projects run 6–14 weeks depending on integration complexity, data modeling requirements, and frontend scope. API-first builds with clean integrations can ship faster. Complex platforms with multiple third-party connections and admin interfaces take longer. I scope accurately upfront.",
   },
   {
     q: "How much does custom Laravel development cost?",
-    a: "Custom Laravel projects at Black Lab Development range from $10,000 for focused API builds and internal tools to $60,000+ for complex platforms with multiple integrations, queue-driven workflows, and custom admin interfaces. Pricing reflects actual scope and complexity.",
+    a: "Custom Laravel projects at Black Lab Development range from $5,000 for focused API builds and internal tools to $28,000+ for complex platforms with multiple integrations, queue-driven workflows, and custom admin interfaces. Pricing reflects actual scope and complexity.",
   },
 ];
 
@@ -195,10 +196,10 @@ export default function LaravelDevelopmentPage() {
     <main className="w-full bg-[#0b0b0c] text-white">
       <JsonLd data={[serviceSchema, faqSchema]} />
       <PageHero
-        label="Laravel Development Agency"
+        label="Laravel Development"
         title="Laravel Development for APIs, Integrations & Custom Platforms"
         titleHighlight="APIs, Integrations & Custom Platforms"
-        description="We build custom Laravel applications — APIs, admin portals, platform integrations, and queue-driven workflows — with clean architecture and no framework bloat."
+        description="I build custom Laravel applications — APIs, admin portals, platform integrations, and queue-driven workflows — with clean architecture and no framework bloat."
         backgroundImage="/images/services-hero-bg.png"
         badges={["Clean architecture", "Production-grade integrations", "Full-stack Laravel"]}
       />
@@ -236,7 +237,7 @@ export default function LaravelDevelopmentPage() {
                 Most Laravel projects fail not because of the framework — but because of how they&apos;re built. Business logic scattered across controllers, integrations that break silently, and queue jobs that nobody monitors.
               </p>
               <p className="text-slate-400 leading-relaxed mb-6">
-                At Black Lab Dev, we build Laravel applications with clean service architecture, proper integration engineering, and the kind of error handling that means your operations team doesn&apos;t discover problems from angry customers.
+                At Black Lab Dev, I build Laravel applications with clean service architecture, proper integration engineering, and the kind of error handling that means your operations team doesn&apos;t discover problems from angry customers.
               </p>
               <p className="text-slate-400 leading-relaxed font-medium">
                 No god controllers. No silent failures. No &ldquo;it works on my machine.&rdquo;
@@ -273,7 +274,7 @@ export default function LaravelDevelopmentPage() {
         <div className="mx-auto max-w-375 px-6">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
-              What We Build
+              What I Build
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Laravel Development Services
@@ -306,13 +307,13 @@ export default function LaravelDevelopmentPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
-                Why We&apos;re Different
+                Why I&apos;m Different
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Built for Production, Not for Demos
               </h2>
               <p className="text-slate-400 leading-relaxed mb-6">
-                Most Laravel shops build to get something running. We build to keep it running — under real traffic, real data, and real integration failures. The difference shows up at 2 a.m. when a webhook stops firing.
+                Most Laravel shops build to get something running. I build to keep it running — under real traffic, real data, and real integration failures. The difference shows up at 2 a.m. when a webhook stops firing.
               </p>
               <p className="text-slate-400 leading-relaxed">
                 Your Laravel application becomes infrastructure your business depends on — not a fragile prototype that needs constant babysitting.
@@ -348,13 +349,13 @@ export default function LaravelDevelopmentPage() {
         <div className="mx-auto max-w-375 px-6">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
-              Our Approach
+              My Approach
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Architecture First, Code Second
             </h2>
             <p className="text-slate-400 leading-relaxed">
-              We don&apos;t start with `laravel new` and figure it out as we go. Every project starts with domain modeling, integration mapping, and service architecture — then we build exactly what&apos;s needed.
+              I don&apos;t start with `laravel new` and figure it out as I go. Every project starts with domain modeling, integration mapping, and service architecture — then I build exactly what&apos;s needed.
             </p>
           </div>
           <div className="space-y-10">
@@ -386,7 +387,7 @@ export default function LaravelDevelopmentPage() {
                 Laravel applications that perform well at demo scale often fall apart under production traffic. The difference is architecture decisions made early — queue strategy, caching layers, and database optimization that&apos;s baked in, not bolted on.
               </p>
               <p className="text-slate-400 leading-relaxed">
-                We build applications that stay fast as your data grows and your integrations multiply.
+                I build applications that stay fast as your data grows and your integrations multiply.
               </p>
             </div>
             <div className="space-y-4">
@@ -541,9 +542,17 @@ export default function LaravelDevelopmentPage() {
             >
               Drupal Development →
             </Link>
+            <Link
+              href="/shopify-development"
+              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+            >
+              Shopify Development →
+            </Link>
           </div>
         </div>
       </section>
+
+      <FounderByline />
 
       <PageClose
         title="Work With a Laravel Developer Who Builds for Production"

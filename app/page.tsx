@@ -19,19 +19,19 @@ export const revalidate = 60;
 export const metadata: Metadata = {
   title: "B2B Website Design & Pipeline Generation | Black Lab Dev",
   description:
-    "Fast, scalable websites built to convert. Whether you're generating leads, driving sales, or supporting growth — we build websites that actually do their job.",
+    "Fast, scalable websites built to convert. Whether you're generating leads, driving sales, or supporting growth — I build websites that actually do their job.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "B2B Website Design & Pipeline Generation | Black Lab Dev",
     description:
-      "Fast, scalable websites built to convert. Whether you're generating leads, driving sales, or supporting growth — we build websites that actually do their job.",
+      "Fast, scalable websites built to convert. Whether you're generating leads, driving sales, or supporting growth — I build websites that actually do their job.",
     url: "/",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     title: "B2B Website Design & Pipeline Generation | Black Lab Dev",
     description:
-      "Fast, scalable websites built to convert. Whether you're generating leads, driving sales, or supporting growth — we build websites that actually do their job.",
+      "Fast, scalable websites built to convert. Whether you're generating leads, driving sales, or supporting growth — I build websites that actually do their job.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
@@ -55,7 +55,7 @@ const faqSchema = {
       name: "How long does a typical project take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most projects launch in 6–10 weeks. Smaller optimization engagements (conversion audits, performance work) can be completed in 2–4 weeks. Timelines depend on scope and content readiness — we'll give you an honest estimate before anything starts.",
+        text: "Most projects launch in 6–10 weeks. Smaller optimization engagements (conversion audits, performance work) can be completed in 2–4 weeks. Timelines depend on scope and content readiness — I'll give you an honest estimate before anything starts.",
       },
     },
     {
@@ -63,7 +63,7 @@ const faqSchema = {
       name: "What's the typical investment for a project?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Custom website builds typically start at $8,000–$15,000. Conversion optimization and performance engagements start at $3,000–$6,000. Every project is scoped based on your goals, not a one-size-fits-all package. We'll provide a clear, fixed quote upfront.",
+        text: "Custom website builds typically start at $4,000–$9,000. Conversion optimization and performance engagements start at $1,800–$4,000. Every project is scoped based on your goals, not a one-size-fits-all package. I'll provide a clear, fixed quote upfront.",
       },
     },
     {
@@ -71,7 +71,7 @@ const faqSchema = {
       name: "What do you need from us to get started?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A conversation about your business goals, your current pain points, and access to your existing site (if applicable). We handle discovery, strategy, and technical planning — you don't need a brief, wireframes, or a spec document to get started.",
+        text: "A conversation about your business goals, your current pain points, and access to your existing site (if applicable). I handle discovery, strategy, and technical planning — you don't need a brief, wireframes, or a spec document to get started.",
       },
     },
     {
@@ -79,7 +79,7 @@ const faqSchema = {
       name: "Do you work with companies outside of Cincinnati?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. While we're based in Cincinnati, OH, we work with B2B and manufacturing companies across the United States. Our process is fully remote-friendly, with direct communication between you and the engineer doing the work.",
+        text: "Yes. While I'm based in Cincinnati, OH, I work with B2B and manufacturing companies across the United States. My process is fully remote-friendly, with direct communication between you and me — the person actually doing the work.",
       },
     },
     {
@@ -87,7 +87,7 @@ const faqSchema = {
       name: "What happens after launch?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We don't disappear after go-live. Every project includes a post-launch support window, performance monitoring, and a handoff your team can actually maintain. Ongoing retainers for optimization, content, and technical support are available if needed.",
+        text: "I don't disappear after go-live. Every project includes a post-launch support window, performance monitoring, and a handoff your team can actually maintain. Ongoing retainers for optimization, content, and technical support are available if needed.",
       },
     },
     {

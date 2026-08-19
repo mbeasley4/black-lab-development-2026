@@ -45,6 +45,7 @@ export const metadata: Metadata = {
 const projects = [
   {
     name: "Globe Iron Roofing",
+    platform: "WordPress",
     logo: "/images/work/globeironroofing-logo.png",
     screenshot: "/images/work/globeironroofing-screenshot.png",
     summary:
@@ -57,7 +58,36 @@ const projects = [
     ],
   },
   {
+    name: "Zero Gravity",
+    platform: "WordPress",
+    logo: "/images/work/zerogravity-logo.png",
+    screenshot: "/images/work/zerogravity-screenshot.png",
+    summary:
+      "Modernized a WordPress-based digital presence through Elementor cleanup, technical SEO improvements, and eCommerce support.",
+    details: [
+      "Custom WordPress theme built for the Gutenberg block editor",
+      "Technical SEO, AEO, and GEO architecture from day one",
+      "Page speed and Core Web Vitals optimization",
+      "Fully responsive, editor-friendly block layouts",
+    ],
+  },
+  {
+    name: "Rev & Rinse Auto Detailing",
+    platform: "Custom Next.js",
+    logo: "/images/work/revandrinse-logo.png",
+    screenshot: "/images/work/revandrinse-screenshot.png",
+    summary:
+      "Brochure site for a local auto detailing business — built with Next.js and Sanity.io CMS for fast performance and easy content management.",
+    details: [
+      "Next.js application development",
+      "Sanity.io CMS integration",
+      "Performance and SEO optimization",
+      "Responsive UI and component-based architecture",
+    ],
+  },
+  {
     name: "Zoo Printables AI",
+    platform: "Custom Next.js",
     logo: "/images/work/zooprintablesai-logo.png",
     screenshot: "/images/work/zooprintablesai-screenshot.png",
     summary:
@@ -71,6 +101,7 @@ const projects = [
   },
   {
     name: "The Shortening Shuttle",
+    platform: "Shopify",
     logo: "/images/work/shortening-shuttle-logo.png",
     screenshot: "/images/work/shortening-shuttle-screenshot.png",
     summary:
@@ -84,20 +115,8 @@ const projects = [
     ],
   },
   {
-    name: "Rev & Rinse Auto Detailing",
-    logo: "/images/work/revandrinse-logo.png",
-    screenshot: "/images/work/revandrinse-screenshot.png",
-    summary:
-      "Brochure site for a local auto detailing business — built with Next.js and Sanity.io CMS for fast performance and easy content management.",
-    details: [
-      "Next.js application development",
-      "Sanity.io CMS integration",
-      "Performance and SEO optimization",
-      "Responsive UI and component-based architecture",
-    ],
-  },
-  {
     name: "Blum Media Group",
+    platform: "Custom Next.js",
     logo: "/images/work/blum-logo.png",
     screenshot: "/images/work/blum-screenshot.png",
     summary:
@@ -110,7 +129,21 @@ const projects = [
     ],
   },
   {
+    name: "Mona Dermatology",
+    platform: "WordPress",
+    logo: "/images/work/mona-logo.png",
+    screenshot: "/images/work/mona-screenshot.png",
+    summary:
+      "Ongoing WordPress engineering and WooCommerce support to maintain a reliable, high-performing patient and product experience.",
+    details: [
+      "WordPress maintenance and feature development",
+      "WooCommerce configuration and support",
+      "Performance, security, and reliability improvements",
+    ],
+  },
+  {
     name: "Buzzworthy",
+    platform: "WordPress",
     logo: "/images/work/buzzworthy-logo.png",
     screenshot: "/images/work/buzzworthy-screenshot.png",
     summary:
@@ -123,6 +156,7 @@ const projects = [
   },
   {
     name: "Seven Hills School",
+    platform: "WordPress",
     logo: "/images/work/7hills-logo-v2.png",
     screenshot: "/images/work/7hills-screenshot.jpg",
     summary:
@@ -136,6 +170,7 @@ const projects = [
   },
   {
     name: "Frisch's Big Boy",
+    platform: "WordPress",
     logo: "/images/work/frischs-logo.png",
     screenshot: "/images/work/frischs-screenshot.jpg",
     summary:
@@ -149,38 +184,13 @@ const projects = [
   },
   {
     name: "Haag-Streit USA",
+    platform: "WordPress",
     logo: "/images/work/haag-streit-logo.png",
     screenshot: "/images/work/haag-streit-screenshot.jpg",
     summary:
-      "Enterprise web platform and marketing automation support for a medical device manufacturer operating in regulated environments.",
+      "Web platform and marketing automation support for a medical device manufacturer operating in regulated environments.",
     details: [
-      "Enterprise WordPress platform",
-      "CRM & marketing automation integrations",
-      "SEO and performance improvements",
-      "Long-term technical stewardship",
-    ],
-  },
-  {
-    name: "FAZTEK",
-    logo: "/images/work/faztek-logo.png",
-    screenshot: "/images/work/faztek-screenshot.jpg",
-    summary:
-      "Engineering support for an industrial automation platform requiring reliability, scalability, and clean integration between systems.",
-    details: [
-      "Enterprise WordPress platform",
-      "CRM & marketing automation integrations",
-      "SEO and performance improvements",
-      "Long-term technical stewardship",
-    ],
-  },
-  {
-    name: "Epoxies",
-    logo: "/images/work/epoxies-logo.png",
-    screenshot: "/images/work/epoxies-screenshot.jpg",
-    summary:
-      "Engineering support for an ecommerce platform requiring reliability, scalability, and clean integration between systems.",
-    details: [
-      "Enterprise WordPress platform",
+      "WordPress platform",
       "CRM & marketing automation integrations",
       "SEO and performance improvements",
       "Long-term technical stewardship",
@@ -188,18 +198,20 @@ const projects = [
   },
   {
     name: "Enduir Cybersecurity",
+    platform: "Drupal",
     logo: "/images/work/enduir-logo.png",
     screenshot: "/images/work/enduir-screenshot.jpg",
     summary:
       "Engineering support for a cybersecurity firm requiring reliability, scalability, and clean integration between systems.",
     details: [
-      "Drupal development",
+      "Drupal 11 development",
       "Performance optimization",
       "Technical leadership and execution",
     ],
   },
   {
     name: "Melink Solar",
+    platform: "WordPress",
     logo: "/images/work/melink-logo.png",
     screenshot: "/images/work/melink-screenshot.jpg",
     summary:
@@ -211,32 +223,8 @@ const projects = [
     ],
   },
   {
-    name: "Mona Dermatology",
-    logo: "/images/work/mona-logo.png",
-    screenshot: "/images/work/mona-screenshot.png",
-    summary:
-      "Ongoing WordPress engineering and WooCommerce support to maintain a reliable, high-performing patient and product experience.",
-    details: [
-      "WordPress maintenance and feature development",
-      "WooCommerce configuration and support",
-      "Performance, security, and reliability improvements",
-    ],
-  },
-  {
-    name: "Zero Gravity",
-    logo: "/images/work/zerogravity-logo.png",
-    screenshot: "/images/work/zerogravity-screenshot.png",
-    summary:
-      "Modernized a WordPress-based digital presence through Elementor cleanup, technical SEO improvements, and eCommerce support.",
-    details: [
-      "Elementor structure and styling refactor",
-      "Technical SEO and site health optimization",
-      "Page speed and Core Web Vitals improvements",
-      "WooCommerce configuration and support",
-    ],
-  },
-  {
     name: "Plastech Molding",
+    platform: "WordPress",
     logo: "/images/work/plastechmold-logo.png",
     screenshot: "/images/work/plastechmold-screenshot.png",
     summary:
@@ -250,6 +238,7 @@ const projects = [
   },
   {
     name: "Luma Financial Technologies",
+    platform: "WordPress",
     logo: "/images/work/luma-logo.png",
     screenshot: "/images/work/luma-screenshot.png",
     summary:
@@ -337,8 +326,6 @@ export default async function CaseStudiesPage() {
         <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
       </section>
 
-      <ProofStats />
-
       {/* ── Work Accomplished ── */}
       <section id="portfolio" className="py-20 md:py-24 relative overflow-hidden border-b border-slate-800">
         <div className="absolute top-0 left-1/4 w-175 h-175 bg-volt-500/6 rounded-full blur-[140px] pointer-events-none" />
@@ -389,9 +376,14 @@ export default async function CaseStudiesPage() {
                         className="object-contain object-left opacity-75 group-hover:opacity-100 transition-opacity duration-300"
                       />
                     </div>
-                    <span className="text-[10px] font-semibold tracking-[0.18em] uppercase text-neutral-600">
-                      {project.name}
-                    </span>
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="text-[10px] font-semibold tracking-[0.18em] uppercase text-neutral-600">
+                        {project.name}
+                      </span>
+                      <span className="shrink-0 text-[9px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full border border-volt-500/20 bg-volt-500/5 text-volt-500/80">
+                        {project.platform}
+                      </span>
+                    </div>
                   </div>
                   <p className="text-neutral-300 text-sm leading-relaxed mb-5 grow">
                     {project.summary}
@@ -477,7 +469,7 @@ export default async function CaseStudiesPage() {
 
                 <h2 className="text-3xl md:text-4xl font-black tracking-tight leading-tight text-white mb-4">
                   Whole30 —{" "}
-                  <span className="text-volt-400 drop-shadow-[0_0_30px_rgba(227,245,68,0.4)]">Enterprise Platform</span>{" "}
+                  <span className="text-volt-400 drop-shadow-[0_0_30px_rgba(227,245,68,0.4)]">High-Traffic Platform</span>{" "}
                   &amp; React Engineering
                 </h2>
                 <p className="text-slate-400 text-sm md:text-base leading-relaxed mb-8 max-w-2xl">
@@ -620,7 +612,7 @@ export default async function CaseStudiesPage() {
       <PageClose
         title="Ready to Become the Next Case Study?"
         bodyPrimary="Every engagement is measured against real pipeline outcomes — qualified leads, conversion rates, and revenue attributed to the website."
-        bodySecondary="Start with an audit. We'll identify what's limiting your site and show you exactly what we'd fix."
+        bodySecondary="Start with an audit. I'll identify what's limiting your site and show you exactly what I'd fix."
         secondaryHref="/contact"
         secondaryLabel="Schedule a Call"
       />

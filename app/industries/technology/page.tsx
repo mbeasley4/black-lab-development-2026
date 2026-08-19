@@ -6,6 +6,7 @@ import QuickAnswerBlock from "@/components/QuickAnswerBlock";
 import FaqSection from "@/components/FaqSection";
 import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
+import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
   title: "SaaS & Technology Web Development",
@@ -74,7 +75,7 @@ const faqSchema = {
       name: "Should a SaaS company use Next.js or WordPress for their marketing site?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Next.js is the better choice for most SaaS marketing sites — faster performance, better developer experience, and a modern tech stack that aligns with engineering teams. WordPress can work if marketing needs total content control without developer involvement. The choice depends on who will own the site post-launch and how often content changes. We build both and recommend based on your actual workflow.",
+        text: "Next.js is the better choice for most SaaS marketing sites — faster performance, better developer experience, and a modern tech stack that aligns with engineering teams. WordPress can work if marketing needs total content control without developer involvement. The choice depends on who will own the site post-launch and how often content changes. I build both and recommend based on your actual workflow.",
       },
     },
     {
@@ -90,7 +91,7 @@ const faqSchema = {
       name: "How do you handle technical debt on an existing SaaS website?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Technical debt on marketing sites typically shows up as slow load times, unmaintainable component structures, or inconsistent design patterns that make every content update fragile. We audit what's there, categorize debt by impact, and address it incrementally — stabilizing what's costing performance or developer time first, without requiring a full rebuild.",
+        text: "Technical debt on marketing sites typically shows up as slow load times, unmaintainable component structures, or inconsistent design patterns that make every content update fragile. I audit what's there, categorize debt by impact, and address it incrementally — stabilizing what's costing performance or developer time first, without requiring a full rebuild.",
       },
     },
     {
@@ -139,7 +140,7 @@ const deliverables = [
 const clients = [
   {
     name: "Whole30",
-    detail: "Enterprise-scale Next.js + Sanity platform rebuild handling high-traffic consumer health content with measurable performance improvements.",
+    detail: "Large-scale Next.js + Sanity platform rebuild handling high-traffic consumer health content with measurable performance improvements.",
   },
   {
     name: "Enduir Cybersecurity",
@@ -147,7 +148,7 @@ const clients = [
   },
   {
     name: "Luma Financial Technologies",
-    detail: "Complex platform web presence for a fintech company with demanding performance and enterprise trust requirements.",
+    detail: "Complex platform web presence for a fintech company with demanding performance and high-trust requirements.",
   },
 ];
 
@@ -174,7 +175,7 @@ export default function TechnologyIndustryPage() {
       <section className="py-20 border-b border-slate-800/50">
         <div className="mx-auto max-w-375 px-6">
           <div className="mb-12">
-            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">What We Build</span>
+            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">What I Build</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Built for Product-Led Growth</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -249,10 +250,12 @@ export default function TechnologyIndustryPage() {
 
       <FaqSection faqs={faqs} headingId="technology-faq" />
 
+      <FounderByline />
+
       <PageClose
         title="Ready to Build a SaaS Website That Actually Converts?"
         bodyPrimary="Most SaaS marketing sites describe the product well enough. The problem is they don't convert visitors into users efficiently — and they accumulate technical debt that makes every update slower."
-        bodySecondary="Schedule a discovery call. We'll talk through the conversion and performance gaps costing you signups."
+        bodySecondary="Schedule a discovery call. I'll talk through the conversion and performance gaps costing you signups."
         secondaryHref="/services/custom-web-development"
         secondaryLabel="View Custom Development"
       />

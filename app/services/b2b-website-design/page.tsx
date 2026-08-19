@@ -7,6 +7,7 @@ import LabFramework from "@/components/LabFramework";
 import JsonLd from "@/components/JsonLd";
 import FaqSection from "@/components/FaqSection";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
+import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
   title: "B2B Website Design | Built for Complex Buyers & Long Sales Cycles",
@@ -87,7 +88,7 @@ const faqSchema = {
       name: "How much does B2B website design cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "B2B website design engagements at Black Lab Development typically range from $8,000 to $35,000 depending on scope, content complexity, and integration requirements. The investment starts with a free website audit so you know exactly what you're getting and why before committing to anything.",
+        text: "B2B website design engagements at Black Lab Development typically range from $4,000 to $18,000 depending on scope, content complexity, and integration requirements. The investment starts with a free website audit so you know exactly what you're getting and why before committing to anything.",
       },
     },
     {
@@ -151,12 +152,12 @@ const approach = [
   {
     step: "01",
     title: "Buyer Research & Positioning",
-    body: "We start by understanding who actually buys from you — their role, their fears, their evaluation criteria. Then we build messaging that speaks directly to that person, not everyone.",
+    body: "I start by understanding who actually buys from you — their role, their fears, their evaluation criteria. Then I build messaging that speaks directly to that person, not everyone.",
   },
   {
     step: "02",
     title: "Multi-Stakeholder Architecture",
-    body: "We map your site to the buying committee. Each persona gets a clear path: the technical evaluator sees specs and integrations, the executive sees ROI and risk mitigation, the champion sees talking points.",
+    body: "I map your site to the buying committee. Each persona gets a clear path: the technical evaluator sees specs and integrations, the executive sees ROI and risk mitigation, the champion sees talking points.",
   },
   {
     step: "03",
@@ -166,12 +167,12 @@ const approach = [
   {
     step: "04",
     title: "Clean, Fast Build",
-    body: "We build in Next.js or Astro — no page builders, no bloated themes. Core Web Vitals scores that hold under real traffic. Code you can hand off to an internal team without needing a decoder ring.",
+    body: "I build in Next.js or Astro — no page builders, no bloated themes. Core Web Vitals scores that hold under real traffic. Code you can hand off to an internal team without needing a decoder ring.",
   },
   {
     step: "05",
     title: "Measurement & Optimization",
-    body: "We set up conversion tracking before launch, not after. Heatmaps, session recordings, and funnel analytics so we can measure what changed — and keep improving it.",
+    body: "I set up conversion tracking before launch, not after. Heatmaps, session recordings, and funnel analytics so I can measure what changed — and keep improving it.",
   },
 ];
 
@@ -187,10 +188,10 @@ export default function B2BWebsiteDesignPage() {
       <JsonLd data={[breadcrumbSchema, serviceSchema, faqSchema]} />
       <main className="w-full bg-black text-white">
       <PageHero
-        label="B2B Website Design Agency"
+        label="B2B Website Design"
         title="Websites Designed for How B2B Buyers Actually Buy"
         titleHighlight="B2B Buyers Actually Buy"
-        description="B2B buyers are skeptical, slow, and involve multiple people. We build websites that work for all of them — with conversion architecture engineered for long sales cycles and complex decisions."
+        description="B2B buyers are skeptical, slow, and involve multiple people. I build websites that work for all of them — with conversion architecture engineered for long sales cycles and complex decisions."
         backgroundImage="/images/services-hero-bg.png"
         badges={["Long sales cycles", "Multi-stakeholder design", "Pipeline-focused"]}
       />
@@ -246,7 +247,7 @@ export default function B2BWebsiteDesignPage() {
               Why Most B2B Websites Don&apos;t Generate Pipeline
             </h2>
             <p className="text-slate-400 leading-relaxed">
-              These aren&apos;t hypothetical problems. They&apos;re what we find on almost every B2B site we audit.
+              These aren&apos;t hypothetical problems. They&apos;re what I find on almost every B2B site I audit.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -270,7 +271,7 @@ export default function B2BWebsiteDesignPage() {
         <div className="mx-auto max-w-375 px-6">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
-              Our Approach
+              My Approach
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               The Revenue-Driven B2B Website Process
@@ -338,10 +339,12 @@ export default function B2BWebsiteDesignPage() {
         </div>
       </section>
 
+      <FounderByline />
+
       <PageClose
         title="Ready to Build a Website That Generates Pipeline?"
-        bodyPrimary="Start with a website audit. We'll review your current site against the B2B buyer journey and show you exactly where pipeline is leaking — and how to fix it."
-        bodySecondary="No proposals to review. No 40-slide decks. Just a direct assessment of what's working, what isn't, and what we'd do about it."
+        bodyPrimary="Start with a website audit. I'll review your current site against the B2B buyer journey and show you exactly where pipeline is leaking — and how to fix it."
+        bodySecondary="No proposals to review. No 40-slide decks. Just a direct assessment of what's working, what isn't, and what I'd do about it."
         secondaryHref="/case-studies"
         secondaryLabel="View Case Studies"
       />

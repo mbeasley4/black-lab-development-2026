@@ -43,7 +43,7 @@ export default function CoreServices() {
             <div className="mx-auto max-w-375 px-6 relative z-10">
                 <div className="mb-16">
                     <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
-                        Our Approach
+                        My Approach
                     </span>
                     <h2 className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-4">
                         Built Differently —<br/>

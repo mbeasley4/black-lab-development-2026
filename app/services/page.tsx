@@ -6,6 +6,7 @@ import PageClose from "@/components/PageClose"
 import CaseStudies from "@/components/CaseStudies";
 import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
+import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
   title: "Web Development & Conversion Optimization Services",
@@ -114,12 +115,12 @@ const services = [
       <>
         <p className="mb-4">
           If your current site was born from a template and raised by a page builder,
-          it's probably already showing its limits. We build from the architecture out —
+          it's probably already showing its limits. I build from the architecture out —
           custom, deliberate, and designed to last longer than the next platform trend.
         </p>
         <p className="text-neutral-500 text-sm">
           WordPress, headless CMS, Shopify, or fully custom — the right tool for
-          the problem, not the one we already had open.
+          the problem, not the one I already had open.
         </p>
       </>
     ),
@@ -136,7 +137,8 @@ const services = [
         </p>
         <p className="text-neutral-500 text-sm">
           Reliability, security, and systems your team won't dread opening — for when
-          "we'll fix it later" has quietly become a load-bearing wall.
+          "we'll fix it later" has quietly become a load-bearing wall. Includes Cloudflare
+          configuration, CDN and WAF setup, and uptime/performance monitoring.
         </p>
       </>
     ),
@@ -148,7 +150,7 @@ const services = [
       <>
         <p className="mb-4">
           A slow site isn't a cosmetic problem — it's revenue walking out the door.
-          We dig into the actual numbers, fix what's broken at the source, and measure
+          I dig into the actual numbers, fix what's broken at the source, and measure
           the difference. No vague recommendations. No findings buried in a PDF.
         </p>
         <p className="text-neutral-500 text-sm">
@@ -165,7 +167,7 @@ const services = [
       <>
         <p className="mb-4">
           If someone on your team is copy-pasting between platforms to keep the data
-          straight, that's a technical problem with a technical solution. We build the
+          straight, that's a technical problem with a technical solution. I build the
           connections that make systems actually talk to each other — and stay talking.
         </p>
         <p className="text-neutral-500 text-sm">
@@ -182,7 +184,7 @@ const services = [
       <>
         <p className="mb-4">
           Before you burn it down and rebuild, it's worth knowing what you actually have.
-          We dig into existing systems, surface the real problems, and tell you plainly
+          I dig into existing systems, surface the real problems, and tell you plainly
           what to fix, what to leave alone, and what's quietly on fire.
         </p>
         <p className="text-neutral-500 text-sm">
@@ -204,7 +206,7 @@ export default function ServicesPage() {
         label="Services"
         title="Engineering That Ships and Holds"
         titleHighlight="Ships and Holds"
-        description="We build things that work in production — not just in a demo. Senior-led, hands-on, and allergic to solutions that look great until they don't."
+        description="I build things that work in production — not just in a demo. Senior-led, hands-on, and allergic to solutions that look great until they don't."
         backgroundImage="/images/services-hero-bg.png"
         badges={["No templates", "No offshore handoffs", "No 40-slide decks"]}
       />
@@ -285,7 +287,7 @@ export default function ServicesPage() {
                 // Services
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-white">
-                What We Do
+                What I Do
               </h2>
             </div>
             <div className="flex-1 h-px bg-linear-to-r from-volt-500/60 via-volt-500/20 to-transparent" />
@@ -384,7 +386,7 @@ export default function ServicesPage() {
           <div className="flex items-center gap-6 mb-12 md:mb-16">
             <div>
               <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono drop-shadow-[0_0_12px_rgba(227,245,68,0.7)]">
-                // How We Work
+                // How I Work
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-white">
                 The Process
@@ -398,32 +400,32 @@ export default function ServicesPage() {
               {
                 step: "01",
                 title: "Discovery",
-                body: "Before writing a line of code we need to understand what you're actually trying to solve — the business goal, the technical constraints, and where the current setup is failing. We talk, ask uncomfortable questions, and figure out if we're a fit.",
+                body: "Before writing a line of code I need to understand what you're actually trying to solve — the business goal, the technical constraints, and where the current setup is failing. I'll talk with you, ask uncomfortable questions, and figure out if it's a fit.",
               },
               {
                 step: "02",
                 title: "Architecture",
-                body: "We map out the technical approach: stack, integrations, data model, and anything that's going to bite you later if you get it wrong early. No code yet — just a clear plan so nothing gets built twice.",
+                body: "I map out the technical approach: stack, integrations, data model, and anything that's going to bite you later if you get it wrong early. No code yet — just a clear plan so nothing gets built twice.",
               },
               {
                 step: "03",
                 title: "Build",
-                body: "Hands on keyboard. We build incrementally, keep you looped in on real progress (not status theater), and make decisions in the open. You'll see working software early and often, not at the end of a long runway.",
+                body: "Hands on keyboard. I build incrementally, keep you looped in on real progress (not status theater), and make decisions in the open. You'll see working software early and often, not at the end of a long runway.",
               },
               {
                 step: "04",
                 title: "Review & QA",
-                body: "Everything gets tested against real scenarios — not just happy paths. Performance, accessibility, cross-browser behavior, and the edge cases that always show up in production. We find the problems before your users do.",
+                body: "Everything gets tested against real scenarios — not just happy paths. Performance, accessibility, cross-browser behavior, and the edge cases that always show up in production. I find the problems before your users do.",
               },
               {
                 step: "05",
                 title: "Launch",
-                body: "Deployment is planned, not improvised. DNS, caching, redirects, monitoring — the details that make the difference between a clean cutover and a 2 a.m. fire. We stay available through go-live.",
+                body: "Deployment is planned, not improvised. DNS, caching, redirects, monitoring — the details that make the difference between a clean cutover and a 2 a.m. fire. I stay available through go-live.",
               },
               {
                 step: "06",
                 title: "Iterate",
-                body: "Shipping isn't the finish line. We track what the data shows after launch, flag what needs attention, and keep improving. If something isn't working, you'll hear it from us first — not from your bounce rate.",
+                body: "Shipping isn't the finish line. I track what the data shows after launch, flag what needs attention, and keep improving. If something isn't working, you'll hear it from me first — not from your bounce rate.",
               },
             ].map((item) => (
               <div
@@ -451,6 +453,8 @@ export default function ServicesPage() {
       </section>
 
       <CaseStudies />
+
+      <FounderByline />
 
       {/* ================= CLOSE ================= */}
       <PageClose

@@ -192,7 +192,7 @@ export default async function ArticlePage({
             }),
             "author": {
                 "@type": "Person",
-                "name": article.author?.name ?? "Black Lab Development",
+                "name": article.author?.name ?? "Michael Beasley",
                 "url": article.author?.url ?? "https://blacklabdev.com/about",
             },
             "publisher": {

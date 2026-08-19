@@ -4,6 +4,7 @@ import {
     TrendingUp,
     Layers,
     Cpu,
+    ShieldCheck,
 } from "lucide-react";
 
 const services = [
@@ -31,6 +32,12 @@ const services = [
             "Purpose-built software and applications designed to solve complex business challenges at scale.",
         icon: Cpu,
     },
+    {
+        title: "Security & Infrastructure",
+        description:
+            "Cloudflare configuration, CDN setup, WAF rules, and uptime/performance monitoring to keep production sites fast and locked down.",
+        icon: ShieldCheck,
+    },
 ];
 
 export default function ServicesSnapshot() {
@@ -40,15 +47,15 @@ export default function ServicesSnapshot() {
                 {/* Section Header */}
                 <div className="max-w-6xl mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white">
-                        What We Do
+                        What I Do
                     </h2>
                     <p className="text-lg text-[#e5e7eb]/70 leading-relaxed">
-                        We design, build, and optimize digital products that perform. From high-impact websites to custom software and growth-focused platforms, we work directly with teams that need results — not templates.
+                        I design, build, and optimize digital products that perform. From high-impact websites to custom software and growth-focused platforms, I work directly with teams that need results — not templates.
                     </p>
                 </div>
 
                 {/* Services Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-8">
                     {services.map((service) => (
                         <div
                             key={service.title}

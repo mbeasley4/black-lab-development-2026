@@ -6,6 +6,7 @@ import QuickAnswerBlock from "@/components/QuickAnswerBlock";
 import FaqSection from "@/components/FaqSection";
 import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
+import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
   title: "Education & EdTech Web Development",
@@ -74,7 +75,7 @@ const faqSchema = {
       name: "Can you integrate a website with our LMS (Learning Management System)?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Common LMS integrations include Moodle, Canvas, Teachable, Thinkific, LearnDash, and Kajabi. Integration scope varies — some require single sign-on (SSO), others just need embedded enrollment flows or course preview widgets. We evaluate your specific LMS and build the integration that creates the least friction for learners, not the simplest implementation.",
+        text: "Yes. Common LMS integrations include Moodle, Canvas, Teachable, Thinkific, LearnDash, and Kajabi. Integration scope varies — some require single sign-on (SSO), others just need embedded enrollment flows or course preview widgets. I evaluate your specific LMS and build the integration that creates the least friction for learners, not the simplest implementation.",
       },
     },
     {
@@ -159,7 +160,7 @@ export default function EducationIndustryPage() {
       <section className="py-20 border-b border-slate-800/50">
         <div className="mx-auto max-w-375 px-6">
           <div className="mb-12">
-            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">What We Build</span>
+            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">What I Build</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Built for Enrollment and Learning</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -215,6 +216,8 @@ export default function EducationIndustryPage() {
       </section>
 
       <FaqSection faqs={faqs} headingId="education-faq" />
+
+      <FounderByline />
 
       <PageClose
         title="Building a Learning Platform or Enrollment-Driven Site?"

@@ -26,7 +26,7 @@ export default function CallToAction() {
                     </h2>
 
                     <p className="text-lg text-slate-300 max-w-2xl mx-auto mt-6 mb-12 leading-relaxed">
-                        Schedule a discovery call. We&apos;ll talk through what&apos;s limiting your site and what it would take to fix it — no commitment required.
+                        Schedule a discovery call. I&apos;ll talk through what&apos;s limiting your site and what it would take to fix it — no commitment required.
                     </p>
 
                     {/* CTA Buttons */}

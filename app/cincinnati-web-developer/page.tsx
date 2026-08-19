@@ -35,7 +35,7 @@ const localBusinessSchema = {
   telephone: "+15135204362",
   email: "mbeasley4@gmail.com",
   description:
-    "Cincinnati-based web development agency specializing in B2B and manufacturing websites. Custom Next.js, WordPress, and headless CMS development for Ohio and Tri-State companies.",
+    "Cincinnati-based independent web development practice specializing in B2B and manufacturing websites. Custom Next.js, WordPress, and headless CMS development for Ohio and Tri-State companies.",
   founder: { "@type": "Person", name: "Michael Beasley", url: "https://blacklabdev.com/about" },
   address: {
     "@type": "PostalAddress",
@@ -97,7 +97,7 @@ const faqSchema = {
       name: "How much does a website cost for a Cincinnati business?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Engagements vary based on scope, but most Cincinnati B2B website projects run from $8,000–$30,000+ depending on complexity, custom functionality, and ongoing support needs. I scope accurately upfront so there are no surprises. The conversation starts with a discovery call.",
+        text: "Engagements vary based on scope, but most Cincinnati B2B website projects run from $4,000–$15,000+ depending on complexity, custom functionality, and ongoing support needs. I scope accurately upfront so there are no surprises. The conversation starts with a discovery call.",
       },
     },
   ],
@@ -164,7 +164,7 @@ const faqs = [
   },
   {
     q: "How much does a website cost for a Cincinnati business?",
-    a: "Engagements vary based on scope, but most Cincinnati B2B website projects run from $8,000–$30,000+ depending on complexity, custom functionality, and ongoing support needs. I scope accurately upfront so there are no surprises. The conversation starts with a discovery call.",
+    a: "Engagements vary based on scope, but most Cincinnati B2B website projects run from $4,000–$15,000+ depending on complexity, custom functionality, and ongoing support needs. I scope accurately upfront so there are no surprises. The conversation starts with a discovery call.",
   },
 ];
 

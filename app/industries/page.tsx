@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero";
 import PageClose from "@/components/PageClose";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import JsonLd from "@/components/JsonLd";
+import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
   title: "Web Development for B2B, Manufacturing & Ecommerce",
@@ -55,7 +56,7 @@ const industries = [
         <p className="mb-4">
           SaaS companies have a habit of building fast, then spending the next two years
           paying the tab. Technical debt compounds quietly until it doesn't — and then
-          it's all anyone talks about. We help teams clean up what they've accumulated
+          it's all anyone talks about. I help teams clean up what they've accumulated
           and build systems that don't become anchors.
         </p>
         <p className="text-neutral-500 text-sm">
@@ -93,7 +94,7 @@ const industries = [
         <p className="mb-4">
           In e-commerce, a slow page isn't a minor inconvenience — it's a sale you
           didn't make. Every second of load time is a customer you lost to a competitor
-          with a faster checkout. We fix the things that actually cost you money, with
+          with a faster checkout. I fix the things that actually cost you money, with
           data to prove it.
         </p>
         <p className="text-neutral-500 text-sm">
@@ -104,14 +105,14 @@ const industries = [
     ),
   },
   {
-    title: "Enterprise & Internal Systems",
+    title: "Internal Tools & Systems",
     href: "/industries/professional-services",
     image: "/images/industries/enterprise.png",
     description: (
       <>
         <p className="mb-4">
-          Enterprise projects have a reputation for taking forever, costing twice the
-          budget, and delivering half the scope. We don't run that playbook. Incremental,
+          Internal tooling projects have a reputation for taking forever, costing twice
+          the budget, and delivering half the scope. I don't run that playbook. Incremental,
           low-risk, and actually shipped — because a working system beats a perfect plan
           that's still in review.
         </p>
@@ -167,7 +168,7 @@ export default function IndustriesPage() {
         label="Industries"
         title="Built for Real-World Demands"
         titleHighlight="Real-World Demands"
-        description="We've worked across industries where performance matters — not just presentation."
+        description="I've worked across industries where performance matters — not just presentation."
         backgroundImage="/images/industries-hero-bg.png"
         badges={["Regulated environments", "High-traffic systems", "Legacy nightmares survived"]}
       />
@@ -288,6 +289,8 @@ export default function IndustriesPage() {
           </div>
         </div>
       </section>
+
+      <FounderByline />
 
       {/* ================= CLOSE ================= */}
       <PageClose

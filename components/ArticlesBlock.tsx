@@ -48,7 +48,7 @@ export default async function ArticlesBlock() {
             Building, Learning & Sharing at Black Lab Development
           </h2>
           <p className="text-lg text-[#e5e7eb]/70 leading-relaxed max-w-4xl">
-            Explore our latest articles featuring development tips, technical deep dives, and behind-the-scenes insights from real projects. From scalable web apps to modern tooling and workflows, this is where we share what's working—and why.
+            Explore my latest articles featuring development tips, technical deep dives, and behind-the-scenes insights from real projects. From scalable web apps to modern tooling and workflows, this is where I share what's working—and why.
           </p>
         </div>
 

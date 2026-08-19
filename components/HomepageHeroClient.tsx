@@ -197,7 +197,7 @@ const HomepageHeroClient = ({ featuredArticle }: { featuredArticle: FeaturedArti
                 variants={paraVariants}
                 className="text-base md:text-lg lg:text-xl text-[#e5e7eb]/80 leading-relaxed max-w-2xl lg:max-w-none mx-auto lg:mx-0"
               >
-                We share the technical decisions behind fast, scalable
+                I share the technical decisions behind fast, scalable
                 websites — CMS selection, AI search optimization, conversion
                 architecture, and the tradeoffs that shape real projects. No
                 theory, just what&apos;s working right now.

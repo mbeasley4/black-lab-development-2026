@@ -7,6 +7,7 @@ import LabFramework from "@/components/LabFramework";
 import JsonLd from "@/components/JsonLd";
 import FaqSection from "@/components/FaqSection";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
+import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
   title: "Website Conversion Optimization | More Leads, Better Results",
@@ -87,7 +88,7 @@ const faqSchema = {
       name: "How much does conversion optimization cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A focused conversion audit engagement runs $1,500–$3,500 and produces a prioritized findings report with specific recommendations. Full implementation — messaging rewrites, CTA redesigns, form rebuilds, and A/B testing setup — typically ranges from $4,000 to $12,000 depending on scope. Engagements start with the audit so you know what you're paying to fix before committing to the implementation.",
+        text: "A focused conversion audit engagement runs $1,200–$2,800 and produces a prioritized findings report with specific recommendations. Full implementation — messaging rewrites, CTA redesigns, form rebuilds, and A/B testing setup — typically ranges from $2,500 to $7,000 depending on scope. Engagements start with the audit so you know what you're paying to fix before committing to the implementation.",
       },
     },
     {
@@ -147,27 +148,27 @@ const process = [
   {
     step: "01",
     title: "Conversion Audit",
-    body: "We analyze your current analytics, heatmaps, session recordings, and funnel data to identify exactly where buyers drop off and why. No assumptions — data-driven diagnosis.",
+    body: "I analyze your current analytics, heatmaps, session recordings, and funnel data to identify exactly where buyers drop off and why. No assumptions — data-driven diagnosis.",
   },
   {
     step: "02",
     title: "Messaging Alignment",
-    body: "We review your copy against your ideal buyer persona. Is it speaking to their actual pain? Addressing their objections? Using language they use — or language your marketing team invented?",
+    body: "I review your copy against your ideal buyer persona. Is it speaking to their actual pain? Addressing their objections? Using language they use — or language your marketing team invented?",
   },
   {
     step: "03",
     title: "UX Friction Removal",
-    body: "We identify every unnecessary click, confusing layout, and buried CTA. Then we fix them — simplifying paths to conversion without a full redesign.",
+    body: "I identify every unnecessary click, confusing layout, and buried CTA. Then I fix them — simplifying paths to conversion without a full redesign.",
   },
   {
     step: "04",
     title: "CTA & Form Optimization",
-    body: "We rewrite and reposition CTAs based on intent signals, and redesign forms to reduce abandonment while improving lead quality — fewer fields, better qualification.",
+    body: "I rewrite and reposition CTAs based on intent signals, and redesign forms to reduce abandonment while improving lead quality — fewer fields, better qualification.",
   },
   {
     step: "05",
     title: "A/B Testing & Measurement",
-    body: "We run structured tests on headlines, CTAs, page layouts, and form designs — measuring lift in qualified leads, not just raw conversion rate.",
+    body: "I run structured tests on headlines, CTAs, page layouts, and form designs — measuring lift in qualified leads, not just raw conversion rate.",
   },
 ];
 
@@ -208,7 +209,7 @@ export default function ConversionOptimizationPage() {
         label="B2B Website Conversion Optimization"
         title="Traffic Without Conversions Is Just Overhead"
         titleHighlight="Just Overhead"
-        description="We diagnose exactly why your B2B website isn't generating qualified leads, then systematically fix it — with data, not guesswork."
+        description="I diagnose exactly why your B2B website isn't generating qualified leads, then systematically fix it — with data, not guesswork."
         backgroundImage="/images/services-hero-bg.png"
         badges={["Audit-first approach", "Measured before & after", "No vanity metrics"]}
       />
@@ -271,7 +272,7 @@ export default function ConversionOptimizationPage() {
               Diagnose First
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Symptoms We Treat (and Their Root Causes)
+              Symptoms I Treat (and Their Root Causes)
             </h2>
           </div>
           <div className="space-y-4">
@@ -296,10 +297,10 @@ export default function ConversionOptimizationPage() {
         <div className="mx-auto max-w-375 px-6">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
-              Our Process
+              My Process
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              How We Fix Conversion Problems
+              How I Fix Conversion Problems
             </h2>
           </div>
           <div className="space-y-12">
@@ -387,9 +388,11 @@ export default function ConversionOptimizationPage() {
         </div>
       </section>
 
+      <FounderByline />
+
       <PageClose
         title="Start With a Conversion Audit"
-        bodyPrimary="We'll review your current site and show you exactly where leads are leaking — the specific pages, specific CTAs, and specific messages that are costing you pipeline."
+        bodyPrimary="I'll review your current site and show you exactly where leads are leaking — the specific pages, specific CTAs, and specific messages that are costing you pipeline."
         bodySecondary="One focused engagement. Real findings. No proposals for things you don't need."
         secondaryHref="/case-studies"
         secondaryLabel="View Case Studies"

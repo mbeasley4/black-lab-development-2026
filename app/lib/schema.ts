@@ -10,7 +10,7 @@ export const localBusinessSchema = {
   },
   image: "https://blacklabdev.com/images/homepage-hero-bg.png",
   description:
-    "B2B website design and pipeline generation agency serving Cincinnati, OH and clients nationwide. Specializing in manufacturing websites, B2B design, and conversion optimization.",
+    "Independent B2B website design and pipeline generation practice run by senior web developer Michael Beasley, serving Cincinnati, OH and clients nationwide. Specializing in manufacturing websites, B2B design, and conversion optimization.",
   telephone: "+15135204362",
   address: {
     "@type": "PostalAddress",
@@ -44,11 +44,15 @@ export const localBusinessSchema = {
   knowsAbout: [
     "Next.js development",
     "WordPress development",
+    "Shopify development",
     "B2B website design",
     "Conversion rate optimization",
     "Core Web Vitals optimization",
     "Technical SEO",
     "Manufacturing website design",
+    "Cloudflare configuration",
+    "CDN and WAF security hardening",
+    "Uptime and performance monitoring",
   ],
   contactPoint: {
     "@type": "ContactPoint",
@@ -108,6 +112,16 @@ export const localBusinessSchema = {
           url: "https://blacklabdev.com/services",
           description:
             "Core Web Vitals, technical SEO remediation, and performance optimization with measurable results.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Security & Infrastructure Hardening",
+          url: "https://blacklabdev.com/services",
+          description:
+            "Cloudflare configuration, CDN setup, WAF rules, and uptime/performance monitoring for production websites and applications.",
         },
       },
     ],

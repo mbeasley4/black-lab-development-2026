@@ -54,7 +54,7 @@ export default function PositioningStrike() {
                             Trusted by Businesses Locally and Nationwide
                         </h2>
 
-                        <p className="text-slate-400 text-base mb-6">We work with companies in:</p>
+                        <p className="text-slate-400 text-base mb-6">I work with companies in:</p>
 
                         <div className="space-y-0 divide-y divide-slate-800/50 mb-8">
                             {locations.map((loc) => (

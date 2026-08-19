@@ -272,7 +272,7 @@ export default async function CaseStudyPage({
             Ready to Build on a Better Foundation?
           </h2>
           <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Start with a performance and conversion audit. We'll identify what's limiting your site — and what it would take to fix it.
+            Start with a performance and conversion audit. I'll identify what's limiting your site — and what it would take to fix it.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <Link

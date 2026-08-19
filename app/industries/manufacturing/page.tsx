@@ -6,6 +6,7 @@ import QuickAnswerBlock from "@/components/QuickAnswerBlock";
 import FaqSection from "@/components/FaqSection";
 import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
+import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
   title: "Manufacturing Web Design & Development",
@@ -82,7 +83,7 @@ const faqSchema = {
       name: "Do manufacturing websites need to be ITAR or compliance-aware?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Depends on your product categories. Defense and aerospace work often requires careful handling of technical specifications. At minimum, manufacturing websites should avoid publishing ITAR-controlled data in public catalogs. We scope compliance requirements during discovery so nothing ships that creates liability.",
+        text: "Depends on your product categories. Defense and aerospace work often requires careful handling of technical specifications. At minimum, manufacturing websites should avoid publishing ITAR-controlled data in public catalogs. I scope compliance requirements during discovery so nothing ships that creates liability.",
       },
     },
     {
@@ -90,7 +91,7 @@ const faqSchema = {
       name: "How long does it take to build a manufacturing website?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most manufacturing website builds take 6–10 weeks from kickoff to launch. Larger engagements involving product catalog migrations, ERP integrations, or distributor portals run longer. We scope timelines honestly before anything starts.",
+        text: "Most manufacturing website builds take 6–10 weeks from kickoff to launch. Larger engagements involving product catalog migrations, ERP integrations, or distributor portals run longer. I scope timelines honestly before anything starts.",
       },
     },
     {
@@ -137,7 +138,7 @@ const deliverables = [
 ];
 
 const clients = [
-  { name: "Haag-Streit USA", detail: "Enterprise WordPress platform for a medical device manufacturer in regulated environments." },
+  { name: "Haag-Streit USA", detail: "WordPress platform for a medical device manufacturer in regulated environments." },
   { name: "FAZTEK", detail: "Engineering support for an industrial automation platform requiring reliability and systems integration." },
   { name: "Plastech Molding", detail: "Custom WordPress theme for a precision plastics manufacturer — responsive, SEO-optimized, lead-generating." },
   { name: "Melink Solar", detail: "Custom plugin and API integration work for a solar energy platform focused on technical precision." },
@@ -166,7 +167,7 @@ export default function ManufacturingIndustryPage() {
       <section className="py-20 border-b border-slate-800/50">
         <div className="mx-auto max-w-375 px-6">
           <div className="mb-12">
-            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">What We Build</span>
+            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">What I Build</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Built for Technical Buyers</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -223,10 +224,12 @@ export default function ManufacturingIndustryPage() {
 
       <FaqSection faqs={faqs} headingId="manufacturing-faq" />
 
+      <FounderByline />
+
       <PageClose
         title="Ready to Build a Website That Generates RFQs?"
         bodyPrimary="Most manufacturing websites are digital brochures — they exist, but they don't generate qualified pipeline. That gap is fixable."
-        bodySecondary="Schedule a discovery call. We'll talk through exactly what's costing you leads and what it would take to fix it."
+        bodySecondary="Schedule a discovery call. I'll talk through exactly what's costing you leads and what it would take to fix it."
         secondaryHref="/services/manufacturing-website-design"
         secondaryLabel="View Manufacturing Service"
       />

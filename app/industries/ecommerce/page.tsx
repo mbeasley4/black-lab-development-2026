@@ -6,6 +6,7 @@ import QuickAnswerBlock from "@/components/QuickAnswerBlock";
 import FaqSection from "@/components/FaqSection";
 import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
+import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
   title: "Ecommerce & DTC Web Development",
@@ -90,7 +91,7 @@ const faqSchema = {
       name: "What ecommerce integrations do online stores typically need?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Common ecommerce integrations include: inventory/ERP (NetSuite, Inventory Planner), email marketing (Klaviyo, Mailchimp), loyalty and rewards (LoyaltyLion, Smile.io), reviews (Okendo, Judge.me), subscription management (Recharge), and analytics (GA4, Triple Whale). We scope integrations against your actual stack and only build what creates measurable business value.",
+        text: "Common ecommerce integrations include: inventory/ERP (NetSuite, Inventory Planner), email marketing (Klaviyo, Mailchimp), loyalty and rewards (LoyaltyLion, Smile.io), reviews (Okendo, Judge.me), subscription management (Recharge), and analytics (GA4, Triple Whale). I scope integrations against your actual stack and only build what creates measurable business value.",
       },
     },
     {
@@ -98,7 +99,7 @@ const faqSchema = {
       name: "How do you improve ecommerce checkout conversion rates?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Checkout conversion improves by reducing steps, removing friction, building trust at the payment stage, and offering the right payment options. Specific levers: one-page checkout, guest checkout by default, visible security signals, address autocomplete, buy-now-pay-later options, and cart abandonment recovery. We test these against your current data before making recommendations — not guessing what applies.",
+        text: "Checkout conversion improves by reducing steps, removing friction, building trust at the payment stage, and offering the right payment options. Specific levers: one-page checkout, guest checkout by default, visible security signals, address autocomplete, buy-now-pay-later options, and cart abandonment recovery. I test these against your current data before making recommendations — not guessing what applies.",
       },
     },
   ],
@@ -170,28 +171,11 @@ export default function EcommerceIndustryPage() {
         answer="Every additional second of load time reduces ecommerce conversion rates by 7-20%. For The Shortening Shuttle, a focused 7-day engagement on product page and checkout architecture produced a 164% increase in average order value. Page speed and conversion optimization are direct revenue levers — not nice-to-haves. Black Lab Development builds and optimizes ecommerce stores for DTC brands across the U.S."
       />
 
-      {/* Proof highlight */}
-      <section className="py-16 border-b border-slate-800/50 bg-volt-500/5">
-        <div className="mx-auto max-w-375 px-6">
-          <div className="flex flex-col md:flex-row gap-8 items-center">
-            <div className="text-center md:text-left">
-              <div className="text-6xl md:text-7xl font-black text-volt-500 leading-none mb-2">164%</div>
-              <div className="text-lg font-semibold text-white mb-1">Increase in average order value</div>
-              <div className="text-sm text-slate-500">The Shortening Shuttle — 7-day engagement</div>
-            </div>
-            <div className="h-px md:h-24 w-full md:w-px bg-slate-800" />
-            <p className="text-slate-400 leading-relaxed max-w-xl text-sm md:text-base">
-              The Shortening Shuttle had traffic but low average cart values. In 7 days, we restructured the product pages, added bundle logic, and tightened the checkout flow. The result was a 164% lift in AOV — without touching ad spend.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* What We Deliver */}
       <section className="py-20 border-b border-slate-800/50">
         <div className="mx-auto max-w-375 px-6">
           <div className="mb-12">
-            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">What We Build</span>
+            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">What I Build</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Built to Convert Traffic Into Revenue</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -266,10 +250,12 @@ export default function EcommerceIndustryPage() {
 
       <FaqSection faqs={faqs} headingId="ecommerce-faq" />
 
+      <FounderByline />
+
       <PageClose
         title="Ready to Get More Revenue From Existing Traffic?"
         bodyPrimary="Most ecommerce sites leave revenue on the table through slow pages, friction in checkout, and product pages that don't convert at the rate they should."
-        bodySecondary="Schedule a discovery call. We'll talk through exactly what's costing you revenue and what the highest-ROI fix is."
+        bodySecondary="Schedule a discovery call. I'll talk through exactly what's costing you revenue and what the highest-ROI fix is."
         secondaryHref="/services/conversion-optimization"
         secondaryLabel="View Conversion Optimization"
       />

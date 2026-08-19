@@ -71,9 +71,13 @@ const personSchema = {
       "Manufacturing Website Design",
       "Next.js",
       "WordPress",
+      "Shopify",
       "Technical SEO",
       "Software Architecture",
       "HubSpot Integration",
+      "Cloudflare Configuration",
+      "CDN & WAF Security",
+      "Uptime & Performance Monitoring",
     ],
   },
   knowsAbout: [
@@ -83,10 +87,14 @@ const personSchema = {
     "Manufacturing Websites",
     "Next.js",
     "WordPress",
+    "Shopify",
     "Technical SEO",
     "Software Architecture",
     "Pipeline Generation",
     "Lead Generation",
+    "Cloudflare Configuration",
+    "CDN and WAF Security",
+    "Uptime and Performance Monitoring",
   ],
   sameAs: [
     "https://www.linkedin.com/in/michaelkbeasley/",
@@ -111,7 +119,7 @@ const faqSchema = {
       name: "What is Black Lab Development?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Black Lab Development is a B2B website design and pipeline generation agency based in Cincinnati, OH. Founded by Michael Beasley, the agency specializes in manufacturing website design, B2B conversion optimization, and custom web development for companies whose websites need to generate qualified leads and support complex buying decisions.",
+        text: "Black Lab Development is Michael Beasley's independent web development practice, based in Cincinnati, OH, focused on B2B website design and pipeline generation. Michael personally handles manufacturing website design, B2B conversion optimization, and custom web development for companies whose websites need to generate qualified leads and support complex buying decisions — no account managers, no bench of junior developers.",
       },
     },
     {

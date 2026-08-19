@@ -46,6 +46,10 @@ export async function ConsentModeBootstrap() {
     <script
       id="consent-mode-default"
       nonce={nonce}
+      // See the comment in components/JsonLd.tsx — browsers hide the
+      // `nonce` attribute from DOM reads post-insertion, which produces a
+      // false hydration-mismatch warning on this attribute alone.
+      suppressHydrationWarning
       dangerouslySetInnerHTML={{ __html: consentBootstrap }}
     />
   );

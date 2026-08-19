@@ -5,6 +5,7 @@ import PageClose from "@/components/PageClose";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import JsonLd from "@/components/JsonLd";
 import FaqSection from "@/components/FaqSection";
+import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
   title: "Custom WordPress Development | Fast, Clean, No Bloat",
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
 const services = [
   {
     title: "Custom WordPress Development",
-    body: "We build fully custom themes tailored to your design, functionality, and performance requirements — without relying on prebuilt templates.",
+    body: "I build fully custom themes tailored to your design, functionality, and performance requirements — without relying on prebuilt templates.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -47,7 +48,7 @@ const services = [
   },
   {
     title: "API & System Integrations",
-    body: "We connect WordPress with CRMs, third-party platforms, and internal systems using clean, scalable integrations.",
+    body: "I connect WordPress with CRMs, third-party platforms, and internal systems using clean, scalable integrations.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -56,7 +57,7 @@ const services = [
   },
   {
     title: "Headless WordPress Development",
-    body: "For advanced use cases, we decouple the frontend using modern frameworks while keeping WordPress as a powerful backend CMS.",
+    body: "For advanced use cases, I decouple the frontend using modern frameworks while keeping WordPress as a powerful backend CMS.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" />
@@ -65,7 +66,7 @@ const services = [
   },
   {
     title: "Website Performance Optimization",
-    body: "We optimize Core Web Vitals, reduce load times, and improve overall site performance — whether we built the site or not.",
+    body: "I optimize Core Web Vitals, reduce load times, and improve overall site performance — whether I built the site or not.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -75,12 +76,12 @@ const services = [
 ];
 
 const processSteps = [
-  { step: "01", title: "Discovery & Requirements", body: "We start by understanding your goals, audience, and technical constraints — before writing a single line of code." },
+  { step: "01", title: "Discovery & Requirements", body: "I start by understanding your goals, audience, and technical constraints — before writing a single line of code." },
   { step: "02", title: "Architecture Planning", body: "Data structures, content models, and integration points are mapped out upfront. No retrofitting later." },
   { step: "03", title: "Performance Considerations", body: "Every architectural decision is evaluated against its impact on load time, Core Web Vitals, and long-term maintainability." },
   { step: "04", title: "Custom Development", body: "Clean, documented code with no bloated dependencies. Themes and plugins built specifically for your requirements." },
   { step: "05", title: "Performance Optimization", body: "Asset loading, image optimization, caching strategy, and Core Web Vitals tuning before launch — not as an afterthought." },
-  { step: "06", title: "Launch & Iteration", body: "We don't disappear after go-live. We monitor, measure, and iterate based on real traffic data." },
+  { step: "06", title: "Launch & Iteration", body: "I don't disappear after go-live. I monitor, measure, and iterate based on real traffic data." },
 ];
 
 const faqs = [
@@ -90,15 +91,15 @@ const faqs = [
   },
   {
     q: "How long does a WordPress project take?",
-    a: "Most projects range from 4–10 weeks depending on complexity, integrations, and content requirements. We scope accurately upfront so there are no surprises.",
+    a: "Most projects range from 4–10 weeks depending on complexity, integrations, and content requirements. I scope accurately upfront so there are no surprises.",
   },
   {
     q: "Can you improve an existing WordPress site?",
-    a: "Yes. We regularly audit and optimize underperforming sites — improving speed, code quality, and maintainability without necessarily starting from scratch.",
+    a: "Yes. I regularly audit and optimize underperforming sites — improving speed, code quality, and maintainability without necessarily starting from scratch.",
   },
   {
     q: "Do you use page builders like Elementor?",
-    a: "No. Page builders generate excessive markup, load large CSS/JS payloads, and make sites difficult to maintain at scale. We build with clean code that performs and lasts.",
+    a: "No. Page builders generate excessive markup, load large CSS/JS payloads, and make sites difficult to maintain at scale. I build with clean code that performs and lasts.",
   },
 ];
 
@@ -112,7 +113,7 @@ const useCases = [
 
 const performancePoints = [
   { label: "Core Web Vitals optimization", detail: "LCP, CLS, and INP tuned to pass — not just pass, but score well." },
-  { label: "Minimal JavaScript overhead", detail: "We load only what's needed. No kitchen-sink plugin bundles." },
+  { label: "Minimal JavaScript overhead", detail: "I load only what's needed. No kitchen-sink plugin bundles." },
   { label: "Efficient asset loading", detail: "Critical CSS inlined, images lazy-loaded, fonts optimized." },
   { label: "Clean HTML structure", detail: "Semantic markup that search engines and assistive technologies can parse." },
 ];
@@ -145,10 +146,10 @@ export default function WordPressDevelopmentPage() {
     <main className="w-full bg-[#0b0b0c] text-white">
       <JsonLd data={[serviceSchema, faqSchema]} />
       <PageHero
-        label="WordPress Development Agency"
-        title="WordPress Development Agency for Custom, High-Performance Websites"
+        label="WordPress Development"
+        title="Custom WordPress Development for High-Performance Websites"
         titleHighlight="Custom, High-Performance Websites"
-        description="We design and build fast, scalable websites using WordPress — without bloated themes, page builders, or unnecessary plugins."
+        description="I design and build fast, scalable websites using WordPress — without bloated themes, page builders, or unnecessary plugins."
         backgroundImage="/images/services-hero-bg.png"
         badges={["No page builders", "Performance-first architecture", "Clean, maintainable code"]}
       />
@@ -186,7 +187,7 @@ export default function WordPressDevelopmentPage() {
                 Most WordPress websites are slow, difficult to maintain, and overloaded with plugins. That&apos;s not a platform problem — it&apos;s a build problem.
               </p>
               <p className="text-slate-400 leading-relaxed mb-6">
-                At Black Lab Dev, we approach WordPress from an engineering perspective. Every site is custom-built for performance, scalability, and long-term maintainability.
+                At Black Lab Dev, I approach WordPress from an engineering perspective. Every site is custom-built for performance, scalability, and long-term maintainability.
               </p>
               <p className="text-slate-400 leading-relaxed font-medium">
                 No shortcuts. No templates. No technical debt.
@@ -223,7 +224,7 @@ export default function WordPressDevelopmentPage() {
         <div className="mx-auto max-w-375 px-6">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
-              What We Do
+              What I Do
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               WordPress Development Services
@@ -256,13 +257,13 @@ export default function WordPressDevelopmentPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
-                Why We&apos;re Different
+                Why I&apos;m Different
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Built Without the Bloat
               </h2>
               <p className="text-slate-400 leading-relaxed mb-6">
-                Most agencies rely on prebuilt themes, page builders, and plugin-heavy setups. We don&apos;t. Instead, we build lean, efficient WordPress sites from the ground up.
+                Most agencies rely on prebuilt themes, page builders, and plugin-heavy setups. I don&apos;t. Instead, I build lean, efficient WordPress sites from the ground up.
               </p>
               <p className="text-slate-400 leading-relaxed">
                 Your website becomes an asset — not a liability.
@@ -298,13 +299,13 @@ export default function WordPressDevelopmentPage() {
         <div className="mx-auto max-w-375 px-6">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
-              Our Approach
+              My Approach
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               A Developer-First Approach
             </h2>
             <p className="text-slate-400 leading-relaxed">
-              We don&apos;t design something first and try to make it work later. Every project starts with architecture planning, data structure decisions, and performance considerations — then we build.
+              I don&apos;t design something first and try to make it work later. Every project starts with architecture planning, data structure decisions, and performance considerations — then I build.
             </p>
           </div>
           <div className="space-y-10">
@@ -333,7 +334,7 @@ export default function WordPressDevelopmentPage() {
                 Optimized for Speed and SEO
               </h2>
               <p className="text-slate-400 leading-relaxed mb-6">
-                Site speed isn&apos;t just a nice-to-have — it directly impacts rankings, conversions, and user experience. Our builds focus on Core Web Vitals from day one, not as a post-launch cleanup.
+                Site speed isn&apos;t just a nice-to-have — it directly impacts rankings, conversions, and user experience. My builds focus on Core Web Vitals from day one, not as a post-launch cleanup.
               </p>
               <p className="text-slate-400 leading-relaxed">
                 The result: faster sites that perform better in search and convert more users.
@@ -465,13 +466,21 @@ export default function WordPressDevelopmentPage() {
             >
               Drupal Development →
             </Link>
+            <Link
+              href="/shopify-development"
+              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+            >
+              Shopify Development →
+            </Link>
           </div>
         </div>
       </section>
 
+      <FounderByline />
+
       <PageClose
         title="Work With a WordPress Development Partner That Builds It Right"
-        bodyPrimary="If your current site is slow, hard to manage, or limiting your growth — it's time for a better foundation. We build WordPress sites that perform, scale, and stay maintainable for years."
+        bodyPrimary="If your current site is slow, hard to manage, or limiting your growth — it's time for a better foundation. I build WordPress sites that perform, scale, and stay maintainable for years."
         bodySecondary="No bloated themes. No page builders. Just clean, performant WordPress built the right way."
         secondaryHref="/case-studies"
         secondaryLabel="View Case Studies"

@@ -6,6 +6,7 @@ import QuickAnswerBlock from "@/components/QuickAnswerBlock";
 import FaqSection from "@/components/FaqSection";
 import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
+import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
   title: "Healthcare Web Design & Development",
@@ -66,7 +67,7 @@ const faqSchema = {
       name: "What should a healthcare website include?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A healthcare website needs fast page load times, clear contact and appointment booking pathways, mobile-first design (most patients search on phone), accessible markup (WCAG 2.1 AA), local SEO signals for clinic location pages, and trust indicators like provider credentials and patient reviews. Booking integrations with EHR systems vary by practice — we scope those requirements during discovery.",
+        text: "A healthcare website needs fast page load times, clear contact and appointment booking pathways, mobile-first design (most patients search on phone), accessible markup (WCAG 2.1 AA), local SEO signals for clinic location pages, and trust indicators like provider credentials and patient reviews. Booking integrations with EHR systems vary by practice — I scope those requirements during discovery.",
       },
     },
     {
@@ -74,7 +75,7 @@ const faqSchema = {
       name: "Do healthcare websites need to be HIPAA compliant?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "HIPAA compliance applies to systems that store or transmit protected health information (PHI). A marketing website with a basic contact form generally falls outside HIPAA scope. Patient portals, appointment scheduling systems that collect health data, and form submissions stored server-side may require compliance considerations. We identify the scope during discovery and recommend appropriately without creating unnecessary overhead.",
+        text: "HIPAA compliance applies to systems that store or transmit protected health information (PHI). A marketing website with a basic contact form generally falls outside HIPAA scope. Patient portals, appointment scheduling systems that collect health data, and form submissions stored server-side may require compliance considerations. I identify the scope during discovery and recommend appropriately without creating unnecessary overhead.",
       },
     },
     {
@@ -98,7 +99,7 @@ const faqSchema = {
       name: "Can you integrate appointment booking with our existing EHR or practice management system?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Depends on the system. Most modern EHRs and practice management platforms (Athena, Kareo, SimplePractice, etc.) offer booking widgets or API access that can be integrated into a website. Others require embedded iframes or direct patient portal redirects. We evaluate the integration options during discovery and build whatever produces the least friction for patients.",
+        text: "Depends on the system. Most modern EHRs and practice management platforms (Athena, Kareo, SimplePractice, etc.) offer booking widgets or API access that can be integrated into a website. Others require embedded iframes or direct patient portal redirects. I evaluate the integration options during discovery and build whatever produces the least friction for patients.",
       },
     },
   ],
@@ -143,7 +144,7 @@ const clients = [
   },
   {
     name: "Haag-Streit USA",
-    detail: "Enterprise WordPress platform for a global medical device manufacturer operating in regulated environments.",
+    detail: "WordPress platform for a global medical device manufacturer operating in regulated environments.",
   },
 ];
 
@@ -166,28 +167,11 @@ export default function HealthcareIndustryPage() {
         answer="A healthcare website needs fast load times, frictionless appointment booking, mobile-first design, WCAG 2.1 AA accessibility, and local SEO signals for each clinic location. For Mona Dermatology, these improvements produced a 312% increase in appointment bookings. Black Lab Development builds healthcare sites in Cincinnati and for practices across the U.S."
       />
 
-      {/* Proof highlight */}
-      <section className="py-16 border-b border-slate-800/50 bg-volt-500/5">
-        <div className="mx-auto max-w-375 px-6">
-          <div className="flex flex-col md:flex-row gap-8 items-center">
-            <div className="text-center md:text-left">
-              <div className="text-6xl md:text-7xl font-black text-volt-500 leading-none mb-2">312%</div>
-              <div className="text-lg font-semibold text-white mb-1">More appointment bookings</div>
-              <div className="text-sm text-slate-500">Mona Dermatology — Cincinnati, OH</div>
-            </div>
-            <div className="h-px md:h-24 w-full md:w-px bg-slate-800" />
-            <p className="text-slate-400 leading-relaxed max-w-xl text-sm md:text-base">
-              Mona Dermatology was getting traffic but not bookings. The booking flow had too many steps, the mobile experience was broken, and the site didn't rank for the services patients were actually searching for. We fixed all three — and tracked a 312% lift in booked appointments.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* What We Deliver */}
       <section className="py-20 border-b border-slate-800/50">
         <div className="mx-auto max-w-375 px-6">
           <div className="mb-12">
-            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">What We Build</span>
+            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">What I Build</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Built for Patient Acquisition</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -227,7 +211,7 @@ export default function HealthcareIndustryPage() {
             <div>
               <p className="text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold mb-1">Related Service</p>
               <h3 className="text-lg font-bold text-white">Conversion Rate Optimization</h3>
-              <p className="text-sm text-slate-400 mt-1">How we increase bookings, form fills, and patient actions on your existing site.</p>
+              <p className="text-sm text-slate-400 mt-1">How I increase bookings, form fills, and patient actions on your existing site.</p>
             </div>
             <Link
               href="/services/conversion-optimization"
@@ -244,10 +228,12 @@ export default function HealthcareIndustryPage() {
 
       <FaqSection faqs={faqs} headingId="healthcare-faq" />
 
+      <FounderByline />
+
       <PageClose
         title="Ready to Get More Patient Bookings From Your Website?"
         bodyPrimary="Healthcare websites should be driving patient volume — not just checking a digital presence box. If yours isn't performing, that's fixable."
-        bodySecondary="Schedule a discovery call. We'll talk through exactly what's blocking bookings and what it would take to fix it."
+        bodySecondary="Schedule a discovery call. I'll talk through exactly what's blocking bookings and what it would take to fix it."
         secondaryHref="/contact"
         secondaryLabel="Start a Conversation"
       />

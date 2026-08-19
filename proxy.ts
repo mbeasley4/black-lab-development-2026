@@ -6,9 +6,17 @@ import { NextResponse, type NextRequest } from "next/server";
 // on an ISR revalidate cycle, so their script content isn't knowable at
 // build time and can't be hash-pinned in next.config.ts.
 function buildCsp(nonce: string) {
+  // Next.js dev mode needs 'unsafe-eval' for HMR and reconstructing stack
+  // traces across environments — React never uses eval() in production, so
+  // this is scoped out of the production CSP entirely.
+  const scriptSrc =
+    process.env.NODE_ENV === "development"
+      ? `script-src 'self' 'unsafe-eval' 'nonce-${nonce}' https://www.googletagmanager.com https://challenges.cloudflare.com`
+      : `script-src 'self' 'nonce-${nonce}' https://www.googletagmanager.com https://challenges.cloudflare.com`;
+
   return [
     `default-src 'self'`,
-    `script-src 'self' 'nonce-${nonce}' https://www.googletagmanager.com https://challenges.cloudflare.com`,
+    scriptSrc,
     `style-src 'self' 'unsafe-inline'`,
     `img-src 'self' data: https://cdn.sanity.io`,
     `font-src 'self'`,

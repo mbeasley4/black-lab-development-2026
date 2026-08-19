@@ -31,7 +31,7 @@ const experienceAreas: experienceArea[] = [
         color: "volt",
     },
     {
-        title: "Enterprise CMS & Platforms",
+        title: "CMS & Platform Architecture",
         icon: Layers,
         items: [
             "WordPress (custom themes & plugins)",
@@ -83,7 +83,7 @@ const experienceAreas: experienceArea[] = [
             "Secure application architecture and access control",
             "Threat awareness and risk mitigation practices",
             "Performance, uptime, and stability monitoring",
-            "Security-first mindset for enterprise and regulated environments",
+            "Security-first mindset for regulated and high-compliance environments",
         ],
         color: "blue",
     },
@@ -129,7 +129,7 @@ export default function TechnologiesExperience() {
                     </h2>
                     <p className="text-lg text-[#e5e7eb]/70 leading-relaxed">
                         15+ years of senior-level engineering — building scalable, high-traffic
-                        platforms for agencies, enterprise brands, and organizations that
+                        platforms for growing businesses and organizations that
                         can&apos;t afford to wing it. Architecture, development, integration,
                         and long-term optimization with a hard emphasis on performance,
                         reliability, and security.
@@ -190,9 +190,9 @@ export default function TechnologiesExperience() {
                                 </h3>
                             </div>
                             <p className="text-[#e5e7eb]/70 leading-relaxed group-hover:text-[#e5e7eb]/90 transition-colors duration-300">
-                                Our approach to development is grounded in modern security
+                                My approach to development is grounded in modern security
                                 principles, risk awareness, and long-term maintainability —
-                                especially important for healthcare, enterprise, and
+                                especially important for healthcare, regulated, and
                                 high-traffic platforms.
                             </p>
                         </div>

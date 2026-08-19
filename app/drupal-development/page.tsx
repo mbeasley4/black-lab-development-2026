@@ -5,23 +5,24 @@ import PageClose from "@/components/PageClose";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import JsonLd from "@/components/JsonLd";
 import FaqSection from "@/components/FaqSection";
+import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Custom Drupal Development | Enterprise CMS, No Bloat",
+  title: "Custom Drupal Development | Structured Content, No Bloat",
   description:
-    "Custom Drupal development with clean architecture, performance-first builds, and enterprise-grade content modeling — no contrib bloat, no shortcuts.",
+    "Custom Drupal development with clean architecture, performance-first builds, and structured content modeling — no contrib bloat, no shortcuts.",
   alternates: { canonical: "/drupal-development" },
   openGraph: {
-    title: "Custom Drupal Development | Enterprise CMS, No Bloat | Black Lab Dev",
+    title: "Custom Drupal Development | Structured Content, No Bloat | Black Lab Dev",
     description:
-      "Custom Drupal development with clean architecture, performance-first builds, and enterprise-grade content modeling — no contrib bloat, no shortcuts.",
+      "Custom Drupal development with clean architecture, performance-first builds, and structured content modeling — no contrib bloat, no shortcuts.",
     url: "/drupal-development",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Custom Drupal Development | Enterprise CMS, No Bloat | Black Lab Dev",
+    title: "Custom Drupal Development | Structured Content, No Bloat | Black Lab Dev",
     description:
-      "Custom Drupal development with clean architecture, performance-first builds, and enterprise-grade content modeling.",
+      "Custom Drupal development with clean architecture, performance-first builds, and structured content modeling.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
 const services = [
   {
     title: "Custom Drupal Theme Development",
-    body: "We build fully custom Drupal themes tailored to your design and content architecture — no starter kits bolted together, no contrib theme overrides fighting your markup.",
+    body: "I build fully custom Drupal themes tailored to your design and content architecture — no starter kits bolted together, no contrib theme overrides fighting your markup.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -38,7 +39,7 @@ const services = [
   },
   {
     title: "Content Architecture & Entity Modeling",
-    body: "Drupal's entity system is powerful — when used correctly. We design content types, taxonomies, paragraphs, and entity references that scale without becoming a maintenance nightmare.",
+    body: "Drupal's entity system is powerful — when used correctly. I design content types, taxonomies, paragraphs, and entity references that scale without becoming a maintenance nightmare.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />
@@ -47,7 +48,7 @@ const services = [
   },
   {
     title: "Custom Module Development",
-    body: "When contrib modules don't fit cleanly — or introduce too much overhead — we build custom modules scoped to your exact requirements. Clean, testable, well-documented.",
+    body: "When contrib modules don't fit cleanly — or introduce too much overhead — I build custom modules scoped to your exact requirements. Clean, testable, well-documented.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -56,7 +57,7 @@ const services = [
   },
   {
     title: "Headless / Decoupled Drupal",
-    body: "For teams that need Drupal's content modeling with a modern frontend. We build decoupled architectures using JSON:API or GraphQL with React or Next.js on the presentation layer.",
+    body: "For teams that need Drupal's content modeling with a modern frontend. I build decoupled architectures using JSON:API or GraphQL with React or Next.js on the presentation layer.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" />
@@ -65,7 +66,7 @@ const services = [
   },
   {
     title: "Performance & Security Hardening",
-    body: "We optimize caching layers, audit contrib dependencies, lock down permissions, and tune server-side rendering — so your Drupal site is fast and secure, not just functional.",
+    body: "I optimize caching layers, audit contrib dependencies, lock down permissions, and tune server-side rendering — so your Drupal site is fast and secure, not just functional.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -75,12 +76,12 @@ const services = [
 ];
 
 const processSteps = [
-  { step: "01", title: "Discovery & Content Audit", body: "We start by understanding your content model, editorial workflows, and technical constraints — before writing any code or choosing any modules." },
+  { step: "01", title: "Discovery & Content Audit", body: "I start by understanding your content model, editorial workflows, and technical constraints — before writing any code or choosing any modules." },
   { step: "02", title: "Architecture & Entity Design", body: "Content types, taxonomies, views, and integrations are mapped out upfront. No retrofitting entity references after the build is half done." },
   { step: "03", title: "Performance Planning", body: "Caching strategy, render pipeline decisions, and asset loading are evaluated against Core Web Vitals targets from the start — not patched in post-launch." },
   { step: "04", title: "Custom Development", body: "Clean theme code, purpose-built modules, and no unnecessary contrib dependencies. Everything built is scoped to your actual requirements." },
-  { step: "05", title: "Security & QA", body: "Permissions audit, update path verification, cross-browser testing, and accessibility review. We find the problems before your users and your security team do." },
-  { step: "06", title: "Launch & Ongoing Support", body: "Deployment is planned, not improvised. We handle module updates, security patches, and performance monitoring so your Drupal site stays healthy long-term." },
+  { step: "05", title: "Security & QA", body: "Permissions audit, update path verification, cross-browser testing, and accessibility review. I find the problems before your users and your security team do." },
+  { step: "06", title: "Launch & Ongoing Support", body: "Deployment is planned, not improvised. I handle module updates, security patches, and performance monitoring so your Drupal site stays healthy long-term." },
 ];
 
 const faqs = [
@@ -90,28 +91,28 @@ const faqs = [
   },
   {
     q: "Is Drupal still relevant in 2026?",
-    a: "Drupal powers some of the largest enterprise sites in the world — government, healthcare, higher education, and Fortune 500 companies. Drupal 11 is modern, actively maintained, and has a clear roadmap. The platform is relevant when the problem requires its strengths: structured content, complex permissions, and multi-site architectures.",
+    a: "Yes. Drupal 11 is modern, actively maintained, and has a clear roadmap. It's the right choice when the problem calls for its strengths: structured content models, granular permissions, and multi-site architectures. If your content needs are straightforward, a lighter platform is usually the better fit — I'll tell you which one your project actually needs.",
   },
   {
     q: "How long does a custom Drupal project take?",
-    a: "Most Drupal builds run 8–16 weeks depending on content architecture complexity, custom module requirements, and integration scope. Enterprise projects with complex migrations or multi-site setups can extend beyond that. We scope accurately upfront — no discovery phases that turn into open-ended billing.",
+    a: "Most Drupal builds run 8–16 weeks depending on content architecture complexity, custom module requirements, and integration scope. Projects with complex migrations or multi-site setups can extend beyond that. I scope accurately upfront — no discovery phases that turn into open-ended billing.",
   },
   {
     q: "Can you improve an existing Drupal site?",
-    a: "Yes. We regularly audit and optimize underperforming Drupal installations — cleaning up contrib bloat, improving caching, fixing content architecture issues, and upgrading from older Drupal versions. Not every project needs a rebuild.",
+    a: "Yes. I regularly audit and optimize underperforming Drupal installations — cleaning up contrib bloat, improving caching, fixing content architecture issues, and upgrading from older Drupal versions. Not every project needs a rebuild.",
   },
   {
     q: "Do you handle Drupal migrations and upgrades?",
-    a: "Yes. Whether you're migrating from Drupal 7/8/9 to Drupal 11, moving from another CMS to Drupal, or migrating away from Drupal to a headless setup — we handle the full migration path including content, configuration, and redirects.",
+    a: "Yes. Whether you're migrating from Drupal 7/8/9 to Drupal 11, moving from another CMS to Drupal, or migrating away from Drupal to a headless setup — I handle the full migration path including content, configuration, and redirects.",
   },
   {
     q: "How much does custom Drupal development cost?",
-    a: "Custom Drupal projects at Black Lab Development range from $15,000 for focused rebuilds to $80,000+ for complex enterprise platforms with custom modules, multi-site architectures, and extensive content migrations. Pricing reflects actual scope — not a packaged tier.",
+    a: "Custom Drupal projects at Black Lab Development range from $8,000 for focused rebuilds to $38,000+ for complex platforms with custom modules, multi-site architectures, and extensive content migrations. Pricing reflects actual scope — not a packaged tier.",
   },
 ];
 
 const useCases = [
-  "Enterprise websites with complex content models and editorial workflows",
+  "Content-heavy websites with complex content models and editorial workflows",
   "Organizations needing granular role-based access control",
   "Multi-site architectures serving multiple brands or regions",
   "Government, healthcare, and higher-ed sites with compliance requirements",
@@ -120,8 +121,8 @@ const useCases = [
 ];
 
 const performancePoints = [
-  { label: "Render caching & page cache optimization", detail: "Drupal's caching system is powerful but misconfused by default. We configure it correctly from day one." },
-  { label: "Minimal contrib overhead", detail: "Every contributed module is evaluated against its performance cost. If custom code is cleaner, we write it." },
+  { label: "Render caching & page cache optimization", detail: "Drupal's caching system is powerful but misconfused by default. I configure it correctly from day one." },
+  { label: "Minimal contrib overhead", detail: "Every contributed module is evaluated against its performance cost. If custom code is cleaner, I write it." },
   { label: "Efficient asset loading", detail: "Libraries loaded only where needed. No global CSS/JS payloads from modules you barely use." },
   { label: "Clean, semantic markup", detail: "Twig templates built for performance and accessibility — not generated by a theme engine you can't control." },
 ];
@@ -133,7 +134,7 @@ const serviceSchema = {
   name: "Custom Drupal Development",
   url: "https://blacklabdev.com/drupal-development",
   description:
-    "Custom Drupal development with clean architecture, performance-first builds, and enterprise-grade content modeling — no contrib bloat, no shortcuts.",
+    "Custom Drupal development with clean architecture, performance-first builds, and structured content modeling — no contrib bloat, no shortcuts.",
   provider: { "@type": "Organization", "@id": "https://blacklabdev.com/#business" },
   areaServed: { "@type": "Country", name: "United States" },
   serviceType: "Drupal Development",
@@ -154,12 +155,12 @@ export default function DrupalDevelopmentPage() {
     <main className="w-full bg-[#0b0b0c] text-white">
       <JsonLd data={[serviceSchema, faqSchema]} />
       <PageHero
-        label="Drupal Development Agency"
-        title="Drupal Development for Enterprise-Grade Content Platforms"
-        titleHighlight="Enterprise-Grade Content Platforms"
-        description="We build custom Drupal sites with clean architecture, structured content models, and performance-first engineering — no contrib bloat, no shortcuts, no maintenance nightmares."
+        label="Drupal Development"
+        title="Drupal Development for Complex Content Platforms"
+        titleHighlight="Complex Content Platforms"
+        description="I build custom Drupal sites with clean architecture, structured content models, and performance-first engineering — no contrib bloat, no shortcuts, no maintenance nightmares."
         backgroundImage="/images/services-hero-bg.png"
-        badges={["No contrib bloat", "Enterprise content modeling", "Clean, maintainable code"]}
+        badges={["No contrib bloat", "Structured content modeling", "Clean, maintainable code"]}
       />
 
       {/* Hero CTAs */}
@@ -195,7 +196,7 @@ export default function DrupalDevelopmentPage() {
                 Most Drupal sites are over-moduled, under-architected, and slow. That&apos;s not a platform problem — it&apos;s a build problem. Drupal&apos;s entity system and content architecture tools are best-in-class when used correctly.
               </p>
               <p className="text-slate-400 leading-relaxed mb-6">
-                At Black Lab Dev, we approach Drupal from an engineering perspective. Every site is custom-built with clean content modeling, purpose-built modules, and performance tuned from the architecture layer — not patched in after launch.
+                At Black Lab Dev, I approach Drupal from an engineering perspective. Every site is custom-built with clean content modeling, purpose-built modules, and performance tuned from the architecture layer — not patched in after launch.
               </p>
               <p className="text-slate-400 leading-relaxed font-medium">
                 No contrib sprawl. No theme engine fighting your markup. No technical debt by default.
@@ -232,7 +233,7 @@ export default function DrupalDevelopmentPage() {
         <div className="mx-auto max-w-375 px-6">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
-              What We Do
+              What I Do
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Drupal Development Services
@@ -265,13 +266,13 @@ export default function DrupalDevelopmentPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
-                Why We&apos;re Different
+                Why I&apos;m Different
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Built Without the Contrib Bloat
               </h2>
               <p className="text-slate-400 leading-relaxed mb-6">
-                Most agencies install 80+ contrib modules and call it architecture. We don&apos;t. Instead, we use Drupal&apos;s core systems correctly and write custom code where contrib introduces more problems than it solves.
+                Most agencies install 80+ contrib modules and call it architecture. I don&apos;t. Instead, I use Drupal&apos;s core systems correctly and write custom code where contrib introduces more problems than it solves.
               </p>
               <p className="text-slate-400 leading-relaxed">
                 Your Drupal site becomes an asset your team can maintain — not a black box only the original agency can touch.
@@ -307,13 +308,13 @@ export default function DrupalDevelopmentPage() {
         <div className="mx-auto max-w-375 px-6">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
-              Our Approach
+              My Approach
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Architecture First, Modules Second
             </h2>
             <p className="text-slate-400 leading-relaxed">
-              We don&apos;t start with a list of contrib modules and work backwards. Every project starts with content architecture, entity relationships, and performance planning — then we build only what&apos;s needed.
+              I don&apos;t start with a list of contrib modules and work backwards. Every project starts with content architecture, entity relationships, and performance planning — then I build only what&apos;s needed.
             </p>
           </div>
           <div className="space-y-10">
@@ -345,7 +346,7 @@ export default function DrupalDevelopmentPage() {
                 Drupal can be fast — most Drupal sites just aren&apos;t. The difference is architecture decisions made at the right time, not performance patches applied after launch.
               </p>
               <p className="text-slate-400 leading-relaxed">
-                We build Drupal sites that pass Core Web Vitals, load efficiently, and maintain a strong security posture through disciplined contrib management and regular updates.
+                I build Drupal sites that pass Core Web Vitals, load efficiently, and maintain a strong security posture through disciplined contrib management and regular updates.
               </p>
               <div className="mt-8">
                 <Link
@@ -478,13 +479,21 @@ export default function DrupalDevelopmentPage() {
             >
               Website Performance →
             </Link>
+            <Link
+              href="/shopify-development"
+              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+            >
+              Shopify Development →
+            </Link>
           </div>
         </div>
       </section>
 
+      <FounderByline />
+
       <PageClose
         title="Work With a Drupal Development Partner That Builds It Right"
-        bodyPrimary="If your current Drupal site is slow, over-moduled, or stuck on an outdated version — it's time for a better foundation. We build Drupal platforms that perform, scale, and stay maintainable for years."
+        bodyPrimary="If your current Drupal site is slow, over-moduled, or stuck on an outdated version — it's time for a better foundation. I build Drupal platforms that perform, scale, and stay maintainable for years."
         bodySecondary="No contrib sprawl. No theme engine compromises. Just clean, performant Drupal built the right way."
         secondaryHref="/case-studies"
         secondaryLabel="View Case Studies"

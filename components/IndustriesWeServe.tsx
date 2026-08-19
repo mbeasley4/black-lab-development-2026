@@ -107,10 +107,10 @@ export default function IndustriesWeServe() {
                 {/* Section Header */}
                 <div className="max-w-3xl mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white">
-                        Industries We Serve
+                        Industries I Serve
                     </h2>
                     <p className="text-lg text-slate-300 leading-relaxed">
-                        We work with organizations across a range of industries — bringing senior-level engineering experience and practical strategy to every engagement.
+                        I work with organizations across a range of industries — bringing senior-level engineering experience and practical strategy to every engagement.
                     </p>
                 </div>
 

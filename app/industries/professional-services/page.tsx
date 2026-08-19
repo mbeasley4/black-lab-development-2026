@@ -6,6 +6,7 @@ import QuickAnswerBlock from "@/components/QuickAnswerBlock";
 import FaqSection from "@/components/FaqSection";
 import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
+import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
   title: "B2B & Professional Services Web Design",
@@ -74,7 +75,7 @@ const faqSchema = {
       name: "How long does a B2B website build take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most B2B professional services website builds take 6–10 weeks. Engagements involving CRM integrations, gated content portals, or large content migrations run longer. We scope timelines before anything starts and don't adjust them to win the project.",
+        text: "Most B2B professional services website builds take 6–10 weeks. Engagements involving CRM integrations, gated content portals, or large content migrations run longer. I scope timelines before anything starts and don't adjust them to win the project.",
       },
     },
     {
@@ -98,7 +99,7 @@ const faqSchema = {
       name: "What's the ROI of a new professional services website?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "For professional services firms, even a single additional qualified engagement per quarter typically pays for a website build several times over. ROI calculation depends on deal size and close rates, but the compounding effect of improved positioning, SEO, and conversion architecture is measurable. We track baseline metrics before launch and compare against post-launch pipeline.",
+        text: "For professional services firms, even a single additional qualified engagement per quarter typically pays for a website build several times over. ROI calculation depends on deal size and close rates, but the compounding effect of improved positioning, SEO, and conversion architecture is measurable. I track baseline metrics before launch and compare against post-launch pipeline.",
       },
     },
   ],
@@ -170,7 +171,7 @@ export default function ProfessionalServicesIndustryPage() {
       <section className="py-20 border-b border-slate-800/50">
         <div className="mx-auto max-w-375 px-6">
           <div className="mb-12">
-            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">What We Build</span>
+            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">What I Build</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Built for Long-Cycle B2B Sales</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -227,10 +228,12 @@ export default function ProfessionalServicesIndustryPage() {
 
       <FaqSection faqs={faqs} headingId="professional-services-faq" />
 
+      <FounderByline />
+
       <PageClose
         title="Ready to Turn Your Website Into a Sales Asset?"
         bodyPrimary="Most B2B websites describe what the firm does — they don't help prospects understand why it matters or make it easy to take the next step."
-        bodySecondary="We fix positioning, trust signals, and conversion architecture so your site actually generates pipeline."
+        bodySecondary="I fix positioning, trust signals, and conversion architecture so your site actually generates pipeline."
         secondaryHref="/services/b2b-website-design"
         secondaryLabel="View B2B Service"
       />

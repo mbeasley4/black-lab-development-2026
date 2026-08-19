@@ -83,7 +83,7 @@ export default function ContactPage() {
 
             <p className="text-neutral-400 leading-relaxed mb-6">
               I've spent 15+ years building and supporting digital platforms that
-              operate at real scale — high-traffic, enterprise-grade, and
+              operate at real scale — high-traffic, business-critical, and
               unforgiving of lazy architecture. Every engagement is hands-on,
               from system design to the last deploy.
             </p>
