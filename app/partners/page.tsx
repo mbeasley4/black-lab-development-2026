@@ -237,10 +237,10 @@ export default function PartnersPage() {
       <main className="w-full bg-black text-white">
       <PageHero
         label="Agency & Partner Services"
-        title="The White-Label Web Development & SEO Partner Agencies Trust"
-        titleHighlight="Web Development & SEO Partner"
-        description="Senior engineering capacity for marketing agencies, creative studios, and strategy firms — delivered under your brand. You keep the client, the relationship, and the margin. I build the thing."
-        backgroundImage="/images/services-hero-bg.png"
+        title="I Build It. You Brand It."
+        titleHighlight="You Brand It."
+        description="Senior engineering for agencies and strategy firms that don't want another full-time dev hire. No subcontractor pool, no offshore relay — you brief me, I build it, you ship it."
+        backgroundImage="/images/partners-hero-bg.jpg"
         badges={["White-label delivery", "NDA-friendly", "Direct to a senior engineer"]}
       />
 

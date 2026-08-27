@@ -187,7 +187,7 @@ const HomepageHeroClient = ({ featuredArticle }: { featuredArticle: FeaturedArti
                     className="block text-volt-500"
                     variants={headingLine2Variants}
                   >
-                    No Bloat. No Excuses.
+                    No Filler. No Excuses.
                   </motion.span>
                 </span>
               </h1>

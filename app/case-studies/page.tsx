@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import PageClose from "@/components/PageClose";
-import ProofStats from "@/components/ProofStats";
 import JsonLd from "@/components/JsonLd";
 import { client } from "@/sanity/lib/client";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
@@ -43,6 +42,20 @@ export const metadata: Metadata = {
 
 // TODO: Migrate these into Sanity as caseStudy documents (type: "project")
 const projects = [
+   {
+    name: "Millennosphere",
+    platform: "WordPress",
+    logo: "/images/work/millennosphere-logo.png",
+    screenshot: "/images/work/millennosphere-screenshot.png",
+    summary:
+      "Built a custom WordPress theme and custom Gutenberg blocks from scratch for a millennial culture and lifestyle publication — editorial layouts designed for a distinct voice, not bent out of a stock theme.",
+    details: [
+      "Custom WordPress theme built from scratch",
+      "Custom Gutenberg blocks for editorial content",
+      "Category-driven content architecture across multiple verticals",
+      "Fully responsive, brand-specific design system",
+    ],
+  },
   {
     name: "Globe Iron Roofing",
     platform: "WordPress",
@@ -58,18 +71,19 @@ const projects = [
     ],
   },
   {
-    name: "Zero Gravity",
+    name: "Zero Gravity of Northern Kentucky",
     platform: "WordPress",
     logo: "/images/work/zerogravity-logo.png",
     screenshot: "/images/work/zerogravity-screenshot.png",
     summary:
-      "Modernized a WordPress-based digital presence through Elementor cleanup, technical SEO improvements, and eCommerce support.",
+      "Ongoing WordPress engineering for Zero Gravity NKY, a Northern Kentucky medical spa — WooCommerce ripped out in favor of the dedicated booking platform, booking links generalized, and page speed rebuilt from the ground up.",
     details: [
+      "WooCommerce removed — booking handled through the dedicated platform, not a bolted-on store",
+      "Booking links generalized for consistent, maintainable linking",
+      "Significant page speed and Core Web Vitals improvements",
       "Custom WordPress theme built for the Gutenberg block editor",
-      "Technical SEO, AEO, and GEO architecture from day one",
-      "Page speed and Core Web Vitals optimization",
-      "Fully responsive, editor-friendly block layouts",
     ],
+    updated: true,
   },
   {
     name: "Rev & Rinse Auto Detailing",
@@ -287,7 +301,11 @@ export default async function CaseStudiesPage() {
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden border-b border-volt-500/20">
-        <div className="absolute inset-0 bg-[#0b0b0c]" />
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/case-studies-hero-bg.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-linear-to-br from-[#0b0b0c]/95 via-[#0b0b0c]/88 to-[#0b0b0c]/80" />
         <div className="absolute top-0 right-0 w-175 h-125 bg-volt-500/10 rounded-full blur-[140px] pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-125 h-100 bg-volt-500/6 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/30 to-transparent" />
@@ -351,7 +369,8 @@ export default async function CaseStudiesPage() {
             {projects.map((project) => (
               <div
                 key={project.name}
-                className="group flex flex-col rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-300 hover:border-volt-500/40 hover:shadow-[0_0_50px_rgba(227,245,68,0.08)]"
+                id={project.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}
+                className="group flex flex-col rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-300 hover:border-volt-500/40 hover:shadow-[0_0_50px_rgba(227,245,68,0.08)] scroll-mt-28"
               >
                 <div className="h-0.5 bg-linear-to-r from-volt-500/0 via-volt-500/15 to-volt-500/0 group-hover:from-volt-500/40 group-hover:via-volt-500/80 group-hover:to-volt-500/40 transition-all duration-500" />
                 <div className="relative h-44 w-full overflow-hidden">
@@ -384,6 +403,12 @@ export default async function CaseStudiesPage() {
                         {project.platform}
                       </span>
                     </div>
+                    {"updated" in project && project.updated && (
+                      <span className="inline-flex w-fit items-center gap-1.5 text-[9px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full border border-green-500/30 bg-green-500/10 text-green-400">
+                        <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+                        Recently Updated
+                      </span>
+                    )}
                   </div>
                   <p className="text-neutral-300 text-sm leading-relaxed mb-5 grow">
                     {project.summary}

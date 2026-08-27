@@ -205,10 +205,10 @@ export default function ShopifyDevelopmentPage() {
       <JsonLd data={[serviceSchema, faqSchema]} />
       <PageHero
         label="Shopify Development"
-        title="Shopify Development for Custom Themes, Apps & Storefront Builds"
-        titleHighlight="Custom Themes, Apps & Storefront Builds"
-        description="I build custom Shopify storefronts in Liquid — plus the apps, integrations, and performance work behind them — for brands that have outgrown a premium theme and a stack of app subscriptions."
-        backgroundImage="/images/services-hero-bg.png"
+        title="Your Storefront, Not an App Junk Drawer."
+        titleHighlight="Not an App Junk Drawer."
+        description="Most Shopify stores are slow from a bloated theme wrapped in a dozen apps — not Shopify's fault. I build custom in Liquid: clean code, resilient integrations, zero app sprawl."
+        backgroundImage="/images/shopify-hero-bg.jpg"
         badges={["Custom Liquid themes", "App & integration engineering", "Core Web Vitals on Shopify"]}
       />
 

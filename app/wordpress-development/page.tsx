@@ -8,19 +8,19 @@ import FaqSection from "@/components/FaqSection";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Custom WordPress Development | Fast, Clean, No Bloat",
+  title: "Custom WordPress Development | Clean Code, No Page Builders",
   description:
     "Custom WordPress development with clean code, no page builders, and performance-first architecture — built to scale and stay fast long-term.",
   alternates: { canonical: "/wordpress-development" },
   openGraph: {
-    title: "Custom WordPress Development | Fast, Clean, No Bloat | Black Lab Dev",
+    title: "Custom WordPress Development | Clean Code, No Page Builders | Black Lab Dev",
     description:
       "Custom WordPress development with clean code, no page builders, and performance-first architecture — built to scale and stay fast long-term.",
     url: "/wordpress-development",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Custom WordPress Development | Fast, Clean, No Bloat | Black Lab Dev",
+    title: "Custom WordPress Development | Clean Code, No Page Builders | Black Lab Dev",
     description:
       "Custom WordPress development with clean code, no page builders, and performance-first architecture — built to scale and stay fast long-term.",
     images: [DEFAULT_OG_IMAGE.url],
@@ -147,10 +147,10 @@ export default function WordPressDevelopmentPage() {
       <JsonLd data={[serviceSchema, faqSchema]} />
       <PageHero
         label="WordPress Development"
-        title="Custom WordPress Development for High-Performance Websites"
-        titleHighlight="Custom, High-Performance Websites"
-        description="I design and build fast, scalable websites using WordPress — without bloated themes, page builders, or unnecessary plugins."
-        backgroundImage="/images/services-hero-bg.png"
+        title="WordPress Without the Page-Builder Baggage."
+        titleHighlight="Without the Page-Builder Baggage."
+        description="Most WordPress sites are built on templates, stacked with plugins, and slow before they finish loading. I build custom — clean code, no page builders, no plugin roulette."
+        backgroundImage="/images/wordpress-hero-bg.jpg"
         badges={["No page builders", "Performance-first architecture", "Clean, maintainable code"]}
       />
 

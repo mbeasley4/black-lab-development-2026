@@ -197,10 +197,10 @@ export default function LaravelDevelopmentPage() {
       <JsonLd data={[serviceSchema, faqSchema]} />
       <PageHero
         label="Laravel Development"
-        title="Laravel Development for APIs, Integrations & Custom Platforms"
-        titleHighlight="APIs, Integrations & Custom Platforms"
-        description="I build custom Laravel applications — APIs, admin portals, platform integrations, and queue-driven workflows — with clean architecture and no framework bloat."
-        backgroundImage="/images/services-hero-bg.png"
+        title="Laravel, Minus the Spaghetti Code."
+        titleHighlight="Minus the Spaghetti Code."
+        description="Most Laravel apps rot into fat controllers and silent queue failures nobody monitors. I build custom — service architecture, integration resilience, zero spaghetti code."
+        backgroundImage="/images/laravel-hero-bg.jpg"
         badges={["Clean architecture", "Production-grade integrations", "Full-stack Laravel"]}
       />
 

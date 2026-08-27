@@ -8,19 +8,19 @@ import FaqSection from "@/components/FaqSection";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Custom Drupal Development | Structured Content, No Bloat",
+  title: "Custom Drupal Development | Clean Code, No Contrib Sprawl",
   description:
     "Custom Drupal development with clean architecture, performance-first builds, and structured content modeling — no contrib bloat, no shortcuts.",
   alternates: { canonical: "/drupal-development" },
   openGraph: {
-    title: "Custom Drupal Development | Structured Content, No Bloat | Black Lab Dev",
+    title: "Custom Drupal Development | Clean Code, No Contrib Sprawl | Black Lab Dev",
     description:
       "Custom Drupal development with clean architecture, performance-first builds, and structured content modeling — no contrib bloat, no shortcuts.",
     url: "/drupal-development",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Custom Drupal Development | Structured Content, No Bloat | Black Lab Dev",
+    title: "Custom Drupal Development | Clean Code, No Contrib Sprawl | Black Lab Dev",
     description:
       "Custom Drupal development with clean architecture, performance-first builds, and structured content modeling.",
     images: [DEFAULT_OG_IMAGE.url],
@@ -156,10 +156,10 @@ export default function DrupalDevelopmentPage() {
       <JsonLd data={[serviceSchema, faqSchema]} />
       <PageHero
         label="Drupal Development"
-        title="Drupal Development for Complex Content Platforms"
-        titleHighlight="Complex Content Platforms"
-        description="I build custom Drupal sites with clean architecture, structured content models, and performance-first engineering — no contrib bloat, no shortcuts, no maintenance nightmares."
-        backgroundImage="/images/services-hero-bg.png"
+        title="Structured Content, Not Contrib Chaos."
+        titleHighlight="Not Contrib Chaos."
+        description="Most Drupal sites drown in contrib modules before anyone touches content architecture. I build custom — clean entity design, purpose-built modules, no maintenance nightmares."
+        backgroundImage="/images/drupal-hero-bg.jpg"
         badges={["No contrib bloat", "Structured content modeling", "Clean, maintainable code"]}
       />
 
