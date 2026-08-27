@@ -7,21 +7,21 @@ import FaqSection from "@/components/FaqSection";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
-  title: "Cincinnati Web Developer | B2B & Manufacturing Websites",
+  title: "Cincinnati Web Developer | Small Business Websites",
   description:
-    "Cincinnati-based web developer specializing in B2B and manufacturing websites. Michael Beasley — 15+ years building revenue-focused platforms for Ohio and Tri-State companies.",
+    "Cincinnati-based web developer specializing in small business websites. Michael Beasley — 15+ years building revenue-focused platforms for Ohio and Tri-State companies.",
   alternates: { canonical: "/cincinnati-web-developer" },
   openGraph: {
-    title: "Cincinnati Web Developer | B2B & Manufacturing Websites",
+    title: "Cincinnati Web Developer | Small Business Websites",
     description:
-      "Cincinnati-based web developer specializing in B2B and manufacturing websites. Michael Beasley — 15+ years building revenue-focused platforms for Ohio and Tri-State companies.",
+      "Cincinnati-based web developer specializing in small business websites. Michael Beasley — 15+ years building revenue-focused platforms for Ohio and Tri-State companies.",
     url: "/cincinnati-web-developer",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Cincinnati Web Developer | B2B & Manufacturing Websites",
+    title: "Cincinnati Web Developer | Small Business Websites",
     description:
-      "Cincinnati-based web developer specializing in B2B and manufacturing websites — 15+ years building revenue-focused platforms.",
+      "Cincinnati-based web developer specializing in small business websites — 15+ years building revenue-focused platforms.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
@@ -35,7 +35,7 @@ const localBusinessSchema = {
   telephone: "+15135204362",
   email: "mbeasley4@gmail.com",
   description:
-    "Cincinnati-based independent web development practice specializing in B2B and manufacturing websites. Custom Next.js, WordPress, and headless CMS development for Ohio and Tri-State companies.",
+    "Cincinnati-based independent web development practice specializing in small business websites. Custom Next.js, WordPress, and headless CMS development for Ohio and Tri-State companies.",
   founder: { "@type": "Person", name: "Michael Beasley", url: "https://blacklabdev.com/about" },
   address: {
     "@type": "PostalAddress",
@@ -89,7 +89,7 @@ const faqSchema = {
       name: "What industries do you specialize in around Cincinnati?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "My primary focus in the Cincinnati market is B2B companies, manufacturing and industrial firms, and professional services businesses — industries where the website needs to earn trust with technical buyers and decision-makers, not just look good.",
+        text: "My primary focus in the Cincinnati market is small-to-medium businesses across the region — professional services, trades and home services, clinics, restaurants, and specialty retail. The common thread isn't the industry, it's that the website has to earn trust in the first few seconds and make it obvious how to get in touch.",
       },
     },
     {
@@ -97,7 +97,7 @@ const faqSchema = {
       name: "How much does a website cost for a Cincinnati business?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Engagements vary based on scope, but most Cincinnati B2B website projects run from $4,000–$15,000+ depending on complexity, custom functionality, and ongoing support needs. I scope accurately upfront so there are no surprises. The conversation starts with a discovery call.",
+        text: "Engagements vary based on scope, but most Cincinnati small business website projects run from $4,000–$15,000+ depending on complexity, custom functionality, and ongoing support needs. I scope accurately upfront so there are no surprises. The conversation starts with a discovery call.",
       },
     },
   ],
@@ -114,14 +114,14 @@ const breadcrumbSchema = {
 
 const services = [
   {
-    title: "B2B Website Design",
-    description: "Built for buying committees, long sales cycles, and technical buyers who evaluate multiple vendors. Conversion architecture that works across the whole decision.",
-    href: "/services/b2b-website-design",
+    title: "Small Business Website Design",
+    description: "Custom, professional sites for growing Cincinnati businesses. Built to look credible next to bigger competitors and make the next step obvious.",
+    href: "/services/small-business-website-design",
   },
   {
-    title: "Manufacturing Website Design",
-    description: "Purpose-built for Ohio manufacturers and industrial companies. RFQ-optimized, spec-forward, and designed for the buyer who reads the full page before they call.",
-    href: "/services/manufacturing-website-design",
+    title: "Agency Partner Services",
+    description: "White-label web development and technical SEO fulfillment for agencies and strategy firms serving Cincinnati-area clients. Your brand, my engineering.",
+    href: "/partners",
   },
   {
     title: "WordPress Development",
@@ -160,11 +160,11 @@ const faqs = [
   },
   {
     q: "What industries do you specialize in around Cincinnati?",
-    a: "My primary focus in the Cincinnati market is B2B companies, manufacturing and industrial firms, and professional services businesses — industries where the website needs to earn trust with technical buyers and decision-makers, not just look good.",
+    a: "My primary focus in the Cincinnati market is small-to-medium businesses across the region — professional services, trades and home services, clinics, restaurants, and specialty retail. The common thread isn't the industry, it's that the website has to earn trust in the first few seconds and make it obvious how to get in touch.",
   },
   {
     q: "How much does a website cost for a Cincinnati business?",
-    a: "Engagements vary based on scope, but most Cincinnati B2B website projects run from $4,000–$15,000+ depending on complexity, custom functionality, and ongoing support needs. I scope accurately upfront so there are no surprises. The conversation starts with a discovery call.",
+    a: "Engagements vary based on scope, but most Cincinnati small business website projects run from $4,000–$15,000+ depending on complexity, custom functionality, and ongoing support needs. I scope accurately upfront so there are no surprises. The conversation starts with a discovery call.",
   },
 ];
 
@@ -175,9 +175,9 @@ export default function CincinnatiWebDeveloperPage() {
       <main className="w-full bg-[#0b0b0c] text-white">
         <PageHero
           label="Cincinnati Web Developer"
-          title="Cincinnati Web Developer for B2B & Manufacturing Companies"
-          titleHighlight="B2B & Manufacturing Companies"
-          description="Michael Beasley — senior web developer based in Cincinnati, Ohio. 15+ years building revenue-focused websites for B2B, manufacturing, and industrial companies across the Tri-State area."
+          title="Cincinnati Web Developer for Small Businesses"
+          titleHighlight="Small Businesses"
+          description="Michael Beasley — senior web developer based in Cincinnati, Ohio. 15+ years building revenue-focused websites for small and mid-sized businesses across the Tri-State area."
           backgroundImage="/images/services-hero-bg.png"
           badges={["Based in Cincinnati, OH", "In-person available", "Direct access to the engineer"]}
         />
@@ -212,7 +212,7 @@ export default function CincinnatiWebDeveloperPage() {
                   A Cincinnati Web Developer Who Actually Builds It
                 </h2>
                 <p className="text-slate-400 leading-relaxed mb-6">
-                  I&apos;m Michael Beasley — a senior web developer and software engineer based in Cincinnati, Ohio. I founded Black Lab Development to work directly with B2B companies, manufacturers, and industrial businesses that need a website built the right way: performant, conversion-focused, and built for the long term.
+                  I&apos;m Michael Beasley — a senior web developer and software engineer based in Cincinnati, Ohio. I founded Black Lab Development to work directly with small and mid-sized businesses that need a website built the right way: performant, conversion-focused, and built for the long term.
                 </p>
                 <p className="text-slate-400 leading-relaxed mb-6">
                   No middlemen. No junior developers assigned after kickoff. When you work with me, you talk directly to the engineer making every decision and writing every line of code.
@@ -226,7 +226,7 @@ export default function CincinnatiWebDeveloperPage() {
                   { label: "Experience", value: "15+ years" },
                   { label: "Location", value: "Cincinnati, OH 45202" },
                   { label: "Phone", value: "(513) 520-4362" },
-                  { label: "Specialties", value: "B2B · Manufacturing · WordPress · Next.js" },
+                  { label: "Specialties", value: "Small business · WordPress · Next.js · SEO" },
                   { label: "Service area", value: "Cincinnati Metro · Tri-State · Nationwide" },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start justify-between gap-6 border-b border-slate-800 pb-4">
@@ -329,7 +329,7 @@ export default function CincinnatiWebDeveloperPage() {
                 Trusted by Cincinnati-Area Organizations
               </h2>
               <p className="text-slate-400 leading-relaxed">
-                From regional restaurant chains to private schools and B2B manufacturers, Black Lab Dev has built and optimized websites for Cincinnati-area businesses that compete and win online.
+                From regional restaurant chains to private schools and local manufacturers, Black Lab Dev has built and optimized websites for Cincinnati-area businesses that compete and win online.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

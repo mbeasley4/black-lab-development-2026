@@ -20,6 +20,11 @@ const DEV_SERVICES: ServiceCard[] = [
         href: "/services/custom-web-development",
         description: "Next.js, headless & full-stack builds engineered for speed.",
     },
+    {
+        title: "Small business websites",
+        href: "/services/small-business-website-design",
+        description: "Professional sites for growing SMBs — no templates, no page-builder bloat.",
+    },
 ];
 
 const PLATFORM_SERVICES: ServiceCard[] = [
@@ -62,6 +67,7 @@ const OPT_SERVICES: ServiceCard[] = [
 const SERVICE_LINKS: { label: string; href: string }[] = [
     { label: "All services", href: "/services" },
     { label: "Custom web development", href: "/services/custom-web-development" },
+    { label: "Small business websites", href: "/services/small-business-website-design" },
     { label: "Conversion optimization", href: "/services/conversion-optimization" },
     { label: "Performance optimization", href: "/services/website-performance-optimization" },
     { label: "WordPress development", href: "/wordpress-development" },
@@ -207,6 +213,7 @@ export default function Header() {
 
     // Plain top-level links (after the Services + Industries menus)
     const plainNav = [
+        { label: "Partners", href: "/partners" },
         { label: "My Work", href: "/case-studies" },
         { label: "Insights", href: "/articles" },
         { label: "About", href: "/about" },

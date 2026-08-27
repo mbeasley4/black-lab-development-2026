@@ -54,6 +54,16 @@ test('/work redirects to /case-studies', async ({ page }) => {
   await expect(page).toHaveURL(/\/case-studies/);
 });
 
+test('/services/b2b-website-design redirects to the small business service page', async ({ page }) => {
+  await page.goto('/services/b2b-website-design');
+  await expect(page).toHaveURL(/\/services\/small-business-website-design/);
+});
+
+test('/services/manufacturing-website-design redirects to /partners', async ({ page }) => {
+  await page.goto('/services/manufacturing-website-design');
+  await expect(page).toHaveURL(/\/partners/);
+});
+
 // ─── Services & Industries ─────────────────────────────────────────────────────
 
 test('"What We Build" nav link navigates to services', async ({ page }) => {
@@ -87,6 +97,31 @@ test('industry pages load with correct titles', async ({ page }) => {
     await expect(page).toHaveTitle(industry.name);
     await expect(page.getByRole('heading').first()).toBeVisible();
   }
+});
+
+// ─── Partner & Service Pages ──────────────────────────────────────────────────
+
+test('service and partner pages load with correct titles', async ({ page }) => {
+  const pages = [
+    { url: '/services/small-business-website-design', name: /Small Business Website Design/i },
+    { url: '/partners', name: /White-Label Web Development/i },
+    { url: '/partners/white-label-web-development', name: /White-Label Web Development/i },
+    { url: '/partners/seo-fulfillment', name: /Technical SEO Fulfillment/i },
+  ];
+
+  for (const target of pages) {
+    await page.goto(target.url);
+    await expect(page).toHaveTitle(target.name);
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+  }
+});
+
+test('"Partners" nav link navigates to the partners page', async ({ page }) => {
+  await page.goto('/');
+  const nav = page.getByRole('navigation', { name: 'Primary navigation' });
+  await nav.getByRole('link', { name: 'Partners' }).click();
+  await expect(page).toHaveURL(/\/partners/);
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
 });
 
 // ─── Articles Section ─────────────────────────────────────────────────────────
@@ -146,7 +181,7 @@ test('footer copyright year is current', async ({ page }) => {
 // ─── SEO / Metadata regression ─────────────────────────────────────────────────
 
 test('page titles do not double up the trailing brand suffix', async ({ page }) => {
-  const pages = ['/', '/services', '/industries', '/case-studies', '/articles', '/contact', '/about', '/privacy', '/terms', '/cookies', '/cincinnati-web-developer'];
+  const pages = ['/', '/services', '/services/small-business-website-design', '/partners', '/partners/white-label-web-development', '/partners/seo-fulfillment', '/industries', '/case-studies', '/articles', '/contact', '/about', '/privacy', '/terms', '/cookies', '/cincinnati-web-developer'];
   for (const url of pages) {
     await page.goto(url);
     const title = await page.title();

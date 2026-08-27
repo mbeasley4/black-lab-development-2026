@@ -17,21 +17,21 @@ import JsonLd from "@/components/JsonLd";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "B2B Website Design & Pipeline Generation | Black Lab Dev",
+  title: "Website Design for Small Businesses & Agencies | Black Lab Dev",
   description:
-    "Fast, scalable websites built to convert. Whether you're generating leads, driving sales, or supporting growth — I build websites that actually do their job.",
+    "Fast, scalable websites built to convert — for small businesses directly, and as a white-label technical partner for agencies. Built by a senior engineer.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "B2B Website Design & Pipeline Generation | Black Lab Dev",
+    title: "Website Design for Small Businesses & Agencies | Black Lab Dev",
     description:
-      "Fast, scalable websites built to convert. Whether you're generating leads, driving sales, or supporting growth — I build websites that actually do their job.",
+      "Fast, scalable websites built to convert — for small businesses directly, and as a white-label technical partner for agencies. Built by a senior engineer.",
     url: "/",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "B2B Website Design & Pipeline Generation | Black Lab Dev",
+    title: "Website Design for Small Businesses & Agencies | Black Lab Dev",
     description:
-      "Fast, scalable websites built to convert. Whether you're generating leads, driving sales, or supporting growth — I build websites that actually do their job.",
+      "Fast, scalable websites built to convert — for small businesses directly, and as a white-label technical partner for agencies. Built by a senior engineer.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
@@ -79,7 +79,7 @@ const faqSchema = {
       name: "Do you work with companies outside of Cincinnati?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. While I'm based in Cincinnati, OH, I work with B2B and manufacturing companies across the United States. My process is fully remote-friendly, with direct communication between you and me — the person actually doing the work.",
+        text: "Yes. While I'm based in Cincinnati, OH, I work with small businesses and agency partners nationwide. My process is fully remote-friendly, with direct communication between you and me — the person actually doing the work.",
       },
     },
     {

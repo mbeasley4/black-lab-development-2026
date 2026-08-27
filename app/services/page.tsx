@@ -11,19 +11,19 @@ import FounderByline from "@/components/FounderByline";
 export const metadata: Metadata = {
   title: "Web Development & Conversion Optimization Services",
   description:
-    "Custom website development, lead generation, ecommerce optimization, site speed improvements, and technical SEO — built right from the start.",
+    "Professional website design, development, and optimization — for small businesses directly, and as a white-label partner for agencies and strategy firms.",
   alternates: { canonical: "/services" },
   openGraph: {
     title: "Web Development & Conversion Optimization Services",
     description:
-      "Custom website development, lead generation, ecommerce optimization, site speed improvements, and technical SEO — built right from the start.",
+      "Professional website design, development, and optimization — for small businesses directly, and as a white-label partner for agencies and strategy firms.",
     url: "/services",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     title: "Web Development & Conversion Optimization Services",
     description:
-      "Custom website development, conversion optimization, and technical SEO for B2B companies.",
+      "Website design, development, conversion optimization, and technical SEO — for small businesses and agency partners.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
@@ -41,7 +41,7 @@ const serviceListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "Web Design & Development Services",
-  description: "B2B website design, development, and optimization services from Black Lab Development in Cincinnati, OH.",
+  description: "Professional website design, development, and optimization services — for small businesses and as a white-label partner for agencies.",
   numberOfItems: 5,
   itemListElement: [
     {
@@ -211,21 +211,21 @@ export default function ServicesPage() {
         badges={["No templates", "No offshore handoffs", "No 40-slide decks"]}
       />
 
-      {/* ================= B2B CORE SERVICES ================= */}
+      {/* ================= AUDIENCE SERVICE LINES ================= */}
       <section className="py-16 border-b border-volt-500/8 bg-[#111214]/50">
         <div className="mx-auto max-w-375 px-6">
           <div className="mb-10">
             <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
-              B2B Specializations
+              Who I Work With
             </span>
-            <h2 className="text-2xl md:text-3xl font-bold text-white">Revenue-Focused Service Lines</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white">Two Ways to Work With Me</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                label: "B2B Website Design",
-                href: "/services/b2b-website-design",
-                description: "Conversion architecture built for long sales cycles and multiple buying-committee stakeholders.",
+                label: "Small Business Website Design",
+                href: "/services/small-business-website-design",
+                description: "Custom, professional sites for growing businesses — built by a senior engineer, not a template.",
                 color: "volt",
               },
               {
@@ -235,9 +235,9 @@ export default function ServicesPage() {
                 color: "blue",
               },
               {
-                label: "Manufacturing Websites",
-                href: "/services/manufacturing-website-design",
-                description: "Industry-specific design for engineers, procurement, and operations buyers — built to generate RFQs.",
+                label: "Agency & Partner Services",
+                href: "/partners",
+                description: "White-label web development and technical SEO fulfillment for agencies and strategy firms.",
                 color: "volt",
               },
             ].map((s) => {

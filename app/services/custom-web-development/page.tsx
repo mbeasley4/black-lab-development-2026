@@ -373,10 +373,10 @@ export default function CustomWebDevelopmentPage() {
             <h2 className="text-lg font-bold text-white mb-6">Related Services</h2>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/services/b2b-website-design"
+                href="/services/small-business-website-design"
                 className="rounded-lg border border-volt-500/30 bg-volt-500/10 px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200"
               >
-                B2B Website Design →
+                Small Business Website Design →
               </Link>
               <Link
                 href="/wordpress-development"

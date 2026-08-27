@@ -13,6 +13,16 @@ const nextConfig: NextConfig = {
         destination: "/case-studies",
         permanent: true,
       },
+      {
+        source: "/services/b2b-website-design",
+        destination: "/services/small-business-website-design",
+        permanent: true,
+      },
+      {
+        source: "/services/manufacturing-website-design",
+        destination: "/partners",
+        permanent: true,
+      },
     ];
   },
   images: {

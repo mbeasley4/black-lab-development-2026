@@ -358,10 +358,10 @@ export default function WebsitePerformanceOptimizationPage() {
                 Conversion Optimization →
               </Link>
               <Link
-                href="/services/b2b-website-design"
+                href="/services/small-business-website-design"
                 className="rounded-lg border border-slate-700 bg-slate-900 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
               >
-                B2B Website Design →
+                Small Business Website Design →
               </Link>
               <Link
                 href="/services/custom-web-development"

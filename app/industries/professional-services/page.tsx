@@ -210,11 +210,11 @@ export default function ProfessionalServicesIndustryPage() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 p-8 rounded-xl border border-volt-500/20 bg-volt-500/5">
             <div>
               <p className="text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold mb-1">Related Service</p>
-              <h3 className="text-lg font-bold text-white">B2B Website Design</h3>
-              <p className="text-sm text-slate-400 mt-1">Full breakdown of the service, process, and what to expect on a B2B engagement.</p>
+              <h3 className="text-lg font-bold text-white">Small Business Website Design</h3>
+              <p className="text-sm text-slate-400 mt-1">Full breakdown of the service, process, and what to expect on an engagement.</p>
             </div>
             <Link
-              href="/services/b2b-website-design"
+              href="/services/small-business-website-design"
               className="shrink-0 inline-flex items-center gap-2 rounded-md bg-volt text-black px-6 py-3 text-sm font-bold hover:brightness-110 transition-all duration-200"
             >
               View Service Page
@@ -234,8 +234,8 @@ export default function ProfessionalServicesIndustryPage() {
         title="Ready to Turn Your Website Into a Sales Asset?"
         bodyPrimary="Most B2B websites describe what the firm does — they don't help prospects understand why it matters or make it easy to take the next step."
         bodySecondary="I fix positioning, trust signals, and conversion architecture so your site actually generates pipeline."
-        secondaryHref="/services/b2b-website-design"
-        secondaryLabel="View B2B Service"
+        secondaryHref="/services/small-business-website-design"
+        secondaryLabel="View the Service Page"
       />
     </main>
   );

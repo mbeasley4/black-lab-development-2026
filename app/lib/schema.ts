@@ -10,7 +10,7 @@ export const localBusinessSchema = {
   },
   image: "https://blacklabdev.com/images/homepage-hero-bg.png",
   description:
-    "Independent B2B website design and pipeline generation practice run by senior web developer Michael Beasley, serving Cincinnati, OH and clients nationwide. Specializing in manufacturing websites, B2B design, and conversion optimization.",
+    "Independent web development and technical SEO practice run by senior web developer Michael Beasley, serving Cincinnati, OH and clients nationwide. Builds professional websites directly for small-to-medium businesses, and partners with agencies and strategy firms as a white-label web development and SEO execution partner.",
   telephone: "+15135204362",
   address: {
     "@type": "PostalAddress",
@@ -49,7 +49,8 @@ export const localBusinessSchema = {
     "Conversion rate optimization",
     "Core Web Vitals optimization",
     "Technical SEO",
-    "Manufacturing website design",
+    "White-label web development",
+    "SEO fulfillment for agencies",
     "Cloudflare configuration",
     "CDN and WAF security hardening",
     "Uptime and performance monitoring",
@@ -62,16 +63,16 @@ export const localBusinessSchema = {
   },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "B2B Web Design & Development Services",
+    name: "Web Design, Development & Agency Partner Services",
     itemListElement: [
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "B2B Website Design",
-          url: "https://blacklabdev.com/services/b2b-website-design",
+          name: "Small Business Website Design",
+          url: "https://blacklabdev.com/services/small-business-website-design",
           description:
-            "Custom B2B website design built for technical buyers, complex buying decisions, and higher-quality lead generation.",
+            "Custom website design and development for small-to-medium businesses — built by a senior engineer to look credible, load fast, and generate leads.",
         },
       },
       {
@@ -88,10 +89,14 @@ export const localBusinessSchema = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Manufacturing Website Design",
-          url: "https://blacklabdev.com/services/manufacturing-website-design",
+          name: "White-Label Web Development for Agencies",
+          url: "https://blacklabdev.com/partners",
           description:
-            "Industry-specific website design for manufacturers — built to generate RFQs from engineers and procurement teams.",
+            "White-label web development and technical SEO fulfillment for marketing agencies and strategy firms — delivered under the agency's brand.",
+          audience: {
+            "@type": "BusinessAudience",
+            audienceType: "Agencies and consulting firms",
+          },
         },
       },
       {

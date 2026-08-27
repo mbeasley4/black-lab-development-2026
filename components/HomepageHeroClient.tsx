@@ -166,7 +166,7 @@ const HomepageHeroClient = ({ featuredArticle }: { featuredArticle: FeaturedArti
                 variants={eyebrowVariants}
                 className="inline-block mb-4 md:mb-5 text-xs md:text-sm tracking-[0.2em] uppercase text-volt-500 font-medium"
               >
-                Insights From Black Lab Development
+                Website Development &amp; Technical SEO
               </motion.span>
 
               {/* Heading — each line is a mask-reveal */}
@@ -177,7 +177,7 @@ const HomepageHeroClient = ({ featuredArticle }: { featuredArticle: FeaturedArti
                     className="block"
                     variants={headingLine1Variants}
                   >
-                    Real Lessons from Real
+                    No Middlemen.
                   </motion.span>
                 </span>
 
@@ -187,7 +187,7 @@ const HomepageHeroClient = ({ featuredArticle }: { featuredArticle: FeaturedArti
                     className="block text-volt-500"
                     variants={headingLine2Variants}
                   >
-                    Web Development Work
+                    No Bloat. No Excuses.
                   </motion.span>
                 </span>
               </h1>
@@ -197,10 +197,12 @@ const HomepageHeroClient = ({ featuredArticle }: { featuredArticle: FeaturedArti
                 variants={paraVariants}
                 className="text-base md:text-lg lg:text-xl text-[#e5e7eb]/80 leading-relaxed max-w-2xl lg:max-w-none mx-auto lg:mx-0"
               >
-                I share the technical decisions behind fast, scalable
-                websites — CMS selection, AI search optimization, conversion
-                architecture, and the tradeoffs that shape real projects. No
-                theory, just what&apos;s working right now.
+                You&apos;re either a small business tired of a templated site
+                with your phone number slapped on it — or an agency tired of
+                watching in-house dev capacity crater your margins. Either
+                way, I&apos;m the senior engineer who actually ships it. No
+                templates. No offshore handoffs. No junior dev learning your
+                codebase on your dime.
               </motion.p>
             </div>
 
@@ -259,17 +261,17 @@ const HomepageHeroClient = ({ featuredArticle }: { featuredArticle: FeaturedArti
                 className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 md:gap-4 mb-7"
               >
                 <a
-                  href="/articles"
+                  href="/contact"
                   className="inline-flex items-center justify-center rounded-md bg-volt text-black px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-bold hover:brightness-110 transition-all duration-200 shadow-lg shadow-volt/25"
                 >
-                  Explore All Insights
+                  Schedule a Call
                 </a>
 
                 <a
-                  href="/contact"
+                  href="/partners"
                   className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/50 px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
                 >
-                  Get in Touch
+                  Partner With Us
                 </a>
               </motion.div>
 
