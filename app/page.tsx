@@ -19,19 +19,19 @@ export const revalidate = 60;
 export const metadata: Metadata = {
   title: "Website Design for Small Businesses & Agencies | Black Lab Dev",
   description:
-    "Fast, scalable websites built to convert — for small businesses directly, and as a white-label technical partner for agencies. Built by a senior engineer.",
+    "No ghosting. No junior handoffs. Just fast, conversion-built websites — direct from a senior engineer, for small businesses and white-label agency partners.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "Website Design for Small Businesses & Agencies | Black Lab Dev",
     description:
-      "Fast, scalable websites built to convert — for small businesses directly, and as a white-label technical partner for agencies. Built by a senior engineer.",
+      "No ghosting. No junior handoffs. Just fast, conversion-built websites — direct from a senior engineer, for small businesses and white-label agency partners.",
     url: "/",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     title: "Website Design for Small Businesses & Agencies | Black Lab Dev",
     description:
-      "Fast, scalable websites built to convert — for small businesses directly, and as a white-label technical partner for agencies. Built by a senior engineer.",
+      "No ghosting. No junior handoffs. Just fast, conversion-built websites — direct from a senior engineer, for small businesses and white-label agency partners.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
