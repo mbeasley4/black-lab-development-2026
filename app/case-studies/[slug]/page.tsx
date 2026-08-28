@@ -133,7 +133,7 @@ export default async function CaseStudyPage({
         <div className="absolute bottom-0 left-0 w-125 h-125 bg-volt-500/6 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/25 to-transparent" />
 
-        <div className="relative z-10 mx-auto max-w-375 px-6">
+        <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className={`grid gap-12 items-center py-20 md:py-24 md:min-h-[82vh] ${study.mainImage ? "grid-cols-1 lg:grid-cols-[1fr_1.1fr]" : "grid-cols-1"}`}>
 
             {/* ── Left: text + metrics ── */}
@@ -220,7 +220,7 @@ export default async function CaseStudyPage({
       {/* ─── FULL METRICS GRID ────────────────────────── */}
       {study.metrics && study.metrics.length > 0 && (
         <section className="py-20 border-b border-slate-800">
-          <div className="mx-auto max-w-375 px-6">
+          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-10">
               <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
                 The Results
@@ -264,7 +264,7 @@ export default async function CaseStudyPage({
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-volt-500/6 rounded-full blur-3xl" />
         <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/30 to-transparent" />
 
-        <div className="relative z-10 mx-auto max-w-375 px-6 text-center">
+        <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 text-center">
           <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
             Work With Us
           </span>

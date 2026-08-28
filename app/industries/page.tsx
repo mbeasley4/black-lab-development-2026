@@ -188,7 +188,7 @@ export default function IndustriesPage() {
         <div className="absolute top-20 -left-40 w-175 h-175 bg-volt-500/8 rounded-full blur-[140px] pointer-events-none" />
         <div className="absolute bottom-20 -right-40 w-150 h-150 bg-volt-600/8 rounded-full blur-[120px] pointer-events-none" />
 
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           {/* Section header */}
           <div className="flex items-center gap-6 mb-6 md:mb-9">
             <div>

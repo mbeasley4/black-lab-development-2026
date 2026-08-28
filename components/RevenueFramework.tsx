@@ -43,7 +43,7 @@ export default function RevenueFramework() {
             <div className="absolute top-1/2 left-0 w-150 h-150 bg-volt-500/6 rounded-full blur-3xl -translate-y-1/2 pointer-events-none" />
             <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/20 to-transparent" />
 
-            <div className="mx-auto max-w-375 px-6 relative z-10">
+            <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
                 <div className="mb-14">
                     <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
                         Who It&apos;s For

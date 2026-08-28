@@ -165,7 +165,7 @@ export default function ManufacturingIndustryPage() {
 
       {/* What We Deliver */}
       <section className="py-20 border-b border-slate-800/50">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="mb-12">
             <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">What I Build</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Built for Technical Buyers</h2>
@@ -184,7 +184,7 @@ export default function ManufacturingIndustryPage() {
 
       {/* Client Proof */}
       <section className="py-20 border-b border-slate-800/50 bg-slate-950/50">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="mb-12">
             <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">Client Proof</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Manufacturing Companies Worked With</h2>
@@ -202,7 +202,7 @@ export default function ManufacturingIndustryPage() {
 
       {/* Cross-link to service page */}
       <section className="py-16 border-b border-slate-800/50">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 p-8 rounded-xl border border-volt-500/20 bg-volt-500/5">
             <div>
               <p className="text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold mb-1">Related Service</p>

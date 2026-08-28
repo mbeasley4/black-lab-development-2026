@@ -30,7 +30,7 @@ export default function PageClose({
       <div className="absolute bottom-0 right-1/4 w-125 h-125 bg-volt-500/10 rounded-full blur-3xl" />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-375 px-6">
+      <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-2xl md:text-5xl text-balance font-bold mb-6 text-white pb-1 leading-tight">
             {title}

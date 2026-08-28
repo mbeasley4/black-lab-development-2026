@@ -206,7 +206,7 @@ export default function LaravelDevelopmentPage() {
 
       {/* Hero CTAs */}
       <section className="border-b border-slate-800 bg-[#111214]">
-        <div className="mx-auto max-w-375 px-6 py-8 flex flex-wrap gap-4">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-8 flex flex-wrap gap-4">
           <Link
             href="/contact"
             className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg shadow-volt-500/25"
@@ -224,7 +224,7 @@ export default function LaravelDevelopmentPage() {
 
       {/* Intro */}
       <section className="py-20 border-b border-slate-800">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
@@ -271,7 +271,7 @@ export default function LaravelDevelopmentPage() {
 
       {/* Services */}
       <section className="py-20 bg-[#111214] border-b border-slate-800">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
               What I Build
@@ -303,7 +303,7 @@ export default function LaravelDevelopmentPage() {
 
       {/* Built right */}
       <section className="py-20 border-b border-slate-800">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
@@ -346,7 +346,7 @@ export default function LaravelDevelopmentPage() {
 
       {/* Process */}
       <section className="py-20 bg-[#111214] border-b border-slate-800">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
               My Approach
@@ -374,7 +374,7 @@ export default function LaravelDevelopmentPage() {
 
       {/* Performance */}
       <section className="py-20 border-b border-slate-800">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
@@ -409,7 +409,7 @@ export default function LaravelDevelopmentPage() {
 
       {/* Use Cases */}
       <section className="py-20 bg-[#111214] border-b border-slate-800">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
@@ -436,7 +436,7 @@ export default function LaravelDevelopmentPage() {
 
       {/* Case Studies */}
       <section className="py-20 border-b border-slate-800">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-volt-500/35 bg-volt-500/8 text-volt-500 text-xs font-bold tracking-[0.2em] uppercase mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_8px_rgba(227,245,68,0.9)]" />
@@ -515,7 +515,7 @@ export default function LaravelDevelopmentPage() {
 
       {/* Internal links */}
       <section className="py-16 border-b border-slate-800">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <h2 className="text-lg font-bold text-white mb-6">Related Services</h2>
           <div className="flex flex-wrap gap-4">
             <Link

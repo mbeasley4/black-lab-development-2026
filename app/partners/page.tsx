@@ -251,7 +251,7 @@ export default function PartnersPage() {
 
       {/* Pain points */}
       <section className="py-20 border-b border-slate-800">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
               The Problem
@@ -281,7 +281,7 @@ export default function PartnersPage() {
 
       {/* Value props */}
       <section className="py-20 bg-slate-950/50 border-b border-slate-800">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
               What You Get
@@ -319,7 +319,7 @@ export default function PartnersPage() {
 
       {/* How it works */}
       <section className="py-20 border-b border-slate-800">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
               How It Works
@@ -344,7 +344,7 @@ export default function PartnersPage() {
 
       {/* Proof */}
       <section className="py-20 bg-slate-950/50 border-b border-slate-800">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
               The Work
@@ -373,7 +373,7 @@ export default function PartnersPage() {
 
       {/* Partner service lines */}
       <section className="py-20 border-b border-slate-800">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-10">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
               Partner Service Lines

@@ -350,7 +350,7 @@ export default async function ArticlePage({
                 {/* Top accent line */}
                 <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
 
-                <div className="relative mx-auto max-w-375 px-6">
+                <div className="relative mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
                   {/* Section heading */}
                   <div className="mb-12 flex flex-col items-center text-center">
                     <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">

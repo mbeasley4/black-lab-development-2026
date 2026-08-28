@@ -184,7 +184,7 @@ export default function CincinnatiWebDeveloperPage() {
 
         {/* Hero CTAs */}
         <section className="border-b border-slate-800 bg-[#111214]">
-          <div className="mx-auto max-w-375 px-6 py-8 flex flex-wrap gap-4">
+          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg shadow-volt-500/25"
@@ -202,7 +202,7 @@ export default function CincinnatiWebDeveloperPage() {
 
         {/* Intro */}
         <section className="py-20 border-b border-slate-800">
-          <div className="mx-auto max-w-375 px-6">
+          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
                 <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
@@ -241,7 +241,7 @@ export default function CincinnatiWebDeveloperPage() {
 
         {/* Services */}
         <section className="py-20 bg-[#111214] border-b border-slate-800">
-          <div className="mx-auto max-w-375 px-6">
+          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-14">
               <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
                 Services
@@ -276,7 +276,7 @@ export default function CincinnatiWebDeveloperPage() {
 
         {/* Why local */}
         <section className="py-20 border-b border-slate-800">
-          <div className="mx-auto max-w-375 px-6">
+          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
                 <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
@@ -320,7 +320,7 @@ export default function CincinnatiWebDeveloperPage() {
 
         {/* Cincinnati proof */}
         <section className="py-20 bg-[#111214] border-b border-slate-800">
-          <div className="mx-auto max-w-375 px-6">
+          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-14">
               <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
                 Cincinnati Work

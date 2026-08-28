@@ -495,7 +495,7 @@ export default function Header() {
             {/* ===================== HEADER ===================== */}
             <header className="fixed top-0 z-50 w-full bg-[#0b0b0c] text-[#e5e7eb] border-b border-volt-500/15">
                 <div
-                    className="mx-auto max-w-375 px-6 py-4 flex items-center justify-between"
+                    className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-4 flex items-center justify-between"
                     style={{ height: HEADER_HEIGHT }}
                 >
                     {/* Logo */}
@@ -585,7 +585,7 @@ export default function Header() {
                                 onMouseEnter={() => handleMegaEnter("services")}
                                 onMouseLeave={handleMegaLeave}
                                 style={{ top: HEADER_HEIGHT }}
-                                className={`fixed left-1/2 -translate-x-1/2 w-full max-w-375 px-6 pt-4
+                                className={`fixed left-1/2 -translate-x-1/2 w-full max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 pt-4
                                     transition-all duration-200 ease-out origin-top
                                     ${openMega === "services"
                                         ? "opacity-100 translate-y-0 pointer-events-auto"
@@ -703,7 +703,7 @@ export default function Header() {
                                 onMouseEnter={() => handleMegaEnter("industries")}
                                 onMouseLeave={handleMegaLeave}
                                 style={{ top: HEADER_HEIGHT }}
-                                className={`fixed left-1/2 -translate-x-1/2 w-full max-w-375 px-6 pt-4
+                                className={`fixed left-1/2 -translate-x-1/2 w-full max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 pt-4
                                     transition-all duration-200 ease-out origin-top
                                     ${openMega === "industries"
                                         ? "opacity-100 translate-y-0 pointer-events-auto"

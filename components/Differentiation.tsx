@@ -12,7 +12,7 @@ export default function Differentiation() {
             <div className="absolute top-1/2 right-0 w-125 h-125 bg-volt-500/5 rounded-full blur-3xl -translate-y-1/2 pointer-events-none" />
             <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/20 to-transparent" />
 
-            <div className="mx-auto max-w-375 px-6 relative z-10">
+            <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
                     {/* Left */}

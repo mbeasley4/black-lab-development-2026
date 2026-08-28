@@ -310,7 +310,7 @@ export default async function CaseStudiesPage() {
         <div className="absolute bottom-0 left-0 w-125 h-100 bg-volt-500/6 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/30 to-transparent" />
 
-        <div className="relative z-10 mx-auto max-w-375 px-6 py-20 md:py-28">
+        <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-20 md:py-28">
           <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-volt-500/35 bg-volt-500/8 text-volt-500 text-xs font-bold tracking-[0.2em] uppercase mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_8px_rgba(227,245,68,0.9)]" />
             Case Studies
@@ -349,7 +349,7 @@ export default async function CaseStudiesPage() {
         <div className="absolute top-0 left-1/4 w-175 h-175 bg-volt-500/6 rounded-full blur-[140px] pointer-events-none" />
         <div className="absolute bottom-0 left-1/3 w-150 h-150 bg-volt-600/6 rounded-full blur-[130px] pointer-events-none" />
 
-        <div className="mx-auto max-w-375 px-6 relative">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative">
           <div className="mb-12 md:mb-16 max-w-3xl">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-volt-500/35 bg-volt-500/8 text-volt-500 text-xs font-bold tracking-[0.2em] uppercase mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_8px_rgba(227,245,68,0.9)]" />
@@ -429,7 +429,7 @@ export default async function CaseStudiesPage() {
       </section>
 
       {/* ── Case Studies intro ── */}
-      <div className="mx-auto max-w-375 px-6 pt-20 md:pt-24 pb-4">
+      <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 pt-20 md:pt-24 pb-4">
         <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-volt-500/35 bg-volt-500/8 text-volt-500 text-xs font-bold tracking-[0.2em] uppercase mb-5">
           <span className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_8px_rgba(227,245,68,0.9)]" />
           Case Studies
@@ -448,7 +448,7 @@ export default async function CaseStudiesPage() {
         <div className="absolute bottom-0 left-0 w-125 h-125 bg-violet-500/6 rounded-full blur-[110px] pointer-events-none" />
         <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/25 to-transparent" />
 
-        <div className="mx-auto max-w-375 px-6 relative z-10">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
 
           {/* Featured card */}
           <div className="relative rounded-2xl border border-volt-500/25 overflow-hidden bg-neutral-950/80">
@@ -556,7 +556,7 @@ export default async function CaseStudiesPage() {
           <div className="absolute top-0 left-1/4 w-175 h-100 bg-volt-500/5 rounded-full blur-[120px] pointer-events-none" />
           <div className="absolute bottom-0 right-1/4 w-150 h-100 bg-volt-600/5 rounded-full blur-[120px] pointer-events-none" />
 
-          <div className="mx-auto max-w-375 px-6">
+          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
 
             {/* Section header */}
             <div className="mb-10">

@@ -194,7 +194,7 @@ export default function AboutPage() {
         <div className="absolute top-20 -left-40 w-175 h-175 bg-volt-500/8 rounded-full blur-[140px] pointer-events-none" />
         <div className="absolute bottom-20 -right-40 w-150 h-150 bg-volt-600/8 rounded-full blur-[120px] pointer-events-none" />
 
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           {/* Section eyebrow */}
           <div className="flex items-center gap-6 mb-10 md:mb-20">
             <div>
@@ -308,7 +308,7 @@ export default function AboutPage() {
         />
         <div className="absolute top-0 right-0 w-150 h-150 bg-volt-500/5 rounded-full blur-[130px] pointer-events-none" />
 
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="flex items-center gap-6 mb-10 md:mb-20">
             <div>
               <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono drop-shadow-[0_0_12px_rgba(227,245,68,0.7)]">
@@ -385,7 +385,7 @@ export default function AboutPage() {
       <section className="py-6 md:py-9 relative overflow-hidden border-t border-volt-500/8">
         <div className="absolute bottom-0 left-1/4 w-175 h-175 bg-volt-600/6 rounded-full blur-[140px] pointer-events-none" />
 
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="flex items-center gap-6 mb-10 md:mb-20">
             <div>
               <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono drop-shadow-[0_0_12px_rgba(227,245,68,0.7)]">

@@ -221,7 +221,7 @@ export default function ConversionOptimizationPage() {
 
       {/* The core problem */}
       <section className="py-20 border-b border-slate-800">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
@@ -266,7 +266,7 @@ export default function ConversionOptimizationPage() {
 
       {/* Symptom → Cause */}
       <section className="py-20 bg-slate-950/50 border-b border-slate-800">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
               Diagnose First
@@ -294,7 +294,7 @@ export default function ConversionOptimizationPage() {
 
       {/* Process */}
       <section className="py-20 border-b border-slate-800">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
               My Process
@@ -319,7 +319,7 @@ export default function ConversionOptimizationPage() {
 
       {/* Before / After */}
       <section className="py-20 bg-slate-950/50 border-b border-slate-800">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
               Before &amp; After
@@ -372,7 +372,7 @@ export default function ConversionOptimizationPage() {
 
       {/* Related */}
       <section className="py-20 border-b border-slate-800">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <h2 className="text-2xl font-bold text-white mb-8">Related</h2>
           <div className="flex flex-wrap gap-4">
             <Link href="/case-studies/ecommerce-website-redesign-increase-aov" className="rounded-lg border border-volt-500/30 bg-volt-500/10 px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200">

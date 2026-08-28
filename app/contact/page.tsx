@@ -66,7 +66,7 @@ export default function ContactPage() {
 
       {/* ================= CONTENT + FORM ================= */}
       <section className="pt-12 pb-16 md:pt-20 md:pb-32">
-        <div className="mx-auto max-w-375 px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-start">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-start">
           {/* Left Content */}
           <div className="max-w-xl">
             <div className="flex items-center gap-6 mb-6">

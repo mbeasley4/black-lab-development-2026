@@ -18,7 +18,7 @@ export default function CallToAction() {
             <div className="absolute bottom-0 right-1/4 w-150 h-150 bg-volt-500/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
 
             {/* Content */}
-            <div className="relative z-10 mx-auto max-w-375 px-6">
+            <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
                 <div className="mx-auto max-w-4xl text-center">
                     <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 pb-2 leading-[1.05]">
                         <span className="block text-white">If Your Website Isn&apos;t Driving Results,</span>

@@ -122,25 +122,39 @@ const HomepageHeroClient = ({ featuredArticle }: { featuredArticle: FeaturedArti
 
   return (
     <section className="relative w-full min-h-[90vh] md:min-h-[75vh] overflow-hidden">
-      {/* Background */}
+      {/* Background base */}
       <div
-        className="absolute inset-0 bg-cover bg-center z-0"
-        style={{ backgroundImage: "url(/images/background-bld.png)" }}
+        className="absolute inset-0 bg-linear-to-br from-black via-[#050506] to-black z-0"
         aria-hidden="true"
       />
 
-      {/* Dark overlay */}
-      <div
-        className="absolute inset-0 bg-linear-to-br from-[#0b0b0c]/92 via-[#111214]/88 to-black/85 z-10"
-        aria-hidden="true"
-      />
+      {/* Hexagonal grid texture — the site's own motif (see FaqSection), not a stock photo */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.22]" aria-hidden="true">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            {/* True regular hexagons (pointy-top honeycomb), s=20 */}
+            <pattern id="hex-hero" width="34.64" height="60" patternUnits="userSpaceOnUse" patternTransform="scale(2.2)">
+              <path d="M17.32 0 L34.64 10 L34.64 30 L17.32 40 L0 30 L0 10 Z" fill="none" stroke="currentColor" strokeWidth="1" className="text-volt-500" />
+              <path d="M0 30 L17.32 40 L17.32 60 L0 70 L-17.32 60 L-17.32 40 Z" fill="none" stroke="currentColor" strokeWidth="1" className="text-volt-500" />
+              <path d="M34.64 30 L51.96 40 L51.96 60 L34.64 70 L17.32 60 L17.32 40 Z" fill="none" stroke="currentColor" strokeWidth="1" className="text-volt-500" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#hex-hero)" />
+        </svg>
+      </div>
 
-      {/* Radial mask — softens the code background under the headline */}
+      {/* Brand glow behind the hex grid for extra depth */}
+      <div className="absolute top-0 right-0 w-175 h-175 bg-volt-500/10 rounded-full blur-[180px] z-0 pointer-events-none" />
+
+      {/* Uniform dark overlay — deepens the whole hero, not just the headline zone */}
+      <div className="absolute inset-0 bg-black/55 z-10 pointer-events-none" aria-hidden="true" />
+
+      {/* Radial mask — punches the hex texture down specifically behind the headline for contrast */}
       <div
         className="absolute inset-0 z-10 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 80% 100% at 25% 50%, rgba(11,11,12,0.55) 0%, transparent 70%)",
+            "radial-gradient(ellipse 70% 65% at 25% 32%, rgba(0,0,0,0.8) 0%, transparent 65%)",
         }}
         aria-hidden="true"
       />
@@ -155,11 +169,11 @@ const HomepageHeroClient = ({ featuredArticle }: { featuredArticle: FeaturedArti
         initial="visible"
         animate={animState}
       >
-        <div className="mx-auto max-w-375 px-6 w-full">
-          <div className={featuredArticle ? "lg:grid lg:grid-cols-[1fr_380px] lg:gap-16" : ""}>
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 w-full">
+          <div className={featuredArticle ? "flex flex-col lg:grid lg:grid-cols-[1fr_380px] lg:gap-16" : ""}>
 
             {/* Top-left: eyebrow, heading, body copy */}
-            <div className="text-center lg:text-left lg:col-start-1 lg:row-start-1">
+            <div className="order-1 text-center lg:text-left lg:col-start-1 lg:row-start-1">
 
               {/* Eyebrow */}
               <motion.span
@@ -177,7 +191,7 @@ const HomepageHeroClient = ({ featuredArticle }: { featuredArticle: FeaturedArti
                     className="block"
                     variants={headingLine1Variants}
                   >
-                    No Middlemen.
+                    I Don&apos;t Ghost.
                   </motion.span>
                 </span>
 
@@ -187,7 +201,7 @@ const HomepageHeroClient = ({ featuredArticle }: { featuredArticle: FeaturedArti
                     className="block text-volt-500"
                     variants={headingLine2Variants}
                   >
-                    No Filler. No Excuses.
+                    I Ship.
                   </motion.span>
                 </span>
               </h1>
@@ -197,12 +211,13 @@ const HomepageHeroClient = ({ featuredArticle }: { featuredArticle: FeaturedArti
                 variants={paraVariants}
                 className="text-base md:text-lg lg:text-xl text-[#e5e7eb]/80 leading-relaxed max-w-2xl lg:max-w-none mx-auto lg:mx-0"
               >
-                You&apos;re either a small business tired of a templated site
+                You&apos;re either a business owner tired of a templated site
                 with your phone number slapped on it — or an agency tired of
                 watching in-house dev capacity crater your margins. Either
-                way, I&apos;m the senior engineer who actually ships it. No
-                templates. No offshore handoffs. No junior dev learning your
-                codebase on your dime.
+                way, you don&apos;t need a 40-slide deck with &ldquo;synergy&rdquo;
+                in it — you need someone who ships. No templates. No offshore
+                handoffs. No junior dev cutting their teeth on your codebase
+                while you pay senior rates.
               </motion.p>
             </div>
 
@@ -210,7 +225,7 @@ const HomepageHeroClient = ({ featuredArticle }: { featuredArticle: FeaturedArti
             {featuredArticle && (
               <motion.div
                 variants={featuredArticleVariants}
-                className="mt-8 mb-8 md:mt-10 md:mb-10 lg:my-0 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:self-center max-w-md mx-auto lg:max-w-none lg:mx-0"
+                className="order-3 mt-8 mb-8 md:mt-10 md:mb-10 lg:my-0 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:self-center max-w-md mx-auto lg:max-w-none lg:mx-0"
               >
                 <Link
                   href={`/articles/${featuredArticle.slug}`}
@@ -254,26 +269,44 @@ const HomepageHeroClient = ({ featuredArticle }: { featuredArticle: FeaturedArti
             )}
 
             {/* Bottom-left: CTAs + location credit */}
-            <div className="text-center lg:text-left lg:col-start-1 lg:row-start-2">
+            <div className="order-2 text-center lg:text-left lg:col-start-1 lg:row-start-2">
               {/* CTAs */}
               <motion.div
                 variants={ctaVariants}
-                className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 md:gap-4 mb-7"
+                className="flex flex-col sm:flex-row justify-center lg:justify-start gap-6 sm:gap-4 md:gap-6 mb-7"
               >
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-md bg-volt text-black px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-bold hover:brightness-110 transition-all duration-200 shadow-lg shadow-volt/25"
-                >
-                  Schedule a Call
-                </a>
+                <div className="flex flex-col items-center lg:items-start gap-2">
+                  <span className="text-[11px] uppercase tracking-[0.15em] text-slate-500 font-semibold">
+                    Own a business
+                  </span>
+                  <a
+                    href="/contact"
+                    className="inline-flex items-center justify-center rounded-md bg-volt text-black px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-bold hover:brightness-110 transition-all duration-200 shadow-lg shadow-volt/25"
+                  >
+                    Schedule a Call
+                  </a>
+                </div>
 
-                <a
-                  href="/partners"
-                  className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/50 px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
-                >
-                  Partner With Us
-                </a>
+                <div className="flex flex-col items-center lg:items-start gap-2">
+                  <span className="text-[11px] uppercase tracking-[0.15em] text-slate-500 font-semibold">
+                    Run an agency
+                  </span>
+                  <a
+                    href="/partners"
+                    className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/50 px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
+                  >
+                    Partner With Us
+                  </a>
+                </div>
               </motion.div>
+
+              {/* Capacity signal */}
+              <motion.p
+                variants={creditVariants}
+                className="mb-3 text-xs text-volt-500/90 font-medium tracking-wide"
+              >
+                Currently taking on new partners &amp; direct clients
+              </motion.p>
 
               {/* Location credit */}
               <motion.p

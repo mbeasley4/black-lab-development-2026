@@ -47,7 +47,7 @@ export default function PageHero({
 
       {/* Hero content */}
       <div className="relative z-10 py-12 md:py-24">
-        <div className="mx-auto max-w-375 px-6 w-full">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 w-full">
           <div className="max-w-6xl text-center md:text-left">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
               {label}

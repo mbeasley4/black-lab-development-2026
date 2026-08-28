@@ -80,7 +80,7 @@ export default function CaseStudies() {
             <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-volt-500/8 rounded-full blur-3xl" />
             <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-volt-500/8 rounded-full blur-3xl" />
 
-            <div className="mx-auto max-w-375 px-6 relative z-10">
+            <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
                 {/* Header */}
                 <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16 gap-8">
                     <div className="max-w-3xl">

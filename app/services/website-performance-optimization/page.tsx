@@ -188,7 +188,7 @@ export default function WebsitePerformanceOptimizationPage() {
 
         {/* Hero CTAs */}
         <section className="border-b border-slate-800 bg-slate-950/50">
-          <div className="mx-auto max-w-375 px-6 py-8 flex flex-wrap gap-4">
+          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg shadow-volt-500/25"
@@ -206,7 +206,7 @@ export default function WebsitePerformanceOptimizationPage() {
 
         {/* Why speed matters */}
         <section className="py-20 border-b border-slate-800">
-          <div className="mx-auto max-w-375 px-6">
+          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
                 <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
@@ -244,7 +244,7 @@ export default function WebsitePerformanceOptimizationPage() {
 
         {/* Core Web Vitals breakdown */}
         <section className="py-20 bg-slate-950/50 border-b border-slate-800">
-          <div className="mx-auto max-w-375 px-6">
+          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-14">
               <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
                 Core Web Vitals
@@ -284,7 +284,7 @@ export default function WebsitePerformanceOptimizationPage() {
 
         {/* What I fix */}
         <section className="py-20 border-b border-slate-800">
-          <div className="mx-auto max-w-375 px-6">
+          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-14">
               <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
                 What Gets Fixed
@@ -316,7 +316,7 @@ export default function WebsitePerformanceOptimizationPage() {
 
         {/* Results */}
         <section className="py-20 bg-slate-950/50 border-b border-slate-800">
-          <div className="mx-auto max-w-375 px-6">
+          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-14">
               <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
                 Results
@@ -348,7 +348,7 @@ export default function WebsitePerformanceOptimizationPage() {
 
         {/* Related */}
         <section className="py-16 border-b border-slate-800">
-          <div className="mx-auto max-w-375 px-6">
+          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <h2 className="text-lg font-bold text-white mb-6">Related Services</h2>
             <div className="flex flex-wrap gap-4">
               <Link

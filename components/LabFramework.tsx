@@ -86,7 +86,7 @@ export default function LabFramework({ compact = false }: LabFrameworkProps) {
       <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-volt-500/8 rounded-full blur-[180px] pointer-events-none" />
 
-      <div className="mx-auto max-w-375 px-6">
+      <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
         <div className="mb-16 text-center md:text-left">
           <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold drop-shadow-[0_0_8px_rgba(227,245,68,0.4)]">
             Delivery Methodology

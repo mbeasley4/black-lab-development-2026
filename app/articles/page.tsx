@@ -214,7 +214,7 @@ export default async function ArticlesPage({
         <div className="absolute top-32 left-1/4 w-175 h-175 bg-volt-500/4 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-32 right-1/4 w-125 h-125 bg-volt-600/4 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="mx-auto max-w-375 px-6 relative">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative">
           {/* Section eyebrow */}
           <div className="flex items-center gap-6 mb-10 md:mb-20">
             <div>

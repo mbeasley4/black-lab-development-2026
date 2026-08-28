@@ -213,7 +213,7 @@ export default function ServicesPage() {
 
       {/* ================= AUDIENCE SERVICE LINES ================= */}
       <section className="py-16 border-b border-volt-500/8 bg-[#111214]/50">
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="mb-10">
             <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
               Who I Work With
@@ -279,7 +279,7 @@ export default function ServicesPage() {
         <div className="absolute top-20 -left-40 w-175 h-175 bg-volt-500/8 rounded-full blur-[140px] pointer-events-none" />
         <div className="absolute bottom-20 -right-40 w-150 h-150 bg-volt-600/8 rounded-full blur-[120px] pointer-events-none" />
 
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           {/* Section header */}
           <div className="flex items-center gap-6 mb-6 md:mb-9">
             <div>
@@ -381,7 +381,7 @@ export default function ServicesPage() {
         {/* Ambient glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-48 bg-volt-500/5 blur-[100px] pointer-events-none" />
 
-        <div className="mx-auto max-w-375 px-6">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           {/* Section header */}
           <div className="flex items-center gap-6 mb-12 md:mb-16">
             <div>

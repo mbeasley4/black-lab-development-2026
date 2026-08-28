@@ -43,7 +43,7 @@ const services = [
 export default function ServicesSnapshot() {
     return (
         <section className="w-full bg-linear-to-b from-black via-slate-950 to-[#111214] text-white py-24">
-            <div className="mx-auto max-w-375 px-6">
+            <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
                 {/* Section Header */}
                 <div className="max-w-6xl mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white">

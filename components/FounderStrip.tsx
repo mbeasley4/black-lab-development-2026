@@ -14,7 +14,7 @@ export default function FounderStrip() {
       <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/30 to-transparent" />
       <div className="absolute top-1/2 right-0 w-125 h-125 bg-volt-500/4 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none" />
 
-      <div className="relative z-10 mx-auto max-w-375 px-6">
+      <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-12 lg:gap-16 items-center">
           {/* Photo */}
           <div className="flex justify-center lg:justify-start">

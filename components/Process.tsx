@@ -23,7 +23,7 @@ export default function Process() {
             <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-slate-700/40 to-transparent" />
             <div className="absolute bottom-0 left-1/3 w-125 h-125 bg-volt-500/4 rounded-full blur-3xl pointer-events-none" />
 
-            <div className="mx-auto max-w-375 px-6 relative z-10">
+            <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
                 <div className="mb-20 grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
                     <div>
                         <span className="inline-block mb-5 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">

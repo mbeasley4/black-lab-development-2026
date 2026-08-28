@@ -19,7 +19,7 @@ export default function PositioningStrike() {
             <div className="absolute inset-0 bg-linear-to-tr from-volt-500/4 via-transparent to-transparent" />
             <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/30 to-transparent" />
 
-            <div className="relative z-10 mx-auto max-w-375 px-6">
+            <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20">
 
                     {/* Performance + SEO */}
