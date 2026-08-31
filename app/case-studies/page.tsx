@@ -404,8 +404,8 @@ export default async function CaseStudiesPage() {
                       </span>
                     </div>
                     {"updated" in project && project.updated && (
-                      <span className="inline-flex w-fit items-center gap-1.5 text-[9px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full border border-green-500/30 bg-green-500/10 text-green-400">
-                        <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+                      <span className="inline-flex w-fit items-center gap-1.5 text-[9px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full border border-volt-500/30 bg-volt-500/10 text-volt-400">
+                        <span className="w-1.5 h-1.5 rounded-full bg-volt-400 animate-pulse" />
                         Recently Updated
                       </span>
                     )}
@@ -486,8 +486,8 @@ export default async function CaseStudiesPage() {
                     <span className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_8px_rgba(227,245,68,0.9)]" />
                     Featured Case Study
                   </span>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-green-500/30 bg-green-500/8 text-green-400 text-xs font-semibold tracking-wide">
-                    <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-volt-500/30 bg-volt-500/8 text-volt-400 text-xs font-semibold tracking-wide">
+                    <span className="w-1.5 h-1.5 rounded-full bg-volt-400 animate-pulse" />
                     Ongoing Engagement
                   </span>
                 </div>

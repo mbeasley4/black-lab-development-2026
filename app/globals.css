@@ -3,8 +3,6 @@
 :root {
   --background: #0b0b0c;
   --foreground: #e5e7eb;
-  --accent: #E3F544;
-  --accent-secondary: #3b82f6;
 }
 
 @keyframes marquee {

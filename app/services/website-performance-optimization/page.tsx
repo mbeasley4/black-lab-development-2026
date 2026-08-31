@@ -263,7 +263,7 @@ export default function WebsitePerformanceOptimizationPage() {
                     <div className="p-6 flex flex-col items-start justify-center">
                       <div className="text-3xl font-black font-mono text-volt-400 mb-1">{vital.metric}</div>
                       <div className="text-xs text-slate-500 leading-tight">{vital.full}</div>
-                      <div className="mt-3 text-xs font-mono text-green-400 bg-green-500/10 border border-green-500/20 rounded px-2 py-1">
+                      <div className="mt-3 text-xs font-mono text-volt-400 bg-volt-500/10 border border-volt-500/20 rounded px-2 py-1">
                         Target: {vital.target}
                       </div>
                     </div>
