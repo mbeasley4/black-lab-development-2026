@@ -19,6 +19,19 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npx playwright test
+      env:
+        NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ vars.NEXT_PUBLIC_SANITY_PROJECT_ID }}
+        NEXT_PUBLIC_SANITY_DATASET: ${{ vars.NEXT_PUBLIC_SANITY_DATASET }}
+        RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        CONTACT_TO_EMAIL: ${{ vars.CONTACT_TO_EMAIL }}
+        CONTACT_FROM_EMAIL: ${{ vars.CONTACT_FROM_EMAIL }}
+        CLOUDFLARE_TURNSTILE_SITE_KEY: ${{ vars.CLOUDFLARE_TURNSTILE_SITE_KEY }}
+        CLOUDFLARE_TURNSTILE_SECRET_KEY: ${{ secrets.CLOUDFLARE_TURNSTILE_SECRET_KEY }}
+        NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ vars.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
+        TURNSTILE_SECRET_KEY: ${{ secrets.TURNSTILE_SECRET_KEY }}
+        NEXT_PUBLIC_APTABASE_KEY: ${{ vars.NEXT_PUBLIC_APTABASE_KEY }}
+        NEXT_PUBLIC_GTM_ID: ${{ vars.NEXT_PUBLIC_GTM_ID }}
+        MONGO_DB_MONGODB_URI: ${{ secrets.MONGO_DB_MONGODB_URI }}
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
