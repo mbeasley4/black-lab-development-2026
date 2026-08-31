@@ -175,7 +175,7 @@ export default function AboutPage() {
         title="The Engineer Behind the Work"
         titleHighlight="Behind the Work"
         description="I'm Michael Beasley — a senior web developer based in Cincinnati, Ohio with 15+ years of experience building scalable B2B and industrial platforms. No middlemen, no markup — just the engineer who owns the outcome."
-        backgroundImage="/images/about-hero-bg.png"
+        backgroundImage="/images/about-hero-bg.jpg"
         badges={["Senior-led", "Direct access", "Full ownership"]}
       />
 

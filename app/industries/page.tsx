@@ -166,10 +166,10 @@ export default function IndustriesPage() {
       {/* ================= HERO ================= */}
       <PageHero
         label="Industries"
-        title="Built for Real-World Demands"
-        titleHighlight="Real-World Demands"
-        description="I've worked across industries where performance matters — not just presentation."
-        backgroundImage="/images/industries-hero-bg.png"
+        title="Every Industry Sets Its Own Non-Negotiables"
+        titleHighlight="Its Own Non-Negotiables"
+        description="I've built and fixed websites across industries where performance and reliability aren't optional — regulated fields, high-traffic platforms, and systems nobody else wanted to touch."
+        backgroundImage="/images/industries-hero-bg.jpg"
         badges={["Regulated environments", "High-traffic systems", "Legacy nightmares survived"]}
       />
 

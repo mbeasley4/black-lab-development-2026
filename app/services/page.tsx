@@ -204,10 +204,10 @@ export default function ServicesPage() {
       {/* ================= HERO ================= */}
       <PageHero
         label="Services"
-        title="Engineering That Ships and Holds"
-        titleHighlight="Ships and Holds"
-        description="I build things that work in production — not just in a demo. Senior-led, hands-on, and allergic to solutions that look great until they don't."
-        backgroundImage="/images/services-hero-bg.png"
+        title="Software Built to Outlast the Demo"
+        titleHighlight="Outlast the Demo"
+        description="I build things that hold up in production, under real traffic, with real users — not just in a polished walkthrough. Senior-led, hands-on, and allergic to solutions that look great until they don't."
+        backgroundImage="/images/services-hero-bg.jpg"
         badges={["No templates", "No offshore handoffs", "No 40-slide decks"]}
       />
 

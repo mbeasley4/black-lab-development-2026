@@ -212,10 +212,10 @@ export default function CustomWebDevelopmentPage() {
       <main className="w-full bg-black text-white">
         <PageHero
           label="Custom Web Development"
-          title="Custom Web Development When Templates Won&apos;t Cut It"
-          titleHighlight="Templates Won&apos;t Cut It"
-          description="Bespoke builds in Next.js, headless CMS, and WordPress — for businesses that have outgrown the ceiling of themes, page builders, and plugin-heavy setups."
-          backgroundImage="/images/services-hero-bg.png"
+          title="When You&apos;ve Outgrown Templates and Page Builders"
+          titleHighlight="Templates and Page Builders"
+          description="Bespoke builds in Next.js, headless CMS, and WordPress — architected for businesses that need more than a theme can deliver."
+          backgroundImage="/images/services-custom-web-development-hero-bg.jpg"
           badges={["No page builders", "Clean architecture", "Built to hand off"]}
         />
 

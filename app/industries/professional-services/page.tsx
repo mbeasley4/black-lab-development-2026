@@ -155,10 +155,10 @@ export default function ProfessionalServicesIndustryPage() {
 
       <PageHero
         label="B2B & Professional Services"
-        title="Websites That Support Complex Sales Cycles"
+        title="Websites Built to Support Complex Sales Cycles"
         titleHighlight="Complex Sales Cycles"
         description="B2B buyers don't convert on first visit. They evaluate, compare, and bring in stakeholders before a decision is made. Your website needs to build trust at each stage — not just look professional."
-        backgroundImage="/images/background-bld.png"
+        backgroundImage="/images/industries-professional-services-hero-bg.jpg"
         badges={["Multi-stakeholder trust", "Pipeline generation", "CRM integration"]}
       />
 

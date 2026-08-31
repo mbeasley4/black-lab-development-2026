@@ -144,10 +144,10 @@ export default function EducationIndustryPage() {
 
       <PageHero
         label="Education & Training"
-        title="Platforms Built for Learning at Scale"
-        titleHighlight="Learning at Scale"
+        title="Websites Where Enrollment and Learning Both Win"
+        titleHighlight="Learning Both Win"
         description="Education websites serve two masters: the marketing goal of enrollment conversion and the product goal of learning outcomes. Getting both right requires different thinking than a standard web project."
-        backgroundImage="/images/background-bld.png"
+        backgroundImage="/images/industries-education-hero-bg.jpg"
         badges={["Enrollment optimization", "LMS integration", "WCAG 2.1 AA"]}
       />
 

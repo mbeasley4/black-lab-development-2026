@@ -151,10 +151,10 @@ export default function ManufacturingIndustryPage() {
 
       <PageHero
         label="Manufacturing & Industrial"
-        title="Websites That Win Engineers and Procurement Teams"
-        titleHighlight="Win Engineers and Procurement Teams"
+        title="Built for Engineers Who Read Spec Sheets"
+        titleHighlight="Read Spec Sheets"
         description="Manufacturing buyers don't fill out generic contact forms. They evaluate specs, compare capabilities, and submit RFQs. Your website needs to support that process — or they'll find a competitor's that does."
-        backgroundImage="/images/background-bld.png"
+        backgroundImage="/images/industries-manufacturing-hero-bg.jpg"
         badges={["RFQ generation", "Product catalog architecture", "Technical SEO"]}
       />
 

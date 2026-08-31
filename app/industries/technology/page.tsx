@@ -159,10 +159,10 @@ export default function TechnologyIndustryPage() {
 
       <PageHero
         label="SaaS & Technology"
-        title="Websites Built for Signups, Not Just Sessions"
-        titleHighlight="Signups, Not Just Sessions"
+        title="Every Pixel Should Push Toward Signups"
+        titleHighlight="Push Toward Signups"
         description="SaaS websites have one job: convert the right traffic into trials, demos, and qualified pipeline. Every design decision, every integration, every performance trade-off should serve that goal."
-        backgroundImage="/images/background-bld.png"
+        backgroundImage="/images/industries-technology-hero-bg.jpg"
         badges={["Product-led growth", "Sub-2s load times", "CRM & analytics integration"]}
       />
 

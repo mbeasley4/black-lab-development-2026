@@ -159,10 +159,10 @@ export default function EcommerceIndustryPage() {
 
       <PageHero
         label="Ecommerce & DTC"
-        title="Storefronts Built to Close More Sales"
-        titleHighlight="Close More Sales"
+        title="A Slow Storefront Costs You Real Revenue"
+        titleHighlight="Real Revenue"
         description="A slow ecommerce page doesn't just frustrate visitors — it costs you sales in real time. Performance, conversion architecture, and checkout flow are revenue levers, not technical footnotes."
-        backgroundImage="/images/background-bld.png"
+        backgroundImage="/images/industries-ecommerce-hero-bg.jpg"
         badges={["Shopify & WooCommerce", "AOV optimization", "Core Web Vitals"]}
       />
 

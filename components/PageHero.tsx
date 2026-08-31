@@ -17,12 +17,12 @@ export default function PageHero({
 }: PageHeroProps) {
   const renderTitle = () => {
     if (!titleHighlight) {
-      return <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-white leading-tight">{title}</h1>;
+      return <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-white leading-tight text-balance">{title}</h1>;
     }
 
     const parts = title.split(titleHighlight);
     return (
-      <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-white leading-tight">
+      <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-white leading-tight text-balance">
         {parts[0]}
         <span className="text-volt-500">{titleHighlight}</span>
         {parts[1]}
@@ -46,7 +46,7 @@ export default function PageHero({
       <div className="absolute bottom-0 left-1/4 w-100 h-100 bg-volt-500/10 rounded-full blur-3xl" />
 
       {/* Hero content */}
-      <div className="relative z-10 py-12 md:py-24">
+      <div className="relative z-10 flex items-center min-h-[520px] md:min-h-[600px] py-12 md:py-16">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 w-full">
           <div className="max-w-6xl text-center md:text-left">
             <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">

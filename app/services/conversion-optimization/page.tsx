@@ -207,10 +207,10 @@ export default function ConversionOptimizationPage() {
       <main className="w-full bg-black text-white">
       <PageHero
         label="B2B Website Conversion Optimization"
-        title="Traffic Without Conversions Is Just Overhead"
-        titleHighlight="Just Overhead"
-        description="I diagnose exactly why your B2B website isn't generating qualified leads, then systematically fix it — with data, not guesswork."
-        backgroundImage="/images/services-hero-bg.png"
+        title="More Traffic Won&apos;t Fix a Broken Website"
+        titleHighlight="Broken Website"
+        description="I find the exact reasons your B2B website isn't turning visitors into qualified leads, then fix them systematically — with data, not guesswork."
+        backgroundImage="/images/services-conversion-optimization-hero-bg.jpg"
         badges={["Audit-first approach", "Measured before & after", "No vanity metrics"]}
       />
 

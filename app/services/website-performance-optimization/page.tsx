@@ -174,10 +174,10 @@ export default function WebsitePerformanceOptimizationPage() {
       <main className="w-full bg-black text-white">
         <PageHero
           label="Website Performance Optimization"
-          title="A Slow Website Is a Business Problem, Not a Technical One"
-          titleHighlight="Business Problem, Not a Technical One"
+          title="Every Extra Second Is Costing You Customers"
+          titleHighlight="Costing You Customers"
           description="I fix the root causes of slow load times, failing Core Web Vitals, and technical SEO issues that cost you rankings and revenue — measured before and after, not guessed at."
-          backgroundImage="/images/services-hero-bg.png"
+          backgroundImage="/images/services-website-performance-optimization-hero-bg.jpg"
           badges={["Core Web Vitals", "Real-user performance", "Not Lighthouse theater"]}
         />
 

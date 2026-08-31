@@ -211,10 +211,10 @@ export default function SmallBusinessWebsiteDesignPage() {
       <main className="w-full bg-black text-white">
       <PageHero
         label="Small Business Website Design"
-        title="A Website Built to Bring You Business"
-        titleHighlight="Bring You Business"
+        title="A Website That Actually Earns You Customers"
+        titleHighlight="Earns You Customers"
         description="Small businesses get one shot at looking credible online. I build professional, fast, custom websites for growing businesses — designed around how your customers actually decide to call you."
-        backgroundImage="/images/services-hero-bg.png"
+        backgroundImage="/images/services-small-business-website-design-hero-bg.jpg"
         badges={["Built by a senior engineer", "No templates", "You can update it yourself"]}
       />
 

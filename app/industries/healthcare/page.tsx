@@ -155,10 +155,10 @@ export default function HealthcareIndustryPage() {
 
       <PageHero
         label="Healthcare & Life Sciences"
-        title="Websites That Turn Patients Into Booked Appointments"
+        title="Turn Search Traffic Into Booked Appointments"
         titleHighlight="Booked Appointments"
         description="Healthcare searches happen on phones, in moments of need. Your website needs to be fast, accessible, and remove every obstacle between a patient finding you and scheduling a visit."
-        backgroundImage="/images/background-bld.png"
+        backgroundImage="/images/industries-healthcare-hero-bg.jpg"
         badges={["Patient acquisition", "WCAG 2.1 AA accessibility", "Local SEO"]}
       />
 
