@@ -42,6 +42,7 @@ export const metadata: Metadata = {
     images: ["/images/blacklabdev-og.png"],
   },
   verification: {
+    google: "hl_RnOMNw7iG5JxGY8yM8q13tPpcCTmOxLyqs3zc0_8",
     other: {
       "msvalidate.01": "95879F64A7D2D20863885285CF4B7268",
     },
