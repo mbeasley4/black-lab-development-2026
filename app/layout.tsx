@@ -41,6 +41,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: ["/images/blacklabdev-og.png"],
   },
+  verification: {
+    other: {
+      "msvalidate.01": "95879F64A7D2D20863885285CF4B7268",
+    },
+  },
 };
 
 // Drives the <meta name="theme-color"> tag — controls mobile browser chrome
