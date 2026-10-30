@@ -140,15 +140,15 @@ const deliverables = [
 const clients = [
   {
     name: "Whole30",
-    detail: "Large-scale Next.js + Sanity platform rebuild handling high-traffic consumer health content with measurable performance improvements.",
+    detail: "High-traffic WordPress platform with embedded React components serving 6,000+ daily users — SEO health rebuilt from 60% to 97% and infrastructure costs cut 25%.",
   },
   {
     name: "Enduir Cybersecurity",
     detail: "Technical credibility-first website for a cybersecurity company serving enterprise and government buyers.",
   },
   {
-    name: "Luma Financial Technologies",
-    detail: "Complex platform web presence for a fintech company with demanding performance and high-trust requirements.",
+    name: "Melink Solar",
+    detail: "Custom WordPress plugin and API integration work for a solar energy platform where reliability and technical precision come first.",
   },
 ];
 

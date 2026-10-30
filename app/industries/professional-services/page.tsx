@@ -139,8 +139,8 @@ const deliverables = [
 
 const clients = [
   {
-    name: "Luma Financial Technologies",
-    detail: "Complex B2B platform web presence for a financial technology company serving institutional clients with long sales cycles.",
+    name: "National Management Association",
+    detail: "Platform rebuild for a 100-year-old leadership development network — 7,700+ members, 29 chapters, and events, courses, and membership systems wired into one site.",
   },
   {
     name: "Enduir Cybersecurity",

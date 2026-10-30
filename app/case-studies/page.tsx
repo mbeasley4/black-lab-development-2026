@@ -42,7 +42,39 @@ export const metadata: Metadata = {
 
 // TODO: Migrate these into Sanity as caseStudy documents (type: "project")
 const projects = [
-   {
+  {
+    name: "City View Tavern",
+    platform: "WordPress",
+    logo: "/images/work/cityviewtavern-logo.png",
+    screenshot: "/images/work/cityviewtavern-screenshot.png",
+    summary:
+      "Built a custom WordPress block theme for a Mount Adams bar pouring drinks since 1875 — designed around the best skyline view in Cincinnati and engineered to win local search for hours, menu, and directions.",
+    details: [
+      "Custom full-site-editing block theme built from scratch",
+      "Local SEO with BarOrPub schema — hours, geo, menu, and reviews",
+      "Live EarthCam skyline feed embedded from the patio view",
+      "Photo gallery carousel and Yelp, Google, and TripAdvisor review hub",
+      "Persistent hours, address, and one-tap directions on every page",
+    ],
+    updated: true,
+  },
+  {
+    name: "National Management Association",
+    platform: "WordPress",
+    logo: "/images/work/nma-logo.png",
+    screenshot: "/images/work/nma-screenshot.png",
+    summary:
+      "Rebuilt the web platform for a 100-year-old leadership development network with 7,700+ members and 29 chapters — a custom WordPress theme and block library wired into the association's events, courses, and member systems.",
+    details: [
+      "Custom WordPress theme and library of custom Gutenberg blocks",
+      "GrowthZone events integration with registration and add-to-calendar",
+      "Custom course plugin surfacing the MindEdge on-demand catalog",
+      "Chapter finder, member portal access, and live event ticker",
+      "Conference live social feed and consent-managed cookie banner",
+    ],
+    updated: true,
+  },
+  {
     name: "Millennosphere",
     platform: "WordPress",
     logo: "/images/work/millennosphere-logo.png",
@@ -161,7 +193,7 @@ const projects = [
     logo: "/images/work/buzzworthy-logo.png",
     screenshot: "/images/work/buzzworthy-screenshot.png",
     summary:
-      "Designed and developed a dynamic news and storytelling hub for Seven Hills School, showcasing student achievements, faculty insights, and school events through a structured, engaging WordPress experience.",
+      "Designed and developed Buzzworthy, the standalone news and storytelling site for Seven Hills School — a separate build from the campus map below, showcasing student achievements, faculty insights, and school events.",
     details: [
       "Custom WordPress templates for news articles and editorial content",
       "Responsive, mobile-first layout for accessible reading across all devices",
@@ -249,15 +281,6 @@ const projects = [
       "SEO and site health optimization",
       "Ongoing development and support",
     ],
-  },
-  {
-    name: "Luma Financial Technologies",
-    platform: "WordPress",
-    logo: "/images/work/luma-logo.png",
-    screenshot: "/images/work/luma-screenshot.png",
-    summary:
-      "Engineering support for a fintech platform requiring reliability, scalability, and clean integration between systems.",
-    details: ["API integrations", "WordPress Plugin Development"],
   },
 ];
 
@@ -378,6 +401,7 @@ export default async function CaseStudiesPage() {
                     src={project.screenshot}
                     alt={`${project.name} screenshot`}
                     fill
+                    sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
                     className="object-cover object-top opacity-90 group-hover:scale-[1.03] transition-all duration-500"
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-neutral-950/85 via-neutral-950/20 to-transparent" />
@@ -396,7 +420,7 @@ export default async function CaseStudiesPage() {
                       />
                     </div>
                     <div className="flex items-center justify-between gap-2">
-                      <span className="text-[10px] font-semibold tracking-[0.18em] uppercase text-neutral-600">
+                      <span className="text-[10px] font-semibold tracking-[0.18em] uppercase text-neutral-400">
                         {project.name}
                       </span>
                       <span className="shrink-0 text-[9px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full border border-volt-500/20 bg-volt-500/5 text-volt-500/80">
@@ -415,8 +439,8 @@ export default async function CaseStudiesPage() {
                   </p>
                   <ul className="space-y-2 text-xs mt-auto border-t border-neutral-800/70 pt-4">
                     {project.details.map((item) => (
-                      <li key={item} className="flex items-center gap-2.5 text-neutral-400 group-hover:text-neutral-300 transition-colors duration-200">
-                        <span className="w-1.5 h-1.5 rounded-full bg-volt-500/60 shadow-[0_0_5px_rgba(227,245,68,0.5)] group-hover:shadow-[0_0_8px_rgba(227,245,68,0.8)] shrink-0 transition-all duration-300" />
+                      <li key={item} className="flex items-start gap-2.5 text-neutral-400 group-hover:text-neutral-300 transition-colors duration-200">
+                        <span className="mt-1.25 w-1.5 h-1.5 rounded-full bg-volt-500/60 shadow-[0_0_5px_rgba(227,245,68,0.5)] group-hover:shadow-[0_0_8px_rgba(227,245,68,0.8)] shrink-0 transition-all duration-300" />
                         {item}
                       </li>
                     ))}
