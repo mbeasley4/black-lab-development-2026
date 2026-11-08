@@ -5,7 +5,7 @@ import { test, expect } from '@playwright/test';
 test('has correct title and hero heading', async ({ page }) => {
   await page.goto('/');
   await expect(page).toHaveTitle(/Black Lab Dev/i);
-  await expect(page.getByRole('heading', { name: /Real Lessons from Real/i })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /Skip the Middlemen/i })).toBeVisible();
 });
 
 test('main navigation links are present', async ({ page }) => {

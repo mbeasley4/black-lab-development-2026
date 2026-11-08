@@ -1,22 +1,26 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resendApiKey = process.env.RESEND_API_KEY;
-const contactFrom = process.env.CONTACT_FROM_EMAIL;
-const contactTo = process.env.CONTACT_TO_EMAIL;
-
-if (!resendApiKey) throw new Error("Missing RESEND_API_KEY");
-if (!contactFrom) throw new Error("Missing CONTACT_FROM_EMAIL");
-if (!contactTo) throw new Error("Missing CONTACT_TO_EMAIL");
-
-/* ✅ Re-assign AFTER checks so TS knows these are strings */
-const RESEND_API_KEY: string = resendApiKey;
-const CONTACT_FROM: string = contactFrom;
-const CONTACT_TO: string = contactTo;
-
-const resend = new Resend(RESEND_API_KEY);
+// Env vars are read per request (not at module load) so `next build` doesn't
+// require email secrets — e.g. Vercel preview deployments without them.
+function getEmailConfig() {
+    const apiKey = process.env.RESEND_API_KEY;
+    const from = process.env.CONTACT_FROM_EMAIL;
+    const to = process.env.CONTACT_TO_EMAIL;
+    if (!apiKey || !from || !to) return null;
+    return { apiKey, from, to };
+}
 
 export async function POST(req: Request) {
+    const config = getEmailConfig();
+    if (!config) {
+        console.error("Contact error: missing RESEND_API_KEY, CONTACT_FROM_EMAIL, or CONTACT_TO_EMAIL");
+        return NextResponse.json(
+            { error: "Contact form is not configured" },
+            { status: 500 }
+        );
+    }
+
     try {
         const { name, email, message, turnstileToken } = await req.json();
 
@@ -47,9 +51,10 @@ export async function POST(req: Request) {
             );
         }
 
+        const resend = new Resend(config.apiKey);
         const { error } = await resend.emails.send({
-            from: CONTACT_FROM,
-            to: [CONTACT_TO], // ✅ now string[]
+            from: config.from,
+            to: [config.to],
             subject: `New Contact — ${name}`,
             headers: {
                 "Reply-To": email,

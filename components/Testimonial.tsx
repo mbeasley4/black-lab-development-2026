@@ -1,7 +1,16 @@
+import Image from "next/image";
+
 export default function Testimonial() {
   return (
-    <section className="w-full py-20 border-t border-slate-800/50 relative overflow-hidden">
-      <div className="absolute inset-0 bg-linear-to-b from-black to-slate-950" />
+    <section className="w-full py-28 border-t border-slate-800/50 relative overflow-hidden">
+      <Image
+        src="/images/home/testimonial-bg.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover object-center opacity-30 grayscale animate-ken-burns"
+      />
+      <div className="absolute inset-0 bg-linear-to-b from-black/90 via-black/70 to-slate-950/95" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-volt-500/4 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">

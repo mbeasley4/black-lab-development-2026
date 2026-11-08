@@ -1,6 +1,10 @@
+import Image from "next/image";
+
 const audiences = [
     {
         label: "Small & Growing Businesses",
+        image: "/images/home/audience-small-business.jpg",
+        alt: "Boutique retail shop with clothing on display",
         description: "A professional site that brings in calls, bookings, and quotes — not just exists.",
         icon: (
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -10,6 +14,8 @@ const audiences = [
     },
     {
         label: "Agencies & Strategy Firms",
+        image: "/images/home/audience-agency.jpg",
+        alt: "Agency team working together on laptops",
         description: "White-label build and SEO capacity under your brand. You keep the client.",
         icon: (
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -19,6 +25,8 @@ const audiences = [
     },
     {
         label: "Healthcare & Clinics",
+        image: "/images/home/audience-healthcare.jpg",
+        alt: "Bright, modern dental clinic treatment room",
         description: "Appointment bookings, patient acquisition, and local visibility.",
         icon: (
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -28,6 +36,8 @@ const audiences = [
     },
     {
         label: "Ecommerce & DTC",
+        image: "/images/home/audience-ecommerce.jpg",
+        alt: "Branded shopping bags on a dark background",
         description: "Higher AOV, faster pages, and conversion paths that close.",
         icon: (
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -57,17 +67,27 @@ export default function RevenueFramework() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                     {audiences.map((item) => (
                         <div
                             key={item.label}
-                            className="group flex items-start gap-5 p-7 rounded-xl border border-slate-800/60 bg-slate-900/40 hover:border-volt-500/30 hover:bg-volt-500/5 transition-all duration-300"
+                            className="group flex flex-col overflow-hidden rounded-2xl border border-slate-800/60 bg-slate-900/40 transition-all duration-500 hover:-translate-y-1.5 hover:border-volt-500/40 hover:shadow-xl hover:shadow-volt-500/10"
                         >
-                            <div className="shrink-0 w-10 h-10 rounded-lg bg-volt-500/10 border border-volt-500/20 flex items-center justify-center text-volt-400 group-hover:bg-volt-500/20 group-hover:border-volt-500/40 transition-all duration-300">
-                                {item.icon}
+                            <div className="relative h-44 overflow-hidden">
+                                <Image
+                                    src={item.image}
+                                    alt={item.alt}
+                                    fill
+                                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                                    className="object-cover grayscale-[60%] transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0"
+                                />
+                                <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/30 to-transparent" />
+                                <div className="absolute bottom-4 left-5 w-10 h-10 rounded-lg bg-black/60 backdrop-blur-md border border-volt-500/30 flex items-center justify-center text-volt-400 group-hover:bg-volt-500 group-hover:text-black transition-all duration-300">
+                                    {item.icon}
+                                </div>
                             </div>
-                            <div>
-                                <h3 className="text-base font-semibold text-white mb-1 group-hover:text-volt-400 transition-colors duration-200">
+                            <div className="flex-1 p-6">
+                                <h3 className="text-base font-semibold text-white mb-1.5 group-hover:text-volt-400 transition-colors duration-200">
                                     {item.label}
                                 </h3>
                                 <p className="text-sm text-slate-500 leading-relaxed group-hover:text-slate-400 transition-colors duration-200">
