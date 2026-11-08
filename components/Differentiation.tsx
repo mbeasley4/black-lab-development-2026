@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const failPoints = [
     "They look good but don't convert",
     "They rank poorly because of weak technical foundations",
@@ -24,6 +26,27 @@ export default function Differentiation() {
                            When Your Website<br/>
                            <span className="text-volt-500">Has to Perform</span>
                         </h2>
+
+                        <div className="group relative mt-10 aspect-[3/2] w-full overflow-hidden rounded-2xl border border-slate-800/60">
+                            <Image
+                                src="/images/home/performance-dashboard.jpg"
+                                alt="Website analytics dashboard showing load time and bounce rate"
+                                fill
+                                sizes="(min-width: 1024px) 45vw, 100vw"
+                                className="object-cover grayscale-[40%] transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                            />
+                            <div className="absolute inset-0 bg-linear-to-t from-black via-black/30 to-transparent" />
+                            <div className="absolute inset-0 bg-volt-500/5 mix-blend-overlay" />
+                            <div className="absolute bottom-5 left-5 right-5 flex items-center gap-3">
+                                <span className="relative flex h-2.5 w-2.5">
+                                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-volt-500 opacity-75" />
+                                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-volt-500" />
+                                </span>
+                                <p className="text-sm font-medium text-slate-200">
+                                    Speed, structure, and conversion — measured, not guessed.
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Right: problem cards */}

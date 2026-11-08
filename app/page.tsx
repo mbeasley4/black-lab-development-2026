@@ -3,6 +3,7 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import HomepageHero from "@/components/HomepageHero";
 import RevenueFramework from "@/components/RevenueFramework";
 import Differentiation from "@/components/Differentiation";
+import WhoIWorkWith from "@/components/WhoIWorkWith";
 import CoreServices from "@/components/CoreServices";
 import Results from "@/components/Results";
 import Process from "@/components/Process";
@@ -12,6 +13,7 @@ import CallToAction from "@/components/CallToAction";
 import FounderStrip from "@/components/FounderStrip";
 import Testimonial from "@/components/Testimonial";
 import FaqSection from "@/components/FaqSection";
+import ArticlesBlock from "@/components/ArticlesBlock";
 import JsonLd from "@/components/JsonLd";
 
 export const revalidate = 60;
@@ -109,12 +111,14 @@ export default function Home() {
         <HomepageHero />
         <RevenueFramework />
         <Differentiation />
+        <WhoIWorkWith />
         <CoreServices />
         <Results />
         <Testimonial />
         <Process />
         <FounderStrip />
         <LabFramework />
+        <ArticlesBlock />
 
         <FaqSection
           faqs={faqSchema.mainEntity.map((faq) => ({ question: faq.name, answer: faq.acceptedAnswer.text }))}

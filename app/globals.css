@@ -315,3 +315,64 @@ article.prose {
       rgba(0, 0, 0, 1) 70%,
       rgba(0, 0, 0, 0));
 }
+/* ─── Homepage "pop" effects ─────────────────────────────────────────── */
+
+/* Slow Ken Burns drift for full-bleed photo backgrounds */
+@keyframes ken-burns {
+  0% { transform: scale(1.08) translate3d(0, 0, 0); }
+  100% { transform: scale(1.18) translate3d(-2%, -1.5%, 0); }
+}
+.animate-ken-burns {
+  animation: ken-burns 28s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Volt shimmer sweeping across accent text */
+@keyframes volt-shimmer {
+  0% { background-position: 200% 50%; }
+  100% { background-position: -200% 50%; }
+}
+.text-volt-shimmer {
+  background-image: linear-gradient(110deg,
+      #E3F544 0%, #E3F544 40%, #fbfde8 50%, #E3F544 60%, #E3F544 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: volt-shimmer 5s linear infinite;
+  filter: drop-shadow(0 0 28px rgba(227, 245, 68, 0.35));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-ken-burns,
+  .text-volt-shimmer {
+    animation: none;
+  }
+}
+
+/* Gentle float for hero result chips */
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float {
+  animation: float-y 5s ease-in-out infinite;
+}
+
+/* Volt scan line sweeping top → bottom of the hero */
+@keyframes scan-beam {
+  0% { transform: translateY(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(var(--scan-distance, 700px)); opacity: 0; }
+}
+.animate-scan-beam {
+  animation: scan-beam 6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-scan-beam {
+    animation: none;
+  }
+}

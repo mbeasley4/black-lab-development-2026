@@ -1,15 +1,19 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function CallToAction() {
     return (
         <section className="relative overflow-hidden w-full py-28 border-t border-volt-500/15">
             {/* Background layers */}
             <div className="absolute inset-0">
-                <div
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: "url('/images/close-bg.png')" }}
+                <Image
+                    src="/images/home/cta-laptop.jpg"
+                    alt=""
+                    fill
+                    sizes="100vw"
+                    className="object-cover object-center opacity-40 animate-ken-burns"
                 />
-                <div className="absolute inset-0 bg-linear-to-br from-[#0b0b0c] via-[#111214] to-[#1f2328]" />
+                <div className="absolute inset-0 bg-linear-to-br from-[#0b0b0c]/95 via-[#111214]/80 to-[#1f2328]/70" />
                 <div className="absolute inset-0 bg-linear-to-tr from-volt-500/6 via-transparent to-transparent" />
             </div>
 

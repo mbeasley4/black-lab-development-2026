@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const advantages = [
     {
         label: "No account managers",
@@ -24,7 +26,7 @@ export default function Process() {
             <div className="absolute bottom-0 left-1/3 w-125 h-125 bg-volt-500/4 rounded-full blur-3xl pointer-events-none" />
 
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
-                <div className="mb-20 grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
+                <div className="mb-20 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                     <div>
                         <span className="inline-block mb-5 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
                             The Difference
@@ -33,7 +35,20 @@ export default function Process() {
                             You Work Directly With the <span className="text-volt-500">Person Doing the Work</span>
                         </h2>
                     </div>
-                    <div className="space-y-3">
+                    <div className="space-y-6">
+                        <div className="group relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-slate-800/60">
+                            <Image
+                                src="/images/home/working-directly.jpg"
+                                alt="Developer walking a client through code on a laptop"
+                                fill
+                                sizes="(min-width: 1024px) 45vw, 100vw"
+                                className="object-cover grayscale-[40%] transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                            />
+                            <div className="absolute inset-0 bg-linear-to-tr from-black/70 via-black/10 to-transparent" />
+                            <span className="absolute top-4 left-4 rounded-full bg-black/60 backdrop-blur-md border border-volt-500/30 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-volt-400">
+                                Direct line · No relay
+                            </span>
+                        </div>
                         <p className="text-slate-400 text-lg leading-relaxed">
                             No layers. No handoffs. No disconnect between strategy and execution.
                         </p>
