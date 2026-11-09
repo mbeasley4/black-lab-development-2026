@@ -11,6 +11,17 @@ function getEmailConfig() {
     return { apiKey, from, to };
 }
 
+function escapeHtml(value: string) {
+    return value
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+}
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export async function POST(req: Request) {
     const config = getEmailConfig();
     if (!config) {
@@ -22,11 +33,22 @@ export async function POST(req: Request) {
     }
 
     try {
-        const { name, email, message, turnstileToken } = await req.json();
+        const body = await req.json().catch(() => null);
+        const name = typeof body?.name === "string" ? body.name.trim() : "";
+        const email = typeof body?.email === "string" ? body.email.trim() : "";
+        const message = typeof body?.message === "string" ? body.message.trim() : "";
+        const turnstileToken = body?.turnstileToken;
 
         if (!name || !email || !message) {
             return NextResponse.json(
                 { error: "Missing fields" },
+                { status: 400 }
+            );
+        }
+
+        if (!EMAIL_RE.test(email) || name.length > 200 || message.length > 10000) {
+            return NextResponse.json(
+                { error: "Invalid fields" },
                 { status: 400 }
             );
         }
@@ -55,14 +77,12 @@ export async function POST(req: Request) {
         const { error } = await resend.emails.send({
             from: config.from,
             to: [config.to],
-            subject: `New Contact — ${name}`,
-            headers: {
-                "Reply-To": email,
-            },
+            subject: `New Contact — ${name.replace(/[\r\n]+/g, " ")}`,
+            replyTo: email,
             html: `
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p>${message.replace(/\n/g, "<br />")}</p>
+        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+        <p>${escapeHtml(message).replace(/\n/g, "<br />")}</p>
       `,
         });
 
