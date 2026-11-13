@@ -20,9 +20,10 @@ export default function FounderStrip() {
           <div className="flex justify-center lg:justify-start">
             <div className="relative w-56 h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-2 border-volt-500/25 shadow-[0_0_40px_rgba(227,245,68,0.12)]">
               <Image
-                src="/images/michael-beasley.png"
+                src="/images/michael-beasley.webp"
                 alt="Michael Beasley — Founder, Black Lab Development"
                 fill
+                sizes="(min-width: 1024px) 256px, 224px"
                 className="object-cover object-top"
               />
             </div>

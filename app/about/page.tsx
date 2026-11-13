@@ -48,7 +48,7 @@ const personSchema = {
     url: "https://blacklabdev.com",
   },
   url: "https://blacklabdev.com/about",
-  image: "https://blacklabdev.com/images/michael-beasley.png",
+  image: "https://blacklabdev.com/images/michael-beasley.webp",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Cincinnati",
@@ -239,9 +239,10 @@ export default function AboutPage() {
                 <div className="absolute -bottom-2 -right-2 w-8 h-8 border-b-2 border-r-2 border-volt-500/50 rounded-br-lg pointer-events-none" />
                 <div className="relative w-full h-full rounded-2xl overflow-hidden border border-volt-500/25 shadow-[0_0_40px_rgba(227,245,68,0.12)]">
                   <Image
-                    src="/images/michael-beasley.png"
+                    src="/images/michael-beasley.webp"
                     alt="Michael Beasley, senior web developer and founder of Black Lab Development, based in Cincinnati, Ohio"
                     fill
+                    sizes="(min-width: 768px) 224px, 192px"
                     className="object-cover object-top"
                     priority
                   />

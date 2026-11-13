@@ -15,9 +15,10 @@ export default function FounderByline() {
         <div className="mx-auto max-w-2xl flex flex-col sm:flex-row items-center gap-5 rounded-xl border border-volt-500/15 bg-[#0b0b0c]/60 px-6 py-5 text-center sm:text-left">
           <div className="relative w-16 h-16 rounded-full overflow-hidden border border-volt-500/25 shrink-0">
             <Image
-              src="/images/michael-beasley.png"
+              src="/images/michael-beasley.webp"
               alt="Michael Beasley — Founder, Black Lab Development"
               fill
+              sizes="64px"
               className="object-cover object-top"
             />
           </div>
