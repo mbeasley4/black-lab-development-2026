@@ -315,7 +315,7 @@ export default async function ArticlePage({
                     <div className="flex items-start gap-6">
                         <div className="shrink-0 w-14 h-14 rounded-full overflow-hidden border border-slate-700">
                             <img
-                                src="/images/michael-beasley.png"
+                                src="/images/michael-beasley-sm.webp"
                                 alt="Michael Beasley"
                                 className="w-full h-full object-cover object-top"
                                 width={56}
