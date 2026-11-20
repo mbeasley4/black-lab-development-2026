@@ -7,6 +7,7 @@ import FaqSection from "@/components/FaqSection";
 import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
+import SelectedWork from "@/components/SelectedWork";
 
 export const metadata: Metadata = {
   title: "Education & EdTech Website Design",
@@ -214,6 +215,8 @@ export default function EducationIndustryPage() {
           </div>
         </div>
       </section>
+
+      <SelectedWork slugs={["buzzworthy-seven-hills-news-site", "zoo-printables-ai-seo-aeo-geo", "national-management-association-wordpress-platform"]} />
 
       <FaqSection faqs={faqs} headingId="education-faq" />
 

@@ -8,6 +8,7 @@ import JsonLd from "@/components/JsonLd";
 import FaqSection from "@/components/FaqSection";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
+import SelectedWork from "@/components/SelectedWork";
 
 export const metadata: Metadata = {
   title: "White-Label Web Development for Agencies",
@@ -419,6 +420,8 @@ export default function PartnersPage() {
       </section>
 
       <LabFramework />
+
+      <SelectedWork slugs={["global-environmental-products-wordpress-rebuild", "national-management-association-wordpress-platform", "millennosphere-wordpress-editorial-theme"]} />
 
       <FaqSection
         headingId="partners-faq-heading"

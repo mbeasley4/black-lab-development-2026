@@ -6,6 +6,7 @@ import PageClose from "@/components/PageClose";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import JsonLd from "@/components/JsonLd";
 import FounderByline from "@/components/FounderByline";
+import SelectedWork from "@/components/SelectedWork";
 
 export const metadata: Metadata = {
   title: "Web Design & Development by Industry",
@@ -286,6 +287,8 @@ export default function IndustriesPage() {
           </div>
         </div>
       </section>
+
+      <SelectedWork />
 
       <FounderByline />
 

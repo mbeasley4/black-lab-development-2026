@@ -6,6 +6,7 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import JsonLd from "@/components/JsonLd";
 import FaqSection from "@/components/FaqSection";
 import FounderByline from "@/components/FounderByline";
+import SelectedWork from "@/components/SelectedWork";
 
 export const metadata: Metadata = {
   title: "Custom WordPress Development",
@@ -431,6 +432,8 @@ export default function WordPressDevelopmentPage() {
           </div>
         </div>
       </section>
+
+      <SelectedWork slugs={["city-view-tavern-wordpress-block-theme", "global-environmental-products-wordpress-rebuild", "globe-iron-roofing-wordpress-theme"]} />
 
       <FaqSection
        

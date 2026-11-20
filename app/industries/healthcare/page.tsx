@@ -7,6 +7,7 @@ import FaqSection from "@/components/FaqSection";
 import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
+import SelectedWork from "@/components/SelectedWork";
 
 export const metadata: Metadata = {
   title: "Healthcare & Medical Website Design",
@@ -225,6 +226,8 @@ export default function HealthcareIndustryPage() {
           </div>
         </div>
       </section>
+
+      <SelectedWork slugs={["dexafit-cincinnati-squarespace-seo", "zero-gravity-performance-rebuild", "mona-dermatology-wordpress-woocommerce"]} />
 
       <FaqSection faqs={faqs} headingId="healthcare-faq" />
 

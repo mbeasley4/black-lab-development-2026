@@ -7,6 +7,7 @@ import JsonLd from "@/components/JsonLd";
 import FaqSection from "@/components/FaqSection";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
+import SelectedWork from "@/components/SelectedWork";
 
 export const metadata: Metadata = {
   title: "How White-Label Web Development Works",
@@ -329,6 +330,8 @@ export default function WhiteLabelWebDevelopmentPage() {
           </div>
         </div>
       </section>
+
+      <SelectedWork slugs={["global-environmental-products-wordpress-rebuild", "legacy-financial-wordpress-block-theme", "bridge-partners-wordpress-block-theme"]} />
 
       <FaqSection
         headingId="white-label-faq-heading"

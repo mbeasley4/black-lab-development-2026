@@ -7,6 +7,7 @@ import JsonLd from "@/components/JsonLd";
 import FaqSection from "@/components/FaqSection";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
+import SelectedWork from "@/components/SelectedWork";
 
 export const metadata: Metadata = {
   title: "Technical SEO Fulfillment for Agencies",
@@ -313,6 +314,8 @@ export default function SeoFulfillmentPage() {
           </div>
         </div>
       </section>
+
+      <SelectedWork slugs={["dexafit-cincinnati-squarespace-seo", "city-view-tavern-wordpress-block-theme", "global-environmental-products-wordpress-rebuild"]} />
 
       <FaqSection
         headingId="seo-fulfillment-faq-heading"

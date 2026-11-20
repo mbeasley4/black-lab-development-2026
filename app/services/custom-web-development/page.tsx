@@ -9,6 +9,7 @@ import JsonLd from "@/components/JsonLd";
 import FaqSection from "@/components/FaqSection";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
+import SelectedWork from "@/components/SelectedWork";
 
 export const metadata: Metadata = {
   title: "Custom Web Development: Next.js & WordPress",
@@ -423,6 +424,8 @@ export default function CustomWebDevelopmentPage() {
             </div>
           </div>
         </section>
+
+        <SelectedWork slugs={["whole30-laravel-shopify-slicktext-sms", "zoo-printables-ai-seo-aeo-geo", "blum-media-group-nextjs-website"]} />
 
         <FaqSection
           faqs={faqSchema.mainEntity.map((faq) => ({ question: faq.name, answer: faq.acceptedAnswer.text }))}

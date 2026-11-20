@@ -6,6 +6,7 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import JsonLd from "@/components/JsonLd";
 import FaqSection from "@/components/FaqSection";
 import FounderByline from "@/components/FounderByline";
+import SelectedWork from "@/components/SelectedWork";
 
 export const metadata: Metadata = {
   title: "Custom Drupal Development",
@@ -445,6 +446,8 @@ export default function DrupalDevelopmentPage() {
           </div>
         </div>
       </section>
+
+      <SelectedWork slugs={["enduir-cybersecurity-engineering", "global-environmental-products-wordpress-rebuild", "national-management-association-wordpress-platform"]} />
 
       <FaqSection
         faqs={faqs.map((faq) => ({ question: faq.q, answer: faq.a }))}
