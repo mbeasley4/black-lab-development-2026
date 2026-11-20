@@ -138,9 +138,8 @@ const deliverables = [
 ];
 
 const clients = [
-  { name: "Haag-Streit USA", detail: "WordPress platform for a medical device manufacturer in regulated environments." },
+  { name: "Global Environmental Products", detail: "Custom WordPress rebuild for an industrial absorbents converter — spec-table product catalog, add-to-quote RFQ workflow, and 57 SEO-safe redirects." },
   { name: "FAZTEK", detail: "Engineering support for an industrial automation platform requiring reliability and systems integration." },
-  { name: "Plastech Molding", detail: "Custom WordPress theme for a precision plastics manufacturer — responsive, SEO-optimized, lead-generating." },
   { name: "Melink Solar", detail: "Custom plugin and API integration work for a solar energy platform focused on technical precision." },
 ];
 

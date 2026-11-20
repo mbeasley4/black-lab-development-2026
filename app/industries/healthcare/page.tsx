@@ -143,8 +143,8 @@ const clients = [
     detail: "312% increase in appointment bookings after rebuilding their patient-facing website with a friction-free booking flow and local SEO optimization.",
   },
   {
-    name: "Haag-Streit USA",
-    detail: "WordPress platform for a global medical device manufacturer operating in regulated environments.",
+    name: "Zero Gravity of Northern Kentucky",
+    detail: "Ongoing WordPress engineering for a medical spa — WooCommerce replaced with a dedicated booking platform and page speed rebuilt from the ground up.",
   },
 ];
 

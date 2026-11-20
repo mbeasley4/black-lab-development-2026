@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import PageClose from "@/components/PageClose";
 import JsonLd from "@/components/JsonLd";
+import WorkShowcase from "@/components/WorkShowcase";
+import { projects } from "@/data/projects";
 import { client } from "@/sanity/lib/client";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
@@ -17,7 +18,8 @@ const CASE_STUDIES_QUERY = `*[_type == "caseStudy"] | order(featured desc, publi
   excerpt,
   mainImage,
   featured,
-  metrics
+  metrics,
+  kind
 }`;
 
 export const metadata: Metadata = {
@@ -40,252 +42,15 @@ export const metadata: Metadata = {
   },
 };
 
-// TODO: Migrate these into Sanity as caseStudy documents (type: "project")
-const projects = [
-  {
-    name: "City View Tavern",
-    platform: "WordPress",
-    logo: "/images/work/cityviewtavern-logo.png",
-    screenshot: "/images/work/cityviewtavern-screenshot.png",
-    summary:
-      "Built a custom WordPress block theme for a Mount Adams bar pouring drinks since 1875 — designed around the best skyline view in Cincinnati and engineered to win local search for hours, menu, and directions.",
-    details: [
-      "Custom full-site-editing block theme built from scratch",
-      "Local SEO with BarOrPub schema — hours, geo, menu, and reviews",
-      "Live EarthCam skyline feed embedded from the patio view",
-      "Photo gallery carousel and Yelp, Google, and TripAdvisor review hub",
-      "Persistent hours, address, and one-tap directions on every page",
-    ],
-    updated: true,
-  },
-  {
-    name: "National Management Association",
-    platform: "WordPress",
-    logo: "/images/work/nma-logo.png",
-    screenshot: "/images/work/nma-screenshot.png",
-    summary:
-      "Rebuilt the web platform for a 100-year-old leadership development network with 7,700+ members and 29 chapters — a custom WordPress theme and block library wired into the association's events, courses, and member systems.",
-    details: [
-      "Custom WordPress theme and library of custom Gutenberg blocks",
-      "GrowthZone events integration with registration and add-to-calendar",
-      "Custom course plugin surfacing the MindEdge on-demand catalog",
-      "Chapter finder, member portal access, and live event ticker",
-      "Conference live social feed and consent-managed cookie banner",
-    ],
-    updated: true,
-  },
-  {
-    name: "Millennosphere",
-    platform: "WordPress",
-    logo: "/images/work/millennosphere-logo.png",
-    screenshot: "/images/work/millennosphere-screenshot.png",
-    summary:
-      "Built a custom WordPress theme and custom Gutenberg blocks from scratch for a millennial culture and lifestyle publication — editorial layouts designed for a distinct voice, not bent out of a stock theme.",
-    details: [
-      "Custom WordPress theme built from scratch",
-      "Custom Gutenberg blocks for editorial content",
-      "Category-driven content architecture across multiple verticals",
-      "Fully responsive, brand-specific design system",
-    ],
-  },
-  {
-    name: "Globe Iron Roofing",
-    platform: "WordPress",
-    logo: "/images/work/globeironroofing-logo.png",
-    screenshot: "/images/work/globeironroofing-screenshot.png",
-    summary:
-      "Built a custom WordPress theme for the Gutenberg block editor from the ground up — engineered for technical SEO, AEO, and GEO discoverability alongside top-tier page speed performance.",
-    details: [
-      "Custom WordPress theme built for the Gutenberg block editor",
-      "Technical SEO, AEO, and GEO architecture from day one",
-      "Page speed and Core Web Vitals optimization",
-      "Fully responsive, editor-friendly block layouts",
-    ],
-  },
-  {
-    name: "Zero Gravity of Northern Kentucky",
-    platform: "WordPress",
-    logo: "/images/work/zerogravity-logo.png",
-    screenshot: "/images/work/zerogravity-screenshot.png",
-    summary:
-      "Ongoing WordPress engineering for Zero Gravity NKY, a Northern Kentucky medical spa — WooCommerce ripped out in favor of the dedicated booking platform, booking links generalized, and page speed rebuilt from the ground up.",
-    details: [
-      "WooCommerce removed — booking handled through the dedicated platform, not a bolted-on store",
-      "Booking links generalized for consistent, maintainable linking",
-      "Significant page speed and Core Web Vitals improvements",
-      "Custom WordPress theme built for the Gutenberg block editor",
-    ],
-    updated: true,
-  },
-  {
-    name: "Rev & Rinse Auto Detailing",
-    platform: "Custom Next.js",
-    logo: "/images/work/revandrinse-logo.png",
-    screenshot: "/images/work/revandrinse-screenshot.png",
-    summary:
-      "Brochure site for a local auto detailing business — built with Next.js and Sanity.io CMS for fast performance and easy content management.",
-    details: [
-      "Next.js application development",
-      "Sanity.io CMS integration",
-      "Performance and SEO optimization",
-      "Responsive UI and component-based architecture",
-    ],
-  },
-  {
-    name: "Zoo Printables AI",
-    platform: "Custom Next.js",
-    logo: "/images/work/zooprintablesai-logo.png",
-    screenshot: "/images/work/zooprintablesai-screenshot.png",
-    summary:
-      "Built a free wildlife education platform from the ground up with SEO, AEO, and GEO architecture baked in — clean crawlable URLs, fact-verified content structured for direct AI-answer extraction, and explicit crawler access for GPTBot, ClaudeBot, and PerplexityBot.",
-    details: [
-      "Next.js build with 30+ fact-verified animal landing pages",
-      "AEO content structuring for direct-answer extraction",
-      "GEO: explicit AI crawler permissions and a dynamic /llms.txt content index",
-      "Sanity.io CMS integration for the blog",
-    ],
-  },
-  {
-    name: "The Shortening Shuttle",
-    platform: "Shopify",
-    logo: "/images/work/shortening-shuttle-logo.png",
-    screenshot: "/images/work/shortening-shuttle-screenshot.png",
-    summary:
-      "Built a custom Shopify storefront for a specialty food brand using Liquid templating and Tailwind CSS, featuring a dynamic oil savings calculator to drive customer engagement and conversions.",
-    details: [
-      "Custom Shopify theme development with Liquid",
-      "Tailwind CSS styling and responsive layout",
-      "Interactive oil savings calculator built in JavaScript",
-      "Product page and collection template customization",
-      "Brand-aligned UI with performance optimization",
-    ],
-  },
-  {
-    name: "Blum Media Group",
-    platform: "Custom Next.js",
-    logo: "/images/work/blum-logo.png",
-    screenshot: "/images/work/blum-screenshot.png",
-    summary:
-      "Designed and developed a modern, high-performance marketing website using Next.js and Vercel for fast load times, scalability, and streamlined content delivery.",
-    details: [
-      "Next.js application development",
-      "Vercel hosting and deployment pipeline",
-      "Performance and SEO optimization",
-      "Responsive UI and component-based architecture",
-    ],
-  },
-  {
-    name: "Mona Dermatology",
-    platform: "WordPress",
-    logo: "/images/work/mona-logo.png",
-    screenshot: "/images/work/mona-screenshot.png",
-    summary:
-      "Ongoing WordPress engineering and WooCommerce support to maintain a reliable, high-performing patient and product experience.",
-    details: [
-      "WordPress maintenance and feature development",
-      "WooCommerce configuration and support",
-      "Performance, security, and reliability improvements",
-    ],
-  },
-  {
-    name: "Buzzworthy",
-    platform: "WordPress",
-    logo: "/images/work/buzzworthy-logo.png",
-    screenshot: "/images/work/buzzworthy-screenshot.png",
-    summary:
-      "Designed and developed Buzzworthy, the standalone news and storytelling site for Seven Hills School — a separate build from the campus map below, showcasing student achievements, faculty insights, and school events.",
-    details: [
-      "Custom WordPress templates for news articles and editorial content",
-      "Responsive, mobile-first layout for accessible reading across all devices",
-      "Optimized performance and usability to highlight ongoing student achievements",
-    ],
-  },
-  {
-    name: "Seven Hills School",
-    platform: "WordPress",
-    logo: "/images/work/7hills-logo-v2.png",
-    screenshot: "/images/work/7hills-screenshot.jpg",
-    summary:
-      "Designed and built a custom interactive campus map plugin for WordPress, delivering an intuitive user experience backed by performant PHP and JavaScript architecture.",
-    details: [
-      "Custom WordPress plugin development",
-      "Interactive map UI built with JavaScript",
-      "Dynamic data management via WordPress admin",
-      "Performance-optimized PHP backend integration",
-    ],
-  },
-  {
-    name: "Frisch's Big Boy",
-    platform: "WordPress",
-    logo: "/images/work/frischs-logo.png",
-    screenshot: "/images/work/frischs-screenshot.jpg",
-    summary:
-      "Modernization and long-term support of a multi-location restaurant platform with legacy constraints and ongoing operational needs.",
-    details: [
-      "Custom WordPress development",
-      "Location & content management systems",
-      "Performance and reliability improvements",
-      "Ongoing platform support",
-    ],
-  },
-  {
-    name: "Haag-Streit USA",
-    platform: "WordPress",
-    logo: "/images/work/haag-streit-logo.png",
-    screenshot: "/images/work/haag-streit-screenshot.jpg",
-    summary:
-      "Web platform and marketing automation support for a medical device manufacturer operating in regulated environments.",
-    details: [
-      "WordPress platform",
-      "CRM & marketing automation integrations",
-      "SEO and performance improvements",
-      "Long-term technical stewardship",
-    ],
-  },
-  {
-    name: "Enduir Cybersecurity",
-    platform: "Drupal",
-    logo: "/images/work/enduir-logo.png",
-    screenshot: "/images/work/enduir-screenshot.jpg",
-    summary:
-      "Engineering support for a cybersecurity firm requiring reliability, scalability, and clean integration between systems.",
-    details: [
-      "Drupal 11 development",
-      "Performance optimization",
-      "Technical leadership and execution",
-    ],
-  },
-  {
-    name: "Melink Solar",
-    platform: "WordPress",
-    logo: "/images/work/melink-logo.png",
-    screenshot: "/images/work/melink-screenshot.jpg",
-    summary:
-      "Custom plugin and API integration work for a solar energy platform focused on reliability and technical precision.",
-    details: [
-      "Custom WordPress Plugin",
-      "API Integration",
-      "Technical leadership and execution",
-    ],
-  },
-  {
-    name: "Plastech Molding",
-    platform: "WordPress",
-    logo: "/images/work/plastechmold-logo.png",
-    screenshot: "/images/work/plastechmold-screenshot.png",
-    summary:
-      "Built and maintained a custom WordPress theme delivering a responsive, search-optimized website to support manufacturing brand visibility and lead generation.",
-    details: [
-      "Custom WordPress theme development",
-      "Responsive design implementation",
-      "SEO and site health optimization",
-      "Ongoing development and support",
-    ],
-  },
-];
-
 export default async function CaseStudiesPage() {
-  const caseStudies = await client.fetch(CASE_STUDIES_QUERY);
+  const allStudies = await client.fetch(CASE_STUDIES_QUERY);
+  // "project" docs are detail pages for the portfolio cards above; only
+  // metrics-led case studies go in the "More Case Studies" grid.
+  const caseStudies = allStudies.filter((study: { kind?: string }) => study.kind !== "project");
+  // A card links to its detail page only once that page is published.
+  const publishedSlugs: string[] = allStudies
+    .map((study: { slug?: { current?: string } }) => study.slug?.current)
+    .filter(Boolean);
 
   // CollectionPage + ItemList exposes the case-study set as a structured,
   // ordered list for rich results and AI answer engines.
@@ -300,7 +65,7 @@ export default async function CaseStudiesPage() {
     publisher: { "@type": "Organization", "@id": "https://blacklabdev.com/#business" },
     mainEntity: {
       "@type": "ItemList",
-      itemListElement: caseStudies.map((study: any, i: number) => ({
+      itemListElement: allStudies.map((study: any, i: number) => ({
         "@type": "ListItem",
         position: i + 1,
         url: `https://blacklabdev.com/case-studies/${study.slug?.current}`,
@@ -388,67 +153,7 @@ export default async function CaseStudiesPage() {
             <div className="mt-6 h-px w-64 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-            {projects.map((project) => (
-              <div
-                key={project.name}
-                id={project.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}
-                className="group flex flex-col rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-300 hover:border-volt-500/40 hover:shadow-[0_0_50px_rgba(227,245,68,0.08)] scroll-mt-28"
-              >
-                <div className="h-0.5 bg-linear-to-r from-volt-500/0 via-volt-500/15 to-volt-500/0 group-hover:from-volt-500/40 group-hover:via-volt-500/80 group-hover:to-volt-500/40 transition-all duration-500" />
-                <div className="relative h-44 w-full overflow-hidden">
-                  <Image
-                    src={project.screenshot}
-                    alt={`${project.name} screenshot`}
-                    fill
-                    sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
-                    className="object-cover object-top opacity-90 group-hover:scale-[1.03] transition-all duration-500"
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-neutral-950/85 via-neutral-950/20 to-transparent" />
-                  <div className="absolute inset-0 group-hover:bg-volt-950/5 transition-all duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 h-12 bg-linear-to-t from-neutral-950 to-transparent" />
-                </div>
-                <div className="p-5 flex flex-col grow">
-                  <div className="mb-4 flex flex-col gap-3">
-                    <div className="h-7 flex items-center">
-                      <Image
-                        src={project.logo}
-                        alt={`${project.name} logo`}
-                        height={20}
-                        width={110}
-                        className="object-contain object-left opacity-75 group-hover:opacity-100 transition-opacity duration-300"
-                      />
-                    </div>
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="text-[10px] font-semibold tracking-[0.18em] uppercase text-neutral-400">
-                        {project.name}
-                      </span>
-                      <span className="shrink-0 text-[9px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full border border-volt-500/20 bg-volt-500/5 text-volt-500/80">
-                        {project.platform}
-                      </span>
-                    </div>
-                    {"updated" in project && project.updated && (
-                      <span className="inline-flex w-fit items-center gap-1.5 text-[9px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full border border-volt-500/30 bg-volt-500/10 text-volt-400">
-                        <span className="w-1.5 h-1.5 rounded-full bg-volt-400 animate-pulse" />
-                        Recently Updated
-                      </span>
-                    )}
-                  </div>
-                  <p className="text-neutral-300 text-sm leading-relaxed mb-5 grow">
-                    {project.summary}
-                  </p>
-                  <ul className="space-y-2 text-xs mt-auto border-t border-neutral-800/70 pt-4">
-                    {project.details.map((item) => (
-                      <li key={item} className="flex items-start gap-2.5 text-neutral-400 group-hover:text-neutral-300 transition-colors duration-200">
-                        <span className="mt-1.25 w-1.5 h-1.5 rounded-full bg-volt-500/60 shadow-[0_0_5px_rgba(227,245,68,0.5)] group-hover:shadow-[0_0_8px_rgba(227,245,68,0.8)] shrink-0 transition-all duration-300" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
+          <WorkShowcase projects={projects} linkedSlugs={publishedSlugs} />
         </div>
       </section>
 

@@ -13,8 +13,33 @@ export const caseStudyType = defineType({
       type: 'slug',
       options: {source: 'title'},
     }),
+    defineField({
+      name: 'kind',
+      title: 'Kind',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Case study (metrics-led, listed under "More Case Studies")', value: 'caseStudy'},
+          {title: 'Project (detail page for a portfolio card)', value: 'project'},
+        ],
+        layout: 'radio',
+      },
+      initialValue: 'caseStudy',
+    }),
     defineField({name: 'clientName', title: 'Client Name', type: 'string'}),
     defineField({name: 'industry', title: 'Industry', type: 'string'}),
+    defineField({
+      name: 'platform',
+      title: 'Platform',
+      type: 'string',
+      description: 'e.g. WordPress, Shopify, Custom Next.js',
+    }),
+    defineField({
+      name: 'websiteUrl',
+      title: 'Live Website URL',
+      type: 'url',
+      description: 'Shown in the browser frame and as a "Visit site" link.',
+    }),
     defineField({
       name: 'excerpt',
       title: 'Excerpt',
@@ -42,6 +67,28 @@ export const caseStudyType = defineType({
       options: {hotspot: false},
       fields: [defineField({name: 'alt', type: 'string', title: 'Alternative text'})],
       description: 'Used on the portfolio card grid.',
+    }),
+    defineField({
+      name: 'beforeImage',
+      title: 'Before Screenshot',
+      type: 'image',
+      description: 'The old site, shown side by side with the main image in a Before / After section.',
+      fields: [defineField({name: 'alt', type: 'string', title: 'Alternative text'})],
+    }),
+    defineField({
+      name: 'gallery',
+      title: 'Gallery',
+      type: 'array',
+      of: [
+        defineArrayMember({
+          type: 'image',
+          fields: [
+            defineField({name: 'alt', type: 'string', title: 'Alternative text'}),
+            defineField({name: 'caption', type: 'string', title: 'Caption'}),
+          ],
+        }),
+      ],
+      description: 'Additional screenshots of the finished work.',
     }),
     defineField({
       name: 'details',

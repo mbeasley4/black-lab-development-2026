@@ -8,6 +8,22 @@ import { urlFor } from "@/sanity/lib/image";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import JsonLd from "@/components/JsonLd";
 import { portableTextComponents } from "@/components/PortableTextComponents";
+import { projects, type Project } from "@/data/projects";
+
+const PUBLISHED_SLUGS_QUERY = `*[_type == "caseStudy" && defined(slug.current)].slug.current`;
+
+// Previous / next follow the portfolio order on /case-studies, skipping
+// projects whose detail page isn't published yet, and wrap at the ends.
+function getAdjacentProjects(slug: string, publishedSlugs: string[]) {
+  const published = new Set(publishedSlugs);
+  const navigable = projects.filter((p): p is Project & { slug: string } => Boolean(p.slug && published.has(p.slug)));
+  const i = navigable.findIndex((p) => p.slug === slug);
+  if (i === -1 || navigable.length < 2) return null;
+  return {
+    prev: navigable[(i - 1 + navigable.length) % navigable.length],
+    next: navigable[(i + 1) % navigable.length],
+  };
+}
 
 export const revalidate = 3600;
 
@@ -20,7 +36,13 @@ const CASE_STUDY_QUERY = `*[_type == "caseStudy" && slug.current == $slug][0] {
   industry,
   excerpt,
   tagline,
+  kind,
+  platform,
+  websiteUrl,
   mainImage,
+  beforeImage,
+  gallery,
+  details,
   publishedAt,
   metrics,
   body,
@@ -75,11 +97,20 @@ export default async function CaseStudyPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const study = await client.fetch(CASE_STUDY_QUERY, { slug });
+  const [study, publishedSlugs] = await Promise.all([
+    client.fetch(CASE_STUDY_QUERY, { slug }),
+    client.fetch<string[]>(PUBLISHED_SLUGS_QUERY),
+  ]);
 
   if (!study) return notFound();
 
+  const adjacent = getAdjacentProjects(slug, publishedSlugs);
+
   const heroMetrics = study.metrics?.slice(0, 3) ?? [];
+  const isProject = study.kind === "project";
+  const siteHost: string = study.websiteUrl
+    ? new URL(study.websiteUrl).hostname
+    : `${study.clientName?.toLowerCase().replace(/\s+/g, "") ?? "client"}.com`;
   const canonicalUrl = `https://blacklabdev.com/case-studies/${study.slug.current}`;
 
   const articleSchema = {
@@ -143,7 +174,12 @@ export default async function CaseStudyPage({
                   ← Case Studies
                 </Link>
                 <span className="text-slate-700">/</span>
-                <span className="text-xs text-slate-500">Case Study</span>
+                <span className="text-xs text-slate-500">{isProject ? "Project" : "Case Study"}</span>
+                {study.platform && (
+                  <span className="text-[10px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full border border-volt-500/20 bg-volt-500/5 text-volt-500/80">
+                    {study.platform}
+                  </span>
+                )}
               </div>
 
               <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-volt-500/35 bg-volt-500/8 text-volt-500 text-xs font-bold tracking-[0.2em] uppercase mb-6 w-fit">
@@ -175,6 +211,20 @@ export default async function CaseStudyPage({
                   ))}
                 </div>
               )}
+
+              {study.websiteUrl && (
+                <a
+                  href={study.websiteUrl}
+                  target="_blank"
+                  rel="noopener"
+                  className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-semibold text-volt-500 hover:text-volt-400 transition-colors duration-200"
+                >
+                  Visit {siteHost.replace(/^www\./, "")}
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5h5v5M19 5l-9 9M10 5H5v14h14v-5" />
+                  </svg>
+                </a>
+              )}
             </div>
 
             {/* ── Right: main image screenshot ── */}
@@ -192,7 +242,7 @@ export default async function CaseStudyPage({
                     <span className="w-2.5 h-2.5 rounded-full bg-volt-500/60" />
                     <span className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
                     <div className="ml-4 flex-1 max-w-xs h-5 bg-neutral-800 rounded-md flex items-center px-3">
-                      <span className="text-[10px] text-neutral-500 truncate">{study.clientName?.toLowerCase().replace(/\s+/g, "") ?? "client"}.com</span>
+                      <span className="text-[10px] text-neutral-500 truncate">{siteHost}</span>
                     </div>
                   </div>
 
@@ -246,6 +296,67 @@ export default async function CaseStudyPage({
         </section>
       )}
 
+      {/* ─── WHAT WE BUILT ────────────────────────────── */}
+      {study.details && study.details.length > 0 && (
+        <section className="py-20 border-b border-slate-800">
+          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
+            <div className="max-w-2xl mb-10">
+              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+                The Build
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">What We Built</h2>
+              <div className="mt-4 h-px w-32 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
+            </div>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {study.details.map((item: string) => (
+                <li key={item} className="flex items-start gap-3 rounded-xl border border-neutral-800 bg-neutral-950 px-5 py-4 text-slate-300">
+                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_6px_rgba(227,245,68,0.7)] shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      {/* ─── BEFORE / AFTER ───────────────────────────── */}
+      {study.beforeImage && study.mainImage && (
+        <section className="py-20 border-b border-slate-800">
+          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
+            <div className="max-w-2xl mb-10">
+              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+                The Transformation
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Before &amp; After</h2>
+              <div className="mt-4 h-px w-32 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {[
+                { label: "Before", image: study.beforeImage, accent: "text-slate-400 border-slate-700" },
+                { label: "After", image: study.mainImage, accent: "text-volt-400 border-volt-500/40" },
+              ].map(({ label, image, accent }) => (
+                <figure key={label} className="rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950">
+                  <div className="relative aspect-16/10 w-full">
+                    <Image
+                      src={urlFor(image).width(1400).url()}
+                      alt={image.alt ?? `${study.clientName ?? study.title} — ${label.toLowerCase()}`}
+                      fill
+                      sizes="(min-width: 1024px) 50vw, 100vw"
+                      className="object-cover object-top"
+                    />
+                  </div>
+                  <figcaption className="px-5 py-3 border-t border-neutral-800">
+                    <span className={`inline-block text-[10px] font-bold tracking-[0.2em] uppercase px-2 py-0.5 rounded-full border ${accent}`}>
+                      {label}
+                    </span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ─── BODY ─────────────────────────────────────── */}
       {study.body && (
         <section className="py-20 border-b border-slate-800">
@@ -255,6 +366,95 @@ export default async function CaseStudyPage({
             </article>
           </div>
         </section>
+      )}
+
+      {/* ─── GALLERY ──────────────────────────────────── */}
+      {study.gallery && study.gallery.length > 0 && (
+        <section className="py-20 border-b border-slate-800">
+          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
+            <div className="max-w-2xl mb-10">
+              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+                The Finished Site
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Gallery</h2>
+              <div className="mt-4 h-px w-32 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+              {study.gallery.map((image: { _key: string; alt?: string; caption?: string }) => (
+                <figure key={image._key} className="rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950">
+                  <div className="relative aspect-16/10 w-full">
+                    <Image
+                      src={urlFor(image).width(1000).url()}
+                      alt={image.alt ?? image.caption ?? study.title}
+                      fill
+                      sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      className="object-cover object-top"
+                    />
+                  </div>
+                  {image.caption && (
+                    <figcaption className="px-5 py-3 border-t border-neutral-800 text-sm text-slate-400">
+                      {image.caption}
+                    </figcaption>
+                  )}
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ─── PREVIOUS / NEXT PROJECT ──────────────────── */}
+      {adjacent && (
+        <nav aria-label="More projects" className="py-16 border-b border-slate-800">
+          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
+            <div className="mb-8 flex items-end justify-between gap-4">
+              <span className="text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">More Work</span>
+              <Link href="/case-studies#portfolio" className="text-xs font-semibold text-slate-400 hover:text-white transition-colors duration-200">
+                All projects
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {([
+                { dir: "Previous", project: adjacent.prev },
+                { dir: "Next", project: adjacent.next },
+              ] as const).map(({ dir, project }) => (
+                <Link
+                  key={dir}
+                  href={`/case-studies/${project.slug}`}
+                  rel={dir === "Previous" ? "prev" : "next"}
+                  className={`group flex items-center gap-5 rounded-2xl border border-neutral-800 bg-neutral-950 p-4 transition-all duration-300 hover:border-volt-500/40 hover:shadow-[0_0_40px_rgba(227,245,68,0.07)] ${dir === "Next" ? "md:flex-row-reverse md:text-right" : ""}`}
+                >
+                  <div className="relative aspect-16/10 w-32 sm:w-40 shrink-0 overflow-hidden rounded-lg border border-white/10">
+                    <Image
+                      src={project.screenshot}
+                      alt=""
+                      fill
+                      sizes="160px"
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
+                    />
+                  </div>
+                  <div className="min-w-0 grow">
+                    <span className={`flex items-center gap-1.5 text-[10px] font-semibold tracking-[0.2em] uppercase text-slate-500 group-hover:text-volt-500 transition-colors duration-200 ${dir === "Next" ? "md:justify-end" : ""}`}>
+                      {dir === "Previous" && (
+                        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+                        </svg>
+                      )}
+                      {dir} project
+                      {dir === "Next" && (
+                        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                        </svg>
+                      )}
+                    </span>
+                    <span className="mt-1.5 block text-lg font-bold text-white leading-snug truncate">{project.name}</span>
+                    <span className="mt-1 block text-xs text-slate-500">{project.platform}</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </nav>
       )}
 
       {/* ─── CTA ─────────────────────────────────────── */}

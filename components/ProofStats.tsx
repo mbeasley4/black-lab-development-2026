@@ -1,13 +1,12 @@
 import Image from "next/image";
 
 const logos = [
+    { src: "/images/work/gep-logo.png", alt: "Global Environmental Products" },
     { src: "/images/work/globeironroofing-logo.png", alt: "Globe Iron Roofing" },
     { src: "/images/work/millennosphere-logo.png", alt: "Millennosphere" },
     { src: "/images/work/delcam-logo.svg", alt: "Delcam Capital" },
     { src: "/images/work/faztek-logo.png", alt: "Faztek" },
-    { src: "/images/work/haag-streit-logo.png", alt: "Haag-Streit" },
     { src: "/images/work/melink-logo.png", alt: "Melink" },
-    { src: "/images/work/plastechmold-logo.png", alt: "PlastechMold" },
     { src: "/images/work/shortening-shuttle-logo.png", alt: "The Shortening Shuttle" },
     { src: "/images/work/providence-logo-w.png", alt: "Providence" },
     { src: "/images/work/blum-logo.png", alt: "Blum" },
