@@ -18,9 +18,9 @@ test('main navigation links are present', async ({ page }) => {
   await expect(nav.getByRole('link', { name: 'About' })).toBeVisible();
 });
 
-test('"Explore All Insights" CTA navigates to articles', async ({ page }) => {
+test('"All articles" link navigates to articles', async ({ page }) => {
   await page.goto('/');
-  await page.getByRole('link', { name: 'Explore All Insights' }).click();
+  await page.getByRole('link', { name: 'All articles' }).click();
   await expect(page).toHaveURL(/\/articles/);
 });
 
