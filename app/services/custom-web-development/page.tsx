@@ -234,7 +234,7 @@ export default function CustomWebDevelopmentPage() {
               Start a Project →
             </Link>
             <Link
-              href="/case-studies"
+              href="/work"
               className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
             >
               View Work →
@@ -400,7 +400,7 @@ export default function CustomWebDevelopmentPage() {
           title="Let&apos;s Build Something That Actually Works"
           bodyPrimary="Start with a technical review of your current setup. I'll identify what's constraining you, what's worth keeping, and what it would take to build the right thing."
           bodySecondary="No proposals first. No discovery calls that turn into sales decks. Just a direct assessment of where you are and what I&apos;d do about it."
-          secondaryHref="/case-studies"
+          secondaryHref="/work"
           secondaryLabel="View Case Studies"
         />
       </main>

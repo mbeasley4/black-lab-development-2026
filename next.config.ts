@@ -2,15 +2,22 @@ import type { NextConfig } from "next";
 
 // Content-Security-Policy is set in middleware.ts (per-request nonce) rather
 // than here — several pages render page-specific JSON-LD, including
-// /articles/[slug] and /case-studies/[slug] which pull content from Sanity
+// /articles/[slug] and /work/[slug] which pull content from Sanity
 // on an ISR revalidate cycle, so a build-time hash allowlist can't cover them.
 
 const nextConfig: NextConfig = {
   async redirects() {
     return [
+      // The work section moved from /case-studies to /work; keep old links
+      // and search rankings by redirecting every old URL to its new home.
       {
-        source: "/work",
-        destination: "/case-studies",
+        source: "/case-studies",
+        destination: "/work",
+        permanent: true,
+      },
+      {
+        source: "/case-studies/:slug*",
+        destination: "/work/:slug*",
         permanent: true,
       },
       {

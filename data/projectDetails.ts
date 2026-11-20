@@ -1,5 +1,5 @@
 // Full detail-page content for portfolio projects, keyed by slug.
-// /case-studies/[slug] renders this when the project has no published Sanity
+// /work/[slug] renders this when the project has no published Sanity
 // page; a published Sanity caseStudy with the same slug takes precedence.
 // Card-level fields (name, platform, live URL, card summary) live in projects.ts.
 

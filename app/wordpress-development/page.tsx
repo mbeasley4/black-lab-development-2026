@@ -164,7 +164,7 @@ export default function WordPressDevelopmentPage() {
             Start a Project →
           </Link>
           <Link
-            href="/case-studies"
+            href="/work"
             className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
           >
             View Case Studies →
@@ -420,7 +420,7 @@ export default function WordPressDevelopmentPage() {
           </div>
           <div className="mt-10 text-center">
             <Link
-              href="/case-studies"
+              href="/work"
               className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 bg-volt-500/8 px-8 py-4 text-sm font-semibold uppercase tracking-wide text-volt-400 transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white hover:shadow-lg hover:shadow-volt-500/20"
             >
               View Full Portfolio
@@ -482,7 +482,7 @@ export default function WordPressDevelopmentPage() {
         title="Work With a WordPress Development Partner That Builds It Right"
         bodyPrimary="If your current site is slow, hard to manage, or limiting your growth — it's time for a better foundation. I build WordPress sites that perform, scale, and stay maintainable for years."
         bodySecondary="No bloated themes. No page builders. Just clean, performant WordPress built the right way."
-        secondaryHref="/case-studies"
+        secondaryHref="/work"
         secondaryLabel="View Case Studies"
       />
     </main>

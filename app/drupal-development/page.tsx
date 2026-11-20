@@ -173,7 +173,7 @@ export default function DrupalDevelopmentPage() {
             Start a Project →
           </Link>
           <Link
-            href="/case-studies"
+            href="/work"
             className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
           >
             View Case Studies →
@@ -495,7 +495,7 @@ export default function DrupalDevelopmentPage() {
         title="Work With a Drupal Development Partner That Builds It Right"
         bodyPrimary="If your current Drupal site is slow, over-moduled, or stuck on an outdated version — it's time for a better foundation. I build Drupal platforms that perform, scale, and stay maintainable for years."
         bodySecondary="No contrib sprawl. No theme engine compromises. Just clean, performant Drupal built the right way."
-        secondaryHref="/case-studies"
+        secondaryHref="/work"
         secondaryLabel="View Case Studies"
       />
     </main>

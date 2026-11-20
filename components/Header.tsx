@@ -214,7 +214,7 @@ export default function Header() {
     // Plain top-level links (after the Services + Industries menus)
     const plainNav = [
         { label: "Partners", href: "/partners" },
-        { label: "My Work", href: "/case-studies" },
+        { label: "My Work", href: "/work" },
         { label: "Insights", href: "/articles" },
         { label: "About", href: "/about" },
     ];

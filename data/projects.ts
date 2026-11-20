@@ -1,4 +1,4 @@
-// Portfolio entries shown in the "Work Accomplished" section of /case-studies.
+// Portfolio entries shown in the "Work Accomplished" section of /work.
 // `slug` links a card to its Sanity detail page (caseStudy, kind "project");
 // the link only appears once that page is published.
 // `featured` entries get a large showcase row when no platform filter is active.

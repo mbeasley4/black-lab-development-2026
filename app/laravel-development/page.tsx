@@ -214,7 +214,7 @@ export default function LaravelDevelopmentPage() {
             Start a Project →
           </Link>
           <Link
-            href="/case-studies"
+            href="/work"
             className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
           >
             View Case Studies →
@@ -558,7 +558,7 @@ export default function LaravelDevelopmentPage() {
         title="Work With a Laravel Developer Who Builds for Production"
         bodyPrimary="If your application needs clean integrations, reliable queue processing, and architecture that scales — not just a working prototype — let's talk about what you're building."
         bodySecondary="No framework tourism. No tutorial-quality code. Just production-grade Laravel built by an engineer who's accountable for whether it runs."
-        secondaryHref="/case-studies"
+        secondaryHref="/work"
         secondaryLabel="View Case Studies"
       />
     </main>

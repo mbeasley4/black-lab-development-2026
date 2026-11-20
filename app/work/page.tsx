@@ -17,11 +17,11 @@ const PAGE_DESCRIPTION =
 export const metadata: Metadata = {
   title: PAGE_TITLE,
   description: PAGE_DESCRIPTION,
-  alternates: { canonical: "/case-studies" },
+  alternates: { canonical: "/work" },
   openGraph: {
     title: PAGE_TITLE,
     description: PAGE_DESCRIPTION,
-    url: "/case-studies",
+    url: "/work",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
@@ -102,7 +102,7 @@ export default function CaseStudiesPage() {
     "@type": "CollectionPage",
     name: PAGE_TITLE,
     description: PAGE_DESCRIPTION,
-    url: "https://blacklabdev.com/case-studies",
+    url: "https://blacklabdev.com/work",
     isPartOf: { "@type": "WebSite", "@id": "https://blacklabdev.com/#website", name: "Black Lab Development", url: "https://blacklabdev.com" },
     publisher: { "@type": "Organization", "@id": "https://blacklabdev.com/#business" },
     mainEntity: {
@@ -110,7 +110,7 @@ export default function CaseStudiesPage() {
       itemListElement: projects.filter((p) => p.slug).map((p, i) => ({
         "@type": "ListItem",
         position: i + 1,
-        url: `https://blacklabdev.com/case-studies/${p.slug}`,
+        url: `https://blacklabdev.com/work/${p.slug}`,
         name: p.name,
       })),
     },
@@ -131,7 +131,7 @@ export default function CaseStudiesPage() {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://blacklabdev.com" },
-      { "@type": "ListItem", position: 2, name: "Case Studies", item: "https://blacklabdev.com/case-studies" },
+      { "@type": "ListItem", position: 2, name: "Work", item: "https://blacklabdev.com/work" },
     ],
   };
 

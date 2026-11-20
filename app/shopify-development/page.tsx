@@ -222,7 +222,7 @@ export default function ShopifyDevelopmentPage() {
             Start a Project →
           </Link>
           <Link
-            href="/case-studies"
+            href="/work"
             className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
           >
             View Case Studies →
@@ -566,7 +566,7 @@ export default function ShopifyDevelopmentPage() {
         title="Work With a Shopify Developer Who Opens the Theme"
         bodyPrimary="If your storefront is slow, your app bill keeps growing, or your theme can't do what your catalog needs — let's talk about what you're actually trying to sell and what's getting in the way."
         bodySecondary="No page builder lock-in. No app for everything. Just clean Liquid, real integrations, and a developer who's accountable for how the store performs."
-        secondaryHref="/case-studies"
+        secondaryHref="/work"
         secondaryLabel="View Case Studies"
       />
     </main>

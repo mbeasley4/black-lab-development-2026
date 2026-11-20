@@ -192,7 +192,7 @@ export default function CincinnatiWebDeveloperPage() {
               Start a Conversation →
             </Link>
             <Link
-              href="/case-studies"
+              href="/work"
               className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
             >
               View Cincinnati Work →
@@ -350,7 +350,7 @@ export default function CincinnatiWebDeveloperPage() {
             </div>
             <div className="mt-10 text-center">
               <Link
-                href="/case-studies"
+                href="/work"
                 className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 bg-volt-500/8 px-8 py-4 text-sm font-semibold uppercase tracking-wide text-volt-400 transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white"
               >
                 View Full Case Studies →

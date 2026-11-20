@@ -67,7 +67,7 @@ function BrowserFrame({
 function ProjectLink({ project }: { project: Project }) {
   return (
     <Link
-      href={`/case-studies/${project.slug}`}
+      href={`/work/${project.slug}`}
       aria-label={`View project: ${project.name}`}
       className="inline-flex w-fit items-center gap-2 text-xs font-semibold tracking-wide uppercase text-volt-500 group-hover:text-volt-400 transition-colors duration-200 after:absolute after:inset-0 after:z-10 after:rounded-2xl after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-volt-500"
     >

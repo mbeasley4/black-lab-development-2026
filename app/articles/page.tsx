@@ -294,7 +294,7 @@ export default async function ArticlesPage({
         title="The Work That Actually Moves Systems Forward"
         bodyPrimary="Not every problem needs a new stack. Not every engagement needs a full rebuild. Black Lab Development focuses on the work that actually moves systems forward — with clear tradeoffs and practical decisions."
         bodySecondary="If you need a senior engineer who can step into complex systems, identify real issues, and execute effectively, these services are designed for that kind of work."
-        secondaryHref="/case-studies"
+        secondaryHref="/work"
         secondaryLabel="View Work"
       />
     </main>

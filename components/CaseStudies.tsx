@@ -25,7 +25,7 @@ const caseStudies: CaseStudy[] = [
         metric: "+164%",
         metricLabel: "Avg Order Value",
         image: "/images/work/shortening-shuttle-screenshot.png",
-        href: "/case-studies/ecommerce-website-redesign-increase-aov",
+        href: "/work/ecommerce-website-redesign-increase-aov",
         color: "volt",
     },
     {
@@ -36,7 +36,7 @@ const caseStudies: CaseStudy[] = [
         metric: "",
         metricLabel: "",
         image: "/images/work/revandrinse-screenshot.png",
-        href: "/case-studies",
+        href: "/work",
         color: "volt",
     },
     {
@@ -47,7 +47,7 @@ const caseStudies: CaseStudy[] = [
         metric: "",
         metricLabel: "",
         image: "/images/work/zooprintablesai-screenshot.png",
-        href: "/case-studies/zoo-printables-ai-seo-aeo-geo",
+        href: "/work/zoo-printables-ai-seo-aeo-geo",
         color: "volt",
     },
 ];
@@ -160,7 +160,7 @@ export default function CaseStudies() {
                 {/* View All */}
                 <div className="mt-16 text-center">
                     <Link
-                        href="/case-studies"
+                        href="/work"
                         className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 bg-volt-500/8 px-8 py-4 text-sm font-semibold uppercase tracking-wide text-volt-400 transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white hover:shadow-lg hover:shadow-volt-500/20"
                     >
                         View All Case Studies

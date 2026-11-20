@@ -34,7 +34,7 @@ test('"My Work" nav link navigates to case studies', async ({ page }) => {
   await page.goto('/');
   const nav = page.getByRole('navigation', { name: 'Primary navigation' });
   await nav.getByRole('link', { name: 'My Work' }).click();
-  await expect(page).toHaveURL(/\/case-studies/);
+  await expect(page).toHaveURL(/\/work/);
   await expect(page.getByRole('heading').first()).toBeVisible();
 });
 
@@ -49,9 +49,11 @@ test('homepage featured article card navigates to the article', async ({ page })
 
 // ─── Legacy / redirects ────────────────────────────────────────────────────────
 
-test('/work redirects to /case-studies', async ({ page }) => {
-  await page.goto('/work');
-  await expect(page).toHaveURL(/\/case-studies/);
+test('/case-studies redirects to /work, including project pages', async ({ page }) => {
+  await page.goto('/case-studies');
+  await expect(page).toHaveURL(/\/work$/);
+  await page.goto('/case-studies/global-environmental-products-wordpress-rebuild');
+  await expect(page).toHaveURL(/\/work\/global-environmental-products-wordpress-rebuild$/);
 });
 
 test('/services/b2b-website-design redirects to the small business service page', async ({ page }) => {
@@ -155,8 +157,8 @@ test('contact page loads with a form or CTA', async ({ page }) => {
 // ─── Work / Case Studies Page ──────────────────────────────────────────────────
 
 test('case studies page loads and shows past work', async ({ page }) => {
-  await page.goto('/case-studies');
-  await expect(page).toHaveURL(/\/case-studies/);
+  await page.goto('/work');
+  await expect(page).toHaveURL(/\/work/);
   await expect(page.getByRole('heading').first()).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Globe Iron Roofing' })).toBeVisible();
 });
@@ -166,7 +168,7 @@ test('case studies page loads and shows past work', async ({ page }) => {
 test('footer contains nav links and contact info', async ({ page }) => {
   await page.goto('/');
   const footer = page.locator('footer');
-  await expect(footer.getByRole('link', { name: 'Case Studies' })).toBeVisible();
+  await expect(footer.getByRole('link', { name: 'Work', exact: true })).toBeVisible();
   await expect(footer.getByRole('link', { name: 'Schedule a Call' })).toBeVisible();
   await expect(footer).toContainText('513');
 });
@@ -181,7 +183,7 @@ test('footer copyright year is current', async ({ page }) => {
 // ─── SEO / Metadata regression ─────────────────────────────────────────────────
 
 test('page titles do not double up the trailing brand suffix', async ({ page }) => {
-  const pages = ['/', '/services', '/services/small-business-website-design', '/partners', '/partners/white-label-web-development', '/partners/seo-fulfillment', '/industries', '/case-studies', '/articles', '/contact', '/about', '/privacy', '/terms', '/cookies', '/cincinnati-web-developer'];
+  const pages = ['/', '/services', '/services/small-business-website-design', '/partners', '/partners/white-label-web-development', '/partners/seo-fulfillment', '/industries', '/work', '/articles', '/contact', '/about', '/privacy', '/terms', '/cookies', '/cincinnati-web-developer'];
   for (const url of pages) {
     await page.goto(url);
     const title = await page.title();

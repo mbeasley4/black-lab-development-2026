@@ -178,7 +178,7 @@ const beforeAfter = [
     before: "Baseline",
     after: "+164%",
     note: "eCommerce redesign — read the full case study →",
-    caseStudyHref: "/case-studies/ecommerce-website-redesign-increase-aov",
+    caseStudyHref: "/work/ecommerce-website-redesign-increase-aov",
   },
   {
     label: "Qualified leads / month",
@@ -375,7 +375,7 @@ export default function ConversionOptimizationPage() {
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <h2 className="text-2xl font-bold text-white mb-8">Related</h2>
           <div className="flex flex-wrap gap-4">
-            <Link href="/case-studies/ecommerce-website-redesign-increase-aov" className="rounded-lg border border-volt-500/30 bg-volt-500/10 px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200">
+            <Link href="/work/ecommerce-website-redesign-increase-aov" className="rounded-lg border border-volt-500/30 bg-volt-500/10 px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200">
               Case Study: +164% AOV in 7 Days →
             </Link>
             <Link href="/services/small-business-website-design" className="rounded-lg border border-slate-700 bg-slate-900 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200">
@@ -394,7 +394,7 @@ export default function ConversionOptimizationPage() {
         title="Start With a Conversion Audit"
         bodyPrimary="I'll review your current site and show you exactly where leads are leaking — the specific pages, specific CTAs, and specific messages that are costing you pipeline."
         bodySecondary="One focused engagement. Real findings. No proposals for things you don't need."
-        secondaryHref="/case-studies"
+        secondaryHref="/work"
         secondaryLabel="View Case Studies"
       />
       </main>

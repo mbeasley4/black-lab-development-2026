@@ -11,16 +11,15 @@ import { portableTextComponents } from "@/components/PortableTextComponents";
 import { projects, type Project } from "@/data/projects";
 import { getProjectDetail, type DetailSection } from "@/data/projectDetails";
 
-// Previous / next follow the portfolio order on /case-studies and wrap at
-// the ends. Every portfolio project with a slug has a page (see loadStudy).
-function getAdjacentProjects(slug: string) {
+// "More Work" shows the next projects in portfolio order (as on /work),
+// wrapping at the end. Every portfolio project with a slug has a page.
+function getMoreProjects(slug: string, count = 3) {
   const navigable = projects.filter((p): p is Project & { slug: string } => Boolean(p.slug));
   const i = navigable.findIndex((p) => p.slug === slug);
-  if (i === -1 || navigable.length < 2) return null;
-  return {
-    prev: navigable[(i - 1 + navigable.length) % navigable.length],
-    next: navigable[(i + 1) % navigable.length],
-  };
+  const others = navigable.length - (i === -1 ? 0 : 1);
+  return Array.from({ length: Math.min(count, others) }, (_, k) =>
+    navigable[(Math.max(i, -1) + 1 + k) % navigable.length],
+  );
 }
 
 export const revalidate = 3600;
@@ -112,7 +111,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const study = await loadStudy(slug);
   if (!study) return { title: "Case Study Not Found" };
-  const canonical = `https://blacklabdev.com/case-studies/${slug}`;
+  const canonical = `https://blacklabdev.com/work/${slug}`;
   const title = study.seoTitle || study.title;
   const description = study.metaDescription || study.excerpt || "";
   const ogImage = study.mainImage
@@ -157,7 +156,7 @@ export default async function CaseStudyPage({
 
   if (!study) return notFound();
 
-  const adjacent = getAdjacentProjects(slug);
+  const moreProjects = getMoreProjects(slug);
 
   const heroMetrics = study.metrics?.slice(0, 3) ?? [];
   const isProject = study.kind === "project";
@@ -166,7 +165,7 @@ export default async function CaseStudyPage({
   const siteHost: string = study.websiteUrl
     ? new URL(study.websiteUrl).hostname
     : (study.clientName ?? study.title);
-  const canonicalUrl = `https://blacklabdev.com/case-studies/${study.slug.current}`;
+  const canonicalUrl = `https://blacklabdev.com/work/${study.slug.current}`;
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -206,7 +205,7 @@ export default async function CaseStudyPage({
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://blacklabdev.com" },
-      { "@type": "ListItem", position: 2, name: "Case Studies", item: "https://blacklabdev.com/case-studies" },
+      { "@type": "ListItem", position: 2, name: "Work", item: "https://blacklabdev.com/work" },
       { "@type": "ListItem", position: 3, name: study.title, item: canonicalUrl },
     ],
   };
@@ -227,8 +226,8 @@ export default async function CaseStudyPage({
             {/* ── Left: text + metrics ── */}
             <div className="flex flex-col justify-center">
               <div className="mb-5 flex flex-wrap items-center gap-3">
-                <Link href="/case-studies" className="text-xs text-slate-500 hover:text-slate-400 transition-colors">
-                  ← Case Studies
+                <Link href="/work" className="text-xs text-slate-500 hover:text-slate-400 transition-colors">
+                  ← Work
                 </Link>
                 <span className="text-slate-700">/</span>
                 <span className="text-xs text-slate-500">{isProject ? "Project" : "Case Study"}</span>
@@ -471,52 +470,73 @@ export default async function CaseStudyPage({
         </section>
       )}
 
-      {/* ─── PREVIOUS / NEXT PROJECT ──────────────────── */}
-      {adjacent && (
-        <nav aria-label="More projects" className="py-16 border-b border-slate-800">
-          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
-            <div className="mb-8 flex items-end justify-between gap-4">
-              <span className="text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">More Work</span>
-              <Link href="/case-studies#portfolio" className="text-xs font-semibold text-slate-400 hover:text-white transition-colors duration-200">
+      {/* ─── MORE WORK ────────────────────────────────── */}
+      {moreProjects.length > 0 && (
+        <nav aria-labelledby="more-work-heading" className="relative overflow-hidden bg-volt-500 py-20 md:py-24">
+          {/* Subtle diagonal texture so the band doesn't read as a flat block */}
+          <div
+            className="pointer-events-none absolute inset-0 opacity-[0.08]"
+            style={{ backgroundImage: "repeating-linear-gradient(135deg, #000 0 1px, transparent 1px 14px)" }}
+            aria-hidden="true"
+          />
+          <div className="relative mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
+            <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
+              <div>
+                <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase font-bold text-black/60">Keep Exploring</span>
+                <h2 id="more-work-heading" className="text-3xl md:text-4xl font-black tracking-tight text-black">
+                  More Work
+                </h2>
+              </div>
+              <Link
+                href="/work#portfolio"
+                className="inline-flex items-center gap-2 rounded-md bg-black px-5 py-2.5 text-sm font-semibold text-volt-500 hover:bg-neutral-900 transition-colors duration-200"
+              >
                 All projects
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              {([
-                { dir: "Previous", project: adjacent.prev },
-                { dir: "Next", project: adjacent.next },
-              ] as const).map(({ dir, project }) => (
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {moreProjects.map((project) => (
                 <Link
-                  key={dir}
-                  href={`/case-studies/${project.slug}`}
-                  rel={dir === "Previous" ? "prev" : "next"}
-                  className={`group flex items-center gap-5 rounded-2xl border border-neutral-800 bg-neutral-950 p-4 transition-all duration-300 hover:border-volt-500/40 hover:shadow-[0_0_40px_rgba(227,245,68,0.07)] ${dir === "Next" ? "md:flex-row-reverse md:text-right" : ""}`}
+                  key={project.slug}
+                  href={`/work/${project.slug}`}
+                  className="group flex flex-col overflow-hidden rounded-2xl bg-neutral-950 shadow-[0_18px_40px_-16px_rgba(0,0,0,0.55)] ring-1 ring-black/10 transition-all duration-300 ease-out hover:shadow-[0_28px_60px_-14px_rgba(0,0,0,0.7)] motion-safe:hover:-translate-y-2 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black"
                 >
-                  <div className="relative aspect-16/10 w-32 sm:w-40 shrink-0 overflow-hidden rounded-lg border border-white/10">
-                    <Image
-                      src={project.screenshot}
-                      alt=""
-                      fill
-                      sizes="160px"
-                      className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
-                    />
+                  <div className="bg-linear-to-br from-neutral-900 to-neutral-950 p-3 border-b border-neutral-800">
+                    <div className="overflow-hidden rounded-lg border border-white/10 bg-neutral-900 transition-colors duration-300 group-hover:border-volt-500/50">
+                      <div className="flex h-5 items-center gap-1 border-b border-white/5 px-2.5" aria-hidden="true">
+                        <span className="h-1.5 w-1.5 rounded-full bg-neutral-600" />
+                        <span className="h-1.5 w-1.5 rounded-full bg-neutral-600" />
+                        <span className="h-1.5 w-1.5 rounded-full bg-neutral-600" />
+                      </div>
+                      <div className="relative aspect-16/10 w-full overflow-hidden">
+                        <Image
+                          src={project.screenshot}
+                          alt=""
+                          fill
+                          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                          className="object-cover object-top transition-transform duration-500 motion-safe:group-hover:scale-[1.05]"
+                        />
+                      </div>
+                    </div>
                   </div>
-                  <div className="min-w-0 grow">
-                    <span className={`flex items-center gap-1.5 text-[10px] font-semibold tracking-[0.2em] uppercase text-slate-500 group-hover:text-volt-500 transition-colors duration-200 ${dir === "Next" ? "md:justify-end" : ""}`}>
-                      {dir === "Previous" && (
-                        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
-                        </svg>
-                      )}
-                      {dir} project
-                      {dir === "Next" && (
-                        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                        </svg>
-                      )}
+                  <div className="flex grow flex-col gap-3 p-5">
+                    <div className="flex items-start justify-between gap-3">
+                      <h3 className="text-lg font-bold leading-snug text-white">{project.name}</h3>
+                      <span className="mt-0.5 shrink-0 rounded-full border border-volt-500/30 bg-volt-500/10 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-volt-400">
+                        {project.platform}
+                      </span>
+                    </div>
+                    <p className="line-clamp-2 text-sm leading-relaxed text-slate-400">{project.summary}</p>
+                    <span className="mt-auto inline-flex items-center gap-2 pt-1 text-xs font-semibold uppercase tracking-wide text-volt-500 group-hover:text-volt-400">
+                      View project
+                      <svg className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                      </svg>
                     </span>
-                    <span className="mt-1.5 block text-lg font-bold text-white leading-snug truncate">{project.name}</span>
-                    <span className="mt-1 block text-xs text-slate-500">{project.platform}</span>
                   </div>
                 </Link>
               ))}
@@ -550,10 +570,10 @@ export default async function CaseStudyPage({
               Start a Conversation
             </Link>
             <Link
-              href="/case-studies"
+              href="/work"
               className="inline-flex items-center gap-2 text-sm font-semibold text-volt-500 hover:text-volt-400 transition-colors duration-200"
             >
-              View all case studies
+              View all work
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
               </svg>

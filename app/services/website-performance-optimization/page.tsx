@@ -196,7 +196,7 @@ export default function WebsitePerformanceOptimizationPage() {
               Get a Performance Audit →
             </Link>
             <Link
-              href="/case-studies"
+              href="/work"
               className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
             >
               View Results →
@@ -379,7 +379,7 @@ export default function WebsitePerformanceOptimizationPage() {
           title="Start With a Free Performance Audit"
           bodyPrimary="I&apos;ll review your current site against Core Web Vitals, real-user performance data, and technical SEO signals — and show you exactly what&apos;s costing you rankings and conversions."
           bodySecondary="No proposals. No slides. Just a direct assessment of what&apos;s wrong and what I&apos;d do about it."
-          secondaryHref="/case-studies"
+          secondaryHref="/work"
           secondaryLabel="View Results"
         />
       </main>

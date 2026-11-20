@@ -48,7 +48,7 @@ export default function CallToAction() {
                         </Link>
 
                         <Link
-                            href="/case-studies"
+                            href="/work"
                             className="group inline-flex w-full sm:w-auto items-center justify-center rounded-lg border-2 border-volt-500/50 bg-volt-500/8 px-8 sm:px-12 py-5 text-base font-bold uppercase tracking-wide text-volt-400 backdrop-blur-sm transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white hover:shadow-xl hover:shadow-volt-500/20 hover:scale-105"
                         >
                             <span className="flex items-center gap-2">

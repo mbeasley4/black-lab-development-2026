@@ -39,7 +39,7 @@ export default function Footer() {
                     <ul className="space-y-3 text-sm">
                         <li><Link href="/services" className="hover:text-neutral-200">Web Development</Link></li>
                         <li><Link href="/industries" className="hover:text-neutral-200">Industries</Link></li>
-                        <li><Link href="/case-studies" className="hover:text-neutral-200">Case Studies</Link></li>
+                        <li><Link href="/work" className="hover:text-neutral-200">Work</Link></li>
                         <li><Link href="/articles" className="hover:text-neutral-200">SEO & Insights</Link></li>
                         <li><Link href="/about" className="hover:text-neutral-200">About</Link></li>
                         <li><Link href="/contact" className="hover:text-neutral-200">Schedule a Call</Link></li>

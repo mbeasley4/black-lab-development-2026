@@ -7,28 +7,28 @@ const caseStudies = [
         metric: "312%",
         outcome: "More appointment bookings",
         detail: "Cincinnati practice, 6 months post-launch",
-        href: "/case-studies",
+        href: "/work",
     },
     {
         industry: "Ecommerce Brand",
         metric: "164%",
         outcome: "Increase in average order value",
         detail: "Redesign + CRO, measured in first 7 days",
-        href: "/case-studies/ecommerce-website-redesign-increase-aov",
+        href: "/work/ecommerce-website-redesign-increase-aov",
     },
     {
         industry: "Manufacturing Company",
         metric: "4.2×",
         outcome: "More qualified RFQs",
         detail: "Industrial website rebuild",
-        href: "/case-studies",
+        href: "/work",
     },
     {
         industry: "B2B SaaS",
         metric: "68%",
         outcome: "Faster page load times",
         detail: "Performance optimization engagement",
-        href: "/case-studies",
+        href: "/work",
     },
 ];
 
@@ -49,7 +49,7 @@ export default function Results() {
                         </h2>
                     </div>
                     <Link
-                        href="/case-studies"
+                        href="/work"
                         className="group inline-flex items-center gap-2 text-sm font-semibold text-volt-500 hover:text-volt-400 transition-colors duration-200 shrink-0"
                     >
                         View All Case Studies
@@ -61,7 +61,7 @@ export default function Results() {
 
                 {/* Latest win — featured block, front and center */}
                 <Link
-                    href="/case-studies#zero-gravity-of-northern-kentucky"
+                    href="/work#zero-gravity-of-northern-kentucky"
                     className="group relative mb-6 flex flex-col overflow-hidden rounded-3xl border border-volt-500/30 bg-linear-to-br from-volt-500/10 via-neutral-900/70 to-neutral-950 p-8 md:p-10 transition-all duration-300 hover:border-volt-500/60 hover:shadow-[0_0_70px_rgba(227,245,68,0.18)]"
                 >
                     <div className="absolute -top-32 -right-32 w-96 h-96 bg-volt-500/25 rounded-full blur-[110px] pointer-events-none" />
