@@ -217,6 +217,25 @@ export const projectDetails: ProjectDetail[] = [
         note: "Full site editing",
       },
     ],
+    // Google Search Console: equal 38-day windows before and after the new
+    // site replaced the old static site (~Oct 2, 2026).
+    results: [
+      {
+        value: "21×",
+        label: "Clicks From Google Search",
+        note: "408 vs. 19 in the 38 days before launch",
+      },
+      {
+        value: "17×",
+        label: "Search Impressions",
+        note: "3,850 vs. 225 in the 38 days before launch",
+      },
+      {
+        value: "#2.2",
+        label: "Position for “City View Tavern”",
+        note: "Up from #7.7 before launch",
+      },
+    ],
     body: [
       {
         heading: "The Brief",
