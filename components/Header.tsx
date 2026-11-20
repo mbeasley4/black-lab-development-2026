@@ -12,6 +12,17 @@ const ANNOUNCEMENT_HEIGHT = 36; // px
 const HEADER_HEIGHT = 80; // px — room above and below the logo
 const MEGAMENU_TOP = ANNOUNCEMENT_HEIGHT + HEADER_HEIGHT;
 
+// Top-level nav item: a soft pill instead of an underline. Hover tints it,
+// an open menu or the current section fills it and adds a hairline outline.
+const navPill = (state: "idle" | "open" | "active") =>
+    `relative inline-flex items-center gap-1.5 rounded-md px-3 py-2 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 ${
+        state === "active"
+            ? "bg-white/[0.09] text-white ring-1 ring-inset ring-white/10"
+            : state === "open"
+                ? "bg-white/[0.06] text-white"
+                : "text-neutral-400 hover:bg-white/[0.05] hover:text-white"
+    }`;
+
 // Announcement bar copy: edit here.
 const ANNOUNCEMENT = {
     badge: "Now booking",
@@ -520,8 +531,17 @@ export default function Header() {
                 </div>
             )}
 
+            {/* Dim the page behind an open mega menu */}
+            <div
+                aria-hidden="true"
+                className={`fixed inset-0 z-40 hidden bg-black/50 transition-opacity duration-200 motion-reduce:transition-none lg:block ${
+                    openMega ? "opacity-100" : "pointer-events-none opacity-0"
+                }`}
+                onMouseEnter={() => setOpenMega(null)}
+            />
+
             {/* ===================== HEADER ===================== */}
-            <header className="fixed top-0 z-50 w-full bg-surface text-[#e5e7eb] border-b border-neutral-800">
+            <header className={`fixed top-0 z-50 w-full bg-surface text-[#e5e7eb] border-b transition-colors duration-200 ${openMega ? "border-transparent" : "border-neutral-800"}`}>
                 {/* Announcement bar */}
                 <div
                     className={`w-full overflow-hidden bg-charcoal text-neutral-300 transition-[height,opacity] duration-300 ease-out motion-reduce:transition-none ${
@@ -596,7 +616,7 @@ export default function Header() {
                     <nav
                         ref={navRef}
                         aria-label="Primary navigation"
-                        className="relative hidden lg:flex items-center gap-6 text-[14px] tracking-[0.01em]"
+                        className="relative hidden lg:flex items-center gap-1 text-[14px] tracking-[0.01em]"
                     >
                         {/* Services (megamenu) */}
                         <div
@@ -609,27 +629,12 @@ export default function Header() {
                                 aria-haspopup="true"
                                 aria-expanded={openMega === "services"}
                                 onFocus={() => handleMegaEnter("services")}
-                                className="relative group inline-flex items-center gap-1.5 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                                className={navPill(servicesActive ? "active" : openMega === "services" ? "open" : "idle")}
                             >
-                                <span
-                                    className={`transition-all duration-300 ${
-                                        servicesActive || openMega === "services"
-                                            ? "text-white"
-                                            : "text-neutral-400 group-hover:text-neutral-200"
-                                    }`}
-                                >
+                                <span>
                                     What I Build
                                 </span>
                                 <Chevron open={openMega === "services"} small />
-                                <span
-                                    className={`absolute left-0 -bottom-1 h-0.5 w-full origin-left transition-all duration-300
-                                        ${servicesActive
-                                            ? "scale-x-100 bg-white"
-                                            : openMega === "services"
-                                                ? "scale-x-100 bg-white/50"
-                                                : "scale-x-0 bg-white/50 group-hover:scale-x-100"
-                                        }`}
-                                />
                             </Link>
 
                             {/* Megamenu panel */}
@@ -639,12 +644,8 @@ export default function Header() {
                                 onMouseEnter={() => handleMegaEnter("services")}
                                 onMouseLeave={handleMegaLeave}
                                 style={{ top: megaTop }}
-                                className={`fixed left-1/2 -translate-x-1/2 w-full max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 pt-2
-                                    transition-all duration-200 ease-out origin-top
-                                    ${openMega === "services"
-                                        ? "opacity-100 translate-y-0 pointer-events-auto"
-                                        : "opacity-0 -translate-y-2 pointer-events-none"
-                                    }`}
+                                className={`fixed inset-x-0 transition-[opacity,visibility] duration-200 ease-out motion-reduce:transition-none
+                                    ${openMega === "services" ? "visible opacity-100" : "invisible opacity-0 pointer-events-none"}`}
                             >
                                 <MegaPanel
                                     eyebrow="What I Build"
@@ -692,27 +693,12 @@ export default function Header() {
                                 aria-haspopup="true"
                                 aria-expanded={openMega === "industries"}
                                 onFocus={() => handleMegaEnter("industries")}
-                                className="relative group inline-flex items-center gap-1.5 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                                className={navPill(industriesActive ? "active" : openMega === "industries" ? "open" : "idle")}
                             >
-                                <span
-                                    className={`transition-all duration-300 ${
-                                        industriesActive || openMega === "industries"
-                                            ? "text-white"
-                                            : "text-neutral-400 group-hover:text-neutral-200"
-                                    }`}
-                                >
+                                <span>
                                     Who It&apos;s For
                                 </span>
                                 <Chevron open={openMega === "industries"} small />
-                                <span
-                                    className={`absolute left-0 -bottom-1 h-0.5 w-full origin-left transition-all duration-300
-                                        ${industriesActive
-                                            ? "scale-x-100 bg-white"
-                                            : openMega === "industries"
-                                                ? "scale-x-100 bg-white/50"
-                                                : "scale-x-0 bg-white/50 group-hover:scale-x-100"
-                                        }`}
-                                />
                             </Link>
 
                             {/* Industries megamenu panel */}
@@ -722,18 +708,13 @@ export default function Header() {
                                 onMouseEnter={() => handleMegaEnter("industries")}
                                 onMouseLeave={handleMegaLeave}
                                 style={{ top: megaTop }}
-                                className={`fixed left-1/2 -translate-x-1/2 w-full max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 pt-2
-                                    transition-all duration-200 ease-out origin-top
-                                    ${openMega === "industries"
-                                        ? "opacity-100 translate-y-0 pointer-events-auto"
-                                        : "opacity-0 -translate-y-2 pointer-events-none"
-                                    }`}
+                                className={`fixed inset-x-0 transition-[opacity,visibility] duration-200 ease-out motion-reduce:transition-none
+                                    ${openMega === "industries" ? "visible opacity-100" : "invisible opacity-0 pointer-events-none"}`}
                             >
                                 <MegaPanel
                                     eyebrow="Who It&apos;s For"
                                     title="Who I Work With"
                                     blurb="Small businesses, agency partners, and the industries I know best."
-                                    width="max-w-[720px]"
                                     allHref="/industries"
                                     allLabel="All industries"
                                     onNavigate={() => setOpenMega(null)}
@@ -746,7 +727,7 @@ export default function Header() {
                                     <h3 className="px-2.5 pt-1.5 pb-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-neutral-500">
                                         {group.label}
                                     </h3>
-                                    <div className="grid grid-cols-2 gap-x-2">
+                                    <div className="grid grid-cols-3 gap-x-2">
                                         {group.items.map((s) => (
                                             <MenuLink
                                                 key={s.href}
@@ -768,23 +749,8 @@ export default function Header() {
                         {plainNav.map((item) => {
                             const active = isActive(item.href);
                             return (
-                                <Link key={item.label} href={item.href} className="relative group rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70">
-                                    <span
-                                        className={`transition-all duration-300 ${
-                                            active
-                                                ? "text-white"
-                                                : "text-neutral-400 group-hover:text-neutral-200"
-                                        }`}
-                                    >
-                                        {item.label}
-                                    </span>
-                                    <span
-                                        className={`absolute left-0 -bottom-1 h-0.5 w-full origin-left transition-all duration-300
-                                            ${active
-                                                ? "scale-x-100 bg-white"
-                                                : "scale-x-0 bg-white/50 group-hover:scale-x-100"
-                                            }`}
-                                    />
+                                <Link key={item.label} href={item.href} aria-current={active ? "page" : undefined} className={navPill(active ? "active" : "idle")}>
+                                    {item.label}
                                 </Link>
                             );
                         })}
@@ -792,7 +758,7 @@ export default function Header() {
                         {/* CTA */}
                         <Link
                             href="/contact"
-                            className={`px-3.5 py-1.5 tracking-[0.02em] text-[12px] font-bold rounded-sm transition-all duration-300
+                            className={`ml-3 px-3.5 py-1.5 tracking-[0.02em] text-[12px] font-bold rounded-sm transition-all duration-300
                                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70
                                 ${isActive("/contact")
                                     ? "bg-white text-black"
@@ -838,7 +804,6 @@ function MegaPanel({
     allLabel,
     onNavigate,
     children,
-    width = "max-w-[980px]",
 }: {
     eyebrow: string;
     title: string;
@@ -847,41 +812,41 @@ function MegaPanel({
     allLabel: string;
     onNavigate: () => void;
     children: React.ReactNode;
-    /** Panel width class; panels right-align under the nav. */
-    width?: string;
 }) {
     return (
-        <div className={`ml-auto w-full ${width} overflow-hidden rounded-xl border border-neutral-800 bg-surface-raised shadow-2xl shadow-black/50`}>
-            <div className="grid grid-cols-[200px_1fr]">
-                <div className="flex flex-col border-r border-neutral-800 bg-surface p-5">
+        <div className="w-full border-b border-neutral-800 bg-surface shadow-[0_30px_60px_-20px_rgba(0,0,0,0.7)]">
+            <div className="mx-auto grid max-w-375 grid-cols-[240px_1fr] gap-8 px-6 sm:px-10 md:px-14 lg:px-20">
+                <div className="flex flex-col border-r border-neutral-800 py-7 pr-8">
                     <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-neutral-500">{eyebrow}</p>
-                    <p className="mt-1.5 text-base font-semibold text-white">{title}</p>
-                    <p className="mt-1.5 text-[12px] leading-relaxed text-neutral-400">{blurb}</p>
+                    <p className="mt-1.5 text-lg font-semibold text-white">{title}</p>
+                    <p className="mt-2 text-[13px] leading-relaxed text-neutral-400">{blurb}</p>
                     <Link
                         href={allHref}
                         onClick={onNavigate}
-                        className="mt-auto inline-flex w-fit items-center gap-1.5 pt-4 text-[12px] font-semibold text-white hover:text-neutral-300 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                        className="mt-auto inline-flex w-fit items-center gap-1.5 pt-5 text-[13px] font-semibold text-white hover:text-neutral-300 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                     >
                         {allLabel} <span aria-hidden>→</span>
                     </Link>
                 </div>
-                <div className="p-3">{children}</div>
+                <div className="py-5">{children}</div>
             </div>
-            <div className="flex items-center justify-between border-t border-neutral-800 px-5 py-2">
-                <Link
-                    href="/cincinnati-web-developer"
-                    onClick={onNavigate}
-                    className="text-[12px] text-neutral-500 hover:text-neutral-200 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
-                >
-                    Based in Cincinnati · Serving clients nationwide
-                </Link>
-                <Link
-                    href="/contact"
-                    onClick={onNavigate}
-                    className="rounded-md bg-white px-3 py-1 text-[12px] font-bold text-black hover:bg-neutral-200 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
-                >
-                    Schedule a call
-                </Link>
+            <div className="border-t border-neutral-800/70 bg-surface-raised">
+                <div className="mx-auto flex max-w-375 items-center justify-between px-6 py-2.5 sm:px-10 md:px-14 lg:px-20">
+                    <Link
+                        href="/cincinnati-web-developer"
+                        onClick={onNavigate}
+                        className="text-[12px] text-neutral-500 hover:text-neutral-200 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                    >
+                        Based in Cincinnati · Serving clients nationwide
+                    </Link>
+                    <Link
+                        href="/contact"
+                        onClick={onNavigate}
+                        className="rounded-md bg-white px-3 py-1 text-[12px] font-bold text-black hover:bg-neutral-200 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                    >
+                        Schedule a call
+                    </Link>
+                </div>
             </div>
         </div>
     );
