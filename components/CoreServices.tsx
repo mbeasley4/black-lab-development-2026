@@ -47,7 +47,7 @@ export default function CoreServices() {
                     </span>
                     <h2 className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-4">
                         Built Differently —<br/>
-                        <span className="text-neutral-400">Because It Is</span>
+                        <span className="text-neutral-500">Because It Is</span>
                     </h2>
                     <p className="text-lg text-neutral-400 max-w-xl">
                         This isn&apos;t a traditional agency model.

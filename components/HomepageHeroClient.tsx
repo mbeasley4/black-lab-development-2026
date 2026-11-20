@@ -234,7 +234,7 @@ const HomepageHeroClient = () => {
                   </motion.span>
                 </span>
                 <span className="block overflow-hidden pb-2">
-                  <motion.span className="block text-neutral-300" variants={maskLine(0.26)}>
+                  <motion.span className="block text-neutral-400" variants={maskLine(0.26)}>
                     Keep the Results.
                   </motion.span>
                 </span>

@@ -24,7 +24,7 @@ export default function CallToAction() {
                 <div className="mx-auto max-w-4xl text-center">
                     <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 pb-2 leading-[1.05]">
                         <span className="block text-white">If Your Website Isn&apos;t Driving Results,</span>
-                        <span className="block text-neutral-400">It&apos;s Holding You Back</span>
+                        <span className="block text-neutral-500">It&apos;s Holding You Back</span>
                     </h2>
 
                     <p className="text-lg text-neutral-300 max-w-2xl mx-auto mt-6 mb-12 leading-relaxed">

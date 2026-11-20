@@ -198,7 +198,7 @@ export default function CaseStudiesPage() {
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-5">
               {projects.length}+ Projects,{" "}
-              <span className="text-neutral-400">Shipped and Supported</span>
+              <span className="text-neutral-500">Shipped and Supported</span>
             </h2>
             <p className="text-lg text-neutral-400 leading-relaxed">
               15+ years building and maintaining production websites for manufacturers, healthcare providers, restaurants, and B2B platforms — on WordPress, Shopify, and custom Next.js builds.
@@ -225,7 +225,7 @@ export default function CaseStudiesPage() {
           Featured Work
         </span>
         <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white mb-4">
-          A Closer Look, <span className="text-neutral-400">With the Numbers</span>
+          A Closer Look, <span className="text-neutral-500">With the Numbers</span>
         </h2>
         <p className="text-lg text-neutral-400 leading-relaxed max-w-2xl">
           A handful of engagements broken down in detail — what was built, what changed, and what it produced.
@@ -282,7 +282,7 @@ export default function CaseStudiesPage() {
 
                 <h2 className="text-3xl md:text-4xl font-black tracking-tight leading-tight text-white mb-4">
                   Whole30 —{" "}
-                  <span className="text-neutral-400">High-Traffic Platform</span>{" "}
+                  <span className="text-neutral-500">High-Traffic Platform</span>{" "}
                   &amp; React Engineering
                 </h2>
                 <p className="text-neutral-400 text-sm md:text-base leading-relaxed mb-8 max-w-2xl">

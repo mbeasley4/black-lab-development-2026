@@ -46,7 +46,7 @@ export default function ProofStats() {
         <section className="w-full bg-black text-white py-20 border-t border-neutral-800 border-b border-b-neutral-800/60">
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 text-center">
                 <h2 className="text-lg md:text-xl uppercase tracking-[0.28em] text-neutral-300 mb-12">
-                    Trusted by <span className="text-neutral-400">growing businesses</span> and organizations
+                    Trusted by <span className="text-neutral-500">growing businesses</span> and organizations
                 </h2>
             </div>
             <div className="relative overflow-hidden">

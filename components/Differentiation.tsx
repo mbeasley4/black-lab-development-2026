@@ -23,7 +23,7 @@ export default function Differentiation() {
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white leading-[1.1]">
                            When Your Website<br/>
-                           <span className="text-neutral-400">Has to Perform</span>
+                           <span className="text-neutral-500">Has to Perform</span>
                         </h2>
 
                         <div className="group relative mt-10 aspect-[3/2] w-full overflow-hidden rounded-2xl border border-neutral-800/60">

@@ -87,7 +87,7 @@ export default function CaseStudies() {
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white">
                             Results, Not{" "}
-                            <span className="text-neutral-400">
+                            <span className="text-neutral-500">
                                 Brochures
                             </span>
                         </h2>

@@ -31,7 +31,7 @@ export default function Process() {
                             The Difference
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white leading-[1.1]">
-                            You Work Directly With the <span className="text-neutral-400">Person Doing the Work</span>
+                            You Work Directly With the <span className="text-neutral-500">Person Doing the Work</span>
                         </h2>
                     </div>
                     <div className="space-y-6">

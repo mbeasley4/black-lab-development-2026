@@ -59,7 +59,7 @@ export default function RevenueFramework() {
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-4">
                         <span className="text-white">For Businesses That </span>
-                        <span className="text-neutral-400">Depend on Their Website</span>
+                        <span className="text-neutral-500">Depend on Their Website</span>
                     </h2>
                     <p className="text-lg text-neutral-400 max-w-2xl leading-relaxed">
                         Whether you&apos;re a small business that needs a site built right, or an agency that needs a technical partner you can white-label — I build it.

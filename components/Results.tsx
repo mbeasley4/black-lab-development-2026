@@ -49,7 +49,7 @@ export default function Results() {
                             Selected Work
                         </span>
                         <h2 className="text-5xl md:text-6xl font-bold tracking-tight text-white leading-tight">
-                            Proof Over <span className="text-neutral-400">Promises</span>
+                            Proof Over <span className="text-neutral-500">Promises</span>
                         </h2>
                     </div>
                     <Link

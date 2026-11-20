@@ -41,7 +41,7 @@ export default function DemoSection() {
           </span>
           <h2 className="text-5xl font-extrabold tracking-tight text-white">
             Featured{" "}
-            <span className="text-neutral-400">
+            <span className="text-neutral-500">
               Demo Projects
             </span>
           </h2>

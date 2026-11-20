@@ -24,7 +24,7 @@ export default function PageHero({
     return (
       <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-white leading-tight text-balance">
         {parts[0]}
-        <span className="text-neutral-300">{titleHighlight}</span>
+        <span className="text-neutral-400">{titleHighlight}</span>
         {parts[1]}
       </h1>
     );

@@ -23,7 +23,7 @@ export default function NotFound() {
 
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-5 md:mb-6">
               <span className="block text-white">This page went</span>
-              <span className="block text-neutral-400">
+              <span className="block text-neutral-500">
                 off-leash.
               </span>
             </h2>

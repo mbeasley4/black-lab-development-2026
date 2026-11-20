@@ -354,7 +354,7 @@ export default async function ArticlePage({
                     </span>
                     <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
                       Related{" "}
-                      <span className="text-neutral-400 drop-shadow-[0_0_12px_rgba(34,211,238,0.6)]">
+                      <span className="text-neutral-500 drop-shadow-[0_0_12px_rgba(34,211,238,0.6)]">
                         Articles
                       </span>
                     </h2>
