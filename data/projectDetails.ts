@@ -1079,6 +1079,25 @@ export const projectDetails: ProjectDetail[] = [
         note: "Clinic, services, FAQs",
       },
     ],
+    // Google Search Console: first 6 weeks after the Oct 7, 2026 launch
+    // vs. the 6 weeks before. Revisit with 90-day data.
+    results: [
+      {
+        value: "#3.7",
+        label: "Avg. Position for “DEXA Scan Near Me”",
+        note: "Up from #14.5 in the 6 weeks before launch",
+      },
+      {
+        value: "38.5%",
+        label: "Click-Through Rate on “DexaFit Cincinnati”",
+        note: "Up from 26.7% in the 6 weeks before launch",
+      },
+      {
+        value: "+21%",
+        label: "Homepage Click-Through Rate",
+        note: "5.0% → 6.1% from Google search",
+      },
+    ],
     body: [
       {
         heading: "The Brief",
