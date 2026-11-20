@@ -226,11 +226,10 @@ export default function ManufacturingIndustryPage() {
       <FounderByline />
 
       <PageClose
-        title="Ready to Build a Website That Generates RFQs?"
-        bodyPrimary="Most manufacturing websites are digital brochures — they exist, but they don't generate qualified pipeline. That gap is fixable."
-        bodySecondary="Schedule a discovery call. I'll talk through exactly what's costing you leads and what it would take to fix it."
-        secondaryHref="/services/small-business-website-design"
-        secondaryLabel="View the Service Page"
+        title="Build a Website That Generates RFQs"
+        body="I'll show you what's costing you leads and what it takes to fix it."
+        secondaryHref="/work/global-environmental-products-wordpress-rebuild"
+        secondaryLabel="See a Manufacturing Project"
       />
     </main>
   );

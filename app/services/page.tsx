@@ -455,11 +455,10 @@ export default function ServicesPage() {
 
       {/* ================= CLOSE ================= */}
       <PageClose
-        title="No Roadmaps to Nowhere"
-        bodyPrimary="Not every problem is a rebuild. Not every slowdown needs a new framework. The best engineering decisions match the actual problem — not the fashionable solution, not the vendor pitch, not whatever worked at the last job."
-        bodySecondary="If you want someone who will dig in, tell you what's actually wrong, and do the work — not just draft a proposal — that's what these services are for."
+        title="Not Sure Where to Start?"
+        body="Tell me what isn't working, and I'll recommend the right fix — not the biggest project."
         secondaryHref="/work"
-        secondaryLabel="View Work"
+        secondaryLabel="View My Work"
       />
       </main>
     </>

@@ -7,6 +7,7 @@ import { readClient as client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import JsonLd from "@/components/JsonLd";
+import PageClose from "@/components/PageClose";
 import { portableTextComponents } from "@/components/PortableTextComponents";
 import { projects, type Project } from "@/data/projects";
 import { getProjectDetail, type DetailSection } from "@/data/projectDetails";
@@ -542,42 +543,12 @@ export default async function CaseStudyPage({
         </nav>
       )}
 
-      {/* ─── CTA ─────────────────────────────────────── */}
-      <section className="relative overflow-hidden py-24 border-t border-neutral-800">
-        <div className="absolute inset-0 bg-linear-to-br from-surface-raised via-neutral-950 to-surface" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
-
-        <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 text-center">
-          <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
-            Work With Us
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Ready to Build on a Better Foundation?
-          </h2>
-          <p className="text-xl text-neutral-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Start with a performance and conversion audit. I&apos;ll identify what&apos;s limiting your site — and what it would take to fix it.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-white text-black px-10 py-4 text-base font-semibold hover:bg-neutral-200 transition-colors duration-200 shadow-lg"
-            >
-              Start a Conversation
-            </Link>
-            <Link
-              href="/work"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-neutral-300 transition-colors duration-200"
-            >
-              View all work
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
-      </section>
+      <PageClose
+        title="Want Results Like These?"
+        body="Tell me about your project and I'll show you what it would take."
+        secondaryHref="/work"
+        secondaryLabel="View All Work"
+      />
     </main>
   );
 }

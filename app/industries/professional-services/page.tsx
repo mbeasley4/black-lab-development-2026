@@ -231,11 +231,10 @@ export default function ProfessionalServicesIndustryPage() {
       <FounderByline />
 
       <PageClose
-        title="Ready to Turn Your Website Into a Sales Asset?"
-        bodyPrimary="Most B2B websites describe what the firm does — they don't help prospects understand why it matters or make it easy to take the next step."
-        bodySecondary="I fix positioning, trust signals, and conversion architecture so your site actually generates pipeline."
+        title="Turn Your Website Into a Sales Asset"
+        body="Clearer positioning, stronger trust signals, and a site that generates pipeline."
         secondaryHref="/services/small-business-website-design"
-        secondaryLabel="View the Service Page"
+        secondaryLabel="Website Design Services"
       />
     </main>
   );

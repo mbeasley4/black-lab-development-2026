@@ -291,9 +291,8 @@ export default function IndustriesPage() {
 
       {/* ================= CLOSE ================= */}
       <PageClose
-        title="Industries Change. Bad Engineering Stays Bad."
-        bodyPrimary="The underlying problems look different in every sector, but they're usually the same problem: systems that weren't built to last, teams that inherited a mess, and platforms being asked to do more than they were designed for."
-        bodySecondary="Cross-industry experience means solving the actual problem — not just the one that matches your sector's standard playbook."
+        title="Don't See Your Industry?"
+        body="The fundamentals carry over: fast, credible sites built around how your buyers decide."
         secondaryHref="/services"
         secondaryLabel="Explore Services"
       />

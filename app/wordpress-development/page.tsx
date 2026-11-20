@@ -479,9 +479,8 @@ export default function WordPressDevelopmentPage() {
       <FounderByline />
 
       <PageClose
-        title="Work With a WordPress Development Partner That Builds It Right"
-        bodyPrimary="If your current site is slow, hard to manage, or limiting your growth — it's time for a better foundation. I build WordPress sites that perform, scale, and stay maintainable for years."
-        bodySecondary="No bloated themes. No page builders. Just clean, performant WordPress built the right way."
+        title="Need a WordPress Developer?"
+        body="Clean, fast, custom WordPress without page builders or plugin bloat."
         secondaryHref="/work"
         secondaryLabel="View My Work"
       />

@@ -220,11 +220,10 @@ export default function EducationIndustryPage() {
       <FounderByline />
 
       <PageClose
-        title="Building a Learning Platform or Enrollment-Driven Site?"
-        bodyPrimary="Education is one of the few industries where both design and technical execution matter equally — a beautiful site that can't handle enrollment traffic, or a fast platform that doesn't convert visitors into students, both fail."
-        bodySecondary="Start with a conversation about your specific requirements and enrollment goals."
-        secondaryHref="/contact"
-        secondaryLabel="Start a Conversation"
+        title="Planning an Enrollment or Learning Site?"
+        body="Share your enrollment goals and requirements, and I'll map out the right build."
+        secondaryHref="/work"
+        secondaryLabel="View My Work"
       />
     </main>
   );

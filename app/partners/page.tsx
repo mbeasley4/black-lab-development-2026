@@ -429,8 +429,7 @@ export default function PartnersPage() {
 
       <PageClose
         title="Let's Talk About Partnering"
-        bodyPrimary="Send me the project you're trying to staff — or just the shape of the work you keep turning away. I'll tell you whether I'm the right fit, what it would cost you at partner rates, and how fast I could start."
-        bodySecondary="NDA first if you need one. No pitch deck, no reseller program to enroll in, no minimum commitment. One senior engineer you can put on the work and take off it."
+        body="Send me the project you're trying to staff. NDA first if you need one."
         secondaryHref="/work"
         secondaryLabel="View My Work"
       />

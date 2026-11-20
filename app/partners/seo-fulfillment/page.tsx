@@ -341,8 +341,7 @@ export default function SeoFulfillmentPage() {
 
       <PageClose
         title="Send Me the Audit Nobody Has Implemented"
-        bodyPrimary="Your findings, your roadmap, your client's stack — I'll tell you what it takes to actually ship it, at a partner rate you can mark up and report as your own service line."
-        bodySecondary="NDA first if you need one. Strategy stays yours; I only write the code."
+        body="I'll scope what it takes to ship it, at a partner rate you can mark up."
         secondaryHref="/partners"
         secondaryLabel="Back to Partner Services"
       />

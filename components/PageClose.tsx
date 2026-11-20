@@ -1,20 +1,25 @@
 interface PageCloseProps {
   title: string;
-  bodyPrimary: string;
-  bodySecondary: string;
+  /** One short line (about 15 words). */
+  body: string;
   secondaryHref: string;
   secondaryLabel: string;
+  primaryHref?: string;
+  primaryLabel?: string;
 }
 
+// Closing call to action: a short headline, one line of copy, and two
+// actions. Keep it brief; the page above has already made the case.
 export default function PageClose({
   title,
-  bodyPrimary,
-  bodySecondary,
+  body,
   secondaryHref,
   secondaryLabel,
+  primaryHref = "/contact",
+  primaryLabel = "Schedule a Call",
 }: PageCloseProps) {
   return (
-    <section className="relative overflow-hidden border-t border-neutral-800 py-28">
+    <section className="relative overflow-hidden border-t border-neutral-800 py-20 md:py-24">
       {/* Background layers */}
       <div className="absolute inset-0">
         <div
@@ -29,30 +34,25 @@ export default function PageClose({
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-2xl md:text-5xl text-balance font-bold mb-6 text-white pb-1 leading-tight">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl md:text-4xl text-balance font-bold mb-4 text-white leading-tight">
             {title}
           </h2>
 
-          <p className="text-[#e5e7eb]/80 leading-relaxed mb-6">{bodyPrimary}</p>
+          <p className="text-lg text-neutral-300 leading-relaxed text-balance mb-8">{body}</p>
 
-          <p className="text-[#e5e7eb]/80 leading-relaxed mb-10">{bodySecondary}</p>
-
-          {/* CTA */}
-          <div className="flex flex-wrap justify-center items-center gap-6">
+          <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-4">
             <a
-              href="/contact"
-              className="group relative inline-flex items-center justify-center rounded-lg bg-white px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-black transition-all duration-300 hover:brightness-110 hover:shadow-xl hover:shadow-black/40 hover:scale-105"
+              href={primaryHref}
+              className="group inline-flex items-center justify-center gap-2 rounded-md bg-white px-7 py-3.5 text-sm font-bold text-black hover:bg-neutral-200 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
             >
-              Start a Conversation
-              <svg className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
+              {primaryLabel}
+              <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
             </a>
 
             <a
               href={secondaryHref}
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-white underline underline-offset-4 hover:text-neutral-300 transition-colors duration-200"
+              className="text-sm font-medium text-neutral-200 underline decoration-neutral-600 underline-offset-4 hover:text-white hover:decoration-white transition-colors duration-200"
             >
               {secondaryLabel}
             </a>

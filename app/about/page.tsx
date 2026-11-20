@@ -437,9 +437,8 @@ export default function AboutPage() {
 
       {/* ================= CLOSE ================= */}
       <PageClose
-        title="You'll Work Directly With Me"
-        bodyPrimary="No kickoff calls with someone who disappears after the contract is signed. No project managers relaying messages between you and the engineer. Just direct access to the person making the technical decisions and writing the code."
-        bodySecondary="If that sounds like what your project actually needs, I'd like to hear about it."
+        title="Work Directly With Me"
+        body="No account managers or handoffs — just the engineer who builds your site."
         secondaryHref="/services"
         secondaryLabel="See What I Do"
       />

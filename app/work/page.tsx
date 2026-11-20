@@ -342,10 +342,9 @@ export default function CaseStudiesPage() {
 
       <PageClose
         title="Ready to Be My Next Project?"
-        bodyPrimary="Every engagement is measured against real pipeline outcomes — qualified leads, conversion rates, and revenue attributed to the website."
-        bodySecondary="Start with an audit. I'll identify what's limiting your site and show you exactly what I'd fix."
-        secondaryHref="/contact"
-        secondaryLabel="Schedule a Call"
+        body="Start with an audit of your current site and a clear plan to fix it."
+        secondaryHref="/services"
+        secondaryLabel="Explore Services"
       />
     </main>
   );

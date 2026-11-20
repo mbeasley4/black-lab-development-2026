@@ -253,11 +253,10 @@ export default function TechnologyIndustryPage() {
       <FounderByline />
 
       <PageClose
-        title="Ready to Build a SaaS Website That Actually Converts?"
-        bodyPrimary="Most SaaS marketing sites describe the product well enough. The problem is they don't convert visitors into users efficiently — and they accumulate technical debt that makes every update slower."
-        bodySecondary="Schedule a discovery call. I'll talk through the conversion and performance gaps costing you signups."
+        title="Build a SaaS Site That Converts"
+        body="I'll find the performance and conversion gaps that are costing you signups."
         secondaryHref="/services/custom-web-development"
-        secondaryLabel="View Custom Development"
+        secondaryLabel="Custom Web Development"
       />
     </main>
   );

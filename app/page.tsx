@@ -5,7 +5,7 @@ import Differentiation from "@/components/Differentiation";
 import WhoIWorkWith from "@/components/WhoIWorkWith";
 import CoreServices from "@/components/CoreServices";
 import Results from "@/components/Results";
-import CallToAction from "@/components/CallToAction";
+import PageClose from "@/components/PageClose";
 import FounderStrip from "@/components/FounderStrip";
 import Testimonial from "@/components/Testimonial";
 import FaqSection from "@/components/FaqSection";
@@ -117,7 +117,17 @@ export default function Home() {
           faqs={faqSchema.mainEntity.map((faq) => ({ question: faq.name, answer: faq.acceptedAnswer.text }))}
         />
 
-        <CallToAction />
+        <PageClose
+
+          title="Let's Talk About Your Website"
+
+          body="Tell me what isn't working, and I'll show you what it would take to fix it."
+
+          secondaryHref="/work"
+
+          secondaryLabel="View My Work"
+
+        />
       </div>
     </>
   );

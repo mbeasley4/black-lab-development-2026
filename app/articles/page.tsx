@@ -289,11 +289,10 @@ export default async function ArticlesPage({
       </section>
       {/* ================= CLOSE ================= */}
       <PageClose
-        title="The Work That Actually Moves Systems Forward"
-        bodyPrimary="Not every problem needs a new stack. Not every engagement needs a full rebuild. Black Lab Development focuses on the work that actually moves systems forward — with clear tradeoffs and practical decisions."
-        bodySecondary="If you need a senior engineer who can step into complex systems, identify real issues, and execute effectively, these services are designed for that kind of work."
+        title="Need a Developer, Not Just Advice?"
+        body="I build and fix the kinds of systems these articles are about."
         secondaryHref="/work"
-        secondaryLabel="View Work"
+        secondaryLabel="View My Work"
       />
     </main>
   );

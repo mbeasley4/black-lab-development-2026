@@ -460,9 +460,8 @@ export default function CustomWebDevelopmentPage() {
         <FounderByline />
 
         <PageClose
-          title="Let&apos;s Build Something That Actually Works"
-          bodyPrimary="Start with a technical review of your current setup. I'll identify what's constraining you, what's worth keeping, and what it would take to build the right thing."
-          bodySecondary="No proposals first. No discovery calls that turn into sales decks. Just a direct assessment of where you are and what I&apos;d do about it."
+          title="Let's Build Something That Works"
+          body="Start with a technical review: what's holding you back and what's worth keeping."
           secondaryHref="/work"
           secondaryLabel="View My Work"
         />

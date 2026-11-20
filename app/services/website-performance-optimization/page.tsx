@@ -377,10 +377,9 @@ export default function WebsitePerformanceOptimizationPage() {
 
         <PageClose
           title="Start With a Free Performance Audit"
-          bodyPrimary="I&apos;ll review your current site against Core Web Vitals, real-user performance data, and technical SEO signals — and show you exactly what&apos;s costing you rankings and conversions."
-          bodySecondary="No proposals. No slides. Just a direct assessment of what&apos;s wrong and what I&apos;d do about it."
+          body="I'll show you what's slowing your site down and what it's costing you."
           secondaryHref="/work"
-          secondaryLabel="View Results"
+          secondaryLabel="View My Work"
         />
       </main>
     </>

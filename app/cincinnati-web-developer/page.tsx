@@ -365,9 +365,8 @@ export default function CincinnatiWebDeveloperPage() {
         />
 
         <PageClose
-          title="Let&apos;s Talk About Your Cincinnati Web Project"
-          bodyPrimary="Whether you need a new website, a conversion audit, or a performance overhaul — the conversation starts with a direct assessment of where you are and what it would take to get where you want to be."
-          bodySecondary="No boilerplate proposals. No discovery calls that turn into sales calls. Just an honest conversation about your project."
+          title="Talk to a Cincinnati Web Developer"
+          body="Tell me about your project and I'll give you an honest, direct assessment."
           secondaryHref="/about"
           secondaryLabel="About Michael Beasley"
         />

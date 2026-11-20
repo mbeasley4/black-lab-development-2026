@@ -563,9 +563,8 @@ export default function ShopifyDevelopmentPage() {
       <FounderByline />
 
       <PageClose
-        title="Work With a Shopify Developer Who Opens the Theme"
-        bodyPrimary="If your storefront is slow, your app bill keeps growing, or your theme can't do what your catalog needs — let's talk about what you're actually trying to sell and what's getting in the way."
-        bodySecondary="No page builder lock-in. No app for everything. Just clean Liquid, real integrations, and a developer who's accountable for how the store performs."
+        title="Need a Shopify Developer?"
+        body="Faster stores, fewer apps, and a theme built around your catalog."
         secondaryHref="/work"
         secondaryLabel="View My Work"
       />

@@ -492,9 +492,8 @@ export default function DrupalDevelopmentPage() {
       <FounderByline />
 
       <PageClose
-        title="Work With a Drupal Development Partner That Builds It Right"
-        bodyPrimary="If your current Drupal site is slow, over-moduled, or stuck on an outdated version — it's time for a better foundation. I build Drupal platforms that perform, scale, and stay maintainable for years."
-        bodySecondary="No contrib sprawl. No theme engine compromises. Just clean, performant Drupal built the right way."
+        title="Need a Drupal Developer?"
+        body="Clean, fast Drupal builds and upgrades without contrib sprawl."
         secondaryHref="/work"
         secondaryLabel="View My Work"
       />

@@ -392,8 +392,7 @@ export default function ConversionOptimizationPage() {
 
       <PageClose
         title="Start With a Conversion Audit"
-        bodyPrimary="I'll review your current site and show you exactly where leads are leaking — the specific pages, specific CTAs, and specific messages that are costing you pipeline."
-        bodySecondary="One focused engagement. Real findings. No proposals for things you don't need."
+        body="I'll show you exactly where your site is losing leads, and how to fix it."
         secondaryHref="/work"
         secondaryLabel="View My Work"
       />

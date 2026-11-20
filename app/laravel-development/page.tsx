@@ -555,9 +555,8 @@ export default function LaravelDevelopmentPage() {
       <FounderByline />
 
       <PageClose
-        title="Work With a Laravel Developer Who Builds for Production"
-        bodyPrimary="If your application needs clean integrations, reliable queue processing, and architecture that scales — not just a working prototype — let's talk about what you're building."
-        bodySecondary="No framework tourism. No tutorial-quality code. Just production-grade Laravel built by an engineer who's accountable for whether it runs."
+        title="Need a Laravel Developer?"
+        body="Clean integrations, reliable queues, and architecture built for production."
         secondaryHref="/work"
         secondaryLabel="View My Work"
       />

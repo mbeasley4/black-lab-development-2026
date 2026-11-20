@@ -134,13 +134,10 @@ export default function ContactPage() {
       <section className="relative overflow-hidden border-t border-neutral-900">
         {/* ================= CLOSE ================= */}
         <PageClose
-          title="Custom Web Development & Digital Strategy"
-          bodyPrimary="I provide custom web development, software engineering, SEO, and digital
-              platform optimization for organizations that need scalable, secure, and
-              maintainable solutions. Work ranges from WordPress and Shopify to custom
-              Laravel and headless architectures."
-          bodySecondary="If you need a senior engineer who combines technical leadership, business
-              insight, and hands-on execution — that's exactly what this is."
+          title="Not Ready to Talk Yet?"
+          body="Look through the work and services first, then reach out when you're ready."
+          primaryHref="/work"
+          primaryLabel="View My Work"
           secondaryHref="/services"
           secondaryLabel="Explore Services"
         />

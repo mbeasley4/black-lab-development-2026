@@ -362,9 +362,8 @@ export default function SmallBusinessWebsiteDesignPage() {
       <FounderByline />
 
       <PageClose
-        title="Ready for a Website That Actually Works for You?"
-        bodyPrimary="Start with a website audit. I'll go through your current site the way a customer would, and show you exactly where you're losing them — and what I'd do about it."
-        bodySecondary="No proposals to review. No 40-slide decks. Just a direct assessment of what's working, what isn't, and what it would cost to fix."
+        title="Ready for a Website That Works for You?"
+        body="Start with an audit: what's working, what isn't, and what it costs to fix."
         secondaryHref="/work"
         secondaryLabel="View My Work"
       />

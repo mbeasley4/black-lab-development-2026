@@ -357,8 +357,7 @@ export default function WhiteLabelWebDevelopmentPage() {
 
       <PageClose
         title="Send Me the Build You Need Staffed"
-        bodyPrimary="Brief, comps, or just the client's problem — I'll come back with a fixed scope, a real timeline, and a partner rate you can mark up. NDA first if you need one."
-        bodySecondary="No reseller program, no minimum volume, no pitch deck. One senior engineer you can put on the work and take off it."
+        body="Brief, comps, or just the problem — I'll reply with scope, timeline, and a partner rate."
         secondaryHref="/partners"
         secondaryLabel="Back to Partner Services"
       />
