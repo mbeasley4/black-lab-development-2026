@@ -444,6 +444,20 @@ export const projectDetails: ProjectDetail[] = [
         note: "OH · IN · KY",
       },
     ],
+    // Google Search Console data starts Oct 28, 2026 (no pre-launch baseline).
+    // Revisit with 90-day data for before/after comparisons.
+    results: [
+      {
+        value: "15.8K",
+        label: "Google Search Impressions",
+        note: "First 3 weeks in Search Console",
+      },
+      {
+        value: "682",
+        label: "Search Queries Showing the Site",
+        note: "Including “roofing companies cincinnati”",
+      },
+    ],
     body: [
       {
         heading: "The Brief",

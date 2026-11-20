@@ -90,6 +90,12 @@ const SERVICE_LINKS: { label: string; href: string }[] = [
 ];
 
 // Industries megamenu links (verticals only — "All industries" appears in the footer)
+// The two audiences from the homepage "Who It's For" section, shown above the industries.
+const AUDIENCE_LINKS: { label: string; href: string; description: string }[] = [
+    { label: "Small businesses", href: "/services/small-business-website-design", description: "Custom sites that bring in customers" },
+    { label: "Agency partners", href: "/partners", description: "White-label development under your brand" },
+];
+
 const INDUSTRY_LINKS: { label: string; href: string; description: string }[] = [
     { label: "Manufacturing", href: "/industries/manufacturing", description: "RFQs, catalogs & distributor portals" },
     { label: "B2B & professional services", href: "/industries/professional-services", description: "Long sales cycles, many buyers" },
@@ -242,11 +248,10 @@ export default function Header() {
     // Services is "active" for any /services/* or platform-specific service routes
     const servicesActive =
         pathname.startsWith("/services") || pathname === "/wordpress-development" || pathname === "/drupal-development" || pathname === "/laravel-development" || pathname === "/shopify-development";
-    const industriesActive = pathname.startsWith("/industries");
+    const industriesActive = pathname.startsWith("/industries") || pathname.startsWith("/partners");
 
     // Plain top-level links (after the Services + Industries menus)
     const plainNav = [
-        { label: "Partners", href: "/partners" },
         { label: "My Work", href: "/work" },
         { label: "Insights", href: "/articles" },
         { label: "About", href: "/about" },
@@ -407,20 +412,11 @@ export default function Header() {
                                 <div
                                     id="mobile-industries-panel"
                                     className="overflow-hidden transition-all duration-300 ease-out"
-                                    style={{ maxHeight: industriesExpanded ? `${(INDUSTRY_LINKS.length + 1) * 44 + 8}px` : "0px" }}
+                                    style={{ maxHeight: industriesExpanded ? `${(AUDIENCE_LINKS.length + INDUSTRY_LINKS.length + 1) * 44 + 8}px` : "0px" }}
                                 >
                                     <div className="ml-4 border-l border-neutral-800 pl-4 py-1 flex flex-col">
-                                        <Link
-                                            href="/industries"
-                                            onClick={closeDrawer}
-                                            className={`py-2 text-[14px] tracking-normal transition-colors duration-200 rounded-sm
-                                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70
-                                                ${pathname === "/industries" ? "text-white" : "text-[#a8a8a8] hover:text-white"}`}
-                                        >
-                                            All industries
-                                        </Link>
-                                        {INDUSTRY_LINKS.map((s) => {
-                                            const active = pathname === s.href;
+                                        {[...AUDIENCE_LINKS, ...INDUSTRY_LINKS].map((s) => {
+                                            const active = isActive(s.href);
                                             return (
                                                 <Link
                                                     key={s.label}
@@ -434,6 +430,15 @@ export default function Header() {
                                                 </Link>
                                             );
                                         })}
+                                        <Link
+                                            href="/industries"
+                                            onClick={closeDrawer}
+                                            className={`py-2 text-[14px] tracking-normal transition-colors duration-200 rounded-sm
+                                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70
+                                                ${pathname === "/industries" ? "text-white" : "text-[#a8a8a8] hover:text-white"}`}
+                                        >
+                                            All industries
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -726,25 +731,35 @@ export default function Header() {
                             >
                                 <MegaPanel
                                     eyebrow="Who It&apos;s For"
-                                    title="Industries"
-                                    blurb="Sites shaped around how each industry's buyers decide."
+                                    title="Who I Work With"
+                                    blurb="Small businesses, agency partners, and the industries I know best."
                                     width="max-w-[720px]"
                                     allHref="/industries"
                                     allLabel="All industries"
                                     onNavigate={() => setOpenMega(null)}
                                 >
+                                    {[
+                                        { label: "Clients", items: AUDIENCE_LINKS },
+                                        { label: "Industries", items: INDUSTRY_LINKS },
+                                    ].map((group, gi) => (
+                                    <div key={group.label} className={gi > 0 ? "mt-2 border-t border-white/[0.06] pt-2" : ""}>
+                                    <h3 className="px-2.5 pt-1.5 pb-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-neutral-500">
+                                        {group.label}
+                                    </h3>
                                     <div className="grid grid-cols-2 gap-x-2">
-                                        {INDUSTRY_LINKS.map((s) => (
+                                        {group.items.map((s) => (
                                             <MenuLink
                                                 key={s.href}
                                                 href={s.href}
                                                 title={s.label}
                                                 description={s.description}
-                                                active={pathname === s.href}
+                                                active={isActive(s.href)}
                                                 onNavigate={() => setOpenMega(null)}
                                             />
                                         ))}
                                     </div>
+                                    </div>
+                                    ))}
                                 </MegaPanel>
                             </div>
                         </div>
