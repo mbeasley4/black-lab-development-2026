@@ -18,12 +18,12 @@ const DEV_SERVICES: ServiceCard[] = [
     {
         title: "Custom web development",
         href: "/services/custom-web-development",
-        description: "Next.js, headless & full-stack builds engineered for speed.",
+        description: "Next.js & full-stack builds",
     },
     {
         title: "Small business websites",
         href: "/services/small-business-website-design",
-        description: "Professional sites for growing SMBs — no templates, no page-builder bloat.",
+        description: "Custom sites, no templates",
     },
 ];
 
@@ -31,22 +31,22 @@ const PLATFORM_SERVICES: ServiceCard[] = [
     {
         title: "WordPress development",
         href: "/wordpress-development",
-        description: "Custom themes, no page builders — clean and maintainable.",
+        description: "Custom themes, no page builders",
     },
     {
         title: "Drupal development",
         href: "/drupal-development",
-        description: "Structured content modeling, custom modules, no contrib bloat.",
+        description: "Content models & custom modules",
     },
     {
         title: "Laravel development",
         href: "/laravel-development",
-        description: "APIs, integrations & custom platforms — built for production.",
+        description: "APIs, integrations & platforms",
     },
     {
         title: "Shopify development",
         href: "/shopify-development",
-        description: "Custom Liquid themes, apps & integrations — no app bloat.",
+        description: "Custom Liquid themes & apps",
     },
 ];
 
@@ -54,12 +54,12 @@ const OPT_SERVICES: ServiceCard[] = [
     {
         title: "Conversion optimization",
         href: "/services/conversion-optimization",
-        description: "Turn more of your existing traffic into qualified leads.",
+        description: "More leads from current traffic",
     },
     {
         title: "Performance optimization",
         href: "/services/website-performance-optimization",
-        description: "Core Web Vitals, sub-second loads & technical SEO.",
+        description: "Core Web Vitals & technical SEO",
     },
 ];
 
@@ -78,12 +78,12 @@ const SERVICE_LINKS: { label: string; href: string }[] = [
 
 // Industries megamenu links (verticals only — "All industries" appears in the footer)
 const INDUSTRY_LINKS: { label: string; href: string; description: string }[] = [
-    { label: "Manufacturing", href: "/industries/manufacturing", description: "RFQ generation, distributor portals, product catalogs." },
-    { label: "B2B & professional services", href: "/industries/professional-services", description: "Complex sales cycles, multiple decision makers." },
-    { label: "Healthcare", href: "/industries/healthcare", description: "Patient acquisition, booking integration, WCAG compliance." },
-    { label: "SaaS & technology", href: "/industries/technology", description: "Product-led growth, developer docs, conversion architecture." },
-    { label: "Ecommerce & DTC", href: "/industries/ecommerce", description: "Shopify, WooCommerce, headless builds, AOV optimization." },
-    { label: "Education & training", href: "/industries/education", description: "Enrollment optimization, LMS integration, accessible design." },
+    { label: "Manufacturing", href: "/industries/manufacturing", description: "RFQs, catalogs & distributor portals" },
+    { label: "B2B & professional services", href: "/industries/professional-services", description: "Long sales cycles, many buyers" },
+    { label: "Healthcare", href: "/industries/healthcare", description: "Patient booking & WCAG compliance" },
+    { label: "SaaS & technology", href: "/industries/technology", description: "Product-led growth & developer docs" },
+    { label: "Ecommerce & DTC", href: "/industries/ecommerce", description: "Shopify, headless & higher AOV" },
+    { label: "Education & training", href: "/industries/education", description: "Enrollment, LMS & accessible design" },
 ];
 
 export default function Header() {
@@ -546,9 +546,9 @@ export default function Header() {
                             >
                                 <span
                                     className={`transition-all duration-300 ${
-                                        servicesActive
+                                        servicesActive || openMega === "services"
                                             ? "text-white"
-                                            : "text-neutral-300 group-hover:text-white"
+                                            : "text-neutral-400 group-hover:text-neutral-200"
                                     }`}
                                 >
                                     What I Build
@@ -559,8 +559,8 @@ export default function Header() {
                                         ${servicesActive
                                             ? "scale-x-100 bg-white"
                                             : openMega === "services"
-                                                ? "scale-x-100 bg-neutral-500"
-                                                : "scale-x-0 bg-neutral-500 group-hover:scale-x-100"
+                                                ? "scale-x-100 bg-white/50"
+                                                : "scale-x-0 bg-white/50 group-hover:scale-x-100"
                                         }`}
                                 />
                             </Link>
@@ -572,7 +572,7 @@ export default function Header() {
                                 onMouseEnter={() => handleMegaEnter("services")}
                                 onMouseLeave={handleMegaLeave}
                                 style={{ top: HEADER_HEIGHT }}
-                                className={`fixed left-1/2 -translate-x-1/2 w-full max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 pt-4
+                                className={`fixed left-1/2 -translate-x-1/2 w-full max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 pt-2
                                     transition-all duration-200 ease-out origin-top
                                     ${openMega === "services"
                                         ? "opacity-100 translate-y-0 pointer-events-auto"
@@ -582,19 +582,19 @@ export default function Header() {
                                 <MegaPanel
                                     eyebrow="What I Build"
                                     title="Services"
-                                    blurb="Custom builds on the platform that fits, then the optimization work that makes them pay off."
+                                    blurb="Custom builds on the right platform, tuned to perform."
                                     allHref="/services"
                                     allLabel="All services"
                                     onNavigate={() => setOpenMega(null)}
                                 >
-                                    <div className="grid grid-cols-3 gap-x-4">
+                                    <div className="grid grid-cols-3 gap-x-2">
                                         {[
                                             { label: "Development", items: DEV_SERVICES },
                                             { label: "Platforms", items: PLATFORM_SERVICES },
                                             { label: "Optimization", items: OPT_SERVICES },
                                         ].map((group) => (
                                             <div key={group.label}>
-                                                <h3 className="px-3 pt-2 pb-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-neutral-500">
+                                                <h3 className="px-2.5 pt-1.5 pb-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-neutral-500">
                                                     {group.label}
                                                 </h3>
                                                 {group.items.map((card) => (
@@ -629,9 +629,9 @@ export default function Header() {
                             >
                                 <span
                                     className={`transition-all duration-300 ${
-                                        industriesActive
+                                        industriesActive || openMega === "industries"
                                             ? "text-white"
-                                            : "text-neutral-300 group-hover:text-white"
+                                            : "text-neutral-400 group-hover:text-neutral-200"
                                     }`}
                                 >
                                     Who It&apos;s For
@@ -642,8 +642,8 @@ export default function Header() {
                                         ${industriesActive
                                             ? "scale-x-100 bg-white"
                                             : openMega === "industries"
-                                                ? "scale-x-100 bg-neutral-500"
-                                                : "scale-x-0 bg-neutral-500 group-hover:scale-x-100"
+                                                ? "scale-x-100 bg-white/50"
+                                                : "scale-x-0 bg-white/50 group-hover:scale-x-100"
                                         }`}
                                 />
                             </Link>
@@ -655,7 +655,7 @@ export default function Header() {
                                 onMouseEnter={() => handleMegaEnter("industries")}
                                 onMouseLeave={handleMegaLeave}
                                 style={{ top: HEADER_HEIGHT }}
-                                className={`fixed left-1/2 -translate-x-1/2 w-full max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 pt-4
+                                className={`fixed left-1/2 -translate-x-1/2 w-full max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 pt-2
                                     transition-all duration-200 ease-out origin-top
                                     ${openMega === "industries"
                                         ? "opacity-100 translate-y-0 pointer-events-auto"
@@ -665,12 +665,13 @@ export default function Header() {
                                 <MegaPanel
                                     eyebrow="Who It&apos;s For"
                                     title="Industries"
-                                    blurb="Websites shaped around how buyers in each industry research, compare and get in touch."
+                                    blurb="Sites shaped around how each industry's buyers decide."
+                                    width="max-w-[720px]"
                                     allHref="/industries"
                                     allLabel="All industries"
                                     onNavigate={() => setOpenMega(null)}
                                 >
-                                    <div className="grid grid-cols-2 gap-x-4">
+                                    <div className="grid grid-cols-2 gap-x-2">
                                         {INDUSTRY_LINKS.map((s) => (
                                             <MenuLink
                                                 key={s.href}
@@ -695,7 +696,7 @@ export default function Header() {
                                         className={`transition-all duration-300 ${
                                             active
                                                 ? "text-white"
-                                                : "text-neutral-300 group-hover:text-white"
+                                                : "text-neutral-400 group-hover:text-neutral-200"
                                         }`}
                                     >
                                         {item.label}
@@ -704,7 +705,7 @@ export default function Header() {
                                         className={`absolute left-0 -bottom-1 h-0.5 w-full origin-left transition-all duration-300
                                             ${active
                                                 ? "scale-x-100 bg-white"
-                                                : "scale-x-0 bg-neutral-500 group-hover:scale-x-100"
+                                                : "scale-x-0 bg-white/50 group-hover:scale-x-100"
                                             }`}
                                     />
                                 </Link>
@@ -760,6 +761,7 @@ function MegaPanel({
     allLabel,
     onNavigate,
     children,
+    width = "max-w-[980px]",
 }: {
     eyebrow: string;
     title: string;
@@ -768,25 +770,27 @@ function MegaPanel({
     allLabel: string;
     onNavigate: () => void;
     children: React.ReactNode;
+    /** Panel width class; panels right-align under the nav. */
+    width?: string;
 }) {
     return (
-        <div className="overflow-hidden rounded-xl border border-neutral-800 bg-surface-raised shadow-2xl shadow-black/50">
-            <div className="grid grid-cols-[240px_1fr]">
-                <div className="flex flex-col border-r border-neutral-800 bg-surface p-6">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-neutral-500">{eyebrow}</p>
-                    <p className="mt-2 text-lg font-semibold text-white">{title}</p>
-                    <p className="mt-2 text-[13px] leading-relaxed text-neutral-400">{blurb}</p>
+        <div className={`ml-auto w-full ${width} overflow-hidden rounded-xl border border-neutral-800 bg-surface-raised shadow-2xl shadow-black/50`}>
+            <div className="grid grid-cols-[200px_1fr]">
+                <div className="flex flex-col border-r border-neutral-800 bg-surface p-5">
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-neutral-500">{eyebrow}</p>
+                    <p className="mt-1.5 text-base font-semibold text-white">{title}</p>
+                    <p className="mt-1.5 text-[12px] leading-relaxed text-neutral-400">{blurb}</p>
                     <Link
                         href={allHref}
                         onClick={onNavigate}
-                        className="mt-auto inline-flex w-fit items-center gap-1.5 pt-6 text-[13px] font-semibold text-white hover:text-neutral-300 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                        className="mt-auto inline-flex w-fit items-center gap-1.5 pt-4 text-[12px] font-semibold text-white hover:text-neutral-300 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                     >
                         {allLabel} <span aria-hidden>→</span>
                     </Link>
                 </div>
-                <div className="p-4">{children}</div>
+                <div className="p-3">{children}</div>
             </div>
-            <div className="flex items-center justify-between border-t border-neutral-800 px-6 py-3">
+            <div className="flex items-center justify-between border-t border-neutral-800 px-5 py-2">
                 <Link
                     href="/cincinnati-web-developer"
                     onClick={onNavigate}
@@ -797,7 +801,7 @@ function MegaPanel({
                 <Link
                     href="/contact"
                     onClick={onNavigate}
-                    className="rounded-md bg-white px-3.5 py-1.5 text-[12px] font-bold text-black hover:bg-neutral-200 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                    className="rounded-md bg-white px-3 py-1 text-[12px] font-bold text-black hover:bg-neutral-200 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                 >
                     Schedule a call
                 </Link>
@@ -824,15 +828,27 @@ function MenuLink({
             href={href}
             onClick={onNavigate}
             aria-current={active ? "page" : undefined}
-            className={`group/item block rounded-lg px-3 py-2.5 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 ${
-                active ? "bg-white/[0.06]" : "hover:bg-white/[0.05]"
+            className={`group/item relative block rounded-md py-1.5 pl-3.5 pr-2.5 transition-colors duration-150
+                before:absolute before:left-1 before:top-2 before:bottom-2 before:w-0.5 before:rounded-full before:bg-white before:transition-all before:duration-200
+                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 ${
+                active
+                    ? "bg-white/[0.08] before:opacity-100"
+                    : "before:scale-y-0 before:opacity-0 hover:bg-white/[0.07] hover:before:scale-y-100 hover:before:opacity-70 focus-visible:bg-white/[0.07]"
             }`}
         >
-            <span className="flex items-center gap-2 text-[13px] font-medium text-neutral-100 group-hover/item:text-white">
+            <span className={`flex items-center gap-2 whitespace-nowrap text-[13px] font-medium ${active ? "text-white" : "text-neutral-200 group-hover/item:text-white"}`}>
                 {title}
-                {active && <span className="h-1.5 w-1.5 rounded-full bg-neutral-400" aria-hidden />}
+                {active ? (
+                    <span className="ml-auto shrink-0 rounded-sm bg-white/10 px-1 py-px text-[8px] font-semibold uppercase tracking-wider text-neutral-300">
+                        Current
+                    </span>
+                ) : (
+                    <span aria-hidden className="ml-auto -translate-x-1 text-neutral-400 opacity-0 transition-all duration-200 group-hover/item:translate-x-0 group-hover/item:opacity-100">
+                        →
+                    </span>
+                )}
             </span>
-            <span className="mt-0.5 block text-[12px] leading-relaxed text-neutral-500 group-hover/item:text-neutral-400">
+            <span className={`mt-0.5 block truncate text-[12px] leading-snug ${active ? "text-neutral-400" : "text-neutral-500 group-hover/item:text-neutral-400"}`}>
                 {description}
             </span>
         </Link>
