@@ -4,7 +4,7 @@ import PageClose from "@/components/PageClose";
 import JsonLd from "@/components/JsonLd";
 import WorkShowcase from "@/components/WorkShowcase";
 import { projects } from "@/data/projects";
-import { client } from "@/sanity/lib/client";
+import { readClient as client } from "@/sanity/lib/client";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const revalidate = 3600;

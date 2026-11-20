@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { PortableText } from "next-sanity";
 import Link from "next/link";
 import Image from "next/image";
-import { client } from "@/sanity/lib/client";
+import { readClient as client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import JsonLd from "@/components/JsonLd";
