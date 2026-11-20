@@ -8,19 +8,19 @@ import JsonLd from "@/components/JsonLd";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Web Development for B2B, Manufacturing & Ecommerce",
+  title: "Web Design & Development by Industry",
   description:
     "Industry-specific website development for manufacturing, B2B, and ecommerce brands — built for technical buyers and real business outcomes.",
   alternates: { canonical: "/industries" },
   openGraph: {
-    title: "Web Development for B2B, Manufacturing & Ecommerce",
+    title: "Web Design & Development by Industry | Black Lab Dev",
     description:
       "Industry-specific website development for manufacturing, B2B, and ecommerce brands — built for technical buyers and real business outcomes.",
     url: "/industries",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Web Development for B2B, Manufacturing & Ecommerce",
+    title: "Web Design & Development by Industry | Black Lab Dev",
     description:
       "Industry-specific website development for manufacturing, B2B, and ecommerce brands — built for technical buyers and real business outcomes.",
     images: [DEFAULT_OG_IMAGE.url],
@@ -161,13 +161,13 @@ const itemListSchema = {
 
 export default function IndustriesPage() {
   return (
-    <main className="w-full bg-[#0b0b0c] text-white">
+    <main className="w-full bg-surface text-white">
       <JsonLd data={[webPageSchema, itemListSchema]} />
       {/* ================= HERO ================= */}
       <PageHero
         label="Industries"
-        title="Every Industry Sets Its Own Non-Negotiables"
-        titleHighlight="Its Own Non-Negotiables"
+        title="Web Design and Development by Industry"
+        titleHighlight="by Industry"
         description="I've built and fixed websites across industries where performance and reliability aren't optional — regulated fields, high-traffic platforms, and systems nobody else wanted to touch."
         backgroundImage="/images/industries-hero-bg.jpg"
         badges={["Regulated environments", "High-traffic systems", "Legacy nightmares survived"]}
@@ -179,27 +179,25 @@ export default function IndustriesPage() {
         <div
           className="absolute inset-0 pointer-events-none opacity-15"
           style={{
-            backgroundImage: "radial-gradient(circle, rgba(227,245,68,0.20) 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px)",
             backgroundSize: "44px 44px",
           }}
         />
 
         {/* Ambient glows */}
-        <div className="absolute top-20 -left-40 w-175 h-175 bg-volt-500/8 rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute bottom-20 -right-40 w-150 h-150 bg-volt-600/8 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           {/* Section header */}
           <div className="flex items-center gap-6 mb-6 md:mb-9">
             <div>
-              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono drop-shadow-[0_0_12px_rgba(227,245,68,0.7)]">
+              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-white font-mono">
                 // Industries
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-white">
                 Industries Served
               </h2>
             </div>
-            <div className="flex-1 h-px bg-linear-to-r from-volt-500/60 via-volt-500/20 to-transparent" />
+            <div className="flex-1 h-px bg-linear-to-r from-white/10 via-white/10 to-transparent" />
           </div>
 
           <div className="space-y-0">
@@ -208,13 +206,13 @@ export default function IndustriesPage() {
                 key={industry.title}
                 className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center py-6 md:py-9 relative ${
                   index < industries.length - 1
-                    ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-linear-to-r after:from-transparent after:via-volt-500/20 after:to-transparent"
+                    ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-linear-to-r after:from-transparent after:via-white/7 after:to-transparent"
                     : ""
                 }`}
               >
                 {/* Giant ghost number */}
                 <div
-                  className={`absolute text-[18rem] md:text-[22rem] font-black font-mono text-volt-500/3 pointer-events-none leading-none select-none top-0 ${
+                  className={`absolute text-[18rem] md:text-[22rem] font-black font-mono text-white/[0.06] pointer-events-none leading-none select-none top-0 ${
                     index % 2 === 1 ? "-right-4 text-right" : "-left-4"
                   }`}
                   aria-hidden="true"
@@ -225,10 +223,10 @@ export default function IndustriesPage() {
                 {/* Text */}
                 <div className={`max-w-xl relative ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                   <div className="flex items-center gap-4 mb-6">
-                    <span className="text-5xl font-black font-mono text-volt-500/20 leading-none tracking-tighter">
+                    <span className="text-5xl font-black font-mono text-white/10 leading-none tracking-tighter">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <div className="h-px w-14 bg-linear-to-r from-volt-500/60 to-volt-500/10 shadow-[0_0_10px_rgba(227,245,68,0.4)]" />
+                    <div className="h-px w-14 bg-linear-to-r from-white/10 to-white/10" />
                   </div>
 
                   <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-snug text-white">
@@ -241,7 +239,7 @@ export default function IndustriesPage() {
                   {industry.href && (
                     <Link
                       href={industry.href}
-                      className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-volt-500 hover:text-volt-400 transition-colors duration-200"
+                      className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-neutral-300 transition-colors duration-200"
                     >
                       Explore this vertical
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -253,8 +251,7 @@ export default function IndustriesPage() {
 
                 {/* Image */}
                 <div
-                  className={`group relative h-95 w-full rounded-xl overflow-hidden border border-volt-500/20 shadow-[0_0_50px_rgba(227,245,68,0.08)] transition-all duration-500 hover:border-volt-500/50 hover:shadow-[0_0_100px_rgba(227,245,68,0.20)] ${
-                    index % 2 === 1 ? "lg:order-1" : ""
+                  className={`group relative h-95 w-full rounded-xl overflow-hidden border border-neutral-800 transition-all duration-500 hover:border-neutral-500 hover:shadow-[0_0_100px_rgba(255,255,255,0.1)] ${ index % 2 === 1 ?"lg:order-1" : ""
                   }`}
                 >
                   <Image
@@ -263,23 +260,23 @@ export default function IndustriesPage() {
                     fill
                     className="object-cover opacity-65 group-hover:opacity-90 group-hover:scale-[1.05] transition-all duration-700"
                   />
-                  <div className="absolute inset-0 bg-linear-to-br from-black/65 via-black/20 to-volt-900/10 group-hover:to-volt-900/25 transition-all duration-500" />
+                  <div className="absolute inset-0 bg-linear-to-br from-black/65 via-black/20 to-white/10 group-hover:to-white/5 transition-all duration-500" />
                   <div
                     className="absolute inset-0 opacity-[0.08] pointer-events-none"
                     style={{
                       backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.5) 2px, rgba(0,0,0,0.5) 4px)",
                     }}
                   />
-                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent group-hover:via-volt-500/80 transition-all duration-500" />
-                  <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/15 to-transparent group-hover:via-volt-500/50 transition-all duration-500" />
-                  <div className="absolute top-0 right-0 w-40 h-40 bg-volt-500/10 blur-3xl rounded-full group-hover:bg-volt-500/25 transition-all duration-500" />
-                  <div className="absolute bottom-0 left-0 w-28 h-28 bg-volt-600/8 blur-2xl rounded-full group-hover:bg-volt-500/20 transition-all duration-500" />
-                  <div className="absolute top-3 left-3 w-5 h-5 border-t-2 border-l-2 border-volt-500/40 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
-                  <div className="absolute top-3 right-3 w-5 h-5 border-t-2 border-r-2 border-volt-500/40 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
-                  <div className="absolute bottom-3 left-3 w-5 h-5 border-b-2 border-l-2 border-volt-500/40 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
-                  <div className="absolute bottom-3 right-3 w-5 h-5 border-b-2 border-r-2 border-volt-500/40 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-white/27 transition-all duration-500" />
+                  <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-white/17 transition-all duration-500" />
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-white/[0.04] blur-3xl rounded-full group-hover:bg-white/25 transition-all duration-500" />
+                  <div className="absolute bottom-0 left-0 w-28 h-28 bg-white/[0.04] blur-2xl rounded-full group-hover:bg-white/20 transition-all duration-500" />
+                  <div className="absolute top-3 left-3 w-5 h-5 border-t-2 border-l-2 border-neutral-800 group-hover:border-neutral-500 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute top-3 right-3 w-5 h-5 border-t-2 border-r-2 border-neutral-800 group-hover:border-neutral-500 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute bottom-3 left-3 w-5 h-5 border-b-2 border-l-2 border-neutral-800 group-hover:border-neutral-500 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute bottom-3 right-3 w-5 h-5 border-b-2 border-r-2 border-neutral-800 group-hover:border-neutral-500 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
                   <div className="absolute bottom-5 left-5 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-400">
-                    <span className="text-xs font-mono tracking-[0.3em] uppercase text-volt-400 drop-shadow-[0_0_12px_rgba(227,245,68,0.9)]">
+                    <span className="text-xs font-mono tracking-[0.2em] uppercase text-neutral-400">
                       {industry.title}
                     </span>
                   </div>
@@ -294,9 +291,8 @@ export default function IndustriesPage() {
 
       {/* ================= CLOSE ================= */}
       <PageClose
-        title="Industries Change. Bad Engineering Stays Bad."
-        bodyPrimary="The underlying problems look different in every sector, but they're usually the same problem: systems that weren't built to last, teams that inherited a mess, and platforms being asked to do more than they were designed for."
-        bodySecondary="Cross-industry experience means solving the actual problem — not just the one that matches your sector's standard playbook."
+        title="Don't See Your Industry?"
+        body="The fundamentals carry over: fast, credible sites built around how your buyers decide."
         secondaryHref="/services"
         secondaryLabel="Explore Services"
       />

@@ -13,8 +13,8 @@ function PortableTextTable({ value }: { value: TableValue }) {
 
     return (
         <div className="not-prose my-8">
-            <p className="mb-2 text-xs text-slate-500 sm:hidden">Swipe to see all columns →</p>
-            <div className="overflow-x-auto rounded-lg border border-slate-800">
+            <p className="mb-2 text-xs text-neutral-400 sm:hidden">Swipe to see all columns →</p>
+            <div className="overflow-x-auto rounded-lg border border-neutral-800">
                 <table className="w-full min-w-[640px] table-fixed border-collapse text-sm">
                     <colgroup>
                         {header.cells?.map((_, i) => (
@@ -22,13 +22,13 @@ function PortableTextTable({ value }: { value: TableValue }) {
                         ))}
                     </colgroup>
                     <thead>
-                        <tr className="bg-slate-900/60">
+                        <tr className="bg-neutral-900/60">
                             {header.cells?.map((cell, i) => (
                                 <th
                                     key={i}
-                                    className={`border-b border-slate-800 px-3 py-2.5 font-semibold text-white ${
+                                    className={`border-b border-neutral-800 px-3 py-2.5 font-semibold text-white ${
                                         i === 0
-                                            ? "sticky left-0 z-10 bg-slate-900 text-left shadow-[2px_0_4px_rgba(0,0,0,0.3)]"
+                                            ? "sticky left-0 z-10 bg-neutral-900 text-left shadow-[2px_0_4px_rgba(0,0,0,0.3)]"
                                             : "text-center"
                                     }`}
                                 >
@@ -39,13 +39,13 @@ function PortableTextTable({ value }: { value: TableValue }) {
                     </thead>
                     <tbody>
                         {body.map((row, i) => (
-                            <tr key={i} className="group even:bg-slate-900/30">
+                            <tr key={i} className="group even:bg-neutral-900/30">
                                 {row.cells?.map((cell, j) => (
                                     <td
                                         key={j}
-                                        className={`border-b border-slate-800/60 px-3 py-2.5 text-slate-300 ${
+                                        className={`border-b border-neutral-800/60 px-3 py-2.5 text-neutral-300 ${
                                             j === 0
-                                                ? "sticky left-0 z-10 bg-[#0b0b0c] text-left font-medium text-white shadow-[2px_0_4px_rgba(0,0,0,0.3)] group-even:bg-slate-900/30"
+                                                ? "sticky left-0 z-10 bg-surface text-left font-medium text-white shadow-[2px_0_4px_rgba(0,0,0,0.3)] group-even:bg-neutral-900/30"
                                                 : "text-center"
                                         }`}
                                     >

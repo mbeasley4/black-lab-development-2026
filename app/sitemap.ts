@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { client } from "@/sanity/lib/client";
+import { projects } from "@/data/projects";
 
 const BASE_URL = "https://blacklabdev.com";
 
@@ -40,7 +41,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/industries/technology`, changeFrequency: "monthly", priority: 0.75 },
     { url: `${BASE_URL}/industries/ecommerce`, changeFrequency: "monthly", priority: 0.75 },
     { url: `${BASE_URL}/industries/education`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE_URL}/case-studies`, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${BASE_URL}/work`, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE_URL}/articles`, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE_URL}/contact`, changeFrequency: "yearly", priority: 0.6 },
     { url: `${BASE_URL}/wordpress-development`, changeFrequency: "monthly", priority: 0.7 },
@@ -53,8 +54,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  const caseStudyRoutes: MetadataRoute.Sitemap = caseStudySlugs.map((slug) => ({
-    url: `${BASE_URL}/case-studies/${slug}`,
+  // Every portfolio project has a detail page, published in Sanity or not.
+  const allCaseStudySlugs = [...new Set([...caseStudySlugs, ...projects.flatMap((p) => (p.slug ? [p.slug] : []))])];
+  const caseStudyRoutes: MetadataRoute.Sitemap = allCaseStudySlugs.map((slug) => ({
+    url: `${BASE_URL}/work/${slug}`,
     changeFrequency: "monthly",
     priority: 0.7,
   }));

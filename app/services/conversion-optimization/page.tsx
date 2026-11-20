@@ -10,19 +10,19 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Website Conversion Optimization | More Leads, Better Results",
+  title: "Website Conversion Rate Optimization",
   description:
     "Fix what's stopping your website from converting. Better structure, clearer messaging, and smarter CTAs — measured before and after with real data.",
   alternates: { canonical: "/services/conversion-optimization" },
   openGraph: {
-    title: "Website Conversion Optimization | More Leads, Better Results",
+    title: "Website Conversion Rate Optimization | Black Lab Dev",
     description:
       "Fix what's stopping your website from converting. Better structure, clearer messaging, and smarter CTAs — measured before and after with real data.",
     url: "/services/conversion-optimization",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Website Conversion Optimization | More Leads, Better Results",
+    title: "Website Conversion Rate Optimization | Black Lab Dev",
     description:
       "Fix what's stopping your website from converting — measured before and after with real data.",
     images: [DEFAULT_OG_IMAGE.url],
@@ -177,8 +177,8 @@ const beforeAfter = [
     label: "Average order value",
     before: "Baseline",
     after: "+164%",
-    note: "eCommerce redesign — read the full case study →",
-    caseStudyHref: "/case-studies/ecommerce-website-redesign-increase-aov",
+    note: "eCommerce redesign — see the full project →",
+    caseStudyHref: "/work/ecommerce-website-redesign-increase-aov",
   },
   {
     label: "Qualified leads / month",
@@ -207,8 +207,8 @@ export default function ConversionOptimizationPage() {
       <main className="w-full bg-black text-white">
       <PageHero
         label="B2B Website Conversion Optimization"
-        title="More Traffic Won&apos;t Fix a Broken Website"
-        titleHighlight="Broken Website"
+        title="Website Conversion Optimization That Turns Visitors Into Leads"
+        titleHighlight="That Turns Visitors Into Leads"
         description="I find the exact reasons your B2B website isn't turning visitors into qualified leads, then fix them systematically — with data, not guesswork."
         backgroundImage="/images/services-conversion-optimization-hero-bg.jpg"
         badges={["Audit-first approach", "Measured before & after", "No vanity metrics"]}
@@ -220,27 +220,27 @@ export default function ConversionOptimizationPage() {
       />
 
       {/* The core problem */}
-      <section className="py-20 border-b border-slate-800">
+      <section className="py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 The Real Problem
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 More Traffic Isn&apos;t Your Problem
               </h2>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-neutral-400 leading-relaxed mb-6">
                 Most B2B companies assume they have a traffic problem. They invest in more SEO, more ads, more content — and watch their cost-per-lead go up while lead quality stays flat.
               </p>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-neutral-400 leading-relaxed mb-6">
                 The real problem is usually a conversion problem. The buyers are arriving. They&apos;re spending time on the site. They&apos;re just not taking action — because nothing on the site is earning it.
               </p>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-neutral-400 leading-relaxed">
                 Conversion optimization isn&apos;t about adding more pop-ups or changing button colors. It&apos;s about understanding why buyers aren&apos;t converting and systematically removing every barrier.
               </p>
             </div>
-            <div className="rounded-xl border border-slate-700 bg-slate-900/50 p-8">
+            <div className="rounded-xl border border-neutral-700 bg-neutral-900/50 p-8">
               <h3 className="text-lg font-bold text-white mb-6">What our audits typically find:</h3>
               <ul className="space-y-4">
                 {[
@@ -251,7 +251,7 @@ export default function ConversionOptimizationPage() {
                   "No content for buyers in evaluation (vs. awareness) mode",
                   "Trust signals buried 3 scrolls below the fold",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-slate-400">
+                  <li key={item} className="flex items-start gap-3 text-sm text-neutral-400">
                     <svg className="w-5 h-5 text-red-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
@@ -265,10 +265,10 @@ export default function ConversionOptimizationPage() {
       </section>
 
       {/* Symptom → Cause */}
-      <section className="py-20 bg-slate-950/50 border-b border-slate-800">
+      <section className="py-20 bg-neutral-950/50 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               Diagnose First
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -277,14 +277,14 @@ export default function ConversionOptimizationPage() {
           </div>
           <div className="space-y-4">
             {problems.map((p) => (
-              <div key={p.symptom} className="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-xl border border-slate-800 overflow-hidden">
-                <div className="bg-slate-900/80 p-6 border-b md:border-b-0 md:border-r border-slate-800">
-                  <div className="text-xs uppercase tracking-widest text-slate-500 mb-2">Symptom</div>
+              <div key={p.symptom} className="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-xl border border-neutral-800 overflow-hidden">
+                <div className="bg-neutral-900/80 p-6 border-b md:border-b-0 md:border-r border-neutral-800">
+                  <div className="text-xs uppercase tracking-widest text-neutral-400 mb-2">Symptom</div>
                   <div className="text-white font-semibold">{p.symptom}</div>
                 </div>
-                <div className="bg-slate-900/40 p-6">
-                  <div className="text-xs uppercase tracking-widest text-volt-500/60 mb-2">Root Cause</div>
-                  <div className="text-slate-400 text-sm leading-relaxed">{p.cause}</div>
+                <div className="bg-neutral-900/40 p-6">
+                  <div className="text-xs uppercase tracking-widest text-neutral-500 mb-2">Root Cause</div>
+                  <div className="text-neutral-400 text-sm leading-relaxed">{p.cause}</div>
                 </div>
               </div>
             ))}
@@ -293,10 +293,10 @@ export default function ConversionOptimizationPage() {
       </section>
 
       {/* Process */}
-      <section className="py-20 border-b border-slate-800">
+      <section className="bg-charcoal py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               My Process
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -306,10 +306,10 @@ export default function ConversionOptimizationPage() {
           <div className="space-y-12">
             {process.map((item) => (
               <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
-                <div className="text-5xl font-black font-mono text-volt-400/20 leading-none">{item.step}</div>
+                <div className="text-5xl font-black font-mono text-white/10 leading-none">{item.step}</div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                  <p className="text-slate-400 leading-relaxed">{item.body}</p>
+                  <p className="text-neutral-400 leading-relaxed">{item.body}</p>
                 </div>
               </div>
             ))}
@@ -318,10 +318,10 @@ export default function ConversionOptimizationPage() {
       </section>
 
       {/* Before / After */}
-      <section className="py-20 bg-slate-950/50 border-b border-slate-800">
+      <section className="py-20 bg-neutral-950/50 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               Before &amp; After
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -330,34 +330,34 @@ export default function ConversionOptimizationPage() {
           </div>
           <div className="space-y-4">
             {beforeAfter.map((item) => (
-              <div key={item.label} className={`rounded-xl border bg-slate-900/50 overflow-hidden transition-colors duration-200 ${'caseStudyHref' in item ? 'border-volt-500/30 hover:border-volt-400/60' : 'border-slate-800'}`}>
-                <div className="grid grid-cols-3 divide-x divide-slate-800">
+              <div key={item.label} className={`rounded-xl border bg-neutral-900/50 overflow-hidden transition-colors duration-200 ${'caseStudyHref' in item ? 'border-neutral-800 hover:border-neutral-500' : 'border-neutral-800'}`}>
+                <div className="grid grid-cols-3 divide-x divide-neutral-800">
                   <div className="p-6 text-center">
-                    <div className="text-xs uppercase tracking-widest text-slate-500 mb-2">Before</div>
+                    <div className="text-xs uppercase tracking-widest text-neutral-400 mb-2">Before</div>
                     <div className="text-3xl font-black text-red-400">{item.before}</div>
                   </div>
                   <div className="p-6 text-center">
-                    <div className="text-xs uppercase tracking-widest text-slate-500 mb-2">Metric</div>
+                    <div className="text-xs uppercase tracking-widest text-neutral-400 mb-2">Metric</div>
                     <div className="text-sm font-semibold text-white">{item.label}</div>
                   </div>
                   <div className="p-6 text-center">
-                    <div className="text-xs uppercase tracking-widest text-slate-500 mb-2">After</div>
-                    <div className="text-3xl font-black text-volt-400">{item.after}</div>
+                    <div className="text-xs uppercase tracking-widest text-neutral-400 mb-2">After</div>
+                    <div className="text-3xl font-black text-white">{item.after}</div>
                   </div>
                 </div>
-                <div className="px-6 pb-4 border-t border-slate-800 pt-3 text-center">
+                <div className="px-6 pb-4 border-t border-neutral-800 pt-3 text-center">
                   {'caseStudyHref' in item && item.caseStudyHref ? (
-                    <Link href={item.caseStudyHref} className="text-xs text-volt-500 hover:text-volt-300 transition-colors duration-200">
+                    <Link href={item.caseStudyHref} className="text-xs text-white hover:text-neutral-300 transition-colors duration-200">
                       {item.note}
                     </Link>
                   ) : (
-                    <span className="text-xs text-slate-600">{item.note}</span>
+                    <span className="text-xs text-neutral-500">{item.note}</span>
                   )}
                 </div>
               </div>
             ))}
           </div>
-          <p className="text-xs text-slate-600 mt-4 text-center">
+          <p className="text-xs text-neutral-500 mt-4 text-center">
             Metrics represent client results. Individual results vary based on current site state, industry, and traffic volume.
           </p>
         </div>
@@ -371,17 +371,17 @@ export default function ConversionOptimizationPage() {
       />
 
       {/* Related */}
-      <section className="py-20 border-b border-slate-800">
+      <section className="py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <h2 className="text-2xl font-bold text-white mb-8">Related</h2>
           <div className="flex flex-wrap gap-4">
-            <Link href="/case-studies/ecommerce-website-redesign-increase-aov" className="rounded-lg border border-volt-500/30 bg-volt-500/10 px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200">
-              Case Study: +164% AOV in 7 Days →
+            <Link href="/work/ecommerce-website-redesign-increase-aov" className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white hover:border-neutral-500 hover:bg-white/20 transition-all duration-200">
+              See the Project: +164% AOV in 7 Days →
             </Link>
-            <Link href="/services/small-business-website-design" className="rounded-lg border border-slate-700 bg-slate-900 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200">
+            <Link href="/services/small-business-website-design" className="rounded-lg border border-neutral-700 bg-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200">
               Small Business Website Design →
             </Link>
-            <Link href="/partners" className="rounded-lg border border-slate-700 bg-slate-900 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200">
+            <Link href="/partners" className="rounded-lg border border-neutral-700 bg-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200">
               Agency Partner Services →
             </Link>
           </div>
@@ -392,10 +392,9 @@ export default function ConversionOptimizationPage() {
 
       <PageClose
         title="Start With a Conversion Audit"
-        bodyPrimary="I'll review your current site and show you exactly where leads are leaking — the specific pages, specific CTAs, and specific messages that are costing you pipeline."
-        bodySecondary="One focused engagement. Real findings. No proposals for things you don't need."
-        secondaryHref="/case-studies"
-        secondaryLabel="View Case Studies"
+        body="I'll show you exactly where your site is losing leads, and how to fix it."
+        secondaryHref="/work"
+        secondaryLabel="View My Work"
       />
       </main>
     </>

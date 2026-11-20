@@ -9,21 +9,21 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Education & EdTech Web Development",
+  title: "Education & EdTech Website Design",
   description:
-    "Web development for schools, training platforms, and EdTech companies — enrollment-driven design, LMS integrations, and content-rich platforms built for learning at scale.",
+    "Education website design for schools, training providers and EdTech companies: enrollment-focused pages, LMS integrations and accessible design.",
   alternates: { canonical: "/industries/education" },
   openGraph: {
-    title: "Education & EdTech Web Development",
+    title: "Education & EdTech Website Design | Black Lab Dev",
     description:
-      "Web development for schools, training platforms, and EdTech companies — enrollment-driven design, LMS integrations, and content-rich platforms built for learning at scale.",
+      "Education website design for schools, training providers and EdTech companies: enrollment-focused pages, LMS integrations and accessible design.",
     url: "/industries/education",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Education & EdTech Web Development",
+    title: "Education & EdTech Website Design | Black Lab Dev",
     description:
-      "Web development for schools, training platforms, and EdTech companies — enrollment-driven design, LMS integrations, and content-rich platforms built for learning at scale.",
+      "Education website design for schools, training providers and EdTech companies: enrollment-focused pages, LMS integrations and accessible design.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
@@ -139,13 +139,13 @@ const deliverables = [
 
 export default function EducationIndustryPage() {
   return (
-    <main className="w-full bg-[#0b0b0c] text-white">
+    <main className="w-full bg-surface text-white">
       <JsonLd data={[breadcrumbSchema, serviceSchema, faqSchema]} />
 
       <PageHero
         label="Education & Training"
-        title="Websites Where Enrollment and Learning Both Win"
-        titleHighlight="Learning Both Win"
+        title="Education Website Design for Enrollment and Learning"
+        titleHighlight="for Enrollment and Learning"
         description="Education websites serve two masters: the marketing goal of enrollment conversion and the product goal of learning outcomes. Getting both right requires different thinking than a standard web project."
         backgroundImage="/images/industries-education-hero-bg.jpg"
         badges={["Enrollment optimization", "LMS integration", "WCAG 2.1 AA"]}
@@ -157,18 +157,18 @@ export default function EducationIndustryPage() {
       />
 
       {/* What We Deliver */}
-      <section className="py-20 border-b border-slate-800/50">
+      <section className="py-20 border-b border-neutral-800/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="mb-12">
-            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">What I Build</span>
+            <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">What I Build</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Built for Enrollment and Learning</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {deliverables.map((item) => (
-              <div key={item.title} className="p-6 rounded-xl border border-slate-800/60 bg-slate-900/40 hover:border-volt-500/30 hover:bg-volt-500/5 transition-all duration-300">
-                <div className="w-6 h-px bg-volt-500 mb-4" />
+              <div key={item.title} className="p-6 rounded-xl border border-neutral-800/60 bg-neutral-900/40 hover:border-neutral-500 hover:bg-white/5 transition-all duration-300">
+                <div className="w-6 h-px bg-neutral-600 mb-4" />
                 <h3 className="text-base font-semibold text-white mb-2">{item.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{item.description}</p>
+                <p className="text-sm text-neutral-400 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
@@ -176,18 +176,18 @@ export default function EducationIndustryPage() {
       </section>
 
       {/* Cross-links */}
-      <section className="py-16 border-b border-slate-800/50">
+      <section className="bg-charcoal py-16 border-b border-neutral-800/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="flex flex-col justify-between gap-4 p-8 rounded-xl border border-volt-500/20 bg-volt-500/5">
+            <div className="flex flex-col justify-between gap-4 p-8 rounded-xl border border-neutral-800 bg-white/[0.04]">
               <div>
-                <p className="text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold mb-1">Related Service</p>
+                <p className="text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold mb-1">Related Service</p>
                 <h3 className="text-base font-bold text-white">Custom Web Development</h3>
-                <p className="text-sm text-slate-400 mt-1">Full-stack builds and LMS integrations for education platforms with complex requirements.</p>
+                <p className="text-sm text-neutral-400 mt-1">Full-stack builds and LMS integrations for education platforms with complex requirements.</p>
               </div>
               <Link
                 href="/services/custom-web-development"
-                className="inline-flex items-center gap-2 text-sm font-bold text-volt-500 hover:text-volt-400 transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-neutral-300 transition-colors"
               >
                 View Service
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -195,15 +195,15 @@ export default function EducationIndustryPage() {
                 </svg>
               </Link>
             </div>
-            <div className="flex flex-col justify-between gap-4 p-8 rounded-xl border border-slate-800/60 bg-slate-900/30">
+            <div className="flex flex-col justify-between gap-4 p-8 rounded-xl border border-neutral-800/60 bg-neutral-900/30">
               <div>
-                <p className="text-xs tracking-[0.3em] uppercase text-slate-500 font-semibold mb-1">Related Service</p>
+                <p className="text-xs tracking-[0.3em] uppercase text-neutral-400 font-semibold mb-1">Related Service</p>
                 <h3 className="text-base font-bold text-white">Conversion Rate Optimization</h3>
-                <p className="text-sm text-slate-400 mt-1">Enrollment flow optimization and program page improvements that increase inquiry and application rates.</p>
+                <p className="text-sm text-neutral-400 mt-1">Enrollment flow optimization and program page improvements that increase inquiry and application rates.</p>
               </div>
               <Link
                 href="/services/conversion-optimization"
-                className="inline-flex items-center gap-2 text-sm font-bold text-slate-400 hover:text-white transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-bold text-neutral-400 hover:text-white transition-colors"
               >
                 View Service
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -220,11 +220,10 @@ export default function EducationIndustryPage() {
       <FounderByline />
 
       <PageClose
-        title="Building a Learning Platform or Enrollment-Driven Site?"
-        bodyPrimary="Education is one of the few industries where both design and technical execution matter equally — a beautiful site that can't handle enrollment traffic, or a fast platform that doesn't convert visitors into students, both fail."
-        bodySecondary="Start with a conversation about your specific requirements and enrollment goals."
-        secondaryHref="/contact"
-        secondaryLabel="Start a Conversation"
+        title="Planning an Enrollment or Learning Site?"
+        body="Share your enrollment goals and requirements, and I'll map out the right build."
+        secondaryHref="/work"
+        secondaryLabel="View My Work"
       />
     </main>
   );

@@ -9,19 +9,19 @@ import FaqSection from "@/components/FaqSection";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Custom Laravel Development | APIs, Integrations & Web Apps",
+  title: "Custom Laravel Development",
   description:
     "Custom Laravel development for APIs, platform integrations, and internal tools — clean architecture, no framework bloat, built to run in production.",
   alternates: { canonical: "/laravel-development" },
   openGraph: {
-    title: "Custom Laravel Development | APIs, Integrations & Web Apps | Black Lab Dev",
+    title: "Custom Laravel Development | Black Lab Dev",
     description:
       "Custom Laravel development for APIs, platform integrations, and internal tools — clean architecture, no framework bloat, built to run in production.",
     url: "/laravel-development",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Custom Laravel Development | APIs, Integrations & Web Apps | Black Lab Dev",
+    title: "Custom Laravel Development | Black Lab Dev",
     description:
       "Custom Laravel development for APIs, platform integrations, and internal tools — clean architecture, built to run in production.",
     images: [DEFAULT_OG_IMAGE.url],
@@ -193,53 +193,53 @@ const caseStudies = [
 
 export default function LaravelDevelopmentPage() {
   return (
-    <main className="w-full bg-[#0b0b0c] text-white">
+    <main className="w-full bg-surface text-white">
       <JsonLd data={[serviceSchema, faqSchema]} />
       <PageHero
         label="Laravel Development"
-        title="Laravel, Minus the Spaghetti Code."
-        titleHighlight="Minus the Spaghetti Code."
+        title="Custom Laravel Development for APIs and Web Apps"
+        titleHighlight="for APIs and Web Apps"
         description="Most Laravel apps rot into fat controllers and silent queue failures nobody monitors. I build custom — service architecture, integration resilience, zero spaghetti code."
         backgroundImage="/images/laravel-hero-bg.jpg"
         badges={["Clean architecture", "Production-grade integrations", "Full-stack Laravel"]}
       />
 
       {/* Hero CTAs */}
-      <section className="border-b border-slate-800 bg-[#111214]">
+      <section className="border-b border-neutral-800 bg-surface-raised">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-8 flex flex-wrap gap-4">
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg shadow-volt-500/25"
+            className="inline-flex items-center justify-center rounded-md bg-white text-black px-7 py-3.5 text-sm font-semibold hover:bg-neutral-200 transition-colors duration-200 shadow-lg"
           >
             Start a Project →
           </Link>
           <Link
-            href="/case-studies"
-            className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
+            href="/work"
+            className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 px-7 py-3.5 text-sm font-semibold text-white hover:bg-white/10 hover:border-neutral-500 transition-all duration-200"
           >
-            View Case Studies →
+            View My Work →
           </Link>
         </div>
       </section>
 
       {/* Intro */}
-      <section className="py-20 border-b border-slate-800">
+      <section className="bg-charcoal py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 The Problem
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Custom Laravel Development Built for Real Integrations
               </h2>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-neutral-400 leading-relaxed mb-6">
                 Most Laravel projects fail not because of the framework — but because of how they&apos;re built. Business logic scattered across controllers, integrations that break silently, and queue jobs that nobody monitors.
               </p>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-neutral-400 leading-relaxed mb-6">
                 At Black Lab Dev, I build Laravel applications with clean service architecture, proper integration engineering, and the kind of error handling that means your operations team doesn&apos;t discover problems from angry customers.
               </p>
-              <p className="text-slate-400 leading-relaxed font-medium">
+              <p className="text-neutral-400 leading-relaxed font-medium">
                 No god controllers. No silent failures. No &ldquo;it works on my machine.&rdquo;
               </p>
             </div>
@@ -259,7 +259,7 @@ export default function LaravelDevelopmentPage() {
                     </div>
                     <div>
                       <div className="text-sm font-semibold text-white mb-1">{item.problem}</div>
-                      <div className="text-xs text-slate-400 leading-relaxed">{item.impact}</div>
+                      <div className="text-xs text-neutral-400 leading-relaxed">{item.impact}</div>
                     </div>
                   </div>
                 </div>
@@ -270,16 +270,16 @@ export default function LaravelDevelopmentPage() {
       </section>
 
       {/* Services */}
-      <section className="py-20 bg-[#111214] border-b border-slate-800">
+      <section className="py-20 bg-surface-raised border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               What I Build
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Laravel Development Services
             </h2>
-            <p className="text-slate-400 leading-relaxed">
+            <p className="text-neutral-400 leading-relaxed">
               Full-service Laravel development for businesses that need production-grade applications — not a tutorial-quality prototype.
             </p>
           </div>
@@ -287,14 +287,14 @@ export default function LaravelDevelopmentPage() {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="group rounded-2xl border border-neutral-800 bg-neutral-950 p-8 transition-all duration-300 hover:border-volt-500/40 hover:shadow-[0_0_40px_rgba(227,245,68,0.06)]"
+                className="group rounded-2xl border border-neutral-800 bg-neutral-950 p-8 transition-all duration-300 hover:border-neutral-500 hover:shadow-[0_0_40px_rgba(255,255,255,0.03)]"
               >
-                <div className="h-px bg-linear-to-r from-volt-500/0 via-volt-500/0 to-volt-500/0 group-hover:from-volt-500/40 group-hover:via-volt-500/60 group-hover:to-volt-500/0 transition-all duration-500 -mx-8 -mt-8 mb-8" />
-                <div className="w-10 h-10 rounded-lg bg-volt-500/10 border border-volt-500/20 flex items-center justify-center text-volt-500 mb-5">
+                <div className="h-px bg-linear-to-r from-white/10 via-white/10 to-white/10 group-hover:from-white/13 group-hover:via-white/20 group-hover:to-white/3 transition-all duration-500 -mx-8 -mt-8 mb-8" />
+                <div className="w-10 h-10 rounded-lg bg-white/[0.04] border border-neutral-800 flex items-center justify-center text-white mb-5">
                   {service.icon}
                 </div>
-                <h3 className="text-lg font-bold text-white mb-3 group-hover:text-volt-400 transition-colors duration-300">{service.title}</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">{service.body}</p>
+                <h3 className="text-lg font-bold text-white mb-3 group-hover:text-white transition-colors duration-300">{service.title}</h3>
+                <p className="text-sm text-neutral-400 leading-relaxed">{service.body}</p>
               </div>
             ))}
           </div>
@@ -302,20 +302,20 @@ export default function LaravelDevelopmentPage() {
       </section>
 
       {/* Built right */}
-      <section className="py-20 border-b border-slate-800">
+      <section className="bg-charcoal py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Why I&apos;m Different
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Built for Production, Not for Demos
               </h2>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-neutral-400 leading-relaxed mb-6">
                 Most Laravel shops build to get something running. I build to keep it running — under real traffic, real data, and real integration failures. The difference shows up at 2 a.m. when a webhook stops firing.
               </p>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-neutral-400 leading-relaxed">
                 Your Laravel application becomes infrastructure your business depends on — not a fragile prototype that needs constant babysitting.
               </p>
             </div>
@@ -328,14 +328,14 @@ export default function LaravelDevelopmentPage() {
                 { label: "CI/CD & environment parity", detail: "Automated deployments, environment configuration management, and staging that matches production." },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-4 rounded-xl border border-neutral-800 bg-neutral-950 p-5">
-                  <div className="w-6 h-6 rounded-full bg-volt-500/15 flex items-center justify-center shrink-0 mt-0.5">
-                    <svg className="w-3 h-3 text-volt-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="w-6 h-6 rounded-full bg-white/[0.04] flex items-center justify-center shrink-0 mt-0.5">
+                    <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <div>
                     <div className="text-sm font-semibold text-white mb-0.5">{item.label}</div>
-                    <div className="text-xs text-slate-400 leading-relaxed">{item.detail}</div>
+                    <div className="text-xs text-neutral-400 leading-relaxed">{item.detail}</div>
                   </div>
                 </div>
               ))}
@@ -345,26 +345,26 @@ export default function LaravelDevelopmentPage() {
       </section>
 
       {/* Process */}
-      <section className="py-20 bg-[#111214] border-b border-slate-800">
+      <section className="py-20 bg-surface-raised border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               My Approach
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Architecture First, Code Second
             </h2>
-            <p className="text-slate-400 leading-relaxed">
+            <p className="text-neutral-400 leading-relaxed">
               I don&apos;t start with `laravel new` and figure it out as I go. Every project starts with domain modeling, integration mapping, and service architecture — then I build exactly what&apos;s needed.
             </p>
           </div>
           <div className="space-y-10">
             {processSteps.map((item) => (
               <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
-                <div className="text-5xl font-black font-mono text-volt-500/20 leading-none">{item.step}</div>
-                <div className="border-b border-slate-800 pb-10 last:border-0 last:pb-0">
+                <div className="text-5xl font-black font-mono text-white/10 leading-none">{item.step}</div>
+                <div className="border-b border-neutral-800 pb-10 last:border-0 last:pb-0">
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                  <p className="text-slate-400 leading-relaxed">{item.body}</p>
+                  <p className="text-neutral-400 leading-relaxed">{item.body}</p>
                 </div>
               </div>
             ))}
@@ -373,20 +373,20 @@ export default function LaravelDevelopmentPage() {
       </section>
 
       {/* Performance */}
-      <section className="py-20 border-b border-slate-800">
+      <section className="bg-charcoal py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Performance
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Built to Scale Under Real Load
               </h2>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-neutral-400 leading-relaxed mb-6">
                 Laravel applications that perform well at demo scale often fall apart under production traffic. The difference is architecture decisions made early — queue strategy, caching layers, and database optimization that&apos;s baked in, not bolted on.
               </p>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-neutral-400 leading-relaxed">
                 I build applications that stay fast as your data grows and your integrations multiply.
               </p>
             </div>
@@ -394,10 +394,10 @@ export default function LaravelDevelopmentPage() {
               {performancePoints.map((item) => (
                 <div key={item.label} className="rounded-xl border border-neutral-800 bg-neutral-950 p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-2 h-2 rounded-full bg-volt-500 shadow-[0_0_8px_rgba(227,245,68,0.7)] shrink-0 mt-2" />
+                    <div className="w-2 h-2 rounded-full bg-neutral-400 shrink-0 mt-2" />
                     <div>
                       <div className="text-sm font-semibold text-white mb-1">{item.label}</div>
-                      <div className="text-xs text-slate-400 leading-relaxed">{item.detail}</div>
+                      <div className="text-xs text-neutral-400 leading-relaxed">{item.detail}</div>
                     </div>
                   </div>
                 </div>
@@ -408,25 +408,25 @@ export default function LaravelDevelopmentPage() {
       </section>
 
       {/* Use Cases */}
-      <section className="py-20 bg-[#111214] border-b border-slate-800">
+      <section className="py-20 bg-surface-raised border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Use Cases
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 When Laravel Is the Right Choice
               </h2>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-neutral-400 leading-relaxed">
                 Laravel excels at backend-heavy applications with complex integrations, queue-driven workflows, and structured APIs. If your project is mostly content, a CMS is probably the better fit — but if it&apos;s mostly logic, Laravel is hard to beat.
               </p>
             </div>
             <div className="space-y-3">
               {useCases.map((item) => (
                 <div key={item} className="flex items-center gap-4 rounded-xl border border-neutral-800 bg-neutral-950 px-6 py-4">
-                  <div className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_6px_rgba(227,245,68,0.7)] shrink-0" />
-                  <span className="text-sm text-slate-300">{item}</span>
+                  <div className="w-1.5 h-1.5 rounded-full bg-neutral-400 shrink-0" />
+                  <span className="text-sm text-neutral-300">{item}</span>
                 </div>
               ))}
             </div>
@@ -434,18 +434,18 @@ export default function LaravelDevelopmentPage() {
         </div>
       </section>
 
-      {/* Case Studies */}
-      <section className="py-20 border-b border-slate-800">
+      {/* Work */}
+      <section className="bg-charcoal py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-volt-500/35 bg-volt-500/8 text-volt-500 text-xs font-bold tracking-[0.2em] uppercase mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_8px_rgba(227,245,68,0.9)]" />
+            <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-neutral-300 mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
               Laravel Projects
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Recent Laravel Builds
             </h2>
-            <div className="mt-4 h-px w-32 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
+            <div className="mt-4 h-px w-32 bg-linear-to-r from-white/10 via-white/10 to-transparent" />
           </div>
 
           <div className="space-y-20">
@@ -454,13 +454,13 @@ export default function LaravelDevelopmentPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-4">{study.title}</h3>
-                    <p className="text-slate-400 leading-relaxed">{study.description}</p>
+                    <p className="text-neutral-400 leading-relaxed">{study.description}</p>
                     {"link" in study && study.link && (
                       <a
                         href={study.link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-volt-500 hover:text-volt-400 transition-colors duration-200"
+                        className="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-white hover:text-neutral-300 transition-colors duration-200"
                       >
                         {study.link.label}
                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -471,10 +471,10 @@ export default function LaravelDevelopmentPage() {
                   </div>
                   <div className="grid grid-cols-3 gap-4">
                     {study.stats.map((stat) => (
-                      <div key={stat.label} className="rounded-xl border border-neutral-800 bg-neutral-950 px-4 py-5 text-center transition-all duration-300 hover:border-volt-500/30 hover:shadow-[0_0_30px_rgba(227,245,68,0.05)]">
-                        <div className="text-lg font-black text-volt-500 drop-shadow-[0_0_10px_rgba(227,245,68,0.4)] mb-1">{stat.value}</div>
+                      <div key={stat.label} className="rounded-xl border border-neutral-800 bg-neutral-950 px-4 py-5 text-center transition-all duration-300 hover:border-neutral-500 hover:shadow-[0_0_30px_rgba(255,255,255,0.03)]">
+                        <div className="text-lg font-black text-white mb-1">{stat.value}</div>
                         <div className="text-xs font-semibold text-white mb-1">{stat.label}</div>
-                        <div className="text-[11px] text-slate-500 leading-snug">{stat.detail}</div>
+                        <div className="text-[11px] text-neutral-400 leading-snug">{stat.detail}</div>
                       </div>
                     ))}
                   </div>
@@ -486,7 +486,7 @@ export default function LaravelDevelopmentPage() {
                     {study.images.map((img) => (
                       <div
                         key={img.src}
-                        className="group relative aspect-video rounded-xl overflow-hidden border border-neutral-800 hover:border-volt-500/30 transition-all duration-300 hover:shadow-[0_0_40px_rgba(227,245,68,0.08)]"
+                        className="group relative aspect-video rounded-xl overflow-hidden border border-neutral-800 hover:border-neutral-500 transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,255,255,0.04)]"
                       >
                         <Image
                           src={img.src}
@@ -501,7 +501,7 @@ export default function LaravelDevelopmentPage() {
                 )}
 
                 {i < caseStudies.length - 1 && (
-                  <div className="h-px bg-linear-to-r from-transparent via-volt-500/15 to-transparent" />
+                  <div className="h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
                 )}
               </div>
             ))}
@@ -514,37 +514,37 @@ export default function LaravelDevelopmentPage() {
       />
 
       {/* Internal links */}
-      <section className="py-16 border-b border-slate-800">
+      <section className="py-16 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <h2 className="text-lg font-bold text-white mb-6">Related Services</h2>
           <div className="flex flex-wrap gap-4">
             <Link
               href="/services"
-              className="rounded-lg border border-volt-500/30 bg-volt-500/8 px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/15 transition-all duration-200"
+              className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white hover:border-neutral-500 hover:bg-white/15 transition-all duration-200"
             >
               All Services →
             </Link>
             <Link
               href="/services/custom-web-development"
-              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200"
             >
               Custom Web Development →
             </Link>
             <Link
               href="/wordpress-development"
-              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200"
             >
               WordPress Development →
             </Link>
             <Link
               href="/drupal-development"
-              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200"
             >
               Drupal Development →
             </Link>
             <Link
               href="/shopify-development"
-              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200"
             >
               Shopify Development →
             </Link>
@@ -555,11 +555,10 @@ export default function LaravelDevelopmentPage() {
       <FounderByline />
 
       <PageClose
-        title="Work With a Laravel Developer Who Builds for Production"
-        bodyPrimary="If your application needs clean integrations, reliable queue processing, and architecture that scales — not just a working prototype — let's talk about what you're building."
-        bodySecondary="No framework tourism. No tutorial-quality code. Just production-grade Laravel built by an engineer who's accountable for whether it runs."
-        secondaryHref="/case-studies"
-        secondaryLabel="View Case Studies"
+        title="Need a Laravel Developer?"
+        body="Clean integrations, reliable queues, and architecture built for production."
+        secondaryHref="/work"
+        secondaryLabel="View My Work"
       />
     </main>
   );

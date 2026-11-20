@@ -51,7 +51,7 @@ export default function TermsPage() {
         description={`The rules for using this website. Last updated ${LAST_UPDATED}.`}
         sections={SECTIONS}
       >
-        <p className="text-sm uppercase tracking-widest text-slate-500">
+        <p className="text-sm uppercase tracking-widest text-neutral-400">
           Last updated: {LAST_UPDATED}
         </p>
 

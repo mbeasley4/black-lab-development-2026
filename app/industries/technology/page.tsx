@@ -9,21 +9,21 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "SaaS & Technology Web Development",
+  title: "SaaS & Tech Website Development",
   description:
-    "Web development for SaaS and technology companies — product-led marketing sites, custom integrations, and conversion architecture that turns traffic into signups.",
+    "SaaS and technology website development: product-led marketing sites, integrations and conversion architecture that turn traffic into signups.",
   alternates: { canonical: "/industries/technology" },
   openGraph: {
-    title: "SaaS & Technology Web Development",
+    title: "SaaS & Tech Website Development | Black Lab Dev",
     description:
-      "Web development for SaaS and technology companies — product-led marketing sites, custom integrations, and conversion architecture that turns traffic into signups.",
+      "SaaS and technology website development: product-led marketing sites, integrations and conversion architecture that turn traffic into signups.",
     url: "/industries/technology",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "SaaS & Technology Web Development",
+    title: "SaaS & Tech Website Development | Black Lab Dev",
     description:
-      "Web development for SaaS and technology companies — product-led marketing sites, custom integrations, and conversion architecture that turns traffic into signups.",
+      "SaaS and technology website development: product-led marketing sites, integrations and conversion architecture that turn traffic into signups.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
@@ -154,13 +154,13 @@ const clients = [
 
 export default function TechnologyIndustryPage() {
   return (
-    <main className="w-full bg-[#0b0b0c] text-white">
+    <main className="w-full bg-surface text-white">
       <JsonLd data={[breadcrumbSchema, serviceSchema, faqSchema]} />
 
       <PageHero
         label="SaaS & Technology"
-        title="Every Pixel Should Push Toward Signups"
-        titleHighlight="Push Toward Signups"
+        title="SaaS Website Development That Drives Signups"
+        titleHighlight="That Drives Signups"
         description="SaaS websites have one job: convert the right traffic into trials, demos, and qualified pipeline. Every design decision, every integration, every performance trade-off should serve that goal."
         backgroundImage="/images/industries-technology-hero-bg.jpg"
         badges={["Product-led growth", "Sub-2s load times", "CRM & analytics integration"]}
@@ -172,18 +172,18 @@ export default function TechnologyIndustryPage() {
       />
 
       {/* What We Deliver */}
-      <section className="py-20 border-b border-slate-800/50">
+      <section className="py-20 border-b border-neutral-800/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="mb-12">
-            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">What I Build</span>
+            <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">What I Build</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Built for Product-Led Growth</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {deliverables.map((item) => (
-              <div key={item.title} className="p-6 rounded-xl border border-slate-800/60 bg-slate-900/40 hover:border-volt-500/30 hover:bg-volt-500/5 transition-all duration-300">
-                <div className="w-6 h-px bg-volt-500 mb-4" />
+              <div key={item.title} className="p-6 rounded-xl border border-neutral-800/60 bg-neutral-900/40 hover:border-neutral-500 hover:bg-white/5 transition-all duration-300">
+                <div className="w-6 h-px bg-neutral-600 mb-4" />
                 <h3 className="text-base font-semibold text-white mb-2">{item.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{item.description}</p>
+                <p className="text-sm text-neutral-400 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
@@ -191,17 +191,17 @@ export default function TechnologyIndustryPage() {
       </section>
 
       {/* Client Proof */}
-      <section className="py-20 border-b border-slate-800/50 bg-slate-950/50">
+      <section className="py-20 border-b border-neutral-800/50 bg-neutral-950/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="mb-12">
-            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">Client Proof</span>
+            <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">Client Proof</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Technology Companies Worked With</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {clients.map((c) => (
-              <div key={c.name} className="p-6 rounded-xl border border-slate-800/60 bg-slate-900/30">
-                <p className="text-sm font-semibold text-volt-500 mb-2">{c.name}</p>
-                <p className="text-sm text-slate-400 leading-relaxed">{c.detail}</p>
+              <div key={c.name} className="p-6 rounded-xl border border-neutral-800/60 bg-neutral-900/30">
+                <p className="text-sm font-semibold text-white mb-2">{c.name}</p>
+                <p className="text-sm text-neutral-400 leading-relaxed">{c.detail}</p>
               </div>
             ))}
           </div>
@@ -209,18 +209,18 @@ export default function TechnologyIndustryPage() {
       </section>
 
       {/* Cross-links */}
-      <section className="py-16 border-b border-slate-800/50">
+      <section className="bg-charcoal py-16 border-b border-neutral-800/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="flex flex-col justify-between gap-4 p-8 rounded-xl border border-volt-500/20 bg-volt-500/5">
+            <div className="flex flex-col justify-between gap-4 p-8 rounded-xl border border-neutral-800 bg-white/[0.04]">
               <div>
-                <p className="text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold mb-1">Related Service</p>
+                <p className="text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold mb-1">Related Service</p>
                 <h3 className="text-base font-bold text-white">Custom Web Development</h3>
-                <p className="text-sm text-slate-400 mt-1">Full-stack builds, API integrations, and custom tooling for technical teams.</p>
+                <p className="text-sm text-neutral-400 mt-1">Full-stack builds, API integrations, and custom tooling for technical teams.</p>
               </div>
               <Link
                 href="/services/custom-web-development"
-                className="inline-flex items-center gap-2 text-sm font-bold text-volt-500 hover:text-volt-400 transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-neutral-300 transition-colors"
               >
                 View Service
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -228,15 +228,15 @@ export default function TechnologyIndustryPage() {
                 </svg>
               </Link>
             </div>
-            <div className="flex flex-col justify-between gap-4 p-8 rounded-xl border border-slate-800/60 bg-slate-900/30">
+            <div className="flex flex-col justify-between gap-4 p-8 rounded-xl border border-neutral-800/60 bg-neutral-900/30">
               <div>
-                <p className="text-xs tracking-[0.3em] uppercase text-slate-500 font-semibold mb-1">Related Service</p>
+                <p className="text-xs tracking-[0.3em] uppercase text-neutral-400 font-semibold mb-1">Related Service</p>
                 <h3 className="text-base font-bold text-white">Website Performance Optimization</h3>
-                <p className="text-sm text-slate-400 mt-1">Core Web Vitals, load time, and performance audits for existing platforms.</p>
+                <p className="text-sm text-neutral-400 mt-1">Core Web Vitals, load time, and performance audits for existing platforms.</p>
               </div>
               <Link
                 href="/services/website-performance-optimization"
-                className="inline-flex items-center gap-2 text-sm font-bold text-slate-400 hover:text-white transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-bold text-neutral-400 hover:text-white transition-colors"
               >
                 View Service
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -253,11 +253,10 @@ export default function TechnologyIndustryPage() {
       <FounderByline />
 
       <PageClose
-        title="Ready to Build a SaaS Website That Actually Converts?"
-        bodyPrimary="Most SaaS marketing sites describe the product well enough. The problem is they don't convert visitors into users efficiently — and they accumulate technical debt that makes every update slower."
-        bodySecondary="Schedule a discovery call. I'll talk through the conversion and performance gaps costing you signups."
+        title="Build a SaaS Site That Converts"
+        body="I'll find the performance and conversion gaps that are costing you signups."
         secondaryHref="/services/custom-web-development"
-        secondaryLabel="View Custom Development"
+        secondaryLabel="Custom Web Development"
       />
     </main>
   );

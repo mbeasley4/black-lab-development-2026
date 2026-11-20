@@ -9,19 +9,19 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Web Development & Conversion Optimization Services",
+  title: "Web Design & Development Services",
   description:
     "Professional website design, development, and optimization — for small businesses directly, and as a white-label partner for agencies and strategy firms.",
   alternates: { canonical: "/services" },
   openGraph: {
-    title: "Web Development & Conversion Optimization Services",
+    title: "Web Design & Development Services | Black Lab Dev",
     description:
       "Professional website design, development, and optimization — for small businesses directly, and as a white-label partner for agencies and strategy firms.",
     url: "/services",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Web Development & Conversion Optimization Services",
+    title: "Web Design & Development Services | Black Lab Dev",
     description:
       "Website design, development, conversion optimization, and technical SEO — for small businesses and agency partners.",
     images: [DEFAULT_OG_IMAGE.url],
@@ -200,22 +200,22 @@ export default function ServicesPage() {
   return (
     <>
       <JsonLd data={[breadcrumbSchema, serviceListSchema]} />
-      <main className="w-full bg-[#0b0b0c] text-white">
+      <main className="w-full bg-surface text-white">
       {/* ================= HERO ================= */}
       <PageHero
         label="Services"
-        title="Software Built to Outlast the Demo"
-        titleHighlight="Outlast the Demo"
+        title="Web Design & Development Services That Hold Up"
+        titleHighlight="That Hold Up"
         description="I build things that hold up in production, under real traffic, with real users — not just in a polished walkthrough. Senior-led, hands-on, and allergic to solutions that look great until they don't."
         backgroundImage="/images/services-hero-bg.jpg"
         badges={["No templates", "No offshore handoffs", "No 40-slide decks"]}
       />
 
       {/* ================= AUDIENCE SERVICE LINES ================= */}
-      <section className="py-16 border-b border-volt-500/8 bg-[#111214]/50">
+      <section className="py-16 border-b border-neutral-800 bg-surface-raised/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="mb-10">
-            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+            <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               Who I Work With
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-white">Two Ways to Work With Me</h2>
@@ -241,16 +241,16 @@ export default function ServicesPage() {
                 color: "volt",
               },
             ].map((s) => {
-              const border = s.color === "volt" ? "hover:border-volt-500/50" : "hover:border-volt-500/50";
-              const text = s.color === "volt" ? "text-volt-500" : "text-volt-400";
+              const border = s.color === "volt" ? "hover:border-neutral-500" : "hover:border-neutral-500";
+              const text = s.color === "volt" ? "text-white" : "text-neutral-300";
               return (
                 <Link
                   key={s.label}
                   href={s.href}
-                  className={`group rounded-xl border border-slate-800 bg-slate-900/50 p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${border} flex flex-col`}
+                  className={`group rounded-xl border border-neutral-800 bg-neutral-900/50 p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${border} flex flex-col`}
                 >
                   <span className={`text-xs uppercase tracking-widest font-semibold mb-3 ${text}`}>{s.label}</span>
-                  <p className="text-sm text-slate-400 leading-relaxed grow group-hover:text-slate-300 transition-colors duration-200">{s.description}</p>
+                  <p className="text-sm text-neutral-400 leading-relaxed grow group-hover:text-neutral-300 transition-colors duration-200">{s.description}</p>
                   <div className={`flex items-center gap-2 mt-5 text-sm font-semibold ${text}`}>
                     <span>Learn more</span>
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -270,27 +270,25 @@ export default function ServicesPage() {
         <div
           className="absolute inset-0 pointer-events-none opacity-15"
           style={{
-            backgroundImage: "radial-gradient(circle, rgba(227,245,68,0.20) 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px)",
             backgroundSize: "44px 44px",
           }}
         />
 
         {/* Ambient glows */}
-        <div className="absolute top-20 -left-40 w-175 h-175 bg-volt-500/8 rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute bottom-20 -right-40 w-150 h-150 bg-volt-600/8 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           {/* Section header */}
           <div className="flex items-center gap-6 mb-6 md:mb-9">
             <div>
-              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono drop-shadow-[0_0_12px_rgba(227,245,68,0.7)]">
+              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-white font-mono">
                 // Services
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-white">
                 What I Do
               </h2>
             </div>
-            <div className="flex-1 h-px bg-linear-to-r from-volt-500/60 via-volt-500/20 to-transparent" />
+            <div className="flex-1 h-px bg-linear-to-r from-white/10 via-white/10 to-transparent" />
           </div>
 
           <div className="space-y-0">
@@ -299,13 +297,13 @@ export default function ServicesPage() {
                 key={service.title}
                 className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center py-6 md:py-9 relative ${
                   index < services.length - 1
-                    ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-linear-to-r after:from-transparent after:via-volt-500/20 after:to-transparent"
+                    ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-linear-to-r after:from-transparent after:via-white/7 after:to-transparent"
                     : ""
                 }`}
               >
                 {/* Giant ghost number */}
                 <div
-                  className={`absolute text-[18rem] md:text-[22rem] font-black font-mono text-volt-500/3 pointer-events-none leading-none select-none top-0 ${
+                  className={`absolute text-[18rem] md:text-[22rem] font-black font-mono text-white/[0.06] pointer-events-none leading-none select-none top-0 ${
                     index % 2 === 1 ? "-right-4 text-right" : "-left-4"
                   }`}
                   aria-hidden="true"
@@ -316,10 +314,10 @@ export default function ServicesPage() {
                 {/* Text */}
                 <div className={`max-w-xl relative ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                   <div className="flex items-center gap-4 mb-6">
-                    <span className="text-5xl font-black font-mono text-volt-500/20 leading-none tracking-tighter">
+                    <span className="text-5xl font-black font-mono text-white/10 leading-none tracking-tighter">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <div className="h-px w-14 bg-linear-to-r from-volt-500/60 to-volt-500/10 shadow-[0_0_10px_rgba(227,245,68,0.4)]" />
+                    <div className="h-px w-14 bg-linear-to-r from-white/10 to-white/10" />
                   </div>
 
                   <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-snug text-white">
@@ -333,8 +331,7 @@ export default function ServicesPage() {
 
                 {/* Image */}
                 <div
-                  className={`group relative h-95 w-full rounded-xl overflow-hidden border border-volt-500/20 shadow-[0_0_50px_rgba(227,245,68,0.08)] transition-all duration-500 hover:border-volt-500/50 hover:shadow-[0_0_100px_rgba(227,245,68,0.20)] ${
-                    index % 2 === 1 ? "lg:order-1" : ""
+                  className={`group relative h-95 w-full rounded-xl overflow-hidden border border-neutral-800 transition-all duration-500 hover:border-neutral-500 hover:shadow-[0_0_100px_rgba(255,255,255,0.1)] ${ index % 2 === 1 ?"lg:order-1" : ""
                   }`}
                 >
                   <Image
@@ -344,7 +341,7 @@ export default function ServicesPage() {
                     className="object-cover opacity-65 group-hover:opacity-90 group-hover:scale-[1.05] transition-all duration-700"
                   />
                   {/* Dark overlay */}
-                  <div className="absolute inset-0 bg-linear-to-br from-black/65 via-black/20 to-volt-900/10 group-hover:to-volt-900/25 transition-all duration-500" />
+                  <div className="absolute inset-0 bg-linear-to-br from-black/65 via-black/20 to-white/10 group-hover:to-white/5 transition-all duration-500" />
                   {/* Scanline texture */}
                   <div
                     className="absolute inset-0 opacity-[0.08] pointer-events-none"
@@ -353,20 +350,20 @@ export default function ServicesPage() {
                     }}
                   />
                   {/* Top accent line */}
-                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent group-hover:via-volt-500/80 transition-all duration-500" />
+                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-white/27 transition-all duration-500" />
                   {/* Bottom accent line */}
-                  <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/15 to-transparent group-hover:via-volt-500/50 transition-all duration-500" />
+                  <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-white/17 transition-all duration-500" />
                   {/* Corner glow */}
-                  <div className="absolute top-0 right-0 w-40 h-40 bg-volt-500/10 blur-3xl rounded-full group-hover:bg-volt-500/25 transition-all duration-500" />
-                  <div className="absolute bottom-0 left-0 w-28 h-28 bg-volt-600/8 blur-2xl rounded-full group-hover:bg-volt-500/20 transition-all duration-500" />
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-white/[0.04] blur-3xl rounded-full group-hover:bg-white/25 transition-all duration-500" />
+                  <div className="absolute bottom-0 left-0 w-28 h-28 bg-white/[0.04] blur-2xl rounded-full group-hover:bg-white/20 transition-all duration-500" />
                   {/* Corner brackets */}
-                  <div className="absolute top-3 left-3 w-5 h-5 border-t-2 border-l-2 border-volt-500/40 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
-                  <div className="absolute top-3 right-3 w-5 h-5 border-t-2 border-r-2 border-volt-500/40 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
-                  <div className="absolute bottom-3 left-3 w-5 h-5 border-b-2 border-l-2 border-volt-500/40 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
-                  <div className="absolute bottom-3 right-3 w-5 h-5 border-b-2 border-r-2 border-volt-500/40 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute top-3 left-3 w-5 h-5 border-t-2 border-l-2 border-neutral-800 group-hover:border-neutral-500 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute top-3 right-3 w-5 h-5 border-t-2 border-r-2 border-neutral-800 group-hover:border-neutral-500 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute bottom-3 left-3 w-5 h-5 border-b-2 border-l-2 border-neutral-800 group-hover:border-neutral-500 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute bottom-3 right-3 w-5 h-5 border-b-2 border-r-2 border-neutral-800 group-hover:border-neutral-500 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
                   {/* Service label on hover */}
                   <div className="absolute bottom-5 left-5 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-400">
-                    <span className="text-xs font-mono tracking-[0.3em] uppercase text-volt-400 drop-shadow-[0_0_12px_rgba(227,245,68,0.9)]">
+                    <span className="text-xs font-mono tracking-[0.2em] uppercase text-neutral-400">
                       {service.title}
                     </span>
                   </div>
@@ -377,25 +374,25 @@ export default function ServicesPage() {
         </div>
       </section>
       {/* ================= PROCESS ================= */}
-      <section className="py-16 md:py-24 border-t border-volt-500/8 bg-[#0d0d0f] relative overflow-hidden">
+      <section className="bg-charcoal py-16 md:py-24 border-t border-neutral-800 relative overflow-hidden">
         {/* Ambient glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-48 bg-volt-500/5 blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-48 bg-white/[0.04] blur-[100px] pointer-events-none" />
 
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           {/* Section header */}
           <div className="flex items-center gap-6 mb-12 md:mb-16">
             <div>
-              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono drop-shadow-[0_0_12px_rgba(227,245,68,0.7)]">
+              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-white font-mono">
                 // How I Work
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-white">
                 The Process
               </h2>
             </div>
-            <div className="flex-1 h-px bg-linear-to-r from-volt-500/60 via-volt-500/20 to-transparent" />
+            <div className="flex-1 h-px bg-linear-to-r from-white/10 via-white/10 to-transparent" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-volt-500/8 rounded-xl overflow-hidden border border-volt-500/10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.04] rounded-xl overflow-hidden border border-neutral-800">
             {[
               {
                 step: "01",
@@ -430,22 +427,22 @@ export default function ServicesPage() {
             ].map((item) => (
               <div
                 key={item.step}
-                className="bg-[#0d0d0f] p-8 md:p-10 group hover:bg-[#111214] transition-colors duration-300 relative"
+                className="bg-surface p-8 md:p-10 group hover:bg-surface-raised transition-colors duration-300 relative"
               >
                 <div className="flex items-start gap-5 mb-5">
-                  <span className="text-4xl font-black font-mono text-volt-500/20 leading-none tracking-tighter group-hover:text-volt-500/40 transition-colors duration-300 shrink-0 pt-1">
+                  <span className="text-4xl font-black font-mono text-white/10 leading-none tracking-tighter group-hover:text-white transition-colors duration-300 shrink-0 pt-1">
                     {item.step}
                   </span>
-                  <div className="h-px w-10 bg-linear-to-r from-volt-500/50 to-volt-500/10 mt-5 shrink-0" />
+                  <div className="h-px w-10 bg-linear-to-r from-white/10 to-white/10 mt-5 shrink-0" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-volt-100 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-white transition-colors duration-300">
                   {item.title}
                 </h3>
                 <p className="text-sm text-neutral-500 leading-relaxed group-hover:text-neutral-400 transition-colors duration-300">
                   {item.body}
                 </p>
                 {/* Bottom accent on hover */}
-                <div className="absolute bottom-0 left-8 right-8 h-px bg-linear-to-r from-transparent via-volt-500/0 to-transparent group-hover:via-volt-500/30 transition-all duration-500" />
+                <div className="absolute bottom-0 left-8 right-8 h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-white/10 transition-all duration-500" />
               </div>
             ))}
           </div>
@@ -458,11 +455,10 @@ export default function ServicesPage() {
 
       {/* ================= CLOSE ================= */}
       <PageClose
-        title="No Roadmaps to Nowhere"
-        bodyPrimary="Not every problem is a rebuild. Not every slowdown needs a new framework. The best engineering decisions match the actual problem — not the fashionable solution, not the vendor pitch, not whatever worked at the last job."
-        bodySecondary="If you want someone who will dig in, tell you what's actually wrong, and do the work — not just draft a proposal — that's what these services are for."
-        secondaryHref="/case-studies"
-        secondaryLabel="View Work"
+        title="Not Sure Where to Start?"
+        body="Tell me what isn't working, and I'll recommend the right fix — not the biggest project."
+        secondaryHref="/work"
+        secondaryLabel="View My Work"
       />
       </main>
     </>

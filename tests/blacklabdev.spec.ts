@@ -5,7 +5,7 @@ import { test, expect } from '@playwright/test';
 test('has correct title and hero heading', async ({ page }) => {
   await page.goto('/');
   await expect(page).toHaveTitle(/Black Lab Dev/i);
-  await expect(page.getByRole('heading', { name: /Skip the Middlemen/i })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1, name: /Custom Web Design/i })).toBeVisible();
 });
 
 test('main navigation links are present', async ({ page }) => {
@@ -13,14 +13,15 @@ test('main navigation links are present', async ({ page }) => {
   const nav = page.getByRole('navigation', { name: 'Primary navigation' });
   await expect(nav.getByRole('link', { name: 'What We Build' })).toBeVisible();
   await expect(nav.getByRole('link', { name: "Who It's For" })).toBeVisible();
-  await expect(nav.getByRole('link', { name: 'Our Work' })).toBeVisible();
+  await expect(nav.getByRole('link', { name: 'My Work' })).toBeVisible();
+  await expect(nav.getByRole('link', { name: 'Partners', exact: true })).toHaveCount(0);
   await expect(nav.getByRole('link', { name: 'Insights' })).toBeVisible();
   await expect(nav.getByRole('link', { name: 'About' })).toBeVisible();
 });
 
-test('"Explore All Insights" CTA navigates to articles', async ({ page }) => {
+test('"All articles" link navigates to articles', async ({ page }) => {
   await page.goto('/');
-  await page.getByRole('link', { name: 'Explore All Insights' }).click();
+  await page.getByRole('link', { name: 'All articles' }).click();
   await expect(page).toHaveURL(/\/articles/);
 });
 
@@ -30,11 +31,11 @@ test('"Get in Touch" CTA navigates to contact page', async ({ page }) => {
   await expect(page).toHaveURL(/\/contact/);
 });
 
-test('"Our Work" nav link navigates to case studies', async ({ page }) => {
+test('"My Work" nav link navigates to case studies', async ({ page }) => {
   await page.goto('/');
   const nav = page.getByRole('navigation', { name: 'Primary navigation' });
-  await nav.getByRole('link', { name: 'Our Work' }).click();
-  await expect(page).toHaveURL(/\/case-studies/);
+  await nav.getByRole('link', { name: 'My Work' }).click();
+  await expect(page).toHaveURL(/\/work/);
   await expect(page.getByRole('heading').first()).toBeVisible();
 });
 
@@ -49,9 +50,11 @@ test('homepage featured article card navigates to the article', async ({ page })
 
 // ─── Legacy / redirects ────────────────────────────────────────────────────────
 
-test('/work redirects to /case-studies', async ({ page }) => {
-  await page.goto('/work');
-  await expect(page).toHaveURL(/\/case-studies/);
+test('/case-studies redirects to /work, including project pages', async ({ page }) => {
+  await page.goto('/case-studies');
+  await expect(page).toHaveURL(/\/work$/);
+  await page.goto('/case-studies/global-environmental-products-wordpress-rebuild');
+  await expect(page).toHaveURL(/\/work\/global-environmental-products-wordpress-rebuild$/);
 });
 
 test('/services/b2b-website-design redirects to the small business service page', async ({ page }) => {
@@ -116,10 +119,11 @@ test('service and partner pages load with correct titles', async ({ page }) => {
   }
 });
 
-test('"Partners" nav link navigates to the partners page', async ({ page }) => {
+test('"Agency partners" in the Who It\'s For menu navigates to the partners page', async ({ page }) => {
   await page.goto('/');
   const nav = page.getByRole('navigation', { name: 'Primary navigation' });
-  await nav.getByRole('link', { name: 'Partners' }).click();
+  await nav.getByRole('link', { name: "Who It's For" }).hover();
+  await nav.getByRole('link', { name: 'Agency partners' }).click();
   await expect(page).toHaveURL(/\/partners/);
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
 });
@@ -155,10 +159,10 @@ test('contact page loads with a form or CTA', async ({ page }) => {
 // ─── Work / Case Studies Page ──────────────────────────────────────────────────
 
 test('case studies page loads and shows past work', async ({ page }) => {
-  await page.goto('/case-studies');
-  await expect(page).toHaveURL(/\/case-studies/);
+  await page.goto('/work');
+  await expect(page).toHaveURL(/\/work/);
   await expect(page.getByRole('heading').first()).toBeVisible();
-  await expect(page.getByText('Globe Iron Roofing')).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Globe Iron Roofing' })).toBeVisible();
 });
 
 // ─── Footer ───────────────────────────────────────────────────────────────────
@@ -166,7 +170,7 @@ test('case studies page loads and shows past work', async ({ page }) => {
 test('footer contains nav links and contact info', async ({ page }) => {
   await page.goto('/');
   const footer = page.locator('footer');
-  await expect(footer.getByRole('link', { name: 'Case Studies' })).toBeVisible();
+  await expect(footer.getByRole('link', { name: 'Work', exact: true })).toBeVisible();
   await expect(footer.getByRole('link', { name: 'Schedule a Call' })).toBeVisible();
   await expect(footer).toContainText('513');
 });
@@ -181,7 +185,7 @@ test('footer copyright year is current', async ({ page }) => {
 // ─── SEO / Metadata regression ─────────────────────────────────────────────────
 
 test('page titles do not double up the trailing brand suffix', async ({ page }) => {
-  const pages = ['/', '/services', '/services/small-business-website-design', '/partners', '/partners/white-label-web-development', '/partners/seo-fulfillment', '/industries', '/case-studies', '/articles', '/contact', '/about', '/privacy', '/terms', '/cookies', '/cincinnati-web-developer'];
+  const pages = ['/', '/services', '/services/small-business-website-design', '/partners', '/partners/white-label-web-development', '/partners/seo-fulfillment', '/industries', '/work', '/articles', '/contact', '/about', '/privacy', '/terms', '/cookies', '/cincinnati-web-developer'];
   for (const url of pages) {
     await page.goto(url);
     const title = await page.title();

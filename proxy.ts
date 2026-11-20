@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 
 // CSP for the marketing site. Uses a per-request nonce (rather than pinned
 // hashes) because several pages render page-specific JSON-LD — including
-// /articles/[slug] and /case-studies/[slug], which pull content from Sanity
+// /articles/[slug] and /work/[slug], which pull content from Sanity
 // on an ISR revalidate cycle, so their script content isn't knowable at
 // build time and can't be hash-pinned in next.config.ts.
 function buildCsp(nonce: string) {

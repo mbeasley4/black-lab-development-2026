@@ -9,19 +9,19 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "B2B & Professional Services Web Design",
+  title: "B2B & Professional Services Website Design",
   description:
     "Web development for consultancies, financial firms, and service businesses — high-trust sites built for complex sales cycles and pipeline-driven growth.",
   alternates: { canonical: "/industries/professional-services" },
   openGraph: {
-    title: "B2B & Professional Services Web Design",
+    title: "B2B & Professional Services Website Design | Black Lab Dev",
     description:
       "Web development for consultancies, financial firms, and service businesses — high-trust sites built for complex sales cycles and pipeline-driven growth.",
     url: "/industries/professional-services",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "B2B & Professional Services Web Design",
+    title: "B2B & Professional Services Website Design | Black Lab Dev",
     description:
       "Web development for consultancies, financial firms, and service businesses — high-trust sites built for complex sales cycles and pipeline-driven growth.",
     images: [DEFAULT_OG_IMAGE.url],
@@ -150,13 +150,13 @@ const clients = [
 
 export default function ProfessionalServicesIndustryPage() {
   return (
-    <main className="w-full bg-[#0b0b0c] text-white">
+    <main className="w-full bg-surface text-white">
       <JsonLd data={[breadcrumbSchema, serviceSchema, faqSchema]} />
 
       <PageHero
         label="B2B & Professional Services"
-        title="Websites Built to Support Complex Sales Cycles"
-        titleHighlight="Complex Sales Cycles"
+        title="B2B Website Design for Complex Sales Cycles"
+        titleHighlight="for Complex Sales Cycles"
         description="B2B buyers don't convert on first visit. They evaluate, compare, and bring in stakeholders before a decision is made. Your website needs to build trust at each stage — not just look professional."
         backgroundImage="/images/industries-professional-services-hero-bg.jpg"
         badges={["Multi-stakeholder trust", "Pipeline generation", "CRM integration"]}
@@ -168,18 +168,18 @@ export default function ProfessionalServicesIndustryPage() {
       />
 
       {/* What We Deliver */}
-      <section className="py-20 border-b border-slate-800/50">
+      <section className="py-20 border-b border-neutral-800/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="mb-12">
-            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">What I Build</span>
+            <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">What I Build</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Built for Long-Cycle B2B Sales</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {deliverables.map((item) => (
-              <div key={item.title} className="p-6 rounded-xl border border-slate-800/60 bg-slate-900/40 hover:border-volt-500/30 hover:bg-volt-500/5 transition-all duration-300">
-                <div className="w-6 h-px bg-volt-500 mb-4" />
+              <div key={item.title} className="p-6 rounded-xl border border-neutral-800/60 bg-neutral-900/40 hover:border-neutral-500 hover:bg-white/5 transition-all duration-300">
+                <div className="w-6 h-px bg-neutral-600 mb-4" />
                 <h3 className="text-base font-semibold text-white mb-2">{item.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{item.description}</p>
+                <p className="text-sm text-neutral-400 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
@@ -187,17 +187,17 @@ export default function ProfessionalServicesIndustryPage() {
       </section>
 
       {/* Client Proof */}
-      <section className="py-20 border-b border-slate-800/50 bg-slate-950/50">
+      <section className="py-20 border-b border-neutral-800/50 bg-neutral-950/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="mb-12">
-            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">Client Proof</span>
+            <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">Client Proof</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">B2B & Professional Services Clients</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {clients.map((c) => (
-              <div key={c.name} className="p-6 rounded-xl border border-slate-800/60 bg-slate-900/30">
-                <p className="text-sm font-semibold text-volt-500 mb-2">{c.name}</p>
-                <p className="text-sm text-slate-400 leading-relaxed">{c.detail}</p>
+              <div key={c.name} className="p-6 rounded-xl border border-neutral-800/60 bg-neutral-900/30">
+                <p className="text-sm font-semibold text-white mb-2">{c.name}</p>
+                <p className="text-sm text-neutral-400 leading-relaxed">{c.detail}</p>
               </div>
             ))}
           </div>
@@ -205,17 +205,17 @@ export default function ProfessionalServicesIndustryPage() {
       </section>
 
       {/* Cross-link */}
-      <section className="py-16 border-b border-slate-800/50">
+      <section className="bg-charcoal py-16 border-b border-neutral-800/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 p-8 rounded-xl border border-volt-500/20 bg-volt-500/5">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 p-8 rounded-xl border border-neutral-800 bg-white/[0.04]">
             <div>
-              <p className="text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold mb-1">Related Service</p>
+              <p className="text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold mb-1">Related Service</p>
               <h3 className="text-lg font-bold text-white">Small Business Website Design</h3>
-              <p className="text-sm text-slate-400 mt-1">Full breakdown of the service, process, and what to expect on an engagement.</p>
+              <p className="text-sm text-neutral-400 mt-1">Full breakdown of the service, process, and what to expect on an engagement.</p>
             </div>
             <Link
               href="/services/small-business-website-design"
-              className="shrink-0 inline-flex items-center gap-2 rounded-md bg-volt text-black px-6 py-3 text-sm font-bold hover:brightness-110 transition-all duration-200"
+              className="shrink-0 inline-flex items-center gap-2 rounded-md bg-white text-black px-6 py-3 text-sm font-bold hover:brightness-110 transition-all duration-200"
             >
               View Service Page
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -231,11 +231,10 @@ export default function ProfessionalServicesIndustryPage() {
       <FounderByline />
 
       <PageClose
-        title="Ready to Turn Your Website Into a Sales Asset?"
-        bodyPrimary="Most B2B websites describe what the firm does — they don't help prospects understand why it matters or make it easy to take the next step."
-        bodySecondary="I fix positioning, trust signals, and conversion architecture so your site actually generates pipeline."
+        title="Turn Your Website Into a Sales Asset"
+        body="Clearer positioning, stronger trust signals, and a site that generates pipeline."
         secondaryHref="/services/small-business-website-design"
-        secondaryLabel="View the Service Page"
+        secondaryLabel="Website Design Services"
       />
     </main>
   );

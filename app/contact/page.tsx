@@ -6,21 +6,21 @@ import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
-  title: "Schedule a Discovery Call",
+  title: "Contact a Cincinnati Web Developer",
   description:
-    "Ready to make your website work harder? Schedule a discovery call with a senior web developer in Cincinnati, OH — let's talk through what's limiting your leads and conversions.",
+    "Talk to a senior web developer in Cincinnati about a new website, a redesign or an agency partnership. Schedule a call with Black Lab Development.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Schedule a Discovery Call",
+    title: "Contact a Cincinnati Web Developer | Black Lab Dev",
     description:
-      "Ready to make your website work harder? Schedule a discovery call and let's talk through what's holding back your leads, traffic, and conversions.",
+      "Talk to a senior web developer in Cincinnati about a new website, a redesign or an agency partnership. Schedule a call with Black Lab Development.",
     url: "/contact",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Schedule a Discovery Call",
+    title: "Contact a Cincinnati Web Developer | Black Lab Dev",
     description:
-      "Schedule a discovery call with a senior web developer in Cincinnati, OH.",
+      "Talk to a senior web developer in Cincinnati about a new website, a redesign or an agency partnership. Schedule a call with Black Lab Development.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
@@ -53,12 +53,12 @@ export default function ContactPage() {
   return (
     <>
       <JsonLd data={localBusinessSchema} />
-      <main className="w-full bg-[#0b0b0c] text-white">
+      <main className="w-full bg-surface text-white">
       {/* ================= HERO ================= */}
       <PageHero
         label=" Contact Me"
-        title="Let's Talk About Your "
-        titleHighlight="Platform"
+        title="Contact a Senior Web Developer. Let's Talk About Your Project."
+        titleHighlight="Let's Talk About Your Project."
         description="If you're building new, modernizing, or reducing technical debt, I partner with you to create clean, scalable, lasting systems."
         backgroundImage="/images/contact-hero-bg.png"
         badges={["Senior-led execution", "Production systems", "Direct collaboration"]}
@@ -71,14 +71,14 @@ export default function ContactPage() {
           <div className="max-w-xl">
             <div className="flex items-center gap-6 mb-6">
               <div>
-                <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono drop-shadow-[0_0_12px_rgba(227,245,68,0.7)]">
+                <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-white font-mono">
                   // About
                 </span>
                 <h2 className="text-3xl md:text-5xl font-bold text-white">
                   Work Directly With a Senior Engineer
                 </h2>
               </div>
-              <div className="flex-1 h-px bg-linear-to-r from-volt-500/60 via-volt-500/20 to-transparent" />
+              <div className="flex-1 h-px bg-linear-to-r from-white/10 via-white/10 to-transparent" />
             </div>
 
             <p className="text-neutral-400 leading-relaxed mb-6">
@@ -114,7 +114,7 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="rounded-2xl border border-volt-500/40 bg-neutral-950 p-8 lg:p-10 shadow-[0_0_60px_rgba(227,245,68,0.12)]">
+          <div className="rounded-2xl border border-neutral-800 bg-neutral-950 p-8 lg:p-10">
             <h3 className="text-2xl font-medium mb-6">
               Start the Conversation
             </h3>
@@ -134,13 +134,10 @@ export default function ContactPage() {
       <section className="relative overflow-hidden border-t border-neutral-900">
         {/* ================= CLOSE ================= */}
         <PageClose
-          title="Custom Web Development & Digital Strategy"
-          bodyPrimary="I provide custom web development, software engineering, SEO, and digital
-              platform optimization for organizations that need scalable, secure, and
-              maintainable solutions. Work ranges from WordPress and Shopify to custom
-              Laravel and headless architectures."
-          bodySecondary="If you need a senior engineer who combines technical leadership, business
-              insight, and hands-on execution — that's exactly what this is."
+          title="Not Ready to Talk Yet?"
+          body="Look through the work and services first, then reach out when you're ready."
+          primaryHref="/work"
+          primaryLabel="View My Work"
           secondaryHref="/services"
           secondaryLabel="Explore Services"
         />

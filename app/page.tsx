@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import HomepageHero from "@/components/HomepageHero";
-import RevenueFramework from "@/components/RevenueFramework";
 import Differentiation from "@/components/Differentiation";
 import WhoIWorkWith from "@/components/WhoIWorkWith";
 import CoreServices from "@/components/CoreServices";
 import Results from "@/components/Results";
-import Process from "@/components/Process";
-import LabFramework from "@/components/LabFramework";
-import PositioningStrike from "@/components/PositioningStrike";
-import CallToAction from "@/components/CallToAction";
+import PageClose from "@/components/PageClose";
 import FounderStrip from "@/components/FounderStrip";
 import Testimonial from "@/components/Testimonial";
 import FaqSection from "@/components/FaqSection";
@@ -19,21 +15,21 @@ import JsonLd from "@/components/JsonLd";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "Website Design for Small Businesses & Agencies | Black Lab Dev",
+  title: "Web Design for Small Businesses & Agencies | Black Lab Dev",
   description:
-    "No ghosting. No junior handoffs. Just fast, conversion-built websites — direct from a senior engineer, for small businesses and white-label agency partners.",
+    "Custom website design and development for small businesses and agencies. Fast, SEO-ready sites built directly by a senior web developer in Cincinnati.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Website Design for Small Businesses & Agencies | Black Lab Dev",
+    title: "Web Design for Small Businesses & Agencies | Black Lab Dev",
     description:
-      "No ghosting. No junior handoffs. Just fast, conversion-built websites — direct from a senior engineer, for small businesses and white-label agency partners.",
+      "Custom website design and development for small businesses and agencies. Fast, SEO-ready sites built directly by a senior web developer in Cincinnati.",
     url: "/",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Website Design for Small Businesses & Agencies | Black Lab Dev",
+    title: "Web Design for Small Businesses & Agencies | Black Lab Dev",
     description:
-      "No ghosting. No junior handoffs. Just fast, conversion-built websites — direct from a senior engineer, for small businesses and white-label agency partners.",
+      "Custom website design and development for small businesses and agencies. Fast, SEO-ready sites built directly by a senior web developer in Cincinnati.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
@@ -109,23 +105,29 @@ export default function Home() {
       <JsonLd data={[websiteSchema, faqSchema]} />
       <div className="w-full mt-0">
         <HomepageHero />
-        <RevenueFramework />
         <Differentiation />
         <WhoIWorkWith />
         <CoreServices />
         <Results />
         <Testimonial />
-        <Process />
         <FounderStrip />
-        <LabFramework />
         <ArticlesBlock />
 
         <FaqSection
           faqs={faqSchema.mainEntity.map((faq) => ({ question: faq.name, answer: faq.acceptedAnswer.text }))}
         />
 
-        <PositioningStrike />
-        <CallToAction />
+        <PageClose
+
+          title="Let's Talk About Your Website"
+
+          body="Tell me what isn't working, and I'll show you what it would take to fix it."
+
+          secondaryHref="/work"
+
+          secondaryLabel="View My Work"
+
+        />
       </div>
     </>
   );

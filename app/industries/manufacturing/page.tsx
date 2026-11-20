@@ -9,19 +9,19 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Manufacturing Web Design & Development",
+  title: "Manufacturing Website Design",
   description:
     "Websites for manufacturers and industrial firms — RFQ generation, product catalogs, and distributor portals built to win engineers and procurement teams.",
   alternates: { canonical: "/industries/manufacturing" },
   openGraph: {
-    title: "Manufacturing Web Design & Development",
+    title: "Manufacturing Website Design | Black Lab Dev",
     description:
       "Websites for manufacturers and industrial firms — RFQ generation, product catalogs, and distributor portals built to win engineers and procurement teams.",
     url: "/industries/manufacturing",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Manufacturing Web Design & Development",
+    title: "Manufacturing Website Design | Black Lab Dev",
     description:
       "Websites for manufacturers and industrial firms — RFQ generation, product catalogs, and distributor portals built to win engineers and procurement teams.",
     images: [DEFAULT_OG_IMAGE.url],
@@ -138,21 +138,20 @@ const deliverables = [
 ];
 
 const clients = [
-  { name: "Haag-Streit USA", detail: "WordPress platform for a medical device manufacturer in regulated environments." },
+  { name: "Global Environmental Products", detail: "Custom WordPress rebuild for an industrial absorbents converter — spec-table product catalog, add-to-quote RFQ workflow, and 57 SEO-safe redirects." },
   { name: "FAZTEK", detail: "Engineering support for an industrial automation platform requiring reliability and systems integration." },
-  { name: "Plastech Molding", detail: "Custom WordPress theme for a precision plastics manufacturer — responsive, SEO-optimized, lead-generating." },
   { name: "Melink Solar", detail: "Custom plugin and API integration work for a solar energy platform focused on technical precision." },
 ];
 
 export default function ManufacturingIndustryPage() {
   return (
-    <main className="w-full bg-[#0b0b0c] text-white">
+    <main className="w-full bg-surface text-white">
       <JsonLd data={[breadcrumbSchema, serviceSchema, faqSchema]} />
 
       <PageHero
         label="Manufacturing & Industrial"
-        title="Built for Engineers Who Read Spec Sheets"
-        titleHighlight="Read Spec Sheets"
+        title="Manufacturing Website Design for Engineers Who Read Spec Sheets"
+        titleHighlight="for Engineers Who Read Spec Sheets"
         description="Manufacturing buyers don't fill out generic contact forms. They evaluate specs, compare capabilities, and submit RFQs. Your website needs to support that process — or they'll find a competitor's that does."
         backgroundImage="/images/industries-manufacturing-hero-bg.jpg"
         badges={["RFQ generation", "Product catalog architecture", "Technical SEO"]}
@@ -164,18 +163,18 @@ export default function ManufacturingIndustryPage() {
       />
 
       {/* What We Deliver */}
-      <section className="py-20 border-b border-slate-800/50">
+      <section className="py-20 border-b border-neutral-800/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="mb-12">
-            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">What I Build</span>
+            <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">What I Build</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Built for Technical Buyers</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {deliverables.map((item) => (
-              <div key={item.title} className="p-6 rounded-xl border border-slate-800/60 bg-slate-900/40 hover:border-volt-500/30 hover:bg-volt-500/5 transition-all duration-300">
-                <div className="w-6 h-px bg-volt-500 mb-4" />
+              <div key={item.title} className="p-6 rounded-xl border border-neutral-800/60 bg-neutral-900/40 hover:border-neutral-500 hover:bg-white/5 transition-all duration-300">
+                <div className="w-6 h-px bg-neutral-600 mb-4" />
                 <h3 className="text-base font-semibold text-white mb-2">{item.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{item.description}</p>
+                <p className="text-sm text-neutral-400 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
@@ -183,17 +182,17 @@ export default function ManufacturingIndustryPage() {
       </section>
 
       {/* Client Proof */}
-      <section className="py-20 border-b border-slate-800/50 bg-slate-950/50">
+      <section className="py-20 border-b border-neutral-800/50 bg-neutral-950/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="mb-12">
-            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">Client Proof</span>
+            <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">Client Proof</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Manufacturing Companies Worked With</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {clients.map((c) => (
-              <div key={c.name} className="p-6 rounded-xl border border-slate-800/60 bg-slate-900/30">
-                <p className="text-sm font-semibold text-volt-500 mb-2">{c.name}</p>
-                <p className="text-sm text-slate-400 leading-relaxed">{c.detail}</p>
+              <div key={c.name} className="p-6 rounded-xl border border-neutral-800/60 bg-neutral-900/30">
+                <p className="text-sm font-semibold text-white mb-2">{c.name}</p>
+                <p className="text-sm text-neutral-400 leading-relaxed">{c.detail}</p>
               </div>
             ))}
           </div>
@@ -201,17 +200,17 @@ export default function ManufacturingIndustryPage() {
       </section>
 
       {/* Cross-link to service page */}
-      <section className="py-16 border-b border-slate-800/50">
+      <section className="bg-charcoal py-16 border-b border-neutral-800/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 p-8 rounded-xl border border-volt-500/20 bg-volt-500/5">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 p-8 rounded-xl border border-neutral-800 bg-white/[0.04]">
             <div>
-              <p className="text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold mb-1">Related Service</p>
+              <p className="text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold mb-1">Related Service</p>
               <h3 className="text-lg font-bold text-white">Small Business Website Design</h3>
-              <p className="text-sm text-slate-400 mt-1">Full breakdown of the service, process, and what to expect.</p>
+              <p className="text-sm text-neutral-400 mt-1">Full breakdown of the service, process, and what to expect.</p>
             </div>
             <Link
               href="/services/small-business-website-design"
-              className="shrink-0 inline-flex items-center gap-2 rounded-md bg-volt text-black px-6 py-3 text-sm font-bold hover:brightness-110 transition-all duration-200"
+              className="shrink-0 inline-flex items-center gap-2 rounded-md bg-white text-black px-6 py-3 text-sm font-bold hover:brightness-110 transition-all duration-200"
             >
               View Service Page
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -227,11 +226,10 @@ export default function ManufacturingIndustryPage() {
       <FounderByline />
 
       <PageClose
-        title="Ready to Build a Website That Generates RFQs?"
-        bodyPrimary="Most manufacturing websites are digital brochures — they exist, but they don't generate qualified pipeline. That gap is fixable."
-        bodySecondary="Schedule a discovery call. I'll talk through exactly what's costing you leads and what it would take to fix it."
-        secondaryHref="/services/small-business-website-design"
-        secondaryLabel="View the Service Page"
+        title="Build a Website That Generates RFQs"
+        body="I'll show you what's costing you leads and what it takes to fix it."
+        secondaryHref="/work/global-environmental-products-wordpress-rebuild"
+        secondaryLabel="See a Manufacturing Project"
       />
     </main>
   );

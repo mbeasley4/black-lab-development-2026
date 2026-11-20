@@ -85,7 +85,7 @@ function CookieTable({
     <div className="not-prose my-6 overflow-x-auto rounded-lg border border-white/10">
       <table className="w-full min-w-150 border-collapse text-left text-sm">
         <thead>
-          <tr className="border-b border-white/10 bg-white/5 text-xs uppercase tracking-wide text-slate-400">
+          <tr className="border-b border-white/10 bg-white/5 text-xs uppercase tracking-wide text-neutral-400">
             <th className="px-4 py-3 font-semibold">Name</th>
             <th className="px-4 py-3 font-semibold">Provider</th>
             <th className="px-4 py-3 font-semibold">Purpose</th>
@@ -96,11 +96,11 @@ function CookieTable({
         <tbody className="divide-y divide-white/10">
           {rows.map((row) => (
             <tr key={row.name}>
-              <td className="px-4 py-3 align-top font-mono text-xs text-volt-400">{row.name}</td>
-              <td className="px-4 py-3 align-top text-slate-300">{row.provider}</td>
-              <td className="px-4 py-3 align-top text-slate-400">{row.purpose}</td>
-              <td className="px-4 py-3 align-top text-slate-400">{row.storage}</td>
-              <td className="px-4 py-3 align-top text-slate-400">{row.duration}</td>
+              <td className="px-4 py-3 align-top font-mono text-xs text-white">{row.name}</td>
+              <td className="px-4 py-3 align-top text-neutral-300">{row.provider}</td>
+              <td className="px-4 py-3 align-top text-neutral-400">{row.purpose}</td>
+              <td className="px-4 py-3 align-top text-neutral-400">{row.storage}</td>
+              <td className="px-4 py-3 align-top text-neutral-400">{row.duration}</td>
             </tr>
           ))}
         </tbody>
@@ -119,7 +119,7 @@ export default function CookiePolicyPage() {
         description={`A full breakdown of the cookies and similar technologies used on this site, what each one does, and how to control them. Last updated ${LAST_UPDATED}.`}
         sections={SECTIONS}
       >
-        <p className="text-sm uppercase tracking-widest text-slate-500">
+        <p className="text-sm uppercase tracking-widest text-neutral-400">
           Last updated: {LAST_UPDATED}
         </p>
 
@@ -128,7 +128,7 @@ export default function CookiePolicyPage() {
           technologies on blacklabdev.com (the &ldquo;Site&rdquo;), and complements our{" "}
           <a href="/privacy">Privacy Policy</a>. It's more technical and specific than the Privacy
           Policy's cookie section — if you just want to change your preferences, use{" "}
-          <CookieSettingsButton className="font-medium text-volt-400 underline underline-offset-4 hover:text-volt-300">
+          <CookieSettingsButton className="font-medium text-white underline underline-offset-4 hover:text-neutral-300">
             Manage Cookie Preferences
           </CookieSettingsButton>{" "}
           in the footer.
@@ -215,7 +215,7 @@ export default function CookiePolicyPage() {
         <h2 id="managing-cookies">Managing Your Preferences</h2>
         <p>
           You can change your cookie choice at any time by clicking{" "}
-          <CookieSettingsButton className="font-medium text-volt-400 underline underline-offset-4 hover:text-volt-300">
+          <CookieSettingsButton className="font-medium text-white underline underline-offset-4 hover:text-neutral-300">
             Manage Cookie Preferences
           </CookieSettingsButton>{" "}
           in the footer of any page. This reopens the same panel you saw on your first visit, with
