@@ -191,13 +191,13 @@ export default function WebsitePerformanceOptimizationPage() {
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg shadow-volt-500/25"
+              className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg"
             >
               Get a Performance Audit →
             </Link>
             <Link
               href="/work"
-              className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
+              className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
             >
               View Results →
             </Link>
@@ -263,7 +263,7 @@ export default function WebsitePerformanceOptimizationPage() {
                     <div className="p-6 flex flex-col items-start justify-center">
                       <div className="text-3xl font-black font-mono text-volt-400 mb-1">{vital.metric}</div>
                       <div className="text-xs text-neutral-400 leading-tight">{vital.full}</div>
-                      <div className="mt-3 text-xs font-mono text-volt-400 bg-volt-500/10 border border-volt-500/20 rounded px-2 py-1">
+                      <div className="mt-3 text-xs font-mono text-volt-400 bg-white/[0.04] border border-neutral-800 rounded px-2 py-1">
                         Target: {vital.target}
                       </div>
                     </div>
@@ -299,7 +299,7 @@ export default function WebsitePerformanceOptimizationPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {fixes.map((item) => (
                 <div key={item.label} className="flex items-start gap-4 rounded-xl border border-neutral-800 bg-neutral-900/50 p-5">
-                  <div className="w-6 h-6 rounded-full bg-volt-500/15 flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-full bg-white/[0.04] flex items-center justify-center shrink-0 mt-0.5">
                     <svg className="w-3 h-3 text-volt-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
@@ -328,7 +328,7 @@ export default function WebsitePerformanceOptimizationPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-neutral-800/40 rounded-2xl overflow-hidden border border-neutral-700/40">
               {results.map((r) => (
                 <div key={r.label} className="bg-neutral-900 px-10 py-10 text-center">
-                  <div className="text-4xl font-black text-volt-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.4)] mb-2">{r.metric}</div>
+                  <div className="text-4xl font-black text-white drop-shadow-[0_0_10px_rgba(34,211,238,0.4)] mb-2">{r.metric}</div>
                   <div className="text-sm font-semibold text-white mb-2">{r.label}</div>
                   <div className="text-xs text-neutral-400">{r.detail}</div>
                 </div>
@@ -353,7 +353,7 @@ export default function WebsitePerformanceOptimizationPage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/services/conversion-optimization"
-                className="rounded-lg border border-volt-500/30 bg-volt-500/10 px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200"
+                className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200"
               >
                 Conversion Optimization →
               </Link>

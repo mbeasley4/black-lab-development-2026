@@ -213,7 +213,7 @@ export default function AboutPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Michael Beasley on LinkedIn"
-                className="group/li inline-flex items-center gap-2.5 mt-4 px-5 py-2.5 rounded-lg border border-volt-500/30 bg-volt-500/8 text-volt-500 font-medium text-sm hover:bg-volt-500/15 hover:border-volt-500/60 hover:shadow-[0_0_30px_rgba(227,245,68,0.15)] transition-all duration-300"
+                className="group/li inline-flex items-center gap-2.5 mt-4 px-5 py-2.5 rounded-lg border border-neutral-800 bg-white/[0.04] text-volt-500 font-medium text-sm hover:bg-volt-500/15 hover:border-volt-500/60 hover:shadow-[0_0_30px_rgba(227,245,68,0.15)] transition-all duration-300"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="shrink-0">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
@@ -224,7 +224,7 @@ export default function AboutPage() {
                 </svg>
               </a>
             </div>
-            <div className="flex-1 h-px bg-linear-to-r from-volt-500/60 via-volt-500/20 to-transparent" />
+            <div className="flex-1 h-px bg-linear-to-r from-white/10 via-white/10 to-transparent" />
           </div>
 
           {/* Bio content */}
@@ -232,10 +232,10 @@ export default function AboutPage() {
             <div className="flex flex-col gap-8">
               {/* Photo */}
               <div className="relative w-48 h-48 md:w-56 md:h-56 shrink-0">
-                <div className="absolute inset-0 rounded-2xl bg-volt-500/15 blur-2xl scale-110 pointer-events-none" />
-                <div className="absolute -top-2 -left-2 w-8 h-8 border-t-2 border-l-2 border-volt-500/50 rounded-tl-lg pointer-events-none" />
-                <div className="absolute -bottom-2 -right-2 w-8 h-8 border-b-2 border-r-2 border-volt-500/50 rounded-br-lg pointer-events-none" />
-                <div className="relative w-full h-full rounded-2xl overflow-hidden border border-volt-500/25">
+                <div className="absolute inset-0 rounded-2xl bg-white/[0.04] blur-2xl scale-110 pointer-events-none" />
+                <div className="absolute -top-2 -left-2 w-8 h-8 border-t-2 border-l-2 border-neutral-800 rounded-tl-lg pointer-events-none" />
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 border-b-2 border-r-2 border-neutral-800 rounded-br-lg pointer-events-none" />
+                <div className="relative w-full h-full rounded-2xl overflow-hidden border border-neutral-800">
                   <Image
                     src="/images/michael-beasley.webp"
                     alt="Michael Beasley, senior web developer and founder of Black Lab Development, based in Cincinnati, Ohio"
@@ -283,10 +283,10 @@ export default function AboutPage() {
               ].map((stat) => (
                 <div
                   key={stat.label}
-                  className="relative rounded-xl border border-volt-500/15 bg-surface-raised/60 p-6 overflow-hidden group hover:border-volt-500/40 hover:shadow-[0_0_40px_rgba(227,245,68,0.10)] transition-all duration-500"
+                  className="relative rounded-xl border border-neutral-800 bg-surface-raised/60 p-6 overflow-hidden group hover:border-volt-500/40 hover:shadow-[0_0_40px_rgba(227,245,68,0.10)] transition-all duration-500"
                 >
-                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/30 to-transparent group-hover:via-volt-500/70 transition-all duration-500" />
-                  <div className="text-4xl font-black font-mono text-volt-500 mb-2">
+                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-volt-500/70 transition-all duration-500" />
+                  <div className="text-4xl font-black font-mono text-white mb-2">
                     {stat.value}
                   </div>
                   <div className="text-sm text-neutral-400 leading-snug">{stat.label}</div>
@@ -298,7 +298,7 @@ export default function AboutPage() {
       </section>
 
       {/* ================= THE HONEST PITCH ================= */}
-      <section className="py-6 md:py-9 relative overflow-hidden border-t border-volt-500/8">
+      <section className="py-6 md:py-9 relative overflow-hidden border-t border-neutral-800">
         <div className="absolute inset-0 pointer-events-none opacity-10"
           style={{
             backgroundImage: "radial-gradient(circle, rgba(227,245,68,0.25) 1px, transparent 1px)",
@@ -316,7 +316,7 @@ export default function AboutPage() {
                 Why It Matters Who Builds It
               </h2>
             </div>
-            <div className="flex-1 h-px bg-linear-to-r from-volt-500/60 via-volt-500/20 to-transparent" />
+            <div className="flex-1 h-px bg-linear-to-r from-white/10 via-white/10 to-transparent" />
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-start max-w-6xl">
@@ -368,7 +368,7 @@ export default function AboutPage() {
                     <span className="block text-[10px] font-mono tracking-[0.3em] uppercase text-neutral-500 mb-1">Agency</span>
                     {row.agency}
                   </div>
-                  <div className="p-4 bg-surface-raised/60 text-sm text-neutral-300 leading-relaxed border-l border-volt-500/10 group-hover:border-volt-500/30 transition-colors duration-300">
+                  <div className="p-4 bg-surface-raised/60 text-sm text-neutral-300 leading-relaxed border-l border-neutral-800 group-hover:border-volt-500/30 transition-colors duration-300">
                     <span className="block text-[10px] font-mono tracking-[0.2em] uppercase text-neutral-400 mb-1">Black Lab Dev</span>
                     {row.me}
                   </div>
@@ -380,7 +380,7 @@ export default function AboutPage() {
       </section>
 
       {/* ================= VALUES ================= */}
-      <section className="py-6 md:py-9 relative overflow-hidden border-t border-volt-500/8">
+      <section className="py-6 md:py-9 relative overflow-hidden border-t border-neutral-800">
 
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="flex items-center gap-6 mb-10 md:mb-20">
@@ -392,16 +392,16 @@ export default function AboutPage() {
                 What I Actually Believe
               </h2>
             </div>
-            <div className="flex-1 h-px bg-linear-to-r from-volt-500/60 via-volt-500/20 to-transparent" />
+            <div className="flex-1 h-px bg-linear-to-r from-white/10 via-white/10 to-transparent" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {values.map((value) => (
               <div
                 key={value.label}
-                className="group relative rounded-xl border border-volt-500/15 bg-surface-raised/50 p-8 overflow-hidden hover:border-volt-500/35 hover:shadow-[0_0_60px_rgba(227,245,68,0.08)] transition-all duration-500"
+                className="group relative rounded-xl border border-neutral-800 bg-surface-raised/50 p-8 overflow-hidden hover:border-volt-500/35 hover:shadow-[0_0_60px_rgba(227,245,68,0.08)] transition-all duration-500"
               >
-                <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/25 to-transparent group-hover:via-volt-500/60 transition-all duration-500" />
+                <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-volt-500/60 transition-all duration-500" />
                 <div className="absolute top-3 right-4 text-[6rem] font-black font-mono text-volt-500/4 leading-none pointer-events-none select-none" aria-hidden="true">
                   {value.label}
                 </div>
@@ -410,7 +410,7 @@ export default function AboutPage() {
                     <span className="text-3xl font-black font-mono text-volt-500/25 leading-none tracking-tighter">
                       {value.label}
                     </span>
-                    <div className="h-px w-8 bg-linear-to-r from-volt-500/60 to-transparent" />
+                    <div className="h-px w-8 bg-linear-to-r from-white/10 to-transparent" />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-white">
                     {value.title}

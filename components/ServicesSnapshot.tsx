@@ -62,7 +62,7 @@ export default function ServicesSnapshot() {
                             className="group relative rounded-2xl border border-neutral-800/50 bg-linear-to-br from-neutral-900/50 to-surface-raised/80 p-8 transition-all duration-300 hover:border-volt-500/40 hover:-translate-y-2 hover:shadow-xl hover:shadow-volt-500/10 backdrop-blur-sm"
                         >
                             {/* Glow effect on hover */}
-                            <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-volt-500/0 to-volt-500/0 group-hover:from-volt-500/4 group-hover:to-transparent transition-all duration-300" />
+                            <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-white/10 to-white/10 group-hover:from-volt-500/4 group-hover:to-transparent transition-all duration-300" />
 
                             {/* Content */}
                             <div className="relative z-10">
@@ -83,7 +83,7 @@ export default function ServicesSnapshot() {
                             </div>
 
                             {/* Bottom accent line */}
-                            <div className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-volt-500/0 to-transparent group-hover:via-volt-500/80 transition-all duration-300 rounded-b-2xl" />
+                            <div className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-volt-500/80 transition-all duration-300 rounded-b-2xl" />
                         </div>
                     ))}
                 </div>

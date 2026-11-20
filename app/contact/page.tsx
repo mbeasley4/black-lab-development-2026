@@ -78,7 +78,7 @@ export default function ContactPage() {
                   Work Directly With a Senior Engineer
                 </h2>
               </div>
-              <div className="flex-1 h-px bg-linear-to-r from-volt-500/60 via-volt-500/20 to-transparent" />
+              <div className="flex-1 h-px bg-linear-to-r from-white/10 via-white/10 to-transparent" />
             </div>
 
             <p className="text-neutral-400 leading-relaxed mb-6">
@@ -114,7 +114,7 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="rounded-2xl border border-volt-500/40 bg-neutral-950 p-8 lg:p-10">
+          <div className="rounded-2xl border border-neutral-800 bg-neutral-950 p-8 lg:p-10">
             <h3 className="text-2xl font-medium mb-6">
               Start the Conversation
             </h3>

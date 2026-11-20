@@ -91,7 +91,7 @@ const experienceAreas: experienceArea[] = [
 
 const colorClasses = {
     volt: {
-        iconBg: "bg-volt-500/10",
+        iconBg: "bg-white/[0.06]",
         iconText: "text-volt-500",
         iconHoverBg: "group-hover:bg-volt-500",
         border: "group-hover:border-volt-500/50",
@@ -99,10 +99,10 @@ const colorClasses = {
         gradient: "group-hover:from-volt-500/8 group-hover:to-transparent",
         accent: "group-hover:via-volt-500",
         titleHover: "group-hover:text-volt-400",
-        bullet: "bg-volt-500/40",
+        bullet: "bg-neutral-500",
     },
     blue: {
-        iconBg: "bg-volt-500/10",
+        iconBg: "bg-white/[0.06]",
         iconText: "text-volt-400",
         iconHoverBg: "group-hover:bg-volt-500",
         border: "group-hover:border-volt-500/50",
@@ -110,7 +110,7 @@ const colorClasses = {
         gradient: "group-hover:from-volt-500/8 group-hover:to-transparent",
         accent: "group-hover:via-volt-500",
         titleHover: "group-hover:text-volt-300",
-        bullet: "bg-volt-500/40",
+        bullet: "bg-neutral-500",
     },
 };
 
@@ -176,11 +176,11 @@ export default function TechnologiesExperience() {
                 {/* Certifications & Credibility */}
                 <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div className="group rounded-2xl border-2 border-neutral-800/50 bg-linear-to-br from-neutral-900/50 to-surface-raised/80 p-10 transition-all duration-500 hover:border-volt-500/40 hover:shadow-xl hover:shadow-volt-500/10 backdrop-blur-sm relative overflow-hidden">
-                        <div className="absolute inset-0 bg-linear-to-br from-volt-500/0 to-volt-500/0 group-hover:from-volt-500/4 group-hover:to-transparent transition-all duration-500" />
+                        <div className="absolute inset-0 bg-linear-to-br from-white/10 to-white/10 group-hover:from-volt-500/4 group-hover:to-transparent transition-all duration-500" />
 
                         <div className="relative z-10">
                             <div className="flex items-center gap-4 mb-4">
-                                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-volt-500/10 text-volt-500 transition-all duration-500 group-hover:bg-volt-500 group-hover:text-black group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-volt-500/30">
+                                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-white/[0.04] text-volt-500 transition-all duration-500 group-hover:bg-volt-500 group-hover:text-black group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-volt-500/30">
                                     <Award className="h-7 w-7" strokeWidth={2.5} />
                                 </div>
                                 <h3 className="text-2xl font-semibold text-white group-hover:text-volt-400 transition-colors duration-300">
@@ -197,7 +197,7 @@ export default function TechnologiesExperience() {
                     </div>
 
                     <div className="group rounded-2xl border-2 border-neutral-800/50 bg-neutral-900/50 p-10 flex items-center gap-6 transition-all duration-500 hover:border-volt-500/40 hover:shadow-xl hover:shadow-volt-500/10 backdrop-blur-sm relative overflow-hidden">
-                        <div className="absolute inset-0 bg-linear-to-br from-volt-500/0 to-volt-500/0 group-hover:from-volt-500/4 group-hover:to-transparent transition-all duration-500" />
+                        <div className="absolute inset-0 bg-linear-to-br from-white/10 to-white/10 group-hover:from-volt-500/4 group-hover:to-transparent transition-all duration-500" />
 
                         <div className="relative z-10 flex items-center gap-6">
                             <img

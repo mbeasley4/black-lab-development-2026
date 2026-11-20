@@ -111,7 +111,7 @@ export default function CookieConsent() {
       role="dialog"
       aria-label="Cookie consent"
       aria-describedby={view === "banner" ? "cookie-consent-description" : undefined}
-      className="fixed inset-x-0 bottom-0 z-50 border-t border-volt-500/20 bg-surface/95 backdrop-blur-md"
+      className="fixed inset-x-0 bottom-0 z-50 border-t border-neutral-800 bg-surface/95 backdrop-blur-md"
     >
       {view === "banner" ? (
         <div className="mx-auto flex max-w-375 flex-col gap-4 px-6 py-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6">

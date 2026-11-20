@@ -140,13 +140,13 @@ export default function CaseStudiesPage() {
       <JsonLd data={[collectionSchema, breadcrumbSchema, faqSchema]} />
 
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden border-b border-volt-500/20">
+      <section className="relative overflow-hidden border-b border-neutral-800">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/images/case-studies-hero-bg.jpg')" }}
         />
         <div className="absolute inset-0 bg-linear-to-br from-surface/95 via-surface/88 to-surface/80" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/30 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
         <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-20 md:py-28">
           <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-neutral-300 mb-8">
@@ -156,7 +156,7 @@ export default function CaseStudiesPage() {
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.95] mb-8">
             <span className="block text-white">Real Work.</span>
-            <span className="block text-volt-500">Real Outcomes.</span>
+            <span className="block text-neutral-400">Real Outcomes.</span>
           </h1>
 
           <p className="text-lg md:text-xl text-neutral-400 leading-relaxed max-w-2xl mb-8">
@@ -166,7 +166,7 @@ export default function CaseStudiesPage() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-8 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg shadow-volt-500/25"
+              className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-8 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg"
             >
               Schedule a Call
             </Link>
@@ -179,7 +179,7 @@ export default function CaseStudiesPage() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
       </section>
 
       <QuickAnswerBlock
@@ -198,7 +198,7 @@ export default function CaseStudiesPage() {
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-5">
               {projects.length}+ Projects,{" "}
-              <span className="text-volt-500">Shipped and Supported</span>
+              <span className="text-neutral-400">Shipped and Supported</span>
             </h2>
             <p className="text-lg text-neutral-400 leading-relaxed">
               15+ years building and maintaining production websites for manufacturers, healthcare providers, restaurants, and B2B platforms — on WordPress, Shopify, and custom Next.js builds.
@@ -211,7 +211,7 @@ export default function CaseStudiesPage() {
                 </Link>
               ))}
             </nav>
-            <div className="mt-6 h-px w-64 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
+            <div className="mt-6 h-px w-64 bg-linear-to-r from-white/10 via-white/10 to-transparent" />
           </div>
 
           <WorkShowcase projects={projects} />
@@ -225,7 +225,7 @@ export default function CaseStudiesPage() {
           Featured Work
         </span>
         <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white mb-4">
-          A Closer Look, <span className="text-volt-500">With the Numbers</span>
+          A Closer Look, <span className="text-neutral-400">With the Numbers</span>
         </h2>
         <p className="text-lg text-neutral-400 leading-relaxed max-w-2xl">
           A handful of engagements broken down in detail — what was built, what changed, and what it produced.
@@ -234,19 +234,19 @@ export default function CaseStudiesPage() {
 
       {/* ── Whole30 Featured Project ── */}
       <section className="relative py-20 overflow-hidden border-b border-neutral-800 bg-surface-raised">
-        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/25 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
 
           {/* Featured card */}
-          <div className="relative rounded-2xl border border-volt-500/25 overflow-hidden bg-neutral-950/80">
-            <div className="absolute -inset-px rounded-2xl blur-lg bg-linear-to-br from-volt-500/15 via-transparent to-transparent pointer-events-none" />
-            <div className="h-0.5 bg-linear-to-r from-volt-600 via-volt-400 to-volt-600" />
+          <div className="relative rounded-2xl border border-neutral-800 overflow-hidden bg-neutral-950/80">
+            <div className="absolute -inset-px rounded-2xl blur-lg bg-linear-to-br from-white/10 via-transparent to-transparent pointer-events-none" />
+            <div className="h-0.5 bg-linear-to-r from-white/10 via-white/10 to-white/10" />
 
             {/* Hero metric row */}
-            <div className="relative grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-neutral-800/80 bg-linear-to-br from-volt-950/50 via-volt-950/20 to-neutral-950 border-b border-neutral-800/80">
+            <div className="relative grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-neutral-800/80 bg-linear-to-br from-white/10 via-white/10 to-neutral-950 border-b border-neutral-800/80">
               <div className="absolute top-0 left-0 right-0 bottom-0 pointer-events-none">
-                <div className="absolute right-0 top-0 bottom-0 w-96 bg-linear-to-l from-volt-500/4 to-transparent" />
+                <div className="absolute right-0 top-0 bottom-0 w-96 bg-linear-to-l from-white/10 to-transparent" />
               </div>
               {[
                 { value: "6,000+", label: "Daily Users", note: "Platform scale" },
@@ -255,7 +255,7 @@ export default function CaseStudiesPage() {
                 { value: "+50%", label: "Integrations", note: "API-driven" },
               ].map((m) => (
                 <div key={m.label} className="relative px-4 sm:px-6 py-5 sm:py-7 text-center group hover:bg-volt-500/5 transition-colors duration-300">
-                  <div className="text-2xl sm:text-4xl md:text-5xl font-black text-volt-400 mb-1.5 transition-all duration-300 tabular-nums">
+                  <div className="text-2xl sm:text-4xl md:text-5xl font-black text-white mb-1.5 transition-all duration-300 tabular-nums">
                     {m.value}
                   </div>
                   <div className="text-xs font-semibold text-white tracking-wide">{m.label}</div>
@@ -274,7 +274,7 @@ export default function CaseStudiesPage() {
                     <span className="w-1.5 h-1.5 rounded-full bg-volt-500" />
                     Featured Project
                   </span>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-volt-500/30 bg-volt-500/8 text-volt-400 text-xs font-semibold tracking-wide">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-neutral-800 bg-white/[0.04] text-volt-400 text-xs font-semibold tracking-wide">
                     <span className="w-1.5 h-1.5 rounded-full bg-volt-400 animate-pulse" />
                     Ongoing Engagement
                   </span>
@@ -282,7 +282,7 @@ export default function CaseStudiesPage() {
 
                 <h2 className="text-3xl md:text-4xl font-black tracking-tight leading-tight text-white mb-4">
                   Whole30 —{" "}
-                  <span className="text-volt-400">High-Traffic Platform</span>{" "}
+                  <span className="text-neutral-400">High-Traffic Platform</span>{" "}
                   &amp; React Engineering
                 </h2>
                 <p className="text-neutral-400 text-sm md:text-base leading-relaxed mb-8 max-w-2xl">
@@ -324,7 +324,7 @@ export default function CaseStudiesPage() {
                   <p className="text-[11px] text-neutral-500 leading-relaxed mb-6">Health &amp; Wellness · eCommerce · High-Traffic Content</p>
                   <Link
                     href="/contact"
-                    className="flex items-center justify-center gap-2 rounded-md bg-volt-500 text-black px-6 py-3 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg shadow-volt-500/20 hover:shadow-volt-500/40"
+                    className="flex items-center justify-center gap-2 rounded-md bg-volt-500 text-black px-6 py-3 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg hover:shadow-volt-500/40"
                   >
                     Discuss Your Project
                     <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

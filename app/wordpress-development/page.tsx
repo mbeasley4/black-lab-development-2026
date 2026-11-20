@@ -159,13 +159,13 @@ export default function WordPressDevelopmentPage() {
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-8 flex flex-wrap gap-4">
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg shadow-volt-500/25"
+            className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg"
           >
             Start a Project →
           </Link>
           <Link
             href="/work"
-            className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
+            className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
           >
             View My Work →
           </Link>
@@ -239,8 +239,8 @@ export default function WordPressDevelopmentPage() {
                 key={service.title}
                 className="group rounded-2xl border border-neutral-800 bg-neutral-950 p-8 transition-all duration-300 hover:border-volt-500/40 hover:shadow-[0_0_40px_rgba(227,245,68,0.06)]"
               >
-                <div className="h-px bg-linear-to-r from-volt-500/0 via-volt-500/0 to-volt-500/0 group-hover:from-volt-500/40 group-hover:via-volt-500/60 group-hover:to-volt-500/0 transition-all duration-500 -mx-8 -mt-8 mb-8" />
-                <div className="w-10 h-10 rounded-lg bg-volt-500/10 border border-volt-500/20 flex items-center justify-center text-volt-500 mb-5">
+                <div className="h-px bg-linear-to-r from-white/10 via-white/10 to-white/10 group-hover:from-volt-500/40 group-hover:via-volt-500/60 group-hover:to-volt-500/0 transition-all duration-500 -mx-8 -mt-8 mb-8" />
+                <div className="w-10 h-10 rounded-lg bg-white/[0.04] border border-neutral-800 flex items-center justify-center text-volt-500 mb-5">
                   {service.icon}
                 </div>
                 <h3 className="text-lg font-bold text-white mb-3 group-hover:text-volt-400 transition-colors duration-300">{service.title}</h3>
@@ -278,7 +278,7 @@ export default function WordPressDevelopmentPage() {
                 { label: "Greater flexibility for future updates", detail: "A custom build adapts to your needs. A theme fights back." },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-4 rounded-xl border border-neutral-800 bg-neutral-950 p-5">
-                  <div className="w-6 h-6 rounded-full bg-volt-500/15 flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-full bg-white/[0.04] flex items-center justify-center shrink-0 mt-0.5">
                     <svg className="w-3 h-3 text-volt-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
@@ -311,7 +311,7 @@ export default function WordPressDevelopmentPage() {
           <div className="space-y-10">
             {processSteps.map((item) => (
               <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
-                <div className="text-5xl font-black font-mono text-volt-500/20 leading-none">{item.step}</div>
+                <div className="text-5xl font-black font-mono text-white/10 leading-none">{item.step}</div>
                 <div className="border-b border-neutral-800 pb-10 last:border-0 last:pb-0">
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                   <p className="text-neutral-400 leading-relaxed">{item.body}</p>
@@ -403,7 +403,7 @@ export default function WordPressDevelopmentPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Recent WordPress Projects
             </h2>
-            <div className="mt-4 h-px w-32 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
+            <div className="mt-4 h-px w-32 bg-linear-to-r from-white/10 via-white/10 to-transparent" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
@@ -421,7 +421,7 @@ export default function WordPressDevelopmentPage() {
           <div className="mt-10 text-center">
             <Link
               href="/work"
-              className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 bg-volt-500/8 px-8 py-4 text-sm font-semibold uppercase tracking-wide text-volt-400 transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white hover:shadow-lg hover:shadow-volt-500/20"
+              className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 bg-white/[0.04] px-8 py-4 text-sm font-semibold uppercase tracking-wide text-volt-400 transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white hover:shadow-lg hover:shadow-volt-500/20"
             >
               View Full Portfolio
               <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -444,7 +444,7 @@ export default function WordPressDevelopmentPage() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/services"
-              className="rounded-lg border border-volt-500/30 bg-volt-500/8 px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/15 transition-all duration-200"
+              className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/15 transition-all duration-200"
             >
               All Services →
             </Link>

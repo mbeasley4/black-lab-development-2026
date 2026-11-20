@@ -4,7 +4,7 @@ import CookieSettingsButton from "./CookieSettingsButton";
 
 export default function Footer() {
     return (
-        <footer className="bg-surface-raised border-t border-volt-500/10 text-neutral-400">
+        <footer className="bg-surface-raised border-t border-neutral-800 text-neutral-400">
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-24 grid grid-cols-1 md:grid-cols-12 gap-y-16">
 
                 {/* Brand / Description */}
@@ -18,7 +18,7 @@ export default function Footer() {
                                 height={36}
                                 className="relative z-10"
                             />
-                            <div className="absolute inset-0 bg-volt-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            <div className="absolute inset-0 bg-white/[0.04] blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         </div>
                         <div className="flex flex-col gap-1 uppercase leading-none">
                             <span className="text-[15px] font-bold tracking-tight text-neutral-200">Black Lab</span>
@@ -87,7 +87,7 @@ export default function Footer() {
 
                     <Link
                         href="/contact"
-                        className="inline-block mt-6 text-sm text-volt-500 border-b border-volt-500/40 hover:text-volt-400 hover:border-volt-400 transition"
+                        className="inline-block mt-6 text-sm text-volt-500 border-b border-neutral-800 hover:text-volt-400 hover:border-volt-400 transition"
                     >
                         Start a conversation
                     </Link>

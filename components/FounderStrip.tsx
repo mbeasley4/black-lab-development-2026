@@ -9,15 +9,15 @@ const credentials = [
 
 export default function FounderStrip() {
   return (
-    <section className="w-full py-28 border-t border-volt-500/15 relative overflow-hidden">
+    <section className="w-full py-28 border-t border-neutral-800 relative overflow-hidden">
       <div className="absolute inset-0 bg-linear-to-br from-surface via-surface-raised to-neutral-950" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
       <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-12 lg:gap-16 items-center">
           {/* Photo */}
           <div className="flex justify-center lg:justify-start">
-            <div className="relative w-56 h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-2 border-volt-500/25">
+            <div className="relative w-56 h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-2 border-neutral-800">
               <Image
                 src="/images/michael-beasley.webp"
                 alt="Michael Beasley — Founder, Black Lab Development"
@@ -45,7 +45,7 @@ export default function FounderStrip() {
               {credentials.map((cred) => (
                 <span
                   key={cred}
-                  className="inline-flex items-center gap-2 rounded-full border border-volt-500/20 bg-volt-500/5 px-4 py-2 text-xs font-medium text-neutral-300"
+                  className="inline-flex items-center gap-2 rounded-full border border-neutral-800 bg-white/[0.04] px-4 py-2 text-xs font-medium text-neutral-300"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-volt-500" />
                   {cred}

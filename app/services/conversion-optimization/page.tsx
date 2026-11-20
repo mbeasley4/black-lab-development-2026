@@ -306,7 +306,7 @@ export default function ConversionOptimizationPage() {
           <div className="space-y-12">
             {process.map((item) => (
               <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
-                <div className="text-5xl font-black font-mono text-volt-400/20 leading-none">{item.step}</div>
+                <div className="text-5xl font-black font-mono text-white/10 leading-none">{item.step}</div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                   <p className="text-neutral-400 leading-relaxed">{item.body}</p>
@@ -375,7 +375,7 @@ export default function ConversionOptimizationPage() {
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <h2 className="text-2xl font-bold text-white mb-8">Related</h2>
           <div className="flex flex-wrap gap-4">
-            <Link href="/work/ecommerce-website-redesign-increase-aov" className="rounded-lg border border-volt-500/30 bg-volt-500/10 px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200">
+            <Link href="/work/ecommerce-website-redesign-increase-aov" className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200">
               See the Project: +164% AOV in 7 Days →
             </Link>
             <Link href="/services/small-business-website-design" className="rounded-lg border border-neutral-700 bg-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200">

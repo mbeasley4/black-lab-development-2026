@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import React, { useEffect, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import { ChevronDown } from "lucide-react";
 
 // Bezier typed as the 4-tuple Framer Motion requires
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
@@ -83,10 +82,9 @@ function ScoreRing({ label, score, delay }: { label: string; score: number; dela
             strokeLinecap="round"
             strokeDasharray={RING_C}
             strokeDashoffset={RING_C * (1 - value / 100)}
-            style={{ filter: "drop-shadow(0 0 6px rgba(227,245,68,0.6))" }}
           />
         </svg>
-        <span className="absolute inset-0 flex items-center justify-center text-lg font-bold text-volt-400 tabular-nums">
+        <span className="absolute inset-0 flex items-center justify-center text-lg font-bold text-white tabular-nums">
           {value}
         </span>
       </div>
@@ -106,25 +104,10 @@ const scores = [
   { label: "SEO", score: 100 },
 ];
 
-const chips = [
-  { value: "+312%", label: "appointment bookings", className: "-top-6 -left-10 animate-float", delay: "0s" },
-  { value: "+164%", label: "average order value", className: "-bottom-14 -right-6 animate-float", delay: "1.2s" },
-  { value: "68%", label: "faster page loads", className: "-bottom-7 left-6 animate-float", delay: "2.4s" },
-];
-
 function HeroVisual() {
   return (
     <div className="relative mx-auto w-full max-w-md">
-      {/* Spinning conic border */}
-      <div className="relative overflow-hidden rounded-2xl p-px shadow-2xl shadow-volt-500/10">
-        <div
-          className="absolute -inset-[50%] animate-[spin_7s_linear_infinite] motion-reduce:animate-none"
-          style={{
-            background:
-              "conic-gradient(from 0deg, transparent 0deg, rgba(227,245,68,0.9) 60deg, transparent 120deg, transparent 360deg)",
-          }}
-          aria-hidden="true"
-        />
+      <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-black/60">
         <div className="relative rounded-2xl bg-surface/90 backdrop-blur-xl">
           {/* Browser chrome */}
           <div className="flex items-center gap-2 border-b border-white/5 px-4 py-3">
@@ -141,11 +124,8 @@ function HeroVisual() {
               <span className="text-[11px] uppercase tracking-[0.2em] text-neutral-400 font-semibold">
                 Launch-day target
               </span>
-              <span className="flex items-center gap-1.5 text-[11px] font-semibold text-volt-400">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-volt-500 opacity-75" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-volt-500" />
-                </span>
+              <span className="flex items-center gap-1.5 text-[11px] font-semibold text-neutral-300">
+                <span className="inline-flex h-2 w-2 rounded-full bg-volt-500" />
                 Live
               </span>
             </div>
@@ -159,7 +139,7 @@ function HeroVisual() {
             <div className="mt-6 rounded-xl border border-white/5 bg-white/[0.02] p-4">
               <div className="mb-2 flex items-baseline justify-between">
                 <span className="text-xs text-neutral-400">Leads / month</span>
-                <span className="text-xs font-semibold text-volt-400">↑ trending up</span>
+                <span className="text-xs font-semibold text-neutral-300">↑ trending up</span>
               </div>
               <svg viewBox="0 0 200 48" className="h-12 w-full" aria-hidden="true">
                 <defs>
@@ -186,17 +166,6 @@ function HeroVisual() {
         </div>
       </div>
 
-      {/* Floating real-result chips */}
-      {chips.map((c) => (
-        <div
-          key={c.value}
-          className={`absolute hidden sm:flex items-center gap-2 rounded-full border border-volt-500/30 bg-black/80 px-4 py-2 backdrop-blur-md shadow-lg shadow-black/50 ${c.className}`}
-          style={{ animationDelay: c.delay }}
-        >
-          <span className="text-sm font-bold text-volt-400">{c.value}</span>
-          <span className="text-xs text-neutral-300 whitespace-nowrap">{c.label}</span>
-        </div>
-      ))}
     </div>
   );
 }
@@ -207,22 +176,8 @@ const HomepageHeroClient = () => {
   const isDesktop = useSyncExternalStore(subscribeDesktop, getDesktop, getDesktopServer);
   const animState = isDesktop ? "animate" : "visible";
 
-  // Cursor-follow spotlight: write CSS vars directly to avoid re-renders
-  const sectionRef = useRef<HTMLElement>(null);
-  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
-    const el = sectionRef.current;
-    if (!el) return;
-    const rect = el.getBoundingClientRect();
-    el.style.setProperty("--mx", `${e.clientX - rect.left}px`);
-    el.style.setProperty("--my", `${e.clientY - rect.top}px`);
-  };
-
   return (
-    <section
-      ref={sectionRef}
-      onMouseMove={handleMouseMove}
-      className="group/hero relative w-full overflow-hidden"
-    >
+    <section className="relative w-full overflow-hidden">
       {/* Background base */}
       <div className="absolute inset-0 bg-linear-to-br from-black via-[#050506] to-black z-0" aria-hidden="true" />
 
@@ -237,29 +192,12 @@ const HomepageHeroClient = () => {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center opacity-45 saturate-[0.6] animate-ken-burns"
+          className="object-cover object-center opacity-35 saturate-[0.4]"
         />
       </div>
 
-      {/* Hexagonal grid texture — the site's own motif, layered over the photo */}
-      <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.22]" aria-hidden="true">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="hex-hero" width="34.64" height="60" patternUnits="userSpaceOnUse" patternTransform="scale(2.2)">
-              <path d="M17.32 0 L34.64 10 L34.64 30 L17.32 40 L0 30 L0 10 Z" fill="none" stroke="currentColor" strokeWidth="1" className="text-volt-500" />
-              <path d="M0 30 L17.32 40 L17.32 60 L0 70 L-17.32 60 L-17.32 40 Z" fill="none" stroke="currentColor" strokeWidth="1" className="text-volt-500" />
-              <path d="M34.64 30 L51.96 40 L51.96 60 L34.64 70 L17.32 60 L17.32 40 Z" fill="none" stroke="currentColor" strokeWidth="1" className="text-volt-500" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#hex-hero)" />
-        </svg>
-      </div>
 
-      {/* Horizontal volt scan beam sweeping down the hero */}
-      <div className="absolute inset-x-0 top-0 z-10 h-px animate-scan-beam pointer-events-none bg-linear-to-r from-transparent via-volt-500/70 to-transparent shadow-[0_0_24px_4px_rgba(227,245,68,0.35)] motion-reduce:hidden" aria-hidden="true" />
 
-      {/* Brand glow */}
-      <div className="absolute top-0 right-0 w-175 h-175 bg-volt-500/10 rounded-full blur-[180px] z-0 pointer-events-none" />
 
       {/* Dark overlay + headline contrast mask */}
       <div className="absolute inset-0 bg-black/55 z-10 pointer-events-none" aria-hidden="true" />
@@ -269,15 +207,6 @@ const HomepageHeroClient = () => {
         aria-hidden="true"
       />
 
-      {/* Cursor spotlight — desktop pointers only, fades in on hover */}
-      <div
-        className="hidden md:block absolute inset-0 z-10 pointer-events-none opacity-0 group-hover/hero:opacity-100 transition-opacity duration-500"
-        style={{
-          background:
-            "radial-gradient(520px circle at var(--mx, 70%) var(--my, 40%), rgba(227,245,68,0.13), transparent 60%)",
-        }}
-        aria-hidden="true"
-      />
 
       {/* ── Content ── */}
       <motion.div
@@ -292,12 +221,9 @@ const HomepageHeroClient = () => {
             <div className="text-center lg:text-left">
               <motion.span
                 variants={fadeIn(0, 0)}
-                className="inline-flex items-center gap-2 mb-5 rounded-full border border-volt-500/30 bg-volt-500/5 px-4 py-1.5 text-[11px] md:text-xs tracking-[0.2em] uppercase text-volt-400 font-semibold"
+                className="inline-flex items-center gap-2 mb-5 rounded-full border border-neutral-800 bg-white/[0.04] px-4 py-1.5 text-[11px] md:text-xs tracking-[0.2em] uppercase text-neutral-300 font-semibold"
               >
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-volt-500 opacity-75" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-volt-500" />
-                </span>
+                <span className="inline-flex h-2 w-2 rounded-full bg-volt-500" />
                 Taking new clients &amp; partners
               </motion.span>
 
@@ -308,7 +234,7 @@ const HomepageHeroClient = () => {
                   </motion.span>
                 </span>
                 <span className="block overflow-hidden pb-2">
-                  <motion.span className="block text-volt-500 text-volt-shimmer" variants={maskLine(0.26)}>
+                  <motion.span className="block text-volt-500" variants={maskLine(0.26)}>
                     Keep the Results.
                   </motion.span>
                 </span>
@@ -328,10 +254,8 @@ const HomepageHeroClient = () => {
               >
                 <Link
                   href="/contact"
-                  className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-md bg-volt text-black px-8 py-4 text-base font-bold transition-all duration-300 hover:shadow-[0_0_60px_rgba(227,245,68,0.6)] hover:-translate-y-0.5"
+                  className="group inline-flex items-center justify-center gap-2 rounded-md bg-volt-500 text-black px-8 py-4 text-base font-bold transition-colors duration-200 hover:bg-volt-400"
                 >
-                  {/* Sheen sweep on hover */}
-                  <span className="absolute inset-y-0 -left-full w-1/2 skew-x-[-20deg] bg-white/50 transition-all duration-700 group-hover:left-[150%]" aria-hidden="true" />
                   <span className="relative">Schedule a Call</span>
                   <svg className="relative w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -339,7 +263,7 @@ const HomepageHeroClient = () => {
                 </Link>
                 <Link
                   href="/partners"
-                  className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/50 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-volt-500/10 hover:border-volt-400 hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 px-8 py-4 text-base font-semibold text-white transition-colors duration-200 hover:bg-white/5 hover:border-neutral-500"
                 >
                   Agency? Partner With Me
                 </Link>
@@ -361,10 +285,6 @@ const HomepageHeroClient = () => {
         </div>
       </motion.div>
 
-      {/* Scroll indicator */}
-      <div className="hidden lg:block absolute bottom-5 left-1/2 -translate-x-1/2 z-30 animate-bounce">
-        <ChevronDown className="w-6 h-6 text-volt-500 opacity-80" />
-      </div>
     </section>
   );
 };

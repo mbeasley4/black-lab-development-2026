@@ -212,7 +212,7 @@ export default function TechnologyIndustryPage() {
       <section className="py-16 border-b border-neutral-800/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="flex flex-col justify-between gap-4 p-8 rounded-xl border border-volt-500/20 bg-volt-500/5">
+            <div className="flex flex-col justify-between gap-4 p-8 rounded-xl border border-neutral-800 bg-white/[0.04]">
               <div>
                 <p className="text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold mb-1">Related Service</p>
                 <h3 className="text-base font-bold text-white">Custom Web Development</h3>

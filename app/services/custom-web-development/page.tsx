@@ -229,13 +229,13 @@ export default function CustomWebDevelopmentPage() {
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg shadow-volt-500/25"
+              className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg"
             >
               Start a Project →
             </Link>
             <Link
               href="/work"
-              className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
+              className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
             >
               View Work →
             </Link>
@@ -323,7 +323,7 @@ export default function CustomWebDevelopmentPage() {
             <div className="space-y-12">
               {process.map((item) => (
                 <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
-                  <div className="text-5xl font-black font-mono text-volt-400/20 leading-none">{item.step}</div>
+                  <div className="text-5xl font-black font-mono text-white/10 leading-none">{item.step}</div>
                   <div className="border-b border-neutral-800 pb-12 last:border-0 last:pb-0">
                     <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                     <p className="text-neutral-400 leading-relaxed">{item.body}</p>
@@ -374,7 +374,7 @@ export default function CustomWebDevelopmentPage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/services/small-business-website-design"
-                className="rounded-lg border border-volt-500/30 bg-volt-500/10 px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200"
+                className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200"
               >
                 Small Business Website Design →
               </Link>

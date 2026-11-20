@@ -212,7 +212,7 @@ export default function ServicesPage() {
       />
 
       {/* ================= AUDIENCE SERVICE LINES ================= */}
-      <section className="py-16 border-b border-volt-500/8 bg-surface-raised/50">
+      <section className="py-16 border-b border-neutral-800 bg-surface-raised/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="mb-10">
             <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
@@ -288,7 +288,7 @@ export default function ServicesPage() {
                 What I Do
               </h2>
             </div>
-            <div className="flex-1 h-px bg-linear-to-r from-volt-500/60 via-volt-500/20 to-transparent" />
+            <div className="flex-1 h-px bg-linear-to-r from-white/10 via-white/10 to-transparent" />
           </div>
 
           <div className="space-y-0">
@@ -314,10 +314,10 @@ export default function ServicesPage() {
                 {/* Text */}
                 <div className={`max-w-xl relative ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                   <div className="flex items-center gap-4 mb-6">
-                    <span className="text-5xl font-black font-mono text-volt-500/20 leading-none tracking-tighter">
+                    <span className="text-5xl font-black font-mono text-white/10 leading-none tracking-tighter">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <div className="h-px w-14 bg-linear-to-r from-volt-500/60 to-volt-500/10" />
+                    <div className="h-px w-14 bg-linear-to-r from-white/10 to-white/10" />
                   </div>
 
                   <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-snug text-white">
@@ -331,8 +331,7 @@ export default function ServicesPage() {
 
                 {/* Image */}
                 <div
-                  className={`group relative h-95 w-full rounded-xl overflow-hidden border border-volt-500/20 transition-all duration-500 hover:border-volt-500/50 hover:shadow-[0_0_100px_rgba(227,245,68,0.20)] ${
-                    index % 2 === 1 ? "lg:order-1" : ""
+                  className={`group relative h-95 w-full rounded-xl overflow-hidden border border-neutral-800 transition-all duration-500 hover:border-volt-500/50 hover:shadow-[0_0_100px_rgba(227,245,68,0.20)] ${ index % 2 === 1 ?"lg:order-1" : ""
                   }`}
                 >
                   <Image
@@ -342,7 +341,7 @@ export default function ServicesPage() {
                     className="object-cover opacity-65 group-hover:opacity-90 group-hover:scale-[1.05] transition-all duration-700"
                   />
                   {/* Dark overlay */}
-                  <div className="absolute inset-0 bg-linear-to-br from-black/65 via-black/20 to-volt-900/10 group-hover:to-volt-900/25 transition-all duration-500" />
+                  <div className="absolute inset-0 bg-linear-to-br from-black/65 via-black/20 to-white/10 group-hover:to-volt-900/25 transition-all duration-500" />
                   {/* Scanline texture */}
                   <div
                     className="absolute inset-0 opacity-[0.08] pointer-events-none"
@@ -351,17 +350,17 @@ export default function ServicesPage() {
                     }}
                   />
                   {/* Top accent line */}
-                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent group-hover:via-volt-500/80 transition-all duration-500" />
+                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-volt-500/80 transition-all duration-500" />
                   {/* Bottom accent line */}
-                  <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/15 to-transparent group-hover:via-volt-500/50 transition-all duration-500" />
+                  <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-volt-500/50 transition-all duration-500" />
                   {/* Corner glow */}
-                  <div className="absolute top-0 right-0 w-40 h-40 bg-volt-500/10 blur-3xl rounded-full group-hover:bg-volt-500/25 transition-all duration-500" />
-                  <div className="absolute bottom-0 left-0 w-28 h-28 bg-volt-600/8 blur-2xl rounded-full group-hover:bg-volt-500/20 transition-all duration-500" />
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-white/[0.04] blur-3xl rounded-full group-hover:bg-volt-500/25 transition-all duration-500" />
+                  <div className="absolute bottom-0 left-0 w-28 h-28 bg-white/[0.04] blur-2xl rounded-full group-hover:bg-volt-500/20 transition-all duration-500" />
                   {/* Corner brackets */}
-                  <div className="absolute top-3 left-3 w-5 h-5 border-t-2 border-l-2 border-volt-500/40 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
-                  <div className="absolute top-3 right-3 w-5 h-5 border-t-2 border-r-2 border-volt-500/40 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
-                  <div className="absolute bottom-3 left-3 w-5 h-5 border-b-2 border-l-2 border-volt-500/40 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
-                  <div className="absolute bottom-3 right-3 w-5 h-5 border-b-2 border-r-2 border-volt-500/40 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute top-3 left-3 w-5 h-5 border-t-2 border-l-2 border-neutral-800 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute top-3 right-3 w-5 h-5 border-t-2 border-r-2 border-neutral-800 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute bottom-3 left-3 w-5 h-5 border-b-2 border-l-2 border-neutral-800 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute bottom-3 right-3 w-5 h-5 border-b-2 border-r-2 border-neutral-800 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
                   {/* Service label on hover */}
                   <div className="absolute bottom-5 left-5 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-400">
                     <span className="text-xs font-mono tracking-[0.2em] uppercase text-neutral-400">
@@ -375,9 +374,9 @@ export default function ServicesPage() {
         </div>
       </section>
       {/* ================= PROCESS ================= */}
-      <section className="py-16 md:py-24 border-t border-volt-500/8 bg-surface relative overflow-hidden">
+      <section className="py-16 md:py-24 border-t border-neutral-800 bg-surface relative overflow-hidden">
         {/* Ambient glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-48 bg-volt-500/5 blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-48 bg-white/[0.04] blur-[100px] pointer-events-none" />
 
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           {/* Section header */}
@@ -390,10 +389,10 @@ export default function ServicesPage() {
                 The Process
               </h2>
             </div>
-            <div className="flex-1 h-px bg-linear-to-r from-volt-500/60 via-volt-500/20 to-transparent" />
+            <div className="flex-1 h-px bg-linear-to-r from-white/10 via-white/10 to-transparent" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-volt-500/8 rounded-xl overflow-hidden border border-volt-500/10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.04] rounded-xl overflow-hidden border border-neutral-800">
             {[
               {
                 step: "01",
@@ -431,10 +430,10 @@ export default function ServicesPage() {
                 className="bg-surface p-8 md:p-10 group hover:bg-surface-raised transition-colors duration-300 relative"
               >
                 <div className="flex items-start gap-5 mb-5">
-                  <span className="text-4xl font-black font-mono text-volt-500/20 leading-none tracking-tighter group-hover:text-volt-500/40 transition-colors duration-300 shrink-0 pt-1">
+                  <span className="text-4xl font-black font-mono text-white/10 leading-none tracking-tighter group-hover:text-volt-500/40 transition-colors duration-300 shrink-0 pt-1">
                     {item.step}
                   </span>
-                  <div className="h-px w-10 bg-linear-to-r from-volt-500/50 to-volt-500/10 mt-5 shrink-0" />
+                  <div className="h-px w-10 bg-linear-to-r from-white/10 to-white/10 mt-5 shrink-0" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-volt-100 transition-colors duration-300">
                   {item.title}
@@ -443,7 +442,7 @@ export default function ServicesPage() {
                   {item.body}
                 </p>
                 {/* Bottom accent on hover */}
-                <div className="absolute bottom-0 left-8 right-8 h-px bg-linear-to-r from-transparent via-volt-500/0 to-transparent group-hover:via-volt-500/30 transition-all duration-500" />
+                <div className="absolute bottom-0 left-8 right-8 h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-volt-500/30 transition-all duration-500" />
               </div>
             ))}
           </div>

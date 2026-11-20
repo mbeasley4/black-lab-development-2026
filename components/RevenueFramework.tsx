@@ -50,7 +50,7 @@ const audiences = [
 export default function RevenueFramework() {
     return (
         <section className="w-full bg-linear-to-b from-neutral-950 to-neutral-900 text-white py-20 relative overflow-hidden">
-            <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/20 to-transparent" />
+            <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
                 <div className="mb-14">
@@ -59,7 +59,7 @@ export default function RevenueFramework() {
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-4">
                         <span className="text-white">For Businesses That </span>
-                        <span className="text-volt-500">Depend on Their Website</span>
+                        <span className="text-neutral-400">Depend on Their Website</span>
                     </h2>
                     <p className="text-lg text-neutral-400 max-w-2xl leading-relaxed">
                         Whether you&apos;re a small business that needs a site built right, or an agency that needs a technical partner you can white-label — I build it.
@@ -81,7 +81,7 @@ export default function RevenueFramework() {
                                     className="object-cover grayscale-[60%] transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0"
                                 />
                                 <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-neutral-950/30 to-transparent" />
-                                <div className="absolute bottom-4 left-5 w-10 h-10 rounded-lg bg-black/60 backdrop-blur-md border border-volt-500/30 flex items-center justify-center text-volt-400 group-hover:bg-volt-500 group-hover:text-black transition-all duration-300">
+                                <div className="absolute bottom-4 left-5 w-10 h-10 rounded-lg bg-black/60 backdrop-blur-md border border-neutral-800 flex items-center justify-center text-volt-400 group-hover:bg-volt-500 group-hover:text-black transition-all duration-300">
                                     {item.icon}
                                 </div>
                             </div>

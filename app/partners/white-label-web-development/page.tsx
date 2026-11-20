@@ -261,7 +261,7 @@ export default function WhiteLabelWebDevelopmentPage() {
                 <div className="p-5 bg-neutral-950 text-sm font-semibold text-white leading-relaxed">
                   {row.surface}
                 </div>
-                <div className="p-5 bg-neutral-900/50 text-sm text-neutral-300 leading-relaxed border-l border-volt-500/10">
+                <div className="p-5 bg-neutral-900/50 text-sm text-neutral-300 leading-relaxed border-l border-neutral-800">
                   <span className="block text-[10px] font-mono tracking-[0.2em] uppercase text-neutral-400 mb-1">Your agency</span>
                   {row.agency}
                 </div>
@@ -292,7 +292,7 @@ export default function WhiteLabelWebDevelopmentPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {deliverables.map((item) => (
               <div key={item.title} className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8">
-                <div className="w-8 h-8 rounded-full bg-volt-500/15 flex items-center justify-center mb-4">
+                <div className="w-8 h-8 rounded-full bg-white/[0.04] flex items-center justify-center mb-4">
                   <svg className="w-4 h-4 text-volt-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
@@ -319,7 +319,7 @@ export default function WhiteLabelWebDevelopmentPage() {
           <div className="space-y-12">
             {timeline.map((item) => (
               <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
-                <div className="text-5xl font-black font-mono text-volt-400/20 leading-none">{item.step}</div>
+                <div className="text-5xl font-black font-mono text-white/10 leading-none">{item.step}</div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                   <p className="text-neutral-400 leading-relaxed">{item.body}</p>
@@ -340,7 +340,7 @@ export default function WhiteLabelWebDevelopmentPage() {
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <h2 className="text-2xl font-bold text-white mb-8">Related</h2>
           <div className="flex flex-wrap gap-4">
-            <Link href="/partners" className="rounded-lg border border-volt-500/30 bg-volt-500/10 px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200">
+            <Link href="/partners" className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200">
               Agency &amp; Partner Services →
             </Link>
             <Link href="/partners/seo-fulfillment" className="rounded-lg border border-neutral-700 bg-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200">

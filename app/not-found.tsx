@@ -23,7 +23,7 @@ export default function NotFound() {
 
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-5 md:mb-6">
               <span className="block text-white">This page went</span>
-              <span className="block text-volt-500">
+              <span className="block text-neutral-400">
                 off-leash.
               </span>
             </h2>
@@ -34,7 +34,7 @@ export default function NotFound() {
               squirrels in the park. Happens to the best of me.
             </p>
 
-            <div className="bg-neutral-950/80 backdrop-blur-sm border border-volt-500/20 text-left p-6 md:p-8 rounded-lg mb-10 md:mb-12 shadow-2xl shadow-volt-500/10 font-mono text-sm md:text-base overflow-x-auto max-w-2xl mx-auto">
+            <div className="bg-neutral-950/80 backdrop-blur-sm border border-neutral-800 text-left p-6 md:p-8 rounded-lg mb-10 md:mb-12 shadow-2xl font-mono text-sm md:text-base overflow-x-auto max-w-2xl mx-auto">
               <div className="text-volt-500 mb-2">{'// Developer\'s notes:'}</div>
               <div className="text-[#e5e7eb]/80 mb-1">{'const page = await fetch(requestedUrl);'}</div>
               <div className="text-[#e5e7eb]/80 mb-1">{'if (!page) {'}</div>
@@ -46,14 +46,14 @@ export default function NotFound() {
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center mb-12">
               <a
                 href="/"
-                className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg shadow-volt-500/30"
+                className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg"
               >
                 Back to Home
               </a>
 
               <a
                 href="/work"
-                className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/60 px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
+                className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 px-7 py-3.5 md:px-9 md:py-4 text-sm md:text-base font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
               >
                 View My Work
               </a>

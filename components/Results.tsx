@@ -39,8 +39,8 @@ const caseStudies = [
 
 export default function Results() {
     return (
-        <section className="w-full bg-linear-to-b from-neutral-950 to-black text-white py-32 relative overflow-hidden border-t border-volt-500/15">
-            <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/30 to-transparent" />
+        <section className="w-full bg-linear-to-b from-neutral-950 to-black text-white py-32 relative overflow-hidden border-t border-neutral-800">
+            <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
                 <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
@@ -49,7 +49,7 @@ export default function Results() {
                             Selected Work
                         </span>
                         <h2 className="text-5xl md:text-6xl font-bold tracking-tight text-white leading-tight">
-                            Proof Over <span className="text-volt-500">Promises</span>
+                            Proof Over <span className="text-neutral-400">Promises</span>
                         </h2>
                     </div>
                     <Link
@@ -66,13 +66,13 @@ export default function Results() {
                 {/* Latest win — featured block, front and center */}
                 <Link
                     href="/work/zero-gravity-performance-rebuild"
-                    className="group relative mb-6 flex flex-col overflow-hidden rounded-3xl border border-volt-500/30 bg-linear-to-br from-volt-500/10 via-neutral-900/70 to-neutral-950 p-8 md:p-10 transition-all duration-300 hover:border-volt-500/60 hover:shadow-[0_0_70px_rgba(227,245,68,0.18)]"
+                    className="group relative mb-6 flex flex-col overflow-hidden rounded-3xl border border-neutral-800 bg-linear-to-br from-white/10 via-neutral-900/70 to-neutral-950 p-8 md:p-10 transition-all duration-300 hover:border-volt-500/60 hover:shadow-[0_0_70px_rgba(227,245,68,0.18)]"
                 >
-                    <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-volt-600 via-volt-400 to-volt-600" />
+                    <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-white/10 via-white/10 to-white/10" />
 
                     <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-8">
                         <div className="shrink-0 flex flex-row md:flex-col items-center md:items-start justify-between md:justify-start gap-4">
-                            <span className="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase px-3 py-1.5 rounded-full bg-volt-500 text-black shadow-lg shadow-volt-500/30">
+                            <span className="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase px-3 py-1.5 rounded-full bg-volt-500 text-black shadow-lg">
                                 <span className="w-1.5 h-1.5 rounded-full bg-black animate-pulse" />
                                 Latest Win
                             </span>
@@ -86,7 +86,7 @@ export default function Results() {
                             </div>
                         </div>
 
-                        <div className="hidden md:block w-px self-stretch bg-volt-500/20" />
+                        <div className="hidden md:block w-px self-stretch bg-white/[0.04]" />
 
                         <div className="flex-1 min-w-0">
                             <h3 className="text-xl md:text-2xl font-bold text-white leading-snug mb-2 group-hover:text-volt-100 transition-colors duration-200">
@@ -97,7 +97,7 @@ export default function Results() {
                             </p>
                             <div className="flex flex-wrap gap-2">
                                 {["WooCommerce removed", "Booking links generalized", "Major page speed gains"].map((tag) => (
-                                    <span key={tag} className="text-xs font-medium text-volt-400 bg-volt-500/10 border border-volt-500/20 rounded-full px-3 py-1">
+                                    <span key={tag} className="text-xs font-medium text-volt-400 bg-white/[0.04] border border-neutral-800 rounded-full px-3 py-1">
                                         {tag}
                                     </span>
                                 ))}
@@ -105,7 +105,7 @@ export default function Results() {
                         </div>
 
                         <div className="shrink-0 self-start md:self-center">
-                            <span className="inline-flex items-center gap-2 rounded-md bg-volt-500 text-black px-5 py-3 text-sm font-bold group-hover:bg-volt-400 group-hover:gap-3 transition-all duration-200 shadow-lg shadow-volt-500/20 whitespace-nowrap">
+                            <span className="inline-flex items-center gap-2 rounded-md bg-volt-500 text-black px-5 py-3 text-sm font-bold group-hover:bg-volt-400 group-hover:gap-3 transition-all duration-200 shadow-lg whitespace-nowrap">
                                 See the Project
                                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
@@ -122,7 +122,7 @@ export default function Results() {
                                 <span className="block text-sm font-semibold text-neutral-200">{item.client}</span>
                                 <span className="block text-xs uppercase tracking-widest text-neutral-500">{item.industry}</span>
                             </p>
-                            <p className="text-5xl md:text-6xl font-bold text-volt-500 leading-none mb-3">
+                            <p className="text-5xl md:text-6xl font-bold text-white leading-none mb-3">
                                 {item.metric}
                             </p>
                             <p className="text-lg font-semibold text-white leading-snug mb-2 group-hover:text-volt-400 transition-colors duration-200">

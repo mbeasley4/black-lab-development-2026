@@ -9,11 +9,11 @@ import Link from "next/link";
  */
 export default function FounderByline() {
   return (
-    <section className="w-full py-14 border-t border-volt-500/10 relative overflow-hidden">
+    <section className="w-full py-14 border-t border-neutral-800 relative overflow-hidden">
       <div className="absolute inset-0 bg-surface-raised/40 pointer-events-none" />
       <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
-        <div className="mx-auto max-w-2xl flex flex-col sm:flex-row items-center gap-5 rounded-xl border border-volt-500/15 bg-surface/60 px-6 py-5 text-center sm:text-left">
-          <div className="relative w-16 h-16 rounded-full overflow-hidden border border-volt-500/25 shrink-0">
+        <div className="mx-auto max-w-2xl flex flex-col sm:flex-row items-center gap-5 rounded-xl border border-neutral-800 bg-surface/60 px-6 py-5 text-center sm:text-left">
+          <div className="relative w-16 h-16 rounded-full overflow-hidden border border-neutral-800 shrink-0">
             <Image
               src="/images/michael-beasley.webp"
               alt="Michael Beasley — Founder, Black Lab Development"

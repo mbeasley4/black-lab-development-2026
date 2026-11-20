@@ -297,7 +297,7 @@ export default function SmallBusinessWebsiteDesignPage() {
           <div className="space-y-12">
             {approach.map((item) => (
               <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
-                <div className="text-5xl font-black font-mono text-volt-400/20 leading-none">{item.step}</div>
+                <div className="text-5xl font-black font-mono text-white/10 leading-none">{item.step}</div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                   <p className="text-neutral-400 leading-relaxed">{item.body}</p>
@@ -322,7 +322,7 @@ export default function SmallBusinessWebsiteDesignPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-neutral-800/40 rounded-2xl overflow-hidden border border-neutral-700/40">
             {results.map((r) => (
               <div key={r.label} className="bg-neutral-900 px-10 py-10 text-center">
-                <div className="text-4xl md:text-5xl font-black bg-linear-to-r from-volt-400 to-volt-400 bg-clip-text text-transparent mb-2">{r.metric}</div>
+                <div className="text-4xl md:text-5xl font-black bg-linear-to-r from-white/10 to-white/10 bg-clip-text text-transparent mb-2">{r.metric}</div>
                 <div className="text-lg font-semibold text-white mb-2">{r.label}</div>
                 <div className="text-sm text-neutral-400">{r.detail}</div>
               </div>
@@ -346,7 +346,7 @@ export default function SmallBusinessWebsiteDesignPage() {
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <h2 className="text-2xl font-bold text-white mb-8">Related Services</h2>
           <div className="flex flex-wrap gap-4">
-            <Link href="/services/conversion-optimization" className="rounded-lg border border-volt-500/30 bg-volt-500/10 px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200">
+            <Link href="/services/conversion-optimization" className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200">
               Website Conversion Optimization →
             </Link>
             <Link href="/partners" className="rounded-lg border border-neutral-700 bg-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200">

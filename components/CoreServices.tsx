@@ -38,7 +38,7 @@ export default function CoreServices() {
                     backgroundSize: "44px 44px",
                 }}
             />
-            <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/20 to-transparent" />
+            <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
                 <div className="mb-16">
@@ -47,7 +47,7 @@ export default function CoreServices() {
                     </span>
                     <h2 className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-4">
                         Built Differently —<br/>
-                        <span className="text-volt-500">Because It Is</span>
+                        <span className="text-neutral-400">Because It Is</span>
                     </h2>
                     <p className="text-lg text-neutral-400 max-w-xl">
                         This isn&apos;t a traditional agency model.
@@ -62,7 +62,7 @@ export default function CoreServices() {
                         >
 
                             <div className="flex items-start justify-between mb-6">
-                                <div className="w-10 h-10 rounded-lg bg-volt-500/10 border border-volt-500/20 flex items-center justify-center text-volt-400 group-hover:bg-volt-500/20 group-hover:border-volt-500/40 transition-all duration-300">
+                                <div className="w-10 h-10 rounded-lg bg-white/[0.04] border border-neutral-800 flex items-center justify-center text-volt-400 group-hover:bg-volt-500/20 group-hover:border-volt-500/40 transition-all duration-300">
                                     {edge.icon}
                                 </div>
                                 <span className="text-xs font-mono text-neutral-500 group-hover:text-volt-500/40 transition-colors duration-300">

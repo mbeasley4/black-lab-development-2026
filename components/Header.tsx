@@ -239,9 +239,7 @@ export default function Header() {
                     <nav
                         ref={drawerRef}
                         aria-label="Mobile navigation"
-                        className="absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-surface-raised border-l border-volt-500/40
-                            shadow-[-6px_0_40px_rgba(227,245,68,0.25)]
-                            flex flex-col px-6 pt-4 pb-6 overflow-y-auto overflow-x-hidden"
+                        className="absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-surface-raised border-l border-neutral-800 flex flex-col px-6 pt-4 pb-6 overflow-y-auto overflow-x-hidden"
                         style={{
                             animation: closing
                                 ? "drawerSlideOut 0.35s cubic-bezier(0.4,0,1,1) forwards"
@@ -250,10 +248,10 @@ export default function Header() {
                     >
                         {/* Internal ambient glows */}
                         {/* Top accent line */}
-                        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/50 to-transparent" />
+                        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
                         {/* Drawer header: logo + close */}
-                        <div className="relative z-10 flex items-center justify-between mb-6 pb-4 border-b border-volt-500/15">
+                        <div className="relative z-10 flex items-center justify-between mb-6 pb-4 border-b border-neutral-800">
                             <Link
                                 href="/"
                                 onClick={closeDrawer}
@@ -268,7 +266,7 @@ export default function Header() {
                                         priority
                                         className="relative z-10"
                                     />
-                                    <div className="absolute inset-0 bg-volt-500/20 blur-xl rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
+                                    <div className="absolute inset-0 bg-white/[0.04] blur-xl rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
                                 </div>
                                 <div className="flex flex-col gap-1 uppercase leading-none whitespace-nowrap">
                                     <span className="text-[14px] font-bold tracking-tight text-[#e5e7eb]">Black Lab</span>
@@ -281,11 +279,7 @@ export default function Header() {
                                 onClick={closeDrawer}
                                 aria-label="Close menu"
                                 style={{ touchAction: "manipulation" }}
-                                className="py-2 px-2 text-volt-500 border border-volt-500/60 rounded-sm
-                                   
-                                    hover:border-volt-400 hover:text-volt-400 hover:shadow-[0_0_12px_rgba(227,245,68,0.4)]
-                                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70
-                                    transition-all duration-200 cursor-pointer"
+                                className="py-2 px-2 text-volt-500 border border-neutral-800 rounded-sm hover:border-volt-400 hover:text-volt-400 hover:shadow-[0_0_12px_rgba(227,245,68,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 transition-all duration-200 cursor-pointer"
                             >
                                 <span className="block w-5 h-0.5 bg-current rotate-45 translate-y-0.75" />
                                 <span className="block w-5 h-0.5 bg-current -rotate-45" />
@@ -327,7 +321,7 @@ export default function Header() {
                                     className="overflow-hidden transition-all duration-300 ease-out"
                                     style={{ maxHeight: servicesExpanded ? `${SERVICE_LINKS.length * 44 + 8}px` : "0px" }}
                                 >
-                                    <div className="ml-4 border-l border-volt-500/15 pl-4 py-1 flex flex-col">
+                                    <div className="ml-4 border-l border-neutral-800 pl-4 py-1 flex flex-col">
                                         {SERVICE_LINKS.map((s) => {
                                             const active = isActive(s.href);
                                             return (
@@ -347,7 +341,7 @@ export default function Header() {
                                 </div>
                             </div>
 
-                            <div className="h-px bg-linear-to-r from-volt-500/12 via-volt-500/6 to-transparent" />
+                            <div className="h-px bg-linear-to-r from-white/10 via-white/10 to-transparent" />
 
                             {/* --- Industries accordion --- */}
                             <div
@@ -382,7 +376,7 @@ export default function Header() {
                                     className="overflow-hidden transition-all duration-300 ease-out"
                                     style={{ maxHeight: industriesExpanded ? `${(INDUSTRY_LINKS.length + 1) * 44 + 8}px` : "0px" }}
                                 >
-                                    <div className="ml-4 border-l border-volt-500/15 pl-4 py-1 flex flex-col">
+                                    <div className="ml-4 border-l border-neutral-800 pl-4 py-1 flex flex-col">
                                         <Link
                                             href="/industries"
                                             onClick={closeDrawer}
@@ -424,7 +418,7 @@ export default function Header() {
                                             transition: `opacity 0.35s ease ${delay}, transform 0.38s cubic-bezier(0.2,0.8,0.4,1) ${delay}`,
                                         }}
                                     >
-                                        <div className="h-px bg-linear-to-r from-volt-500/12 via-volt-500/6 to-transparent" />
+                                        <div className="h-px bg-linear-to-r from-white/10 via-white/10 to-transparent" />
                                         <Link
                                             href={item.href}
                                             onClick={closeDrawer}
@@ -452,7 +446,7 @@ export default function Header() {
                                     transition: `opacity 0.35s ease ${(plainNav.length + 2) * 55}ms, transform 0.38s cubic-bezier(0.2,0.8,0.4,1) ${(plainNav.length + 2) * 55}ms`,
                                 }}
                             >
-                                <div className="h-px bg-linear-to-r from-volt-500/12 via-volt-500/6 to-transparent" />
+                                <div className="h-px bg-linear-to-r from-white/10 via-white/10 to-transparent" />
                                 <Link
                                     href="/cincinnati-web-developer"
                                     onClick={closeDrawer}
@@ -491,7 +485,7 @@ export default function Header() {
             )}
 
             {/* ===================== HEADER ===================== */}
-            <header className="fixed top-0 z-50 w-full bg-surface text-[#e5e7eb] border-b border-volt-500/15">
+            <header className="fixed top-0 z-50 w-full bg-surface text-[#e5e7eb] border-b border-neutral-800">
                 <div
                     className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-4 flex items-center justify-between"
                     style={{ height: HEADER_HEIGHT }}
@@ -511,7 +505,7 @@ export default function Header() {
                                 priority
                                 className="relative z-10"
                             />
-                            <div className="absolute inset-0 bg-volt-500/25 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            <div className="absolute inset-0 bg-white/[0.04] blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         </div>
 
                         <div className="flex flex-col gap-1 uppercase leading-none whitespace-nowrap">
@@ -590,8 +584,8 @@ export default function Header() {
                                         : "opacity-0 -translate-y-2 pointer-events-none"
                                     }`}
                             >
-                                <div className="relative overflow-hidden rounded-xl bg-surface-raised border border-volt-500/20 shadow-[0_24px_60px_-12px_rgba(0,0,0,0.8),0_0_40px_rgba(227,245,68,0.12)]">
-                                    <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/70 to-transparent" />
+                                <div className="relative overflow-hidden rounded-xl bg-surface-raised border border-neutral-800">
+                                    <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
                                     <div className="relative grid grid-cols-3 gap-0 divide-x divide-volt-500/10">
                                         {[
@@ -629,7 +623,7 @@ export default function Header() {
                                     </div>
 
                                     {/* Footer */}
-                                    <div className="relative border-t border-volt-500/10 mx-6 py-3 flex items-center justify-between">
+                                    <div className="relative border-t border-neutral-800 mx-6 py-3 flex items-center justify-between">
                                         <div className="flex items-center gap-5">
                                             <Link
                                                 href="/services"
@@ -638,7 +632,7 @@ export default function Header() {
                                             >
                                                 All services →
                                             </Link>
-                                            <span className="w-px h-3 bg-volt-500/15" />
+                                            <span className="w-px h-3 bg-white/[0.04]" />
                                             <Link
                                                 href="/cincinnati-web-developer"
                                                 onClick={() => setOpenMega(null)}
@@ -706,8 +700,8 @@ export default function Header() {
                                         : "opacity-0 -translate-y-2 pointer-events-none"
                                     }`}
                             >
-                                <div className="relative overflow-hidden rounded-xl bg-surface-raised border border-volt-500/20 shadow-[0_24px_60px_-12px_rgba(0,0,0,0.8),0_0_40px_rgba(227,245,68,0.12)]">
-                                    <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/70 to-transparent" />
+                                <div className="relative overflow-hidden rounded-xl bg-surface-raised border border-neutral-800">
+                                    <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
                                     <div className="p-5">
                                         <div className="relative grid grid-cols-3 gap-3">
@@ -738,7 +732,7 @@ export default function Header() {
                                         </div>
                                     </div>
                                     {/* Footer */}
-                                    <div className="relative border-t border-volt-500/10 mx-5 py-3 flex items-center justify-between">
+                                    <div className="relative border-t border-neutral-800 mx-5 py-3 flex items-center justify-between">
                                         <Link
                                             href="/industries"
                                             onClick={() => setOpenMega(null)}
@@ -804,12 +798,7 @@ export default function Header() {
                         aria-label="Open menu"
                         aria-expanded={mobileOpen}
                         style={{ touchAction: "manipulation" }}
-                        className="lg:hidden p-3 text-volt-500 border border-volt-500 rounded-sm
-                            shadow-[0_0_12px_rgba(227,245,68,0.4),inset_0_0_8px_rgba(227,245,68,0.06)]
-                            hover:shadow-[0_0_20px_rgba(227,245,68,0.65),inset_0_0_12px_rgba(227,245,68,0.1)]
-                            hover:border-volt-400 hover:text-volt-400
-                            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70
-                            active:scale-95 transition-all duration-200 cursor-pointer"
+                        className="lg:hidden p-3 text-volt-500 border border-neutral-800 rounded-sm hover:shadow-[0_0_20px_rgba(227,245,68,0.65),inset_0_0_12px_rgba(227,245,68,0.1)] hover:border-volt-400 hover:text-volt-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 active:scale-95 transition-all duration-200 cursor-pointer"
                     >
                         <div className="space-y-1.5">
                             <span className="block h-0.5 w-7 bg-current" />

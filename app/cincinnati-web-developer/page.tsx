@@ -187,13 +187,13 @@ export default function CincinnatiWebDeveloperPage() {
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg shadow-volt-500/25"
+              className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg"
             >
               Start a Conversation →
             </Link>
             <Link
               href="/work"
-              className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
+              className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
             >
               View Cincinnati Work →
             </Link>
@@ -260,7 +260,7 @@ export default function CincinnatiWebDeveloperPage() {
                   href={service.href}
                   className="group rounded-2xl border border-neutral-800 bg-neutral-950 p-8 transition-all duration-300 hover:border-volt-500/40 hover:shadow-[0_0_40px_rgba(227,245,68,0.06)]"
                 >
-                  <div className="h-px bg-linear-to-r from-volt-500/0 via-volt-500/0 to-volt-500/0 group-hover:from-volt-500/40 group-hover:via-volt-500/60 group-hover:to-volt-500/0 transition-all duration-500 -mx-8 -mt-8 mb-8" />
+                  <div className="h-px bg-linear-to-r from-white/10 via-white/10 to-white/10 group-hover:from-volt-500/40 group-hover:via-volt-500/60 group-hover:to-volt-500/0 transition-all duration-500 -mx-8 -mt-8 mb-8" />
                   <h3 className="text-lg font-bold text-white mb-3 group-hover:text-volt-400 transition-colors duration-300">
                     {service.title}
                   </h3>
@@ -307,7 +307,7 @@ export default function CincinnatiWebDeveloperPage() {
                       <span className="block text-[10px] font-mono tracking-[0.3em] uppercase text-neutral-500 mb-1">Agency</span>
                       {row.agency}
                     </div>
-                    <div className="p-4 bg-surface-raised/60 text-sm text-neutral-300 leading-relaxed border-l border-volt-500/10 group-hover:border-volt-500/30 transition-colors duration-300">
+                    <div className="p-4 bg-surface-raised/60 text-sm text-neutral-300 leading-relaxed border-l border-neutral-800 group-hover:border-volt-500/30 transition-colors duration-300">
                       <span className="block text-[10px] font-mono tracking-[0.2em] uppercase text-neutral-400 mb-1">Black Lab Dev</span>
                       {row.local}
                     </div>
@@ -351,7 +351,7 @@ export default function CincinnatiWebDeveloperPage() {
             <div className="mt-10 text-center">
               <Link
                 href="/work"
-                className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 bg-volt-500/8 px-8 py-4 text-sm font-semibold uppercase tracking-wide text-volt-400 transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white"
+                className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 bg-white/[0.04] px-8 py-4 text-sm font-semibold uppercase tracking-wide text-volt-400 transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white"
               >
                 See All My Work →
               </Link>

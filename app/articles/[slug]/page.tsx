@@ -234,7 +234,7 @@ export default async function ArticlePage({
                     />
 
                     {/* Gradient overlay matching site style */}
-                    <div className="absolute inset-0 bg-linear-to-br from-volt-950/85 via-neutral-900/85 to-black/90" />
+                    <div className="absolute inset-0 bg-linear-to-br from-white/10 via-neutral-900/85 to-black/90" />
 
                     {/* Ambient glow orbs */}
 
@@ -290,7 +290,7 @@ export default async function ArticlePage({
                     </div>
 
                     {/* Bottom accent line */}
-                    <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/50 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
                 </section>
             )}
 
@@ -344,7 +344,7 @@ export default async function ArticlePage({
                 {/* Neon ambient glow */}
 
                 {/* Top accent line */}
-                <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
+                <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
                 <div className="relative mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
                   {/* Section heading */}
@@ -354,11 +354,11 @@ export default async function ArticlePage({
                     </span>
                     <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
                       Related{" "}
-                      <span className="text-volt-400 drop-shadow-[0_0_12px_rgba(34,211,238,0.6)]">
+                      <span className="text-neutral-400 drop-shadow-[0_0_12px_rgba(34,211,238,0.6)]">
                         Articles
                       </span>
                     </h2>
-                    <div className="mt-4 w-16 h-px bg-linear-to-r from-transparent via-volt-500 to-transparent" />
+                    <div className="mt-4 w-16 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-stretch">
@@ -377,7 +377,7 @@ export default async function ArticlePage({
                             />
                             {/* Image neon overlay on hover */}
                             <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-transparent to-transparent" />
-                            <div className="absolute inset-0 bg-volt-500/0 group-hover:bg-volt-500/5 transition-colors duration-300" />
+                            <div className="absolute inset-0 bg-white/[0.04] group-hover:bg-volt-500/5 transition-colors duration-300" />
                           </div>
 
                           <div className="p-6 flex flex-col grow">
@@ -412,7 +412,7 @@ export default async function ArticlePage({
                 </div>
 
                 {/* Bottom accent line */}
-                <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
               </section>
             )}
         </main>

@@ -13,7 +13,7 @@ function anchorId(name: string) {
 
 function PlatformBadge({ platform }: { platform: string }) {
   return (
-    <span className="shrink-0 text-[9px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full border border-volt-500/20 bg-volt-500/5 text-volt-500/80">
+    <span className="shrink-0 text-[9px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full border border-neutral-800 bg-white/[0.04] text-volt-500/80">
       {platform}
     </span>
   );
@@ -21,7 +21,7 @@ function PlatformBadge({ platform }: { platform: string }) {
 
 function UpdatedBadge() {
   return (
-    <span className="inline-flex w-fit items-center gap-1.5 text-[9px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full border border-volt-500/30 bg-volt-500/10 text-volt-400">
+    <span className="inline-flex w-fit items-center gap-1.5 text-[9px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full border border-neutral-800 bg-white/[0.04] text-volt-400">
       <span className="w-1.5 h-1.5 rounded-full bg-volt-400 animate-pulse" />
       Recently Updated
     </span>
@@ -117,7 +117,7 @@ function FeaturedRow({ project, flip, linked }: { project: Project; flip: boolea
         <ul className="space-y-2 text-sm border-t border-neutral-800/70 pt-5">
           {project.details.slice(0, 3).map((item) => (
             <li key={item} className="flex items-start gap-2.5 text-neutral-400">
-              <span className="mt-2 w-1.5 h-1.5 rounded-full bg-volt-500/70 shrink-0" />
+              <span className="mt-2 w-1.5 h-1.5 rounded-full bg-white/[0.04] shrink-0" />
               {item}
             </li>
           ))}

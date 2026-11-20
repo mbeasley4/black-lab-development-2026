@@ -224,7 +224,7 @@ export default async function ArticlesPage({
               </h2>
               <p className="text-sm text-neutral-500 mt-1">{total} article{total !== 1 ? "s" : ""} published</p>
             </div>
-            <div className="flex-1 h-px bg-linear-to-r from-volt-500/60 via-volt-500/20 to-transparent" />
+            <div className="flex-1 h-px bg-linear-to-r from-white/10 via-white/10 to-transparent" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 items-stretch">
@@ -235,7 +235,7 @@ export default async function ArticlesPage({
                   className="h-full group flex flex-col border border-neutral-800 rounded-xl overflow-hidden bg-neutral-950 transition-all duration-300 hover:border-volt-500/40 hover:shadow-[0_0_40px_rgba(227,245,68,0.08)]"
                 >
                   {/* Top accent line */}
-                  <div className="h-px bg-linear-to-r from-transparent via-volt-500/0 to-transparent group-hover:via-volt-500/60 transition-all duration-500" />
+                  <div className="h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-volt-500/60 transition-all duration-500" />
 
                   <div className="relative h-56 overflow-hidden">
                     <Image

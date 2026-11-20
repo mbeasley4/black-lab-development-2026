@@ -87,7 +87,7 @@ export default function CaseStudies() {
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white">
                             Results, Not{" "}
-                            <span className="text-volt-500">
+                            <span className="text-neutral-400">
                                 Brochures
                             </span>
                         </h2>
@@ -159,7 +159,7 @@ export default function CaseStudies() {
                 <div className="mt-16 text-center">
                     <Link
                         href="/work"
-                        className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 bg-volt-500/8 px-8 py-4 text-sm font-semibold uppercase tracking-wide text-volt-400 transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white hover:shadow-lg hover:shadow-volt-500/20"
+                        className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 bg-white/[0.04] px-8 py-4 text-sm font-semibold uppercase tracking-wide text-volt-400 transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white hover:shadow-lg hover:shadow-volt-500/20"
                     >
                         View All Work
                         <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

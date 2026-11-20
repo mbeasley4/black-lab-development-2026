@@ -141,9 +141,9 @@ export async function generateMetadata({
 }
 
 const HERO_METRIC_STYLES = [
-  "border-volt-500/30 bg-volt-500/10 text-volt-400",
-  "border-volt-500/30 bg-volt-500/10 text-volt-400",
-  "border-volt-400/30 bg-volt-400/8 text-volt-300",
+  "border-neutral-800 bg-white/[0.04] text-white",
+  "border-neutral-800 bg-white/[0.04] text-white",
+  "border-neutral-800 bg-white/[0.04] text-white",
 ];
 
 export default async function CaseStudyPage({
@@ -213,9 +213,9 @@ export default async function CaseStudyPage({
     <main className="w-full bg-surface text-white">
       <JsonLd data={[articleSchema, breadcrumbSchema]} />
       {/* ─── HERO ─────────────────────────────────────── */}
-      <section className="relative overflow-hidden border-b border-volt-500/20 bg-surface">
+      <section className="relative overflow-hidden border-b border-neutral-800 bg-surface">
         {/* Ambient glows */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/25 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
         <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className={`grid gap-12 items-center py-20 md:py-24 md:min-h-[82vh] ${study.heroSrc ? "grid-cols-1 lg:grid-cols-[1fr_1.1fr]" : "grid-cols-1"}`}>
@@ -229,7 +229,7 @@ export default async function CaseStudyPage({
                 <span className="text-neutral-500">/</span>
                 <span className="text-xs text-neutral-400">Project</span>
                 {study.platform && (
-                  <span className="text-[10px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full border border-volt-500/20 bg-volt-500/5 text-volt-500/80">
+                  <span className="text-[10px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full border border-neutral-800 bg-white/[0.04] text-volt-500/80">
                     {study.platform}
                   </span>
                 )}
@@ -284,15 +284,15 @@ export default async function CaseStudyPage({
             {study.heroSrc && (
               <div className="relative flex items-center justify-center lg:justify-end">
                 {/* Glow halo behind the frame */}
-                <div className="absolute -inset-6 bg-volt-500/10 rounded-3xl blur-3xl pointer-events-none" />
-                <div className="absolute -inset-2 bg-volt-500/5 rounded-2xl blur-xl pointer-events-none" />
+                <div className="absolute -inset-6 bg-white/[0.04] rounded-3xl blur-3xl pointer-events-none" />
+                <div className="absolute -inset-2 bg-white/[0.04] rounded-2xl blur-xl pointer-events-none" />
 
                 {/* Browser chrome frame */}
-                <div className="relative w-full max-w-2xl rounded-2xl overflow-hidden border border-volt-500/25 shadow-[0_0_80px_rgba(227,245,68,0.18),0_32px_64px_rgba(0,0,0,0.6)] ring-1 ring-white/5">
+                <div className="relative w-full max-w-2xl rounded-2xl overflow-hidden border border-neutral-800 ring-1 ring-white/5">
                   {/* Chrome bar */}
                   <div className="h-9 bg-neutral-900 border-b border-neutral-800 flex items-center gap-2 px-4 shrink-0">
                     <span className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-volt-500/60" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-white/[0.04]" />
                     <span className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
                     <div className="ml-4 flex-1 max-w-xs h-5 bg-neutral-800 rounded-md flex items-center px-3">
                       <span className="text-[10px] text-neutral-500 truncate">{siteHost}</span>
@@ -317,7 +317,7 @@ export default async function CaseStudyPage({
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
       </section>
 
       {/* ─── FULL METRICS GRID ────────────────────────── */}
@@ -329,13 +329,13 @@ export default async function CaseStudyPage({
                 The Results
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Key Metrics</h2>
-              <div className="mt-4 h-px w-32 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
+              <div className="mt-4 h-px w-32 bg-linear-to-r from-white/10 via-white/10 to-transparent" />
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-neutral-800/40 rounded-2xl overflow-hidden border border-neutral-800">
               {study.metrics.map(
                 (m: { improvement: string; label: string; value?: string; note?: string }, i: number) => (
                   <div key={i} className="bg-neutral-950 px-8 py-8 text-center">
-                    <div className="text-4xl font-black text-volt-500 mb-2">
+                    <div className="text-4xl font-black text-white mb-2">
                       {m.improvement}
                     </div>
                     <div className="text-sm font-semibold text-white mb-1">{m.label}</div>
@@ -358,7 +358,7 @@ export default async function CaseStudyPage({
                 The Build
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Project Highlights</h2>
-              <div className="mt-4 h-px w-32 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
+              <div className="mt-4 h-px w-32 bg-linear-to-r from-white/10 via-white/10 to-transparent" />
             </div>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {study.details.map((item: string) => (
@@ -381,7 +381,7 @@ export default async function CaseStudyPage({
                 The Transformation
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Before &amp; After</h2>
-              <div className="mt-4 h-px w-32 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
+              <div className="mt-4 h-px w-32 bg-linear-to-r from-white/10 via-white/10 to-transparent" />
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {[
@@ -441,7 +441,7 @@ export default async function CaseStudyPage({
                 The Finished Site
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Gallery</h2>
-              <div className="mt-4 h-px w-32 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
+              <div className="mt-4 h-px w-32 bg-linear-to-r from-white/10 via-white/10 to-transparent" />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
               {study.galleryItems.map((image: GalleryItem) => (
@@ -469,18 +469,18 @@ export default async function CaseStudyPage({
 
       {/* ─── MORE WORK ────────────────────────────────── */}
       {moreProjects.length > 0 && (
-        <nav aria-labelledby="more-work-heading" className="relative overflow-hidden bg-volt-500 py-20 md:py-24">
+        <nav aria-labelledby="more-work-heading" className="relative overflow-hidden bg-neutral-100 py-20 md:py-24">
           {/* Subtle diagonal texture so the band doesn't read as a flat block */}
           <div
-            className="pointer-events-none absolute inset-0 opacity-[0.08]"
+            className="pointer-events-none absolute inset-0 opacity-[0.04]"
             style={{ backgroundImage: "repeating-linear-gradient(135deg, #000 0 1px, transparent 1px 14px)" }}
             aria-hidden="true"
           />
           <div className="relative mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
               <div>
-                <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase font-bold text-black/60">Keep Exploring</span>
-                <h2 id="more-work-heading" className="text-3xl md:text-4xl font-black tracking-tight text-black">
+                <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase font-semibold text-neutral-500">Keep Exploring</span>
+                <h2 id="more-work-heading" className="text-3xl md:text-4xl font-bold tracking-tight text-neutral-950">
                   More Work
                 </h2>
               </div>
@@ -500,7 +500,7 @@ export default async function CaseStudyPage({
                 <Link
                   key={project.slug}
                   href={`/work/${project.slug}`}
-                  className="group flex flex-col overflow-hidden rounded-2xl bg-neutral-950 shadow-[0_18px_40px_-16px_rgba(0,0,0,0.55)] ring-1 ring-black/10 transition-all duration-300 ease-out hover:shadow-[0_28px_60px_-14px_rgba(0,0,0,0.7)] motion-safe:hover:-translate-y-2 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black"
+                  className="group flex flex-col overflow-hidden rounded-2xl bg-neutral-950 shadow-[0_18px_40px_-16px_rgba(0,0,0,0.55)] ring-1 ring-black/5 transition-all duration-300 ease-out hover:shadow-[0_28px_60px_-14px_rgba(0,0,0,0.7)] motion-safe:hover:-translate-y-2 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black"
                 >
                   <div className="bg-linear-to-br from-neutral-900 to-neutral-950 p-3 border-b border-neutral-800">
                     <div className="overflow-hidden rounded-lg border border-white/10 bg-neutral-900 transition-colors duration-300 group-hover:border-volt-500/50">
@@ -523,7 +523,7 @@ export default async function CaseStudyPage({
                   <div className="flex grow flex-col gap-3 p-5">
                     <div className="flex items-start justify-between gap-3">
                       <h3 className="text-lg font-bold leading-snug text-white">{project.name}</h3>
-                      <span className="mt-0.5 shrink-0 rounded-full border border-volt-500/30 bg-volt-500/10 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-volt-400">
+                      <span className="mt-0.5 shrink-0 rounded-full border border-neutral-800 bg-white/[0.04] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-volt-400">
                         {project.platform}
                       </span>
                     </div>
@@ -543,9 +543,9 @@ export default async function CaseStudyPage({
       )}
 
       {/* ─── CTA ─────────────────────────────────────── */}
-      <section className="relative overflow-hidden py-24 border-t border-volt-500/20">
+      <section className="relative overflow-hidden py-24 border-t border-neutral-800">
         <div className="absolute inset-0 bg-linear-to-br from-surface-raised via-neutral-950 to-surface" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/30 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
         <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 text-center">
           <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
@@ -560,7 +560,7 @@ export default async function CaseStudyPage({
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-10 py-4 text-base font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg shadow-volt-500/25"
+              className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-10 py-4 text-base font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg"
             >
               Start a Conversation
             </Link>
@@ -576,7 +576,7 @@ export default async function CaseStudyPage({
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
       </section>
     </main>
   );

@@ -29,7 +29,7 @@ const demos = [
 
 export default function DemoSection() {
   return (
-    <section className="bg-surface border-t border-b border-volt-500/15 py-6 md:py-9 relative overflow-hidden">
+    <section className="bg-surface border-t border-b border-neutral-800 py-6 md:py-9 relative overflow-hidden">
       {/* Ambient glows */}
 
       <div className="mx-auto max-w-7xl px-6 relative">
@@ -41,7 +41,7 @@ export default function DemoSection() {
           </span>
           <h2 className="text-5xl font-extrabold tracking-tight text-white">
             Featured{" "}
-            <span className="text-volt-500">
+            <span className="text-neutral-400">
               Demo Projects
             </span>
           </h2>
@@ -49,7 +49,7 @@ export default function DemoSection() {
             Production-ready applications built with modern frameworks.
           </p>
           {/* Underline accent */}
-          <div className="mx-auto mt-6 w-32 h-px bg-linear-to-r from-transparent via-volt-500/60 to-transparent" />
+          <div className="mx-auto mt-6 w-32 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
         </div>
 
         {/* Demo Rows */}
@@ -74,7 +74,7 @@ export default function DemoSection() {
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     {/* Amber tint on hover */}
-                    <div className="absolute inset-0 bg-volt-950/0 group-hover:bg-volt-950/5 transition-all duration-400 rounded-2xl" />
+                    <div className="absolute inset-0 bg-white/[0.04] group-hover:bg-volt-950/5 transition-all duration-400 rounded-2xl" />
                   </div>
                 </div>
 
@@ -85,7 +85,7 @@ export default function DemoSection() {
                     {num}
                   </span>
 
-                  <span className="inline-flex items-center rounded-full bg-volt-500/8 border border-volt-500/25 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-volt-400">
+                  <span className="inline-flex items-center rounded-full bg-white/[0.04] border border-neutral-800 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-volt-400">
                     {demo.badge}
                   </span>
 

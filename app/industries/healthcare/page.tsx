@@ -207,7 +207,7 @@ export default function HealthcareIndustryPage() {
       {/* Cross-link */}
       <section className="py-16 border-b border-neutral-800/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 p-8 rounded-xl border border-volt-500/20 bg-volt-500/5">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 p-8 rounded-xl border border-neutral-800 bg-white/[0.04]">
             <div>
               <p className="text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold mb-1">Related Service</p>
               <h3 className="text-lg font-bold text-white">Conversion Rate Optimization</h3>

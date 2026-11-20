@@ -297,7 +297,7 @@ export default function PartnersPage() {
             {valueProps.map((prop) => (
               <div
                 key={prop.title}
-                className="rounded-xl border border-volt-500/20 bg-neutral-900/50 p-8 transition-colors duration-200 hover:border-volt-400"
+                className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8 transition-colors duration-200 hover:border-volt-400"
               >
                 <h3 className="text-lg font-bold text-volt-400 mb-1">{prop.title}</h3>
                 <p className="text-xs uppercase tracking-widest text-neutral-400 mb-5">{prop.detail}</p>
@@ -331,7 +331,7 @@ export default function PartnersPage() {
           <div className="space-y-12">
             {process.map((item) => (
               <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
-                <div className="text-5xl font-black font-mono text-volt-400/20 leading-none">{item.step}</div>
+                <div className="text-5xl font-black font-mono text-white/10 leading-none">{item.step}</div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                   <p className="text-neutral-400 leading-relaxed">{item.body}</p>
@@ -359,7 +359,7 @@ export default function PartnersPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-neutral-800/40 rounded-2xl overflow-hidden border border-neutral-700/40">
             {proof.map((r) => (
               <div key={r.label} className="bg-neutral-900 px-10 py-10 text-center">
-                <div className="text-4xl md:text-5xl font-black bg-linear-to-r from-volt-400 to-volt-400 bg-clip-text text-transparent mb-2">{r.metric}</div>
+                <div className="text-4xl md:text-5xl font-black bg-linear-to-r from-white/10 to-white/10 bg-clip-text text-transparent mb-2">{r.metric}</div>
                 <div className="text-lg font-semibold text-white mb-2">{r.label}</div>
                 <div className="text-sm text-neutral-400">{r.detail}</div>
               </div>

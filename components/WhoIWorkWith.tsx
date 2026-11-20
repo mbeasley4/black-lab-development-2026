@@ -27,7 +27,7 @@ const audiences = [
 export default function WhoIWorkWith() {
     return (
         <section className="w-full bg-black text-white py-28 relative overflow-hidden border-t border-neutral-800/50">
-            <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/20 to-transparent" />
+            <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
                 <div className="mb-14 max-w-2xl">
@@ -36,7 +36,7 @@ export default function WhoIWorkWith() {
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]">
                         Two Kinds of Clients.<br />
-                        <span className="text-volt-500">One Standard.</span>
+                        <span className="text-neutral-400">One Standard.</span>
                     </h2>
                 </div>
 
@@ -56,7 +56,7 @@ export default function WhoIWorkWith() {
                             />
                             {/* Legibility gradient + volt wash on hover */}
                             <div className="absolute inset-0 bg-linear-to-t from-black via-black/70 to-black/10" />
-                            <div className="absolute inset-0 bg-linear-to-tr from-volt-500/0 to-volt-500/0 transition-colors duration-700 group-hover:from-volt-500/15" />
+                            <div className="absolute inset-0 bg-linear-to-tr from-white/10 to-white/10 transition-colors duration-700 group-hover:from-volt-500/15" />
 
                             <div className="relative p-8 md:p-10">
                                 <span className="mb-3 inline-block rounded-sm bg-volt-500 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-black">

@@ -270,7 +270,7 @@ export default function SeoFulfillmentPage() {
             {scope.map((item) => (
               <div
                 key={item.title}
-                className="rounded-xl border border-volt-500/20 bg-neutral-900/50 p-8 transition-colors duration-200 hover:border-volt-400"
+                className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8 transition-colors duration-200 hover:border-volt-400"
               >
                 <h3 className="text-lg font-bold text-volt-400 mb-5">{item.title}</h3>
                 <ul className="space-y-2">
@@ -303,7 +303,7 @@ export default function SeoFulfillmentPage() {
           <div className="space-y-12">
             {process.map((item) => (
               <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
-                <div className="text-5xl font-black font-mono text-volt-400/20 leading-none">{item.step}</div>
+                <div className="text-5xl font-black font-mono text-white/10 leading-none">{item.step}</div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                   <p className="text-neutral-400 leading-relaxed">{item.body}</p>
@@ -324,7 +324,7 @@ export default function SeoFulfillmentPage() {
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <h2 className="text-2xl font-bold text-white mb-8">Related</h2>
           <div className="flex flex-wrap gap-4">
-            <Link href="/partners" className="rounded-lg border border-volt-500/30 bg-volt-500/10 px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200">
+            <Link href="/partners" className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200">
               Agency &amp; Partner Services →
             </Link>
             <Link href="/partners/white-label-web-development" className="rounded-lg border border-neutral-700 bg-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200">

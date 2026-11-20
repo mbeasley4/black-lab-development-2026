@@ -58,10 +58,10 @@ function LabCard({ step }: { step: (typeof steps)[number] }) {
 
       <div className="relative z-10">
         <div className="flex items-center gap-4 mb-6">
-          <span className="text-6xl font-black font-mono text-volt-400 leading-none group-hover:scale-110 transition-all duration-300 origin-left">
+          <span className="text-6xl font-black font-mono text-white leading-none group-hover:scale-110 transition-all duration-300 origin-left">
             {step.letter}
           </span>
-          <div className="h-px flex-1 bg-volt-500/15 group-hover:bg-volt-500/50 transition-all duration-300 group-hover:shadow-[0_0_8px_rgba(227,245,68,0.3)]" />
+          <div className="h-px flex-1 bg-white/[0.04] group-hover:bg-volt-500/50 transition-all duration-300 group-hover:shadow-[0_0_8px_rgba(227,245,68,0.3)]" />
         </div>
         <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-volt-50 transition-colors duration-300">
           {step.title}
@@ -72,7 +72,7 @@ function LabCard({ step }: { step: (typeof steps)[number] }) {
       </div>
 
       {/* Bottom edge glow on hover */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-volt-500/0 group-hover:bg-volt-500/40 transition-all duration-500 group-hover:shadow-[0_0_12px_rgba(227,245,68,0.4)]" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-white/[0.04] group-hover:bg-volt-500/40 transition-all duration-500 group-hover:shadow-[0_0_12px_rgba(227,245,68,0.4)]" />
     </div>
   );
 }
@@ -80,10 +80,10 @@ function LabCard({ step }: { step: (typeof steps)[number] }) {
 export default function LabFramework({ compact = false }: LabFrameworkProps) {
   return (
     <section
-      className={`w-full border-t border-volt-500/15 ${compact ? "py-16" : "py-32"} bg-linear-to-b from-surface to-neutral-950 relative overflow-hidden`}
+      className={`w-full border-t border-neutral-800 ${compact ?"py-16" : "py-32"} bg-linear-to-b from-surface to-neutral-950 relative overflow-hidden`}
       aria-labelledby="lab-framework-heading"
     >
-      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
       <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
         <div className="mb-16 text-center md:text-left">
@@ -112,7 +112,7 @@ export default function LabFramework({ compact = false }: LabFrameworkProps) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-volt-500/20 rounded-2xl overflow-hidden border border-volt-500/20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/[0.04] rounded-2xl overflow-hidden border border-neutral-800">
           {steps.map((step) => (
             <LabCard key={step.letter} step={step} />
           ))}

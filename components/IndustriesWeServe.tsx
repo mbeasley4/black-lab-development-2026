@@ -73,7 +73,7 @@ const industries: Industry[] = [
 
 const colorClasses = {
     volt: {
-        iconBg: "bg-volt-500/15",
+        iconBg: "bg-white/[0.06]",
         iconText: "text-volt-500",
         iconHoverBg: "group-hover:bg-volt-500",
         border: "group-hover:border-volt-500",
@@ -84,7 +84,7 @@ const colorClasses = {
         ctaArrow: "stroke-volt-500 group-hover:stroke-volt-400",
     },
     blue: {
-        iconBg: "bg-volt-500/15",
+        iconBg: "bg-white/[0.06]",
         iconText: "text-volt-400",
         iconHoverBg: "group-hover:bg-volt-500",
         border: "group-hover:border-volt-400",

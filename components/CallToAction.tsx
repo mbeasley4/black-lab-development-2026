@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function CallToAction() {
     return (
-        <section className="relative overflow-hidden w-full py-28 border-t border-volt-500/15">
+        <section className="relative overflow-hidden w-full py-28 border-t border-neutral-800">
             {/* Background layers */}
             <div className="absolute inset-0">
                 <Image
@@ -14,7 +14,7 @@ export default function CallToAction() {
                     className="object-cover object-center opacity-40 animate-ken-burns"
                 />
                 <div className="absolute inset-0 bg-linear-to-br from-surface/95 via-surface-raised/80 to-[#1f2328]/70" />
-                <div className="absolute inset-0 bg-linear-to-tr from-volt-500/6 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-tr from-white/10 via-transparent to-transparent" />
             </div>
 
             {/* Ambient glows */}
@@ -24,7 +24,7 @@ export default function CallToAction() {
                 <div className="mx-auto max-w-4xl text-center">
                     <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 pb-2 leading-[1.05]">
                         <span className="block text-white">If Your Website Isn&apos;t Driving Results,</span>
-                        <span className="block text-volt-500">It&apos;s Holding You Back</span>
+                        <span className="block text-neutral-400">It&apos;s Holding You Back</span>
                     </h2>
 
                     <p className="text-lg text-neutral-300 max-w-2xl mx-auto mt-6 mb-12 leading-relaxed">
@@ -47,7 +47,7 @@ export default function CallToAction() {
 
                         <Link
                             href="/work"
-                            className="group inline-flex w-full sm:w-auto items-center justify-center rounded-lg border-2 border-volt-500/50 bg-volt-500/8 px-8 sm:px-12 py-5 text-base font-bold uppercase tracking-wide text-volt-400 backdrop-blur-sm transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white hover:shadow-xl hover:shadow-volt-500/20 hover:scale-105"
+                            className="group inline-flex w-full sm:w-auto items-center justify-center rounded-lg border-2 border-neutral-800 bg-white/[0.04] px-8 sm:px-12 py-5 text-base font-bold uppercase tracking-wide text-volt-400 backdrop-blur-sm transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white hover:shadow-xl hover:shadow-volt-500/20 hover:scale-105"
                         >
                             <span className="flex items-center gap-2">
                                 View My Work
@@ -59,7 +59,7 @@ export default function CallToAction() {
                     </div>
 
                     {/* Trust line */}
-                    <div className="mt-4 inline-flex items-center gap-3 rounded-full border border-volt-500/25 bg-volt-500/8 px-5 py-2.5 backdrop-blur-sm">
+                    <div className="mt-4 inline-flex items-center gap-3 rounded-full border border-neutral-800 bg-white/[0.04] px-5 py-2.5 backdrop-blur-sm">
                         <svg className="w-5 h-5 text-volt-400" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
@@ -71,7 +71,7 @@ export default function CallToAction() {
             </div>
 
             {/* Bottom decorative gradient line */}
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-volt-500/60 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-white/10 to-transparent" />
         </section>
     );
 }

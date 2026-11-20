@@ -31,7 +31,7 @@ export default function Process() {
                             The Difference
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white leading-[1.1]">
-                            You Work Directly With the <span className="text-volt-500">Person Doing the Work</span>
+                            You Work Directly With the <span className="text-neutral-400">Person Doing the Work</span>
                         </h2>
                     </div>
                     <div className="space-y-6">
@@ -44,7 +44,7 @@ export default function Process() {
                                 className="object-cover grayscale-[40%] transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
                             />
                             <div className="absolute inset-0 bg-linear-to-tr from-black/70 via-black/10 to-transparent" />
-                            <span className="absolute top-4 left-4 rounded-full bg-black/60 backdrop-blur-md border border-volt-500/30 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-volt-400">
+                            <span className="absolute top-4 left-4 rounded-full bg-black/60 backdrop-blur-md border border-neutral-800 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-volt-400">
                                 Direct line · No relay
                             </span>
                         </div>

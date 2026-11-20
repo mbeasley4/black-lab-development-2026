@@ -14,7 +14,7 @@ export default function PageClose({
   secondaryLabel,
 }: PageCloseProps) {
   return (
-    <section className="relative overflow-hidden border-t border-volt-500/15 py-28">
+    <section className="relative overflow-hidden border-t border-neutral-800 py-28">
       {/* Background layers */}
       <div className="absolute inset-0">
         <div
@@ -22,7 +22,7 @@ export default function PageClose({
           style={{ backgroundImage: "url('/images/close-bg.png')" }}
         />
         <div className="absolute inset-0 bg-linear-to-br from-surface via-surface-raised to-[#1f2328]" />
-        <div className="absolute inset-0 bg-linear-to-tr from-volt-500/6 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-tr from-white/10 via-transparent to-transparent" />
       </div>
 
       {/* Ambient glows */}
@@ -61,7 +61,7 @@ export default function PageClose({
       </div>
 
       {/* Bottom accent line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
     </section>
   );
 }
