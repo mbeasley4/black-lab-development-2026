@@ -74,7 +74,8 @@ export default function RootLayout({
         <AptabaseClientProvider>
           <NavigationProgress />
           <Header />
-          <main>{children}</main>
+          {/* pt-11 = the 44px the announcement bar and taller header add (see Header.tsx) */}
+          <main className="pt-11">{children}</main>
           <Footer />
           <RouteChangeTracker />
           <CookieConsent />

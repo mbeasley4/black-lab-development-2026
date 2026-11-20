@@ -17,7 +17,7 @@ export default function Differentiation() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
                     {/* Left */}
-                    <div className="lg:sticky lg:top-32">
+                    <div className="lg:sticky lg:top-36">
                         <span className="inline-block mb-5 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                             The Problem
                         </span>

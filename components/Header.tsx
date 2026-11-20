@@ -5,7 +5,20 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-const HEADER_HEIGHT = 72; // px
+// The announcement bar and header are fixed together. <main> in app/layout.tsx
+// is padded by the height they add beyond the original 72px header (44px), so
+// pages keep the same relationship to the header. Keep the two in sync.
+const ANNOUNCEMENT_HEIGHT = 36; // px
+const HEADER_HEIGHT = 80; // px — room above and below the logo
+const MEGAMENU_TOP = ANNOUNCEMENT_HEIGHT + HEADER_HEIGHT;
+
+// Announcement bar copy: edit here.
+const ANNOUNCEMENT = {
+    message: "Now booking new website projects and agency partnerships.",
+    shortMessage: "Now booking new projects.",
+    linkLabel: "Schedule a call",
+    href: "/contact",
+};
 const MEGAMENU_DELAY = 150; // ms — open/close grace period
 
 type ServiceCard = {
@@ -484,6 +497,26 @@ export default function Header() {
 
             {/* ===================== HEADER ===================== */}
             <header className="fixed top-0 z-50 w-full bg-surface text-[#e5e7eb] border-b border-neutral-800">
+                {/* Announcement bar */}
+                <div
+                    className="w-full border-b border-neutral-800 bg-charcoal text-neutral-300"
+                    style={{ height: ANNOUNCEMENT_HEIGHT }}
+                >
+                    <div className="mx-auto flex h-full max-w-375 items-center justify-center gap-3 px-6 sm:px-10 md:px-14 lg:px-20 text-[13px]">
+                        <span className="inline-flex h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" aria-hidden />
+                        <span className="hidden sm:inline">{ANNOUNCEMENT.message}</span>
+                        <span className="sm:hidden">{ANNOUNCEMENT.shortMessage}</span>
+                        <Link
+                            href={ANNOUNCEMENT.href}
+                            onClick={closeDrawer}
+                            className="inline-flex items-center gap-1 font-semibold text-white underline decoration-neutral-600 underline-offset-4 hover:decoration-white transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                        >
+                            {ANNOUNCEMENT.linkLabel}
+                            <span aria-hidden>→</span>
+                        </Link>
+                    </div>
+                </div>
+
                 <div
                     className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-4 flex items-center justify-between"
                     style={{ height: HEADER_HEIGHT }}
@@ -571,7 +604,7 @@ export default function Header() {
                                 aria-label="Services menu"
                                 onMouseEnter={() => handleMegaEnter("services")}
                                 onMouseLeave={handleMegaLeave}
-                                style={{ top: HEADER_HEIGHT }}
+                                style={{ top: MEGAMENU_TOP }}
                                 className={`fixed left-1/2 -translate-x-1/2 w-full max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 pt-2
                                     transition-all duration-200 ease-out origin-top
                                     ${openMega === "services"
@@ -654,7 +687,7 @@ export default function Header() {
                                 aria-label="Industries menu"
                                 onMouseEnter={() => handleMegaEnter("industries")}
                                 onMouseLeave={handleMegaLeave}
-                                style={{ top: HEADER_HEIGHT }}
+                                style={{ top: MEGAMENU_TOP }}
                                 className={`fixed left-1/2 -translate-x-1/2 w-full max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 pt-2
                                     transition-all duration-200 ease-out origin-top
                                     ${openMega === "industries"

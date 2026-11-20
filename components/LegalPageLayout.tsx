@@ -28,7 +28,7 @@ export default function LegalPageLayout({
 
       <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-16 lg:py-24">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[280px_1fr]">
-          <nav aria-label="Table of contents" className="h-fit lg:sticky lg:top-24">
+          <nav aria-label="Table of contents" className="h-fit lg:sticky lg:top-36">
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400">
               On This Page
             </p>
