@@ -37,93 +37,70 @@ export default async function ArticlesBlock() {
 
   return (
     <section className="w-full bg-surface text-white py-24 relative overflow-hidden">
-      {/* Ambient background effects */}
-
       <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
-        {/* Header */}
-        <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white pb-2">
-            Building, Learning & Sharing at Black Lab Development
-          </h2>
-          <p className="text-lg text-[#e5e7eb]/70 leading-relaxed max-w-4xl">
-            Explore my latest articles featuring development tips, technical deep dives, and behind-the-scenes insights from real projects. From scalable web apps to modern tooling and workflows, this is where I share what's working—and why.
-          </p>
+        {/* Header: matches the other homepage sections */}
+        <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-2xl">
+            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+              Insights
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] text-white">
+              Building, Learning &amp; Sharing
+            </h2>
+            <p className="mt-4 text-lg text-neutral-400 leading-relaxed">
+              Development tips, technical deep dives, and lessons from real projects — what&apos;s working, and why.
+            </p>
+          </div>
+          <Link
+            href="/articles"
+            className="group inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-white hover:text-neutral-300 transition-colors duration-200"
+          >
+            All articles
+            <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+          </Link>
         </div>
 
-        {/* Latest Articles */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
+        {/* Latest articles: equal-height cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {articles.map((a, index) => (
             <AnimatedCard key={a._id} delay={index * 100}>
               <Link
                 href={`/articles/${a.slug.current}`}
-                className="group h-full block border border-neutral-800 rounded-2xl overflow-hidden bg-neutral-950 transition-all duration-500 hover:-translate-y-2 hover:border-neutral-500 hover:shadow-xl hover:shadow-black/40"
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-950 transition-all duration-300 hover:border-neutral-600 hover:shadow-xl hover:shadow-black/40 motion-safe:hover:-translate-y-1"
               >
-                {/* Image */}
-                <div className="relative h-56 overflow-hidden">
+                <div className="relative aspect-16/10 w-full overflow-hidden bg-neutral-900">
                   <Image
                     src={a.mainImage ? urlFor(a.mainImage).width(800).url() : "/images/articles/default.jpg"}
                     alt={a.title}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-500 motion-safe:group-hover:scale-[1.04]"
                   />
-                  {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-neutral-950/50 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
-
-                  {/* Top accent bar */}
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 
-                {/* Content */}
-                <div className="p-8 flex flex-col grow relative">
-                  {/* Hover gradient background */}
-                  <div className="absolute inset-0 bg-linear-to-br from-white/10 to-white/10 group-hover:from-white/3 group-hover:to-transparent transition-all duration-500 rounded-b-2xl" />
-
-                  <div className="relative z-10">
-                    {a.publishedAt && (
-                      <time
-                        dateTime={new Date(a.publishedAt).toISOString()}
-                        className="block mb-3 text-xs uppercase tracking-widest text-neutral-500 font-medium"
-                      >
-                        {formatDate(a.publishedAt)}
-                      </time>
-                    )}
-
-                    <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-white transition-all duration-300 pb-1">
-                      {a.title}
-                    </h3>
-
-                    <p className="text-sm text-[#e5e7eb]/60 leading-relaxed mb-4 group-hover:text-[#e5e7eb]/80 transition-colors duration-300">
-                      {toPlainText(a.excerpt)}
-                    </p>
-
-                    {/* Read article CTA */}
-                    <div className="flex items-center text-white opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-2 transition-all duration-300 mt-auto">
-                      <span className="text-sm font-semibold">Read article</span>
-                      <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </div>
+                <div className="flex grow flex-col p-6 md:p-7">
+                  {a.publishedAt && (
+                    <time
+                      dateTime={new Date(a.publishedAt).toISOString()}
+                      className="mb-3 text-xs uppercase tracking-widest text-neutral-500 font-medium"
+                    >
+                      {formatDate(a.publishedAt)}
+                    </time>
+                  )}
+                  <h3 className="mb-3 text-xl font-semibold leading-snug text-white line-clamp-3">
+                    {a.title}
+                  </h3>
+                  <p className="mb-6 text-sm leading-relaxed text-neutral-400 line-clamp-2 md:line-clamp-3">
+                    {toPlainText(a.excerpt)}
+                  </p>
+                  <span className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-white">
+                    Read article
+                    <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+                  </span>
                 </div>
-
-                {/* Bottom accent line */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-white/27 transition-all duration-500 rounded-b-2xl" />
               </Link>
             </AnimatedCard>
           ))}
-        </div>
-
-        {/* CTA Button */}
-        <div className="text-center">
-          <Link
-            href="/articles"
-            className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 bg-white/[0.04] px-10 py-4 text-sm font-semibold uppercase tracking-wide text-white transition-all duration-300 hover:border-neutral-500 hover:bg-white/15 hover:text-white hover:shadow-lg hover:shadow-black/40"
-          >
-            Explore All Insights
-            <svg className="w-5 h-5 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
         </div>
       </div>
     </section>
