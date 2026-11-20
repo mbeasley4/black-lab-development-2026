@@ -23,7 +23,10 @@ export type ProjectDetail = {
   before?: DetailImage;
   gallery: DetailImage[];
   details: string[];
+  /** Build facts, shown once under "At a Glance". */
   metrics: DetailMetric[];
+  /** Measured outcomes (e.g. verified in Google Analytics). Drive the hero chips and "The Results". */
+  results?: DetailMetric[];
   body: DetailSection[];
 };
 
@@ -109,11 +112,6 @@ export const projectDetails: ProjectDetail[] = [
         value: "15",
         label: "Custom Gutenberg Blocks",
         note: "No page builder",
-      },
-      {
-        value: "2011→2026",
-        label: "Platform Leap",
-        note: "Full rebuild",
       },
     ],
     body: [
@@ -217,16 +215,6 @@ export const projectDetails: ProjectDetail[] = [
         value: "16",
         label: "Custom Blocks",
         note: "Full site editing",
-      },
-      {
-        value: "1875",
-        label: "Pouring Since",
-        note: "Mount Adams",
-      },
-      {
-        value: "1-tap",
-        label: "Directions & Hours",
-        note: "On every page",
       },
     ],
     body: [
@@ -1089,11 +1077,6 @@ export const projectDetails: ProjectDetail[] = [
         value: "30+",
         label: "Pages With Structured Data",
         note: "Clinic, services, FAQs",
-      },
-      {
-        value: "1",
-        label: "Keyword-Led H1 per Page",
-        note: "Service + Cincinnati",
       },
     ],
     body: [

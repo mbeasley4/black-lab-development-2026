@@ -49,6 +49,11 @@ const CASE_STUDY_QUERY = `*[_type == "caseStudy" && slug.current == $slug][0] {
 }`;
 
 type GalleryItem = { key: string; src: string; alt: string; caption?: string };
+type Metric = { improvement: string; label: string; value?: string; note?: string };
+
+// Column count follows the number of items so 1-3 metrics don't sit in a half-empty row.
+const metricGridCols = (count: number) =>
+  count <= 1 ? "grid-cols-1 max-w-sm" : count === 2 ? "grid-cols-2 max-w-2xl" : count === 3 ? "grid-cols-1 sm:grid-cols-3" : "grid-cols-2 lg:grid-cols-4";
 type SanityImage = { _key?: string; alt?: string; caption?: string };
 
 // Page content comes from, in order:
@@ -75,6 +80,8 @@ async function loadStudy(slug: string) {
         caption: image.caption,
       })) as GalleryItem[],
       sections: null as DetailSection[] | null,
+      results: (study.metrics ?? []) as Metric[],
+      facts: [] as Metric[],
     };
   }
   if (!project) return null;
@@ -93,7 +100,8 @@ async function loadStudy(slug: string) {
     seoTitle: detail?.seoTitle,
     metaDescription: detail?.metaDescription,
     details: detail?.details ?? project.details,
-    metrics: detail?.metrics.map((m) => ({ improvement: m.value, label: m.label, note: m.note })) ?? [],
+    results: (detail?.results ?? []).map((m) => ({ improvement: m.value, label: m.label, note: m.note })) as Metric[],
+    facts: (detail?.metrics ?? []).map((m) => ({ improvement: m.value, label: m.label, note: m.note })) as Metric[],
     heroSrc: detail?.main.src ?? project.screenshot,
     heroAlt: detail?.main.alt ?? `${project.name} website`,
     beforeSrc: detail?.before?.src ?? null,
@@ -159,7 +167,8 @@ export default async function CaseStudyPage({
 
   const moreProjects = getMoreProjects(slug);
 
-  const heroMetrics = study.metrics?.slice(0, 3) ?? [];
+  // Only measured results appear as hero chips; build facts are shown once below.
+  const heroMetrics: Metric[] = study.results.slice(0, 3);
   // Real hostname when the live URL is known; otherwise just the client name,
   // never a guessed domain.
   const siteHost: string = study.websiteUrl
@@ -321,30 +330,49 @@ export default async function CaseStudyPage({
         <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
       </section>
 
-      {/* ─── FULL METRICS GRID ────────────────────────── */}
-      {study.metrics && study.metrics.length > 0 && (
-        <section className="py-20 border-b border-neutral-800">
+      {/* ─── RESULTS (measured outcomes) ──────────────── */}
+      {study.results.length > 0 && (
+        <section className="py-20 border-b border-neutral-800" aria-labelledby="results-heading">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-10">
               <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 The Results
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-white">Key Metrics</h2>
-              <div className="mt-4 h-px w-32 bg-linear-to-r from-white/10 via-white/10 to-transparent" />
+              <h2 id="results-heading" className="text-3xl md:text-4xl font-bold text-white">Key Metrics</h2>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-neutral-800/40 rounded-2xl overflow-hidden border border-neutral-800">
-              {study.metrics.map(
-                (m: { improvement: string; label: string; value?: string; note?: string }, i: number) => (
-                  <div key={i} className="bg-neutral-950 px-8 py-8 text-center">
-                    <div className="text-4xl font-black text-white mb-2">
-                      {m.improvement}
-                    </div>
-                    <div className="text-sm font-semibold text-white mb-1">{m.label}</div>
-                    {m.value && <div className="text-xs text-neutral-400">{m.value}</div>}
-                    {m.note && <div className="text-xs text-neutral-500 mt-0.5">{m.note}</div>}
-                  </div>
-                ),
-              )}
+            <div className={`grid ${metricGridCols(study.results.length)} gap-px bg-neutral-800/40 rounded-2xl overflow-hidden border border-neutral-800`}>
+              {study.results.map((m: Metric, i: number) => (
+                <div key={i} className="bg-neutral-950 px-8 py-8 text-center">
+                  <div className="text-4xl font-black text-white mb-2">{m.improvement}</div>
+                  <div className="text-sm font-semibold text-white mb-1">{m.label}</div>
+                  {m.value && <div className="text-xs text-neutral-400">{m.value}</div>}
+                  {m.note && <div className="text-xs text-neutral-500 mt-0.5">{m.note}</div>}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ─── AT A GLANCE (build facts) ────────────────── */}
+      {study.facts.length > 0 && (
+        <section className="py-20 border-b border-neutral-800" aria-labelledby="facts-heading">
+          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
+            <div className="max-w-2xl mb-10">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+                At a Glance
+              </span>
+              <h2 id="facts-heading" className="text-3xl md:text-4xl font-bold text-white">By the Numbers</h2>
+            </div>
+            <div className={`grid ${metricGridCols(study.facts.length)} gap-px bg-neutral-800/40 rounded-2xl overflow-hidden border border-neutral-800`}>
+              {study.facts.map((m: Metric, i: number) => (
+                <div key={i} className="bg-neutral-950 px-8 py-8 text-center">
+                  <div className="text-4xl font-black text-white mb-2">{m.improvement}</div>
+                  <div className="text-sm font-semibold text-white mb-1">{m.label}</div>
+                  {m.value && <div className="text-xs text-neutral-400">{m.value}</div>}
+                  {m.note && <div className="text-xs text-neutral-500 mt-0.5">{m.note}</div>}
+                </div>
+              ))}
             </div>
           </div>
         </section>
