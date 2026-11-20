@@ -168,7 +168,10 @@ export default async function CaseStudyPage({
   const moreProjects = getMoreProjects(slug);
 
   // Only measured results appear as hero chips; build facts are shown once below.
-  const heroMetrics: Metric[] = study.results.slice(0, 3);
+  // Hero stats: measured results first, then build facts, three max.
+  const heroMetrics: Metric[] = [...study.results, ...study.facts].slice(0, 3);
+  // The full results grid only earns its place when there are more results than the hero shows.
+  const showResultsGrid = study.results.length > heroMetrics.length;
   // Real hostname when the live URL is known; otherwise just the client name,
   // never a guessed domain.
   const siteHost: string = study.websiteUrl
@@ -263,13 +266,14 @@ export default async function CaseStudyPage({
 
               {heroMetrics.length > 0 && (
                 <div className="flex flex-wrap gap-3">
-                  {heroMetrics.map((m: { improvement: string; label: string }, i: number) => (
+                  {heroMetrics.map((m: Metric, i: number) => (
                     <div
                       key={i}
                       className={`rounded-xl border px-4 sm:px-6 py-4 text-center flex-1 min-w-0 ${HERO_METRIC_STYLES[i]}`}
                     >
                       <div className="text-2xl sm:text-3xl font-black">{m.improvement}</div>
                       <div className="text-xs text-neutral-400 mt-1 uppercase tracking-wide">{m.label}</div>
+                      {m.note && <div className="text-[11px] text-neutral-500 mt-1.5 leading-snug">{m.note}</div>}
                     </div>
                   ))}
                 </div>
@@ -331,7 +335,7 @@ export default async function CaseStudyPage({
       </section>
 
       {/* ─── RESULTS (measured outcomes) ──────────────── */}
-      {study.results.length > 0 && (
+      {showResultsGrid && (
         <section className="py-20 border-b border-neutral-800" aria-labelledby="results-heading">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-10">
@@ -342,30 +346,6 @@ export default async function CaseStudyPage({
             </div>
             <div className={`grid ${metricGridCols(study.results.length)} gap-px bg-neutral-800/40 rounded-2xl overflow-hidden border border-neutral-800`}>
               {study.results.map((m: Metric, i: number) => (
-                <div key={i} className="bg-neutral-950 px-8 py-8 text-center">
-                  <div className="text-4xl font-black text-white mb-2">{m.improvement}</div>
-                  <div className="text-sm font-semibold text-white mb-1">{m.label}</div>
-                  {m.value && <div className="text-xs text-neutral-400">{m.value}</div>}
-                  {m.note && <div className="text-xs text-neutral-500 mt-0.5">{m.note}</div>}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* ─── AT A GLANCE (build facts) ────────────────── */}
-      {study.facts.length > 0 && (
-        <section className="py-20 border-b border-neutral-800" aria-labelledby="facts-heading">
-          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
-            <div className="max-w-2xl mb-10">
-              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
-                At a Glance
-              </span>
-              <h2 id="facts-heading" className="text-3xl md:text-4xl font-bold text-white">By the Numbers</h2>
-            </div>
-            <div className={`grid ${metricGridCols(study.facts.length)} gap-px bg-neutral-800/40 rounded-2xl overflow-hidden border border-neutral-800`}>
-              {study.facts.map((m: Metric, i: number) => (
                 <div key={i} className="bg-neutral-950 px-8 py-8 text-center">
                   <div className="text-4xl font-black text-white mb-2">{m.improvement}</div>
                   <div className="text-sm font-semibold text-white mb-1">{m.label}</div>
