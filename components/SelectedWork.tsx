@@ -4,7 +4,7 @@ import { projects } from "@/data/projects";
 import { getProjectDetail } from "@/data/projectDetails";
 
 /**
- * "Selected Work / Results, Not Brochures" — a light, grid-lined band of three
+ * "Selected Work / Results, Not Brochures" — a light band with a diagonal-line texture of three
  * project cards. Each card leads with a real, verified number where one exists.
  * Pass `slugs` to show the projects most relevant to the page.
  */
@@ -48,18 +48,12 @@ export default function SelectedWork({
     if (items.length === 0) return null;
 
     return (
-        <section className="relative w-full overflow-hidden border-y border-neutral-200 bg-white py-24 text-neutral-950 md:py-28">
-            {/* Thin grid lines, fading out toward the edges */}
+        <section className="relative w-full overflow-hidden border-y border-neutral-200 bg-neutral-100 py-24 text-neutral-950 md:py-28">
+            {/* Diagonal line texture, matching the "More Work" band on project pages */}
             <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-0"
-                style={{
-                    backgroundImage:
-                        "linear-gradient(to right, rgba(10,10,12,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(10,10,12,0.06) 1px, transparent 1px)",
-                    backgroundSize: "56px 56px",
-                    maskImage: "radial-gradient(ellipse 80% 70% at 50% 40%, #000 40%, transparent 100%)",
-                    WebkitMaskImage: "radial-gradient(ellipse 80% 70% at 50% 40%, #000 40%, transparent 100%)",
-                }}
+                className="pointer-events-none absolute inset-0 opacity-[0.04]"
+                style={{ backgroundImage: "repeating-linear-gradient(135deg, #000 0 1px, transparent 1px 14px)" }}
             />
 
             <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
