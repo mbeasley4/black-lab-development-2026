@@ -31,12 +31,15 @@ export default function WhoIWorkWith() {
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
                 <div className="mb-14 max-w-2xl">
                     <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-500 font-semibold">
-                        Who I Work With
+                        Who It&apos;s For
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]">
-                        Two Kinds of Clients.<br />
-                        <span className="text-neutral-500">One Standard.</span>
+                        Websites for Small Businesses<br />
+                        <span className="text-neutral-500">and Agency Partners.</span>
                     </h2>
+                    <p className="mt-5 text-lg leading-relaxed text-neutral-600">
+                        Two kinds of clients, one standard: a custom site built and supported directly by a senior developer.
+                    </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
