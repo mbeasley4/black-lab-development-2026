@@ -5,7 +5,7 @@ import { test, expect } from '@playwright/test';
 test('has correct title and hero heading', async ({ page }) => {
   await page.goto('/');
   await expect(page).toHaveTitle(/Black Lab Dev/i);
-  await expect(page.getByRole('heading', { name: /Skip the Middlemen/i })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1, name: /Custom Web Design/i })).toBeVisible();
 });
 
 test('main navigation links are present', async ({ page }) => {
@@ -14,13 +14,14 @@ test('main navigation links are present', async ({ page }) => {
   await expect(nav.getByRole('link', { name: 'What We Build' })).toBeVisible();
   await expect(nav.getByRole('link', { name: "Who It's For" })).toBeVisible();
   await expect(nav.getByRole('link', { name: 'My Work' })).toBeVisible();
+  await expect(nav.getByRole('link', { name: 'Partners', exact: true })).toHaveCount(0);
   await expect(nav.getByRole('link', { name: 'Insights' })).toBeVisible();
   await expect(nav.getByRole('link', { name: 'About' })).toBeVisible();
 });
 
-test('"Explore All Insights" CTA navigates to articles', async ({ page }) => {
+test('"All articles" link navigates to articles', async ({ page }) => {
   await page.goto('/');
-  await page.getByRole('link', { name: 'Explore All Insights' }).click();
+  await page.getByRole('link', { name: 'All articles' }).click();
   await expect(page).toHaveURL(/\/articles/);
 });
 
@@ -118,10 +119,11 @@ test('service and partner pages load with correct titles', async ({ page }) => {
   }
 });
 
-test('"Partners" nav link navigates to the partners page', async ({ page }) => {
+test('"Agency partners" in the Who It\'s For menu navigates to the partners page', async ({ page }) => {
   await page.goto('/');
   const nav = page.getByRole('navigation', { name: 'Primary navigation' });
-  await nav.getByRole('link', { name: 'Partners' }).click();
+  await nav.getByRole('link', { name: "Who It's For" }).hover();
+  await nav.getByRole('link', { name: 'Agency partners' }).click();
   await expect(page).toHaveURL(/\/partners/);
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
 });

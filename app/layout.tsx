@@ -68,13 +68,14 @@ export default function RootLayout({
         <ConsentModeBootstrap />
         <JsonLd data={localBusinessSchema} />
       </head>
-      <body className={`${inter.variable} ${spaceGrotesk.variable} bg-[#0b0b0c] text-[#e5e7eb] antialiased`}>
+      <body className={`${inter.variable} ${spaceGrotesk.variable} bg-surface text-[#e5e7eb] antialiased`}>
         {/* GTM container + noscript fallback */}
         <GoogleTagManager />
         <AptabaseClientProvider>
           <NavigationProgress />
           <Header />
-          <main>{children}</main>
+          {/* pt-11 = the 44px the announcement bar and taller header add (see Header.tsx) */}
+          <main className="pt-11">{children}</main>
           <Footer />
           <RouteChangeTracker />
           <CookieConsent />

@@ -234,16 +234,14 @@ export default async function ArticlePage({
                     />
 
                     {/* Gradient overlay matching site style */}
-                    <div className="absolute inset-0 bg-linear-to-br from-volt-950/85 via-slate-900/85 to-black/90" />
+                    <div className="absolute inset-0 bg-linear-to-br from-white/10 via-neutral-900/85 to-black/90" />
 
                     {/* Ambient glow orbs */}
-                    <div className="absolute top-1/4 right-1/4 w-125 h-125 bg-volt-500/10 rounded-full blur-3xl pointer-events-none" />
-                    <div className="absolute bottom-1/4 left-1/4 w-100 h-100 bg-volt-500/10 rounded-full blur-3xl pointer-events-none" />
 
                     {/* Hero content — vertically centered */}
                     <div className="relative z-10 flex min-h-screen items-center">
                         <div className="mx-auto max-w-225 w-full px-6 pb-20 pt-32">
-                            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+                            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                                 Article
                             </span>
 
@@ -264,12 +262,12 @@ export default async function ArticlePage({
                                 )}
                                 {article.author?.name && (
                                     <>
-                                        <span className="text-volt-500/40">·</span>
+                                        <span className="text-neutral-500">·</span>
                                         <span>
                                             by{" "}
                                             <Link
                                                 href={authorHref}
-                                                className="rounded-sm underline decoration-transparent underline-offset-2 transition-colors duration-200 hover:text-neutral-200 hover:decoration-current focus-visible:text-neutral-200 focus-visible:decoration-current focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/50"
+                                                className="rounded-sm underline decoration-transparent underline-offset-2 transition-colors duration-200 hover:text-neutral-200 hover:decoration-current focus-visible:text-neutral-200 focus-visible:decoration-current focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
                                             >
                                                 {article.author.name}
                                             </Link>
@@ -278,7 +276,7 @@ export default async function ArticlePage({
                                 )}
                                 {readTime > 0 && (
                                     <>
-                                        <span className="text-volt-500/40">·</span>
+                                        <span className="text-neutral-500">·</span>
                                         <span>{readTime} min read</span>
                                     </>
                                 )}
@@ -288,11 +286,11 @@ export default async function ArticlePage({
 
                     {/* Scroll indicator */}
                     <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
-                        <ChevronDown className="w-6 h-6 text-volt-400 opacity-70" />
+                        <ChevronDown className="w-6 h-6 text-white opacity-70" />
                     </div>
 
                     {/* Bottom accent line */}
-                    <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/50 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
                 </section>
             )}
 
@@ -301,7 +299,7 @@ export default async function ArticlePage({
                 <div className="breadcrumb">
                     <Link
                         href="/articles"
-                        className="inline-flex items-center gap-1 text-sm text-volt-400 hover:text-white mb-6 transition-colors"
+                        className="inline-flex items-center gap-1 text-sm text-white hover:text-white mb-6 transition-colors"
                     >
                         Articles
                     </Link> &gt; <span className="text-sm text-neutral-400">{article.title}</span>
@@ -311,9 +309,9 @@ export default async function ArticlePage({
                 </article>
 
                 {/* Author bio — expertise signal for AI systems */}
-                <div className="mt-16 pt-10 border-t border-slate-800">
+                <div className="mt-16 pt-10 border-t border-neutral-800">
                     <div className="flex items-start gap-6">
-                        <div className="shrink-0 w-14 h-14 rounded-full overflow-hidden border border-slate-700">
+                        <div className="shrink-0 w-14 h-14 rounded-full overflow-hidden border border-neutral-700">
                             <img
                                 src="/images/michael-beasley-sm.webp"
                                 alt="Michael Beasley"
@@ -323,17 +321,17 @@ export default async function ArticlePage({
                             />
                         </div>
                         <div>
-                            <p className="text-xs uppercase tracking-widest text-slate-500 mb-1">Written by</p>
+                            <p className="text-xs uppercase tracking-widest text-neutral-400 mb-1">Written by</p>
                             <Link
                                 href={authorHref}
-                                className="text-base font-semibold text-white hover:text-volt-400 transition-colors duration-200"
+                                className="text-base font-semibold text-white hover:text-neutral-300 transition-colors duration-200"
                             >
                                 Michael Beasley
                             </Link>
-                            <p className="text-sm text-slate-500 mt-0.5 mb-3">
+                            <p className="text-sm text-neutral-400 mt-0.5 mb-3">
                                 Senior Web Developer &amp; Founder, Black Lab Development
                             </p>
-                            <p className="text-sm text-slate-400 leading-relaxed max-w-xl">
+                            <p className="text-sm text-neutral-400 leading-relaxed max-w-xl">
                                 Michael Beasley is a Cincinnati-based web developer with 15+ years of experience building B2B websites, manufacturing platforms, and revenue-focused digital infrastructure. He specializes in conversion architecture, technical SEO, and Next.js / WordPress development for industrial and technical B2B companies.
                             </p>
                         </div>
@@ -344,25 +342,23 @@ export default async function ArticlePage({
             {shuffledRelated.length > 0 && (
               <section className="relative py-24 overflow-hidden">
                 {/* Neon ambient glow */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-175 h-75 bg-volt-500/8 rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-volt-600/8 rounded-full blur-3xl pointer-events-none" />
 
                 {/* Top accent line */}
-                <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
+                <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
                 <div className="relative mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
                   {/* Section heading */}
                   <div className="mb-12 flex flex-col items-center text-center">
-                    <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+                    <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                       Continue Reading
                     </span>
                     <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
                       Related{" "}
-                      <span className="text-volt-400 drop-shadow-[0_0_12px_rgba(34,211,238,0.6)]">
+                      <span className="text-neutral-500 drop-shadow-[0_0_12px_rgba(34,211,238,0.6)]">
                         Articles
                       </span>
                     </h2>
-                    <div className="mt-4 w-16 h-px bg-linear-to-r from-transparent via-volt-500 to-transparent" />
+                    <div className="mt-4 w-16 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-stretch">
@@ -370,7 +366,7 @@ export default async function ArticlePage({
                       <AnimatedCard key={a._id} delay={index * 80}>
                         <Link
                           href={`/articles/${a.slug?.current}`}
-                          className="h-full group flex flex-col rounded-xl overflow-hidden bg-neutral-950 border border-neutral-800 hover:border-volt-500/50 transition-colors duration-300 shadow-[0_0_0_0_rgba(34,211,238,0)] hover:shadow-[0_0_24px_-4px_rgba(34,211,238,0.25)]"
+                          className="h-full group flex flex-col rounded-xl overflow-hidden bg-neutral-950 border border-neutral-800 hover:border-neutral-500 transition-colors duration-300 shadow-[0_0_0_0_rgba(34,211,238,0)] hover:shadow-[0_0_24px_-4px_rgba(34,211,238,0.25)]"
                         >
                           <div className="relative h-52 overflow-hidden">
                             <Image
@@ -381,20 +377,20 @@ export default async function ArticlePage({
                             />
                             {/* Image neon overlay on hover */}
                             <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-transparent to-transparent" />
-                            <div className="absolute inset-0 bg-volt-500/0 group-hover:bg-volt-500/5 transition-colors duration-300" />
+                            <div className="absolute inset-0 bg-white/[0.04] group-hover:bg-white/5 transition-colors duration-300" />
                           </div>
 
                           <div className="p-6 flex flex-col grow">
                             {a.publishedAt && (
                               <time
                                 dateTime={new Date(a.publishedAt).toISOString()}
-                                className="block mb-2 text-xs uppercase tracking-widest text-volt-500/60"
+                                className="block mb-2 text-xs uppercase tracking-widest text-neutral-500"
                               >
                                 {formatDate(a.publishedAt)}
                               </time>
                             )}
 
-                            <h3 className="text-lg font-semibold mb-3 text-neutral-200 group-hover:text-volt-300 transition-colors duration-300 leading-snug">
+                            <h3 className="text-lg font-semibold mb-3 text-neutral-200 group-hover:text-white transition-colors duration-300 leading-snug">
                               {a.title}
                             </h3>
 
@@ -402,7 +398,7 @@ export default async function ArticlePage({
                               {a.excerpt}
                             </p>
 
-                            <div className="mt-4 flex items-center gap-1 text-xs text-volt-400 font-medium opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
+                            <div className="mt-4 flex items-center gap-1 text-xs text-white font-medium opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
                               Read article
                               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -416,7 +412,7 @@ export default async function ArticlePage({
                 </div>
 
                 {/* Bottom accent line */}
-                <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
               </section>
             )}
         </main>

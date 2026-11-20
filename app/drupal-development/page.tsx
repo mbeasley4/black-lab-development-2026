@@ -8,19 +8,19 @@ import FaqSection from "@/components/FaqSection";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Custom Drupal Development | Clean Code, No Contrib Sprawl",
+  title: "Custom Drupal Development",
   description:
     "Custom Drupal development with clean architecture, performance-first builds, and structured content modeling — no contrib bloat, no shortcuts.",
   alternates: { canonical: "/drupal-development" },
   openGraph: {
-    title: "Custom Drupal Development | Clean Code, No Contrib Sprawl | Black Lab Dev",
+    title: "Custom Drupal Development | Black Lab Dev",
     description:
       "Custom Drupal development with clean architecture, performance-first builds, and structured content modeling — no contrib bloat, no shortcuts.",
     url: "/drupal-development",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Custom Drupal Development | Clean Code, No Contrib Sprawl | Black Lab Dev",
+    title: "Custom Drupal Development | Black Lab Dev",
     description:
       "Custom Drupal development with clean architecture, performance-first builds, and structured content modeling.",
     images: [DEFAULT_OG_IMAGE.url],
@@ -152,53 +152,53 @@ const faqSchema = {
 
 export default function DrupalDevelopmentPage() {
   return (
-    <main className="w-full bg-[#0b0b0c] text-white">
+    <main className="w-full bg-surface text-white">
       <JsonLd data={[serviceSchema, faqSchema]} />
       <PageHero
         label="Drupal Development"
-        title="Structured Content, Not Contrib Chaos."
-        titleHighlight="Not Contrib Chaos."
+        title="Custom Drupal Development for Complex Content"
+        titleHighlight="for Complex Content"
         description="Most Drupal sites drown in contrib modules before anyone touches content architecture. I build custom — clean entity design, purpose-built modules, no maintenance nightmares."
         backgroundImage="/images/drupal-hero-bg.jpg"
         badges={["No contrib bloat", "Structured content modeling", "Clean, maintainable code"]}
       />
 
       {/* Hero CTAs */}
-      <section className="border-b border-slate-800 bg-[#111214]">
+      <section className="border-b border-neutral-800 bg-surface-raised">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-8 flex flex-wrap gap-4">
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg shadow-volt-500/25"
+            className="inline-flex items-center justify-center rounded-md bg-white text-black px-7 py-3.5 text-sm font-semibold hover:bg-neutral-200 transition-colors duration-200 shadow-lg"
           >
             Start a Project →
           </Link>
           <Link
             href="/work"
-            className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
+            className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 px-7 py-3.5 text-sm font-semibold text-white hover:bg-white/10 hover:border-neutral-500 transition-all duration-200"
           >
-            View Case Studies →
+            View My Work →
           </Link>
         </div>
       </section>
 
       {/* Intro */}
-      <section className="py-20 border-b border-slate-800">
+      <section className="bg-charcoal py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 The Problem
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Custom Drupal Development Built for Complex Content
               </h2>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-neutral-400 leading-relaxed mb-6">
                 Most Drupal sites are over-moduled, under-architected, and slow. That&apos;s not a platform problem — it&apos;s a build problem. Drupal&apos;s entity system and content architecture tools are best-in-class when used correctly.
               </p>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-neutral-400 leading-relaxed mb-6">
                 At Black Lab Dev, I approach Drupal from an engineering perspective. Every site is custom-built with clean content modeling, purpose-built modules, and performance tuned from the architecture layer — not patched in after launch.
               </p>
-              <p className="text-slate-400 leading-relaxed font-medium">
+              <p className="text-neutral-400 leading-relaxed font-medium">
                 No contrib sprawl. No theme engine fighting your markup. No technical debt by default.
               </p>
             </div>
@@ -218,7 +218,7 @@ export default function DrupalDevelopmentPage() {
                     </div>
                     <div>
                       <div className="text-sm font-semibold text-white mb-1">{item.problem}</div>
-                      <div className="text-xs text-slate-400 leading-relaxed">{item.impact}</div>
+                      <div className="text-xs text-neutral-400 leading-relaxed">{item.impact}</div>
                     </div>
                   </div>
                 </div>
@@ -229,16 +229,16 @@ export default function DrupalDevelopmentPage() {
       </section>
 
       {/* Services */}
-      <section className="py-20 bg-[#111214] border-b border-slate-800">
+      <section className="py-20 bg-surface-raised border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               What I Do
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Drupal Development Services
             </h2>
-            <p className="text-slate-400 leading-relaxed">
+            <p className="text-neutral-400 leading-relaxed">
               Full-service Drupal development for organizations that need more than a default install with a pile of contrib modules.
             </p>
           </div>
@@ -246,14 +246,14 @@ export default function DrupalDevelopmentPage() {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="group rounded-2xl border border-neutral-800 bg-neutral-950 p-8 transition-all duration-300 hover:border-volt-500/40 hover:shadow-[0_0_40px_rgba(227,245,68,0.06)]"
+                className="group rounded-2xl border border-neutral-800 bg-neutral-950 p-8 transition-all duration-300 hover:border-neutral-500 hover:shadow-[0_0_40px_rgba(255,255,255,0.03)]"
               >
-                <div className="h-px bg-linear-to-r from-volt-500/0 via-volt-500/0 to-volt-500/0 group-hover:from-volt-500/40 group-hover:via-volt-500/60 group-hover:to-volt-500/0 transition-all duration-500 -mx-8 -mt-8 mb-8" />
-                <div className="w-10 h-10 rounded-lg bg-volt-500/10 border border-volt-500/20 flex items-center justify-center text-volt-500 mb-5">
+                <div className="h-px bg-linear-to-r from-white/10 via-white/10 to-white/10 group-hover:from-white/13 group-hover:via-white/20 group-hover:to-white/3 transition-all duration-500 -mx-8 -mt-8 mb-8" />
+                <div className="w-10 h-10 rounded-lg bg-white/[0.04] border border-neutral-800 flex items-center justify-center text-white mb-5">
                   {service.icon}
                 </div>
-                <h3 className="text-lg font-bold text-white mb-3 group-hover:text-volt-400 transition-colors duration-300">{service.title}</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">{service.body}</p>
+                <h3 className="text-lg font-bold text-white mb-3 group-hover:text-white transition-colors duration-300">{service.title}</h3>
+                <p className="text-sm text-neutral-400 leading-relaxed">{service.body}</p>
               </div>
             ))}
           </div>
@@ -261,20 +261,20 @@ export default function DrupalDevelopmentPage() {
       </section>
 
       {/* Built without the bloat */}
-      <section className="py-20 border-b border-slate-800">
+      <section className="bg-charcoal py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Why I&apos;m Different
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Built Without the Contrib Bloat
               </h2>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-neutral-400 leading-relaxed mb-6">
                 Most agencies install 80+ contrib modules and call it architecture. I don&apos;t. Instead, I use Drupal&apos;s core systems correctly and write custom code where contrib introduces more problems than it solves.
               </p>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-neutral-400 leading-relaxed">
                 Your Drupal site becomes an asset your team can maintain — not a black box only the original agency can touch.
               </p>
             </div>
@@ -287,14 +287,14 @@ export default function DrupalDevelopmentPage() {
                 { label: "Real maintainability", detail: "Code your next developer can read, understand, and extend without reverse-engineering a contrib stack." },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-4 rounded-xl border border-neutral-800 bg-neutral-950 p-5">
-                  <div className="w-6 h-6 rounded-full bg-volt-500/15 flex items-center justify-center shrink-0 mt-0.5">
-                    <svg className="w-3 h-3 text-volt-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="w-6 h-6 rounded-full bg-white/[0.04] flex items-center justify-center shrink-0 mt-0.5">
+                    <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <div>
                     <div className="text-sm font-semibold text-white mb-0.5">{item.label}</div>
-                    <div className="text-xs text-slate-400 leading-relaxed">{item.detail}</div>
+                    <div className="text-xs text-neutral-400 leading-relaxed">{item.detail}</div>
                   </div>
                 </div>
               ))}
@@ -304,26 +304,26 @@ export default function DrupalDevelopmentPage() {
       </section>
 
       {/* Process */}
-      <section className="py-20 bg-[#111214] border-b border-slate-800">
+      <section className="py-20 bg-surface-raised border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               My Approach
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Architecture First, Modules Second
             </h2>
-            <p className="text-slate-400 leading-relaxed">
+            <p className="text-neutral-400 leading-relaxed">
               I don&apos;t start with a list of contrib modules and work backwards. Every project starts with content architecture, entity relationships, and performance planning — then I build only what&apos;s needed.
             </p>
           </div>
           <div className="space-y-10">
             {processSteps.map((item) => (
               <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
-                <div className="text-5xl font-black font-mono text-volt-500/20 leading-none">{item.step}</div>
-                <div className="border-b border-slate-800 pb-10 last:border-0 last:pb-0">
+                <div className="text-5xl font-black font-mono text-white/10 leading-none">{item.step}</div>
+                <div className="border-b border-neutral-800 pb-10 last:border-0 last:pb-0">
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                  <p className="text-slate-400 leading-relaxed">{item.body}</p>
+                  <p className="text-neutral-400 leading-relaxed">{item.body}</p>
                 </div>
               </div>
             ))}
@@ -332,26 +332,26 @@ export default function DrupalDevelopmentPage() {
       </section>
 
       {/* Performance */}
-      <section className="py-20 border-b border-slate-800">
+      <section className="bg-charcoal py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Performance
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Optimized for Speed and Security
               </h2>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-neutral-400 leading-relaxed mb-6">
                 Drupal can be fast — most Drupal sites just aren&apos;t. The difference is architecture decisions made at the right time, not performance patches applied after launch.
               </p>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-neutral-400 leading-relaxed">
                 I build Drupal sites that pass Core Web Vitals, load efficiently, and maintain a strong security posture through disciplined contrib management and regular updates.
               </p>
               <div className="mt-8">
                 <Link
                   href="/services/website-performance-optimization"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-volt-500 hover:text-volt-400 transition-colors duration-200"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-neutral-300 transition-colors duration-200"
                 >
                   Learn more about performance optimization →
                 </Link>
@@ -361,10 +361,10 @@ export default function DrupalDevelopmentPage() {
               {performancePoints.map((item) => (
                 <div key={item.label} className="rounded-xl border border-neutral-800 bg-neutral-950 p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-2 h-2 rounded-full bg-volt-500 shadow-[0_0_8px_rgba(227,245,68,0.7)] shrink-0 mt-2" />
+                    <div className="w-2 h-2 rounded-full bg-neutral-400 shrink-0 mt-2" />
                     <div>
                       <div className="text-sm font-semibold text-white mb-1">{item.label}</div>
-                      <div className="text-xs text-slate-400 leading-relaxed">{item.detail}</div>
+                      <div className="text-xs text-neutral-400 leading-relaxed">{item.detail}</div>
                     </div>
                   </div>
                 </div>
@@ -375,25 +375,25 @@ export default function DrupalDevelopmentPage() {
       </section>
 
       {/* Use Cases */}
-      <section className="py-20 bg-[#111214] border-b border-slate-800">
+      <section className="py-20 bg-surface-raised border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Use Cases
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 When Drupal Is the Right Choice
               </h2>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-neutral-400 leading-relaxed">
                 Drupal isn&apos;t always the answer — but when you need structured content at scale, granular permissions, or multi-site architectures, it&apos;s hard to beat.
               </p>
             </div>
             <div className="space-y-3">
               {useCases.map((item) => (
                 <div key={item} className="flex items-center gap-4 rounded-xl border border-neutral-800 bg-neutral-950 px-6 py-4">
-                  <div className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_6px_rgba(227,245,68,0.7)] shrink-0" />
-                  <span className="text-sm text-slate-300">{item}</span>
+                  <div className="w-1.5 h-1.5 rounded-full bg-neutral-400 shrink-0" />
+                  <span className="text-sm text-neutral-300">{item}</span>
                 </div>
               ))}
             </div>
@@ -401,21 +401,21 @@ export default function DrupalDevelopmentPage() {
         </div>
       </section>
 
-      {/* Case Study Preview */}
-      <section className="py-20 border-b border-slate-800">
+      {/* Work Preview */}
+      <section className="bg-charcoal py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-volt-500/35 bg-volt-500/8 text-volt-500 text-xs font-bold tracking-[0.2em] uppercase mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_8px_rgba(227,245,68,0.9)]" />
+            <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-neutral-300 mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
               Featured Build
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Vault Cybersecurity — Drupal Build
             </h2>
-            <p className="text-slate-400 leading-relaxed">
+            <p className="text-neutral-400 leading-relaxed">
               A Drupal-powered cybersecurity platform with tiered service architectures, structured content modeling, and an industrial design language — built from scratch with zero contrib bloat.
             </p>
-            <div className="mt-4 h-px w-32 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
+            <div className="mt-4 h-px w-32 bg-linear-to-r from-white/10 via-white/10 to-transparent" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
@@ -423,10 +423,10 @@ export default function DrupalDevelopmentPage() {
               { stat: "Zero", label: "Contrib bloat", detail: "Purpose-built modules replacing off-the-shelf dependencies" },
               { stat: "100%", label: "Custom theme", detail: "Industrial design language built from Twig templates — no starter kit" },
             ].map((item) => (
-              <div key={item.label} className="rounded-2xl border border-neutral-800 bg-neutral-950 px-8 py-8 text-center transition-all duration-300 hover:border-volt-500/30 hover:shadow-[0_0_40px_rgba(227,245,68,0.05)]">
-                <div className="text-3xl font-black text-volt-500 drop-shadow-[0_0_10px_rgba(227,245,68,0.4)] mb-2">{item.stat}</div>
+              <div key={item.label} className="rounded-2xl border border-neutral-800 bg-neutral-950 px-8 py-8 text-center transition-all duration-300 hover:border-neutral-500 hover:shadow-[0_0_40px_rgba(255,255,255,0.03)]">
+                <div className="text-3xl font-black text-white mb-2">{item.stat}</div>
                 <div className="text-sm font-semibold text-white mb-2">{item.label}</div>
-                <div className="text-xs text-slate-500 leading-relaxed">{item.detail}</div>
+                <div className="text-xs text-neutral-400 leading-relaxed">{item.detail}</div>
               </div>
             ))}
           </div>
@@ -435,7 +435,7 @@ export default function DrupalDevelopmentPage() {
               href="https://vault.blacklabdev.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-volt-500 hover:text-volt-400 transition-colors duration-200"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-neutral-300 transition-colors duration-200"
             >
               Visit vault.blacklabdev.com
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -451,37 +451,37 @@ export default function DrupalDevelopmentPage() {
       />
 
       {/* Internal links */}
-      <section className="py-16 border-b border-slate-800">
+      <section className="py-16 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <h2 className="text-lg font-bold text-white mb-6">Related Services</h2>
           <div className="flex flex-wrap gap-4">
             <Link
               href="/services"
-              className="rounded-lg border border-volt-500/30 bg-volt-500/8 px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/15 transition-all duration-200"
+              className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white hover:border-neutral-500 hover:bg-white/15 transition-all duration-200"
             >
               All Services →
             </Link>
             <Link
               href="/wordpress-development"
-              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200"
             >
               WordPress Development →
             </Link>
             <Link
               href="/services/custom-web-development"
-              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200"
             >
               Custom Web Development →
             </Link>
             <Link
               href="/services/website-performance-optimization"
-              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200"
             >
               Website Performance →
             </Link>
             <Link
               href="/shopify-development"
-              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200"
             >
               Shopify Development →
             </Link>
@@ -492,11 +492,10 @@ export default function DrupalDevelopmentPage() {
       <FounderByline />
 
       <PageClose
-        title="Work With a Drupal Development Partner That Builds It Right"
-        bodyPrimary="If your current Drupal site is slow, over-moduled, or stuck on an outdated version — it's time for a better foundation. I build Drupal platforms that perform, scale, and stay maintainable for years."
-        bodySecondary="No contrib sprawl. No theme engine compromises. Just clean, performant Drupal built the right way."
+        title="Need a Drupal Developer?"
+        body="Clean, fast Drupal builds and upgrades without contrib sprawl."
         secondaryHref="/work"
-        secondaryLabel="View Case Studies"
+        secondaryLabel="View My Work"
       />
     </main>
   );

@@ -23,7 +23,10 @@ export type ProjectDetail = {
   before?: DetailImage;
   gallery: DetailImage[];
   details: string[];
+  /** Build facts, shown once under "At a Glance". */
   metrics: DetailMetric[];
+  /** Measured outcomes (e.g. verified in Google Analytics). Drive the hero chips and "The Results". */
+  results?: DetailMetric[];
   body: DetailSection[];
 };
 
@@ -109,11 +112,6 @@ export const projectDetails: ProjectDetail[] = [
         value: "15",
         label: "Custom Gutenberg Blocks",
         note: "No page builder",
-      },
-      {
-        value: "2011→2026",
-        label: "Platform Leap",
-        note: "Full rebuild",
       },
     ],
     body: [
@@ -218,15 +216,24 @@ export const projectDetails: ProjectDetail[] = [
         label: "Custom Blocks",
         note: "Full site editing",
       },
+    ],
+    // Google Search Console: equal 38-day windows before and after the new
+    // site replaced the old static site (~Oct 2, 2026).
+    results: [
       {
-        value: "1875",
-        label: "Pouring Since",
-        note: "Mount Adams",
+        value: "21×",
+        label: "Clicks From Google Search",
+        note: "408 vs. 19 in the 38 days before launch",
       },
       {
-        value: "1-tap",
-        label: "Directions & Hours",
-        note: "On every page",
+        value: "17×",
+        label: "Search Impressions",
+        note: "3,850 vs. 225 in the 38 days before launch",
+      },
+      {
+        value: "#2.2",
+        label: "Position for “City View Tavern”",
+        note: "Up from #7.7 before launch",
       },
     ],
     body: [
@@ -437,6 +444,20 @@ export const projectDetails: ProjectDetail[] = [
         note: "OH · IN · KY",
       },
     ],
+    // Google Search Console data starts Oct 28, 2026 (no pre-launch baseline).
+    // Revisit with 90-day data for before/after comparisons.
+    results: [
+      {
+        value: "15.8K",
+        label: "Google Search Impressions",
+        note: "First 3 weeks in Search Console",
+      },
+      {
+        value: "682",
+        label: "Search Queries Showing the Site",
+        note: "Including “roofing companies cincinnati”",
+      },
+    ],
     body: [
       {
         heading: "The Brief",
@@ -641,57 +662,6 @@ export const projectDetails: ProjectDetail[] = [
     ],
   },
   {
-    slug: "melink-solar-calculator-plugin",
-    title:
-      "A Custom Solar Savings Calculator Plugin With NREL PVWatts Integration",
-    industry: "Energy",
-    tagline:
-      "A solar feasibility estimate used to start with a phone call. Now prospects run the numbers themselves, and every estimate lands in the sales team's dashboard.",
-    excerpt:
-      "A custom WordPress plugin that estimates a facility's solar production and savings through the NREL PVWatts API, with submission logging and admin reporting for the sales team.",
-    main: {
-      src: "/images/work/projects/melink-page1.jpg",
-      alt: "Melink Solar Energy Savings Calculator",
-    },
-    gallery: [],
-    details: [
-      "Custom WordPress plugin with a guided multi-step calculator",
-      "NREL PVWatts API integration for production and savings estimates",
-      "Automatic tilt assignment, tooltips and built-in validation",
-      "Every submission logged to a custom database table",
-      "Admin reporting: sortable entries, date filtering and CSV export",
-      "WPBakery element and shortcode so the calculator can be placed anywhere",
-    ],
-    metrics: [
-      {
-        value: "4",
-        label: "Step Guided Flow",
-        note: "Array → Site → Address → Results",
-      },
-      {
-        value: "CSV",
-        label: "Lead Export",
-        note: "Filtered by date",
-      },
-    ],
-    body: [
-      {
-        heading: "The Brief",
-        paragraphs: [
-          "Melink Solar designs and builds commercial and utility-grade solar systems. Prospects wanted a quick sense of what solar could produce for their facility before talking to sales, and sales wanted to know who was asking.",
-        ],
-      },
-      {
-        heading: "What We Built",
-        paragraphs: [
-          "A custom WordPress plugin that guides users through array type, site details and address, then calls NREL's PVWatts API to estimate DC system capacity, energy production and electricity savings. Tilt is assigned automatically for certain array types, every field has a tooltip, and inputs are validated before the request goes out. Results return over AJAX without a page reload.",
-          "Every submission is stored in a custom table. In the admin, the sales team gets a Solar Entries screen with sortable columns, date filtering, pagination, bulk delete and CSV export of the full or filtered dataset.",
-          "A WPBakery element and a shortcode let the marketing team place and relabel the calculator anywhere on the site without code.",
-        ],
-      },
-    ],
-  },
-  {
     slug: "buzzworthy-seven-hills-news-site",
     title: "Buzzworthy: A Standalone News Site for Seven Hills School",
     industry: "Education",
@@ -769,6 +739,424 @@ export const projectDetails: ProjectDetail[] = [
         paragraphs: [
           "A Next.js site with Sanity Studio embedded right in the app. A dedicated before-and-after content type lets the owner add new transformations as pairs, and the site presents them side by side.",
           "Motion built with Anime.js gives the brand its energy, and the app generates its own sitemap and robots rules so new pages are discoverable as soon as they're published.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "bishopric-industries-shop-floor-kiosk",
+    title: "A Touchscreen Shop Floor Kiosk for an Industrial Fabricator",
+    industry: "Manufacturing",
+    tagline:
+      "Shop floor crews needed the right drawing in seconds, not a hunt through shared folders. The kiosk gets them there in five taps and shows what changed since their last shift.",
+    excerpt:
+      "A custom Next.js touchscreen kiosk for Bishopric Industries' Cincinnati and Natchez shop floors that puts fabrication drawings, weld procedures and inspection documents a few taps away, with new documents flagged.",
+    seoTitle: "Shop Floor Kiosk for Bishopric Industries",
+    metaDescription:
+      "How a custom Next.js touchscreen kiosk gives Bishopric Industries' shop floors fast access to drawings, weld procedures and inspection documents from Egnyte.",
+    main: {
+      src: "/images/work/projects/bishopric-home.jpg",
+      alt: "Bishopric Industries Shop Floor Kiosk home screen with Cincinnati and Natchez locations",
+    },
+    gallery: [
+      {
+        src: "/images/work/projects/bishopric-projects.jpg",
+        alt: "Kiosk project selection screen with a project number filter",
+        caption:
+          "Project selection: large touch targets and a filter by project number",
+      },
+      {
+        src: "/images/work/projects/bishopric-categories.jpg",
+        alt: "Kiosk project screen with eight document category tiles",
+        caption: "Each project opens to the same eight document categories",
+      },
+      {
+        src: "/images/work/projects/bishopric-drawings.jpg",
+        alt: "Kiosk drawing list with recently added documents outlined in red",
+        caption:
+          "Recently added drawings are outlined in red, with the date they were added",
+      },
+    ],
+    details: [
+      "Touchscreen-first Next.js app with a five-screen flow: location, project, category, drawing, viewer",
+      "Locations discovered automatically from the Egnyte folder structure, so adding a site needs no code change",
+      "Server-side Egnyte integration: the service account and tokens never reach the browser",
+      "Recently added documents flagged on every screen, tracked by an hourly sweep of Egnyte's audit API",
+      "In-browser PDF viewer with pinch-zoom, pan, page navigation and fullscreen",
+      "Page-one thumbnails rendered once on the server and cached, so kiosks don't redo the work",
+      "Inactivity reset, offline and rate-limit screens, and graceful handling of missing documents",
+      "Admin dashboard for maintenance mode, cache clearing, on-demand sweeps and error logs",
+    ],
+    metrics: [
+      {
+        value: "5",
+        label: "Taps to Any Drawing",
+        note: "Location → viewer",
+      },
+      {
+        value: "2",
+        label: "Shop Floor Locations",
+        note: "Cincinnati & Natchez",
+      },
+      {
+        value: "8",
+        label: "Document Categories",
+        note: "Per project",
+      },
+      {
+        value: "1",
+        label: "Egnyte Call per Document",
+        note: "Request budget by design",
+      },
+    ],
+    body: [
+      {
+        heading: "The Brief",
+        paragraphs: [
+          "Bishopric Industries keeps its fabrication drawings, weld procedures, specifications and inspection documents in Egnyte. On the shop floor, finding the current drawing for a job meant navigating folder trees on a shared computer — slow, error-prone, and easy to land on an outdated revision.",
+          'The goal: a touchscreen kiosk at each location that gets a crew member from "which job?" to the right document in a few taps, and makes it obvious when something has changed.',
+        ],
+      },
+      {
+        heading: "What We Built",
+        paragraphs: [
+          "A custom Next.js application designed for a touchscreen first. The flow is five screens: pick a location, pick a project number, pick one of eight standard document categories, pick a drawing, and view it. Every control is a large touch target, and the kiosk returns itself to the home screen after a few minutes without input.",
+          "Locations are read straight from the Egnyte folder structure, so adding a new site is a matter of creating its folder, not changing code. Category folders can be empty when a project doesn't have that kind of document, and near-variant folder names are matched automatically.",
+        ],
+      },
+      {
+        heading: "Built Around Egnyte",
+        level: 3,
+        paragraphs: [
+          "Every Egnyte call happens on the server. The kiosk authenticates as a dedicated service account, and its credentials and access tokens never reach the browser.",
+          'Egnyte meters requests, so the integration is designed around a request budget: a document view is a single call, page-one thumbnails are rendered once on the server and cached, and "recently added" activity comes from an hourly sweep of Egnyte\'s audit API instead of live scans on every screen.',
+        ],
+      },
+      {
+        heading: "Showing What Changed",
+        level: 3,
+        paragraphs: [
+          "A document counts as recent when it was uploaded or copied in during the last two business days, so weekends never hide Friday's changes. Recent drawings get a red outline and their date added, and projects and categories show a count of new documents, so crews can see at a glance where something changed.",
+        ],
+      },
+      {
+        heading: "Built for the Shop Floor",
+        level: 3,
+        paragraphs: [
+          "Drawings open in an in-browser PDF viewer with pinch-to-zoom, drag-to-pan, page navigation and fullscreen. If Egnyte can't be reached or a request is rate-limited, the kiosk shows a clear message instead of an error page, and a stale link falls back gracefully.",
+          "A separate admin dashboard lets the team switch on maintenance mode, clear caches, run an activity sweep on demand and review recent errors — without touching the kiosks themselves.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "whole30-laravel-shopify-slicktext-sms",
+    title: "A Laravel Admin Portal Connecting Shopify Orders to SlickText SMS",
+    industry: "Health & Wellness",
+    tagline:
+      "Every Whole30 SMS purchase on Shopify becomes a subscriber, a daily message sequence and a delivery record, without anyone copying data between systems.",
+    excerpt:
+      "A custom Laravel admin portal that turns Whole30's Shopify purchases into SlickText SMS subscriptions, with automated setup, daily message sequences, delivery tracking and opt-out handling.",
+    seoTitle: "Whole30 Laravel App: Shopify + SlickText SMS",
+    metaDescription:
+      "How a custom Laravel admin portal connects Whole30's Shopify orders to SlickText SMS: automatic setup, daily messages, delivery tracking and opt-outs.",
+    main: {
+      src: "/images/work/projects/whole30-app-login.jpg",
+      alt: "Whole30 Admin Portal sign-in screen",
+    },
+    gallery: [
+      {
+        src: "/images/work/projects/whole30-app-orders.jpg",
+        alt: "Whole30 Admin Portal active orders list with SMS status, customer details redacted",
+        caption:
+          "Active orders: every subscriber currently receiving daily messages, with their program day and status (customer details redacted)",
+      },
+      {
+        src: "/images/work/projects/whole30-app-order-detail.jpg",
+        alt: "Whole30 Admin Portal order detail with SlickText and Shopify connections and sent messages, identifiers redacted",
+        caption:
+          "Order detail: the SlickText and Shopify connections side by side, with every delivered message logged (identifiers redacted)",
+      },
+    ],
+    details: [
+      "Shopify order webhooks processed by Laravel in real time",
+      "Each buyer set up as a SlickText subscriber automatically",
+      "Daily SMS sequences tied to each subscriber's program start date",
+      "Program day recalculates automatically when a start date changes",
+      "Every delivered message logged and counted per subscriber",
+      "Order views for active, completed, refunded and opted-out subscribers",
+      "Opt-out handling kept in sync with SMS delivery",
+      "Email notifications with configuration and logs, plus admin users and job settings",
+    ],
+    metrics: [],
+    body: [
+      {
+        heading: "The Brief",
+        paragraphs: [
+          "Whole30 sells SMS programs through its Shopify store: buy the product, then get a daily text that guides you through the program. Connecting those two systems by hand doesn't scale. Every purchase needs a subscriber in SlickText, the right message sequence, a start date, and a way to see what was actually delivered.",
+          "The goal was one place where the operations team can see every SMS order and trust that setup, delivery and opt-outs happen on their own.",
+        ],
+      },
+      {
+        heading: "What We Built",
+        paragraphs: [
+          "A custom Laravel application, the Whole30 Admin Portal, that sits between Shopify and SlickText. When an order comes in, Shopify's webhook hits Laravel, which records the order, sets the buyer up as a SlickText subscriber, and starts their daily message sequence.",
+        ],
+      },
+      {
+        heading: "Setup and Notifications",
+        level: 3,
+        paragraphs: [
+          "Each order carries its SlickText connection and its Shopify connection (product, order number and order ID), so the team can trace any subscriber back to the purchase. Messages go out on a daily schedule keyed to the subscriber's start date, and if a start date changes, the program day recalculates automatically.",
+          "Email notifications run alongside SMS, with their own configuration screen and logs, so the team can confirm what went out by either channel.",
+        ],
+      },
+      {
+        heading: "Tracking and Opt-Outs",
+        level: 3,
+        paragraphs: [
+          "Every message delivered through SlickText is logged against its subscriber, with a running delivered count. Orders are organized into active, completed, refunded and opt-out views, so refunds and STOP replies are visible and handled rather than lost.",
+          "An admin area covers administrator accounts, product catalog settings and scheduled job settings, so day-to-day changes don't need a developer.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "legacy-financial-wordpress-block-theme",
+    title: "A Custom Block Theme for a Wealth Management Firm",
+    industry: "Financial Services",
+    tagline:
+      "A wealth management firm needs a site that feels as considered as its advice. This one is built from custom blocks the team can arrange themselves.",
+    excerpt:
+      "A custom WordPress block theme for Legacy Financial Advisors in Covington, KY, built in the Gutenberg site editor with Tailwind CSS, 18 custom blocks, team profiles and an Insights hub.",
+    seoTitle: "Legacy Financial: Custom WordPress Theme",
+    metaDescription:
+      "How a custom WordPress block theme with 18 custom blocks, team profiles and an Insights hub was built for Legacy Financial Advisors in Covington, KY.",
+    main: {
+      src: "/images/work/projects/legacy-home.jpg",
+      alt: "Legacy Financial Advisors homepage: Your Treasure Is Where Your Heart Is",
+    },
+    gallery: [
+      {
+        src: "/images/work/projects/legacy-page1.jpg",
+        alt: "Legacy Financial client portals page",
+        caption:
+          "Client portals page linking clients to their planning and reporting platforms",
+      },
+      {
+        src: "/images/work/projects/legacy-page2.jpg",
+        alt: "Legacy Financial get in touch page",
+        caption: "Contact page built around scheduling a meeting with the team",
+      },
+    ],
+    details: [
+      "Custom Gutenberg block theme built with the site editor and Tailwind CSS",
+      "18 custom server-rendered blocks: homepage hero, stats, service pillars, quote carousel, contact scheduler and more",
+      "12 block patterns for composing new pages without a developer",
+      "Team custom post type with member profiles",
+      "Global settings and structured content managed through ACF",
+      "Insights articles with a dedicated hero and admin tools",
+      "FAQ accordions and category schema for search",
+      "Hand-written SCSS components compiled with Tailwind into one stylesheet",
+    ],
+    metrics: [
+      {
+        value: "18",
+        label: "Custom Blocks",
+        note: "Server-rendered",
+      },
+      {
+        value: "12",
+        label: "Block Patterns",
+        note: "Ready-made layouts",
+      },
+    ],
+    body: [
+      {
+        heading: "The Brief",
+        paragraphs: [
+          "Legacy Financial Advisors is a wealth management firm in Covington, Kentucky. Its site needed to feel warm and trustworthy, introduce the team, and make it easy for both prospects and existing clients to get where they're going.",
+        ],
+      },
+      {
+        heading: "What We Built",
+        paragraphs: [
+          "A custom WordPress block theme built in the Gutenberg site editor and styled with Tailwind CSS. Eighteen custom server-rendered blocks cover the homepage hero, stats, service pillars, a quote carousel, team profiles and a contact scheduler, and twelve block patterns let the team compose new pages from proven layouts.",
+          "Team members live in their own post type with profiles, and global details are managed through ACF, so updates happen in one place.",
+        ],
+      },
+      {
+        heading: "Built for Clients and Search",
+        level: 3,
+        paragraphs: [
+          "A client portals page sends existing clients straight to their financial planning and investment reporting platforms. An Insights section publishes articles with a dedicated hero, and FAQ accordions and category schema help the firm's expertise show up in search.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "bridge-partners-wordpress-block-theme",
+    title: "A Custom Gutenberg Theme for a Tax Strategy Firm",
+    industry: "Financial Services",
+    tagline:
+      "A firm that defends high-net-worth clients from tax inefficiency needs a site with the same precision. Every block in this one was built for its brand.",
+    excerpt:
+      "A custom full-site-editing WordPress theme for Bridge Partners, built from the brand guidelines with 16 native custom blocks, no plugin dependencies, and schema for search and AI answers.",
+    seoTitle: "Bridge Partners: Custom Gutenberg Theme",
+    metaDescription:
+      "How a custom full-site-editing WordPress theme with 16 native blocks and no plugin dependencies was built from Bridge Partners' brand guidelines.",
+    main: {
+      src: "/images/work/projects/bridge-home.jpg",
+      alt: "Bridge Partners homepage: You Earned It. We Help You Take It Further.",
+    },
+    gallery: [
+      {
+        src: "/images/work/projects/bridge-page1.jpg",
+        alt: "Bridge Partners about page",
+        caption:
+          "About page: the firm's positioning in its own editorial typography",
+      },
+      {
+        src: "/images/work/projects/bridge-page2.jpg",
+        alt: "Bridge Partners services page",
+        caption: "Services page built from the same native blocks",
+      },
+    ],
+    details: [
+      "Full-site-editing theme built from the brand guidelines and homepage design",
+      "16 native custom blocks: hero, pathways, feature grids, media splits, team members, testimonials and more",
+      "No plugin dependencies for blocks or layout",
+      "Built-in contact form block and advisor profiles",
+      "Organization, FAQPage and Person schema, plus an llms.txt for AI answer engines",
+      "SCSS and Tailwind build, minified, with cache-busted assets",
+      "Content seeding script to build pages and sample articles consistently",
+      "Insights article layout with author bylines and reading time, ready to launch",
+    ],
+    metrics: [
+      {
+        value: "16",
+        label: "Native Custom Blocks",
+        note: "Built for the brand",
+      },
+      {
+        value: "0",
+        label: "Plugin Dependencies",
+        note: "For blocks and layout",
+      },
+    ],
+    body: [
+      {
+        heading: "The Brief",
+        paragraphs: [
+          "Bridge Partners specializes in advanced tax mitigation and wealth strategies for high-net-worth clients. The site had to match a precise, editorial brand and stay fast and maintainable without a stack of plugins.",
+        ],
+      },
+      {
+        heading: "What We Built",
+        paragraphs: [
+          "A custom full-site-editing theme built directly from the Brand Guidelines and homepage design. Sixteen native custom blocks, including the hero, pathways, feature grids, media splits, team members, testimonials and a contact form, give the team a consistent set of on-brand building blocks.",
+          "There are no plugin dependencies for blocks or layout. Styles compile from SCSS through Tailwind into minified, cache-busted assets.",
+        ],
+      },
+      {
+        heading: "Built to Be Found",
+        level: 3,
+        paragraphs: [
+          "The theme outputs Organization, FAQPage and Person schema and generates an llms.txt for AI answer engines. An Insights article layout with author bylines and reading time is built and ready to switch on when the firm starts publishing.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "dexafit-cincinnati-squarespace-seo",
+    title: "An SEO Overhaul for a Physician-Led Testing Clinic",
+    industry: "Healthcare",
+    tagline:
+      "The clinic offered exactly what people search for (DEXA scans, VO2 max, metabolic testing), but the site wasn't saying it the way search engines read it.",
+    excerpt:
+      "An SEO overhaul of DexaFit Cincinnati's Squarespace site: rewritten titles, meta descriptions and alt text, per-page structured data, consistent technical updates and clearer booking CTAs.",
+    seoTitle: "DexaFit Cincinnati: Squarespace SEO Overhaul",
+    metaDescription:
+      "How DexaFit Cincinnati's Squarespace site got an SEO overhaul: rewritten titles, meta and alt text, structured data, technical updates and stronger CTAs.",
+    main: {
+      src: "/images/work/projects/dexafit-home.jpg",
+      alt: "DexaFit Cincinnati homepage: Optimize your health with physician-led testing",
+    },
+    gallery: [
+      {
+        src: "/images/work/projects/dexafit-dexa.jpg",
+        alt: "DexaFit Cincinnati DEXA scan page",
+        caption:
+          "Service pages lead with the search phrase: DEXA Scan in Cincinnati, OH",
+      },
+      {
+        src: "/images/work/projects/dexafit-doctor.jpg",
+        alt: "DexaFit Cincinnati physician page for Dr. David DeMarco, MD",
+        caption: "Physician page with clear booking calls to action",
+      },
+    ],
+    details: [
+      "Page titles rewritten around each service and Cincinnati, kept under 60 characters",
+      "Meta descriptions rewritten for every key page",
+      "Descriptive alt text added across the site's images",
+      "One keyword-led H1 per page",
+      "Per-page structured data: clinic, physician, services, offers, FAQs and breadcrumbs",
+      "Clearer booking CTAs across service and physician pages",
+      "Split heroes and campaign landing pages",
+      "Ongoing technical updates through custom CSS and code injection",
+    ],
+    metrics: [
+      {
+        value: "30+",
+        label: "Pages With Structured Data",
+        note: "Clinic, services, FAQs",
+      },
+    ],
+    // Google Search Console: first 6 weeks after the Oct 7, 2026 launch
+    // vs. the 6 weeks before. Revisit with 90-day data.
+    results: [
+      {
+        value: "#3.7",
+        label: "Avg. Position for “DEXA Scan Near Me”",
+        note: "Up from #14.5 in the 6 weeks before launch",
+      },
+      {
+        value: "38.5%",
+        label: "Click-Through Rate on “DexaFit Cincinnati”",
+        note: "Up from 26.7% in the 6 weeks before launch",
+      },
+      {
+        value: "+21%",
+        label: "Homepage Click-Through Rate",
+        note: "5.0% → 6.1% from Google search",
+      },
+    ],
+    body: [
+      {
+        heading: "The Brief",
+        paragraphs: [
+          "DexaFit Cincinnati offers physician-led DEXA scans, VO2 max and metabolic testing. The services matched exactly what people search for, but page titles, descriptions and headings weren't consistently saying it, and the paths to booking weren't as clear as they could be.",
+        ],
+      },
+      {
+        heading: "What We Did",
+        paragraphs: [
+          "A site-wide SEO overhaul on Squarespace. Every key page got a rewritten title built around its service and Cincinnati, kept short enough to display in full, plus a rewritten meta description. Images got descriptive alt text, and each page now has a single H1 that carries its main search phrase.",
+          "Structured data was added page by page, covering the clinic, the physician, each service and its offers, FAQs and breadcrumbs, so search engines understand what the clinic does and where.",
+        ],
+      },
+      {
+        heading: "Clearer Paths to Booking",
+        level: 3,
+        paragraphs: [
+          "Calls to action were tightened across service and physician pages so every page points somewhere specific, like booking a scan or a physician-guided test. Split heroes and campaign landing pages support promotions without changing the core site.",
+        ],
+      },
+      {
+        heading: "Consistent Technical Updates",
+        level: 3,
+        paragraphs: [
+          "Because Squarespace limits what can change in the template, ongoing improvements ship through a maintained custom stylesheet and code injection, versioned outside Squarespace so every change is repeatable.",
         ],
       },
     ],

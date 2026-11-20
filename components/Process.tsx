@@ -21,22 +21,21 @@ const advantages = [
 
 export default function Process() {
     return (
-        <section className="w-full bg-linear-to-b from-black to-slate-950 text-white py-28 relative overflow-hidden border-t border-slate-800/50">
-            <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-slate-700/40 to-transparent" />
-            <div className="absolute bottom-0 left-1/3 w-125 h-125 bg-volt-500/4 rounded-full blur-3xl pointer-events-none" />
+        <section className="w-full bg-linear-to-b from-black to-neutral-950 text-white py-28 relative overflow-hidden border-t border-neutral-800/50">
+            <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-neutral-700/40 to-transparent" />
 
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
                 <div className="mb-20 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                     <div>
-                        <span className="inline-block mb-5 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+                        <span className="inline-block mb-5 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                             The Difference
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white leading-[1.1]">
-                            You Work Directly With the <span className="text-volt-500">Person Doing the Work</span>
+                            You Work Directly With the <span className="text-neutral-500">Person Doing the Work</span>
                         </h2>
                     </div>
                     <div className="space-y-6">
-                        <div className="group relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-slate-800/60">
+                        <div className="group relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-neutral-800/60">
                             <Image
                                 src="/images/home/working-directly.jpg"
                                 alt="Developer walking a client through code on a laptop"
@@ -45,28 +44,28 @@ export default function Process() {
                                 className="object-cover grayscale-[40%] transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
                             />
                             <div className="absolute inset-0 bg-linear-to-tr from-black/70 via-black/10 to-transparent" />
-                            <span className="absolute top-4 left-4 rounded-full bg-black/60 backdrop-blur-md border border-volt-500/30 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-volt-400">
+                            <span className="absolute top-4 left-4 rounded-full bg-black/60 backdrop-blur-md border border-neutral-800 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white">
                                 Direct line · No relay
                             </span>
                         </div>
-                        <p className="text-slate-400 text-lg leading-relaxed">
+                        <p className="text-neutral-400 text-lg leading-relaxed">
                             No layers. No handoffs. No disconnect between strategy and execution.
                         </p>
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-slate-800/30 rounded-2xl overflow-hidden border border-slate-800/30 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-neutral-800/30 rounded-2xl overflow-hidden border border-neutral-800/30 mb-12">
                     {advantages.map((item, i) => (
-                        <div key={item.label} className="group relative bg-slate-950/70 hover:bg-volt-500/5 p-10 transition-colors duration-300 overflow-hidden">
-                            <div className="absolute top-6 right-6 text-7xl font-black text-slate-900 group-hover:text-volt-500/10 transition-colors duration-500 leading-none select-none pointer-events-none">
+                        <div key={item.label} className="group relative bg-neutral-950/70 hover:bg-white/5 p-10 transition-colors duration-300 overflow-hidden">
+                            <div className="absolute top-6 right-6 text-7xl font-black text-neutral-900 group-hover:text-white transition-colors duration-500 leading-none select-none pointer-events-none">
                                 {String(i + 1).padStart(2, "0")}
                             </div>
                             <div className="relative z-10">
-                                <div className="w-8 h-px bg-volt-500 mb-6" />
-                                <h3 className="text-xl font-bold text-white mb-3 leading-snug group-hover:text-volt-400 transition-colors duration-200">
+                                <div className="w-8 h-px bg-white mb-6" />
+                                <h3 className="text-xl font-bold text-white mb-3 leading-snug group-hover:text-white transition-colors duration-200">
                                     {item.label}
                                 </h3>
-                                <p className="text-sm text-slate-500 leading-relaxed group-hover:text-slate-400 transition-colors duration-200">
+                                <p className="text-sm text-neutral-400 leading-relaxed group-hover:text-neutral-400 transition-colors duration-200">
                                     {item.detail}
                                 </p>
                             </div>
@@ -75,7 +74,7 @@ export default function Process() {
                 </div>
 
                 <div className="max-w-2xl space-y-2">
-                    <p className="text-slate-400 text-base leading-relaxed">
+                    <p className="text-neutral-400 text-base leading-relaxed">
                         Most agencies sell strategy and outsource execution.
                     </p>
                     <p className="text-white text-base font-semibold leading-relaxed">

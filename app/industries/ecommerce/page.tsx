@@ -9,19 +9,19 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Ecommerce & DTC Web Development",
+  title: "Ecommerce Website Development",
   description:
     "Ecommerce and DTC web development — fast storefronts, Shopify and WooCommerce builds, and conversion optimization that closes more sales and increases AOV.",
   alternates: { canonical: "/industries/ecommerce" },
   openGraph: {
-    title: "Ecommerce & DTC Web Development",
+    title: "Ecommerce Website Development | Black Lab Dev",
     description:
       "Ecommerce and DTC web development — fast storefronts, Shopify and WooCommerce builds, and conversion optimization that closes more sales and increases AOV.",
     url: "/industries/ecommerce",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Ecommerce & DTC Web Development",
+    title: "Ecommerce Website Development | Black Lab Dev",
     description:
       "Ecommerce and DTC web development — fast storefronts, Shopify and WooCommerce builds, and conversion optimization that closes more sales and increases AOV.",
     images: [DEFAULT_OG_IMAGE.url],
@@ -154,13 +154,13 @@ const clients = [
 
 export default function EcommerceIndustryPage() {
   return (
-    <main className="w-full bg-[#0b0b0c] text-white">
+    <main className="w-full bg-surface text-white">
       <JsonLd data={[breadcrumbSchema, serviceSchema, faqSchema]} />
 
       <PageHero
         label="Ecommerce & DTC"
-        title="A Slow Storefront Costs You Real Revenue"
-        titleHighlight="Real Revenue"
+        title="Ecommerce Website Development for Faster, Higher-Converting Stores"
+        titleHighlight="for Faster, Higher-Converting Stores"
         description="A slow ecommerce page doesn't just frustrate visitors — it costs you sales in real time. Performance, conversion architecture, and checkout flow are revenue levers, not technical footnotes."
         backgroundImage="/images/industries-ecommerce-hero-bg.jpg"
         badges={["Shopify & WooCommerce", "AOV optimization", "Core Web Vitals"]}
@@ -172,18 +172,18 @@ export default function EcommerceIndustryPage() {
       />
 
       {/* What We Deliver */}
-      <section className="py-20 border-b border-slate-800/50">
+      <section className="py-20 border-b border-neutral-800/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="mb-12">
-            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">What I Build</span>
+            <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">What I Build</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Built to Convert Traffic Into Revenue</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {deliverables.map((item) => (
-              <div key={item.title} className="p-6 rounded-xl border border-slate-800/60 bg-slate-900/40 hover:border-volt-500/30 hover:bg-volt-500/5 transition-all duration-300">
-                <div className="w-6 h-px bg-volt-500 mb-4" />
+              <div key={item.title} className="p-6 rounded-xl border border-neutral-800/60 bg-neutral-900/40 hover:border-neutral-500 hover:bg-white/5 transition-all duration-300">
+                <div className="w-6 h-px bg-neutral-600 mb-4" />
                 <h3 className="text-base font-semibold text-white mb-2">{item.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{item.description}</p>
+                <p className="text-sm text-neutral-400 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
@@ -191,17 +191,17 @@ export default function EcommerceIndustryPage() {
       </section>
 
       {/* Client Proof */}
-      <section className="py-20 border-b border-slate-800/50 bg-slate-950/50">
+      <section className="py-20 border-b border-neutral-800/50 bg-neutral-950/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="mb-12">
-            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">Client Proof</span>
+            <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">Client Proof</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Ecommerce Brands Worked With</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {clients.map((c) => (
-              <div key={c.name} className="p-6 rounded-xl border border-slate-800/60 bg-slate-900/30">
-                <p className="text-sm font-semibold text-volt-500 mb-2">{c.name}</p>
-                <p className="text-sm text-slate-400 leading-relaxed">{c.detail}</p>
+              <div key={c.name} className="p-6 rounded-xl border border-neutral-800/60 bg-neutral-900/30">
+                <p className="text-sm font-semibold text-white mb-2">{c.name}</p>
+                <p className="text-sm text-neutral-400 leading-relaxed">{c.detail}</p>
               </div>
             ))}
           </div>
@@ -209,18 +209,18 @@ export default function EcommerceIndustryPage() {
       </section>
 
       {/* Cross-links */}
-      <section className="py-16 border-b border-slate-800/50">
+      <section className="bg-charcoal py-16 border-b border-neutral-800/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="flex flex-col justify-between gap-4 p-8 rounded-xl border border-volt-500/20 bg-volt-500/5">
+            <div className="flex flex-col justify-between gap-4 p-8 rounded-xl border border-neutral-800 bg-white/[0.04]">
               <div>
-                <p className="text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold mb-1">Related Service</p>
+                <p className="text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold mb-1">Related Service</p>
                 <h3 className="text-base font-bold text-white">Conversion Rate Optimization</h3>
-                <p className="text-sm text-slate-400 mt-1">Product pages, cart, and checkout improvements that increase revenue without touching ad spend.</p>
+                <p className="text-sm text-neutral-400 mt-1">Product pages, cart, and checkout improvements that increase revenue without touching ad spend.</p>
               </div>
               <Link
                 href="/services/conversion-optimization"
-                className="inline-flex items-center gap-2 text-sm font-bold text-volt-500 hover:text-volt-400 transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-neutral-300 transition-colors"
               >
                 View Service
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -228,15 +228,15 @@ export default function EcommerceIndustryPage() {
                 </svg>
               </Link>
             </div>
-            <div className="flex flex-col justify-between gap-4 p-8 rounded-xl border border-slate-800/60 bg-slate-900/30">
+            <div className="flex flex-col justify-between gap-4 p-8 rounded-xl border border-neutral-800/60 bg-neutral-900/30">
               <div>
-                <p className="text-xs tracking-[0.3em] uppercase text-slate-500 font-semibold mb-1">Related Service</p>
+                <p className="text-xs tracking-[0.3em] uppercase text-neutral-400 font-semibold mb-1">Related Service</p>
                 <h3 className="text-base font-bold text-white">Website Performance Optimization</h3>
-                <p className="text-sm text-slate-400 mt-1">Speed audits and fixes that recover the sales lost to slow load times on product and checkout pages.</p>
+                <p className="text-sm text-neutral-400 mt-1">Speed audits and fixes that recover the sales lost to slow load times on product and checkout pages.</p>
               </div>
               <Link
                 href="/services/website-performance-optimization"
-                className="inline-flex items-center gap-2 text-sm font-bold text-slate-400 hover:text-white transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-bold text-neutral-400 hover:text-white transition-colors"
               >
                 View Service
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -253,11 +253,10 @@ export default function EcommerceIndustryPage() {
       <FounderByline />
 
       <PageClose
-        title="Ready to Get More Revenue From Existing Traffic?"
-        bodyPrimary="Most ecommerce sites leave revenue on the table through slow pages, friction in checkout, and product pages that don't convert at the rate they should."
-        bodySecondary="Schedule a discovery call. I'll talk through exactly what's costing you revenue and what the highest-ROI fix is."
+        title="Get More Revenue From Your Store"
+        body="I'll find what's slowing your store down and the highest-ROI fixes."
         secondaryHref="/services/conversion-optimization"
-        secondaryLabel="View Conversion Optimization"
+        secondaryLabel="Conversion Optimization"
       />
     </main>
   );

@@ -20,6 +20,12 @@ const nextConfig: NextConfig = {
         destination: "/work/:slug*",
         permanent: true,
       },
+      // Melink was removed from the portfolio; send its old project page to /work.
+      {
+        source: "/work/melink-solar-calculator-plugin",
+        destination: "/work",
+        permanent: true,
+      },
       {
         source: "/services/b2b-website-design",
         destination: "/services/small-business-website-design",

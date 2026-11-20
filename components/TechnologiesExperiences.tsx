@@ -91,35 +91,33 @@ const experienceAreas: experienceArea[] = [
 
 const colorClasses = {
     volt: {
-        iconBg: "bg-volt-500/10",
-        iconText: "text-volt-500",
-        iconHoverBg: "group-hover:bg-volt-500",
-        border: "group-hover:border-volt-500/50",
-        glow: "group-hover:shadow-volt-500/20",
-        gradient: "group-hover:from-volt-500/8 group-hover:to-transparent",
-        accent: "group-hover:via-volt-500",
-        titleHover: "group-hover:text-volt-400",
-        bullet: "bg-volt-500/40",
+        iconBg: "bg-white/[0.06]",
+        iconText: "text-white",
+        iconHoverBg: "group-hover:bg-white/15",
+        border: "group-hover:border-neutral-500",
+        glow: "group-hover:shadow-black/40",
+        gradient: "group-hover:from-white/3 group-hover:to-transparent",
+        accent: "group-hover:via-white/20",
+        titleHover: "group-hover:text-white",
+        bullet: "bg-neutral-500",
     },
     blue: {
-        iconBg: "bg-volt-500/10",
-        iconText: "text-volt-400",
-        iconHoverBg: "group-hover:bg-volt-500",
-        border: "group-hover:border-volt-500/50",
-        glow: "group-hover:shadow-volt-500/20",
-        gradient: "group-hover:from-volt-500/8 group-hover:to-transparent",
-        accent: "group-hover:via-volt-500",
-        titleHover: "group-hover:text-volt-300",
-        bullet: "bg-volt-500/40",
+        iconBg: "bg-white/[0.06]",
+        iconText: "text-neutral-300",
+        iconHoverBg: "group-hover:bg-white/15",
+        border: "group-hover:border-neutral-500",
+        glow: "group-hover:shadow-black/40",
+        gradient: "group-hover:from-white/3 group-hover:to-transparent",
+        accent: "group-hover:via-white/20",
+        titleHover: "group-hover:text-white",
+        bullet: "bg-neutral-500",
     },
 };
 
 export default function TechnologiesExperience() {
     return (
-        <section className="w-full bg-linear-to-b from-slate-950 via-slate-950 to-black text-white py-24 relative overflow-hidden">
+        <section className="w-full bg-linear-to-b from-neutral-950 via-neutral-950 to-black text-white py-24 relative overflow-hidden">
             {/* Ambient background effects */}
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-volt-500/6 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-volt-500/6 rounded-full blur-3xl" />
 
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
                 {/* Header */}
@@ -143,7 +141,7 @@ export default function TechnologiesExperience() {
                         return (
                             <div
                                 key={area.title}
-                                className={`group rounded-2xl border-2 border-slate-800/50 bg-slate-900/50 p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl ${colors.border} ${colors.glow} backdrop-blur-sm overflow-hidden relative`}
+                                className={`group rounded-2xl border-2 border-neutral-800/50 bg-neutral-900/50 p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl ${colors.border} ${colors.glow} backdrop-blur-sm overflow-hidden relative`}
                             >
                                 {/* Animated gradient overlay */}
                                 <div className={`absolute inset-0 bg-linear-to-br from-transparent to-transparent ${colors.gradient} transition-all duration-500 opacity-0 group-hover:opacity-100`} />
@@ -158,9 +156,9 @@ export default function TechnologiesExperience() {
                                         {area.title}
                                     </h3>
 
-                                    <ul className="space-y-2.5 text-sm text-slate-400">
+                                    <ul className="space-y-2.5 text-sm text-neutral-400">
                                         {area.items.map((item) => (
-                                            <li key={item} className="leading-relaxed group-hover:text-slate-300 transition-colors duration-300 flex items-start">
+                                            <li key={item} className="leading-relaxed group-hover:text-neutral-300 transition-colors duration-300 flex items-start">
                                                 <span className={`mr-2 mt-1.5 h-1.5 w-1.5 rounded-full ${colors.bullet} shrink-0`} />
                                                 <span>{item}</span>
                                             </li>
@@ -177,15 +175,15 @@ export default function TechnologiesExperience() {
 
                 {/* Certifications & Credibility */}
                 <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div className="group rounded-2xl border-2 border-slate-800/50 bg-linear-to-br from-slate-900/50 to-[#111214]/80 p-10 transition-all duration-500 hover:border-volt-500/40 hover:shadow-xl hover:shadow-volt-500/10 backdrop-blur-sm relative overflow-hidden">
-                        <div className="absolute inset-0 bg-linear-to-br from-volt-500/0 to-volt-500/0 group-hover:from-volt-500/4 group-hover:to-transparent transition-all duration-500" />
+                    <div className="group rounded-2xl border-2 border-neutral-800/50 bg-linear-to-br from-neutral-900/50 to-surface-raised/80 p-10 transition-all duration-500 hover:border-neutral-500 hover:shadow-xl hover:shadow-black/40 backdrop-blur-sm relative overflow-hidden">
+                        <div className="absolute inset-0 bg-linear-to-br from-white/10 to-white/10 group-hover:from-white/3 group-hover:to-transparent transition-all duration-500" />
 
                         <div className="relative z-10">
                             <div className="flex items-center gap-4 mb-4">
-                                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-volt-500/10 text-volt-500 transition-all duration-500 group-hover:bg-volt-500 group-hover:text-black group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-volt-500/30">
+                                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-white/[0.04] text-white transition-all duration-500 group-hover:bg-white group-hover:text-black group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-black/40">
                                     <Award className="h-7 w-7" strokeWidth={2.5} />
                                 </div>
-                                <h3 className="text-2xl font-semibold text-white group-hover:text-volt-400 transition-colors duration-300">
+                                <h3 className="text-2xl font-semibold text-white group-hover:text-white transition-colors duration-300">
                                     Security-Focused Engineering
                                 </h3>
                             </div>
@@ -198,8 +196,8 @@ export default function TechnologiesExperience() {
                         </div>
                     </div>
 
-                    <div className="group rounded-2xl border-2 border-slate-800/50 bg-slate-900/50 p-10 flex items-center gap-6 transition-all duration-500 hover:border-volt-500/40 hover:shadow-xl hover:shadow-volt-500/10 backdrop-blur-sm relative overflow-hidden">
-                        <div className="absolute inset-0 bg-linear-to-br from-volt-500/0 to-volt-500/0 group-hover:from-volt-500/4 group-hover:to-transparent transition-all duration-500" />
+                    <div className="group rounded-2xl border-2 border-neutral-800/50 bg-neutral-900/50 p-10 flex items-center gap-6 transition-all duration-500 hover:border-neutral-500 hover:shadow-xl hover:shadow-black/40 backdrop-blur-sm relative overflow-hidden">
+                        <div className="absolute inset-0 bg-linear-to-br from-white/10 to-white/10 group-hover:from-white/3 group-hover:to-transparent transition-all duration-500" />
 
                         <div className="relative z-10 flex items-center gap-6">
                             <img
@@ -208,10 +206,10 @@ export default function TechnologiesExperience() {
                                 className="h-20 w-auto shrink-0 transition-transform duration-500 group-hover:scale-110"
                             />
                             <div>
-                                <h4 className="text-xl font-semibold mb-2 text-white group-hover:text-volt-300 transition-colors duration-300">
+                                <h4 className="text-xl font-semibold mb-2 text-white group-hover:text-white transition-colors duration-300">
                                     Google Cybersecurity Certificate
                                 </h4>
-                                <p className="text-sm text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
+                                <p className="text-sm text-neutral-400 leading-relaxed group-hover:text-neutral-300 transition-colors duration-300">
                                     Professional certification issued by Google via Coursera,
                                     covering security fundamentals, threat detection, risk
                                     management, and best practices for securing modern systems.
