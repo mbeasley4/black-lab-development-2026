@@ -14,8 +14,8 @@ const MEGAMENU_TOP = ANNOUNCEMENT_HEIGHT + HEADER_HEIGHT;
 
 // Announcement bar copy: edit here.
 const ANNOUNCEMENT = {
-    message: "Now booking new website projects and agency partnerships.",
-    shortMessage: "Now booking new projects.",
+    badge: "Now booking",
+    message: "New website projects & agency partnerships",
     linkLabel: "Schedule a call",
     href: "/contact",
 };
@@ -114,6 +114,26 @@ export default function Header() {
 
     // Desktop megamenu / dropdown state ("services" | "industries" | null)
     const [openMega, setOpenMega] = useState<"services" | "industries" | null>(null);
+
+    // Announcement bar collapses once the page is scrolled past the top
+    const [barHidden, setBarHidden] = useState(false);
+    useEffect(() => {
+        let raf = 0;
+        const update = () => {
+            raf = 0;
+            setBarHidden(window.scrollY > 24);
+        };
+        const onScroll = () => {
+            if (!raf) raf = requestAnimationFrame(update);
+        };
+        update();
+        window.addEventListener("scroll", onScroll, { passive: true });
+        return () => {
+            window.removeEventListener("scroll", onScroll);
+            if (raf) cancelAnimationFrame(raf);
+        };
+    }, []);
+    const megaTop = barHidden ? HEADER_HEIGHT : MEGAMENU_TOP;
     const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     // Refs for focus trap / outside click
@@ -499,20 +519,29 @@ export default function Header() {
             <header className="fixed top-0 z-50 w-full bg-surface text-[#e5e7eb] border-b border-neutral-800">
                 {/* Announcement bar */}
                 <div
-                    className="w-full border-b border-neutral-800 bg-charcoal text-neutral-300"
-                    style={{ height: ANNOUNCEMENT_HEIGHT }}
+                    className={`w-full overflow-hidden bg-charcoal text-neutral-300 transition-[height,opacity] duration-300 ease-out motion-reduce:transition-none ${
+                        barHidden ? "opacity-0" : "border-b border-neutral-800 opacity-100"
+                    }`}
+                    style={{ height: barHidden ? 0 : ANNOUNCEMENT_HEIGHT }}
+                    inert={barHidden}
+                    aria-hidden={barHidden}
                 >
                     <div className="mx-auto flex h-full max-w-375 items-center justify-center gap-3 px-6 sm:px-10 md:px-14 lg:px-20 text-[13px]">
-                        <span className="inline-flex h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" aria-hidden />
-                        <span className="hidden sm:inline">{ANNOUNCEMENT.message}</span>
-                        <span className="sm:hidden">{ANNOUNCEMENT.shortMessage}</span>
+                        <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-emerald-300">
+                            <span className="relative flex h-1.5 w-1.5" aria-hidden>
+                                <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 motion-safe:animate-ping" />
+                                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                            </span>
+                            {ANNOUNCEMENT.badge}
+                        </span>
+                        <span className="hidden sm:inline font-medium text-white">{ANNOUNCEMENT.message}</span>
                         <Link
                             href={ANNOUNCEMENT.href}
                             onClick={closeDrawer}
-                            className="inline-flex items-center gap-1 font-semibold text-white underline decoration-neutral-600 underline-offset-4 hover:decoration-white transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                            className="group inline-flex items-center gap-1 rounded-full bg-white px-3 py-0.5 text-[12px] font-bold text-black hover:bg-neutral-200 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                         >
                             {ANNOUNCEMENT.linkLabel}
-                            <span aria-hidden>→</span>
+                            <span aria-hidden className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
                         </Link>
                     </div>
                 </div>
@@ -604,7 +633,7 @@ export default function Header() {
                                 aria-label="Services menu"
                                 onMouseEnter={() => handleMegaEnter("services")}
                                 onMouseLeave={handleMegaLeave}
-                                style={{ top: MEGAMENU_TOP }}
+                                style={{ top: megaTop }}
                                 className={`fixed left-1/2 -translate-x-1/2 w-full max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 pt-2
                                     transition-all duration-200 ease-out origin-top
                                     ${openMega === "services"
@@ -687,7 +716,7 @@ export default function Header() {
                                 aria-label="Industries menu"
                                 onMouseEnter={() => handleMegaEnter("industries")}
                                 onMouseLeave={handleMegaLeave}
-                                style={{ top: MEGAMENU_TOP }}
+                                style={{ top: megaTop }}
                                 className={`fixed left-1/2 -translate-x-1/2 w-full max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 pt-2
                                     transition-all duration-200 ease-out origin-top
                                     ${openMega === "industries"
