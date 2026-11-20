@@ -197,8 +197,8 @@ export default function CaseStudiesPage() {
               Work Accomplished
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-5">
-              {projects.length}+ Projects,{" "}
-              <span className="text-neutral-500">Shipped and Supported</span>
+              19+ Launches This Year.{" "}
+              <span className="text-neutral-500">Still Supporting Every One.</span>
             </h2>
             <p className="text-lg text-neutral-400 leading-relaxed">
               15+ years building and maintaining production websites for manufacturers, healthcare providers, restaurants, and B2B platforms — on WordPress, Shopify, and custom Next.js builds.
