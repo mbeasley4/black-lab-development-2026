@@ -19,49 +19,44 @@ export default function PageClose({
   primaryLabel = "Schedule a Call",
 }: PageCloseProps) {
   return (
-    <section className="relative overflow-hidden border-t border-neutral-800 py-20 md:py-24">
-      {/* Background layers */}
-      <div className="absolute inset-0">
+    <section className="w-full bg-surface px-6 py-16 sm:px-10 md:px-14 md:py-20 lg:px-20">
+      <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl bg-white px-8 py-12 text-neutral-950 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.8)] sm:px-12 md:px-16 md:py-16">
+        {/* Subtle texture so the card isn't a flat slab */}
         <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/close-bg.png')" }}
+          className="pointer-events-none absolute inset-0 opacity-[0.035]"
+          style={{ backgroundImage: "radial-gradient(circle, #000 1px, transparent 1px)", backgroundSize: "18px 18px" }}
+          aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-linear-to-br from-surface via-surface-raised to-[#1f2328]" />
-        <div className="absolute inset-0 bg-linear-to-tr from-white/10 via-transparent to-transparent" />
-      </div>
 
-      {/* Ambient glows */}
+        <div className="relative flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
+          <div className="max-w-2xl">
+            <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-600/25 bg-emerald-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-emerald-700">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
+              Now booking new projects
+            </span>
+            <h2 className="mb-3 text-3xl font-bold leading-tight tracking-tight text-balance md:text-4xl lg:text-[2.75rem]">
+              {title}
+            </h2>
+            <p className="text-lg leading-relaxed text-neutral-600 text-balance">{body}</p>
+          </div>
 
-      {/* Content */}
-      <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl md:text-4xl text-balance font-bold mb-4 text-white leading-tight">
-            {title}
-          </h2>
-
-          <p className="text-lg text-neutral-300 leading-relaxed text-balance mb-8">{body}</p>
-
-          <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-4">
+          <div className="flex shrink-0 flex-col items-stretch gap-3 sm:flex-row sm:items-center md:flex-col md:items-stretch">
             <a
               href={primaryHref}
-              className="group inline-flex items-center justify-center gap-2 rounded-md bg-white px-7 py-3.5 text-sm font-bold text-black hover:bg-neutral-200 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              className="group inline-flex items-center justify-center gap-2 rounded-md bg-neutral-950 px-7 py-4 text-sm font-bold text-white transition-colors duration-200 hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 focus-visible:ring-offset-2"
             >
               {primaryLabel}
               <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
             </a>
-
             <a
               href={secondaryHref}
-              className="text-sm font-medium text-neutral-200 underline decoration-neutral-600 underline-offset-4 hover:text-white hover:decoration-white transition-colors duration-200"
+              className="inline-flex items-center justify-center rounded-md border border-neutral-300 px-7 py-4 text-sm font-semibold text-neutral-900 transition-colors duration-200 hover:border-neutral-950 hover:bg-neutral-50"
             >
               {secondaryLabel}
             </a>
           </div>
         </div>
       </div>
-
-      {/* Bottom accent line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
     </section>
   );
 }
