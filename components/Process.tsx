@@ -44,7 +44,7 @@ export default function Process() {
                                 className="object-cover grayscale-[40%] transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
                             />
                             <div className="absolute inset-0 bg-linear-to-tr from-black/70 via-black/10 to-transparent" />
-                            <span className="absolute top-4 left-4 rounded-full bg-black/60 backdrop-blur-md border border-neutral-800 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-volt-400">
+                            <span className="absolute top-4 left-4 rounded-full bg-black/60 backdrop-blur-md border border-neutral-800 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white">
                                 Direct line · No relay
                             </span>
                         </div>
@@ -56,13 +56,13 @@ export default function Process() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-neutral-800/30 rounded-2xl overflow-hidden border border-neutral-800/30 mb-12">
                     {advantages.map((item, i) => (
-                        <div key={item.label} className="group relative bg-neutral-950/70 hover:bg-volt-500/5 p-10 transition-colors duration-300 overflow-hidden">
-                            <div className="absolute top-6 right-6 text-7xl font-black text-neutral-900 group-hover:text-volt-500/10 transition-colors duration-500 leading-none select-none pointer-events-none">
+                        <div key={item.label} className="group relative bg-neutral-950/70 hover:bg-white/5 p-10 transition-colors duration-300 overflow-hidden">
+                            <div className="absolute top-6 right-6 text-7xl font-black text-neutral-900 group-hover:text-white transition-colors duration-500 leading-none select-none pointer-events-none">
                                 {String(i + 1).padStart(2, "0")}
                             </div>
                             <div className="relative z-10">
                                 <div className="w-8 h-px bg-volt-500 mb-6" />
-                                <h3 className="text-xl font-bold text-white mb-3 leading-snug group-hover:text-volt-400 transition-colors duration-200">
+                                <h3 className="text-xl font-bold text-white mb-3 leading-snug group-hover:text-white transition-colors duration-200">
                                     {item.label}
                                 </h3>
                                 <p className="text-sm text-neutral-400 leading-relaxed group-hover:text-neutral-400 transition-colors duration-200">

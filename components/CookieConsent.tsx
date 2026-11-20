@@ -123,7 +123,7 @@ export default function CookieConsent() {
             support our marketing. Choose which categories you allow, or accept all.{" "}
             <a
               href="/privacy"
-              className="rounded-sm font-medium text-volt-400 underline-offset-4 transition-colors hover:text-volt-300 hover:underline focus-visible:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400"
+              className="rounded-sm font-medium text-white underline-offset-4 transition-colors hover:text-neutral-300 hover:underline focus-visible:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400"
             >
               Learn more
             </a>
@@ -181,7 +181,7 @@ export default function CookieConsent() {
             always on because the site can&apos;t function without them. See our{" "}
             <a
               href="/privacy"
-              className="rounded-sm font-medium text-volt-400 underline-offset-4 transition-colors hover:text-volt-300 hover:underline focus-visible:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400"
+              className="rounded-sm font-medium text-white underline-offset-4 transition-colors hover:text-neutral-300 hover:underline focus-visible:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400"
             >
               privacy policy
             </a>{" "}
@@ -249,7 +249,7 @@ function CategoryRow({
         <p className="text-sm font-semibold text-white">
           {title}
           {locked && (
-            <span className="ml-2 text-xs font-normal uppercase tracking-wide text-volt-400">
+            <span className="ml-2 text-xs font-normal uppercase tracking-wide text-white">
               Always active
             </span>
           )}

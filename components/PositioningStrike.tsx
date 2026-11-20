@@ -34,7 +34,7 @@ export default function PositioningStrike() {
                         <div className="space-y-0 divide-y divide-neutral-800/50 mb-8">
                             {perfBullets.map((item) => (
                                 <div key={item} className="flex items-center gap-4 py-4">
-                                    <span className="shrink-0 w-1.5 h-1.5 rounded-full bg-volt-500" />
+                                    <span className="shrink-0 w-1.5 h-1.5 rounded-full bg-neutral-400" />
                                     <p className="text-base text-neutral-300">{item}</p>
                                 </div>
                             ))}
@@ -59,7 +59,7 @@ export default function PositioningStrike() {
                         <div className="space-y-0 divide-y divide-neutral-800/50 mb-8">
                             {locations.map((loc) => (
                                 <div key={loc} className="flex items-center gap-4 py-4">
-                                    <span className="shrink-0 w-1.5 h-1.5 rounded-full bg-volt-500" />
+                                    <span className="shrink-0 w-1.5 h-1.5 rounded-full bg-neutral-400" />
                                     <p className="text-base text-neutral-300">{loc}</p>
                                 </div>
                             ))}

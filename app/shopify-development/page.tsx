@@ -223,7 +223,7 @@ export default function ShopifyDevelopmentPage() {
           </Link>
           <Link
             href="/work"
-            className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
+            className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 px-7 py-3.5 text-sm font-semibold text-white hover:bg-white/10 hover:border-neutral-500 transition-all duration-200"
           >
             View My Work →
           </Link>
@@ -231,7 +231,7 @@ export default function ShopifyDevelopmentPage() {
       </section>
 
       {/* Intro */}
-      <section className="py-20 border-b border-neutral-800">
+      <section className="bg-charcoal py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
@@ -295,13 +295,13 @@ export default function ShopifyDevelopmentPage() {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="group rounded-2xl border border-neutral-800 bg-neutral-950 p-8 transition-all duration-300 hover:border-volt-500/40 hover:shadow-[0_0_40px_rgba(227,245,68,0.06)]"
+                className="group rounded-2xl border border-neutral-800 bg-neutral-950 p-8 transition-all duration-300 hover:border-neutral-500 hover:shadow-[0_0_40px_rgba(255,255,255,0.03)]"
               >
                 <div className="h-px bg-linear-to-r from-white/10 via-white/10 to-white/10 group-hover:from-volt-500/40 group-hover:via-volt-500/60 group-hover:to-volt-500/0 transition-all duration-500 -mx-8 -mt-8 mb-8" />
-                <div className="w-10 h-10 rounded-lg bg-white/[0.04] border border-neutral-800 flex items-center justify-center text-volt-500 mb-5">
+                <div className="w-10 h-10 rounded-lg bg-white/[0.04] border border-neutral-800 flex items-center justify-center text-white mb-5">
                   {service.icon}
                 </div>
-                <h3 className="text-lg font-bold text-white mb-3 group-hover:text-volt-400 transition-colors duration-300">{service.title}</h3>
+                <h3 className="text-lg font-bold text-white mb-3 group-hover:text-white transition-colors duration-300">{service.title}</h3>
                 <p className="text-sm text-neutral-400 leading-relaxed">{service.body}</p>
               </div>
             ))}
@@ -310,7 +310,7 @@ export default function ShopifyDevelopmentPage() {
       </section>
 
       {/* Why I'm different */}
-      <section className="py-20 border-b border-neutral-800">
+      <section className="bg-charcoal py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
@@ -337,7 +337,7 @@ export default function ShopifyDevelopmentPage() {
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-4 rounded-xl border border-neutral-800 bg-neutral-950 p-5">
                   <div className="w-6 h-6 rounded-full bg-white/[0.04] flex items-center justify-center shrink-0 mt-0.5">
-                    <svg className="w-3 h-3 text-volt-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -381,7 +381,7 @@ export default function ShopifyDevelopmentPage() {
       </section>
 
       {/* Performance */}
-      <section className="py-20 border-b border-neutral-800">
+      <section className="bg-charcoal py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
@@ -402,7 +402,7 @@ export default function ShopifyDevelopmentPage() {
               {performancePoints.map((item) => (
                 <div key={item.label} className="rounded-xl border border-neutral-800 bg-neutral-950 p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-2 h-2 rounded-full bg-volt-500 shrink-0 mt-2" />
+                    <div className="w-2 h-2 rounded-full bg-neutral-400 shrink-0 mt-2" />
                     <div>
                       <div className="text-sm font-semibold text-white mb-1">{item.label}</div>
                       <div className="text-xs text-neutral-400 leading-relaxed">{item.detail}</div>
@@ -433,7 +433,7 @@ export default function ShopifyDevelopmentPage() {
             <div className="space-y-3">
               {useCases.map((item) => (
                 <div key={item} className="flex items-center gap-4 rounded-xl border border-neutral-800 bg-neutral-950 px-6 py-4">
-                  <div className="w-1.5 h-1.5 rounded-full bg-volt-500 shrink-0" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-neutral-400 shrink-0" />
                   <span className="text-sm text-neutral-300">{item}</span>
                 </div>
               ))}
@@ -443,11 +443,11 @@ export default function ShopifyDevelopmentPage() {
       </section>
 
       {/* Work */}
-      <section className="py-20 border-b border-neutral-800">
+      <section className="bg-charcoal py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
             <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-neutral-300 mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-volt-500" />
+              <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
               Shopify Projects
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -468,7 +468,7 @@ export default function ShopifyDevelopmentPage() {
                         href={study.link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-volt-500 hover:text-volt-400 transition-colors duration-200"
+                        className="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-white hover:text-neutral-300 transition-colors duration-200"
                       >
                         {study.link.label}
                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -479,8 +479,8 @@ export default function ShopifyDevelopmentPage() {
                   </div>
                   <div className="grid grid-cols-3 gap-4">
                     {study.stats.map((stat) => (
-                      <div key={stat.label} className="rounded-xl border border-neutral-800 bg-neutral-950 px-4 py-5 text-center transition-all duration-300 hover:border-volt-500/30 hover:shadow-[0_0_30px_rgba(227,245,68,0.05)]">
-                        <div className="text-lg font-black text-volt-500 mb-1">{stat.value}</div>
+                      <div key={stat.label} className="rounded-xl border border-neutral-800 bg-neutral-950 px-4 py-5 text-center transition-all duration-300 hover:border-neutral-500 hover:shadow-[0_0_30px_rgba(255,255,255,0.03)]">
+                        <div className="text-lg font-black text-white mb-1">{stat.value}</div>
                         <div className="text-xs font-semibold text-white mb-1">{stat.label}</div>
                         <div className="text-[11px] text-neutral-400 leading-snug">{stat.detail}</div>
                       </div>
@@ -493,7 +493,7 @@ export default function ShopifyDevelopmentPage() {
                     {study.images.map((img) => (
                       <div
                         key={img.src}
-                        className="group relative aspect-video rounded-xl overflow-hidden border border-neutral-800 hover:border-volt-500/30 transition-all duration-300 hover:shadow-[0_0_40px_rgba(227,245,68,0.08)]"
+                        className="group relative aspect-video rounded-xl overflow-hidden border border-neutral-800 hover:border-neutral-500 transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,255,255,0.04)]"
                       >
                         <Image
                           src={img.src}
@@ -528,7 +528,7 @@ export default function ShopifyDevelopmentPage() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/services"
-              className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/15 transition-all duration-200"
+              className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white hover:border-neutral-500 hover:bg-white/15 transition-all duration-200"
             >
               All Services →
             </Link>

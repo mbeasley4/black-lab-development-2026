@@ -39,7 +39,7 @@ const caseStudies = [
 
 export default function Results() {
     return (
-        <section className="w-full bg-linear-to-b from-neutral-950 to-black text-white py-32 relative overflow-hidden border-t border-neutral-800">
+        <section className="w-full bg-charcoal text-white py-32 relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
@@ -54,7 +54,7 @@ export default function Results() {
                     </div>
                     <Link
                         href="/work"
-                        className="group inline-flex items-center gap-2 text-sm font-semibold text-volt-500 hover:text-volt-400 transition-colors duration-200 shrink-0"
+                        className="group inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-neutral-300 transition-colors duration-200 shrink-0"
                     >
                         View All Work
                         <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -66,13 +66,13 @@ export default function Results() {
                 {/* Latest win — featured block, front and center */}
                 <Link
                     href="/work/zero-gravity-performance-rebuild"
-                    className="group relative mb-6 flex flex-col overflow-hidden rounded-3xl border border-neutral-800 bg-linear-to-br from-white/10 via-neutral-900/70 to-neutral-950 p-8 md:p-10 transition-all duration-300 hover:border-volt-500/60 hover:shadow-[0_0_70px_rgba(227,245,68,0.18)]"
+                    className="group relative mb-6 flex flex-col overflow-hidden rounded-3xl border border-neutral-800 bg-linear-to-br from-white/10 via-neutral-900/70 to-neutral-950 p-8 md:p-10 transition-all duration-300 hover:border-neutral-500 hover:shadow-[0_0_70px_rgba(255,255,255,0.09)]"
                 >
                     <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-white/10 via-white/10 to-white/10" />
 
                     <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-8">
                         <div className="shrink-0 flex flex-row md:flex-col items-center md:items-start justify-between md:justify-start gap-4">
-                            <span className="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase px-3 py-1.5 rounded-full bg-volt-500 text-black shadow-lg">
+                            <span className="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase px-3 py-1.5 rounded-full bg-white text-black shadow-lg">
                                 <span className="w-1.5 h-1.5 rounded-full bg-black animate-pulse" />
                                 Latest Win
                             </span>
@@ -89,7 +89,7 @@ export default function Results() {
                         <div className="hidden md:block w-px self-stretch bg-white/[0.04]" />
 
                         <div className="flex-1 min-w-0">
-                            <h3 className="text-xl md:text-2xl font-bold text-white leading-snug mb-2 group-hover:text-volt-100 transition-colors duration-200">
+                            <h3 className="text-xl md:text-2xl font-bold text-white leading-snug mb-2 group-hover:text-white transition-colors duration-200">
                                 Zero Gravity of Northern Kentucky
                             </h3>
                             <p className="text-sm md:text-base text-neutral-300 leading-relaxed mb-4 max-w-2xl">
@@ -97,7 +97,7 @@ export default function Results() {
                             </p>
                             <div className="flex flex-wrap gap-2">
                                 {["WooCommerce removed", "Booking links generalized", "Major page speed gains"].map((tag) => (
-                                    <span key={tag} className="text-xs font-medium text-volt-400 bg-white/[0.04] border border-neutral-800 rounded-full px-3 py-1">
+                                    <span key={tag} className="text-xs font-medium text-white bg-white/[0.04] border border-neutral-800 rounded-full px-3 py-1">
                                         {tag}
                                     </span>
                                 ))}
@@ -117,7 +117,7 @@ export default function Results() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
                     {caseStudies.map((item) => (
-                        <Link key={item.client} href={item.href} className="group flex flex-col p-8 rounded-2xl border border-neutral-800/60 bg-neutral-900/40 hover:border-volt-500/40 hover:bg-volt-500/5 transition-all duration-300">
+                        <Link key={item.client} href={item.href} className="group flex flex-col p-8 rounded-2xl border border-neutral-800/60 bg-neutral-900/40 hover:border-neutral-500 hover:bg-white/5 transition-all duration-300">
                             <p className="mb-4">
                                 <span className="block text-sm font-semibold text-neutral-200">{item.client}</span>
                                 <span className="block text-xs uppercase tracking-widest text-neutral-500">{item.industry}</span>
@@ -125,13 +125,13 @@ export default function Results() {
                             <p className="text-5xl md:text-6xl font-bold text-white leading-none mb-3">
                                 {item.metric}
                             </p>
-                            <p className="text-lg font-semibold text-white leading-snug mb-2 group-hover:text-volt-400 transition-colors duration-200">
+                            <p className="text-lg font-semibold text-white leading-snug mb-2 group-hover:text-white transition-colors duration-200">
                                 {item.outcome}
                             </p>
                             <p className="text-xs text-neutral-400 mt-auto">
                                 {item.detail}
                             </p>
-                            <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-volt-500 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                            <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-white opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                                 Read the story →
                             </span>
                         </Link>

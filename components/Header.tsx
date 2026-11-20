@@ -270,7 +270,7 @@ export default function Header() {
                                 </div>
                                 <div className="flex flex-col gap-1 uppercase leading-none whitespace-nowrap">
                                     <span className="text-[14px] font-bold tracking-tight text-[#e5e7eb]">Black Lab</span>
-                                    <span className="text-[8px] font-semibold tracking-[0.3em] text-volt-500">Development</span>
+                                    <span className="text-[8px] font-semibold tracking-[0.3em] text-white">Development</span>
                                 </div>
                             </Link>
 
@@ -279,7 +279,7 @@ export default function Header() {
                                 onClick={closeDrawer}
                                 aria-label="Close menu"
                                 style={{ touchAction: "manipulation" }}
-                                className="py-2 px-2 text-volt-500 border border-neutral-800 rounded-sm hover:border-volt-400 hover:text-volt-400 hover:shadow-[0_0_12px_rgba(227,245,68,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 transition-all duration-200 cursor-pointer"
+                                className="py-2 px-2 text-white border border-neutral-800 rounded-sm hover:border-neutral-500 hover:text-neutral-300 hover:shadow-[0_0_12px_rgba(255,255,255,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 transition-all duration-200 cursor-pointer"
                             >
                                 <span className="block w-5 h-0.5 bg-current rotate-45 translate-y-0.75" />
                                 <span className="block w-5 h-0.5 bg-current -rotate-45" />
@@ -304,13 +304,13 @@ export default function Header() {
                                     className={`w-full flex items-center justify-between gap-3 py-3.5 text-[16px] tracking-normal font-medium transition-all duration-300
                                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 rounded-sm
                                         ${servicesActive
-                                            ? "text-volt-500"
-                                            : "text-[#c8c8c8] hover:text-volt-400"
+                                            ? "text-white"
+                                            : "text-[#c8c8c8] hover:text-white"
                                         }`}
                                 >
                                     <span className="flex items-center gap-3">
                                         <span className={`shrink-0 w-0.5 h-4 rounded-full transition-all duration-300
-                                            ${servicesActive ? "bg-volt-500" : "bg-volt-500/20"}`}
+                                            ${servicesActive ? "bg-white" : "bg-white/20"}`}
                                         />
                                         What I Build
                                     </span>
@@ -331,7 +331,7 @@ export default function Header() {
                                                     onClick={closeDrawer}
                                                     className={`py-2 text-[14px] tracking-normal transition-colors duration-200 rounded-sm
                                                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70
-                                                        ${active ? "text-volt-500" : "text-[#a8a8a8] hover:text-volt-400"}`}
+                                                        ${active ? "text-white" : "text-[#a8a8a8] hover:text-white"}`}
                                                 >
                                                     {s.label}
                                                 </Link>
@@ -359,13 +359,13 @@ export default function Header() {
                                     className={`w-full flex items-center justify-between gap-3 py-3.5 text-[16px] tracking-normal font-medium transition-all duration-300
                                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 rounded-sm
                                         ${industriesActive
-                                            ? "text-volt-500"
-                                            : "text-[#c8c8c8] hover:text-volt-400"
+                                            ? "text-white"
+                                            : "text-[#c8c8c8] hover:text-white"
                                         }`}
                                 >
                                     <span className="flex items-center gap-3">
                                         <span className={`shrink-0 w-0.5 h-4 rounded-full transition-all duration-300
-                                            ${industriesActive ? "bg-volt-500" : "bg-volt-500/20"}`}
+                                            ${industriesActive ? "bg-white" : "bg-white/20"}`}
                                         />
                                         Who It&apos;s For
                                     </span>
@@ -382,7 +382,7 @@ export default function Header() {
                                             onClick={closeDrawer}
                                             className={`py-2 text-[14px] tracking-normal transition-colors duration-200 rounded-sm
                                                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70
-                                                ${pathname === "/industries" ? "text-volt-500" : "text-[#a8a8a8] hover:text-volt-400"}`}
+                                                ${pathname === "/industries" ? "text-white" : "text-[#a8a8a8] hover:text-white"}`}
                                         >
                                             All industries
                                         </Link>
@@ -395,7 +395,7 @@ export default function Header() {
                                                     onClick={closeDrawer}
                                                     className={`py-2 text-[14px] tracking-normal transition-colors duration-200 rounded-sm
                                                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70
-                                                        ${active ? "text-volt-500" : "text-[#a8a8a8] hover:text-volt-400"}`}
+                                                        ${active ? "text-white" : "text-[#a8a8a8] hover:text-white"}`}
                                                 >
                                                     {s.label}
                                                 </Link>
@@ -425,12 +425,12 @@ export default function Header() {
                                             className={`flex items-center gap-3 py-3.5 text-[16px] tracking-normal font-medium transition-all duration-300
                                                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 rounded-sm
                                                 ${active
-                                                    ? "text-volt-500"
-                                                    : "text-[#c8c8c8] hover:text-volt-400 hover:"
+                                                    ? "text-white"
+                                                    : "text-[#c8c8c8] hover:text-white hover:"
                                                 }`}
                                         >
                                             <span className={`shrink-0 w-0.5 h-4 rounded-full transition-all duration-300
-                                                ${active ? "bg-volt-500" : "bg-volt-500/20"}`}
+                                                ${active ? "bg-white" : "bg-white/20"}`}
                                             />
                                             {item.label}
                                         </Link>
@@ -450,9 +450,9 @@ export default function Header() {
                                 <Link
                                     href="/cincinnati-web-developer"
                                     onClick={closeDrawer}
-                                    className="flex items-center gap-2 py-3 text-[13px] tracking-normal text-[#8a8a8a] hover:text-volt-400 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
+                                    className="flex items-center gap-2 py-3 text-[13px] tracking-normal text-[#8a8a8a] hover:text-neutral-300 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
                                 >
-                                    <span aria-hidden className="text-volt-500/70">◆</span>
+                                    <span aria-hidden className="text-neutral-500">◆</span>
                                     Cincinnati web developer
                                 </Link>
                             </div>
@@ -470,10 +470,8 @@ export default function Header() {
                                 href="/contact"
                                 onClick={closeDrawer}
                                 className="relative z-10 mt-4 block text-center py-2.5 px-6 tracking-wide text-[13px] font-bold
-                                    text-black bg-volt rounded-sm
-                                   
-                                    hover:shadow-[0_0_32px_rgba(227,245,68,0.5)]
-                                    hover:brightness-110
+                                    text-black bg-volt-500 rounded-sm
+                                    hover:bg-volt-400
                                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt/70
                                     transition-all duration-300"
                             >
@@ -505,7 +503,6 @@ export default function Header() {
                                 priority
                                 className="relative z-10"
                             />
-                            <div className="absolute inset-0 bg-white/[0.04] blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         </div>
 
                         <div className="flex flex-col gap-1 uppercase leading-none whitespace-nowrap">
@@ -521,13 +518,9 @@ export default function Header() {
                                     relative text-volt-500 text-[9px] sm:text-[11px] font-semibold tracking-[0.3em]
                                     transition-all duration-700
                                     ${boot ? "opacity-100" : "opacity-0"}
-                                    animate-[neonBoot_1.6s_ease-out_1]
                                 `}
                             >
                                 Development
-                                <span className="pointer-events-none absolute inset-0 text-volt-500 blur-sm opacity-70 animate-[neonFlicker_2.2s_linear_1]">
-                                    Development
-                                </span>
                             </span>
                         </div>
                     </Link>
@@ -554,18 +547,20 @@ export default function Header() {
                                 <span
                                     className={`transition-all duration-300 ${
                                         servicesActive
-                                            ? "text-volt-500"
-                                            : "group-hover:text-volt-400"
+                                            ? "text-white"
+                                            : "text-neutral-300 group-hover:text-white"
                                     }`}
                                 >
                                     What I Build
                                 </span>
                                 <Chevron open={openMega === "services"} small />
                                 <span
-                                    className={`absolute left-0 -bottom-1 h-0.5 w-full origin-left transition-all duration-300 bg-volt-500
-                                        ${servicesActive || openMega === "services"
-                                            ? "scale-x-100"
-                                            : "scale-x-0 group-hover:scale-x-100"
+                                    className={`absolute left-0 -bottom-1 h-0.5 w-full origin-left transition-all duration-300
+                                        ${servicesActive
+                                            ? "scale-x-100 bg-white"
+                                            : openMega === "services"
+                                                ? "scale-x-100 bg-neutral-500"
+                                                : "scale-x-0 bg-neutral-500 group-hover:scale-x-100"
                                         }`}
                                 />
                             </Link>
@@ -584,73 +579,38 @@ export default function Header() {
                                         : "opacity-0 -translate-y-2 pointer-events-none"
                                     }`}
                             >
-                                <div className="relative overflow-hidden rounded-xl bg-surface-raised border border-neutral-800">
-                                    <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
-
-                                    <div className="relative grid grid-cols-3 gap-0 divide-x divide-volt-500/10">
+                                <MegaPanel
+                                    eyebrow="What I Build"
+                                    title="Services"
+                                    blurb="Custom builds on the platform that fits, then the optimization work that makes them pay off."
+                                    allHref="/services"
+                                    allLabel="All services"
+                                    onNavigate={() => setOpenMega(null)}
+                                >
+                                    <div className="grid grid-cols-3 gap-x-4">
                                         {[
                                             { label: "Development", items: DEV_SERVICES },
                                             { label: "Platforms", items: PLATFORM_SERVICES },
                                             { label: "Optimization", items: OPT_SERVICES },
                                         ].map((group) => (
-                                            <div key={group.label} className="px-6 py-5">
-                                                <h3 className="text-[11px] font-semibold tracking-[0.15em] uppercase text-volt-500/60 mb-3">{group.label}</h3>
-                                                <div className="grid grid-cols-1 gap-0.5">
-                                                    {group.items.map((card) => {
-                                                        const active = isActive(card.href);
-                                                        return (
-                                                            <Link
-                                                                key={card.href}
-                                                                href={card.href}
-                                                                onClick={() => setOpenMega(null)}
-                                                                className={`group/card flex items-baseline justify-between gap-4 rounded-lg px-3 py-2.5 -mx-3 transition-all duration-200
-                                                                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70
-                                                                    ${active ? "bg-volt-500/6" : "hover:bg-volt-500/4"}`}
-                                                            >
-                                                                <div>
-                                                                    <span className={`text-[13px] font-medium transition-colors duration-200 ${active ? "text-volt-400" : "text-[#e5e7eb] group-hover/card:text-volt-400"}`}>
-                                                                        {card.title}
-                                                                    </span>
-                                                                    <span className="block mt-0.5 text-[12px] text-[#777] leading-relaxed">{card.description}</span>
-                                                                </div>
-                                                                <span aria-hidden className="shrink-0 text-volt-500 opacity-0 group-hover/card:opacity-100 transition-opacity duration-200 text-[13px]">→</span>
-                                                            </Link>
-                                                        );
-                                                    })}
-                                                </div>
+                                            <div key={group.label}>
+                                                <h3 className="px-3 pt-2 pb-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-neutral-500">
+                                                    {group.label}
+                                                </h3>
+                                                {group.items.map((card) => (
+                                                    <MenuLink
+                                                        key={card.href}
+                                                        href={card.href}
+                                                        title={card.title}
+                                                        description={card.description}
+                                                        active={isActive(card.href)}
+                                                        onNavigate={() => setOpenMega(null)}
+                                                    />
+                                                ))}
                                             </div>
                                         ))}
                                     </div>
-
-                                    {/* Footer */}
-                                    <div className="relative border-t border-neutral-800 mx-6 py-3 flex items-center justify-between">
-                                        <div className="flex items-center gap-5">
-                                            <Link
-                                                href="/services"
-                                                onClick={() => setOpenMega(null)}
-                                                className="inline-flex items-center gap-1.5 text-[12px] text-[#b8b8b8] hover:text-volt-400 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
-                                            >
-                                                All services →
-                                            </Link>
-                                            <span className="w-px h-3 bg-white/[0.04]" />
-                                            <Link
-                                                href="/cincinnati-web-developer"
-                                                onClick={() => setOpenMega(null)}
-                                                className="inline-flex items-center gap-1.5 text-[12px] text-[#9a9a9a] hover:text-volt-400 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
-                                            >
-                                                <span aria-hidden className="text-volt-500">◆</span>
-                                                Cincinnati web developer
-                                            </Link>
-                                        </div>
-                                        <Link
-                                            href="/contact"
-                                            onClick={() => setOpenMega(null)}
-                                            className="text-[12px] text-volt-500 hover:text-volt-400 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
-                                        >
-                                            Schedule a call →
-                                        </Link>
-                                    </div>
-                                </div>
+                                </MegaPanel>
                             </div>
                         </div>
 
@@ -670,18 +630,20 @@ export default function Header() {
                                 <span
                                     className={`transition-all duration-300 ${
                                         industriesActive
-                                            ? "text-volt-500"
-                                            : "group-hover:text-volt-400"
+                                            ? "text-white"
+                                            : "text-neutral-300 group-hover:text-white"
                                     }`}
                                 >
                                     Who It&apos;s For
                                 </span>
                                 <Chevron open={openMega === "industries"} small />
                                 <span
-                                    className={`absolute left-0 -bottom-1 h-0.5 w-full origin-left transition-all duration-300 bg-volt-500
-                                        ${industriesActive || openMega === "industries"
-                                            ? "scale-x-100"
-                                            : "scale-x-0 group-hover:scale-x-100"
+                                    className={`absolute left-0 -bottom-1 h-0.5 w-full origin-left transition-all duration-300
+                                        ${industriesActive
+                                            ? "scale-x-100 bg-white"
+                                            : openMega === "industries"
+                                                ? "scale-x-100 bg-neutral-500"
+                                                : "scale-x-0 bg-neutral-500 group-hover:scale-x-100"
                                         }`}
                                 />
                             </Link>
@@ -700,55 +662,27 @@ export default function Header() {
                                         : "opacity-0 -translate-y-2 pointer-events-none"
                                     }`}
                             >
-                                <div className="relative overflow-hidden rounded-xl bg-surface-raised border border-neutral-800">
-                                    <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
-
-                                    <div className="p-5">
-                                        <div className="relative grid grid-cols-3 gap-3">
-                                            {INDUSTRY_LINKS.map((s) => {
-                                                const active = pathname === s.href;
-                                                return (
-                                                    <Link
-                                                        key={s.label}
-                                                        href={s.href}
-                                                        onClick={() => setOpenMega(null)}
-                                                        className={`group/ind flex flex-col gap-2 rounded-lg border p-5 transition-all duration-200
-                                                            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70
-                                                            ${active
-                                                                ? "border-volt-500/50 bg-volt-500/6"
-                                                                : "border-white/5 hover:border-volt-500/40 hover:bg-volt-500/4"
-                                                            }`}
-                                                    >
-                                                        <span className="flex items-center gap-1 text-[13px] font-semibold text-[#e5e7eb] group-hover/ind:text-volt-400 transition-colors duration-200">
-                                                            {s.label}
-                                                            <span aria-hidden className="opacity-0 -translate-x-1 group-hover/ind:opacity-100 group-hover/ind:translate-x-0 transition-all duration-200 text-volt-500">→</span>
-                                                        </span>
-                                                        <span className="block text-[13px] leading-relaxed text-[#9a9a9a]">
-                                                            {s.description}
-                                                        </span>
-                                                    </Link>
-                                                );
-                                            })}
-                                        </div>
+                                <MegaPanel
+                                    eyebrow="Who It&apos;s For"
+                                    title="Industries"
+                                    blurb="Websites shaped around how buyers in each industry research, compare and get in touch."
+                                    allHref="/industries"
+                                    allLabel="All industries"
+                                    onNavigate={() => setOpenMega(null)}
+                                >
+                                    <div className="grid grid-cols-2 gap-x-4">
+                                        {INDUSTRY_LINKS.map((s) => (
+                                            <MenuLink
+                                                key={s.href}
+                                                href={s.href}
+                                                title={s.label}
+                                                description={s.description}
+                                                active={pathname === s.href}
+                                                onNavigate={() => setOpenMega(null)}
+                                            />
+                                        ))}
                                     </div>
-                                    {/* Footer */}
-                                    <div className="relative border-t border-neutral-800 mx-5 py-3 flex items-center justify-between">
-                                        <Link
-                                            href="/industries"
-                                            onClick={() => setOpenMega(null)}
-                                            className="inline-flex items-center gap-1.5 text-[12px] text-[#b8b8b8] hover:text-volt-400 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
-                                        >
-                                            All industries →
-                                        </Link>
-                                        <Link
-                                            href="/contact"
-                                            onClick={() => setOpenMega(null)}
-                                            className="text-[12px] text-volt-500 hover:text-volt-400 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
-                                        >
-                                            Schedule a call →
-                                        </Link>
-                                    </div>
-                                </div>
+                                </MegaPanel>
                             </div>
                         </div>
 
@@ -760,17 +694,17 @@ export default function Header() {
                                     <span
                                         className={`transition-all duration-300 ${
                                             active
-                                                ? "text-volt-500"
-                                                : "group-hover:text-volt-400"
+                                                ? "text-white"
+                                                : "text-neutral-300 group-hover:text-white"
                                         }`}
                                     >
                                         {item.label}
                                     </span>
                                     <span
-                                        className={`absolute left-0 -bottom-1 h-0.5 w-full origin-left transition-all duration-300 bg-volt-500
+                                        className={`absolute left-0 -bottom-1 h-0.5 w-full origin-left transition-all duration-300
                                             ${active
-                                                ? "scale-x-100"
-                                                : "scale-x-0 group-hover:scale-x-100"
+                                                ? "scale-x-100 bg-white"
+                                                : "scale-x-0 bg-neutral-500 group-hover:scale-x-100"
                                             }`}
                                     />
                                 </Link>
@@ -783,8 +717,8 @@ export default function Header() {
                             className={`px-3.5 py-1.5 tracking-[0.02em] text-[12px] font-bold rounded-sm transition-all duration-300
                                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt/70
                                 ${isActive("/contact")
-                                    ? "bg-volt text-black"
-                                    : "bg-volt text-black hover:brightness-110 hover:shadow-[0_0_22px_rgba(227,245,68,0.5)]"
+                                    ? "bg-volt-500 text-black"
+                                    : "bg-volt-500 text-black hover:bg-volt-400"
                                 }`}
                         >
                             Schedule a call
@@ -798,7 +732,7 @@ export default function Header() {
                         aria-label="Open menu"
                         aria-expanded={mobileOpen}
                         style={{ touchAction: "manipulation" }}
-                        className="lg:hidden p-3 text-volt-500 border border-neutral-800 rounded-sm hover:shadow-[0_0_20px_rgba(227,245,68,0.65),inset_0_0_12px_rgba(227,245,68,0.1)] hover:border-volt-400 hover:text-volt-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 active:scale-95 transition-all duration-200 cursor-pointer"
+                        className="lg:hidden p-3 text-white border border-neutral-800 rounded-sm hover:shadow-[0_0_20px_rgba(227,245,68,0.65),inset_0_0_12px_rgba(255,255,255,0.05)] hover:border-neutral-500 hover:text-neutral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 active:scale-95 transition-all duration-200 cursor-pointer"
                     >
                         <div className="space-y-1.5">
                             <span className="block h-0.5 w-7 bg-current" />
@@ -813,6 +747,98 @@ export default function Header() {
 }
 
 /* ------------------------------- Chevron icon ------------------------------- */
+// ─── Megamenu building blocks ───────────────────────────────────────────────
+// Both desktop menus share one layout: an intro column, a grid of links, and
+// a single footer row. Hover states are neutral; volt marks only the current
+// page and the one call-to-action button.
+
+function MegaPanel({
+    eyebrow,
+    title,
+    blurb,
+    allHref,
+    allLabel,
+    onNavigate,
+    children,
+}: {
+    eyebrow: string;
+    title: string;
+    blurb: string;
+    allHref: string;
+    allLabel: string;
+    onNavigate: () => void;
+    children: React.ReactNode;
+}) {
+    return (
+        <div className="overflow-hidden rounded-xl border border-neutral-800 bg-surface-raised shadow-2xl shadow-black/50">
+            <div className="grid grid-cols-[240px_1fr]">
+                <div className="flex flex-col border-r border-neutral-800 bg-surface p-6">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-neutral-500">{eyebrow}</p>
+                    <p className="mt-2 text-lg font-semibold text-white">{title}</p>
+                    <p className="mt-2 text-[13px] leading-relaxed text-neutral-400">{blurb}</p>
+                    <Link
+                        href={allHref}
+                        onClick={onNavigate}
+                        className="mt-auto inline-flex w-fit items-center gap-1.5 pt-6 text-[13px] font-semibold text-white hover:text-neutral-300 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
+                    >
+                        {allLabel} <span aria-hidden>→</span>
+                    </Link>
+                </div>
+                <div className="p-4">{children}</div>
+            </div>
+            <div className="flex items-center justify-between border-t border-neutral-800 px-6 py-3">
+                <Link
+                    href="/cincinnati-web-developer"
+                    onClick={onNavigate}
+                    className="text-[12px] text-neutral-500 hover:text-neutral-200 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
+                >
+                    Based in Cincinnati · Serving clients nationwide
+                </Link>
+                <Link
+                    href="/contact"
+                    onClick={onNavigate}
+                    className="rounded-md bg-volt-500 px-3.5 py-1.5 text-[12px] font-bold text-black hover:bg-volt-400 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
+                >
+                    Schedule a call
+                </Link>
+            </div>
+        </div>
+    );
+}
+
+function MenuLink({
+    href,
+    title,
+    description,
+    active,
+    onNavigate,
+}: {
+    href: string;
+    title: string;
+    description: string;
+    active: boolean;
+    onNavigate: () => void;
+}) {
+    return (
+        <Link
+            href={href}
+            onClick={onNavigate}
+            aria-current={active ? "page" : undefined}
+            className={`group/item block rounded-lg px-3 py-2.5 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 ${
+                active ? "bg-white/[0.06]" : "hover:bg-white/[0.05]"
+            }`}
+        >
+            <span className="flex items-center gap-2 text-[13px] font-medium text-neutral-100 group-hover/item:text-white">
+                {title}
+                {active && <span className="h-1.5 w-1.5 rounded-full bg-neutral-400" aria-hidden />}
+            </span>
+            <span className="mt-0.5 block text-[12px] leading-relaxed text-neutral-500 group-hover/item:text-neutral-400">
+                {description}
+            </span>
+        </Link>
+    );
+}
+
 function Chevron({ open, small = false }: { open: boolean; small?: boolean }) {
     return (
         <svg
@@ -823,7 +849,7 @@ function Chevron({ open, small = false }: { open: boolean; small?: boolean }) {
             strokeWidth={2.5}
             strokeLinecap="round"
             strokeLinejoin="round"
-            className={`${small ? "w-3 h-3" : "w-4 h-4"} shrink-0 transition-transform duration-300 ${open ? "rotate-180 text-volt-500" : ""}`}
+            className={`${small ? "w-3 h-3" : "w-4 h-4"} shrink-0 transition-transform duration-300 ${open ? "rotate-180 text-white" : ""}`}
         >
             <polyline points="6 9 12 15 18 9" />
         </svg>

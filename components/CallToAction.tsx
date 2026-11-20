@@ -47,7 +47,7 @@ export default function CallToAction() {
 
                         <Link
                             href="/work"
-                            className="group inline-flex w-full sm:w-auto items-center justify-center rounded-lg border-2 border-neutral-800 bg-white/[0.04] px-8 sm:px-12 py-5 text-base font-bold uppercase tracking-wide text-volt-400 backdrop-blur-sm transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white hover:shadow-xl hover:shadow-volt-500/20 hover:scale-105"
+                            className="group inline-flex w-full sm:w-auto items-center justify-center rounded-lg border-2 border-neutral-800 bg-white/[0.04] px-8 sm:px-12 py-5 text-base font-bold uppercase tracking-wide text-white backdrop-blur-sm transition-all duration-300 hover:border-neutral-500 hover:bg-white/15 hover:text-white hover:shadow-xl hover:shadow-volt-500/20 hover:scale-105"
                         >
                             <span className="flex items-center gap-2">
                                 View My Work
@@ -60,7 +60,7 @@ export default function CallToAction() {
 
                     {/* Trust line */}
                     <div className="mt-4 inline-flex items-center gap-3 rounded-full border border-neutral-800 bg-white/[0.04] px-5 py-2.5 backdrop-blur-sm">
-                        <svg className="w-5 h-5 text-volt-400" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
                         <p className="text-sm font-medium text-[#e5e7eb] tracking-wide">

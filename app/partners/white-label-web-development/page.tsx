@@ -256,7 +256,7 @@ export default function WhiteLabelWebDevelopmentPage() {
             {visibility.map((row) => (
               <div
                 key={row.surface}
-                className="grid grid-cols-1 md:grid-cols-[220px_1fr_1fr] gap-4 rounded-xl border border-neutral-800 overflow-hidden group hover:border-volt-500/25 transition-colors duration-300"
+                className="grid grid-cols-1 md:grid-cols-[220px_1fr_1fr] gap-4 rounded-xl border border-neutral-800 overflow-hidden group hover:border-neutral-500 transition-colors duration-300"
               >
                 <div className="p-5 bg-neutral-950 text-sm font-semibold text-white leading-relaxed">
                   {row.surface}
@@ -293,7 +293,7 @@ export default function WhiteLabelWebDevelopmentPage() {
             {deliverables.map((item) => (
               <div key={item.title} className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8">
                 <div className="w-8 h-8 rounded-full bg-white/[0.04] flex items-center justify-center mb-4">
-                  <svg className="w-4 h-4 text-volt-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
@@ -306,7 +306,7 @@ export default function WhiteLabelWebDevelopmentPage() {
       </section>
 
       {/* Timeline */}
-      <section className="py-20 border-b border-neutral-800">
+      <section className="bg-charcoal py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
@@ -340,7 +340,7 @@ export default function WhiteLabelWebDevelopmentPage() {
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <h2 className="text-2xl font-bold text-white mb-8">Related</h2>
           <div className="flex flex-wrap gap-4">
-            <Link href="/partners" className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200">
+            <Link href="/partners" className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white hover:border-neutral-500 hover:bg-white/20 transition-all duration-200">
               Agency &amp; Partner Services →
             </Link>
             <Link href="/partners/seo-fulfillment" className="rounded-lg border border-neutral-700 bg-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200">

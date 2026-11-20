@@ -83,13 +83,13 @@ export default function ContactForm() {
             <button
                 type="submit"
                 disabled={loading || !token}
-                className="border border-neutral-800 text-volt-400 px-6 py-3 uppercase tracking-widest shadow-[0_0_10px_rgba(34,211,238,0.3)] hover:bg-volt-400 hover:text-black hover:shadow-[0_0_20px_rgba(34,211,238,0.6)] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="border border-neutral-800 text-white px-6 py-3 uppercase tracking-widest shadow-[0_0_10px_rgba(34,211,238,0.3)] hover:bg-volt-400 hover:text-black hover:shadow-[0_0_20px_rgba(34,211,238,0.6)] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
                 {loading ? "Sending…" : "Send Message"}
             </button>
 
             {success === true && (
-                <p className="text-volt-400 text-sm">
+                <p className="text-white text-sm">
                     Message sent successfully.
                 </p>
             )}

@@ -283,7 +283,7 @@ export default function ConversionOptimizationPage() {
                   <div className="text-white font-semibold">{p.symptom}</div>
                 </div>
                 <div className="bg-neutral-900/40 p-6">
-                  <div className="text-xs uppercase tracking-widest text-volt-500/60 mb-2">Root Cause</div>
+                  <div className="text-xs uppercase tracking-widest text-neutral-500 mb-2">Root Cause</div>
                   <div className="text-neutral-400 text-sm leading-relaxed">{p.cause}</div>
                 </div>
               </div>
@@ -293,7 +293,7 @@ export default function ConversionOptimizationPage() {
       </section>
 
       {/* Process */}
-      <section className="py-20 border-b border-neutral-800">
+      <section className="bg-charcoal py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
@@ -342,12 +342,12 @@ export default function ConversionOptimizationPage() {
                   </div>
                   <div className="p-6 text-center">
                     <div className="text-xs uppercase tracking-widest text-neutral-400 mb-2">After</div>
-                    <div className="text-3xl font-black text-volt-400">{item.after}</div>
+                    <div className="text-3xl font-black text-white">{item.after}</div>
                   </div>
                 </div>
                 <div className="px-6 pb-4 border-t border-neutral-800 pt-3 text-center">
                   {'caseStudyHref' in item && item.caseStudyHref ? (
-                    <Link href={item.caseStudyHref} className="text-xs text-volt-500 hover:text-volt-300 transition-colors duration-200">
+                    <Link href={item.caseStudyHref} className="text-xs text-white hover:text-neutral-300 transition-colors duration-200">
                       {item.note}
                     </Link>
                   ) : (
@@ -375,7 +375,7 @@ export default function ConversionOptimizationPage() {
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <h2 className="text-2xl font-bold text-white mb-8">Related</h2>
           <div className="flex flex-wrap gap-4">
-            <Link href="/work/ecommerce-website-redesign-increase-aov" className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200">
+            <Link href="/work/ecommerce-website-redesign-increase-aov" className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white hover:border-neutral-500 hover:bg-white/20 transition-all duration-200">
               See the Project: +164% AOV in 7 Days →
             </Link>
             <Link href="/services/small-business-website-design" className="rounded-lg border border-neutral-700 bg-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200">

@@ -71,7 +71,7 @@ export default function ContactPage() {
           <div className="max-w-xl">
             <div className="flex items-center gap-6 mb-6">
               <div>
-                <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono">
+                <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-white font-mono">
                   // About
                 </span>
                 <h2 className="text-3xl md:text-5xl font-bold text-white">

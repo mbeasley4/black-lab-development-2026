@@ -297,14 +297,14 @@ export default function PartnersPage() {
             {valueProps.map((prop) => (
               <div
                 key={prop.title}
-                className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8 transition-colors duration-200 hover:border-volt-400"
+                className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8 transition-colors duration-200 hover:border-neutral-500"
               >
-                <h3 className="text-lg font-bold text-volt-400 mb-1">{prop.title}</h3>
+                <h3 className="text-lg font-bold text-white mb-1">{prop.title}</h3>
                 <p className="text-xs uppercase tracking-widest text-neutral-400 mb-5">{prop.detail}</p>
                 <ul className="space-y-2">
                   {prop.points.map((point) => (
                     <li key={point} className="flex items-start gap-2 text-sm text-neutral-400">
-                      <svg className="w-4 h-4 shrink-0 mt-0.5 text-volt-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-4 h-4 shrink-0 mt-0.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                       </svg>
                       {point}
@@ -318,7 +318,7 @@ export default function PartnersPage() {
       </section>
 
       {/* How it works */}
-      <section className="py-20 border-b border-neutral-800">
+      <section className="bg-charcoal py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
@@ -400,13 +400,13 @@ export default function PartnersPage() {
               <Link
                 key={card.href}
                 href={card.href}
-                className="group rounded-xl border border-neutral-800 bg-neutral-900/50 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-volt-500/50 hover:shadow-xl flex flex-col"
+                className="group rounded-xl border border-neutral-800 bg-neutral-900/50 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-neutral-500 hover:shadow-xl flex flex-col"
               >
-                <h3 className="text-lg font-bold text-white mb-3 group-hover:text-volt-400 transition-colors duration-200">
+                <h3 className="text-lg font-bold text-white mb-3 group-hover:text-white transition-colors duration-200">
                   {card.title}
                 </h3>
                 <p className="text-sm text-neutral-400 leading-relaxed grow">{card.description}</p>
-                <div className="flex items-center gap-2 mt-5 text-sm font-semibold text-volt-400">
+                <div className="flex items-center gap-2 mt-5 text-sm font-semibold text-white">
                   <span>Learn more</span>
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />

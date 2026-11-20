@@ -52,7 +52,7 @@ function LabCard({ step }: { step: (typeof steps)[number] }) {
       />
 
       {/* Giant background letter */}
-      <div className="absolute -top-2 -right-2 text-[8rem] font-black font-mono text-volt-500/5 group-hover:text-volt-500/15 transition-all duration-500 leading-none select-none pointer-events-none group-hover:scale-110 origin-top-right">
+      <div className="absolute -top-2 -right-2 text-[8rem] font-black font-mono text-white/[0.06] group-hover:text-white/15 transition-all duration-500 leading-none select-none pointer-events-none group-hover:scale-110 origin-top-right">
         {step.letter}
       </div>
 
@@ -61,9 +61,9 @@ function LabCard({ step }: { step: (typeof steps)[number] }) {
           <span className="text-6xl font-black font-mono text-white leading-none group-hover:scale-110 transition-all duration-300 origin-left">
             {step.letter}
           </span>
-          <div className="h-px flex-1 bg-white/[0.04] group-hover:bg-volt-500/50 transition-all duration-300 group-hover:shadow-[0_0_8px_rgba(227,245,68,0.3)]" />
+          <div className="h-px flex-1 bg-white/[0.04] group-hover:bg-white/50 transition-all duration-300 group-hover:shadow-[0_0_8px_rgba(255,255,255,0.15)]" />
         </div>
-        <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-volt-50 transition-colors duration-300">
+        <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-white transition-colors duration-300">
           {step.title}
         </h3>
         <p className="text-sm text-neutral-400 leading-relaxed group-hover:text-neutral-300 transition-colors duration-300">
@@ -72,7 +72,7 @@ function LabCard({ step }: { step: (typeof steps)[number] }) {
       </div>
 
       {/* Bottom edge glow on hover */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-white/[0.04] group-hover:bg-volt-500/40 transition-all duration-500 group-hover:shadow-[0_0_12px_rgba(227,245,68,0.4)]" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-white/[0.04] group-hover:bg-white/40 transition-all duration-500 group-hover:shadow-[0_0_12px_rgba(255,255,255,0.2)]" />
     </div>
   );
 }
@@ -99,7 +99,7 @@ export default function LabFramework({ compact = false }: LabFrameworkProps) {
               {["L", "A", "B"].map((char) => (
                 <span
                   key={char}
-                  className="text-volt-400 hover: hover:scale-110 transition-all duration-200 inline-block cursor-default"
+                  className="text-white hover: hover:scale-110 transition-all duration-200 inline-block cursor-default"
                 >
                   {char}
                 </span>

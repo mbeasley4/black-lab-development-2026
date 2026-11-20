@@ -36,7 +36,7 @@ export default function DemoSection() {
         {/* Header */}
         <div className="mb-20 text-center">
           <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-neutral-300 mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-volt-500" />
+            <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
             Live Experiments
           </span>
           <h2 className="text-5xl font-extrabold tracking-tight text-white">
@@ -65,7 +65,7 @@ export default function DemoSection() {
               >
                 {/* Image */}
                 <div className={`group ${isReversed ? "md:order-2" : "md:order-1"}`}>
-                  <div className="relative aspect-16/10 overflow-hidden rounded-2xl border border-neutral-800 bg-white shadow-2xl transition-all duration-300 group-hover:border-volt-500/40 group-hover:shadow-[0_0_70px_rgba(227,245,68,0.15)]">
+                  <div className="relative aspect-16/10 overflow-hidden rounded-2xl border border-neutral-800 bg-white shadow-2xl transition-all duration-300 group-hover:border-neutral-500 group-hover:shadow-[0_0_70px_rgba(255,255,255,0.08)]">
                     <Image
                       src={demo.image}
                       alt={demo.title}
@@ -74,18 +74,18 @@ export default function DemoSection() {
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     {/* Amber tint on hover */}
-                    <div className="absolute inset-0 bg-white/[0.04] group-hover:bg-volt-950/5 transition-all duration-400 rounded-2xl" />
+                    <div className="absolute inset-0 bg-white/[0.04] group-hover:bg-white/5 transition-all duration-400 rounded-2xl" />
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className={`${isReversed ? "md:order-1" : "md:order-2"} relative`}>
                   {/* Ghost number */}
-                  <span className="absolute -top-8 -left-1 text-8xl font-black text-volt-500/6 select-none pointer-events-none leading-none">
+                  <span className="absolute -top-8 -left-1 text-8xl font-black text-white/[0.06] select-none pointer-events-none leading-none">
                     {num}
                   </span>
 
-                  <span className="inline-flex items-center rounded-full bg-white/[0.04] border border-neutral-800 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-volt-400">
+                  <span className="inline-flex items-center rounded-full bg-white/[0.04] border border-neutral-800 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-white">
                     {demo.badge}
                   </span>
 
@@ -101,7 +101,7 @@ export default function DemoSection() {
                     href={demo.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group/btn mt-8 inline-flex items-center gap-2.5 rounded-lg bg-volt-500 px-6 py-3 text-sm font-semibold text-black transition-all duration-200 hover:bg-volt-400 hover:shadow-[0_0_30px_rgba(227,245,68,0.40)]"
+                    className="group/btn mt-8 inline-flex items-center gap-2.5 rounded-lg bg-volt-500 px-6 py-3 text-sm font-semibold text-black transition-all duration-200 hover:bg-volt-400 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
                   >
                     View Live Demo
                     <span className="transition-transform duration-200 group-hover/btn:translate-x-1">

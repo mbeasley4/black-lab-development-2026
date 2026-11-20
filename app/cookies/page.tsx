@@ -96,7 +96,7 @@ function CookieTable({
         <tbody className="divide-y divide-white/10">
           {rows.map((row) => (
             <tr key={row.name}>
-              <td className="px-4 py-3 align-top font-mono text-xs text-volt-400">{row.name}</td>
+              <td className="px-4 py-3 align-top font-mono text-xs text-white">{row.name}</td>
               <td className="px-4 py-3 align-top text-neutral-300">{row.provider}</td>
               <td className="px-4 py-3 align-top text-neutral-400">{row.purpose}</td>
               <td className="px-4 py-3 align-top text-neutral-400">{row.storage}</td>
@@ -128,7 +128,7 @@ export default function CookiePolicyPage() {
           technologies on blacklabdev.com (the &ldquo;Site&rdquo;), and complements our{" "}
           <a href="/privacy">Privacy Policy</a>. It's more technical and specific than the Privacy
           Policy's cookie section — if you just want to change your preferences, use{" "}
-          <CookieSettingsButton className="font-medium text-volt-400 underline underline-offset-4 hover:text-volt-300">
+          <CookieSettingsButton className="font-medium text-white underline underline-offset-4 hover:text-neutral-300">
             Manage Cookie Preferences
           </CookieSettingsButton>{" "}
           in the footer.
@@ -215,7 +215,7 @@ export default function CookiePolicyPage() {
         <h2 id="managing-cookies">Managing Your Preferences</h2>
         <p>
           You can change your cookie choice at any time by clicking{" "}
-          <CookieSettingsButton className="font-medium text-volt-400 underline underline-offset-4 hover:text-volt-300">
+          <CookieSettingsButton className="font-medium text-white underline underline-offset-4 hover:text-neutral-300">
             Manage Cookie Preferences
           </CookieSettingsButton>{" "}
           in the footer of any page. This reopens the same panel you saw on your first visit, with

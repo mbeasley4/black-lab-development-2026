@@ -180,8 +180,8 @@ export default function EcommerceIndustryPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {deliverables.map((item) => (
-              <div key={item.title} className="p-6 rounded-xl border border-neutral-800/60 bg-neutral-900/40 hover:border-volt-500/30 hover:bg-volt-500/5 transition-all duration-300">
-                <div className="w-6 h-px bg-volt-500 mb-4" />
+              <div key={item.title} className="p-6 rounded-xl border border-neutral-800/60 bg-neutral-900/40 hover:border-neutral-500 hover:bg-white/5 transition-all duration-300">
+                <div className="w-6 h-px bg-neutral-600 mb-4" />
                 <h3 className="text-base font-semibold text-white mb-2">{item.title}</h3>
                 <p className="text-sm text-neutral-400 leading-relaxed">{item.description}</p>
               </div>
@@ -200,7 +200,7 @@ export default function EcommerceIndustryPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {clients.map((c) => (
               <div key={c.name} className="p-6 rounded-xl border border-neutral-800/60 bg-neutral-900/30">
-                <p className="text-sm font-semibold text-volt-500 mb-2">{c.name}</p>
+                <p className="text-sm font-semibold text-white mb-2">{c.name}</p>
                 <p className="text-sm text-neutral-400 leading-relaxed">{c.detail}</p>
               </div>
             ))}
@@ -209,7 +209,7 @@ export default function EcommerceIndustryPage() {
       </section>
 
       {/* Cross-links */}
-      <section className="py-16 border-b border-neutral-800/50">
+      <section className="bg-charcoal py-16 border-b border-neutral-800/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex flex-col justify-between gap-4 p-8 rounded-xl border border-neutral-800 bg-white/[0.04]">
@@ -220,7 +220,7 @@ export default function EcommerceIndustryPage() {
               </div>
               <Link
                 href="/services/conversion-optimization"
-                className="inline-flex items-center gap-2 text-sm font-bold text-volt-500 hover:text-volt-400 transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-neutral-300 transition-colors"
               >
                 View Service
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

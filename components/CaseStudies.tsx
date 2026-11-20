@@ -57,18 +57,18 @@ const colorClasses = {
         border: "group-hover:border-volt-500/50",
         glow: "group-hover:shadow-volt-500/25",
         overlay: "from-surface-raised/80 via-neutral-950/90 to-black",
-        accent: "bg-volt-500",
-        ctaText: "text-volt-500",
-        titleHover: "group-hover:text-volt-400",
+        accent: "bg-neutral-600",
+        ctaText: "text-white",
+        titleHover: "group-hover:text-white",
         bottomLine: "group-hover:via-volt-500",
     },
     blue: {
         border: "group-hover:border-volt-500/50",
         glow: "group-hover:shadow-volt-500/25",
         overlay: "from-surface-raised/80 via-neutral-950/90 to-black",
-        accent: "bg-volt-500",
-        ctaText: "text-volt-400",
-        titleHover: "group-hover:text-volt-300",
+        accent: "bg-neutral-600",
+        ctaText: "text-white",
+        titleHover: "group-hover:text-white",
         bottomLine: "group-hover:via-volt-500",
     },
 };
@@ -159,7 +159,7 @@ export default function CaseStudies() {
                 <div className="mt-16 text-center">
                     <Link
                         href="/work"
-                        className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 bg-white/[0.04] px-8 py-4 text-sm font-semibold uppercase tracking-wide text-volt-400 transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white hover:shadow-lg hover:shadow-volt-500/20"
+                        className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 bg-white/[0.04] px-8 py-4 text-sm font-semibold uppercase tracking-wide text-white transition-all duration-300 hover:border-neutral-500 hover:bg-white/15 hover:text-white hover:shadow-lg hover:shadow-volt-500/20"
                     >
                         View All Work
                         <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

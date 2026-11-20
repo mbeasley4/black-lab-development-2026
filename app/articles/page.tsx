@@ -216,7 +216,7 @@ export default async function ArticlesPage({
           {/* Section eyebrow */}
           <div className="flex items-center gap-6 mb-10 md:mb-20">
             <div>
-              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono">
+              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-white font-mono">
                 // Articles
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-white">
@@ -232,7 +232,7 @@ export default async function ArticlesPage({
               <AnimatedCard key={a._id} delay={index * 80}>
                 <Link
                   href={`/articles/${a.slug.current}`}
-                  className="h-full group flex flex-col border border-neutral-800 rounded-xl overflow-hidden bg-neutral-950 transition-all duration-300 hover:border-volt-500/40 hover:shadow-[0_0_40px_rgba(227,245,68,0.08)]"
+                  className="h-full group flex flex-col border border-neutral-800 rounded-xl overflow-hidden bg-neutral-950 transition-all duration-300 hover:border-neutral-500 hover:shadow-[0_0_40px_rgba(255,255,255,0.04)]"
                 >
                   {/* Top accent line */}
                   <div className="h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-volt-500/60 transition-all duration-500" />
@@ -252,13 +252,13 @@ export default async function ArticlesPage({
                     {a.publishedAt && (
                       <time
                         dateTime={new Date(a.publishedAt).toISOString()}
-                        className="block mb-2 text-xs uppercase tracking-widest text-volt-500/50"
+                        className="block mb-2 text-xs uppercase tracking-widest text-neutral-500"
                       >
                         {formatDate(a.publishedAt)}
                       </time>
                     )}
 
-                    <h2 className="text-xl font-medium mb-3 text-neutral-100 group-hover:text-volt-400 transition-colors duration-200">
+                    <h2 className="text-xl font-medium mb-3 text-neutral-100 group-hover:text-white transition-colors duration-200">
                       {a.title}
                     </h2>
 
@@ -267,7 +267,7 @@ export default async function ArticlesPage({
                     </p>
 
                     {/* Read indicator */}
-                    <div className="mt-5 pt-4 border-t border-neutral-800/60 flex items-center gap-1 text-xs font-medium text-volt-500/0 group-hover:text-volt-500 transition-colors duration-300">
+                    <div className="mt-5 pt-4 border-t border-neutral-800/60 flex items-center gap-1 text-xs font-medium text-neutral-500 group-hover:text-white transition-colors duration-300">
                       Read article
                       <span className="inline-block translate-x-0 group-hover:translate-x-1 transition-transform duration-200">→</span>
                     </div>

@@ -242,7 +242,7 @@ export default function ServicesPage() {
               },
             ].map((s) => {
               const border = s.color === "volt" ? "hover:border-volt-500/50" : "hover:border-volt-500/50";
-              const text = s.color === "volt" ? "text-volt-500" : "text-volt-400";
+              const text = s.color === "volt" ? "text-white" : "text-neutral-300";
               return (
                 <Link
                   key={s.label}
@@ -281,7 +281,7 @@ export default function ServicesPage() {
           {/* Section header */}
           <div className="flex items-center gap-6 mb-6 md:mb-9">
             <div>
-              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono">
+              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-white font-mono">
                 // Services
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-white">
@@ -303,7 +303,7 @@ export default function ServicesPage() {
               >
                 {/* Giant ghost number */}
                 <div
-                  className={`absolute text-[18rem] md:text-[22rem] font-black font-mono text-volt-500/3 pointer-events-none leading-none select-none top-0 ${
+                  className={`absolute text-[18rem] md:text-[22rem] font-black font-mono text-white/[0.06] pointer-events-none leading-none select-none top-0 ${
                     index % 2 === 1 ? "-right-4 text-right" : "-left-4"
                   }`}
                   aria-hidden="true"
@@ -331,7 +331,7 @@ export default function ServicesPage() {
 
                 {/* Image */}
                 <div
-                  className={`group relative h-95 w-full rounded-xl overflow-hidden border border-neutral-800 transition-all duration-500 hover:border-volt-500/50 hover:shadow-[0_0_100px_rgba(227,245,68,0.20)] ${ index % 2 === 1 ?"lg:order-1" : ""
+                  className={`group relative h-95 w-full rounded-xl overflow-hidden border border-neutral-800 transition-all duration-500 hover:border-neutral-500 hover:shadow-[0_0_100px_rgba(255,255,255,0.1)] ${ index % 2 === 1 ?"lg:order-1" : ""
                   }`}
                 >
                   <Image
@@ -354,13 +354,13 @@ export default function ServicesPage() {
                   {/* Bottom accent line */}
                   <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-volt-500/50 transition-all duration-500" />
                   {/* Corner glow */}
-                  <div className="absolute top-0 right-0 w-40 h-40 bg-white/[0.04] blur-3xl rounded-full group-hover:bg-volt-500/25 transition-all duration-500" />
-                  <div className="absolute bottom-0 left-0 w-28 h-28 bg-white/[0.04] blur-2xl rounded-full group-hover:bg-volt-500/20 transition-all duration-500" />
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-white/[0.04] blur-3xl rounded-full group-hover:bg-white/25 transition-all duration-500" />
+                  <div className="absolute bottom-0 left-0 w-28 h-28 bg-white/[0.04] blur-2xl rounded-full group-hover:bg-white/20 transition-all duration-500" />
                   {/* Corner brackets */}
-                  <div className="absolute top-3 left-3 w-5 h-5 border-t-2 border-l-2 border-neutral-800 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
-                  <div className="absolute top-3 right-3 w-5 h-5 border-t-2 border-r-2 border-neutral-800 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
-                  <div className="absolute bottom-3 left-3 w-5 h-5 border-b-2 border-l-2 border-neutral-800 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
-                  <div className="absolute bottom-3 right-3 w-5 h-5 border-b-2 border-r-2 border-neutral-800 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute top-3 left-3 w-5 h-5 border-t-2 border-l-2 border-neutral-800 group-hover:border-neutral-500 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute top-3 right-3 w-5 h-5 border-t-2 border-r-2 border-neutral-800 group-hover:border-neutral-500 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute bottom-3 left-3 w-5 h-5 border-b-2 border-l-2 border-neutral-800 group-hover:border-neutral-500 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
+                  <div className="absolute bottom-3 right-3 w-5 h-5 border-b-2 border-r-2 border-neutral-800 group-hover:border-neutral-500 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
                   {/* Service label on hover */}
                   <div className="absolute bottom-5 left-5 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-400">
                     <span className="text-xs font-mono tracking-[0.2em] uppercase text-neutral-400">
@@ -374,7 +374,7 @@ export default function ServicesPage() {
         </div>
       </section>
       {/* ================= PROCESS ================= */}
-      <section className="py-16 md:py-24 border-t border-neutral-800 bg-surface relative overflow-hidden">
+      <section className="bg-charcoal py-16 md:py-24 border-t border-neutral-800 relative overflow-hidden">
         {/* Ambient glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-48 bg-white/[0.04] blur-[100px] pointer-events-none" />
 
@@ -382,7 +382,7 @@ export default function ServicesPage() {
           {/* Section header */}
           <div className="flex items-center gap-6 mb-12 md:mb-16">
             <div>
-              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono">
+              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-white font-mono">
                 // How I Work
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-white">
@@ -430,12 +430,12 @@ export default function ServicesPage() {
                 className="bg-surface p-8 md:p-10 group hover:bg-surface-raised transition-colors duration-300 relative"
               >
                 <div className="flex items-start gap-5 mb-5">
-                  <span className="text-4xl font-black font-mono text-white/10 leading-none tracking-tighter group-hover:text-volt-500/40 transition-colors duration-300 shrink-0 pt-1">
+                  <span className="text-4xl font-black font-mono text-white/10 leading-none tracking-tighter group-hover:text-white transition-colors duration-300 shrink-0 pt-1">
                     {item.step}
                   </span>
                   <div className="h-px w-10 bg-linear-to-r from-white/10 to-white/10 mt-5 shrink-0" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-volt-100 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-white transition-colors duration-300">
                   {item.title}
                 </h3>
                 <p className="text-sm text-neutral-500 leading-relaxed group-hover:text-neutral-400 transition-colors duration-300">

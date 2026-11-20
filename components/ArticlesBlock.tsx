@@ -36,7 +36,7 @@ export default async function ArticlesBlock() {
   }
 
   return (
-    <section className="w-full bg-linear-to-b from-black via-neutral-950 to-surface-raised text-white py-24 relative overflow-hidden">
+    <section className="w-full bg-surface text-white py-24 relative overflow-hidden">
       {/* Ambient background effects */}
 
       <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
@@ -56,7 +56,7 @@ export default async function ArticlesBlock() {
             <AnimatedCard key={a._id} delay={index * 100}>
               <Link
                 href={`/articles/${a.slug.current}`}
-                className="group h-full block border border-neutral-800 rounded-2xl overflow-hidden bg-neutral-950 transition-all duration-500 hover:-translate-y-2 hover:border-volt-500/40 hover:shadow-xl hover:shadow-volt-500/10"
+                className="group h-full block border border-neutral-800 rounded-2xl overflow-hidden bg-neutral-950 transition-all duration-500 hover:-translate-y-2 hover:border-neutral-500 hover:shadow-xl hover:shadow-volt-500/10"
               >
                 {/* Image */}
                 <div className="relative h-56 overflow-hidden">
@@ -70,7 +70,7 @@ export default async function ArticlesBlock() {
                   <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-neutral-950/50 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
 
                   {/* Top accent bar */}
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-volt-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 
                 {/* Content */}
@@ -82,13 +82,13 @@ export default async function ArticlesBlock() {
                     {a.publishedAt && (
                       <time
                         dateTime={new Date(a.publishedAt).toISOString()}
-                        className="block mb-3 text-xs uppercase tracking-widest text-volt-500/70 font-medium"
+                        className="block mb-3 text-xs uppercase tracking-widest text-neutral-500 font-medium"
                       >
                         {formatDate(a.publishedAt)}
                       </time>
                     )}
 
-                    <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-volt-400 transition-all duration-300 pb-1">
+                    <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-white transition-all duration-300 pb-1">
                       {a.title}
                     </h3>
 
@@ -97,7 +97,7 @@ export default async function ArticlesBlock() {
                     </p>
 
                     {/* Read article CTA */}
-                    <div className="flex items-center text-volt-500 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-2 transition-all duration-300 mt-auto">
+                    <div className="flex items-center text-white opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-2 transition-all duration-300 mt-auto">
                       <span className="text-sm font-semibold">Read article</span>
                       <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
@@ -117,7 +117,7 @@ export default async function ArticlesBlock() {
         <div className="text-center">
           <Link
             href="/articles"
-            className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 bg-white/[0.04] px-10 py-4 text-sm font-semibold uppercase tracking-wide text-volt-400 transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white hover:shadow-lg hover:shadow-volt-500/20"
+            className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 bg-white/[0.04] px-10 py-4 text-sm font-semibold uppercase tracking-wide text-white transition-all duration-300 hover:border-neutral-500 hover:bg-white/15 hover:text-white hover:shadow-lg hover:shadow-volt-500/20"
           >
             Explore All Insights
             <svg className="w-5 h-5 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">

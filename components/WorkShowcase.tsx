@@ -13,7 +13,7 @@ function anchorId(name: string) {
 
 function PlatformBadge({ platform }: { platform: string }) {
   return (
-    <span className="shrink-0 text-[9px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full border border-neutral-800 bg-white/[0.04] text-volt-500/80">
+    <span className="shrink-0 text-[9px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full border border-neutral-800 bg-white/[0.04] text-neutral-500">
       {platform}
     </span>
   );
@@ -21,8 +21,8 @@ function PlatformBadge({ platform }: { platform: string }) {
 
 function UpdatedBadge() {
   return (
-    <span className="inline-flex w-fit items-center gap-1.5 text-[9px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full border border-neutral-800 bg-white/[0.04] text-volt-400">
-      <span className="w-1.5 h-1.5 rounded-full bg-volt-400 animate-pulse" />
+    <span className="inline-flex w-fit items-center gap-1.5 text-[9px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full border border-neutral-800 bg-white/[0.04] text-white">
+      <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 animate-pulse" />
       Recently Updated
     </span>
   );
@@ -42,7 +42,7 @@ function BrowserFrame({
   className?: string;
 }) {
   return (
-    <div className={`overflow-hidden rounded-lg border border-white/10 bg-neutral-900 shadow-[0_12px_32px_rgba(0,0,0,0.45)] transition-colors duration-300 group-hover:border-volt-500/40 ${className}`}>
+    <div className={`overflow-hidden rounded-lg border border-white/10 bg-neutral-900 shadow-[0_12px_32px_rgba(0,0,0,0.45)] transition-colors duration-300 group-hover:border-neutral-500 ${className}`}>
       <div className="flex h-5 items-center gap-1 border-b border-white/5 bg-neutral-900 px-2.5" aria-hidden="true">
         <span className="h-1.5 w-1.5 rounded-full bg-neutral-600" />
         <span className="h-1.5 w-1.5 rounded-full bg-neutral-600" />
@@ -69,7 +69,7 @@ function ProjectLink({ project }: { project: Project }) {
     <Link
       href={`/work/${project.slug}`}
       aria-label={`View project: ${project.name}`}
-      className="inline-flex w-fit items-center gap-2 text-xs font-semibold tracking-wide uppercase text-volt-500 group-hover:text-volt-400 transition-colors duration-200 after:absolute after:inset-0 after:z-10 after:rounded-2xl after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-volt-500"
+      className="inline-flex w-fit items-center gap-2 text-xs font-semibold tracking-wide uppercase text-white group-hover:text-white transition-colors duration-200 after:absolute after:inset-0 after:z-10 after:rounded-2xl after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-volt-500"
     >
       View project
       <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">

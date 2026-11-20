@@ -10,7 +10,7 @@ const failPoints = [
 
 export default function Differentiation() {
     return (
-        <section className="w-full bg-linear-to-b from-neutral-950 to-black text-white py-28 relative overflow-hidden border-t border-neutral-800/50">
+        <section className="w-full bg-charcoal text-white py-28 relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
@@ -38,8 +38,8 @@ export default function Differentiation() {
                             <div className="absolute inset-0 bg-white/[0.04] mix-blend-overlay" />
                             <div className="absolute bottom-5 left-5 right-5 flex items-center gap-3">
                                 <span className="relative flex h-2.5 w-2.5">
-                                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-volt-500 opacity-75" />
-                                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-volt-500" />
+                                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-neutral-400 opacity-75" />
+                                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-neutral-400" />
                                 </span>
                                 <p className="text-sm font-medium text-neutral-200">
                                     Speed, structure, and conversion — measured, not guessed.
@@ -51,14 +51,14 @@ export default function Differentiation() {
                     {/* Right: problem cards */}
                     <div className="flex flex-col gap-4">
                         {failPoints.map((item) => (
-                            <div key={item} className="group flex items-center gap-4 p-5 rounded-xl border border-neutral-800/50 bg-neutral-900/30 hover:border-volt-500/30 hover:bg-volt-500/5 transition-all duration-300">
+                            <div key={item} className="group flex items-center gap-4 p-5 rounded-xl border border-neutral-800/50 bg-neutral-900/30 hover:border-neutral-500 hover:bg-white/5 transition-all duration-300">
                                 <span className="shrink-0 w-2 h-2 rounded-full bg-white/[0.04] group-hover:bg-volt-500 transition-colors duration-300" />
                                 <p className="text-lg md:text-xl text-neutral-300 leading-snug font-medium group-hover:text-white transition-colors duration-300">
                                     {item}
                                 </p>
                             </div>
                         ))}
-                        <p className="mt-4 text-sm text-volt-500/80 font-semibold tracking-wide uppercase">
+                        <p className="mt-4 text-sm text-neutral-500 font-semibold tracking-wide uppercase">
                             That&apos;s not a marketing problem. It&apos;s a build problem.
                         </p>
                     </div>

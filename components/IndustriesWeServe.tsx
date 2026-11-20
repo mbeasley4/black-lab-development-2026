@@ -74,24 +74,24 @@ const industries: Industry[] = [
 const colorClasses = {
     volt: {
         iconBg: "bg-white/[0.06]",
-        iconText: "text-volt-500",
+        iconText: "text-white",
         iconHoverBg: "group-hover:bg-volt-500",
         border: "group-hover:border-volt-500",
         glow: "group-hover:shadow-volt-500/30",
         gradient: "group-hover:from-volt-500/15 group-hover:to-transparent",
         accent: "group-hover:via-volt-500",
-        ctaText: "text-volt-500 group-hover:text-volt-400",
+        ctaText: "text-white group-hover:text-neutral-300",
         ctaArrow: "stroke-volt-500 group-hover:stroke-volt-400",
     },
     blue: {
         iconBg: "bg-white/[0.06]",
-        iconText: "text-volt-400",
+        iconText: "text-neutral-300",
         iconHoverBg: "group-hover:bg-volt-500",
         border: "group-hover:border-volt-400",
         glow: "group-hover:shadow-volt-500/30",
         gradient: "group-hover:from-volt-500/15 group-hover:to-transparent",
         accent: "group-hover:via-volt-500",
-        ctaText: "text-volt-400 group-hover:text-volt-300",
+        ctaText: "text-white group-hover:text-neutral-300",
         ctaArrow: "stroke-volt-400 group-hover:stroke-volt-300",
     },
 };

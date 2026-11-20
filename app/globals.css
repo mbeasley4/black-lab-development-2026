@@ -35,6 +35,9 @@
   --color-surface: #0b0b0c;
   --color-surface-raised: #121214;
   --color-surface-sunken: #08080a;
+  /* Section rhythm: rotate surface (near-black), charcoal, and light
+     (neutral-100) so adjacent blocks read as distinct. */
+  --color-charcoal: #1a1a1e;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

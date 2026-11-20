@@ -270,13 +270,13 @@ export default function SeoFulfillmentPage() {
             {scope.map((item) => (
               <div
                 key={item.title}
-                className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8 transition-colors duration-200 hover:border-volt-400"
+                className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8 transition-colors duration-200 hover:border-neutral-500"
               >
-                <h3 className="text-lg font-bold text-volt-400 mb-5">{item.title}</h3>
+                <h3 className="text-lg font-bold text-white mb-5">{item.title}</h3>
                 <ul className="space-y-2">
                   {item.points.map((point) => (
                     <li key={point} className="flex items-start gap-2 text-sm text-neutral-400">
-                      <svg className="w-4 h-4 shrink-0 mt-0.5 text-volt-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-4 h-4 shrink-0 mt-0.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                       </svg>
                       {point}
@@ -290,7 +290,7 @@ export default function SeoFulfillmentPage() {
       </section>
 
       {/* Process */}
-      <section className="py-20 border-b border-neutral-800">
+      <section className="bg-charcoal py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
@@ -324,7 +324,7 @@ export default function SeoFulfillmentPage() {
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <h2 className="text-2xl font-bold text-white mb-8">Related</h2>
           <div className="flex flex-wrap gap-4">
-            <Link href="/partners" className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200">
+            <Link href="/partners" className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white hover:border-neutral-500 hover:bg-white/20 transition-all duration-200">
               Agency &amp; Partner Services →
             </Link>
             <Link href="/partners/white-label-web-development" className="rounded-lg border border-neutral-700 bg-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200">

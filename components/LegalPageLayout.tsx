@@ -37,7 +37,7 @@ export default function LegalPageLayout({
                 <li key={section.id}>
                   <a
                     href={`#${section.id}`}
-                    className="block -ml-px border-l border-transparent pl-4 text-neutral-400 transition-colors hover:border-volt-500/60 hover:text-white"
+                    className="block -ml-px border-l border-transparent pl-4 text-neutral-400 transition-colors hover:border-neutral-500 hover:text-white"
                   >
                     {section.title}
                   </a>

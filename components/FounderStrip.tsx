@@ -9,7 +9,7 @@ const credentials = [
 
 export default function FounderStrip() {
   return (
-    <section className="w-full py-28 border-t border-neutral-800 relative overflow-hidden">
+    <section className="w-full bg-charcoal text-white py-28 relative overflow-hidden">
       <div className="absolute inset-0 bg-linear-to-br from-surface via-surface-raised to-neutral-950" />
       <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
@@ -47,7 +47,7 @@ export default function FounderStrip() {
                   key={cred}
                   className="inline-flex items-center gap-2 rounded-full border border-neutral-800 bg-white/[0.04] px-4 py-2 text-xs font-medium text-neutral-300"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-volt-500" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                   {cred}
                 </span>
               ))}
@@ -55,7 +55,7 @@ export default function FounderStrip() {
 
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-volt-500 hover:text-volt-400 transition-colors duration-200"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-neutral-300 transition-colors duration-200"
             >
               More about Michael
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -30,7 +30,7 @@ export default function FounderByline() {
           </div>
           <Link
             href="/about"
-            className="shrink-0 inline-flex items-center gap-1.5 text-xs font-semibold text-volt-500 hover:text-volt-400 transition-colors duration-200 whitespace-nowrap"
+            className="shrink-0 inline-flex items-center gap-1.5 text-xs font-semibold text-white hover:text-neutral-300 transition-colors duration-200 whitespace-nowrap"
           >
             More about me
             <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

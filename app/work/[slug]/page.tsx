@@ -229,14 +229,14 @@ export default async function CaseStudyPage({
                 <span className="text-neutral-500">/</span>
                 <span className="text-xs text-neutral-400">Project</span>
                 {study.platform && (
-                  <span className="text-[10px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full border border-neutral-800 bg-white/[0.04] text-volt-500/80">
+                  <span className="text-[10px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full border border-neutral-800 bg-white/[0.04] text-neutral-500">
                     {study.platform}
                   </span>
                 )}
               </div>
 
               <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-neutral-300 mb-6 w-fit">
-                <span className="w-1.5 h-1.5 rounded-full bg-volt-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
                 {study.clientName ?? "Project"}
                 {study.industry ? ` · ${study.industry}` : ""}
               </span>
@@ -270,7 +270,7 @@ export default async function CaseStudyPage({
                   href={study.websiteUrl}
                   target="_blank"
                   rel="noopener"
-                  className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-semibold text-volt-500 hover:text-volt-400 transition-colors duration-200"
+                  className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-semibold text-white hover:text-neutral-300 transition-colors duration-200"
                 >
                   Visit {siteHost.replace(/^www\./, "")}
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -363,7 +363,7 @@ export default async function CaseStudyPage({
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {study.details.map((item: string) => (
                 <li key={item} className="flex items-start gap-3 rounded-xl border border-neutral-800 bg-neutral-950 px-5 py-4 text-neutral-300">
-                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-volt-500 shrink-0" />
+                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-neutral-400 shrink-0" />
                   {item}
                 </li>
               ))}
@@ -386,7 +386,7 @@ export default async function CaseStudyPage({
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {[
                 { label: "Before", src: study.beforeSrc as string, alt: study.beforeAlt, accent: "text-neutral-400 border-neutral-700" },
-                { label: "After", src: study.heroSrc as string, alt: study.heroAlt, accent: "text-volt-400 border-volt-500/40" },
+                { label: "After", src: study.heroSrc as string, alt: study.heroAlt, accent: "text-white border-neutral-500" },
               ].map(({ label, src, alt, accent }) => (
                 <figure key={label} className="rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950">
                   <div className="relative aspect-16/10 w-full">
@@ -486,7 +486,7 @@ export default async function CaseStudyPage({
               </div>
               <Link
                 href="/work#portfolio"
-                className="inline-flex items-center gap-2 rounded-md bg-black px-5 py-2.5 text-sm font-semibold text-volt-500 hover:bg-neutral-900 transition-colors duration-200"
+                className="inline-flex items-center gap-2 rounded-md bg-black px-5 py-2.5 text-sm font-semibold text-white hover:bg-neutral-900 transition-colors duration-200"
               >
                 All projects
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -503,7 +503,7 @@ export default async function CaseStudyPage({
                   className="group flex flex-col overflow-hidden rounded-2xl bg-neutral-950 shadow-[0_18px_40px_-16px_rgba(0,0,0,0.55)] ring-1 ring-black/5 transition-all duration-300 ease-out hover:shadow-[0_28px_60px_-14px_rgba(0,0,0,0.7)] motion-safe:hover:-translate-y-2 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black"
                 >
                   <div className="bg-linear-to-br from-neutral-900 to-neutral-950 p-3 border-b border-neutral-800">
-                    <div className="overflow-hidden rounded-lg border border-white/10 bg-neutral-900 transition-colors duration-300 group-hover:border-volt-500/50">
+                    <div className="overflow-hidden rounded-lg border border-white/10 bg-neutral-900 transition-colors duration-300 group-hover:border-neutral-500">
                       <div className="flex h-5 items-center gap-1 border-b border-white/5 px-2.5" aria-hidden="true">
                         <span className="h-1.5 w-1.5 rounded-full bg-neutral-600" />
                         <span className="h-1.5 w-1.5 rounded-full bg-neutral-600" />
@@ -523,12 +523,12 @@ export default async function CaseStudyPage({
                   <div className="flex grow flex-col gap-3 p-5">
                     <div className="flex items-start justify-between gap-3">
                       <h3 className="text-lg font-bold leading-snug text-white">{project.name}</h3>
-                      <span className="mt-0.5 shrink-0 rounded-full border border-neutral-800 bg-white/[0.04] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-volt-400">
+                      <span className="mt-0.5 shrink-0 rounded-full border border-neutral-800 bg-white/[0.04] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-white">
                         {project.platform}
                       </span>
                     </div>
                     <p className="line-clamp-2 text-sm leading-relaxed text-neutral-400">{project.summary}</p>
-                    <span className="mt-auto inline-flex items-center gap-2 pt-1 text-xs font-semibold uppercase tracking-wide text-volt-500 group-hover:text-volt-400">
+                    <span className="mt-auto inline-flex items-center gap-2 pt-1 text-xs font-semibold uppercase tracking-wide text-white group-hover:text-white">
                       View project
                       <svg className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
@@ -566,7 +566,7 @@ export default async function CaseStudyPage({
             </Link>
             <Link
               href="/work"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-volt-500 hover:text-volt-400 transition-colors duration-200"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-neutral-300 transition-colors duration-200"
             >
               View all work
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

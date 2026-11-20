@@ -245,7 +245,7 @@ export default function SmallBusinessWebsiteDesignPage() {
               {included.map((item) => (
                 <div key={item.label} className="flex items-center justify-between gap-6 border-b border-neutral-800 pb-4">
                   <span className="text-neutral-400 text-sm shrink-0">{item.label}</span>
-                  <span className="text-volt-400 font-bold text-sm md:text-base text-right">{item.value}</span>
+                  <span className="text-white font-bold text-sm md:text-base text-right">{item.value}</span>
                 </div>
               ))}
             </div>
@@ -284,7 +284,7 @@ export default function SmallBusinessWebsiteDesignPage() {
       </section>
 
       {/* My approach */}
-      <section className="py-20 border-b border-neutral-800">
+      <section className="bg-charcoal py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
             <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
@@ -346,7 +346,7 @@ export default function SmallBusinessWebsiteDesignPage() {
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <h2 className="text-2xl font-bold text-white mb-8">Related Services</h2>
           <div className="flex flex-wrap gap-4">
-            <Link href="/services/conversion-optimization" className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200">
+            <Link href="/services/conversion-optimization" className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white hover:border-neutral-500 hover:bg-white/20 transition-all duration-200">
               Website Conversion Optimization →
             </Link>
             <Link href="/partners" className="rounded-lg border border-neutral-700 bg-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200">

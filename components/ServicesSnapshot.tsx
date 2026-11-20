@@ -59,7 +59,7 @@ export default function ServicesSnapshot() {
                     {services.map((service) => (
                         <div
                             key={service.title}
-                            className="group relative rounded-2xl border border-neutral-800/50 bg-linear-to-br from-neutral-900/50 to-surface-raised/80 p-8 transition-all duration-300 hover:border-volt-500/40 hover:-translate-y-2 hover:shadow-xl hover:shadow-volt-500/10 backdrop-blur-sm"
+                            className="group relative rounded-2xl border border-neutral-800/50 bg-linear-to-br from-neutral-900/50 to-surface-raised/80 p-8 transition-all duration-300 hover:border-neutral-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-volt-500/10 backdrop-blur-sm"
                         >
                             {/* Glow effect on hover */}
                             <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-white/10 to-white/10 group-hover:from-volt-500/4 group-hover:to-transparent transition-all duration-300" />
@@ -67,12 +67,12 @@ export default function ServicesSnapshot() {
                             {/* Content */}
                             <div className="relative z-10">
                                 {/* Icon */}
-                                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-neutral-800/80 text-volt-500 transition-all duration-300 group-hover:bg-volt-500 group-hover:text-black group-hover:shadow-lg group-hover:shadow-volt-500/30">
+                                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-neutral-800/80 text-white transition-all duration-300 group-hover:bg-volt-500 group-hover:text-black group-hover:shadow-lg group-hover:shadow-volt-500/30">
                                     <service.icon className="h-6 w-6" />
                                 </div>
 
                                 {/* Title */}
-                                <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-volt-400 transition-colors duration-300">
+                                <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-white transition-colors duration-300">
                                     {service.title}
                                 </h3>
 

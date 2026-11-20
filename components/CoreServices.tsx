@@ -30,7 +30,7 @@ const edges = [
 
 export default function CoreServices() {
     return (
-        <section className="w-full bg-linear-to-b from-black to-neutral-950 text-white py-28 relative overflow-hidden">
+        <section className="w-full bg-surface text-white py-28 relative overflow-hidden">
             <div
                 className="absolute inset-0 pointer-events-none opacity-[0.07]"
                 style={{
@@ -58,19 +58,19 @@ export default function CoreServices() {
                     {edges.map((edge, i) => (
                         <div
                             key={edge.label}
-                            className="group relative flex flex-col p-8 rounded-2xl border border-neutral-800/60 bg-neutral-900/40 hover:border-volt-500/40 hover:bg-volt-500/5 transition-all duration-300 overflow-hidden"
+                            className="group relative flex flex-col p-8 rounded-2xl border border-neutral-800/60 bg-neutral-900/40 hover:border-neutral-500 hover:bg-white/5 transition-all duration-300 overflow-hidden"
                         >
 
                             <div className="flex items-start justify-between mb-6">
-                                <div className="w-10 h-10 rounded-lg bg-white/[0.04] border border-neutral-800 flex items-center justify-center text-volt-400 group-hover:bg-volt-500/20 group-hover:border-volt-500/40 transition-all duration-300">
+                                <div className="w-10 h-10 rounded-lg bg-white/[0.04] border border-neutral-800 flex items-center justify-center text-white group-hover:bg-white/20 group-hover:border-neutral-500 transition-all duration-300">
                                     {edge.icon}
                                 </div>
-                                <span className="text-xs font-mono text-neutral-500 group-hover:text-volt-500/40 transition-colors duration-300">
+                                <span className="text-xs font-mono text-neutral-500 group-hover:text-white transition-colors duration-300">
                                     0{i + 1}
                                 </span>
                             </div>
 
-                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-volt-400 transition-colors duration-200 leading-snug">
+                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-white transition-colors duration-200 leading-snug">
                                 {edge.label}
                             </h3>
                             <p className="text-sm text-neutral-400 leading-relaxed flex-1 group-hover:text-neutral-400 transition-colors duration-200">

@@ -63,7 +63,7 @@ export default function PrivacyPolicyPage() {
           explains what information we collect when you visit the Site or get in touch with us, why
           we collect it, how it's used, and the choices you have — including the granular cookie
           controls available at any time via the{" "}
-          <CookieSettingsButton className="font-medium text-volt-400 underline underline-offset-4 hover:text-volt-300">
+          <CookieSettingsButton className="font-medium text-white underline underline-offset-4 hover:text-neutral-300">
             Manage Cookie Preferences
           </CookieSettingsButton>{" "}
           link in the site footer. See also our{" "}
@@ -104,7 +104,7 @@ export default function PrivacyPolicyPage() {
           first visit, all optional tracking defaults to <strong>off</strong> until you make a choice.
           You can accept everything, reject everything, or pick exactly which categories you're
           comfortable with — and you can change your mind at any time using the{" "}
-          <CookieSettingsButton className="font-medium text-volt-400 underline underline-offset-4 hover:text-volt-300">
+          <CookieSettingsButton className="font-medium text-white underline underline-offset-4 hover:text-neutral-300">
             Manage Cookie Preferences
           </CookieSettingsButton>{" "}
           link in the footer of every page. For a full breakdown of every cookie we use, see our{" "}
@@ -217,7 +217,7 @@ export default function PrivacyPolicyPage() {
           <li>Request correction or deletion of your personal information.</li>
           <li>
             Opt out of analytics and advertising cookies at any time via{" "}
-            <CookieSettingsButton className="font-medium text-volt-400 underline underline-offset-4 hover:text-volt-300">
+            <CookieSettingsButton className="font-medium text-white underline underline-offset-4 hover:text-neutral-300">
               Manage Cookie Preferences
             </CookieSettingsButton>
             .

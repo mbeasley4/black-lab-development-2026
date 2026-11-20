@@ -48,7 +48,7 @@ export default function FaqSection({ faqs, headingId = "faq-heading" }: FaqSecti
                   className="w-full flex items-center justify-between gap-6 py-6 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 rounded-sm"
                 >
                   <div className="flex items-center gap-4">
-                    <span className="shrink-0 flex h-7 w-7 items-center justify-center rounded-md bg-neutral-950 text-volt-500 text-xs font-bold">
+                    <span className="shrink-0 flex h-7 w-7 items-center justify-center rounded-md bg-neutral-950 text-white text-xs font-bold">
                       Q
                     </span>
                     <span className="text-base md:text-lg font-semibold leading-snug text-neutral-950">

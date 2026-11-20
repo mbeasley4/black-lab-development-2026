@@ -235,7 +235,7 @@ export default function CustomWebDevelopmentPage() {
             </Link>
             <Link
               href="/work"
-              className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
+              className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 px-7 py-3.5 text-sm font-semibold text-white hover:bg-white/10 hover:border-neutral-500 transition-all duration-200"
             >
               View Work →
             </Link>
@@ -298,7 +298,7 @@ export default function CustomWebDevelopmentPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {stack.map((item) => (
                 <div key={item.name} className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8">
-                  <div className="text-sm font-mono font-bold text-volt-400 mb-3 tracking-wider">{item.name}</div>
+                  <div className="text-sm font-mono font-bold text-white mb-3 tracking-wider">{item.name}</div>
                   <p className="text-sm text-neutral-400 leading-relaxed">{item.use}</p>
                 </div>
               ))}
@@ -307,7 +307,7 @@ export default function CustomWebDevelopmentPage() {
         </section>
 
         {/* Process */}
-        <section className="py-20 border-b border-neutral-800">
+        <section className="bg-charcoal py-20 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-14">
               <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
@@ -352,7 +352,7 @@ export default function CustomWebDevelopmentPage() {
               <div className="space-y-3">
                 {useCases.map((item) => (
                   <div key={item} className="flex items-center gap-4 rounded-xl border border-neutral-800 bg-neutral-900/50 px-6 py-4">
-                    <div className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_6px_rgba(34,211,238,0.7)] shrink-0" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-neutral-400 shadow-[0_0_6px_rgba(34,211,238,0.7)] shrink-0" />
                     <span className="text-sm text-neutral-300">{item}</span>
                   </div>
                 ))}
@@ -374,7 +374,7 @@ export default function CustomWebDevelopmentPage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/services/small-business-website-design"
-                className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200"
+                className="rounded-lg border border-neutral-800 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white hover:border-neutral-500 hover:bg-white/20 transition-all duration-200"
               >
                 Small Business Website Design →
               </Link>

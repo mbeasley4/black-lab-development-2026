@@ -52,7 +52,7 @@ export default function PageClose({
 
             <a
               href={secondaryHref}
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-volt-500 underline underline-offset-4 hover:text-volt-400 transition-colors duration-200"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-white underline underline-offset-4 hover:text-neutral-300 transition-colors duration-200"
             >
               {secondaryLabel}
             </a>

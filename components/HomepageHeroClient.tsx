@@ -71,13 +71,13 @@ function ScoreRing({ label, score, delay }: { label: string; score: number; dela
     <div className="flex flex-col items-center gap-2">
       <div className="relative h-16 w-16">
         <svg viewBox="0 0 64 64" className="h-full w-full -rotate-90" aria-hidden="true">
-          <circle cx="32" cy="32" r={RING_R} fill="none" stroke="rgba(227,245,68,0.12)" strokeWidth="5" />
+          <circle cx="32" cy="32" r={RING_R} fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="5" />
           <circle
             cx="32"
             cy="32"
             r={RING_R}
             fill="none"
-            stroke="#E3F544"
+            stroke="#d4d4d4"
             strokeWidth="5"
             strokeLinecap="round"
             strokeDasharray={RING_C}
@@ -125,7 +125,7 @@ function HeroVisual() {
                 Launch-day target
               </span>
               <span className="flex items-center gap-1.5 text-[11px] font-semibold text-neutral-300">
-                <span className="inline-flex h-2 w-2 rounded-full bg-volt-500" />
+                <span className="inline-flex h-2 w-2 rounded-full bg-neutral-400" />
                 Live
               </span>
             </div>
@@ -144,15 +144,15 @@ function HeroVisual() {
               <svg viewBox="0 0 200 48" className="h-12 w-full" aria-hidden="true">
                 <defs>
                   <linearGradient id="hero-spark" x1="0" x2="0" y1="0" y2="1">
-                    <stop offset="0%" stopColor="#E3F544" stopOpacity="0.35" />
-                    <stop offset="100%" stopColor="#E3F544" stopOpacity="0" />
+                    <stop offset="0%" stopColor="#d4d4d4" stopOpacity="0.35" />
+                    <stop offset="100%" stopColor="#d4d4d4" stopOpacity="0" />
                   </linearGradient>
                 </defs>
                 <path d="M0 42 L25 38 L50 40 L75 30 L100 32 L125 22 L150 18 L175 10 L200 4 L200 48 L0 48 Z" fill="url(#hero-spark)" />
                 <motion.path
                   d="M0 42 L25 38 L50 40 L75 30 L100 32 L125 22 L150 18 L175 10 L200 4"
                   fill="none"
-                  stroke="#E3F544"
+                  stroke="#d4d4d4"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -223,7 +223,7 @@ const HomepageHeroClient = () => {
                 variants={fadeIn(0, 0)}
                 className="inline-flex items-center gap-2 mb-5 rounded-full border border-neutral-800 bg-white/[0.04] px-4 py-1.5 text-[11px] md:text-xs tracking-[0.2em] uppercase text-neutral-300 font-semibold"
               >
-                <span className="inline-flex h-2 w-2 rounded-full bg-volt-500" />
+                <span className="inline-flex h-2 w-2 rounded-full bg-neutral-400" />
                 Taking new clients &amp; partners
               </motion.span>
 
@@ -234,7 +234,7 @@ const HomepageHeroClient = () => {
                   </motion.span>
                 </span>
                 <span className="block overflow-hidden pb-2">
-                  <motion.span className="block text-volt-500" variants={maskLine(0.26)}>
+                  <motion.span className="block text-neutral-300" variants={maskLine(0.26)}>
                     Keep the Results.
                   </motion.span>
                 </span>

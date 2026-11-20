@@ -193,7 +193,7 @@ export default function CincinnatiWebDeveloperPage() {
             </Link>
             <Link
               href="/work"
-              className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
+              className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 px-7 py-3.5 text-sm font-semibold text-white hover:bg-white/10 hover:border-neutral-500 transition-all duration-200"
             >
               View Cincinnati Work →
             </Link>
@@ -201,7 +201,7 @@ export default function CincinnatiWebDeveloperPage() {
         </section>
 
         {/* Intro */}
-        <section className="py-20 border-b border-neutral-800">
+        <section className="bg-charcoal py-20 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
@@ -258,14 +258,14 @@ export default function CincinnatiWebDeveloperPage() {
                 <Link
                   key={service.title}
                   href={service.href}
-                  className="group rounded-2xl border border-neutral-800 bg-neutral-950 p-8 transition-all duration-300 hover:border-volt-500/40 hover:shadow-[0_0_40px_rgba(227,245,68,0.06)]"
+                  className="group rounded-2xl border border-neutral-800 bg-neutral-950 p-8 transition-all duration-300 hover:border-neutral-500 hover:shadow-[0_0_40px_rgba(255,255,255,0.03)]"
                 >
                   <div className="h-px bg-linear-to-r from-white/10 via-white/10 to-white/10 group-hover:from-volt-500/40 group-hover:via-volt-500/60 group-hover:to-volt-500/0 transition-all duration-500 -mx-8 -mt-8 mb-8" />
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-volt-400 transition-colors duration-300">
+                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-white transition-colors duration-300">
                     {service.title}
                   </h3>
                   <p className="text-sm text-neutral-400 leading-relaxed mb-4">{service.description}</p>
-                  <span className="text-xs font-semibold text-volt-500 group-hover:text-volt-400 transition-colors duration-200">
+                  <span className="text-xs font-semibold text-white group-hover:text-white transition-colors duration-200">
                     Learn more →
                   </span>
                 </Link>
@@ -275,7 +275,7 @@ export default function CincinnatiWebDeveloperPage() {
         </section>
 
         {/* Why local */}
-        <section className="py-20 border-b border-neutral-800">
+        <section className="bg-charcoal py-20 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
@@ -301,13 +301,13 @@ export default function CincinnatiWebDeveloperPage() {
                 ].map((row, i) => (
                   <div
                     key={i}
-                    className="grid grid-cols-2 gap-4 rounded-xl border border-neutral-800 overflow-hidden group hover:border-volt-500/25 transition-all duration-300"
+                    className="grid grid-cols-2 gap-4 rounded-xl border border-neutral-800 overflow-hidden group hover:border-neutral-500 transition-all duration-300"
                   >
                     <div className="p-4 bg-neutral-950 text-sm text-neutral-500 leading-relaxed">
                       <span className="block text-[10px] font-mono tracking-[0.3em] uppercase text-neutral-500 mb-1">Agency</span>
                       {row.agency}
                     </div>
-                    <div className="p-4 bg-surface-raised/60 text-sm text-neutral-300 leading-relaxed border-l border-neutral-800 group-hover:border-volt-500/30 transition-colors duration-300">
+                    <div className="p-4 bg-surface-raised/60 text-sm text-neutral-300 leading-relaxed border-l border-neutral-800 group-hover:border-neutral-500 transition-colors duration-300">
                       <span className="block text-[10px] font-mono tracking-[0.2em] uppercase text-neutral-400 mb-1">Black Lab Dev</span>
                       {row.local}
                     </div>
@@ -340,9 +340,9 @@ export default function CincinnatiWebDeveloperPage() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="rounded-2xl border border-neutral-800 bg-neutral-950 px-8 py-8 text-center transition-all duration-300 hover:border-volt-500/30 hover:shadow-[0_0_40px_rgba(227,245,68,0.05)]"
+                  className="rounded-2xl border border-neutral-800 bg-neutral-950 px-8 py-8 text-center transition-all duration-300 hover:border-neutral-500 hover:shadow-[0_0_40px_rgba(255,255,255,0.03)]"
                 >
-                  <div className="text-3xl font-black text-volt-500 mb-2">{item.stat}</div>
+                  <div className="text-3xl font-black text-white mb-2">{item.stat}</div>
                   <div className="text-sm font-semibold text-white mb-2">{item.label}</div>
                   <div className="text-xs text-neutral-400 leading-relaxed">{item.detail}</div>
                 </div>
@@ -351,7 +351,7 @@ export default function CincinnatiWebDeveloperPage() {
             <div className="mt-10 text-center">
               <Link
                 href="/work"
-                className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 bg-white/[0.04] px-8 py-4 text-sm font-semibold uppercase tracking-wide text-volt-400 transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white"
+                className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 bg-white/[0.04] px-8 py-4 text-sm font-semibold uppercase tracking-wide text-white transition-all duration-300 hover:border-neutral-500 hover:bg-white/15 hover:text-white"
               >
                 See All My Work →
               </Link>
