@@ -13,7 +13,7 @@ test('main navigation links are present', async ({ page }) => {
   const nav = page.getByRole('navigation', { name: 'Primary navigation' });
   await expect(nav.getByRole('link', { name: 'What We Build' })).toBeVisible();
   await expect(nav.getByRole('link', { name: "Who It's For" })).toBeVisible();
-  await expect(nav.getByRole('link', { name: 'Our Work' })).toBeVisible();
+  await expect(nav.getByRole('link', { name: 'My Work' })).toBeVisible();
   await expect(nav.getByRole('link', { name: 'Insights' })).toBeVisible();
   await expect(nav.getByRole('link', { name: 'About' })).toBeVisible();
 });
@@ -30,10 +30,10 @@ test('"Get in Touch" CTA navigates to contact page', async ({ page }) => {
   await expect(page).toHaveURL(/\/contact/);
 });
 
-test('"Our Work" nav link navigates to case studies', async ({ page }) => {
+test('"My Work" nav link navigates to case studies', async ({ page }) => {
   await page.goto('/');
   const nav = page.getByRole('navigation', { name: 'Primary navigation' });
-  await nav.getByRole('link', { name: 'Our Work' }).click();
+  await nav.getByRole('link', { name: 'My Work' }).click();
   await expect(page).toHaveURL(/\/case-studies/);
   await expect(page.getByRole('heading').first()).toBeVisible();
 });
@@ -158,7 +158,7 @@ test('case studies page loads and shows past work', async ({ page }) => {
   await page.goto('/case-studies');
   await expect(page).toHaveURL(/\/case-studies/);
   await expect(page.getByRole('heading').first()).toBeVisible();
-  await expect(page.getByText('Globe Iron Roofing')).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Globe Iron Roofing' })).toBeVisible();
 });
 
 // ─── Footer ───────────────────────────────────────────────────────────────────

@@ -3,30 +3,96 @@ import Link from "next/link";
 import PageClose from "@/components/PageClose";
 import JsonLd from "@/components/JsonLd";
 import WorkShowcase from "@/components/WorkShowcase";
+import QuickAnswerBlock from "@/components/QuickAnswerBlock";
+import FaqSection from "@/components/FaqSection";
 import { projects } from "@/data/projects";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const revalidate = 3600;
 
+const PAGE_TITLE = "Web Design & Development Case Studies";
+const PAGE_DESCRIPTION =
+  "Web design and development case studies from Cincinnati's Black Lab Development: custom WordPress, Next.js and Shopify builds for B2B, healthcare and local brands.";
+
 export const metadata: Metadata = {
-  title: "Website Case Studies | Real Results",
-  description:
-    "Real results: more qualified leads, faster load times, higher conversion rates, and better search visibility across B2B and ecommerce sites.",
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   alternates: { canonical: "/case-studies" },
   openGraph: {
-    title: "Website Case Studies | Real Results",
-    description:
-      "Real results: more qualified leads, faster load times, higher conversion rates, and better search visibility across B2B and ecommerce sites.",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
     url: "/case-studies",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Website Case Studies | Real Results",
-    description:
-      "Real results: more qualified leads, faster load times, higher conversion rates, and better search visibility across B2B and ecommerce sites.",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
+
+// Every answer is grounded in the portfolio below; keep them in sync when
+// projects change.
+const faqs = [
+  {
+    question: "What platforms does Black Lab Development build websites on?",
+    answer:
+      "Mostly custom WordPress, plus custom Next.js, Shopify and Drupal. WordPress builds use custom block themes and native Gutenberg blocks, like the Global Environmental Products catalog and the National Management Association platform. Next.js builds are often paired with Sanity CMS, like Rev & Rinse and Zoo Printables AI. Shopify work uses custom Liquid themes, like The Shortening Shuttle storefront.",
+  },
+  {
+    question: "Do you use page builders like Elementor or Divi?",
+    answer:
+      "No. Themes are built with native Gutenberg blocks designed for each site: 15 custom blocks for Global Environmental Products, 21 for Globe Iron Roofing and 46 for the National Management Association. That keeps markup clean and pages fast, and lets editors update content without a page builder's overhead.",
+  },
+  {
+    question: "Can you redesign my website without losing search rankings?",
+    answer:
+      "Yes. Every URL on the old site is mapped to its new home and 301-redirected before launch. When Global Environmental Products replaced its 2011-era site, 57 legacy URLs were redirected so existing rankings and inbound links carried over.",
+  },
+  {
+    question: "What industries have you built websites for?",
+    answer:
+      "Manufacturing and industrial supply, healthcare and medical aesthetics, restaurants and hospitality, professional associations, construction and roofing, education, solar energy, marketing agencies, publishing, cybersecurity and ecommerce. Each project above is tagged by platform, and each detail page covers the industry-specific work involved.",
+  },
+  {
+    question: "Are your websites built for AI search and answer engines?",
+    answer:
+      "Yes. Sites ship with structured data matched to the business, such as LocalBusiness, RoofingContractor, BarOrPub, Product and FAQPage schema. They also get clean semantic markup and, where it fits, a generated llms.txt that indexes pages for AI answer engines like ChatGPT, Claude and Perplexity.",
+  },
+  {
+    question: "Will I be able to update my website myself?",
+    answer:
+      "Yes. WordPress sites use editor-friendly blocks and a single settings screen for business details like hours, address and phone. Next.js sites include an embedded Sanity Studio. Routine updates don't need a developer.",
+  },
+  {
+    question: "Do you offer ongoing website support?",
+    answer:
+      "Yes. Several engagements above are ongoing, including Mona Dermatology, Zero Gravity of Northern Kentucky and Frisch's Big Boy, covering performance, security, updates and new features after launch.",
+  },
+  {
+    question: "Do you work with agencies as a white-label development partner?",
+    answer:
+      "Yes. Black Lab Development builds and maintains sites for agencies under their brand. See the white-label web development page for how partnerships work.",
+  },
+];
+
+const industryLinks = [
+  { href: "/industries/manufacturing", label: "Manufacturing" },
+  { href: "/industries/healthcare", label: "Healthcare" },
+  { href: "/industries/professional-services", label: "Professional Services" },
+  { href: "/industries/education", label: "Education" },
+  { href: "/industries/ecommerce", label: "Ecommerce" },
+  { href: "/industries/technology", label: "Technology" },
+];
+
+const platformCounts = projects.reduce<Record<string, number>>((acc, p) => {
+  acc[p.platform] = (acc[p.platform] ?? 0) + 1;
+  return acc;
+}, {});
+const platformSummary = Object.entries(platformCounts)
+  .sort((a, b) => b[1] - a[1])
+  .map(([name, count]) => `${count} ${name}`)
+  .join(", ");
 
 export default function CaseStudiesPage() {
   // CollectionPage + ItemList exposes the case-study set as a structured,
@@ -34,9 +100,8 @@ export default function CaseStudiesPage() {
   const collectionSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Website Case Studies",
-    description:
-      "Real results: more qualified leads, faster load times, higher conversion rates, and better search visibility across B2B and ecommerce sites.",
+    name: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
     url: "https://blacklabdev.com/case-studies",
     isPartOf: { "@type": "WebSite", "@id": "https://blacklabdev.com/#website", name: "Black Lab Development", url: "https://blacklabdev.com" },
     publisher: { "@type": "Organization", "@id": "https://blacklabdev.com/#business" },
@@ -51,6 +116,16 @@ export default function CaseStudiesPage() {
     },
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -62,7 +137,7 @@ export default function CaseStudiesPage() {
 
   return (
     <main className="w-full bg-[#0b0b0c] text-white">
-      <JsonLd data={[collectionSchema, breadcrumbSchema]} />
+      <JsonLd data={[collectionSchema, breadcrumbSchema, faqSchema]} />
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden border-b border-volt-500/20">
@@ -109,6 +184,11 @@ export default function CaseStudiesPage() {
         <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
       </section>
 
+      <QuickAnswerBlock
+        question="What kind of websites does Black Lab Development build?"
+        answer={`Custom websites built from scratch, with no page builders and no stock themes. The ${projects.length} projects below span ${platformSummary}, for manufacturers, healthcare practices, restaurants, associations, contractors, schools and agencies. Each one links to a detail page covering what was built, the platform and the results.`}
+      />
+
       {/* ── Work Accomplished ── */}
       <section id="portfolio" className="py-20 md:py-24 relative overflow-hidden border-b border-slate-800">
         <div className="absolute top-0 left-1/4 w-175 h-175 bg-volt-500/6 rounded-full blur-[140px] pointer-events-none" />
@@ -127,6 +207,14 @@ export default function CaseStudiesPage() {
             <p className="text-lg text-slate-400 leading-relaxed">
               15+ years building and maintaining production websites for manufacturers, healthcare providers, restaurants, and B2B platforms — on WordPress, Shopify, and custom Next.js builds.
             </p>
+            <nav aria-label="Work by industry" className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+              <span className="text-slate-500">By industry:</span>
+              {industryLinks.map((l) => (
+                <Link key={l.href} href={l.href} className="text-slate-300 underline decoration-slate-700 underline-offset-4 hover:text-volt-400 hover:decoration-volt-500/60 transition-colors duration-200">
+                  {l.label}
+                </Link>
+              ))}
+            </nav>
             <div className="mt-6 h-px w-64 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
           </div>
 
@@ -255,6 +343,8 @@ export default function CaseStudiesPage() {
           </div>
         </div>
       </section>
+
+      <FaqSection faqs={faqs} headingId="case-studies-faq" />
 
       <PageClose
         title="Ready to Become the Next Case Study?"

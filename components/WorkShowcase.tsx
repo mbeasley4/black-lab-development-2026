@@ -42,7 +42,7 @@ function BrowserFrame({
   className?: string;
 }) {
   return (
-    <div className={`overflow-hidden rounded-lg border border-white/10 bg-neutral-900 shadow-[0_12px_32px_rgba(0,0,0,0.45)] ${className}`}>
+    <div className={`overflow-hidden rounded-lg border border-white/10 bg-neutral-900 shadow-[0_12px_32px_rgba(0,0,0,0.45)] transition-colors duration-300 group-hover:border-volt-500/40 ${className}`}>
       <div className="flex h-5 items-center gap-1 border-b border-white/5 bg-neutral-900 px-2.5" aria-hidden="true">
         <span className="h-1.5 w-1.5 rounded-full bg-neutral-600" />
         <span className="h-1.5 w-1.5 rounded-full bg-neutral-600" />
@@ -83,7 +83,7 @@ function FeaturedRow({ project, flip, linked }: { project: Project; flip: boolea
   return (
     <article
       id={anchorId(project.name)}
-      className={`group relative grid grid-cols-1 ${flip ? "lg:grid-cols-[1fr_1.25fr]" : "lg:grid-cols-[1.25fr_1fr]"} rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-300 ${linked ? "hover:border-volt-500/40 hover:shadow-[0_0_50px_rgba(227,245,68,0.08)]" : ""} scroll-mt-28`}
+      className={`group relative grid grid-cols-1 ${flip ? "lg:grid-cols-[1fr_1.25fr]" : "lg:grid-cols-[1.25fr_1fr]"} rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-300 ease-out will-change-transform ${linked ? "hover:border-volt-500/70 hover:bg-neutral-900/60 hover:shadow-[0_24px_60px_-12px_rgba(0,0,0,0.7),0_0_0_1px_rgba(227,245,68,0.25),0_0_70px_rgba(227,245,68,0.16)] motion-safe:hover:-translate-y-1.5 focus-within:border-volt-500/70" : ""} scroll-mt-28`}
     >
       <div
         className={`flex items-center bg-linear-to-br from-neutral-900 via-neutral-950 to-neutral-950 p-4 sm:p-6 lg:p-8 ${
@@ -93,7 +93,7 @@ function FeaturedRow({ project, flip, linked }: { project: Project; flip: boolea
         <BrowserFrame
           project={project}
           sizes="(min-width: 1024px) 50vw, 100vw"
-          zoom="group-hover:scale-[1.015]"
+          zoom="motion-safe:group-hover:scale-[1.04]"
           className="w-full"
         />
       </div>
@@ -132,13 +132,13 @@ function CompactCard({ project, linked }: { project: Project; linked: boolean })
   return (
     <article
       id={anchorId(project.name)}
-      className={`group relative flex flex-col rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-300 ${linked ? "hover:border-volt-500/40 hover:shadow-[0_0_40px_rgba(227,245,68,0.07)]" : ""} scroll-mt-28`}
+      className={`group relative flex flex-col rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-300 ease-out will-change-transform ${linked ? "hover:border-volt-500/70 hover:bg-neutral-900/60 hover:shadow-[0_24px_50px_-12px_rgba(0,0,0,0.7),0_0_0_1px_rgba(227,245,68,0.25),0_0_50px_rgba(227,245,68,0.16)] motion-safe:hover:-translate-y-2 focus-within:border-volt-500/70" : ""} scroll-mt-28`}
     >
       <div className="bg-linear-to-br from-neutral-900 to-neutral-950 p-3 border-b border-neutral-800">
         <BrowserFrame
           project={project}
           sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-          zoom="group-hover:scale-[1.03]"
+          zoom="motion-safe:group-hover:scale-[1.06]"
         />
       </div>
       <div className="p-4 flex flex-col gap-2.5 grow">
