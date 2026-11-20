@@ -330,7 +330,7 @@ export default function ConversionOptimizationPage() {
           </div>
           <div className="space-y-4">
             {beforeAfter.map((item) => (
-              <div key={item.label} className={`rounded-xl border bg-neutral-900/50 overflow-hidden transition-colors duration-200 ${'caseStudyHref' in item ? 'border-volt-500/30 hover:border-volt-400/60' : 'border-neutral-800'}`}>
+              <div key={item.label} className={`rounded-xl border bg-neutral-900/50 overflow-hidden transition-colors duration-200 ${'caseStudyHref' in item ? 'border-neutral-800 hover:border-neutral-500' : 'border-neutral-800'}`}>
                 <div className="grid grid-cols-3 divide-x divide-neutral-800">
                   <div className="p-6 text-center">
                     <div className="text-xs uppercase tracking-widest text-neutral-400 mb-2">Before</div>

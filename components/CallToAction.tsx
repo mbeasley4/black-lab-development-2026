@@ -35,7 +35,7 @@ export default function CallToAction() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-12">
                         <Link
                             href="/contact"
-                            className="group relative inline-flex w-full sm:w-auto items-center justify-center rounded-lg bg-volt px-8 sm:px-12 py-5 text-base font-bold uppercase tracking-wide text-black transition-all duration-300 hover:brightness-110 hover:shadow-2xl hover:shadow-volt/40 hover:scale-105"
+                            className="group relative inline-flex w-full sm:w-auto items-center justify-center rounded-lg bg-white px-8 sm:px-12 py-5 text-base font-bold uppercase tracking-wide text-black transition-all duration-300 hover:brightness-110 hover:shadow-2xl hover:shadow-black/40 hover:scale-105"
                         >
                             <span className="relative z-10 flex items-center gap-2">
                                 Schedule a Discovery Call
@@ -47,7 +47,7 @@ export default function CallToAction() {
 
                         <Link
                             href="/work"
-                            className="group inline-flex w-full sm:w-auto items-center justify-center rounded-lg border-2 border-neutral-800 bg-white/[0.04] px-8 sm:px-12 py-5 text-base font-bold uppercase tracking-wide text-white backdrop-blur-sm transition-all duration-300 hover:border-neutral-500 hover:bg-white/15 hover:text-white hover:shadow-xl hover:shadow-volt-500/20 hover:scale-105"
+                            className="group inline-flex w-full sm:w-auto items-center justify-center rounded-lg border-2 border-neutral-800 bg-white/[0.04] px-8 sm:px-12 py-5 text-base font-bold uppercase tracking-wide text-white backdrop-blur-sm transition-all duration-300 hover:border-neutral-500 hover:bg-white/15 hover:text-white hover:shadow-xl hover:shadow-black/40 hover:scale-105"
                         >
                             <span className="flex items-center gap-2">
                                 View My Work

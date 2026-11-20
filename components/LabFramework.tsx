@@ -47,7 +47,7 @@ function LabCard({ step }: { step: (typeof steps)[number] }) {
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
         style={{
           background:
-            "radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(227,245,68,0.08), transparent 60%)",
+            "radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.05), transparent 60%)",
         }}
       />
 

@@ -34,7 +34,7 @@ export default function CoreServices() {
             <div
                 className="absolute inset-0 pointer-events-none opacity-[0.07]"
                 style={{
-                    backgroundImage: "radial-gradient(circle, rgba(227,245,68,0.2) 1px, transparent 1px)",
+                    backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px)",
                     backgroundSize: "44px 44px",
                 }}
             />

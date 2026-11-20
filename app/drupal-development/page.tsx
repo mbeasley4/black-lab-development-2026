@@ -168,7 +168,7 @@ export default function DrupalDevelopmentPage() {
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-8 flex flex-wrap gap-4">
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg"
+            className="inline-flex items-center justify-center rounded-md bg-white text-black px-7 py-3.5 text-sm font-semibold hover:bg-neutral-200 transition-colors duration-200 shadow-lg"
           >
             Start a Project →
           </Link>
@@ -248,7 +248,7 @@ export default function DrupalDevelopmentPage() {
                 key={service.title}
                 className="group rounded-2xl border border-neutral-800 bg-neutral-950 p-8 transition-all duration-300 hover:border-neutral-500 hover:shadow-[0_0_40px_rgba(255,255,255,0.03)]"
               >
-                <div className="h-px bg-linear-to-r from-white/10 via-white/10 to-white/10 group-hover:from-volt-500/40 group-hover:via-volt-500/60 group-hover:to-volt-500/0 transition-all duration-500 -mx-8 -mt-8 mb-8" />
+                <div className="h-px bg-linear-to-r from-white/10 via-white/10 to-white/10 group-hover:from-white/13 group-hover:via-white/20 group-hover:to-white/3 transition-all duration-500 -mx-8 -mt-8 mb-8" />
                 <div className="w-10 h-10 rounded-lg bg-white/[0.04] border border-neutral-800 flex items-center justify-center text-white mb-5">
                   {service.icon}
                 </div>

@@ -42,7 +42,7 @@ export default function PageClose({
           <div className="flex flex-wrap justify-center items-center gap-6">
             <a
               href="/contact"
-              className="group relative inline-flex items-center justify-center rounded-lg bg-volt px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-black transition-all duration-300 hover:brightness-110 hover:shadow-xl hover:shadow-volt/30 hover:scale-105"
+              className="group relative inline-flex items-center justify-center rounded-lg bg-white px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-black transition-all duration-300 hover:brightness-110 hover:shadow-xl hover:shadow-black/40 hover:scale-105"
             >
               Start a Conversation
               <svg className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">

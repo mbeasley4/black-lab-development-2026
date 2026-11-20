@@ -43,7 +43,7 @@ export default function ContactForm() {
 
     const inputClass =
         "w-full bg-black border border-neutral-700 px-4 py-3 text-white placeholder-neutral-500 " +
-        "focus:outline-none focus:border-volt-400 focus:shadow-[0_0_16px_rgba(34,211,238,0.4)] " +
+        "focus:outline-none focus:border-neutral-500 focus:shadow-[0_0_16px_rgba(34,211,238,0.4)] " +
         "transition-all duration-200";
 
     return (
@@ -83,7 +83,7 @@ export default function ContactForm() {
             <button
                 type="submit"
                 disabled={loading || !token}
-                className="border border-neutral-800 text-white px-6 py-3 uppercase tracking-widest shadow-[0_0_10px_rgba(34,211,238,0.3)] hover:bg-volt-400 hover:text-black hover:shadow-[0_0_20px_rgba(34,211,238,0.6)] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="border border-neutral-800 text-white px-6 py-3 uppercase tracking-widest shadow-[0_0_10px_rgba(34,211,238,0.3)] hover:bg-neutral-200 hover:text-black hover:shadow-[0_0_20px_rgba(34,211,238,0.6)] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
                 {loading ? "Sending…" : "Send Message"}
             </button>

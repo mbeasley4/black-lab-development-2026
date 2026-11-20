@@ -61,7 +61,7 @@ export default function Process() {
                                 {String(i + 1).padStart(2, "0")}
                             </div>
                             <div className="relative z-10">
-                                <div className="w-8 h-px bg-volt-500 mb-6" />
+                                <div className="w-8 h-px bg-white mb-6" />
                                 <h3 className="text-xl font-bold text-white mb-3 leading-snug group-hover:text-white transition-colors duration-200">
                                     {item.label}
                                 </h3>

@@ -560,7 +560,7 @@ export default async function CaseStudyPage({
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-10 py-4 text-base font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg"
+              className="inline-flex items-center justify-center rounded-md bg-white text-black px-10 py-4 text-base font-semibold hover:bg-neutral-200 transition-colors duration-200 shadow-lg"
             >
               Start a Conversation
             </Link>

@@ -105,7 +105,7 @@ export default function Results() {
                         </div>
 
                         <div className="shrink-0 self-start md:self-center">
-                            <span className="inline-flex items-center gap-2 rounded-md bg-volt-500 text-black px-5 py-3 text-sm font-bold group-hover:bg-volt-400 group-hover:gap-3 transition-all duration-200 shadow-lg whitespace-nowrap">
+                            <span className="inline-flex items-center gap-2 rounded-md bg-white text-black px-5 py-3 text-sm font-bold group-hover:bg-neutral-200 group-hover:gap-3 transition-all duration-200 shadow-lg whitespace-nowrap">
                                 See the Project
                                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
@@ -141,7 +141,7 @@ export default function Results() {
                 <div className="text-center">
                     <Link
                         href="/contact"
-                        className="inline-flex items-center justify-center rounded-md bg-volt-500 px-8 py-4 text-sm font-bold text-black hover:bg-volt-400 transition-colors duration-200"
+                        className="inline-flex items-center justify-center rounded-md bg-white px-8 py-4 text-sm font-bold text-black hover:bg-neutral-200 transition-colors duration-200"
                     >
                         Schedule a Discovery Call →
                     </Link>

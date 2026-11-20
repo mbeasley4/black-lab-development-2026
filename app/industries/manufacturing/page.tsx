@@ -210,7 +210,7 @@ export default function ManufacturingIndustryPage() {
             </div>
             <Link
               href="/services/small-business-website-design"
-              className="shrink-0 inline-flex items-center gap-2 rounded-md bg-volt text-black px-6 py-3 text-sm font-bold hover:brightness-110 transition-all duration-200"
+              className="shrink-0 inline-flex items-center gap-2 rounded-md bg-white text-black px-6 py-3 text-sm font-bold hover:brightness-110 transition-all duration-200"
             >
               View Service Page
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

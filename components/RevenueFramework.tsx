@@ -70,7 +70,7 @@ export default function RevenueFramework() {
                     {audiences.map((item) => (
                         <div
                             key={item.label}
-                            className="group flex flex-col overflow-hidden rounded-2xl border border-neutral-800/60 bg-neutral-900/40 transition-all duration-500 hover:-translate-y-1.5 hover:border-neutral-500 hover:shadow-xl hover:shadow-volt-500/10"
+                            className="group flex flex-col overflow-hidden rounded-2xl border border-neutral-800/60 bg-neutral-900/40 transition-all duration-500 hover:-translate-y-1.5 hover:border-neutral-500 hover:shadow-xl hover:shadow-black/40"
                         >
                             <div className="relative h-44 overflow-hidden">
                                 <Image
@@ -81,7 +81,7 @@ export default function RevenueFramework() {
                                     className="object-cover grayscale-[60%] transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0"
                                 />
                                 <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-neutral-950/30 to-transparent" />
-                                <div className="absolute bottom-4 left-5 w-10 h-10 rounded-lg bg-black/60 backdrop-blur-md border border-neutral-800 flex items-center justify-center text-white group-hover:bg-volt-500 group-hover:text-black transition-all duration-300">
+                                <div className="absolute bottom-4 left-5 w-10 h-10 rounded-lg bg-black/60 backdrop-blur-md border border-neutral-800 flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-all duration-300">
                                     {item.icon}
                                 </div>
                             </div>

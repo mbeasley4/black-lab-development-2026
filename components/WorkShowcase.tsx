@@ -69,7 +69,7 @@ function ProjectLink({ project }: { project: Project }) {
     <Link
       href={`/work/${project.slug}`}
       aria-label={`View project: ${project.name}`}
-      className="inline-flex w-fit items-center gap-2 text-xs font-semibold tracking-wide uppercase text-white group-hover:text-white transition-colors duration-200 after:absolute after:inset-0 after:z-10 after:rounded-2xl after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-volt-500"
+      className="inline-flex w-fit items-center gap-2 text-xs font-semibold tracking-wide uppercase text-white group-hover:text-white transition-colors duration-200 after:absolute after:inset-0 after:z-10 after:rounded-2xl after:content-[''] focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-white"
     >
       View project
       <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -83,7 +83,7 @@ function FeaturedRow({ project, flip, linked }: { project: Project; flip: boolea
   return (
     <article
       id={anchorId(project.name)}
-      className={`group relative grid grid-cols-1 ${flip ? "lg:grid-cols-[1fr_1.25fr]" : "lg:grid-cols-[1.25fr_1fr]"} rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-300 ease-out will-change-transform ${linked ? "hover:border-volt-500/70 hover:bg-neutral-900/60 hover:shadow-[0_24px_60px_-12px_rgba(0,0,0,0.7),0_0_0_1px_rgba(227,245,68,0.25),0_0_70px_rgba(227,245,68,0.16)] motion-safe:hover:-translate-y-1.5 focus-within:border-volt-500/70" : ""} scroll-mt-28`}
+      className={`group relative grid grid-cols-1 ${flip ? "lg:grid-cols-[1fr_1.25fr]" : "lg:grid-cols-[1.25fr_1fr]"} rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-300 ease-out will-change-transform ${linked ? "hover:border-neutral-500 hover:bg-neutral-900/60 hover:shadow-[0_24px_60px_-12px_rgba(0,0,0,0.7),0_0_0_1px_rgba(255,255,255,0.18),0_0_70px_rgba(255,255,255,0.06)] motion-safe:hover:-translate-y-1.5 focus-within:border-neutral-500" : ""} scroll-mt-28`}
     >
       <div
         className={`flex items-center bg-linear-to-br from-neutral-900 via-neutral-950 to-neutral-950 p-4 sm:p-6 lg:p-8 ${
@@ -132,7 +132,7 @@ function CompactCard({ project, linked }: { project: Project; linked: boolean })
   return (
     <article
       id={anchorId(project.name)}
-      className={`group relative flex flex-col rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-300 ease-out will-change-transform ${linked ? "hover:border-volt-500/70 hover:bg-neutral-900/60 hover:shadow-[0_24px_50px_-12px_rgba(0,0,0,0.7),0_0_0_1px_rgba(227,245,68,0.25),0_0_50px_rgba(227,245,68,0.16)] motion-safe:hover:-translate-y-2 focus-within:border-volt-500/70" : ""} scroll-mt-28`}
+      className={`group relative flex flex-col rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-300 ease-out will-change-transform ${linked ? "hover:border-neutral-500 hover:bg-neutral-900/60 hover:shadow-[0_24px_50px_-12px_rgba(0,0,0,0.7),0_0_0_1px_rgba(255,255,255,0.18),0_0_50px_rgba(255,255,255,0.06)] motion-safe:hover:-translate-y-2 focus-within:border-neutral-500" : ""} scroll-mt-28`}
     >
       <div className="bg-linear-to-br from-neutral-900 to-neutral-950 p-3 border-b border-neutral-800">
         <BrowserFrame
@@ -197,8 +197,8 @@ export default function WorkShowcase({ projects }: { projects: Project[] }) {
               onClick={() => setPlatform(name)}
               className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold tracking-wide transition-colors duration-200 ${
                 active
-                  ? "border-volt-500 bg-volt-500 text-black"
-                  : "border-neutral-700 text-neutral-300 hover:border-volt-500/50 hover:text-white"
+                  ? "border-white bg-white text-black"
+                  : "border-neutral-700 text-neutral-300 hover:border-neutral-500 hover:text-white"
               }`}
             >
               {name}

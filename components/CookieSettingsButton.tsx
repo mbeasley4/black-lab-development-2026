@@ -6,7 +6,7 @@ import { openConsentManager } from "@/lib/consent";
  *  after the fact — used in the footer and on the privacy policy page,
  *  outside the CookieConsent component itself. */
 export default function CookieSettingsButton({
-  className = "underline-offset-4 transition-colors hover:text-neutral-300 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400",
+  className = "underline-offset-4 transition-colors hover:text-neutral-300 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white",
   children = "Cookie Settings",
 }: {
   className?: string;

@@ -123,7 +123,7 @@ export default function CookieConsent() {
             support our marketing. Choose which categories you allow, or accept all.{" "}
             <a
               href="/privacy"
-              className="rounded-sm font-medium text-white underline-offset-4 transition-colors hover:text-neutral-300 hover:underline focus-visible:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400"
+              className="rounded-sm font-medium text-white underline-offset-4 transition-colors hover:text-neutral-300 hover:underline focus-visible:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Learn more
             </a>
@@ -134,14 +134,14 @@ export default function CookieConsent() {
             <button
               type="button"
               onClick={openPreferences}
-              className="inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-semibold text-neutral-300 underline-offset-4 transition-colors hover:text-white hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400"
+              className="inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-semibold text-neutral-300 underline-offset-4 transition-colors hover:text-white hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Manage Preferences
             </button>
             <button
               type="button"
               onClick={() => decide(DEFAULT_PREFERENCES)}
-              className="inline-flex items-center justify-center rounded-lg border border-white/15 px-6 py-2.5 text-sm font-semibold uppercase tracking-wide text-neutral-200 transition-all duration-200 hover:border-white/35 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400 active:scale-[0.98]"
+              className="inline-flex items-center justify-center rounded-lg border border-white/15 px-6 py-2.5 text-sm font-semibold uppercase tracking-wide text-neutral-200 transition-all duration-200 hover:border-white/35 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.98]"
             >
               Reject All
             </button>
@@ -149,7 +149,7 @@ export default function CookieConsent() {
               ref={acceptButtonRef}
               type="button"
               onClick={() => decide(ALL_GRANTED)}
-              className="inline-flex items-center justify-center rounded-lg bg-volt px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-black transition-all duration-200 hover:brightness-110 hover:shadow-lg hover:shadow-volt/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400 active:scale-[0.98]"
+              className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-black transition-all duration-200 hover:brightness-110 hover:shadow-lg hover:shadow-black/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.98]"
             >
               Accept All
             </button>
@@ -169,7 +169,7 @@ export default function CookieConsent() {
               type="button"
               onClick={() => setView("banner")}
               aria-label="Close cookie preferences"
-              className="shrink-0 rounded-sm p-1 text-neutral-400 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400"
+              className="shrink-0 rounded-sm p-1 text-neutral-400 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                 <path d="M18 6 6 18M6 6l12 12" strokeLinecap="round" />
@@ -181,7 +181,7 @@ export default function CookieConsent() {
             always on because the site can&apos;t function without them. See our{" "}
             <a
               href="/privacy"
-              className="rounded-sm font-medium text-white underline-offset-4 transition-colors hover:text-neutral-300 hover:underline focus-visible:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400"
+              className="rounded-sm font-medium text-white underline-offset-4 transition-colors hover:text-neutral-300 hover:underline focus-visible:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               privacy policy
             </a>{" "}
@@ -212,14 +212,14 @@ export default function CookieConsent() {
             <button
               type="button"
               onClick={() => decide(DEFAULT_PREFERENCES)}
-              className="inline-flex items-center justify-center rounded-lg border border-white/15 px-6 py-2.5 text-sm font-semibold uppercase tracking-wide text-neutral-200 transition-all duration-200 hover:border-white/35 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400 active:scale-[0.98]"
+              className="inline-flex items-center justify-center rounded-lg border border-white/15 px-6 py-2.5 text-sm font-semibold uppercase tracking-wide text-neutral-200 transition-all duration-200 hover:border-white/35 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.98]"
             >
               Reject All
             </button>
             <button
               type="button"
               onClick={() => decide(draft)}
-              className="inline-flex items-center justify-center rounded-lg bg-volt px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-black transition-all duration-200 hover:brightness-110 hover:shadow-lg hover:shadow-volt/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400 active:scale-[0.98]"
+              className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-black transition-all duration-200 hover:brightness-110 hover:shadow-lg hover:shadow-black/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.98]"
             >
               Save Preferences
             </button>
@@ -263,8 +263,8 @@ function CategoryRow({
         aria-label={title}
         disabled={locked}
         onClick={() => onChange?.(!checked)}
-        className={`relative inline-flex h-6 w-11 shrink-0 items-center rounded-full transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400 ${
-          checked ? "bg-volt-500" : "bg-white/15"
+        className={`relative inline-flex h-6 w-11 shrink-0 items-center rounded-full transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${
+          checked ? "bg-white" : "bg-white/15"
         } ${locked ? "cursor-not-allowed opacity-60" : "cursor-pointer"}`}
       >
         <span

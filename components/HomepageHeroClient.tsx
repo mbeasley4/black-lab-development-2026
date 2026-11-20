@@ -254,7 +254,7 @@ const HomepageHeroClient = () => {
               >
                 <Link
                   href="/contact"
-                  className="group inline-flex items-center justify-center gap-2 rounded-md bg-volt-500 text-black px-8 py-4 text-base font-bold transition-colors duration-200 hover:bg-volt-400"
+                  className="group inline-flex items-center justify-center gap-2 rounded-md bg-white text-black px-8 py-4 text-base font-bold transition-colors duration-200 hover:bg-neutral-200"
                 >
                   <span className="relative">Schedule a Call</span>
                   <svg className="relative w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">

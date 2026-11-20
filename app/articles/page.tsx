@@ -83,8 +83,8 @@ function Pagination({ page, totalPages }: { page: number; totalPages: number }) 
 
   const linkBase =
     "inline-flex items-center justify-center min-w-[2.25rem] h-9 px-3 rounded-md text-sm font-medium transition-colors";
-  const active = "bg-volt-500 text-black";
-  const inactive = "border border-neutral-800 text-neutral-400 hover:border-volt-500/40 hover:text-white";
+  const active = "bg-white text-black";
+  const inactive = "border border-neutral-800 text-neutral-400 hover:border-neutral-500 hover:text-white";
   const disabled = "border border-neutral-900 text-neutral-700 pointer-events-none";
 
   return (
@@ -235,7 +235,7 @@ export default async function ArticlesPage({
                   className="h-full group flex flex-col border border-neutral-800 rounded-xl overflow-hidden bg-neutral-950 transition-all duration-300 hover:border-neutral-500 hover:shadow-[0_0_40px_rgba(255,255,255,0.04)]"
                 >
                   {/* Top accent line */}
-                  <div className="h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-volt-500/60 transition-all duration-500" />
+                  <div className="h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-white/20 transition-all duration-500" />
 
                   <div className="relative h-56 overflow-hidden">
                     <Image
@@ -244,7 +244,7 @@ export default async function ArticlesPage({
                       fill
                       className="object-cover opacity-80 group-hover:opacity-95 group-hover:scale-[1.02] transition-all duration-500"
                     />
-                    <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-transparent to-transparent group-hover:to-volt-500/5 transition-all duration-500" />
+                    <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-transparent to-transparent group-hover:to-white/3 transition-all duration-500" />
                     <div className="absolute bottom-0 left-0 right-0 h-12 bg-linear-to-t from-neutral-950 to-transparent" />
                   </div>
 

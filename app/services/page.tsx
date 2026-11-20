@@ -241,7 +241,7 @@ export default function ServicesPage() {
                 color: "volt",
               },
             ].map((s) => {
-              const border = s.color === "volt" ? "hover:border-volt-500/50" : "hover:border-volt-500/50";
+              const border = s.color === "volt" ? "hover:border-neutral-500" : "hover:border-neutral-500";
               const text = s.color === "volt" ? "text-white" : "text-neutral-300";
               return (
                 <Link
@@ -270,7 +270,7 @@ export default function ServicesPage() {
         <div
           className="absolute inset-0 pointer-events-none opacity-15"
           style={{
-            backgroundImage: "radial-gradient(circle, rgba(227,245,68,0.20) 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px)",
             backgroundSize: "44px 44px",
           }}
         />
@@ -297,7 +297,7 @@ export default function ServicesPage() {
                 key={service.title}
                 className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center py-6 md:py-9 relative ${
                   index < services.length - 1
-                    ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-linear-to-r after:from-transparent after:via-volt-500/20 after:to-transparent"
+                    ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-linear-to-r after:from-transparent after:via-white/7 after:to-transparent"
                     : ""
                 }`}
               >
@@ -341,7 +341,7 @@ export default function ServicesPage() {
                     className="object-cover opacity-65 group-hover:opacity-90 group-hover:scale-[1.05] transition-all duration-700"
                   />
                   {/* Dark overlay */}
-                  <div className="absolute inset-0 bg-linear-to-br from-black/65 via-black/20 to-white/10 group-hover:to-volt-900/25 transition-all duration-500" />
+                  <div className="absolute inset-0 bg-linear-to-br from-black/65 via-black/20 to-white/10 group-hover:to-white/5 transition-all duration-500" />
                   {/* Scanline texture */}
                   <div
                     className="absolute inset-0 opacity-[0.08] pointer-events-none"
@@ -350,9 +350,9 @@ export default function ServicesPage() {
                     }}
                   />
                   {/* Top accent line */}
-                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-volt-500/80 transition-all duration-500" />
+                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-white/27 transition-all duration-500" />
                   {/* Bottom accent line */}
-                  <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-volt-500/50 transition-all duration-500" />
+                  <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-white/17 transition-all duration-500" />
                   {/* Corner glow */}
                   <div className="absolute top-0 right-0 w-40 h-40 bg-white/[0.04] blur-3xl rounded-full group-hover:bg-white/25 transition-all duration-500" />
                   <div className="absolute bottom-0 left-0 w-28 h-28 bg-white/[0.04] blur-2xl rounded-full group-hover:bg-white/20 transition-all duration-500" />
@@ -442,7 +442,7 @@ export default function ServicesPage() {
                   {item.body}
                 </p>
                 {/* Bottom accent on hover */}
-                <div className="absolute bottom-0 left-8 right-8 h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-volt-500/30 transition-all duration-500" />
+                <div className="absolute bottom-0 left-8 right-8 h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-white/10 transition-all duration-500" />
               </div>
             ))}
           </div>

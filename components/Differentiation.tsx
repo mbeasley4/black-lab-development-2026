@@ -52,7 +52,7 @@ export default function Differentiation() {
                     <div className="flex flex-col gap-4">
                         {failPoints.map((item) => (
                             <div key={item} className="group flex items-center gap-4 p-5 rounded-xl border border-neutral-800/50 bg-neutral-900/30 hover:border-neutral-500 hover:bg-white/5 transition-all duration-300">
-                                <span className="shrink-0 w-2 h-2 rounded-full bg-white/[0.04] group-hover:bg-volt-500 transition-colors duration-300" />
+                                <span className="shrink-0 w-2 h-2 rounded-full bg-white/[0.04] group-hover:bg-white/15 transition-colors duration-300" />
                                 <p className="text-lg md:text-xl text-neutral-300 leading-snug font-medium group-hover:text-white transition-colors duration-300">
                                     {item}
                                 </p>

@@ -255,7 +255,7 @@ export default function Header() {
                             <Link
                                 href="/"
                                 onClick={closeDrawer}
-                                className="flex items-center gap-2 group rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
+                                className="flex items-center gap-2 group rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                             >
                                 <div className="relative">
                                     <Image
@@ -279,7 +279,7 @@ export default function Header() {
                                 onClick={closeDrawer}
                                 aria-label="Close menu"
                                 style={{ touchAction: "manipulation" }}
-                                className="py-2 px-2 text-white border border-neutral-800 rounded-sm hover:border-neutral-500 hover:text-neutral-300 hover:shadow-[0_0_12px_rgba(255,255,255,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 transition-all duration-200 cursor-pointer"
+                                className="py-2 px-2 text-white border border-neutral-800 rounded-sm hover:border-neutral-500 hover:text-neutral-300 hover:shadow-[0_0_12px_rgba(255,255,255,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 transition-all duration-200 cursor-pointer"
                             >
                                 <span className="block w-5 h-0.5 bg-current rotate-45 translate-y-0.75" />
                                 <span className="block w-5 h-0.5 bg-current -rotate-45" />
@@ -302,7 +302,7 @@ export default function Header() {
                                     aria-expanded={servicesExpanded}
                                     aria-controls="mobile-services-panel"
                                     className={`w-full flex items-center justify-between gap-3 py-3.5 text-[16px] tracking-normal font-medium transition-all duration-300
-                                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 rounded-sm
+                                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 rounded-sm
                                         ${servicesActive
                                             ? "text-white"
                                             : "text-[#c8c8c8] hover:text-white"
@@ -330,7 +330,7 @@ export default function Header() {
                                                     href={s.href}
                                                     onClick={closeDrawer}
                                                     className={`py-2 text-[14px] tracking-normal transition-colors duration-200 rounded-sm
-                                                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70
+                                                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70
                                                         ${active ? "text-white" : "text-[#a8a8a8] hover:text-white"}`}
                                                 >
                                                     {s.label}
@@ -357,7 +357,7 @@ export default function Header() {
                                     aria-expanded={industriesExpanded}
                                     aria-controls="mobile-industries-panel"
                                     className={`w-full flex items-center justify-between gap-3 py-3.5 text-[16px] tracking-normal font-medium transition-all duration-300
-                                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 rounded-sm
+                                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 rounded-sm
                                         ${industriesActive
                                             ? "text-white"
                                             : "text-[#c8c8c8] hover:text-white"
@@ -381,7 +381,7 @@ export default function Header() {
                                             href="/industries"
                                             onClick={closeDrawer}
                                             className={`py-2 text-[14px] tracking-normal transition-colors duration-200 rounded-sm
-                                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70
+                                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70
                                                 ${pathname === "/industries" ? "text-white" : "text-[#a8a8a8] hover:text-white"}`}
                                         >
                                             All industries
@@ -394,7 +394,7 @@ export default function Header() {
                                                     href={s.href}
                                                     onClick={closeDrawer}
                                                     className={`py-2 text-[14px] tracking-normal transition-colors duration-200 rounded-sm
-                                                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70
+                                                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70
                                                         ${active ? "text-white" : "text-[#a8a8a8] hover:text-white"}`}
                                                 >
                                                     {s.label}
@@ -423,7 +423,7 @@ export default function Header() {
                                             href={item.href}
                                             onClick={closeDrawer}
                                             className={`flex items-center gap-3 py-3.5 text-[16px] tracking-normal font-medium transition-all duration-300
-                                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 rounded-sm
+                                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 rounded-sm
                                                 ${active
                                                     ? "text-white"
                                                     : "text-[#c8c8c8] hover:text-white hover:"
@@ -450,7 +450,7 @@ export default function Header() {
                                 <Link
                                     href="/cincinnati-web-developer"
                                     onClick={closeDrawer}
-                                    className="flex items-center gap-2 py-3 text-[13px] tracking-normal text-[#8a8a8a] hover:text-neutral-300 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
+                                    className="flex items-center gap-2 py-3 text-[13px] tracking-normal text-[#8a8a8a] hover:text-neutral-300 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                                 >
                                     <span aria-hidden className="text-neutral-500">◆</span>
                                     Cincinnati web developer
@@ -470,9 +470,9 @@ export default function Header() {
                                 href="/contact"
                                 onClick={closeDrawer}
                                 className="relative z-10 mt-4 block text-center py-2.5 px-6 tracking-wide text-[13px] font-bold
-                                    text-black bg-volt-500 rounded-sm
-                                    hover:bg-volt-400
-                                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt/70
+                                    text-black bg-white rounded-sm
+                                    hover:bg-neutral-200
+                                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70
                                     transition-all duration-300"
                             >
                                 Let&apos;s work together
@@ -491,7 +491,7 @@ export default function Header() {
                     {/* Logo */}
                     <Link
                         href="/"
-                        className="flex items-center gap-2 uppercase group rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
+                        className="flex items-center gap-2 uppercase group rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                         onClick={closeDrawer}
                     >
                         <div className="relative">
@@ -542,7 +542,7 @@ export default function Header() {
                                 aria-haspopup="true"
                                 aria-expanded={openMega === "services"}
                                 onFocus={() => handleMegaEnter("services")}
-                                className="relative group inline-flex items-center gap-1.5 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
+                                className="relative group inline-flex items-center gap-1.5 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                             >
                                 <span
                                     className={`transition-all duration-300 ${
@@ -625,7 +625,7 @@ export default function Header() {
                                 aria-haspopup="true"
                                 aria-expanded={openMega === "industries"}
                                 onFocus={() => handleMegaEnter("industries")}
-                                className="relative group inline-flex items-center gap-1.5 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
+                                className="relative group inline-flex items-center gap-1.5 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                             >
                                 <span
                                     className={`transition-all duration-300 ${
@@ -690,7 +690,7 @@ export default function Header() {
                         {plainNav.map((item) => {
                             const active = isActive(item.href);
                             return (
-                                <Link key={item.label} href={item.href} className="relative group rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70">
+                                <Link key={item.label} href={item.href} className="relative group rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70">
                                     <span
                                         className={`transition-all duration-300 ${
                                             active
@@ -715,10 +715,10 @@ export default function Header() {
                         <Link
                             href="/contact"
                             className={`px-3.5 py-1.5 tracking-[0.02em] text-[12px] font-bold rounded-sm transition-all duration-300
-                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt/70
+                                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70
                                 ${isActive("/contact")
-                                    ? "bg-volt-500 text-black"
-                                    : "bg-volt-500 text-black hover:bg-volt-400"
+                                    ? "bg-white text-black"
+                                    : "bg-white text-black hover:bg-neutral-200"
                                 }`}
                         >
                             Schedule a call
@@ -732,7 +732,7 @@ export default function Header() {
                         aria-label="Open menu"
                         aria-expanded={mobileOpen}
                         style={{ touchAction: "manipulation" }}
-                        className="lg:hidden p-3 text-white border border-neutral-800 rounded-sm hover:shadow-[0_0_20px_rgba(227,245,68,0.65),inset_0_0_12px_rgba(255,255,255,0.05)] hover:border-neutral-500 hover:text-neutral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 active:scale-95 transition-all duration-200 cursor-pointer"
+                        className="lg:hidden p-3 text-white border border-neutral-800 rounded-sm hover:shadow-[0_0_20px_rgba(255,255,255,0.15),inset_0_0_12px_rgba(255,255,255,0.05)] hover:border-neutral-500 hover:text-neutral-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 active:scale-95 transition-all duration-200 cursor-pointer"
                     >
                         <div className="space-y-1.5">
                             <span className="block h-0.5 w-7 bg-current" />
@@ -779,7 +779,7 @@ function MegaPanel({
                     <Link
                         href={allHref}
                         onClick={onNavigate}
-                        className="mt-auto inline-flex w-fit items-center gap-1.5 pt-6 text-[13px] font-semibold text-white hover:text-neutral-300 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
+                        className="mt-auto inline-flex w-fit items-center gap-1.5 pt-6 text-[13px] font-semibold text-white hover:text-neutral-300 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                     >
                         {allLabel} <span aria-hidden>→</span>
                     </Link>
@@ -790,14 +790,14 @@ function MegaPanel({
                 <Link
                     href="/cincinnati-web-developer"
                     onClick={onNavigate}
-                    className="text-[12px] text-neutral-500 hover:text-neutral-200 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
+                    className="text-[12px] text-neutral-500 hover:text-neutral-200 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                 >
                     Based in Cincinnati · Serving clients nationwide
                 </Link>
                 <Link
                     href="/contact"
                     onClick={onNavigate}
-                    className="rounded-md bg-volt-500 px-3.5 py-1.5 text-[12px] font-bold text-black hover:bg-volt-400 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70"
+                    className="rounded-md bg-white px-3.5 py-1.5 text-[12px] font-bold text-black hover:bg-neutral-200 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                 >
                     Schedule a call
                 </Link>
@@ -824,7 +824,7 @@ function MenuLink({
             href={href}
             onClick={onNavigate}
             aria-current={active ? "page" : undefined}
-            className={`group/item block rounded-lg px-3 py-2.5 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 ${
+            className={`group/item block rounded-lg px-3 py-2.5 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 ${
                 active ? "bg-white/[0.06]" : "hover:bg-white/[0.05]"
             }`}
         >

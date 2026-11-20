@@ -56,7 +56,7 @@ export default async function ArticlesBlock() {
             <AnimatedCard key={a._id} delay={index * 100}>
               <Link
                 href={`/articles/${a.slug.current}`}
-                className="group h-full block border border-neutral-800 rounded-2xl overflow-hidden bg-neutral-950 transition-all duration-500 hover:-translate-y-2 hover:border-neutral-500 hover:shadow-xl hover:shadow-volt-500/10"
+                className="group h-full block border border-neutral-800 rounded-2xl overflow-hidden bg-neutral-950 transition-all duration-500 hover:-translate-y-2 hover:border-neutral-500 hover:shadow-xl hover:shadow-black/40"
               >
                 {/* Image */}
                 <div className="relative h-56 overflow-hidden">
@@ -76,7 +76,7 @@ export default async function ArticlesBlock() {
                 {/* Content */}
                 <div className="p-8 flex flex-col grow relative">
                   {/* Hover gradient background */}
-                  <div className="absolute inset-0 bg-linear-to-br from-white/10 to-white/10 group-hover:from-volt-500/3 group-hover:to-transparent transition-all duration-500 rounded-b-2xl" />
+                  <div className="absolute inset-0 bg-linear-to-br from-white/10 to-white/10 group-hover:from-white/3 group-hover:to-transparent transition-all duration-500 rounded-b-2xl" />
 
                   <div className="relative z-10">
                     {a.publishedAt && (
@@ -107,7 +107,7 @@ export default async function ArticlesBlock() {
                 </div>
 
                 {/* Bottom accent line */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-volt-500/80 transition-all duration-500 rounded-b-2xl" />
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-white/27 transition-all duration-500 rounded-b-2xl" />
               </Link>
             </AnimatedCard>
           ))}
@@ -117,7 +117,7 @@ export default async function ArticlesBlock() {
         <div className="text-center">
           <Link
             href="/articles"
-            className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 bg-white/[0.04] px-10 py-4 text-sm font-semibold uppercase tracking-wide text-white transition-all duration-300 hover:border-neutral-500 hover:bg-white/15 hover:text-white hover:shadow-lg hover:shadow-volt-500/20"
+            className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 bg-white/[0.04] px-10 py-4 text-sm font-semibold uppercase tracking-wide text-white transition-all duration-300 hover:border-neutral-500 hover:bg-white/15 hover:text-white hover:shadow-lg hover:shadow-black/40"
           >
             Explore All Insights
             <svg className="w-5 h-5 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">

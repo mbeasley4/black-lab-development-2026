@@ -191,7 +191,7 @@ export default function WebsitePerformanceOptimizationPage() {
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-7 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg"
+              className="inline-flex items-center justify-center rounded-md bg-white text-black px-7 py-3.5 text-sm font-semibold hover:bg-neutral-200 transition-colors duration-200 shadow-lg"
             >
               Get a Performance Audit →
             </Link>

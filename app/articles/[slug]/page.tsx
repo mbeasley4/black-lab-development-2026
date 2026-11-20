@@ -267,7 +267,7 @@ export default async function ArticlePage({
                                             by{" "}
                                             <Link
                                                 href={authorHref}
-                                                className="rounded-sm underline decoration-transparent underline-offset-2 transition-colors duration-200 hover:text-neutral-200 hover:decoration-current focus-visible:text-neutral-200 focus-visible:decoration-current focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/50"
+                                                className="rounded-sm underline decoration-transparent underline-offset-2 transition-colors duration-200 hover:text-neutral-200 hover:decoration-current focus-visible:text-neutral-200 focus-visible:decoration-current focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
                                             >
                                                 {article.author.name}
                                             </Link>

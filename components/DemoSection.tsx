@@ -101,7 +101,7 @@ export default function DemoSection() {
                     href={demo.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group/btn mt-8 inline-flex items-center gap-2.5 rounded-lg bg-volt-500 px-6 py-3 text-sm font-semibold text-black transition-all duration-200 hover:bg-volt-400 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
+                    className="group/btn mt-8 inline-flex items-center gap-2.5 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-black transition-all duration-200 hover:bg-neutral-200 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
                   >
                     View Live Demo
                     <span className="transition-transform duration-200 group-hover/btn:translate-x-1">

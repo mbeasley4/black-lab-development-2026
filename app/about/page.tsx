@@ -185,7 +185,7 @@ export default function AboutPage() {
         <div
           className="absolute inset-0 pointer-events-none opacity-15"
           style={{
-            backgroundImage: "radial-gradient(circle, rgba(227,245,68,0.25) 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px)",
             backgroundSize: "44px 44px",
           }}
         />
@@ -285,7 +285,7 @@ export default function AboutPage() {
                   key={stat.label}
                   className="relative rounded-xl border border-neutral-800 bg-surface-raised/60 p-6 overflow-hidden group hover:border-neutral-500 hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] transition-all duration-500"
                 >
-                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-volt-500/70 transition-all duration-500" />
+                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-white/23 transition-all duration-500" />
                   <div className="text-4xl font-black font-mono text-white mb-2">
                     {stat.value}
                   </div>
@@ -301,7 +301,7 @@ export default function AboutPage() {
       <section className="bg-charcoal py-6 md:py-9 relative overflow-hidden border-t border-neutral-800">
         <div className="absolute inset-0 pointer-events-none opacity-10"
           style={{
-            backgroundImage: "radial-gradient(circle, rgba(227,245,68,0.25) 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px)",
             backgroundSize: "44px 44px",
           }}
         />
@@ -401,7 +401,7 @@ export default function AboutPage() {
                 key={value.label}
                 className="group relative rounded-xl border border-neutral-800 bg-surface-raised/50 p-8 overflow-hidden hover:border-neutral-500 hover:shadow-[0_0_60px_rgba(255,255,255,0.04)] transition-all duration-500"
               >
-                <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-volt-500/60 transition-all duration-500" />
+                <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent group-hover:via-white/20 transition-all duration-500" />
                 <div className="absolute top-3 right-4 text-[6rem] font-black font-mono text-white/[0.06] leading-none pointer-events-none select-none" aria-hidden="true">
                   {value.label}
                 </div>

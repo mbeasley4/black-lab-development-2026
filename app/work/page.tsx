@@ -166,7 +166,7 @@ export default function CaseStudiesPage() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-volt-500 text-black px-8 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg"
+              className="inline-flex items-center justify-center rounded-md bg-white text-black px-8 py-3.5 text-sm font-semibold hover:bg-neutral-200 transition-colors duration-200 shadow-lg"
             >
               Schedule a Call
             </Link>
@@ -206,7 +206,7 @@ export default function CaseStudiesPage() {
             <nav aria-label="Work by industry" className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
               <span className="text-neutral-400">By industry:</span>
               {industryLinks.map((l) => (
-                <Link key={l.href} href={l.href} className="text-neutral-300 underline decoration-neutral-700 underline-offset-4 hover:text-neutral-300 hover:decoration-volt-500/60 transition-colors duration-200">
+                <Link key={l.href} href={l.href} className="text-neutral-300 underline decoration-neutral-700 underline-offset-4 hover:text-neutral-300 hover:decoration-white/60 transition-colors duration-200">
                   {l.label}
                 </Link>
               ))}
@@ -324,7 +324,7 @@ export default function CaseStudiesPage() {
                   <p className="text-[11px] text-neutral-500 leading-relaxed mb-6">Health &amp; Wellness · eCommerce · High-Traffic Content</p>
                   <Link
                     href="/contact"
-                    className="flex items-center justify-center gap-2 rounded-md bg-volt-500 text-black px-6 py-3 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg hover:shadow-volt-500/40"
+                    className="flex items-center justify-center gap-2 rounded-md bg-white text-black px-6 py-3 text-sm font-semibold hover:bg-neutral-200 transition-colors duration-200 shadow-lg hover:shadow-black/40"
                   >
                     Discuss Your Project
                     <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
