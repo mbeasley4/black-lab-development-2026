@@ -90,7 +90,7 @@ function ScoreRing({ label, score, delay }: { label: string; score: number; dela
           {value}
         </span>
       </div>
-      <span className="text-[10px] uppercase tracking-wider text-slate-400 text-center leading-tight">
+      <span className="text-[10px] uppercase tracking-wider text-neutral-400 text-center leading-tight">
         {label}
       </span>
     </div>
@@ -125,20 +125,20 @@ function HeroVisual() {
           }}
           aria-hidden="true"
         />
-        <div className="relative rounded-2xl bg-[#0a0b0c]/90 backdrop-blur-xl">
+        <div className="relative rounded-2xl bg-surface/90 backdrop-blur-xl">
           {/* Browser chrome */}
           <div className="flex items-center gap-2 border-b border-white/5 px-4 py-3">
             <span className="h-2.5 w-2.5 rounded-full bg-red-500/70" />
             <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/70" />
             <span className="h-2.5 w-2.5 rounded-full bg-green-500/70" />
-            <span className="ml-3 flex-1 truncate rounded-md bg-white/5 px-3 py-1 text-[11px] text-slate-400 font-mono">
+            <span className="ml-3 flex-1 truncate rounded-md bg-white/5 px-3 py-1 text-[11px] text-neutral-400 font-mono">
               yourbusiness.com
             </span>
           </div>
 
           <div className="p-6">
             <div className="mb-5 flex items-center justify-between">
-              <span className="text-[11px] uppercase tracking-[0.2em] text-slate-400 font-semibold">
+              <span className="text-[11px] uppercase tracking-[0.2em] text-neutral-400 font-semibold">
                 Launch-day target
               </span>
               <span className="flex items-center gap-1.5 text-[11px] font-semibold text-volt-400">
@@ -158,7 +158,7 @@ function HeroVisual() {
             {/* Mini conversion sparkline */}
             <div className="mt-6 rounded-xl border border-white/5 bg-white/[0.02] p-4">
               <div className="mb-2 flex items-baseline justify-between">
-                <span className="text-xs text-slate-400">Leads / month</span>
+                <span className="text-xs text-neutral-400">Leads / month</span>
                 <span className="text-xs font-semibold text-volt-400">↑ trending up</span>
               </div>
               <svg viewBox="0 0 200 48" className="h-12 w-full" aria-hidden="true">
@@ -194,7 +194,7 @@ function HeroVisual() {
           style={{ animationDelay: c.delay }}
         >
           <span className="text-sm font-bold text-volt-400">{c.value}</span>
-          <span className="text-xs text-slate-300 whitespace-nowrap">{c.label}</span>
+          <span className="text-xs text-neutral-300 whitespace-nowrap">{c.label}</span>
         </div>
       ))}
     </div>
@@ -328,7 +328,7 @@ const HomepageHeroClient = () => {
               >
                 <Link
                   href="/contact"
-                  className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-md bg-volt text-black px-8 py-4 text-base font-bold shadow-[0_0_40px_rgba(227,245,68,0.35)] transition-all duration-300 hover:shadow-[0_0_60px_rgba(227,245,68,0.6)] hover:-translate-y-0.5"
+                  className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-md bg-volt text-black px-8 py-4 text-base font-bold transition-all duration-300 hover:shadow-[0_0_60px_rgba(227,245,68,0.6)] hover:-translate-y-0.5"
                 >
                   {/* Sheen sweep on hover */}
                   <span className="absolute inset-y-0 -left-full w-1/2 skew-x-[-20deg] bg-white/50 transition-all duration-700 group-hover:left-[150%]" aria-hidden="true" />
@@ -347,7 +347,7 @@ const HomepageHeroClient = () => {
 
               <motion.p
                 variants={fadeIn(0.9, 0)}
-                className="mt-6 text-xs text-slate-500 tracking-wide"
+                className="mt-6 text-xs text-neutral-400 tracking-wide"
               >
                 Cincinnati-based · Serving small businesses &amp; agencies nationwide
               </motion.p>

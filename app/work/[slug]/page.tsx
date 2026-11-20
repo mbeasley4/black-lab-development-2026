@@ -110,7 +110,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const study = await loadStudy(slug);
-  if (!study) return { title: "Case Study Not Found" };
+  if (!study) return { title: "Project Not Found" };
   const canonical = `https://blacklabdev.com/work/${slug}`;
   const title = study.seoTitle || study.title;
   const description = study.metaDescription || study.excerpt || "";
@@ -159,7 +159,6 @@ export default async function CaseStudyPage({
   const moreProjects = getMoreProjects(slug);
 
   const heroMetrics = study.metrics?.slice(0, 3) ?? [];
-  const isProject = study.kind === "project";
   // Real hostname when the live URL is known; otherwise just the client name,
   // never a guessed domain.
   const siteHost: string = study.websiteUrl
@@ -211,13 +210,11 @@ export default async function CaseStudyPage({
   };
 
   return (
-    <main className="w-full bg-[#0b0b0c] text-white">
+    <main className="w-full bg-surface text-white">
       <JsonLd data={[articleSchema, breadcrumbSchema]} />
       {/* ─── HERO ─────────────────────────────────────── */}
-      <section className="relative overflow-hidden border-b border-volt-500/20 bg-[#0b0b0c]">
+      <section className="relative overflow-hidden border-b border-volt-500/20 bg-surface">
         {/* Ambient glows */}
-        <div className="absolute top-0 right-0 w-175 h-175 bg-volt-500/8 rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-125 h-125 bg-volt-500/6 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/25 to-transparent" />
 
         <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
@@ -226,11 +223,11 @@ export default async function CaseStudyPage({
             {/* ── Left: text + metrics ── */}
             <div className="flex flex-col justify-center">
               <div className="mb-5 flex flex-wrap items-center gap-3">
-                <Link href="/work" className="text-xs text-slate-500 hover:text-slate-400 transition-colors">
+                <Link href="/work" className="text-xs text-neutral-400 hover:text-neutral-400 transition-colors">
                   ← Work
                 </Link>
-                <span className="text-slate-700">/</span>
-                <span className="text-xs text-slate-500">{isProject ? "Project" : "Case Study"}</span>
+                <span className="text-neutral-500">/</span>
+                <span className="text-xs text-neutral-400">Project</span>
                 {study.platform && (
                   <span className="text-[10px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full border border-volt-500/20 bg-volt-500/5 text-volt-500/80">
                     {study.platform}
@@ -238,9 +235,9 @@ export default async function CaseStudyPage({
                 )}
               </div>
 
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-volt-500/35 bg-volt-500/8 text-volt-500 text-xs font-bold tracking-[0.2em] uppercase mb-6 w-fit">
-                <span className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_8px_rgba(227,245,68,0.9)]" />
-                {study.clientName ?? "Case Study"}
+              <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-neutral-300 mb-6 w-fit">
+                <span className="w-1.5 h-1.5 rounded-full bg-volt-500" />
+                {study.clientName ?? "Project"}
                 {study.industry ? ` · ${study.industry}` : ""}
               </span>
 
@@ -249,7 +246,7 @@ export default async function CaseStudyPage({
               </h1>
 
               {study.tagline && (
-                <p className="text-lg md:text-xl text-slate-300 leading-relaxed mb-10 max-w-xl">
+                <p className="text-lg md:text-xl text-neutral-300 leading-relaxed mb-10 max-w-xl">
                   {study.tagline}
                 </p>
               )}
@@ -262,7 +259,7 @@ export default async function CaseStudyPage({
                       className={`rounded-xl border px-4 sm:px-6 py-4 text-center flex-1 min-w-0 ${HERO_METRIC_STYLES[i]}`}
                     >
                       <div className="text-2xl sm:text-3xl font-black">{m.improvement}</div>
-                      <div className="text-xs text-slate-400 mt-1 uppercase tracking-wide">{m.label}</div>
+                      <div className="text-xs text-neutral-400 mt-1 uppercase tracking-wide">{m.label}</div>
                     </div>
                   ))}
                 </div>
@@ -325,25 +322,25 @@ export default async function CaseStudyPage({
 
       {/* ─── FULL METRICS GRID ────────────────────────── */}
       {study.metrics && study.metrics.length > 0 && (
-        <section className="py-20 border-b border-slate-800">
+        <section className="py-20 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-10">
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 The Results
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Key Metrics</h2>
               <div className="mt-4 h-px w-32 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-slate-800/40 rounded-2xl overflow-hidden border border-neutral-800">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-neutral-800/40 rounded-2xl overflow-hidden border border-neutral-800">
               {study.metrics.map(
                 (m: { improvement: string; label: string; value?: string; note?: string }, i: number) => (
                   <div key={i} className="bg-neutral-950 px-8 py-8 text-center">
-                    <div className="text-4xl font-black text-volt-500 drop-shadow-[0_0_10px_rgba(227,245,68,0.4)] mb-2">
+                    <div className="text-4xl font-black text-volt-500 mb-2">
                       {m.improvement}
                     </div>
                     <div className="text-sm font-semibold text-white mb-1">{m.label}</div>
-                    {m.value && <div className="text-xs text-slate-500">{m.value}</div>}
-                    {m.note && <div className="text-xs text-slate-600 mt-0.5">{m.note}</div>}
+                    {m.value && <div className="text-xs text-neutral-400">{m.value}</div>}
+                    {m.note && <div className="text-xs text-neutral-500 mt-0.5">{m.note}</div>}
                   </div>
                 ),
               )}
@@ -354,10 +351,10 @@ export default async function CaseStudyPage({
 
       {/* ─── WHAT WE BUILT ────────────────────────────── */}
       {study.details && study.details.length > 0 && (
-        <section className="py-20 border-b border-slate-800">
+        <section className="py-20 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-10">
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 The Build
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Project Highlights</h2>
@@ -365,8 +362,8 @@ export default async function CaseStudyPage({
             </div>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {study.details.map((item: string) => (
-                <li key={item} className="flex items-start gap-3 rounded-xl border border-neutral-800 bg-neutral-950 px-5 py-4 text-slate-300">
-                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_6px_rgba(227,245,68,0.7)] shrink-0" />
+                <li key={item} className="flex items-start gap-3 rounded-xl border border-neutral-800 bg-neutral-950 px-5 py-4 text-neutral-300">
+                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-volt-500 shrink-0" />
                   {item}
                 </li>
               ))}
@@ -377,10 +374,10 @@ export default async function CaseStudyPage({
 
       {/* ─── BEFORE / AFTER ───────────────────────────── */}
       {study.beforeSrc && study.heroSrc && (
-        <section className="py-20 border-b border-slate-800">
+        <section className="py-20 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-10">
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 The Transformation
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Before &amp; After</h2>
@@ -388,7 +385,7 @@ export default async function CaseStudyPage({
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {[
-                { label: "Before", src: study.beforeSrc as string, alt: study.beforeAlt, accent: "text-slate-400 border-slate-700" },
+                { label: "Before", src: study.beforeSrc as string, alt: study.beforeAlt, accent: "text-neutral-400 border-neutral-700" },
                 { label: "After", src: study.heroSrc as string, alt: study.heroAlt, accent: "text-volt-400 border-volt-500/40" },
               ].map(({ label, src, alt, accent }) => (
                 <figure key={label} className="rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950">
@@ -415,9 +412,9 @@ export default async function CaseStudyPage({
 
       {/* ─── BODY ─────────────────────────────────────── */}
       {(study.body || study.sections) && (
-        <section className="py-20 border-b border-slate-800">
+        <section className="py-20 border-b border-neutral-800">
           <div className="mx-auto max-w-225 px-6">
-            <article className="prose prose-invert prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h3:text-xl prose-h2:mt-12 prose-h2:mb-4 prose-h3:mt-8 prose-h3:mb-3 prose-p:text-slate-300 prose-p:leading-relaxed prose-li:text-slate-300 prose-ul:space-y-1 prose-strong:text-white">
+            <article className="prose prose-invert prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h3:text-xl prose-h2:mt-12 prose-h2:mb-4 prose-h3:mt-8 prose-h3:mb-3 prose-p:text-neutral-300 prose-p:leading-relaxed prose-li:text-neutral-300 prose-ul:space-y-1 prose-strong:text-white">
               {study.body ? (
                 <PortableText value={study.body} components={portableTextComponents} />
               ) : (
@@ -437,10 +434,10 @@ export default async function CaseStudyPage({
 
       {/* ─── GALLERY ──────────────────────────────────── */}
       {study.galleryItems.length > 0 && (
-        <section className="py-20 border-b border-slate-800">
+        <section className="py-20 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-10">
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 The Finished Site
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Gallery</h2>
@@ -459,7 +456,7 @@ export default async function CaseStudyPage({
                     />
                   </div>
                   {image.caption && (
-                    <figcaption className="px-5 py-3 border-t border-neutral-800 text-sm text-slate-400">
+                    <figcaption className="px-5 py-3 border-t border-neutral-800 text-sm text-neutral-400">
                       {image.caption}
                     </figcaption>
                   )}
@@ -530,7 +527,7 @@ export default async function CaseStudyPage({
                         {project.platform}
                       </span>
                     </div>
-                    <p className="line-clamp-2 text-sm leading-relaxed text-slate-400">{project.summary}</p>
+                    <p className="line-clamp-2 text-sm leading-relaxed text-neutral-400">{project.summary}</p>
                     <span className="mt-auto inline-flex items-center gap-2 pt-1 text-xs font-semibold uppercase tracking-wide text-volt-500 group-hover:text-volt-400">
                       View project
                       <svg className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -547,19 +544,17 @@ export default async function CaseStudyPage({
 
       {/* ─── CTA ─────────────────────────────────────── */}
       <section className="relative overflow-hidden py-24 border-t border-volt-500/20">
-        <div className="absolute inset-0 bg-linear-to-br from-[#111214] via-slate-950 to-[#0b0b0c]" />
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-volt-500/8 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-volt-500/6 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-linear-to-br from-surface-raised via-neutral-950 to-surface" />
         <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/30 to-transparent" />
 
         <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 text-center">
-          <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+          <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
             Work With Us
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Ready to Build on a Better Foundation?
           </h2>
-          <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-neutral-300 mb-10 max-w-2xl mx-auto leading-relaxed">
             Start with a performance and conversion audit. I&apos;ll identify what&apos;s limiting your site — and what it would take to fix it.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">

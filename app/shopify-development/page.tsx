@@ -201,7 +201,7 @@ const caseStudies: CaseStudy[] = [
 
 export default function ShopifyDevelopmentPage() {
   return (
-    <main className="w-full bg-[#0b0b0c] text-white">
+    <main className="w-full bg-surface text-white">
       <JsonLd data={[serviceSchema, faqSchema]} />
       <PageHero
         label="Shopify Development"
@@ -213,7 +213,7 @@ export default function ShopifyDevelopmentPage() {
       />
 
       {/* Hero CTAs */}
-      <section className="border-b border-slate-800 bg-[#111214]">
+      <section className="border-b border-neutral-800 bg-surface-raised">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-8 flex flex-wrap gap-4">
           <Link
             href="/contact"
@@ -225,29 +225,29 @@ export default function ShopifyDevelopmentPage() {
             href="/work"
             className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
           >
-            View Case Studies →
+            View My Work →
           </Link>
         </div>
       </section>
 
       {/* Intro */}
-      <section className="py-20 border-b border-slate-800">
+      <section className="py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 The Problem
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Custom Shopify Development Without the App Tax
               </h2>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-neutral-400 leading-relaxed mb-6">
                 Shopify is an excellent platform. Most Shopify stores are still slow, and it usually isn&apos;t Shopify&apos;s fault — it&apos;s a premium theme customized past the point of maintainability, wrapped in a dozen apps that each inject their own JavaScript.
               </p>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-neutral-400 leading-relaxed mb-6">
                 At Black Lab Dev, I work directly in your theme code. Liquid, Online Store 2.0 sections, metafields, and the Admin API — the actual platform, not a page builder app rented on top of it.
               </p>
-              <p className="text-slate-400 leading-relaxed font-medium">
+              <p className="text-neutral-400 leading-relaxed font-medium">
                 No page builder lock-in. No app for something the theme should just do. No monthly bill for functionality you own.
               </p>
             </div>
@@ -267,7 +267,7 @@ export default function ShopifyDevelopmentPage() {
                     </div>
                     <div>
                       <div className="text-sm font-semibold text-white mb-1">{item.problem}</div>
-                      <div className="text-xs text-slate-400 leading-relaxed">{item.impact}</div>
+                      <div className="text-xs text-neutral-400 leading-relaxed">{item.impact}</div>
                     </div>
                   </div>
                 </div>
@@ -278,16 +278,16 @@ export default function ShopifyDevelopmentPage() {
       </section>
 
       {/* Services */}
-      <section className="py-20 bg-[#111214] border-b border-slate-800">
+      <section className="py-20 bg-surface-raised border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               What I Build
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Shopify Development Services
             </h2>
-            <p className="text-slate-400 leading-relaxed">
+            <p className="text-neutral-400 leading-relaxed">
               Full-service Shopify development — from the theme your customers see to the integrations and custom apps your operations team depends on.
             </p>
           </div>
@@ -302,7 +302,7 @@ export default function ShopifyDevelopmentPage() {
                   {service.icon}
                 </div>
                 <h3 className="text-lg font-bold text-white mb-3 group-hover:text-volt-400 transition-colors duration-300">{service.title}</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">{service.body}</p>
+                <p className="text-sm text-neutral-400 leading-relaxed">{service.body}</p>
               </div>
             ))}
           </div>
@@ -310,20 +310,20 @@ export default function ShopifyDevelopmentPage() {
       </section>
 
       {/* Why I'm different */}
-      <section className="py-20 border-b border-slate-800">
+      <section className="py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Why I&apos;m Different
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 You Talk to the Developer Writing the Liquid
               </h2>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-neutral-400 leading-relaxed mb-6">
                 Most Shopify agencies put an account manager between you and the person touching your theme. Your feedback gets summarized, priorities get translated, and the context is gone by the time it reaches whoever is actually in the code.
               </p>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-neutral-400 leading-relaxed">
                 I&apos;m a solo developer. The person you scope the project with is the person who opens your theme, writes the sections, wires the webhooks, and answers the email when something looks wrong at checkout.
               </p>
             </div>
@@ -343,7 +343,7 @@ export default function ShopifyDevelopmentPage() {
                   </div>
                   <div>
                     <div className="text-sm font-semibold text-white mb-0.5">{item.label}</div>
-                    <div className="text-xs text-slate-400 leading-relaxed">{item.detail}</div>
+                    <div className="text-xs text-neutral-400 leading-relaxed">{item.detail}</div>
                   </div>
                 </div>
               ))}
@@ -353,16 +353,16 @@ export default function ShopifyDevelopmentPage() {
       </section>
 
       {/* Process */}
-      <section className="py-20 bg-[#111214] border-b border-slate-800">
+      <section className="py-20 bg-surface-raised border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               My Approach
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Audit the Store Before Touching the Theme
             </h2>
-            <p className="text-slate-400 leading-relaxed">
+            <p className="text-neutral-400 leading-relaxed">
               I don&apos;t start by picking a theme and styling it. Every project starts in your admin — catalog structure, metafields, installed apps, and what each one is costing your storefront — then I build against what&apos;s actually there.
             </p>
           </div>
@@ -370,9 +370,9 @@ export default function ShopifyDevelopmentPage() {
             {processSteps.map((item) => (
               <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
                 <div className="text-5xl font-black font-mono text-volt-500/20 leading-none">{item.step}</div>
-                <div className="border-b border-slate-800 pb-10 last:border-0 last:pb-0">
+                <div className="border-b border-neutral-800 pb-10 last:border-0 last:pb-0">
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                  <p className="text-slate-400 leading-relaxed">{item.body}</p>
+                  <p className="text-neutral-400 leading-relaxed">{item.body}</p>
                 </div>
               </div>
             ))}
@@ -381,20 +381,20 @@ export default function ShopifyDevelopmentPage() {
       </section>
 
       {/* Performance */}
-      <section className="py-20 border-b border-slate-800">
+      <section className="py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Performance
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Fast Storefronts Are a Build Decision
               </h2>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-neutral-400 leading-relaxed mb-6">
                 Shopify gives you a fast CDN and a fast checkout. What slows a store down is everything added on top — app scripts, oversized hero images, render-blocking third-party tags, and Liquid that does expensive work on every page load.
               </p>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-neutral-400 leading-relaxed">
                 I treat performance as part of the build, not a cleanup project after launch. That means measuring on real product and collection pages under your actual catalog — where the problems actually live.
               </p>
             </div>
@@ -402,10 +402,10 @@ export default function ShopifyDevelopmentPage() {
               {performancePoints.map((item) => (
                 <div key={item.label} className="rounded-xl border border-neutral-800 bg-neutral-950 p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-2 h-2 rounded-full bg-volt-500 shadow-[0_0_8px_rgba(227,245,68,0.7)] shrink-0 mt-2" />
+                    <div className="w-2 h-2 rounded-full bg-volt-500 shrink-0 mt-2" />
                     <div>
                       <div className="text-sm font-semibold text-white mb-1">{item.label}</div>
-                      <div className="text-xs text-slate-400 leading-relaxed">{item.detail}</div>
+                      <div className="text-xs text-neutral-400 leading-relaxed">{item.detail}</div>
                     </div>
                   </div>
                 </div>
@@ -416,25 +416,25 @@ export default function ShopifyDevelopmentPage() {
       </section>
 
       {/* Use Cases */}
-      <section className="py-20 bg-[#111214] border-b border-slate-800">
+      <section className="py-20 bg-surface-raised border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Use Cases
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 When Custom Shopify Work Pays Off
               </h2>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-neutral-400 leading-relaxed">
                 If a stock theme and a few apps are serving you well, keep them — that&apos;s the right answer for plenty of stores. Custom development earns its cost when the theme is fighting your catalog, when app subscriptions have outgrown their value, or when your store needs to talk to systems that apps don&apos;t handle reliably.
               </p>
             </div>
             <div className="space-y-3">
               {useCases.map((item) => (
                 <div key={item} className="flex items-center gap-4 rounded-xl border border-neutral-800 bg-neutral-950 px-6 py-4">
-                  <div className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_6px_rgba(227,245,68,0.7)] shrink-0" />
-                  <span className="text-sm text-slate-300">{item}</span>
+                  <div className="w-1.5 h-1.5 rounded-full bg-volt-500 shrink-0" />
+                  <span className="text-sm text-neutral-300">{item}</span>
                 </div>
               ))}
             </div>
@@ -442,12 +442,12 @@ export default function ShopifyDevelopmentPage() {
         </div>
       </section>
 
-      {/* Case Studies */}
-      <section className="py-20 border-b border-slate-800">
+      {/* Work */}
+      <section className="py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-volt-500/35 bg-volt-500/8 text-volt-500 text-xs font-bold tracking-[0.2em] uppercase mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_8px_rgba(227,245,68,0.9)]" />
+            <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-neutral-300 mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-volt-500" />
               Shopify Projects
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -462,7 +462,7 @@ export default function ShopifyDevelopmentPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-4">{study.title}</h3>
-                    <p className="text-slate-400 leading-relaxed">{study.description}</p>
+                    <p className="text-neutral-400 leading-relaxed">{study.description}</p>
                     {study.link && (
                       <a
                         href={study.link.href}
@@ -480,9 +480,9 @@ export default function ShopifyDevelopmentPage() {
                   <div className="grid grid-cols-3 gap-4">
                     {study.stats.map((stat) => (
                       <div key={stat.label} className="rounded-xl border border-neutral-800 bg-neutral-950 px-4 py-5 text-center transition-all duration-300 hover:border-volt-500/30 hover:shadow-[0_0_30px_rgba(227,245,68,0.05)]">
-                        <div className="text-lg font-black text-volt-500 drop-shadow-[0_0_10px_rgba(227,245,68,0.4)] mb-1">{stat.value}</div>
+                        <div className="text-lg font-black text-volt-500 mb-1">{stat.value}</div>
                         <div className="text-xs font-semibold text-white mb-1">{stat.label}</div>
-                        <div className="text-[11px] text-slate-500 leading-snug">{stat.detail}</div>
+                        <div className="text-[11px] text-neutral-400 leading-snug">{stat.detail}</div>
                       </div>
                     ))}
                   </div>
@@ -522,7 +522,7 @@ export default function ShopifyDevelopmentPage() {
       />
 
       {/* Internal links */}
-      <section className="py-16 border-b border-slate-800">
+      <section className="py-16 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <h2 className="text-lg font-bold text-white mb-6">Related Services</h2>
           <div className="flex flex-wrap gap-4">
@@ -534,25 +534,25 @@ export default function ShopifyDevelopmentPage() {
             </Link>
             <Link
               href="/services/custom-web-development"
-              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200"
             >
               Custom Web Development →
             </Link>
             <Link
               href="/wordpress-development"
-              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200"
             >
               WordPress Development →
             </Link>
             <Link
               href="/drupal-development"
-              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200"
             >
               Drupal Development →
             </Link>
             <Link
               href="/laravel-development"
-              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200"
             >
               Laravel Development →
             </Link>
@@ -567,7 +567,7 @@ export default function ShopifyDevelopmentPage() {
         bodyPrimary="If your storefront is slow, your app bill keeps growing, or your theme can't do what your catalog needs — let's talk about what you're actually trying to sell and what's getting in the way."
         bodySecondary="No page builder lock-in. No app for everything. Just clean Liquid, real integrations, and a developer who's accountable for how the store performs."
         secondaryHref="/work"
-        secondaryLabel="View Case Studies"
+        secondaryLabel="View My Work"
       />
     </main>
   );

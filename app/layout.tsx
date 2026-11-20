@@ -68,7 +68,7 @@ export default function RootLayout({
         <ConsentModeBootstrap />
         <JsonLd data={localBusinessSchema} />
       </head>
-      <body className={`${inter.variable} ${spaceGrotesk.variable} bg-[#0b0b0c] text-[#e5e7eb] antialiased`}>
+      <body className={`${inter.variable} ${spaceGrotesk.variable} bg-surface text-[#e5e7eb] antialiased`}>
         {/* GTM container + noscript fallback */}
         <GoogleTagManager />
         <AptabaseClientProvider>

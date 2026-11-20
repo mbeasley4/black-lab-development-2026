@@ -239,7 +239,7 @@ export default function Header() {
                     <nav
                         ref={drawerRef}
                         aria-label="Mobile navigation"
-                        className="absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-[#111214] border-l border-volt-500/40
+                        className="absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-surface-raised border-l border-volt-500/40
                             shadow-[-6px_0_40px_rgba(227,245,68,0.25)]
                             flex flex-col px-6 pt-4 pb-6 overflow-y-auto overflow-x-hidden"
                         style={{
@@ -249,8 +249,6 @@ export default function Header() {
                         }}
                     >
                         {/* Internal ambient glows */}
-                        <div className="pointer-events-none absolute top-0 right-0 w-48 h-48 bg-volt-500/8 rounded-full blur-3xl" />
-                        <div className="pointer-events-none absolute bottom-16 left-0 w-32 h-32 bg-volt-500/8 rounded-full blur-2xl" />
                         {/* Top accent line */}
                         <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/50 to-transparent" />
 
@@ -274,7 +272,7 @@ export default function Header() {
                                 </div>
                                 <div className="flex flex-col gap-1 uppercase leading-none whitespace-nowrap">
                                     <span className="text-[14px] font-bold tracking-tight text-[#e5e7eb]">Black Lab</span>
-                                    <span className="text-[8px] font-semibold tracking-[0.3em] text-volt-500 drop-shadow-[0_0_6px_rgba(227,245,68,0.6)]">Development</span>
+                                    <span className="text-[8px] font-semibold tracking-[0.3em] text-volt-500">Development</span>
                                 </div>
                             </Link>
 
@@ -284,7 +282,7 @@ export default function Header() {
                                 aria-label="Close menu"
                                 style={{ touchAction: "manipulation" }}
                                 className="py-2 px-2 text-volt-500 border border-volt-500/60 rounded-sm
-                                    shadow-[0_0_8px_rgba(227,245,68,0.15)]
+                                   
                                     hover:border-volt-400 hover:text-volt-400 hover:shadow-[0_0_12px_rgba(227,245,68,0.4)]
                                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70
                                     transition-all duration-200 cursor-pointer"
@@ -312,13 +310,13 @@ export default function Header() {
                                     className={`w-full flex items-center justify-between gap-3 py-3.5 text-[16px] tracking-normal font-medium transition-all duration-300
                                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 rounded-sm
                                         ${servicesActive
-                                            ? "text-volt-500 drop-shadow-[0_0_8px_rgba(227,245,68,0.7)]"
+                                            ? "text-volt-500"
                                             : "text-[#c8c8c8] hover:text-volt-400"
                                         }`}
                                 >
                                     <span className="flex items-center gap-3">
                                         <span className={`shrink-0 w-0.5 h-4 rounded-full transition-all duration-300
-                                            ${servicesActive ? "bg-volt-500 shadow-[0_0_6px_rgba(227,245,68,0.8)]" : "bg-volt-500/20"}`}
+                                            ${servicesActive ? "bg-volt-500" : "bg-volt-500/20"}`}
                                         />
                                         What I Build
                                     </span>
@@ -367,13 +365,13 @@ export default function Header() {
                                     className={`w-full flex items-center justify-between gap-3 py-3.5 text-[16px] tracking-normal font-medium transition-all duration-300
                                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 rounded-sm
                                         ${industriesActive
-                                            ? "text-volt-500 drop-shadow-[0_0_8px_rgba(227,245,68,0.7)]"
+                                            ? "text-volt-500"
                                             : "text-[#c8c8c8] hover:text-volt-400"
                                         }`}
                                 >
                                     <span className="flex items-center gap-3">
                                         <span className={`shrink-0 w-0.5 h-4 rounded-full transition-all duration-300
-                                            ${industriesActive ? "bg-volt-500 shadow-[0_0_6px_rgba(227,245,68,0.8)]" : "bg-volt-500/20"}`}
+                                            ${industriesActive ? "bg-volt-500" : "bg-volt-500/20"}`}
                                         />
                                         Who It&apos;s For
                                     </span>
@@ -433,12 +431,12 @@ export default function Header() {
                                             className={`flex items-center gap-3 py-3.5 text-[16px] tracking-normal font-medium transition-all duration-300
                                                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/70 rounded-sm
                                                 ${active
-                                                    ? "text-volt-500 drop-shadow-[0_0_8px_rgba(227,245,68,0.7)]"
-                                                    : "text-[#c8c8c8] hover:text-volt-400 hover:drop-shadow-[0_0_6px_rgba(227,245,68,0.4)]"
+                                                    ? "text-volt-500"
+                                                    : "text-[#c8c8c8] hover:text-volt-400 hover:"
                                                 }`}
                                         >
                                             <span className={`shrink-0 w-0.5 h-4 rounded-full transition-all duration-300
-                                                ${active ? "bg-volt-500 shadow-[0_0_6px_rgba(227,245,68,0.8)]" : "bg-volt-500/20"}`}
+                                                ${active ? "bg-volt-500" : "bg-volt-500/20"}`}
                                             />
                                             {item.label}
                                         </Link>
@@ -479,7 +477,7 @@ export default function Header() {
                                 onClick={closeDrawer}
                                 className="relative z-10 mt-4 block text-center py-2.5 px-6 tracking-wide text-[13px] font-bold
                                     text-black bg-volt rounded-sm
-                                    shadow-[0_0_20px_rgba(227,245,68,0.3)]
+                                   
                                     hover:shadow-[0_0_32px_rgba(227,245,68,0.5)]
                                     hover:brightness-110
                                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt/70
@@ -493,7 +491,7 @@ export default function Header() {
             )}
 
             {/* ===================== HEADER ===================== */}
-            <header className="fixed top-0 z-50 w-full bg-[#0b0b0c] text-[#e5e7eb] border-b border-volt-500/15">
+            <header className="fixed top-0 z-50 w-full bg-surface text-[#e5e7eb] border-b border-volt-500/15">
                 <div
                     className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-4 flex items-center justify-between"
                     style={{ height: HEADER_HEIGHT }}
@@ -562,8 +560,8 @@ export default function Header() {
                                 <span
                                     className={`transition-all duration-300 ${
                                         servicesActive
-                                            ? "text-volt-500 drop-shadow-[0_0_8px_rgba(227,245,68,0.7)]"
-                                            : "group-hover:text-volt-400 group-hover:drop-shadow-[0_0_6px_rgba(227,245,68,0.4)]"
+                                            ? "text-volt-500"
+                                            : "group-hover:text-volt-400"
                                     }`}
                                 >
                                     What I Build
@@ -572,8 +570,8 @@ export default function Header() {
                                 <span
                                     className={`absolute left-0 -bottom-1 h-0.5 w-full origin-left transition-all duration-300 bg-volt-500
                                         ${servicesActive || openMega === "services"
-                                            ? "scale-x-100 shadow-[0_0_8px_rgba(227,245,68,0.7)]"
-                                            : "scale-x-0 shadow-[0_0_8px_rgba(227,245,68,0.5)] group-hover:scale-x-100"
+                                            ? "scale-x-100"
+                                            : "scale-x-0 group-hover:scale-x-100"
                                         }`}
                                 />
                             </Link>
@@ -592,10 +590,8 @@ export default function Header() {
                                         : "opacity-0 -translate-y-2 pointer-events-none"
                                     }`}
                             >
-                                <div className="relative overflow-hidden rounded-xl bg-[#111214] border border-volt-500/20 shadow-[0_24px_60px_-12px_rgba(0,0,0,0.8),0_0_40px_rgba(227,245,68,0.12)]">
+                                <div className="relative overflow-hidden rounded-xl bg-surface-raised border border-volt-500/20 shadow-[0_24px_60px_-12px_rgba(0,0,0,0.8),0_0_40px_rgba(227,245,68,0.12)]">
                                     <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/70 to-transparent" />
-                                    <div className="pointer-events-none absolute -top-10 right-1/4 w-56 h-56 bg-volt-500/10 rounded-full blur-3xl" />
-                                    <div className="pointer-events-none absolute bottom-0 left-1/4 w-40 h-40 bg-volt-500/6 rounded-full blur-3xl" />
 
                                     <div className="relative grid grid-cols-3 gap-0 divide-x divide-volt-500/10">
                                         {[
@@ -680,8 +676,8 @@ export default function Header() {
                                 <span
                                     className={`transition-all duration-300 ${
                                         industriesActive
-                                            ? "text-volt-500 drop-shadow-[0_0_8px_rgba(227,245,68,0.7)]"
-                                            : "group-hover:text-volt-400 group-hover:drop-shadow-[0_0_6px_rgba(227,245,68,0.4)]"
+                                            ? "text-volt-500"
+                                            : "group-hover:text-volt-400"
                                     }`}
                                 >
                                     Who It&apos;s For
@@ -690,8 +686,8 @@ export default function Header() {
                                 <span
                                     className={`absolute left-0 -bottom-1 h-0.5 w-full origin-left transition-all duration-300 bg-volt-500
                                         ${industriesActive || openMega === "industries"
-                                            ? "scale-x-100 shadow-[0_0_8px_rgba(227,245,68,0.7)]"
-                                            : "scale-x-0 shadow-[0_0_8px_rgba(227,245,68,0.5)] group-hover:scale-x-100"
+                                            ? "scale-x-100"
+                                            : "scale-x-0 group-hover:scale-x-100"
                                         }`}
                                 />
                             </Link>
@@ -710,10 +706,8 @@ export default function Header() {
                                         : "opacity-0 -translate-y-2 pointer-events-none"
                                     }`}
                             >
-                                <div className="relative overflow-hidden rounded-xl bg-[#111214] border border-volt-500/20 shadow-[0_24px_60px_-12px_rgba(0,0,0,0.8),0_0_40px_rgba(227,245,68,0.12)]">
+                                <div className="relative overflow-hidden rounded-xl bg-surface-raised border border-volt-500/20 shadow-[0_24px_60px_-12px_rgba(0,0,0,0.8),0_0_40px_rgba(227,245,68,0.12)]">
                                     <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/70 to-transparent" />
-                                    <div className="pointer-events-none absolute -top-10 right-1/3 w-56 h-56 bg-volt-500/10 rounded-full blur-3xl" />
-                                    <div className="pointer-events-none absolute bottom-0 left-1/3 w-40 h-40 bg-volt-500/6 rounded-full blur-3xl" />
 
                                     <div className="p-5">
                                         <div className="relative grid grid-cols-3 gap-3">
@@ -772,8 +766,8 @@ export default function Header() {
                                     <span
                                         className={`transition-all duration-300 ${
                                             active
-                                                ? "text-volt-500 drop-shadow-[0_0_8px_rgba(227,245,68,0.7)]"
-                                                : "group-hover:text-volt-400 group-hover:drop-shadow-[0_0_6px_rgba(227,245,68,0.4)]"
+                                                ? "text-volt-500"
+                                                : "group-hover:text-volt-400"
                                         }`}
                                     >
                                         {item.label}
@@ -781,8 +775,8 @@ export default function Header() {
                                     <span
                                         className={`absolute left-0 -bottom-1 h-0.5 w-full origin-left transition-all duration-300 bg-volt-500
                                             ${active
-                                                ? "scale-x-100 shadow-[0_0_8px_rgba(227,245,68,0.7)]"
-                                                : "scale-x-0 shadow-[0_0_8px_rgba(227,245,68,0.5)] group-hover:scale-x-100"
+                                                ? "scale-x-100"
+                                                : "scale-x-0 group-hover:scale-x-100"
                                             }`}
                                     />
                                 </Link>
@@ -795,8 +789,8 @@ export default function Header() {
                             className={`px-3.5 py-1.5 tracking-[0.02em] text-[12px] font-bold rounded-sm transition-all duration-300
                                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt/70
                                 ${isActive("/contact")
-                                    ? "bg-volt text-black shadow-[0_0_18px_rgba(227,245,68,0.4)]"
-                                    : "bg-volt text-black shadow-[0_0_10px_rgba(227,245,68,0.2)] hover:brightness-110 hover:shadow-[0_0_22px_rgba(227,245,68,0.5)]"
+                                    ? "bg-volt text-black"
+                                    : "bg-volt text-black hover:brightness-110 hover:shadow-[0_0_22px_rgba(227,245,68,0.5)]"
                                 }`}
                         >
                             Schedule a call

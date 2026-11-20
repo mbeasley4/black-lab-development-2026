@@ -15,43 +15,28 @@ interface FaqSectionProps {
 export default function FaqSection({ faqs, headingId = "faq-heading" }: FaqSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
+  // Light section: the one deliberate break in the dark page rhythm. Volt has
+  // poor contrast on light backgrounds, so accents here are black/neutral.
   return (
-    <section className="w-full py-28 border-t border-volt-500/20 relative overflow-hidden" aria-labelledby={headingId}>
-      {/* Hexagonal grid background */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.04]" aria-hidden="true">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="hex-faq" width="56" height="100" patternUnits="userSpaceOnUse" patternTransform="scale(1.5)">
-              <path d="M28 2 L50 18 L50 50 L28 66 L6 50 L6 18 Z" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-volt-400" />
-              <path d="M28 34 L50 50 L50 82 L28 98 L6 82 L6 50 Z" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-volt-400" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#hex-faq)" />
-        </svg>
-      </div>
-
-      {/* Ambient glows */}
-      <div className="absolute top-0 left-1/4 w-125 h-125 bg-volt-500/8 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-100 h-100 bg-volt-500/6 rounded-full blur-[100px] pointer-events-none" />
-
-      {/* Top accent line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
-
-      <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
-        <div className="text-center mb-16">
-          <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase font-semibold text-volt-500">
+    <section className="w-full bg-neutral-100 text-neutral-900 py-24 md:py-28" aria-labelledby={headingId}>
+      <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-12 lg:gap-20">
+        <div className="lg:sticky lg:top-28 lg:self-start">
+          <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase font-semibold text-neutral-500">
             Common Questions
           </span>
-          <h2 id={headingId} className="text-3xl md:text-5xl font-bold text-white mb-4">
-            Frequently Asked{" "}
-            <span className="text-volt-500 drop-shadow-[0_0_12px_rgba(227,245,68,0.5)]">
-              Questions
-            </span>
+          <h2 id={headingId} className="text-3xl md:text-5xl font-bold tracking-tight text-neutral-950">
+            Frequently Asked Questions
           </h2>
-          <div className="mt-4 mx-auto w-20 h-px bg-linear-to-r from-transparent via-volt-500 to-transparent" />
+          <p className="mt-5 max-w-sm text-base leading-relaxed text-neutral-600">
+            Straight answers about how projects work. Don&apos;t see yours?{" "}
+            <a href="/contact" className="font-semibold text-neutral-950 underline decoration-neutral-400 underline-offset-4 hover:decoration-neutral-950">
+              Ask directly
+            </a>
+            .
+          </p>
         </div>
 
-        <div className="max-w-3xl mx-auto divide-y divide-slate-800/60">
+        <div className="divide-y divide-neutral-300 border-y border-neutral-300">
           {faqs.map((faq, i) => {
             const isOpen = openIndex === i;
             return (
@@ -60,21 +45,21 @@ export default function FaqSection({ faqs, headingId = "faq-heading" }: FaqSecti
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : i)}
                   aria-expanded={isOpen}
-                  className="w-full flex items-center justify-between gap-6 py-6 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt-500/50 rounded-sm"
+                  className="w-full flex items-center justify-between gap-6 py-6 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 rounded-sm"
                 >
                   <div className="flex items-center gap-4">
-                    <span className="shrink-0 flex h-7 w-7 items-center justify-center rounded-md bg-volt-500/10 border border-volt-500/20 text-volt-400 text-xs font-bold transition-colors duration-200 group-hover:bg-volt-500/20">
+                    <span className="shrink-0 flex h-7 w-7 items-center justify-center rounded-md bg-neutral-950 text-volt-500 text-xs font-bold">
                       Q
                     </span>
-                    <span className={`text-base font-semibold leading-snug transition-colors duration-200 ${isOpen ? "text-volt-400" : "text-white group-hover:text-volt-300"}`}>
+                    <span className="text-base md:text-lg font-semibold leading-snug text-neutral-950">
                       {faq.question}
                     </span>
                   </div>
                   <span
-                    className={`shrink-0 flex h-6 w-6 items-center justify-center rounded-full border transition-all duration-300 ${
+                    className={`shrink-0 flex h-7 w-7 items-center justify-center rounded-full border transition-all duration-300 ${
                       isOpen
-                        ? "border-volt-500/60 bg-volt-500/10 text-volt-400 rotate-180"
-                        : "border-slate-700 text-slate-500 group-hover:border-volt-500/40 group-hover:text-volt-500"
+                        ? "border-neutral-950 bg-neutral-950 text-white rotate-180"
+                        : "border-neutral-400 text-neutral-600 group-hover:border-neutral-950 group-hover:text-neutral-950"
                     }`}
                     aria-hidden="true"
                   >
@@ -88,7 +73,7 @@ export default function FaqSection({ faqs, headingId = "faq-heading" }: FaqSecti
                   className="overflow-hidden transition-all duration-300 ease-out"
                   style={{ maxHeight: isOpen ? "600px" : "0px", opacity: isOpen ? 1 : 0 }}
                 >
-                  <p className="text-sm text-slate-400 leading-relaxed pl-11 pb-6">
+                  <p className="text-[15px] text-neutral-700 leading-relaxed pl-11 pb-6 max-w-2xl">
                     {faq.answer}
                   </p>
                 </div>
@@ -97,9 +82,6 @@ export default function FaqSection({ faqs, headingId = "faq-heading" }: FaqSecti
           })}
         </div>
       </div>
-
-      {/* Bottom accent line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
     </section>
   );
 }

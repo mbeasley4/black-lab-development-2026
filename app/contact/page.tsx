@@ -53,7 +53,7 @@ export default function ContactPage() {
   return (
     <>
       <JsonLd data={localBusinessSchema} />
-      <main className="w-full bg-[#0b0b0c] text-white">
+      <main className="w-full bg-surface text-white">
       {/* ================= HERO ================= */}
       <PageHero
         label=" Contact Me"
@@ -71,7 +71,7 @@ export default function ContactPage() {
           <div className="max-w-xl">
             <div className="flex items-center gap-6 mb-6">
               <div>
-                <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono drop-shadow-[0_0_12px_rgba(227,245,68,0.7)]">
+                <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono">
                   // About
                 </span>
                 <h2 className="text-3xl md:text-5xl font-bold text-white">
@@ -114,7 +114,7 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="rounded-2xl border border-volt-500/40 bg-neutral-950 p-8 lg:p-10 shadow-[0_0_60px_rgba(227,245,68,0.12)]">
+          <div className="rounded-2xl border border-volt-500/40 bg-neutral-950 p-8 lg:p-10">
             <h3 className="text-2xl font-medium mb-6">
               Start the Conversation
             </h3>

@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import HomepageHero from "@/components/HomepageHero";
-import RevenueFramework from "@/components/RevenueFramework";
 import Differentiation from "@/components/Differentiation";
 import WhoIWorkWith from "@/components/WhoIWorkWith";
 import CoreServices from "@/components/CoreServices";
 import Results from "@/components/Results";
-import Process from "@/components/Process";
-import LabFramework from "@/components/LabFramework";
-import PositioningStrike from "@/components/PositioningStrike";
 import CallToAction from "@/components/CallToAction";
 import FounderStrip from "@/components/FounderStrip";
 import Testimonial from "@/components/Testimonial";
@@ -109,22 +105,18 @@ export default function Home() {
       <JsonLd data={[websiteSchema, faqSchema]} />
       <div className="w-full mt-0">
         <HomepageHero />
-        <RevenueFramework />
         <Differentiation />
         <WhoIWorkWith />
         <CoreServices />
         <Results />
         <Testimonial />
-        <Process />
         <FounderStrip />
-        <LabFramework />
         <ArticlesBlock />
 
         <FaqSection
           faqs={faqSchema.mainEntity.map((faq) => ({ question: faq.name, answer: faq.acceptedAnswer.text }))}
         />
 
-        <PositioningStrike />
         <CallToAction />
       </div>
     </>

@@ -187,7 +187,7 @@ export default function WebsitePerformanceOptimizationPage() {
         />
 
         {/* Hero CTAs */}
-        <section className="border-b border-slate-800 bg-slate-950/50">
+        <section className="border-b border-neutral-800 bg-neutral-950/50">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
@@ -205,23 +205,23 @@ export default function WebsitePerformanceOptimizationPage() {
         </section>
 
         {/* Why speed matters */}
-        <section className="py-20 border-b border-slate-800">
+        <section className="py-20 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
-                <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+                <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                   The Business Case
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                   Speed Affects Rankings, Conversions, and Revenue
                 </h2>
-                <p className="text-slate-400 leading-relaxed mb-6">
+                <p className="text-neutral-400 leading-relaxed mb-6">
                   Google uses Core Web Vitals as a direct ranking signal. Sites that fail them rank lower — not hypothetically, but measurably, against competitors with equivalent content and backlink profiles. Improving performance isn&apos;t a nice-to-have; it&apos;s a competitive requirement.
                 </p>
-                <p className="text-slate-400 leading-relaxed mb-6">
+                <p className="text-neutral-400 leading-relaxed mb-6">
                   Beyond rankings, every second of load time costs you visitors before they see your offer. For B2B sites with multi-step buying processes, losing a visitor on page load is losing a deal that never entered the pipeline.
                 </p>
-                <p className="text-slate-400 leading-relaxed">
+                <p className="text-neutral-400 leading-relaxed">
                   The fix isn&apos;t more infrastructure. It&apos;s diagnosing what&apos;s actually slowing you down and removing it — systematically.
                 </p>
               </div>
@@ -232,9 +232,9 @@ export default function WebsitePerformanceOptimizationPage() {
                   { stat: "1s", label: "Delay in page response that reduces conversions by 7%" },
                   { stat: "Top 3", label: "Ranking positions most impacted by Core Web Vitals changes" },
                 ].map((item) => (
-                  <div key={item.label} className="flex items-start gap-6 border-b border-slate-800 pb-4">
+                  <div key={item.label} className="flex items-start gap-6 border-b border-neutral-800 pb-4">
                     <span className="text-2xl font-black text-volt-400 shrink-0 leading-none">{item.stat}</span>
-                    <span className="text-slate-400 text-sm leading-relaxed">{item.label}</span>
+                    <span className="text-neutral-400 text-sm leading-relaxed">{item.label}</span>
                   </div>
                 ))}
               </div>
@@ -243,37 +243,37 @@ export default function WebsitePerformanceOptimizationPage() {
         </section>
 
         {/* Core Web Vitals breakdown */}
-        <section className="py-20 bg-slate-950/50 border-b border-slate-800">
+        <section className="py-20 bg-neutral-950/50 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-14">
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Core Web Vitals
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
                 The Three Metrics Google Actually Measures
               </h2>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-neutral-400 leading-relaxed">
                 Core Web Vitals are Google&apos;s field-measured user experience signals. They&apos;re collected from real Chrome users — not lab simulations — and fed directly into search ranking algorithms.
               </p>
             </div>
             <div className="space-y-6">
               {vitals.map((vital) => (
-                <div key={vital.metric} className="rounded-xl border border-slate-800 bg-slate-900/50 overflow-hidden">
-                  <div className="grid grid-cols-1 md:grid-cols-[120px_1fr_1fr] divide-y md:divide-y-0 md:divide-x divide-slate-800">
+                <div key={vital.metric} className="rounded-xl border border-neutral-800 bg-neutral-900/50 overflow-hidden">
+                  <div className="grid grid-cols-1 md:grid-cols-[120px_1fr_1fr] divide-y md:divide-y-0 md:divide-x divide-neutral-800">
                     <div className="p-6 flex flex-col items-start justify-center">
                       <div className="text-3xl font-black font-mono text-volt-400 mb-1">{vital.metric}</div>
-                      <div className="text-xs text-slate-500 leading-tight">{vital.full}</div>
+                      <div className="text-xs text-neutral-400 leading-tight">{vital.full}</div>
                       <div className="mt-3 text-xs font-mono text-volt-400 bg-volt-500/10 border border-volt-500/20 rounded px-2 py-1">
                         Target: {vital.target}
                       </div>
                     </div>
                     <div className="p-6">
-                      <div className="text-xs uppercase tracking-widest text-slate-500 mb-2">What it measures</div>
-                      <p className="text-sm text-slate-300 leading-relaxed">{vital.what}</p>
+                      <div className="text-xs uppercase tracking-widest text-neutral-400 mb-2">What it measures</div>
+                      <p className="text-sm text-neutral-300 leading-relaxed">{vital.what}</p>
                     </div>
                     <div className="p-6">
-                      <div className="text-xs uppercase tracking-widest text-slate-500 mb-2">Common causes of failure</div>
-                      <p className="text-sm text-slate-400 leading-relaxed">{vital.causes}</p>
+                      <div className="text-xs uppercase tracking-widest text-neutral-400 mb-2">Common causes of failure</div>
+                      <p className="text-sm text-neutral-400 leading-relaxed">{vital.causes}</p>
                     </div>
                   </div>
                 </div>
@@ -283,22 +283,22 @@ export default function WebsitePerformanceOptimizationPage() {
         </section>
 
         {/* What I fix */}
-        <section className="py-20 border-b border-slate-800">
+        <section className="py-20 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-14">
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 What Gets Fixed
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
                 The Full Performance Stack
               </h2>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-neutral-400 leading-relaxed">
                 Most performance problems have 3–5 root causes responsible for 80% of the slowdown. I audit for all of them — then fix the ones that move the needle.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {fixes.map((item) => (
-                <div key={item.label} className="flex items-start gap-4 rounded-xl border border-slate-800 bg-slate-900/50 p-5">
+                <div key={item.label} className="flex items-start gap-4 rounded-xl border border-neutral-800 bg-neutral-900/50 p-5">
                   <div className="w-6 h-6 rounded-full bg-volt-500/15 flex items-center justify-center shrink-0 mt-0.5">
                     <svg className="w-3 h-3 text-volt-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
@@ -306,7 +306,7 @@ export default function WebsitePerformanceOptimizationPage() {
                   </div>
                   <div>
                     <div className="text-sm font-semibold text-white mb-1">{item.label}</div>
-                    <div className="text-xs text-slate-400 leading-relaxed">{item.detail}</div>
+                    <div className="text-xs text-neutral-400 leading-relaxed">{item.detail}</div>
                   </div>
                 </div>
               ))}
@@ -315,26 +315,26 @@ export default function WebsitePerformanceOptimizationPage() {
         </section>
 
         {/* Results */}
-        <section className="py-20 bg-slate-950/50 border-b border-slate-800">
+        <section className="py-20 bg-neutral-950/50 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-14">
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Results
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
                 Measurable Outcomes, Not Lab Scores
               </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-800/40 rounded-2xl overflow-hidden border border-slate-700/40">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-neutral-800/40 rounded-2xl overflow-hidden border border-neutral-700/40">
               {results.map((r) => (
-                <div key={r.label} className="bg-slate-900 px-10 py-10 text-center">
+                <div key={r.label} className="bg-neutral-900 px-10 py-10 text-center">
                   <div className="text-4xl font-black text-volt-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.4)] mb-2">{r.metric}</div>
                   <div className="text-sm font-semibold text-white mb-2">{r.label}</div>
-                  <div className="text-xs text-slate-400">{r.detail}</div>
+                  <div className="text-xs text-neutral-400">{r.detail}</div>
                 </div>
               ))}
             </div>
-            <p className="text-xs text-slate-600 mt-4 text-center">
+            <p className="text-xs text-neutral-500 mt-4 text-center">
               Metrics represent client results. Individual results vary based on current site state, platform, and traffic volume.
             </p>
           </div>
@@ -347,7 +347,7 @@ export default function WebsitePerformanceOptimizationPage() {
         <LabFramework />
 
         {/* Related */}
-        <section className="py-16 border-b border-slate-800">
+        <section className="py-16 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <h2 className="text-lg font-bold text-white mb-6">Related Services</h2>
             <div className="flex flex-wrap gap-4">
@@ -359,13 +359,13 @@ export default function WebsitePerformanceOptimizationPage() {
               </Link>
               <Link
                 href="/services/small-business-website-design"
-                className="rounded-lg border border-slate-700 bg-slate-900 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+                className="rounded-lg border border-neutral-700 bg-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200"
               >
                 Small Business Website Design →
               </Link>
               <Link
                 href="/services/custom-web-development"
-                className="rounded-lg border border-slate-700 bg-slate-900 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+                className="rounded-lg border border-neutral-700 bg-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200"
               >
                 Custom Web Development →
               </Link>

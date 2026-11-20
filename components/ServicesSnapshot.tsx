@@ -42,7 +42,7 @@ const services = [
 
 export default function ServicesSnapshot() {
     return (
-        <section className="w-full bg-linear-to-b from-black via-slate-950 to-[#111214] text-white py-24">
+        <section className="w-full bg-linear-to-b from-black via-neutral-950 to-surface-raised text-white py-24">
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
                 {/* Section Header */}
                 <div className="max-w-6xl mb-16">
@@ -59,7 +59,7 @@ export default function ServicesSnapshot() {
                     {services.map((service) => (
                         <div
                             key={service.title}
-                            className="group relative rounded-2xl border border-slate-800/50 bg-linear-to-br from-slate-900/50 to-[#111214]/80 p-8 transition-all duration-300 hover:border-volt-500/40 hover:-translate-y-2 hover:shadow-xl hover:shadow-volt-500/10 backdrop-blur-sm"
+                            className="group relative rounded-2xl border border-neutral-800/50 bg-linear-to-br from-neutral-900/50 to-surface-raised/80 p-8 transition-all duration-300 hover:border-volt-500/40 hover:-translate-y-2 hover:shadow-xl hover:shadow-volt-500/10 backdrop-blur-sm"
                         >
                             {/* Glow effect on hover */}
                             <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-volt-500/0 to-volt-500/0 group-hover:from-volt-500/4 group-hover:to-transparent transition-all duration-300" />
@@ -67,7 +67,7 @@ export default function ServicesSnapshot() {
                             {/* Content */}
                             <div className="relative z-10">
                                 {/* Icon */}
-                                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-slate-800/80 text-volt-500 transition-all duration-300 group-hover:bg-volt-500 group-hover:text-black group-hover:shadow-lg group-hover:shadow-volt-500/30">
+                                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-neutral-800/80 text-volt-500 transition-all duration-300 group-hover:bg-volt-500 group-hover:text-black group-hover:shadow-lg group-hover:shadow-volt-500/30">
                                     <service.icon className="h-6 w-6" />
                                 </div>
 

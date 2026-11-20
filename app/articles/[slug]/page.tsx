@@ -234,16 +234,14 @@ export default async function ArticlePage({
                     />
 
                     {/* Gradient overlay matching site style */}
-                    <div className="absolute inset-0 bg-linear-to-br from-volt-950/85 via-slate-900/85 to-black/90" />
+                    <div className="absolute inset-0 bg-linear-to-br from-volt-950/85 via-neutral-900/85 to-black/90" />
 
                     {/* Ambient glow orbs */}
-                    <div className="absolute top-1/4 right-1/4 w-125 h-125 bg-volt-500/10 rounded-full blur-3xl pointer-events-none" />
-                    <div className="absolute bottom-1/4 left-1/4 w-100 h-100 bg-volt-500/10 rounded-full blur-3xl pointer-events-none" />
 
                     {/* Hero content — vertically centered */}
                     <div className="relative z-10 flex min-h-screen items-center">
                         <div className="mx-auto max-w-225 w-full px-6 pb-20 pt-32">
-                            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+                            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                                 Article
                             </span>
 
@@ -311,9 +309,9 @@ export default async function ArticlePage({
                 </article>
 
                 {/* Author bio — expertise signal for AI systems */}
-                <div className="mt-16 pt-10 border-t border-slate-800">
+                <div className="mt-16 pt-10 border-t border-neutral-800">
                     <div className="flex items-start gap-6">
-                        <div className="shrink-0 w-14 h-14 rounded-full overflow-hidden border border-slate-700">
+                        <div className="shrink-0 w-14 h-14 rounded-full overflow-hidden border border-neutral-700">
                             <img
                                 src="/images/michael-beasley-sm.webp"
                                 alt="Michael Beasley"
@@ -323,17 +321,17 @@ export default async function ArticlePage({
                             />
                         </div>
                         <div>
-                            <p className="text-xs uppercase tracking-widest text-slate-500 mb-1">Written by</p>
+                            <p className="text-xs uppercase tracking-widest text-neutral-400 mb-1">Written by</p>
                             <Link
                                 href={authorHref}
                                 className="text-base font-semibold text-white hover:text-volt-400 transition-colors duration-200"
                             >
                                 Michael Beasley
                             </Link>
-                            <p className="text-sm text-slate-500 mt-0.5 mb-3">
+                            <p className="text-sm text-neutral-400 mt-0.5 mb-3">
                                 Senior Web Developer &amp; Founder, Black Lab Development
                             </p>
-                            <p className="text-sm text-slate-400 leading-relaxed max-w-xl">
+                            <p className="text-sm text-neutral-400 leading-relaxed max-w-xl">
                                 Michael Beasley is a Cincinnati-based web developer with 15+ years of experience building B2B websites, manufacturing platforms, and revenue-focused digital infrastructure. He specializes in conversion architecture, technical SEO, and Next.js / WordPress development for industrial and technical B2B companies.
                             </p>
                         </div>
@@ -344,8 +342,6 @@ export default async function ArticlePage({
             {shuffledRelated.length > 0 && (
               <section className="relative py-24 overflow-hidden">
                 {/* Neon ambient glow */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-175 h-75 bg-volt-500/8 rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-volt-600/8 rounded-full blur-3xl pointer-events-none" />
 
                 {/* Top accent line */}
                 <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
@@ -353,7 +349,7 @@ export default async function ArticlePage({
                 <div className="relative mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
                   {/* Section heading */}
                   <div className="mb-12 flex flex-col items-center text-center">
-                    <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+                    <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                       Continue Reading
                     </span>
                     <h2 className="text-3xl md:text-4xl font-bold tracking-tight">

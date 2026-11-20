@@ -53,7 +53,7 @@ export default function PrivacyPolicyPage() {
         description={`We built this site to be fast and useful, not to harvest your data. Here's exactly what we collect, why, and how you can control it. Last updated ${LAST_UPDATED}.`}
         sections={SECTIONS}
       >
-        <p className="text-sm uppercase tracking-widest text-slate-500">
+        <p className="text-sm uppercase tracking-widest text-neutral-400">
           Last updated: {LAST_UPDATED}
         </p>
 

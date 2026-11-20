@@ -40,7 +40,7 @@ function LabCard({ step }: { step: (typeof steps)[number] }) {
     <div
       ref={cardRef}
       onMouseMove={handleMouseMove}
-      className="group relative bg-[#0a0a0f] p-10 transition-all duration-300 overflow-hidden"
+      className="group relative bg-surface p-10 transition-all duration-300 overflow-hidden"
     >
       {/* Radial glow that follows cursor */}
       <div
@@ -58,7 +58,7 @@ function LabCard({ step }: { step: (typeof steps)[number] }) {
 
       <div className="relative z-10">
         <div className="flex items-center gap-4 mb-6">
-          <span className="text-6xl font-black font-mono text-volt-400 leading-none drop-shadow-[0_0_18px_rgba(227,245,68,0.5)] group-hover:drop-shadow-[0_0_30px_rgba(227,245,68,0.8)] group-hover:scale-110 transition-all duration-300 origin-left">
+          <span className="text-6xl font-black font-mono text-volt-400 leading-none group-hover:scale-110 transition-all duration-300 origin-left">
             {step.letter}
           </span>
           <div className="h-px flex-1 bg-volt-500/15 group-hover:bg-volt-500/50 transition-all duration-300 group-hover:shadow-[0_0_8px_rgba(227,245,68,0.3)]" />
@@ -66,7 +66,7 @@ function LabCard({ step }: { step: (typeof steps)[number] }) {
         <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-volt-50 transition-colors duration-300">
           {step.title}
         </h3>
-        <p className="text-sm text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
+        <p className="text-sm text-neutral-400 leading-relaxed group-hover:text-neutral-300 transition-colors duration-300">
           {step.body}
         </p>
       </div>
@@ -80,15 +80,14 @@ function LabCard({ step }: { step: (typeof steps)[number] }) {
 export default function LabFramework({ compact = false }: LabFrameworkProps) {
   return (
     <section
-      className={`w-full border-t border-volt-500/15 ${compact ? "py-16" : "py-32"} bg-linear-to-b from-[#0b0b0c] to-slate-950 relative overflow-hidden`}
+      className={`w-full border-t border-volt-500/15 ${compact ? "py-16" : "py-32"} bg-linear-to-b from-surface to-neutral-950 relative overflow-hidden`}
       aria-labelledby="lab-framework-heading"
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/40 to-transparent" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-volt-500/8 rounded-full blur-[180px] pointer-events-none" />
 
       <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
         <div className="mb-16 text-center md:text-left">
-          <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold drop-shadow-[0_0_8px_rgba(227,245,68,0.4)]">
+          <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
             Delivery Methodology
           </span>
           <h2
@@ -100,7 +99,7 @@ export default function LabFramework({ compact = false }: LabFrameworkProps) {
               {["L", "A", "B"].map((char) => (
                 <span
                   key={char}
-                  className="text-volt-400 drop-shadow-[0_0_24px_rgba(227,245,68,0.6)] hover:drop-shadow-[0_0_40px_rgba(227,245,68,0.9)] hover:scale-110 transition-all duration-200 inline-block cursor-default"
+                  className="text-volt-400 hover: hover:scale-110 transition-all duration-200 inline-block cursor-default"
                 >
                   {char}
                 </span>
@@ -108,12 +107,12 @@ export default function LabFramework({ compact = false }: LabFrameworkProps) {
             </span>{" "}
             Framework™
           </h2>
-          <p className="text-lg text-slate-400 max-w-2xl leading-relaxed">
+          <p className="text-lg text-neutral-400 max-w-2xl leading-relaxed">
             Every Black Lab Dev engagement follows the same structured methodology — so outcomes are predictable, not dependent on who gets assigned to the project.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-volt-500/20 rounded-2xl overflow-hidden border border-volt-500/20 shadow-[0_0_40px_rgba(227,245,68,0.06)]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-volt-500/20 rounded-2xl overflow-hidden border border-volt-500/20">
           {steps.map((step) => (
             <LabCard key={step.letter} step={step} />
           ))}

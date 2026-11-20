@@ -161,7 +161,7 @@ const itemListSchema = {
 
 export default function IndustriesPage() {
   return (
-    <main className="w-full bg-[#0b0b0c] text-white">
+    <main className="w-full bg-surface text-white">
       <JsonLd data={[webPageSchema, itemListSchema]} />
       {/* ================= HERO ================= */}
       <PageHero
@@ -185,14 +185,12 @@ export default function IndustriesPage() {
         />
 
         {/* Ambient glows */}
-        <div className="absolute top-20 -left-40 w-175 h-175 bg-volt-500/8 rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute bottom-20 -right-40 w-150 h-150 bg-volt-600/8 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           {/* Section header */}
           <div className="flex items-center gap-6 mb-6 md:mb-9">
             <div>
-              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono drop-shadow-[0_0_12px_rgba(227,245,68,0.7)]">
+              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono">
                 // Industries
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-white">
@@ -228,7 +226,7 @@ export default function IndustriesPage() {
                     <span className="text-5xl font-black font-mono text-volt-500/20 leading-none tracking-tighter">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <div className="h-px w-14 bg-linear-to-r from-volt-500/60 to-volt-500/10 shadow-[0_0_10px_rgba(227,245,68,0.4)]" />
+                    <div className="h-px w-14 bg-linear-to-r from-volt-500/60 to-volt-500/10" />
                   </div>
 
                   <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-snug text-white">
@@ -253,7 +251,7 @@ export default function IndustriesPage() {
 
                 {/* Image */}
                 <div
-                  className={`group relative h-95 w-full rounded-xl overflow-hidden border border-volt-500/20 shadow-[0_0_50px_rgba(227,245,68,0.08)] transition-all duration-500 hover:border-volt-500/50 hover:shadow-[0_0_100px_rgba(227,245,68,0.20)] ${
+                  className={`group relative h-95 w-full rounded-xl overflow-hidden border border-volt-500/20 transition-all duration-500 hover:border-volt-500/50 hover:shadow-[0_0_100px_rgba(227,245,68,0.20)] ${
                     index % 2 === 1 ? "lg:order-1" : ""
                   }`}
                 >
@@ -279,7 +277,7 @@ export default function IndustriesPage() {
                   <div className="absolute bottom-3 left-3 w-5 h-5 border-b-2 border-l-2 border-volt-500/40 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
                   <div className="absolute bottom-3 right-3 w-5 h-5 border-b-2 border-r-2 border-volt-500/40 group-hover:border-volt-400 group-hover:w-8 group-hover:h-8 transition-all duration-300" />
                   <div className="absolute bottom-5 left-5 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-400">
-                    <span className="text-xs font-mono tracking-[0.3em] uppercase text-volt-400 drop-shadow-[0_0_12px_rgba(227,245,68,0.9)]">
+                    <span className="text-xs font-mono tracking-[0.2em] uppercase text-neutral-400">
                       {industry.title}
                     </span>
                   </div>

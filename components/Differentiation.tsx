@@ -10,8 +10,7 @@ const failPoints = [
 
 export default function Differentiation() {
     return (
-        <section className="w-full bg-linear-to-b from-slate-950 to-black text-white py-28 relative overflow-hidden border-t border-slate-800/50">
-            <div className="absolute top-1/2 right-0 w-125 h-125 bg-volt-500/5 rounded-full blur-3xl -translate-y-1/2 pointer-events-none" />
+        <section className="w-full bg-linear-to-b from-neutral-950 to-black text-white py-28 relative overflow-hidden border-t border-neutral-800/50">
             <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/20 to-transparent" />
 
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
@@ -19,7 +18,7 @@ export default function Differentiation() {
 
                     {/* Left */}
                     <div className="lg:sticky lg:top-32">
-                        <span className="inline-block mb-5 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+                        <span className="inline-block mb-5 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                             The Problem
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white leading-[1.1]">
@@ -27,7 +26,7 @@ export default function Differentiation() {
                            <span className="text-volt-500">Has to Perform</span>
                         </h2>
 
-                        <div className="group relative mt-10 aspect-[3/2] w-full overflow-hidden rounded-2xl border border-slate-800/60">
+                        <div className="group relative mt-10 aspect-[3/2] w-full overflow-hidden rounded-2xl border border-neutral-800/60">
                             <Image
                                 src="/images/home/performance-dashboard.jpg"
                                 alt="Website analytics dashboard showing load time and bounce rate"
@@ -42,7 +41,7 @@ export default function Differentiation() {
                                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-volt-500 opacity-75" />
                                     <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-volt-500" />
                                 </span>
-                                <p className="text-sm font-medium text-slate-200">
+                                <p className="text-sm font-medium text-neutral-200">
                                     Speed, structure, and conversion — measured, not guessed.
                                 </p>
                             </div>
@@ -52,9 +51,9 @@ export default function Differentiation() {
                     {/* Right: problem cards */}
                     <div className="flex flex-col gap-4">
                         {failPoints.map((item) => (
-                            <div key={item} className="group flex items-center gap-4 p-5 rounded-xl border border-slate-800/50 bg-slate-900/30 hover:border-volt-500/30 hover:bg-volt-500/5 transition-all duration-300">
+                            <div key={item} className="group flex items-center gap-4 p-5 rounded-xl border border-neutral-800/50 bg-neutral-900/30 hover:border-volt-500/30 hover:bg-volt-500/5 transition-all duration-300">
                                 <span className="shrink-0 w-2 h-2 rounded-full bg-volt-500/60 group-hover:bg-volt-500 transition-colors duration-300" />
-                                <p className="text-lg md:text-xl text-slate-300 leading-snug font-medium group-hover:text-white transition-colors duration-300">
+                                <p className="text-lg md:text-xl text-neutral-300 leading-snug font-medium group-hover:text-white transition-colors duration-300">
                                     {item}
                                 </p>
                             </div>

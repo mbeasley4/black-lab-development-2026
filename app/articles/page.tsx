@@ -110,7 +110,7 @@ function Pagination({ page, totalPages }: { page: number; totalPages: number }) 
 
       {pages.map((p, i) =>
         p === "…" ? (
-          <span key={`ellipsis-${i}`} className="text-neutral-600 px-1">
+          <span key={`ellipsis-${i}`} className="text-neutral-500 px-1">
             …
           </span>
         ) : (
@@ -196,7 +196,7 @@ export default async function ArticlesPage({
   };
 
   return (
-    <main className="w-full bg-[#0b0b0c] text-white">
+    <main className="w-full bg-surface text-white">
       <JsonLd data={[collectionSchema, breadcrumbSchema]} />
       {/* HERO */}
       <PageHero
@@ -211,14 +211,12 @@ export default async function ArticlesPage({
       {/* GRID */}
       <section className="py-6 md:py-9 relative overflow-hidden">
         {/* Ambient glows */}
-        <div className="absolute top-32 left-1/4 w-175 h-175 bg-volt-500/4 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-32 right-1/4 w-125 h-125 bg-volt-600/4 rounded-full blur-3xl pointer-events-none" />
 
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative">
           {/* Section eyebrow */}
           <div className="flex items-center gap-6 mb-10 md:mb-20">
             <div>
-              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono drop-shadow-[0_0_12px_rgba(227,245,68,0.7)]">
+              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono">
                 // Articles
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-white">
@@ -283,7 +281,7 @@ export default async function ArticlesPage({
           <Pagination page={page} totalPages={totalPages} />
 
           {totalPages > 1 && (
-            <p className="text-center text-xs text-neutral-600 mt-4">
+            <p className="text-center text-xs text-neutral-500 mt-4">
               Page {page} of {totalPages} · {total} articles
             </p>
           )}

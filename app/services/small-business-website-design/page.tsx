@@ -224,27 +224,27 @@ export default function SmallBusinessWebsiteDesignPage() {
       />
 
       {/* What's different */}
-      <section className="py-20 border-b border-slate-800">
+      <section className="py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 What&apos;s Different
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 A Senior Engineer, Not a Template or a Handoff
               </h2>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-neutral-400 leading-relaxed mb-6">
                 Most small businesses have exactly two options: a template they fight with themselves, or an agency that sells them a senior team and staffs the project with whoever is available. Both end the same way — a site that technically exists and quietly underperforms.
               </p>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-neutral-400 leading-relaxed">
                 I&apos;m a third option. One senior developer, 15+ years in, building the whole thing: strategy, design, code, launch. You talk to me directly, decisions get made in one conversation instead of three, and the person accountable for the result is the person doing the work.
               </p>
             </div>
             <div className="space-y-6">
               {included.map((item) => (
-                <div key={item.label} className="flex items-center justify-between gap-6 border-b border-slate-800 pb-4">
-                  <span className="text-slate-400 text-sm shrink-0">{item.label}</span>
+                <div key={item.label} className="flex items-center justify-between gap-6 border-b border-neutral-800 pb-4">
+                  <span className="text-neutral-400 text-sm shrink-0">{item.label}</span>
                   <span className="text-volt-400 font-bold text-sm md:text-base text-right">{item.value}</span>
                 </div>
               ))}
@@ -254,29 +254,29 @@ export default function SmallBusinessWebsiteDesignPage() {
       </section>
 
       {/* Common failures */}
-      <section className="py-20 bg-slate-950/50 border-b border-slate-800">
+      <section className="py-20 bg-neutral-950/50 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               Common Failures
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Why Most Small Business Websites Don&apos;t Bring In Work
             </h2>
-            <p className="text-slate-400 leading-relaxed">
+            <p className="text-neutral-400 leading-relaxed">
               These aren&apos;t hypotheticals. They&apos;re what I find on almost every small business site I audit.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {failures.map((item) => (
-              <div key={item.title} className="rounded-xl border border-slate-800 bg-slate-900/50 p-8">
+              <div key={item.title} className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8">
                 <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center mb-4">
                   <svg className="w-4 h-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3">{item.title}</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">{item.description}</p>
+                <p className="text-sm text-neutral-400 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
@@ -284,10 +284,10 @@ export default function SmallBusinessWebsiteDesignPage() {
       </section>
 
       {/* My approach */}
-      <section className="py-20 border-b border-slate-800">
+      <section className="py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               My Approach
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -300,7 +300,7 @@ export default function SmallBusinessWebsiteDesignPage() {
                 <div className="text-5xl font-black font-mono text-volt-400/20 leading-none">{item.step}</div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                  <p className="text-slate-400 leading-relaxed">{item.body}</p>
+                  <p className="text-neutral-400 leading-relaxed">{item.body}</p>
                 </div>
               </div>
             ))}
@@ -309,26 +309,26 @@ export default function SmallBusinessWebsiteDesignPage() {
       </section>
 
       {/* Results */}
-      <section className="py-20 bg-slate-950/50 border-b border-slate-800">
+      <section className="py-20 bg-neutral-950/50 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               Results
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               What Changes After the Rebuild
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-800/40 rounded-2xl overflow-hidden border border-slate-700/40">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-neutral-800/40 rounded-2xl overflow-hidden border border-neutral-700/40">
             {results.map((r) => (
-              <div key={r.label} className="bg-slate-900 px-10 py-10 text-center">
+              <div key={r.label} className="bg-neutral-900 px-10 py-10 text-center">
                 <div className="text-4xl md:text-5xl font-black bg-linear-to-r from-volt-400 to-volt-400 bg-clip-text text-transparent mb-2">{r.metric}</div>
                 <div className="text-lg font-semibold text-white mb-2">{r.label}</div>
-                <div className="text-sm text-slate-400">{r.detail}</div>
+                <div className="text-sm text-neutral-400">{r.detail}</div>
               </div>
             ))}
           </div>
-          <p className="text-xs text-slate-600 mt-4 text-center">
+          <p className="text-xs text-neutral-500 mt-4 text-center">
             Metrics represent client results across redesign engagements. Individual results vary.
           </p>
         </div>
@@ -342,18 +342,18 @@ export default function SmallBusinessWebsiteDesignPage() {
       />
 
       {/* Related services */}
-      <section className="py-20 border-b border-slate-800">
+      <section className="py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <h2 className="text-2xl font-bold text-white mb-8">Related Services</h2>
           <div className="flex flex-wrap gap-4">
             <Link href="/services/conversion-optimization" className="rounded-lg border border-volt-500/30 bg-volt-500/10 px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200">
               Website Conversion Optimization →
             </Link>
-            <Link href="/partners" className="rounded-lg border border-slate-700 bg-slate-900 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200">
+            <Link href="/partners" className="rounded-lg border border-neutral-700 bg-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200">
               Agency &amp; Partner Services →
             </Link>
           </div>
-          <p className="text-sm text-slate-500 mt-4 max-w-2xl leading-relaxed">
+          <p className="text-sm text-neutral-400 mt-4 max-w-2xl leading-relaxed">
             Running an agency or consultancy and sizing me up as a delivery partner rather than a vendor? The partner page covers white-label builds and SEO fulfillment.
           </p>
         </div>
@@ -366,7 +366,7 @@ export default function SmallBusinessWebsiteDesignPage() {
         bodyPrimary="Start with a website audit. I'll go through your current site the way a customer would, and show you exactly where you're losing them — and what I'd do about it."
         bodySecondary="No proposals to review. No 40-slide decks. Just a direct assessment of what's working, what isn't, and what it would cost to fix."
         secondaryHref="/work"
-        secondaryLabel="View Case Studies"
+        secondaryLabel="View My Work"
       />
       </main>
     </>

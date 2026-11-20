@@ -98,10 +98,8 @@ const colorClasses = {
 
 export default function IndustriesWeServe() {
     return (
-        <section className="w-full bg-linear-to-b from-[#1f2328] via-[#111214] to-[#0b0b0c] text-white py-24 relative overflow-hidden">
+        <section className="w-full bg-linear-to-b from-[#1f2328] via-surface-raised to-surface text-white py-24 relative overflow-hidden">
             {/* Ambient glow effects */}
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-volt-500/8 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-volt-500/8 rounded-full blur-3xl" />
 
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
                 {/* Section Header */}
@@ -109,7 +107,7 @@ export default function IndustriesWeServe() {
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white">
                         Industries I Serve
                     </h2>
-                    <p className="text-lg text-slate-300 leading-relaxed">
+                    <p className="text-lg text-neutral-300 leading-relaxed">
                         I work with organizations across a range of industries — bringing senior-level engineering experience and practical strategy to every engagement.
                     </p>
                 </div>
@@ -122,7 +120,7 @@ export default function IndustriesWeServe() {
                             <Link
                                 key={industry.title}
                                 href={industry.href}
-                                className={`group relative rounded-2xl border-2 border-slate-700/50 bg-slate-800/30 p-8 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl ${colors.border} ${colors.glow} backdrop-blur-sm overflow-hidden`}
+                                className={`group relative rounded-2xl border-2 border-neutral-700/50 bg-neutral-800/30 p-8 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl ${colors.border} ${colors.glow} backdrop-blur-sm overflow-hidden`}
                             >
                                 {/* Animated gradient overlay */}
                                 <div className={`absolute inset-0 bg-linear-to-br from-transparent to-transparent ${colors.gradient} transition-all duration-500 opacity-0 group-hover:opacity-100`} />
@@ -140,7 +138,7 @@ export default function IndustriesWeServe() {
                                     </h3>
 
                                     {/* Description */}
-                                    <p className="text-sm text-slate-400 leading-relaxed mb-6 group-hover:text-slate-300 transition-colors duration-300">
+                                    <p className="text-sm text-neutral-400 leading-relaxed mb-6 group-hover:text-neutral-300 transition-colors duration-300">
                                         {industry.description}
                                     </p>
 

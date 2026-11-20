@@ -239,16 +239,16 @@ export default function WhiteLabelWebDevelopmentPage() {
       />
 
       {/* What the client sees */}
-      <section className="py-20 border-b border-slate-800">
+      <section className="py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               What Your Client Sees
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               You in Front, Me Behind — On Every Surface
             </h2>
-            <p className="text-slate-400 leading-relaxed">
+            <p className="text-neutral-400 leading-relaxed">
               White-label only works if it holds everywhere your client might look. Here&apos;s every place a subcontractor normally leaks through, and what happens instead.
             </p>
           </div>
@@ -256,17 +256,17 @@ export default function WhiteLabelWebDevelopmentPage() {
             {visibility.map((row) => (
               <div
                 key={row.surface}
-                className="grid grid-cols-1 md:grid-cols-[220px_1fr_1fr] gap-4 rounded-xl border border-slate-800 overflow-hidden group hover:border-volt-500/25 transition-colors duration-300"
+                className="grid grid-cols-1 md:grid-cols-[220px_1fr_1fr] gap-4 rounded-xl border border-neutral-800 overflow-hidden group hover:border-volt-500/25 transition-colors duration-300"
               >
-                <div className="p-5 bg-slate-950 text-sm font-semibold text-white leading-relaxed">
+                <div className="p-5 bg-neutral-950 text-sm font-semibold text-white leading-relaxed">
                   {row.surface}
                 </div>
-                <div className="p-5 bg-slate-900/50 text-sm text-slate-300 leading-relaxed border-l border-volt-500/10">
-                  <span className="block text-[10px] font-mono tracking-[0.3em] uppercase text-volt-500/60 mb-1">Your agency</span>
+                <div className="p-5 bg-neutral-900/50 text-sm text-neutral-300 leading-relaxed border-l border-volt-500/10">
+                  <span className="block text-[10px] font-mono tracking-[0.2em] uppercase text-neutral-400 mb-1">Your agency</span>
                   {row.agency}
                 </div>
-                <div className="p-5 bg-slate-900/30 text-sm text-slate-400 leading-relaxed border-l border-slate-800">
-                  <span className="block text-[10px] font-mono tracking-[0.3em] uppercase text-slate-600 mb-1">Me</span>
+                <div className="p-5 bg-neutral-900/30 text-sm text-neutral-400 leading-relaxed border-l border-neutral-800">
+                  <span className="block text-[10px] font-mono tracking-[0.3em] uppercase text-neutral-500 mb-1">Me</span>
                   {row.me}
                 </div>
               </div>
@@ -276,29 +276,29 @@ export default function WhiteLabelWebDevelopmentPage() {
       </section>
 
       {/* Deliverables */}
-      <section className="py-20 bg-slate-950/50 border-b border-slate-800">
+      <section className="py-20 bg-neutral-950/50 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               Deliverables
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               What You Actually Receive
             </h2>
-            <p className="text-slate-400 leading-relaxed">
+            <p className="text-neutral-400 leading-relaxed">
               Everything below is unbranded and forwardable — written for your client&apos;s eyes, not mine.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {deliverables.map((item) => (
-              <div key={item.title} className="rounded-xl border border-slate-800 bg-slate-900/50 p-8">
+              <div key={item.title} className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8">
                 <div className="w-8 h-8 rounded-full bg-volt-500/15 flex items-center justify-center mb-4">
                   <svg className="w-4 h-4 text-volt-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3">{item.title}</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">{item.description}</p>
+                <p className="text-sm text-neutral-400 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
@@ -306,10 +306,10 @@ export default function WhiteLabelWebDevelopmentPage() {
       </section>
 
       {/* Timeline */}
-      <section className="py-20 border-b border-slate-800">
+      <section className="py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               The Engagement
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -322,7 +322,7 @@ export default function WhiteLabelWebDevelopmentPage() {
                 <div className="text-5xl font-black font-mono text-volt-400/20 leading-none">{item.step}</div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                  <p className="text-slate-400 leading-relaxed">{item.body}</p>
+                  <p className="text-neutral-400 leading-relaxed">{item.body}</p>
                 </div>
               </div>
             ))}
@@ -336,17 +336,17 @@ export default function WhiteLabelWebDevelopmentPage() {
       />
 
       {/* Related */}
-      <section className="py-20 border-b border-slate-800">
+      <section className="py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <h2 className="text-2xl font-bold text-white mb-8">Related</h2>
           <div className="flex flex-wrap gap-4">
             <Link href="/partners" className="rounded-lg border border-volt-500/30 bg-volt-500/10 px-6 py-3 text-sm font-semibold text-volt-400 hover:border-volt-400 hover:bg-volt-500/20 transition-all duration-200">
               Agency &amp; Partner Services →
             </Link>
-            <Link href="/partners/seo-fulfillment" className="rounded-lg border border-slate-700 bg-slate-900 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200">
+            <Link href="/partners/seo-fulfillment" className="rounded-lg border border-neutral-700 bg-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200">
               Technical SEO Fulfillment →
             </Link>
-            <Link href="/services/custom-web-development" className="rounded-lg border border-slate-700 bg-slate-900 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200">
+            <Link href="/services/custom-web-development" className="rounded-lg border border-neutral-700 bg-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200">
               Custom Web Development →
             </Link>
           </div>

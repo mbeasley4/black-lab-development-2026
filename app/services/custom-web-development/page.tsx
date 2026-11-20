@@ -225,7 +225,7 @@ export default function CustomWebDevelopmentPage() {
         />
 
         {/* Hero CTAs */}
-        <section className="border-b border-slate-800 bg-slate-950/50">
+        <section className="border-b border-neutral-800 bg-neutral-950/50">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
@@ -243,26 +243,26 @@ export default function CustomWebDevelopmentPage() {
         </section>
 
         {/* Why custom */}
-        <section className="py-20 border-b border-slate-800">
+        <section className="py-20 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
-                <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+                <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                   Why Custom
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                   Templates Stop Working When Your Requirements Don&apos;t Fit the Box
                 </h2>
-                <p className="text-slate-400 leading-relaxed mb-6">
+                <p className="text-neutral-400 leading-relaxed mb-6">
                   Off-the-shelf themes and page builders work fine until they don&apos;t. The moment you need something outside the template&apos;s design — a custom layout, a clean integration, specific performance targets — you start fighting the tool instead of building with it.
                 </p>
-                <p className="text-slate-400 leading-relaxed">
+                <p className="text-neutral-400 leading-relaxed">
                   Custom development means the code does exactly what your project requires, nothing more. Clean architecture that&apos;s maintainable, handoffable, and built for where you&apos;re going — not just where you are today.
                 </p>
               </div>
               <div className="space-y-4">
                 {reasons.map((item) => (
-                  <div key={item.problem} className="rounded-xl border border-slate-800 bg-slate-900/50 p-6">
+                  <div key={item.problem} className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-6">
                     <div className="flex items-start gap-3">
                       <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center shrink-0 mt-0.5">
                         <svg className="w-3 h-3 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -271,7 +271,7 @@ export default function CustomWebDevelopmentPage() {
                       </div>
                       <div>
                         <div className="text-sm font-semibold text-white mb-1">{item.problem}</div>
-                        <div className="text-xs text-slate-400 leading-relaxed">{item.solution}</div>
+                        <div className="text-xs text-neutral-400 leading-relaxed">{item.solution}</div>
                       </div>
                     </div>
                   </div>
@@ -282,24 +282,24 @@ export default function CustomWebDevelopmentPage() {
         </section>
 
         {/* Tech stack */}
-        <section className="py-20 bg-slate-950/50 border-b border-slate-800">
+        <section className="py-20 bg-neutral-950/50 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-14">
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Technology
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
                 The Right Tool for the Right Job
               </h2>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-neutral-400 leading-relaxed">
                 I don&apos;t have a stack I&apos;m trying to sell you on. Technology decisions are made to fit your requirements, your team&apos;s capabilities, and your long-term maintenance needs.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {stack.map((item) => (
-                <div key={item.name} className="rounded-xl border border-slate-800 bg-slate-900/50 p-8">
+                <div key={item.name} className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8">
                   <div className="text-sm font-mono font-bold text-volt-400 mb-3 tracking-wider">{item.name}</div>
-                  <p className="text-sm text-slate-400 leading-relaxed">{item.use}</p>
+                  <p className="text-sm text-neutral-400 leading-relaxed">{item.use}</p>
                 </div>
               ))}
             </div>
@@ -307,16 +307,16 @@ export default function CustomWebDevelopmentPage() {
         </section>
 
         {/* Process */}
-        <section className="py-20 border-b border-slate-800">
+        <section className="py-20 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-14">
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Process
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
                 Architecture First. Build Second.
               </h2>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-neutral-400 leading-relaxed">
                 The most expensive way to build a custom system is to figure out the architecture after you&apos;ve started writing code. Every project starts with a clear structure — before a component is built.
               </p>
             </div>
@@ -324,9 +324,9 @@ export default function CustomWebDevelopmentPage() {
               {process.map((item) => (
                 <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
                   <div className="text-5xl font-black font-mono text-volt-400/20 leading-none">{item.step}</div>
-                  <div className="border-b border-slate-800 pb-12 last:border-0 last:pb-0">
+                  <div className="border-b border-neutral-800 pb-12 last:border-0 last:pb-0">
                     <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                    <p className="text-slate-400 leading-relaxed">{item.body}</p>
+                    <p className="text-neutral-400 leading-relaxed">{item.body}</p>
                   </div>
                 </div>
               ))}
@@ -335,25 +335,25 @@ export default function CustomWebDevelopmentPage() {
         </section>
 
         {/* Use cases */}
-        <section className="py-20 bg-slate-950/50 border-b border-slate-800">
+        <section className="py-20 bg-neutral-950/50 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
-                <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-400 font-semibold">
+                <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                   Is It Right For You?
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                   When Custom Development Makes Sense
                 </h2>
-                <p className="text-slate-400 leading-relaxed">
+                <p className="text-neutral-400 leading-relaxed">
                   Custom builds aren&apos;t always the right answer. But if any of these scenarios sound familiar, a template isn&apos;t going to solve your problem — it&apos;s going to add to it.
                 </p>
               </div>
               <div className="space-y-3">
                 {useCases.map((item) => (
-                  <div key={item} className="flex items-center gap-4 rounded-xl border border-slate-800 bg-slate-900/50 px-6 py-4">
+                  <div key={item} className="flex items-center gap-4 rounded-xl border border-neutral-800 bg-neutral-900/50 px-6 py-4">
                     <div className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_6px_rgba(34,211,238,0.7)] shrink-0" />
-                    <span className="text-sm text-slate-300">{item}</span>
+                    <span className="text-sm text-neutral-300">{item}</span>
                   </div>
                 ))}
               </div>
@@ -368,7 +368,7 @@ export default function CustomWebDevelopmentPage() {
         <LabFramework />
 
         {/* Related */}
-        <section className="py-16 border-b border-slate-800">
+        <section className="py-16 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <h2 className="text-lg font-bold text-white mb-6">Related Services</h2>
             <div className="flex flex-wrap gap-4">
@@ -380,13 +380,13 @@ export default function CustomWebDevelopmentPage() {
               </Link>
               <Link
                 href="/wordpress-development"
-                className="rounded-lg border border-slate-700 bg-slate-900 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+                className="rounded-lg border border-neutral-700 bg-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200"
               >
                 WordPress Development →
               </Link>
               <Link
                 href="/services/website-performance-optimization"
-                className="rounded-lg border border-slate-700 bg-slate-900 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+                className="rounded-lg border border-neutral-700 bg-neutral-900 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200"
               >
                 Website Performance →
               </Link>
@@ -401,7 +401,7 @@ export default function CustomWebDevelopmentPage() {
           bodyPrimary="Start with a technical review of your current setup. I'll identify what's constraining you, what's worth keeping, and what it would take to build the right thing."
           bodySecondary="No proposals first. No discovery calls that turn into sales decks. Just a direct assessment of where you are and what I&apos;d do about it."
           secondaryHref="/work"
-          secondaryLabel="View Case Studies"
+          secondaryLabel="View My Work"
         />
       </main>
     </>

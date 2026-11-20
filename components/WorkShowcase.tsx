@@ -117,7 +117,7 @@ function FeaturedRow({ project, flip, linked }: { project: Project; flip: boolea
         <ul className="space-y-2 text-sm border-t border-neutral-800/70 pt-5">
           {project.details.slice(0, 3).map((item) => (
             <li key={item} className="flex items-start gap-2.5 text-neutral-400">
-              <span className="mt-2 w-1.5 h-1.5 rounded-full bg-volt-500/70 shadow-[0_0_5px_rgba(227,245,68,0.5)] shrink-0" />
+              <span className="mt-2 w-1.5 h-1.5 rounded-full bg-volt-500/70 shrink-0" />
               {item}
             </li>
           ))}

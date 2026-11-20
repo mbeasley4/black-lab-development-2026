@@ -111,13 +111,13 @@ export default function CookieConsent() {
       role="dialog"
       aria-label="Cookie consent"
       aria-describedby={view === "banner" ? "cookie-consent-description" : undefined}
-      className="fixed inset-x-0 bottom-0 z-50 border-t border-volt-500/20 bg-[#0b0b0c]/95 backdrop-blur-md"
+      className="fixed inset-x-0 bottom-0 z-50 border-t border-volt-500/20 bg-surface/95 backdrop-blur-md"
     >
       {view === "banner" ? (
         <div className="mx-auto flex max-w-375 flex-col gap-4 px-6 py-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
           <p
             id="cookie-consent-description"
-            className="text-sm leading-relaxed text-slate-300 sm:max-w-3xl"
+            className="text-sm leading-relaxed text-neutral-300 sm:max-w-3xl"
           >
             We use cookies to analyze site traffic, remember your preferences, and
             support our marketing. Choose which categories you allow, or accept all.{" "}
@@ -134,14 +134,14 @@ export default function CookieConsent() {
             <button
               type="button"
               onClick={openPreferences}
-              className="inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-semibold text-slate-300 underline-offset-4 transition-colors hover:text-white hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400"
+              className="inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-semibold text-neutral-300 underline-offset-4 transition-colors hover:text-white hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400"
             >
               Manage Preferences
             </button>
             <button
               type="button"
               onClick={() => decide(DEFAULT_PREFERENCES)}
-              className="inline-flex items-center justify-center rounded-lg border border-white/15 px-6 py-2.5 text-sm font-semibold uppercase tracking-wide text-slate-200 transition-all duration-200 hover:border-white/35 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400 active:scale-[0.98]"
+              className="inline-flex items-center justify-center rounded-lg border border-white/15 px-6 py-2.5 text-sm font-semibold uppercase tracking-wide text-neutral-200 transition-all duration-200 hover:border-white/35 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400 active:scale-[0.98]"
             >
               Reject All
             </button>
@@ -169,14 +169,14 @@ export default function CookieConsent() {
               type="button"
               onClick={() => setView("banner")}
               aria-label="Close cookie preferences"
-              className="shrink-0 rounded-sm p-1 text-slate-400 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400"
+              className="shrink-0 rounded-sm p-1 text-neutral-400 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                 <path d="M18 6 6 18M6 6l12 12" strokeLinecap="round" />
               </svg>
             </button>
           </div>
-          <p className="mt-1 text-sm leading-relaxed text-slate-400">
+          <p className="mt-1 text-sm leading-relaxed text-neutral-400">
             Choose which categories of cookies we can use. Necessary cookies are
             always on because the site can&apos;t function without them. See our{" "}
             <a
@@ -212,7 +212,7 @@ export default function CookieConsent() {
             <button
               type="button"
               onClick={() => decide(DEFAULT_PREFERENCES)}
-              className="inline-flex items-center justify-center rounded-lg border border-white/15 px-6 py-2.5 text-sm font-semibold uppercase tracking-wide text-slate-200 transition-all duration-200 hover:border-white/35 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400 active:scale-[0.98]"
+              className="inline-flex items-center justify-center rounded-lg border border-white/15 px-6 py-2.5 text-sm font-semibold uppercase tracking-wide text-neutral-200 transition-all duration-200 hover:border-white/35 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-volt-400 active:scale-[0.98]"
             >
               Reject All
             </button>
@@ -254,7 +254,7 @@ function CategoryRow({
             </span>
           )}
         </p>
-        <p className="mt-1 text-sm leading-relaxed text-slate-400">{description}</p>
+        <p className="mt-1 text-sm leading-relaxed text-neutral-400">{description}</p>
       </div>
       <button
         type="button"

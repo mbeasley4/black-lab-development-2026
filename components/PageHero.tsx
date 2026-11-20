@@ -38,7 +38,7 @@ export default function PageHero({
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url('${backgroundImage}')` }}
         />
-        <div className="absolute inset-0 bg-linear-to-br from-[#0b0b0c]/90 via-[#111214]/80 to-[#1f2328]/75" />
+        <div className="absolute inset-0 bg-linear-to-br from-surface/90 via-surface-raised/80 to-[#1f2328]/75" />
       </div>
 
       {/* Subtle ambient glow */}
@@ -49,13 +49,13 @@ export default function PageHero({
       <div className="relative z-10 flex items-center min-h-[520px] md:min-h-[600px] py-12 md:py-16">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 w-full">
           <div className="max-w-6xl text-center md:text-left">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               {label}
             </span>
 
             {renderTitle()}
 
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-4xl mx-auto md:mx-0">
+            <p className="text-lg md:text-xl text-neutral-300 leading-relaxed max-w-4xl mx-auto md:mx-0">
               {description}
             </p>
 

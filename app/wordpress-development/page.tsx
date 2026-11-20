@@ -143,7 +143,7 @@ const faqSchema = {
 
 export default function WordPressDevelopmentPage() {
   return (
-    <main className="w-full bg-[#0b0b0c] text-white">
+    <main className="w-full bg-surface text-white">
       <JsonLd data={[serviceSchema, faqSchema]} />
       <PageHero
         label="WordPress Development"
@@ -155,7 +155,7 @@ export default function WordPressDevelopmentPage() {
       />
 
       {/* Hero CTAs */}
-      <section className="border-b border-slate-800 bg-[#111214]">
+      <section className="border-b border-neutral-800 bg-surface-raised">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-8 flex flex-wrap gap-4">
           <Link
             href="/contact"
@@ -167,29 +167,29 @@ export default function WordPressDevelopmentPage() {
             href="/work"
             className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 px-7 py-3.5 text-sm font-semibold text-white hover:bg-volt-500/10 hover:border-volt-400 transition-all duration-200"
           >
-            View Case Studies →
+            View My Work →
           </Link>
         </div>
       </section>
 
       {/* Intro */}
-      <section className="py-20 border-b border-slate-800">
+      <section className="py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 The Problem
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Custom WordPress Development Built to Perform
               </h2>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-neutral-400 leading-relaxed mb-6">
                 Most WordPress websites are slow, difficult to maintain, and overloaded with plugins. That&apos;s not a platform problem — it&apos;s a build problem.
               </p>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-neutral-400 leading-relaxed mb-6">
                 At Black Lab Dev, I approach WordPress from an engineering perspective. Every site is custom-built for performance, scalability, and long-term maintainability.
               </p>
-              <p className="text-slate-400 leading-relaxed font-medium">
+              <p className="text-neutral-400 leading-relaxed font-medium">
                 No shortcuts. No templates. No technical debt.
               </p>
             </div>
@@ -209,7 +209,7 @@ export default function WordPressDevelopmentPage() {
                     </div>
                     <div>
                       <div className="text-sm font-semibold text-white mb-1">{item.problem}</div>
-                      <div className="text-xs text-slate-400 leading-relaxed">{item.impact}</div>
+                      <div className="text-xs text-neutral-400 leading-relaxed">{item.impact}</div>
                     </div>
                   </div>
                 </div>
@@ -220,16 +220,16 @@ export default function WordPressDevelopmentPage() {
       </section>
 
       {/* Services */}
-      <section className="py-20 bg-[#111214] border-b border-slate-800">
+      <section className="py-20 bg-surface-raised border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               What I Do
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               WordPress Development Services
             </h2>
-            <p className="text-slate-400 leading-relaxed">
+            <p className="text-neutral-400 leading-relaxed">
               Full-service WordPress development for businesses that need more than an off-the-shelf solution.
             </p>
           </div>
@@ -244,7 +244,7 @@ export default function WordPressDevelopmentPage() {
                   {service.icon}
                 </div>
                 <h3 className="text-lg font-bold text-white mb-3 group-hover:text-volt-400 transition-colors duration-300">{service.title}</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">{service.body}</p>
+                <p className="text-sm text-neutral-400 leading-relaxed">{service.body}</p>
               </div>
             ))}
           </div>
@@ -252,20 +252,20 @@ export default function WordPressDevelopmentPage() {
       </section>
 
       {/* Built without the bloat */}
-      <section className="py-20 border-b border-slate-800">
+      <section className="py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Why I&apos;m Different
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Built Without the Bloat
               </h2>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-neutral-400 leading-relaxed mb-6">
                 Most agencies rely on prebuilt themes, page builders, and plugin-heavy setups. I don&apos;t. Instead, I build lean, efficient WordPress sites from the ground up.
               </p>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-neutral-400 leading-relaxed">
                 Your website becomes an asset — not a liability.
               </p>
             </div>
@@ -285,7 +285,7 @@ export default function WordPressDevelopmentPage() {
                   </div>
                   <div>
                     <div className="text-sm font-semibold text-white mb-0.5">{item.label}</div>
-                    <div className="text-xs text-slate-400 leading-relaxed">{item.detail}</div>
+                    <div className="text-xs text-neutral-400 leading-relaxed">{item.detail}</div>
                   </div>
                 </div>
               ))}
@@ -295,16 +295,16 @@ export default function WordPressDevelopmentPage() {
       </section>
 
       {/* Process */}
-      <section className="py-20 bg-[#111214] border-b border-slate-800">
+      <section className="py-20 bg-surface-raised border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               My Approach
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               A Developer-First Approach
             </h2>
-            <p className="text-slate-400 leading-relaxed">
+            <p className="text-neutral-400 leading-relaxed">
               I don&apos;t design something first and try to make it work later. Every project starts with architecture planning, data structure decisions, and performance considerations — then I build.
             </p>
           </div>
@@ -312,9 +312,9 @@ export default function WordPressDevelopmentPage() {
             {processSteps.map((item) => (
               <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
                 <div className="text-5xl font-black font-mono text-volt-500/20 leading-none">{item.step}</div>
-                <div className="border-b border-slate-800 pb-10 last:border-0 last:pb-0">
+                <div className="border-b border-neutral-800 pb-10 last:border-0 last:pb-0">
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                  <p className="text-slate-400 leading-relaxed">{item.body}</p>
+                  <p className="text-neutral-400 leading-relaxed">{item.body}</p>
                 </div>
               </div>
             ))}
@@ -323,20 +323,20 @@ export default function WordPressDevelopmentPage() {
       </section>
 
       {/* Performance */}
-      <section className="py-20 border-b border-slate-800">
+      <section className="py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Performance
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Optimized for Speed and SEO
               </h2>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-neutral-400 leading-relaxed mb-6">
                 Site speed isn&apos;t just a nice-to-have — it directly impacts rankings, conversions, and user experience. My builds focus on Core Web Vitals from day one, not as a post-launch cleanup.
               </p>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-neutral-400 leading-relaxed">
                 The result: faster sites that perform better in search and convert more users.
               </p>
               <div className="mt-8">
@@ -352,10 +352,10 @@ export default function WordPressDevelopmentPage() {
               {performancePoints.map((item) => (
                 <div key={item.label} className="rounded-xl border border-neutral-800 bg-neutral-950 p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-2 h-2 rounded-full bg-volt-500 shadow-[0_0_8px_rgba(227,245,68,0.7)] shrink-0 mt-2" />
+                    <div className="w-2 h-2 rounded-full bg-volt-500 shrink-0 mt-2" />
                     <div>
                       <div className="text-sm font-semibold text-white mb-1">{item.label}</div>
-                      <div className="text-xs text-slate-400 leading-relaxed">{item.detail}</div>
+                      <div className="text-xs text-neutral-400 leading-relaxed">{item.detail}</div>
                     </div>
                   </div>
                 </div>
@@ -366,25 +366,25 @@ export default function WordPressDevelopmentPage() {
       </section>
 
       {/* Use Cases */}
-      <section className="py-20 bg-[#111214] border-b border-slate-800">
+      <section className="py-20 bg-surface-raised border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
+              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Use Cases
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 When Custom WordPress Development Makes Sense
               </h2>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-neutral-400 leading-relaxed">
                 Not every project needs a custom build — but if any of these sound familiar, a template or page builder isn&apos;t going to cut it.
               </p>
             </div>
             <div className="space-y-3">
               {useCases.map((item) => (
                 <div key={item} className="flex items-center gap-4 rounded-xl border border-neutral-800 bg-neutral-950 px-6 py-4">
-                  <div className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_6px_rgba(227,245,68,0.7)] shrink-0" />
-                  <span className="text-sm text-slate-300">{item}</span>
+                  <div className="w-1.5 h-1.5 rounded-full bg-volt-500 shrink-0" />
+                  <span className="text-sm text-neutral-300">{item}</span>
                 </div>
               ))}
             </div>
@@ -392,13 +392,13 @@ export default function WordPressDevelopmentPage() {
         </div>
       </section>
 
-      {/* Case Study Preview */}
-      <section className="py-20 border-b border-slate-800">
+      {/* Work Preview */}
+      <section className="py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-volt-500/35 bg-volt-500/8 text-volt-500 text-xs font-bold tracking-[0.2em] uppercase mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_8px_rgba(227,245,68,0.9)]" />
-              Case Studies
+            <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-neutral-300 mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-volt-500" />
+              Recent Work
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Recent WordPress Projects
@@ -412,9 +412,9 @@ export default function WordPressDevelopmentPage() {
               { stat: "Zero", label: "Plugin conflicts", detail: "Complex data integration built with clean custom code" },
             ].map((item) => (
               <div key={item.label} className="rounded-2xl border border-neutral-800 bg-neutral-950 px-8 py-8 text-center transition-all duration-300 hover:border-volt-500/30 hover:shadow-[0_0_40px_rgba(227,245,68,0.05)]">
-                <div className="text-3xl font-black text-volt-500 drop-shadow-[0_0_10px_rgba(227,245,68,0.4)] mb-2">{item.stat}</div>
+                <div className="text-3xl font-black text-volt-500 mb-2">{item.stat}</div>
                 <div className="text-sm font-semibold text-white mb-2">{item.label}</div>
-                <div className="text-xs text-slate-500 leading-relaxed">{item.detail}</div>
+                <div className="text-xs text-neutral-400 leading-relaxed">{item.detail}</div>
               </div>
             ))}
           </div>
@@ -438,7 +438,7 @@ export default function WordPressDevelopmentPage() {
       />
 
       {/* Internal links */}
-      <section className="py-16 border-b border-slate-800">
+      <section className="py-16 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <h2 className="text-lg font-bold text-white mb-6">Related Services</h2>
           <div className="flex flex-wrap gap-4">
@@ -450,25 +450,25 @@ export default function WordPressDevelopmentPage() {
             </Link>
             <Link
               href="/services/small-business-website-design"
-              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200"
             >
               Small Business Website Design →
             </Link>
             <Link
               href="/services/website-performance-optimization"
-              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200"
             >
               Website Performance →
             </Link>
             <Link
               href="/drupal-development"
-              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200"
             >
               Drupal Development →
             </Link>
             <Link
               href="/shopify-development"
-              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-slate-300 hover:border-slate-600 hover:text-white transition-all duration-200"
+              className="rounded-lg border border-neutral-800 bg-neutral-950 px-6 py-3 text-sm font-semibold text-neutral-300 hover:border-neutral-600 hover:text-white transition-all duration-200"
             >
               Shopify Development →
             </Link>
@@ -483,7 +483,7 @@ export default function WordPressDevelopmentPage() {
         bodyPrimary="If your current site is slow, hard to manage, or limiting your growth — it's time for a better foundation. I build WordPress sites that perform, scale, and stay maintainable for years."
         bodySecondary="No bloated themes. No page builders. Just clean, performant WordPress built the right way."
         secondaryHref="/work"
-        secondaryLabel="View Case Studies"
+        secondaryLabel="View My Work"
       />
     </main>
   );

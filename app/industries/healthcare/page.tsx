@@ -150,7 +150,7 @@ const clients = [
 
 export default function HealthcareIndustryPage() {
   return (
-    <main className="w-full bg-[#0b0b0c] text-white">
+    <main className="w-full bg-surface text-white">
       <JsonLd data={[breadcrumbSchema, serviceSchema, faqSchema]} />
 
       <PageHero
@@ -168,18 +168,18 @@ export default function HealthcareIndustryPage() {
       />
 
       {/* What We Deliver */}
-      <section className="py-20 border-b border-slate-800/50">
+      <section className="py-20 border-b border-neutral-800/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="mb-12">
-            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">What I Build</span>
+            <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">What I Build</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Built for Patient Acquisition</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {deliverables.map((item) => (
-              <div key={item.title} className="p-6 rounded-xl border border-slate-800/60 bg-slate-900/40 hover:border-volt-500/30 hover:bg-volt-500/5 transition-all duration-300">
+              <div key={item.title} className="p-6 rounded-xl border border-neutral-800/60 bg-neutral-900/40 hover:border-volt-500/30 hover:bg-volt-500/5 transition-all duration-300">
                 <div className="w-6 h-px bg-volt-500 mb-4" />
                 <h3 className="text-base font-semibold text-white mb-2">{item.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{item.description}</p>
+                <p className="text-sm text-neutral-400 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
@@ -187,17 +187,17 @@ export default function HealthcareIndustryPage() {
       </section>
 
       {/* Client Proof */}
-      <section className="py-20 border-b border-slate-800/50 bg-slate-950/50">
+      <section className="py-20 border-b border-neutral-800/50 bg-neutral-950/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="mb-12">
-            <span className="inline-block mb-3 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">Client Proof</span>
+            <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">Client Proof</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Healthcare Organizations Worked With</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {clients.map((c) => (
-              <div key={c.name} className="p-6 rounded-xl border border-slate-800/60 bg-slate-900/30">
+              <div key={c.name} className="p-6 rounded-xl border border-neutral-800/60 bg-neutral-900/30">
                 <p className="text-sm font-semibold text-volt-500 mb-2">{c.name}</p>
-                <p className="text-sm text-slate-400 leading-relaxed">{c.detail}</p>
+                <p className="text-sm text-neutral-400 leading-relaxed">{c.detail}</p>
               </div>
             ))}
           </div>
@@ -205,13 +205,13 @@ export default function HealthcareIndustryPage() {
       </section>
 
       {/* Cross-link */}
-      <section className="py-16 border-b border-slate-800/50">
+      <section className="py-16 border-b border-neutral-800/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 p-8 rounded-xl border border-volt-500/20 bg-volt-500/5">
             <div>
-              <p className="text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold mb-1">Related Service</p>
+              <p className="text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold mb-1">Related Service</p>
               <h3 className="text-lg font-bold text-white">Conversion Rate Optimization</h3>
-              <p className="text-sm text-slate-400 mt-1">How I increase bookings, form fills, and patient actions on your existing site.</p>
+              <p className="text-sm text-neutral-400 mt-1">How I increase bookings, form fills, and patient actions on your existing site.</p>
             </div>
             <Link
               href="/services/conversion-optimization"

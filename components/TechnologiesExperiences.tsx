@@ -116,10 +116,8 @@ const colorClasses = {
 
 export default function TechnologiesExperience() {
     return (
-        <section className="w-full bg-linear-to-b from-slate-950 via-slate-950 to-black text-white py-24 relative overflow-hidden">
+        <section className="w-full bg-linear-to-b from-neutral-950 via-neutral-950 to-black text-white py-24 relative overflow-hidden">
             {/* Ambient background effects */}
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-volt-500/6 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-volt-500/6 rounded-full blur-3xl" />
 
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
                 {/* Header */}
@@ -143,7 +141,7 @@ export default function TechnologiesExperience() {
                         return (
                             <div
                                 key={area.title}
-                                className={`group rounded-2xl border-2 border-slate-800/50 bg-slate-900/50 p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl ${colors.border} ${colors.glow} backdrop-blur-sm overflow-hidden relative`}
+                                className={`group rounded-2xl border-2 border-neutral-800/50 bg-neutral-900/50 p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl ${colors.border} ${colors.glow} backdrop-blur-sm overflow-hidden relative`}
                             >
                                 {/* Animated gradient overlay */}
                                 <div className={`absolute inset-0 bg-linear-to-br from-transparent to-transparent ${colors.gradient} transition-all duration-500 opacity-0 group-hover:opacity-100`} />
@@ -158,9 +156,9 @@ export default function TechnologiesExperience() {
                                         {area.title}
                                     </h3>
 
-                                    <ul className="space-y-2.5 text-sm text-slate-400">
+                                    <ul className="space-y-2.5 text-sm text-neutral-400">
                                         {area.items.map((item) => (
-                                            <li key={item} className="leading-relaxed group-hover:text-slate-300 transition-colors duration-300 flex items-start">
+                                            <li key={item} className="leading-relaxed group-hover:text-neutral-300 transition-colors duration-300 flex items-start">
                                                 <span className={`mr-2 mt-1.5 h-1.5 w-1.5 rounded-full ${colors.bullet} shrink-0`} />
                                                 <span>{item}</span>
                                             </li>
@@ -177,7 +175,7 @@ export default function TechnologiesExperience() {
 
                 {/* Certifications & Credibility */}
                 <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div className="group rounded-2xl border-2 border-slate-800/50 bg-linear-to-br from-slate-900/50 to-[#111214]/80 p-10 transition-all duration-500 hover:border-volt-500/40 hover:shadow-xl hover:shadow-volt-500/10 backdrop-blur-sm relative overflow-hidden">
+                    <div className="group rounded-2xl border-2 border-neutral-800/50 bg-linear-to-br from-neutral-900/50 to-surface-raised/80 p-10 transition-all duration-500 hover:border-volt-500/40 hover:shadow-xl hover:shadow-volt-500/10 backdrop-blur-sm relative overflow-hidden">
                         <div className="absolute inset-0 bg-linear-to-br from-volt-500/0 to-volt-500/0 group-hover:from-volt-500/4 group-hover:to-transparent transition-all duration-500" />
 
                         <div className="relative z-10">
@@ -198,7 +196,7 @@ export default function TechnologiesExperience() {
                         </div>
                     </div>
 
-                    <div className="group rounded-2xl border-2 border-slate-800/50 bg-slate-900/50 p-10 flex items-center gap-6 transition-all duration-500 hover:border-volt-500/40 hover:shadow-xl hover:shadow-volt-500/10 backdrop-blur-sm relative overflow-hidden">
+                    <div className="group rounded-2xl border-2 border-neutral-800/50 bg-neutral-900/50 p-10 flex items-center gap-6 transition-all duration-500 hover:border-volt-500/40 hover:shadow-xl hover:shadow-volt-500/10 backdrop-blur-sm relative overflow-hidden">
                         <div className="absolute inset-0 bg-linear-to-br from-volt-500/0 to-volt-500/0 group-hover:from-volt-500/4 group-hover:to-transparent transition-all duration-500" />
 
                         <div className="relative z-10 flex items-center gap-6">
@@ -211,7 +209,7 @@ export default function TechnologiesExperience() {
                                 <h4 className="text-xl font-semibold mb-2 text-white group-hover:text-volt-300 transition-colors duration-300">
                                     Google Cybersecurity Certificate
                                 </h4>
-                                <p className="text-sm text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
+                                <p className="text-sm text-neutral-400 leading-relaxed group-hover:text-neutral-300 transition-colors duration-300">
                                     Professional certification issued by Google via Coursera,
                                     covering security fundamentals, threat detection, risk
                                     management, and best practices for securing modern systems.

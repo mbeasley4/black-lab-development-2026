@@ -56,7 +56,7 @@ const colorClasses = {
     volt: {
         border: "group-hover:border-volt-500/50",
         glow: "group-hover:shadow-volt-500/25",
-        overlay: "from-[#111214]/80 via-slate-950/90 to-black",
+        overlay: "from-surface-raised/80 via-neutral-950/90 to-black",
         accent: "bg-volt-500",
         ctaText: "text-volt-500",
         titleHover: "group-hover:text-volt-400",
@@ -65,7 +65,7 @@ const colorClasses = {
     blue: {
         border: "group-hover:border-volt-500/50",
         glow: "group-hover:shadow-volt-500/25",
-        overlay: "from-[#111214]/80 via-slate-950/90 to-black",
+        overlay: "from-surface-raised/80 via-neutral-950/90 to-black",
         accent: "bg-volt-500",
         ctaText: "text-volt-400",
         titleHover: "group-hover:text-volt-300",
@@ -75,17 +75,15 @@ const colorClasses = {
 
 export default function CaseStudies() {
     return (
-        <section className="w-full bg-linear-to-b from-[#111214] via-slate-950 to-[#0b0b0c] text-white py-24 relative overflow-hidden">
+        <section className="w-full bg-linear-to-b from-surface-raised via-neutral-950 to-surface text-white py-24 relative overflow-hidden">
             {/* Ambient background effects */}
-            <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-volt-500/8 rounded-full blur-3xl" />
-            <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-volt-500/8 rounded-full blur-3xl" />
 
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
                 {/* Header */}
                 <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16 gap-8">
                     <div className="max-w-3xl">
-                        <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
-                            Case Studies
+                        <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+                            Selected Work
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white">
                             Results, Not{" "}
@@ -93,13 +91,13 @@ export default function CaseStudies() {
                                 Brochures
                             </span>
                         </h2>
-                        <p className="text-lg text-slate-400 leading-relaxed">
+                        <p className="text-lg text-neutral-400 leading-relaxed">
                             Every engagement is measured against real pipeline outcomes — qualified leads, conversion rates, and revenue attributed to the website.
                         </p>
                     </div>
                 </div>
 
-                {/* Case Studies Grid */}
+                {/* Work Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {caseStudies.map((project) => {
                         const colors = colorClasses[project.color];
@@ -130,13 +128,13 @@ export default function CaseStudies() {
 
                                     <div className="relative z-10">
                                         {/* Industry tag */}
-                                        <span className="inline-block text-[10px] uppercase tracking-widest text-slate-500 mb-2">
+                                        <span className="inline-block text-[10px] uppercase tracking-widest text-neutral-400 mb-2">
                                             {project.industry}
                                         </span>
                                         <h3 className={`text-lg font-bold mb-2 text-white ${colors.titleHover} transition-all duration-300`}>
                                             {project.title}
                                         </h3>
-                                        <p className="text-sm text-slate-400 leading-relaxed mb-4 group-hover:text-slate-300 transition-colors duration-300">
+                                        <p className="text-sm text-neutral-400 leading-relaxed mb-4 group-hover:text-neutral-300 transition-colors duration-300">
                                             {project.summary}
                                         </p>
 
@@ -163,7 +161,7 @@ export default function CaseStudies() {
                         href="/work"
                         className="inline-flex items-center justify-center rounded-md border-2 border-volt-500/40 bg-volt-500/8 px-8 py-4 text-sm font-semibold uppercase tracking-wide text-volt-400 transition-all duration-300 hover:border-volt-400 hover:bg-volt-500/15 hover:text-white hover:shadow-lg hover:shadow-volt-500/20"
                     >
-                        View All Case Studies
+                        View All Work
                         <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>

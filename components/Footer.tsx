@@ -4,7 +4,7 @@ import CookieSettingsButton from "./CookieSettingsButton";
 
 export default function Footer() {
     return (
-        <footer className="bg-[#111214] border-t border-volt-500/10 text-neutral-400">
+        <footer className="bg-surface-raised border-t border-volt-500/10 text-neutral-400">
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-24 grid grid-cols-1 md:grid-cols-12 gap-y-16">
 
                 {/* Brand / Description */}

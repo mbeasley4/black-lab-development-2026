@@ -168,7 +168,7 @@ export default function AboutPage() {
   return (
     <>
       <JsonLd data={[personSchema, faqSchema]} />
-      <main className="w-full bg-[#0b0b0c] text-white">
+      <main className="w-full bg-surface text-white">
       {/* ================= HERO ================= */}
       <PageHero
         label="About"
@@ -191,14 +191,12 @@ export default function AboutPage() {
         />
 
         {/* Ambient glows */}
-        <div className="absolute top-20 -left-40 w-175 h-175 bg-volt-500/8 rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute bottom-20 -right-40 w-150 h-150 bg-volt-600/8 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           {/* Section eyebrow */}
           <div className="flex items-center gap-6 mb-10 md:mb-20">
             <div>
-              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono drop-shadow-[0_0_12px_rgba(227,245,68,0.7)]">
+              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono">
                 // Background
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-white">
@@ -237,7 +235,7 @@ export default function AboutPage() {
                 <div className="absolute inset-0 rounded-2xl bg-volt-500/15 blur-2xl scale-110 pointer-events-none" />
                 <div className="absolute -top-2 -left-2 w-8 h-8 border-t-2 border-l-2 border-volt-500/50 rounded-tl-lg pointer-events-none" />
                 <div className="absolute -bottom-2 -right-2 w-8 h-8 border-b-2 border-r-2 border-volt-500/50 rounded-br-lg pointer-events-none" />
-                <div className="relative w-full h-full rounded-2xl overflow-hidden border border-volt-500/25 shadow-[0_0_40px_rgba(227,245,68,0.12)]">
+                <div className="relative w-full h-full rounded-2xl overflow-hidden border border-volt-500/25">
                   <Image
                     src="/images/michael-beasley.webp"
                     alt="Michael Beasley, senior web developer and founder of Black Lab Development, based in Cincinnati, Ohio"
@@ -285,10 +283,10 @@ export default function AboutPage() {
               ].map((stat) => (
                 <div
                   key={stat.label}
-                  className="relative rounded-xl border border-volt-500/15 bg-[#111214]/60 p-6 overflow-hidden group hover:border-volt-500/40 hover:shadow-[0_0_40px_rgba(227,245,68,0.10)] transition-all duration-500"
+                  className="relative rounded-xl border border-volt-500/15 bg-surface-raised/60 p-6 overflow-hidden group hover:border-volt-500/40 hover:shadow-[0_0_40px_rgba(227,245,68,0.10)] transition-all duration-500"
                 >
                   <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/30 to-transparent group-hover:via-volt-500/70 transition-all duration-500" />
-                  <div className="text-4xl font-black font-mono text-volt-500 drop-shadow-[0_0_20px_rgba(227,245,68,0.5)] mb-2">
+                  <div className="text-4xl font-black font-mono text-volt-500 mb-2">
                     {stat.value}
                   </div>
                   <div className="text-sm text-neutral-400 leading-snug">{stat.label}</div>
@@ -307,12 +305,11 @@ export default function AboutPage() {
             backgroundSize: "44px 44px",
           }}
         />
-        <div className="absolute top-0 right-0 w-150 h-150 bg-volt-500/5 rounded-full blur-[130px] pointer-events-none" />
 
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="flex items-center gap-6 mb-10 md:mb-20">
             <div>
-              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono drop-shadow-[0_0_12px_rgba(227,245,68,0.7)]">
+              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono">
                 // The Case for Freelance
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-white">
@@ -368,11 +365,11 @@ export default function AboutPage() {
                   className="grid grid-cols-2 gap-4 rounded-xl border border-neutral-800 overflow-hidden group hover:border-volt-500/25 transition-all duration-300"
                 >
                   <div className="p-4 bg-neutral-950 text-sm text-neutral-500 leading-relaxed">
-                    <span className="block text-[10px] font-mono tracking-[0.3em] uppercase text-neutral-600 mb-1">Agency</span>
+                    <span className="block text-[10px] font-mono tracking-[0.3em] uppercase text-neutral-500 mb-1">Agency</span>
                     {row.agency}
                   </div>
-                  <div className="p-4 bg-[#111214]/60 text-sm text-neutral-300 leading-relaxed border-l border-volt-500/10 group-hover:border-volt-500/30 transition-colors duration-300">
-                    <span className="block text-[10px] font-mono tracking-[0.3em] uppercase text-volt-500/60 mb-1">Black Lab Dev</span>
+                  <div className="p-4 bg-surface-raised/60 text-sm text-neutral-300 leading-relaxed border-l border-volt-500/10 group-hover:border-volt-500/30 transition-colors duration-300">
+                    <span className="block text-[10px] font-mono tracking-[0.2em] uppercase text-neutral-400 mb-1">Black Lab Dev</span>
                     {row.me}
                   </div>
                 </div>
@@ -384,12 +381,11 @@ export default function AboutPage() {
 
       {/* ================= VALUES ================= */}
       <section className="py-6 md:py-9 relative overflow-hidden border-t border-volt-500/8">
-        <div className="absolute bottom-0 left-1/4 w-175 h-175 bg-volt-600/6 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="flex items-center gap-6 mb-10 md:mb-20">
             <div>
-              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono drop-shadow-[0_0_12px_rgba(227,245,68,0.7)]">
+              <span className="inline-block mb-3 text-xs tracking-[0.5em] uppercase text-volt-500 font-mono">
                 // How I Work
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-white">
@@ -403,7 +399,7 @@ export default function AboutPage() {
             {values.map((value) => (
               <div
                 key={value.label}
-                className="group relative rounded-xl border border-volt-500/15 bg-[#111214]/50 p-8 overflow-hidden hover:border-volt-500/35 hover:shadow-[0_0_60px_rgba(227,245,68,0.08)] transition-all duration-500"
+                className="group relative rounded-xl border border-volt-500/15 bg-surface-raised/50 p-8 overflow-hidden hover:border-volt-500/35 hover:shadow-[0_0_60px_rgba(227,245,68,0.08)] transition-all duration-500"
               >
                 <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/25 to-transparent group-hover:via-volt-500/60 transition-all duration-500" />
                 <div className="absolute top-3 right-4 text-[6rem] font-black font-mono text-volt-500/4 leading-none pointer-events-none select-none" aria-hidden="true">

@@ -29,17 +29,14 @@ const demos = [
 
 export default function DemoSection() {
   return (
-    <section className="bg-[#0b0b0c] border-t border-b border-volt-500/15 py-6 md:py-9 relative overflow-hidden">
+    <section className="bg-surface border-t border-b border-volt-500/15 py-6 md:py-9 relative overflow-hidden">
       {/* Ambient glows */}
-      <div className="absolute top-0 left-1/4 w-175 h-175 bg-volt-500/6 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute top-1/2 right-0 w-125 h-125 bg-volt-500/6 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-1/3 w-150 h-150 bg-volt-500/4 rounded-full blur-[130px] pointer-events-none" />
 
       <div className="mx-auto max-w-7xl px-6 relative">
         {/* Header */}
         <div className="mb-20 text-center">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-volt-500/35 bg-volt-500/8 text-volt-500 text-xs font-bold tracking-[0.2em] uppercase mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-volt-500 shadow-[0_0_8px_rgba(227,245,68,0.9)]" />
+          <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-neutral-300 mb-5">
+            <span className="w-1.5 h-1.5 rounded-full bg-volt-500" />
             Live Experiments
           </span>
           <h2 className="text-5xl font-extrabold tracking-tight text-white">
@@ -48,7 +45,7 @@ export default function DemoSection() {
               Demo Projects
             </span>
           </h2>
-          <p className="mt-4 text-lg text-slate-300 max-w-xl mx-auto">
+          <p className="mt-4 text-lg text-neutral-300 max-w-xl mx-auto">
             Production-ready applications built with modern frameworks.
           </p>
           {/* Underline accent */}
@@ -96,7 +93,7 @@ export default function DemoSection() {
                     {demo.title}
                   </h3>
 
-                  <p className="mt-4 max-w-xl text-base text-slate-300 leading-relaxed">
+                  <p className="mt-4 max-w-xl text-base text-neutral-300 leading-relaxed">
                     {demo.description}
                   </p>
 

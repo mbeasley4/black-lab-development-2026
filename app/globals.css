@@ -20,15 +20,21 @@
   --color-volt-50: #fbfde8;
   --color-volt-100: #f5fac3;
   --color-volt-200: #eef88a;
-  --color-volt-300: #e8f75e;
-  --color-volt-400: #e3f544;
-  --color-volt-500: #E3F544;
+  --color-volt-300: #eef88a;
+  --color-volt-400: #e9f76a; /* hover state for volt-500 surfaces */
+  --color-volt-500: #E3F544; /* brand accent */
   --color-volt-600: #c2d435;
   --color-volt-700: #96a429;
   --color-volt-800: #78841f;
   --color-volt-900: #4a5216;
   --color-volt-950: #282d0c;
   --color-volt: #E3F544;
+  /* Surfaces: one set of near-blacks for the whole site.
+     surface = page background, raised = alternate bands and cards,
+     sunken = the deepest wells (footer, inset panels). */
+  --color-surface: #0b0b0c;
+  --color-surface-raised: #121214;
+  --color-surface-sunken: #08080a;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

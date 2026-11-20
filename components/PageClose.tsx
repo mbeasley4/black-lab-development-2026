@@ -21,13 +21,11 @@ export default function PageClose({
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/images/close-bg.png')" }}
         />
-        <div className="absolute inset-0 bg-linear-to-br from-[#0b0b0c] via-[#111214] to-[#1f2328]" />
+        <div className="absolute inset-0 bg-linear-to-br from-surface via-surface-raised to-[#1f2328]" />
         <div className="absolute inset-0 bg-linear-to-tr from-volt-500/6 via-transparent to-transparent" />
       </div>
 
       {/* Ambient glows */}
-      <div className="absolute top-0 left-1/4 w-125 h-125 bg-volt-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-125 h-125 bg-volt-500/10 rounded-full blur-3xl" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
