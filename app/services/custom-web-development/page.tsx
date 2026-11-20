@@ -10,21 +10,21 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Custom Web Development | Next.js, Headless & WordPress",
+  title: "Custom Web Development: Next.js & WordPress",
   description:
-    "Bespoke web development in Next.js, headless CMS, and WordPress. Built for businesses that have outgrown templates — clean architecture, no bloat, built to last.",
+    "Custom web development in Next.js, headless CMS and WordPress for businesses that have outgrown templates. Clean, fast and built to last.",
   alternates: { canonical: "/services/custom-web-development" },
   openGraph: {
-    title: "Custom Web Development | Next.js, Headless & WordPress",
+    title: "Custom Web Development: Next.js & WordPress | Black Lab Dev",
     description:
-      "Bespoke web development in Next.js, headless CMS, and WordPress. Built for businesses that have outgrown templates — clean architecture, no bloat, built to last.",
+      "Custom web development in Next.js, headless CMS and WordPress for businesses that have outgrown templates. Clean, fast and built to last.",
     url: "/services/custom-web-development",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Custom Web Development | Next.js, Headless & WordPress",
+    title: "Custom Web Development: Next.js & WordPress | Black Lab Dev",
     description:
-      "Bespoke web development in Next.js, headless CMS, and WordPress — built for businesses that have outgrown templates.",
+      "Custom web development in Next.js, headless CMS and WordPress for businesses that have outgrown templates. Clean, fast and built to last.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
@@ -212,8 +212,8 @@ export default function CustomWebDevelopmentPage() {
       <main className="w-full bg-black text-white">
         <PageHero
           label="Custom Web Development"
-          title="When You&apos;ve Outgrown Templates and Page Builders"
-          titleHighlight="Templates and Page Builders"
+          title="Custom Web Development for Businesses That Outgrew Templates"
+          titleHighlight="for Businesses That Outgrew Templates"
           description="Bespoke builds in Next.js, headless CMS, and WordPress — architected for businesses that need more than a theme can deliver."
           backgroundImage="/images/services-custom-web-development-hero-bg.jpg"
           badges={["No page builders", "Clean architecture", "Built to hand off"]}

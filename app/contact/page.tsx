@@ -6,21 +6,21 @@ import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
-  title: "Schedule a Discovery Call",
+  title: "Contact a Cincinnati Web Developer",
   description:
-    "Ready to make your website work harder? Schedule a discovery call with a senior web developer in Cincinnati, OH — let's talk through what's limiting your leads and conversions.",
+    "Talk to a senior web developer in Cincinnati about a new website, a redesign or an agency partnership. Schedule a call with Black Lab Development.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Schedule a Discovery Call",
+    title: "Contact a Cincinnati Web Developer | Black Lab Dev",
     description:
-      "Ready to make your website work harder? Schedule a discovery call and let's talk through what's holding back your leads, traffic, and conversions.",
+      "Talk to a senior web developer in Cincinnati about a new website, a redesign or an agency partnership. Schedule a call with Black Lab Development.",
     url: "/contact",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Schedule a Discovery Call",
+    title: "Contact a Cincinnati Web Developer | Black Lab Dev",
     description:
-      "Schedule a discovery call with a senior web developer in Cincinnati, OH.",
+      "Talk to a senior web developer in Cincinnati about a new website, a redesign or an agency partnership. Schedule a call with Black Lab Development.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
@@ -57,8 +57,8 @@ export default function ContactPage() {
       {/* ================= HERO ================= */}
       <PageHero
         label=" Contact Me"
-        title="Let's Talk About Your "
-        titleHighlight="Platform"
+        title="Contact a Senior Web Developer. Let's Talk About Your Project."
+        titleHighlight="Let's Talk About Your Project."
         description="If you're building new, modernizing, or reducing technical debt, I partner with you to create clean, scalable, lasting systems."
         backgroundImage="/images/contact-hero-bg.png"
         badges={["Senior-led execution", "Production systems", "Direct collaboration"]}

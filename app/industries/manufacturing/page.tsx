@@ -9,19 +9,19 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Manufacturing Web Design & Development",
+  title: "Manufacturing Website Design",
   description:
     "Websites for manufacturers and industrial firms — RFQ generation, product catalogs, and distributor portals built to win engineers and procurement teams.",
   alternates: { canonical: "/industries/manufacturing" },
   openGraph: {
-    title: "Manufacturing Web Design & Development",
+    title: "Manufacturing Website Design | Black Lab Dev",
     description:
       "Websites for manufacturers and industrial firms — RFQ generation, product catalogs, and distributor portals built to win engineers and procurement teams.",
     url: "/industries/manufacturing",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Manufacturing Web Design & Development",
+    title: "Manufacturing Website Design | Black Lab Dev",
     description:
       "Websites for manufacturers and industrial firms — RFQ generation, product catalogs, and distributor portals built to win engineers and procurement teams.",
     images: [DEFAULT_OG_IMAGE.url],
@@ -150,8 +150,8 @@ export default function ManufacturingIndustryPage() {
 
       <PageHero
         label="Manufacturing & Industrial"
-        title="Built for Engineers Who Read Spec Sheets"
-        titleHighlight="Read Spec Sheets"
+        title="Manufacturing Website Design for Engineers Who Read Spec Sheets"
+        titleHighlight="for Engineers Who Read Spec Sheets"
         description="Manufacturing buyers don't fill out generic contact forms. They evaluate specs, compare capabilities, and submit RFQs. Your website needs to support that process — or they'll find a competitor's that does."
         backgroundImage="/images/industries-manufacturing-hero-bg.jpg"
         badges={["RFQ generation", "Product catalog architecture", "Technical SEO"]}

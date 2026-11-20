@@ -9,21 +9,21 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Technical SEO Fulfillment for Agencies | Black Lab Dev",
+  title: "Technical SEO Fulfillment for Agencies",
   description:
-    "White-label technical SEO execution for agencies and strategy firms — Core Web Vitals, structured data, technical audits, and migrations implemented in the code, not just recommended.",
+    "White-label technical SEO for agencies: Core Web Vitals, structured data, audits and migrations implemented in the code, not just recommended.",
   alternates: { canonical: "/partners/seo-fulfillment" },
   openGraph: {
     title: "Technical SEO Fulfillment for Agencies | Black Lab Dev",
     description:
-      "White-label technical SEO execution for agencies and strategy firms — Core Web Vitals, structured data, technical audits, and migrations implemented in the code, not just recommended.",
+      "White-label technical SEO for agencies: Core Web Vitals, structured data, audits and migrations implemented in the code, not just recommended.",
     url: "/partners/seo-fulfillment",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     title: "Technical SEO Fulfillment for Agencies | Black Lab Dev",
     description:
-      "White-label technical SEO execution for agencies — Core Web Vitals, structured data, audits, and migrations actually implemented.",
+      "White-label technical SEO for agencies: Core Web Vitals, structured data, audits and migrations implemented in the code, not just recommended.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
@@ -210,8 +210,8 @@ export default function SeoFulfillmentPage() {
       <main className="w-full bg-black text-white">
       <PageHero
         label="Partners / SEO Fulfillment"
-        title="Technical SEO That Actually Gets Implemented"
-        titleHighlight="Actually Gets Implemented"
+        title="Technical SEO Fulfillment for Agencies, Implemented in the Code"
+        titleHighlight="Implemented in the Code"
         description="You sell the strategy. I write the code that makes it real — Core Web Vitals, structured data, crawlability, and migrations, implemented in your client's codebase under your brand."
         backgroundImage="/images/services-hero-bg.png"
         badges={["Implementation only", "White-label reporting", "Works in any stack"]}

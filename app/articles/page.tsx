@@ -27,19 +27,19 @@ const POSTS_QUERY = `*[_type == "post" && defined(slug.current)] | order(publish
 const COUNT_QUERY = `count(*[_type == "post" && defined(slug.current)])`;
 
 export const metadata: Metadata = {
-  title: "Web Development & Performance Articles",
+  title: "Web Development, SEO & Performance Articles",
   description:
     "Practical articles on website performance, SEO, conversion optimization, and building websites that actually drive results.",
   alternates: { canonical: "/articles" },
   openGraph: {
-    title: "Web Development & Performance Articles",
+    title: "Web Development, SEO & Performance Articles | Black Lab Dev",
     description:
       "Practical articles on website performance, SEO, conversion optimization, and building websites that actually drive results.",
     url: "/articles",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Web Development & Performance Articles",
+    title: "Web Development, SEO & Performance Articles | Black Lab Dev",
     description:
       "Practical articles on website performance, SEO, conversion optimization, and building websites that actually drive results.",
     images: [DEFAULT_OG_IMAGE.url],
@@ -201,8 +201,8 @@ export default async function ArticlesPage({
       {/* HERO */}
       <PageHero
         label="Articles"
-        title="From the Codebase"
-        titleHighlight="Codebase"
+        title="Web Development & SEO Articles From the Codebase"
+        titleHighlight="From the Codebase"
         description="Articles documenting technical decisions, tradeoffs, and lessons learned while building systems that run under real-world conditions."
         backgroundImage="/images/articles-hero-bg.png"
         badges={["Senior-led execution", "Production systems", "Direct collaboration"]}

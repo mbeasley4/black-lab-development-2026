@@ -9,21 +9,21 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "White-Label Web Development for Agencies | Black Lab Dev",
+  title: "How White-Label Web Development Works",
   description:
-    "How white-label web development works: the handoff model, what your client sees, deliverables, IP ownership, and timelines. Senior engineering shipped under your agency's brand.",
+    "How white-label web development works: handoff, what your client sees, deliverables, code ownership and timelines — all under your agency's brand.",
   alternates: { canonical: "/partners/white-label-web-development" },
   openGraph: {
-    title: "White-Label Web Development for Agencies | Black Lab Dev",
+    title: "How White-Label Web Development Works | Black Lab Dev",
     description:
-      "How white-label web development works: the handoff model, what your client sees, deliverables, IP ownership, and timelines. Senior engineering shipped under your agency's brand.",
+      "How white-label web development works: handoff, what your client sees, deliverables, code ownership and timelines — all under your agency's brand.",
     url: "/partners/white-label-web-development",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "White-Label Web Development for Agencies | Black Lab Dev",
+    title: "How White-Label Web Development Works | Black Lab Dev",
     description:
-      "The white-label delivery model in detail — handoff, deliverables, IP ownership, and timelines for builds shipped under your agency's brand.",
+      "How white-label web development works: handoff, what your client sees, deliverables, code ownership and timelines — all under your agency's brand.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };

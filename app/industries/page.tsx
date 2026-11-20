@@ -8,19 +8,19 @@ import JsonLd from "@/components/JsonLd";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Web Development for B2B, Manufacturing & Ecommerce",
+  title: "Web Design & Development by Industry",
   description:
     "Industry-specific website development for manufacturing, B2B, and ecommerce brands — built for technical buyers and real business outcomes.",
   alternates: { canonical: "/industries" },
   openGraph: {
-    title: "Web Development for B2B, Manufacturing & Ecommerce",
+    title: "Web Design & Development by Industry | Black Lab Dev",
     description:
       "Industry-specific website development for manufacturing, B2B, and ecommerce brands — built for technical buyers and real business outcomes.",
     url: "/industries",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Web Development for B2B, Manufacturing & Ecommerce",
+    title: "Web Design & Development by Industry | Black Lab Dev",
     description:
       "Industry-specific website development for manufacturing, B2B, and ecommerce brands — built for technical buyers and real business outcomes.",
     images: [DEFAULT_OG_IMAGE.url],
@@ -166,8 +166,8 @@ export default function IndustriesPage() {
       {/* ================= HERO ================= */}
       <PageHero
         label="Industries"
-        title="Every Industry Sets Its Own Non-Negotiables"
-        titleHighlight="Its Own Non-Negotiables"
+        title="Web Design and Development by Industry"
+        titleHighlight="by Industry"
         description="I've built and fixed websites across industries where performance and reliability aren't optional — regulated fields, high-traffic platforms, and systems nobody else wanted to touch."
         backgroundImage="/images/industries-hero-bg.jpg"
         badges={["Regulated environments", "High-traffic systems", "Legacy nightmares survived"]}

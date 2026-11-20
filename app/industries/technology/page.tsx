@@ -9,21 +9,21 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "SaaS & Technology Web Development",
+  title: "SaaS & Tech Website Development",
   description:
-    "Web development for SaaS and technology companies — product-led marketing sites, custom integrations, and conversion architecture that turns traffic into signups.",
+    "SaaS and technology website development: product-led marketing sites, integrations and conversion architecture that turn traffic into signups.",
   alternates: { canonical: "/industries/technology" },
   openGraph: {
-    title: "SaaS & Technology Web Development",
+    title: "SaaS & Tech Website Development | Black Lab Dev",
     description:
-      "Web development for SaaS and technology companies — product-led marketing sites, custom integrations, and conversion architecture that turns traffic into signups.",
+      "SaaS and technology website development: product-led marketing sites, integrations and conversion architecture that turn traffic into signups.",
     url: "/industries/technology",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "SaaS & Technology Web Development",
+    title: "SaaS & Tech Website Development | Black Lab Dev",
     description:
-      "Web development for SaaS and technology companies — product-led marketing sites, custom integrations, and conversion architecture that turns traffic into signups.",
+      "SaaS and technology website development: product-led marketing sites, integrations and conversion architecture that turn traffic into signups.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
@@ -159,8 +159,8 @@ export default function TechnologyIndustryPage() {
 
       <PageHero
         label="SaaS & Technology"
-        title="Every Pixel Should Push Toward Signups"
-        titleHighlight="Push Toward Signups"
+        title="SaaS Website Development That Drives Signups"
+        titleHighlight="That Drives Signups"
         description="SaaS websites have one job: convert the right traffic into trials, demos, and qualified pipeline. Every design decision, every integration, every performance trade-off should serve that goal."
         backgroundImage="/images/industries-technology-hero-bg.jpg"
         badges={["Product-led growth", "Sub-2s load times", "CRM & analytics integration"]}

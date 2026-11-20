@@ -154,9 +154,9 @@ export default function CaseStudiesPage() {
             My Work
           </span>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.95] mb-8">
-            <span className="block text-white">Real Work.</span>
-            <span className="block text-neutral-400">Real Outcomes.</span>
+          <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold tracking-tight leading-[1.1] mb-8">
+            <span className="block text-white">Web Design Portfolio.</span>
+            <span className="block text-neutral-400">Real Work. Real Outcomes.</span>
           </h1>
 
           <p className="text-lg md:text-xl text-neutral-400 leading-relaxed max-w-2xl mb-8">

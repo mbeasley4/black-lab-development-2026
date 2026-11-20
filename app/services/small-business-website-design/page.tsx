@@ -10,21 +10,21 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Small Business Website Design | Built to Generate Business",
+  title: "Small Business Website Design",
   description:
-    "Professional small business website design built by a senior engineer — not a template, not a junior freelancer. Fast, credible, and built to bring in calls and leads.",
+    "Small business website design that brings in calls and leads. Custom, fast and SEO-ready, built by a senior web developer — not a template.",
   alternates: { canonical: "/services/small-business-website-design" },
   openGraph: {
-    title: "Small Business Website Design | Built to Generate Business",
+    title: "Small Business Website Design | Black Lab Dev",
     description:
-      "Professional small business website design built by a senior engineer — not a template, not a junior freelancer. Fast, credible, and built to bring in calls and leads.",
+      "Small business website design that brings in calls and leads. Custom, fast and SEO-ready, built by a senior web developer — not a template.",
     url: "/services/small-business-website-design",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Small Business Website Design | Built to Generate Business",
+    title: "Small Business Website Design | Black Lab Dev",
     description:
-      "Professional small business website design built by a senior engineer — fast, credible, and built to bring in calls and leads.",
+      "Small business website design that brings in calls and leads. Custom, fast and SEO-ready, built by a senior web developer — not a template.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
@@ -211,8 +211,8 @@ export default function SmallBusinessWebsiteDesignPage() {
       <main className="w-full bg-black text-white">
       <PageHero
         label="Small Business Website Design"
-        title="A Website That Actually Earns You Customers"
-        titleHighlight="Earns You Customers"
+        title="Small Business Website Design That Brings In Customers"
+        titleHighlight="That Brings In Customers"
         description="Small businesses get one shot at looking credible online. I build professional, fast, custom websites for growing businesses — designed around how your customers actually decide to call you."
         backgroundImage="/images/services-small-business-website-design-hero-bg.jpg"
         badges={["Built by a senior engineer", "No templates", "You can update it yourself"]}

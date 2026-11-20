@@ -15,21 +15,21 @@ import JsonLd from "@/components/JsonLd";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "Website Design for Small Businesses & Agencies | Black Lab Dev",
+  title: "Web Design for Small Businesses & Agencies | Black Lab Dev",
   description:
-    "No ghosting. No junior handoffs. Just fast, conversion-built websites — direct from a senior engineer, for small businesses and white-label agency partners.",
+    "Custom website design and development for small businesses and agencies. Fast, SEO-ready sites built directly by a senior web developer in Cincinnati.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Website Design for Small Businesses & Agencies | Black Lab Dev",
+    title: "Web Design for Small Businesses & Agencies | Black Lab Dev",
     description:
-      "No ghosting. No junior handoffs. Just fast, conversion-built websites — direct from a senior engineer, for small businesses and white-label agency partners.",
+      "Custom website design and development for small businesses and agencies. Fast, SEO-ready sites built directly by a senior web developer in Cincinnati.",
     url: "/",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Website Design for Small Businesses & Agencies | Black Lab Dev",
+    title: "Web Design for Small Businesses & Agencies | Black Lab Dev",
     description:
-      "No ghosting. No junior handoffs. Just fast, conversion-built websites — direct from a senior engineer, for small businesses and white-label agency partners.",
+      "Custom website design and development for small businesses and agencies. Fast, SEO-ready sites built directly by a senior web developer in Cincinnati.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };

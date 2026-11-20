@@ -9,21 +9,21 @@ import FaqSection from "@/components/FaqSection";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
-  title: "About Black Lab Dev | Senior Web Developer in Cincinnati, OH",
+  title: "About | Senior Web Developer in Cincinnati",
   description:
-    "Michael Beasley is a Cincinnati-based senior web developer and founder of Black Lab Development. 15+ years building scalable, revenue-focused platforms for B2B and industrial companies.",
+    "Michael Beasley is a senior web developer in Cincinnati and founder of Black Lab Development, with 15+ years building fast, revenue-focused websites.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About Black Lab Dev | Senior Web Developer in Cincinnati, OH",
+    title: "About | Senior Web Developer in Cincinnati | Black Lab Dev",
     description:
-      "Michael Beasley is a Cincinnati-based senior web developer and founder of Black Lab Development. 15+ years building scalable, revenue-focused platforms for B2B and industrial companies.",
+      "Michael Beasley is a senior web developer in Cincinnati and founder of Black Lab Development, with 15+ years building fast, revenue-focused websites.",
     url: "/about",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "About Black Lab Dev | Senior Web Developer in Cincinnati, OH",
+    title: "About | Senior Web Developer in Cincinnati | Black Lab Dev",
     description:
-      "Michael Beasley is a Cincinnati-based senior web developer and founder of Black Lab Development.",
+      "Michael Beasley is a senior web developer in Cincinnati and founder of Black Lab Development, with 15+ years building fast, revenue-focused websites.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
@@ -172,8 +172,8 @@ export default function AboutPage() {
       {/* ================= HERO ================= */}
       <PageHero
         label="About"
-        title="The Engineer Behind the Work"
-        titleHighlight="Behind the Work"
+        title="About Michael Beasley, the Engineer Behind the Work"
+        titleHighlight="the Engineer Behind the Work"
         description="I'm Michael Beasley — a senior web developer based in Cincinnati, Ohio with 15+ years of experience building scalable B2B and industrial platforms. No middlemen, no markup — just the engineer who owns the outcome."
         backgroundImage="/images/about-hero-bg.jpg"
         badges={["Senior-led", "Direct access", "Full ownership"]}

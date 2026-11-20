@@ -7,21 +7,21 @@ import FaqSection from "@/components/FaqSection";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const metadata: Metadata = {
-  title: "Cincinnati Web Developer | Small Business Websites",
+  title: "Cincinnati Web Developer & Web Design",
   description:
-    "Cincinnati-based web developer specializing in small business websites. Michael Beasley — 15+ years building revenue-focused platforms for Ohio and Tri-State companies.",
+    "Cincinnati web developer for small businesses. Michael Beasley builds fast, custom, SEO-ready websites for companies across Cincinnati and the Tri-State.",
   alternates: { canonical: "/cincinnati-web-developer" },
   openGraph: {
-    title: "Cincinnati Web Developer | Small Business Websites",
+    title: "Cincinnati Web Developer & Web Design | Black Lab Dev",
     description:
-      "Cincinnati-based web developer specializing in small business websites. Michael Beasley — 15+ years building revenue-focused platforms for Ohio and Tri-State companies.",
+      "Cincinnati web developer for small businesses. Michael Beasley builds fast, custom, SEO-ready websites for companies across Cincinnati and the Tri-State.",
     url: "/cincinnati-web-developer",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Cincinnati Web Developer | Small Business Websites",
+    title: "Cincinnati Web Developer & Web Design | Black Lab Dev",
     description:
-      "Cincinnati-based web developer specializing in small business websites — 15+ years building revenue-focused platforms.",
+      "Cincinnati web developer for small businesses. Michael Beasley builds fast, custom, SEO-ready websites for companies across Cincinnati and the Tri-State.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };

@@ -9,19 +9,19 @@ import FaqSection from "@/components/FaqSection";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Custom Shopify Development | Themes, Apps & Storefront Builds",
+  title: "Custom Shopify Development",
   description:
     "Custom Shopify development — Liquid themes, Online Store 2.0 sections, custom apps, integrations, and headless storefronts built for speed and conversion.",
   alternates: { canonical: "/shopify-development" },
   openGraph: {
-    title: "Custom Shopify Development | Themes, Apps & Storefront Builds | Black Lab Dev",
+    title: "Custom Shopify Development | Black Lab Dev",
     description:
       "Custom Shopify development — Liquid themes, Online Store 2.0 sections, custom apps, integrations, and headless storefronts built for speed and conversion.",
     url: "/shopify-development",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Custom Shopify Development | Themes, Apps & Storefront Builds | Black Lab Dev",
+    title: "Custom Shopify Development | Black Lab Dev",
     description:
       "Custom Shopify development — Liquid themes, custom apps, integrations, and headless storefronts built for speed and conversion.",
     images: [DEFAULT_OG_IMAGE.url],
@@ -205,8 +205,8 @@ export default function ShopifyDevelopmentPage() {
       <JsonLd data={[serviceSchema, faqSchema]} />
       <PageHero
         label="Shopify Development"
-        title="Your Storefront, Not an App Junk Drawer."
-        titleHighlight="Not an App Junk Drawer."
+        title="Custom Shopify Development Without the App Bloat"
+        titleHighlight="Without the App Bloat"
         description="Most Shopify stores are slow from a bloated theme wrapped in a dozen apps — not Shopify's fault. I build custom in Liquid: clean code, resilient integrations, zero app sprawl."
         backgroundImage="/images/shopify-hero-bg.jpg"
         badges={["Custom Liquid themes", "App & integration engineering", "Core Web Vitals on Shopify"]}

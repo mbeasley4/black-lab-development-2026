@@ -224,18 +224,19 @@ const HomepageHeroClient = () => {
                 className="inline-flex items-center gap-2 mb-5 rounded-full border border-neutral-800 bg-white/[0.04] px-4 py-1.5 text-[11px] md:text-xs tracking-[0.2em] uppercase text-neutral-300 font-semibold"
               >
                 <span className="inline-flex h-2 w-2 rounded-full bg-neutral-400" />
-                Taking new clients &amp; partners
+                Skip the middlemen<span className="hidden sm:inline"> · Work directly with the developer</span>
               </motion.span>
 
-              <h1 className="text-5xl md:text-7xl lg:text-6xl xl:text-[4.25rem] font-bold leading-[1.02] tracking-tight mb-6 text-white">
+              <h1 className="text-[2.15rem] sm:text-5xl md:text-6xl lg:text-[3.4rem] xl:text-[3.75rem] font-bold leading-[1.04] tracking-tight mb-6 text-white">
                 <span className="block overflow-hidden pb-1">
                   <motion.span className="block" variants={maskLine(0.12)}>
-                    Skip the Middlemen.
+                    Custom Web Design
                   </motion.span>
                 </span>
                 <span className="block overflow-hidden pb-2">
                   <motion.span className="block text-neutral-400" variants={maskLine(0.26)}>
-                    Keep the Results.
+                    for Small Businesses<br />
+                    &amp; Agencies.
                   </motion.span>
                 </span>
               </h1>
@@ -278,7 +279,7 @@ const HomepageHeroClient = () => {
             </div>
 
             {/* Right: animated launch-report visual */}
-            <motion.div variants={panelVariants} className="px-6 sm:px-10 lg:px-0">
+            <motion.div variants={panelVariants} className="hidden md:block px-6 sm:px-10 lg:px-0">
               <HeroVisual />
             </motion.div>
           </div>

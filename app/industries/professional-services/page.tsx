@@ -9,19 +9,19 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "B2B & Professional Services Web Design",
+  title: "B2B & Professional Services Website Design",
   description:
     "Web development for consultancies, financial firms, and service businesses — high-trust sites built for complex sales cycles and pipeline-driven growth.",
   alternates: { canonical: "/industries/professional-services" },
   openGraph: {
-    title: "B2B & Professional Services Web Design",
+    title: "B2B & Professional Services Website Design | Black Lab Dev",
     description:
       "Web development for consultancies, financial firms, and service businesses — high-trust sites built for complex sales cycles and pipeline-driven growth.",
     url: "/industries/professional-services",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "B2B & Professional Services Web Design",
+    title: "B2B & Professional Services Website Design | Black Lab Dev",
     description:
       "Web development for consultancies, financial firms, and service businesses — high-trust sites built for complex sales cycles and pipeline-driven growth.",
     images: [DEFAULT_OG_IMAGE.url],
@@ -155,8 +155,8 @@ export default function ProfessionalServicesIndustryPage() {
 
       <PageHero
         label="B2B & Professional Services"
-        title="Websites Built to Support Complex Sales Cycles"
-        titleHighlight="Complex Sales Cycles"
+        title="B2B Website Design for Complex Sales Cycles"
+        titleHighlight="for Complex Sales Cycles"
         description="B2B buyers don't convert on first visit. They evaluate, compare, and bring in stakeholders before a decision is made. Your website needs to build trust at each stage — not just look professional."
         backgroundImage="/images/industries-professional-services-hero-bg.jpg"
         badges={["Multi-stakeholder trust", "Pipeline generation", "CRM integration"]}

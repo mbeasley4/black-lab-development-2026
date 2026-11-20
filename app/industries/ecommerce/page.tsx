@@ -9,19 +9,19 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Ecommerce & DTC Web Development",
+  title: "Ecommerce Website Development",
   description:
     "Ecommerce and DTC web development — fast storefronts, Shopify and WooCommerce builds, and conversion optimization that closes more sales and increases AOV.",
   alternates: { canonical: "/industries/ecommerce" },
   openGraph: {
-    title: "Ecommerce & DTC Web Development",
+    title: "Ecommerce Website Development | Black Lab Dev",
     description:
       "Ecommerce and DTC web development — fast storefronts, Shopify and WooCommerce builds, and conversion optimization that closes more sales and increases AOV.",
     url: "/industries/ecommerce",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Ecommerce & DTC Web Development",
+    title: "Ecommerce Website Development | Black Lab Dev",
     description:
       "Ecommerce and DTC web development — fast storefronts, Shopify and WooCommerce builds, and conversion optimization that closes more sales and increases AOV.",
     images: [DEFAULT_OG_IMAGE.url],
@@ -159,8 +159,8 @@ export default function EcommerceIndustryPage() {
 
       <PageHero
         label="Ecommerce & DTC"
-        title="A Slow Storefront Costs You Real Revenue"
-        titleHighlight="Real Revenue"
+        title="Ecommerce Website Development for Faster, Higher-Converting Stores"
+        titleHighlight="for Faster, Higher-Converting Stores"
         description="A slow ecommerce page doesn't just frustrate visitors — it costs you sales in real time. Performance, conversion architecture, and checkout flow are revenue levers, not technical footnotes."
         backgroundImage="/images/industries-ecommerce-hero-bg.jpg"
         badges={["Shopify & WooCommerce", "AOV optimization", "Core Web Vitals"]}

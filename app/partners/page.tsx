@@ -10,21 +10,21 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "White-Label Web Development & SEO for Agencies | Black Lab Dev",
+  title: "White-Label Web Development for Agencies",
   description:
-    "White-label web development and technical SEO fulfillment for marketing agencies and strategy firms. Senior engineering under your brand — NDA-friendly, no client poaching.",
+    "White-label web development and technical SEO for agencies. Senior engineering delivered under your brand — NDA-friendly, no client poaching.",
   alternates: { canonical: "/partners" },
   openGraph: {
-    title: "White-Label Web Development & SEO for Agencies | Black Lab Dev",
+    title: "White-Label Web Development for Agencies | Black Lab Dev",
     description:
-      "White-label web development and technical SEO fulfillment for marketing agencies and strategy firms. Senior engineering under your brand — NDA-friendly, no client poaching.",
+      "White-label web development and technical SEO for agencies. Senior engineering delivered under your brand — NDA-friendly, no client poaching.",
     url: "/partners",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "White-Label Web Development & SEO for Agencies | Black Lab Dev",
+    title: "White-Label Web Development for Agencies | Black Lab Dev",
     description:
-      "White-label web development and technical SEO fulfillment for agencies and strategy firms — senior engineering delivered under your brand.",
+      "White-label web development and technical SEO for agencies. Senior engineering delivered under your brand — NDA-friendly, no client poaching.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
@@ -237,8 +237,8 @@ export default function PartnersPage() {
       <main className="w-full bg-black text-white">
       <PageHero
         label="Agency & Partner Services"
-        title="I Build It. You Brand It."
-        titleHighlight="You Brand It."
+        title="White-Label Web Development for Agencies. I Build It. You Brand It."
+        titleHighlight="I Build It. You Brand It."
         description="Senior engineering for agencies and strategy firms that don't want another full-time dev hire. No subcontractor pool, no offshore relay — you brief me, I build it, you ship it."
         backgroundImage="/images/partners-hero-bg.jpg"
         badges={["White-label delivery", "NDA-friendly", "Direct to a senior engineer"]}

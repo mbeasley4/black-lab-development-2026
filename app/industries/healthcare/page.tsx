@@ -9,21 +9,21 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Healthcare Web Design & Development",
+  title: "Healthcare & Medical Website Design",
   description:
-    "Accessible, compliant websites for clinics, medical practices, and health device companies — built for patient acquisition, online bookings, and local visibility.",
+    "Healthcare website design for clinics and medical practices: accessible, fast sites built for online booking, patient acquisition and local SEO.",
   alternates: { canonical: "/industries/healthcare" },
   openGraph: {
-    title: "Healthcare Web Design & Development",
+    title: "Healthcare & Medical Website Design | Black Lab Dev",
     description:
-      "Accessible, compliant websites for clinics, medical practices, and health device companies — built for patient acquisition, online bookings, and local visibility.",
+      "Healthcare website design for clinics and medical practices: accessible, fast sites built for online booking, patient acquisition and local SEO.",
     url: "/industries/healthcare",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Healthcare Web Design & Development",
+    title: "Healthcare & Medical Website Design | Black Lab Dev",
     description:
-      "Accessible, compliant websites for clinics, medical practices, and health device companies — built for patient acquisition, online bookings, and local visibility.",
+      "Healthcare website design for clinics and medical practices: accessible, fast sites built for online booking, patient acquisition and local SEO.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
@@ -155,8 +155,8 @@ export default function HealthcareIndustryPage() {
 
       <PageHero
         label="Healthcare & Life Sciences"
-        title="Turn Search Traffic Into Booked Appointments"
-        titleHighlight="Booked Appointments"
+        title="Healthcare Website Design That Turns Searches Into Appointments"
+        titleHighlight="That Turns Searches Into Appointments"
         description="Healthcare searches happen on phones, in moments of need. Your website needs to be fast, accessible, and remove every obstacle between a patient finding you and scheduling a visit."
         backgroundImage="/images/industries-healthcare-hero-bg.jpg"
         badges={["Patient acquisition", "WCAG 2.1 AA accessibility", "Local SEO"]}

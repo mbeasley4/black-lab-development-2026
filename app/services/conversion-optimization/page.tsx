@@ -10,19 +10,19 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Website Conversion Optimization | More Leads, Better Results",
+  title: "Website Conversion Rate Optimization",
   description:
     "Fix what's stopping your website from converting. Better structure, clearer messaging, and smarter CTAs — measured before and after with real data.",
   alternates: { canonical: "/services/conversion-optimization" },
   openGraph: {
-    title: "Website Conversion Optimization | More Leads, Better Results",
+    title: "Website Conversion Rate Optimization | Black Lab Dev",
     description:
       "Fix what's stopping your website from converting. Better structure, clearer messaging, and smarter CTAs — measured before and after with real data.",
     url: "/services/conversion-optimization",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Website Conversion Optimization | More Leads, Better Results",
+    title: "Website Conversion Rate Optimization | Black Lab Dev",
     description:
       "Fix what's stopping your website from converting — measured before and after with real data.",
     images: [DEFAULT_OG_IMAGE.url],
@@ -207,8 +207,8 @@ export default function ConversionOptimizationPage() {
       <main className="w-full bg-black text-white">
       <PageHero
         label="B2B Website Conversion Optimization"
-        title="More Traffic Won&apos;t Fix a Broken Website"
-        titleHighlight="Broken Website"
+        title="Website Conversion Optimization That Turns Visitors Into Leads"
+        titleHighlight="That Turns Visitors Into Leads"
         description="I find the exact reasons your B2B website isn't turning visitors into qualified leads, then fix them systematically — with data, not guesswork."
         backgroundImage="/images/services-conversion-optimization-hero-bg.jpg"
         badges={["Audit-first approach", "Measured before & after", "No vanity metrics"]}

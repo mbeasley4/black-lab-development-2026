@@ -10,21 +10,21 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Website Performance Optimization & Core Web Vitals",
+  title: "Website Speed & Core Web Vitals Optimization",
   description:
-    "Fix slow load times, failing Core Web Vitals, and technical SEO issues that cost you rankings and revenue. Measurable speed improvements — not Lighthouse theater.",
+    "Website speed optimization that fixes slow pages, failing Core Web Vitals and technical SEO issues — with measured before-and-after results.",
   alternates: { canonical: "/services/website-performance-optimization" },
   openGraph: {
-    title: "Website Performance Optimization & Core Web Vitals",
+    title: "Website Speed & Core Web Vitals Optimization | Black Lab Dev",
     description:
-      "Fix slow load times, failing Core Web Vitals, and technical SEO issues that cost you rankings and revenue. Measurable speed improvements — not Lighthouse theater.",
+      "Website speed optimization that fixes slow pages, failing Core Web Vitals and technical SEO issues — with measured before-and-after results.",
     url: "/services/website-performance-optimization",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Website Performance Optimization & Core Web Vitals",
+    title: "Website Speed & Core Web Vitals Optimization | Black Lab Dev",
     description:
-      "Fix slow load times, failing Core Web Vitals, and technical SEO issues — measurable improvements, not Lighthouse theater.",
+      "Website speed optimization that fixes slow pages, failing Core Web Vitals and technical SEO issues — with measured before-and-after results.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
@@ -174,8 +174,8 @@ export default function WebsitePerformanceOptimizationPage() {
       <main className="w-full bg-black text-white">
         <PageHero
           label="Website Performance Optimization"
-          title="Every Extra Second Is Costing You Customers"
-          titleHighlight="Costing You Customers"
+          title="Website Performance Optimization for Faster Pages and Better Rankings"
+          titleHighlight="for Faster Pages and Better Rankings"
           description="I fix the root causes of slow load times, failing Core Web Vitals, and technical SEO issues that cost you rankings and revenue — measured before and after, not guessed at."
           backgroundImage="/images/services-website-performance-optimization-hero-bg.jpg"
           badges={["Core Web Vitals", "Real-user performance", "Not Lighthouse theater"]}

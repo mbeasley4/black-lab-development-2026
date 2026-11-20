@@ -9,21 +9,21 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Education & EdTech Web Development",
+  title: "Education & EdTech Website Design",
   description:
-    "Web development for schools, training platforms, and EdTech companies — enrollment-driven design, LMS integrations, and content-rich platforms built for learning at scale.",
+    "Education website design for schools, training providers and EdTech companies: enrollment-focused pages, LMS integrations and accessible design.",
   alternates: { canonical: "/industries/education" },
   openGraph: {
-    title: "Education & EdTech Web Development",
+    title: "Education & EdTech Website Design | Black Lab Dev",
     description:
-      "Web development for schools, training platforms, and EdTech companies — enrollment-driven design, LMS integrations, and content-rich platforms built for learning at scale.",
+      "Education website design for schools, training providers and EdTech companies: enrollment-focused pages, LMS integrations and accessible design.",
     url: "/industries/education",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Education & EdTech Web Development",
+    title: "Education & EdTech Website Design | Black Lab Dev",
     description:
-      "Web development for schools, training platforms, and EdTech companies — enrollment-driven design, LMS integrations, and content-rich platforms built for learning at scale.",
+      "Education website design for schools, training providers and EdTech companies: enrollment-focused pages, LMS integrations and accessible design.",
     images: [DEFAULT_OG_IMAGE.url],
   },
 };
@@ -144,8 +144,8 @@ export default function EducationIndustryPage() {
 
       <PageHero
         label="Education & Training"
-        title="Websites Where Enrollment and Learning Both Win"
-        titleHighlight="Learning Both Win"
+        title="Education Website Design for Enrollment and Learning"
+        titleHighlight="for Enrollment and Learning"
         description="Education websites serve two masters: the marketing goal of enrollment conversion and the product goal of learning outcomes. Getting both right requires different thinking than a standard web project."
         backgroundImage="/images/industries-education-hero-bg.jpg"
         badges={["Enrollment optimization", "LMS integration", "WCAG 2.1 AA"]}

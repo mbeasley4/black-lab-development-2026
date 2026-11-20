@@ -9,19 +9,19 @@ import FaqSection from "@/components/FaqSection";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Custom Laravel Development | APIs, Integrations & Web Apps",
+  title: "Custom Laravel Development",
   description:
     "Custom Laravel development for APIs, platform integrations, and internal tools — clean architecture, no framework bloat, built to run in production.",
   alternates: { canonical: "/laravel-development" },
   openGraph: {
-    title: "Custom Laravel Development | APIs, Integrations & Web Apps | Black Lab Dev",
+    title: "Custom Laravel Development | Black Lab Dev",
     description:
       "Custom Laravel development for APIs, platform integrations, and internal tools — clean architecture, no framework bloat, built to run in production.",
     url: "/laravel-development",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Custom Laravel Development | APIs, Integrations & Web Apps | Black Lab Dev",
+    title: "Custom Laravel Development | Black Lab Dev",
     description:
       "Custom Laravel development for APIs, platform integrations, and internal tools — clean architecture, built to run in production.",
     images: [DEFAULT_OG_IMAGE.url],
@@ -197,8 +197,8 @@ export default function LaravelDevelopmentPage() {
       <JsonLd data={[serviceSchema, faqSchema]} />
       <PageHero
         label="Laravel Development"
-        title="Laravel, Minus the Spaghetti Code."
-        titleHighlight="Minus the Spaghetti Code."
+        title="Custom Laravel Development for APIs and Web Apps"
+        titleHighlight="for APIs and Web Apps"
         description="Most Laravel apps rot into fat controllers and silent queue failures nobody monitors. I build custom — service architecture, integration resilience, zero spaghetti code."
         backgroundImage="/images/laravel-hero-bg.jpg"
         badges={["Clean architecture", "Production-grade integrations", "Full-stack Laravel"]}

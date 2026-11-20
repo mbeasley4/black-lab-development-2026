@@ -9,19 +9,19 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 
 export const metadata: Metadata = {
-  title: "Web Development & Conversion Optimization Services",
+  title: "Web Design & Development Services",
   description:
     "Professional website design, development, and optimization — for small businesses directly, and as a white-label partner for agencies and strategy firms.",
   alternates: { canonical: "/services" },
   openGraph: {
-    title: "Web Development & Conversion Optimization Services",
+    title: "Web Design & Development Services | Black Lab Dev",
     description:
       "Professional website design, development, and optimization — for small businesses directly, and as a white-label partner for agencies and strategy firms.",
     url: "/services",
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
-    title: "Web Development & Conversion Optimization Services",
+    title: "Web Design & Development Services | Black Lab Dev",
     description:
       "Website design, development, conversion optimization, and technical SEO — for small businesses and agency partners.",
     images: [DEFAULT_OG_IMAGE.url],
@@ -204,8 +204,8 @@ export default function ServicesPage() {
       {/* ================= HERO ================= */}
       <PageHero
         label="Services"
-        title="Software Built to Outlast the Demo"
-        titleHighlight="Outlast the Demo"
+        title="Web Design & Development Services That Hold Up"
+        titleHighlight="That Hold Up"
         description="I build things that hold up in production, under real traffic, with real users — not just in a polished walkthrough. Senior-led, hands-on, and allergic to solutions that look great until they don't."
         backgroundImage="/images/services-hero-bg.jpg"
         badges={["No templates", "No offshore handoffs", "No 40-slide decks"]}
