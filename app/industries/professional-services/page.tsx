@@ -7,6 +7,7 @@ import FaqSection from "@/components/FaqSection";
 import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
+import SelectedWork from "@/components/SelectedWork";
 
 export const metadata: Metadata = {
   title: "B2B & Professional Services Website Design",
@@ -225,6 +226,8 @@ export default function ProfessionalServicesIndustryPage() {
           </div>
         </div>
       </section>
+
+      <SelectedWork slugs={["legacy-financial-wordpress-block-theme", "bridge-partners-wordpress-block-theme", "national-management-association-wordpress-platform"]} />
 
       <FaqSection faqs={faqs} headingId="professional-services-faq" />
 

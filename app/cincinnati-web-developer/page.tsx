@@ -5,6 +5,7 @@ import PageClose from "@/components/PageClose";
 import JsonLd from "@/components/JsonLd";
 import FaqSection from "@/components/FaqSection";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
+import SelectedWork from "@/components/SelectedWork";
 
 export const metadata: Metadata = {
   title: "Cincinnati Web Developer & Web Design",
@@ -358,6 +359,8 @@ export default function CincinnatiWebDeveloperPage() {
             </div>
           </div>
         </section>
+
+        <SelectedWork />
 
         <FaqSection
          

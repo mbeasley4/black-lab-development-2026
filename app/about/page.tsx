@@ -7,6 +7,7 @@ import LabFramework from "@/components/LabFramework"
 import JsonLd from "@/components/JsonLd";
 import FaqSection from "@/components/FaqSection";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
+import SelectedWork from "@/components/SelectedWork";
 
 export const metadata: Metadata = {
   title: "About | Senior Web Developer in Cincinnati",
@@ -429,6 +430,8 @@ export default function AboutPage() {
       <LabFramework />
 
       {/* ================= FAQ ================= */}
+      <SelectedWork />
+
       <FaqSection
         headingId="about-faq-heading"
        

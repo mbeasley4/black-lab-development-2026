@@ -3,10 +3,10 @@ import Image from "next/image"
 import Link from "next/link"
 import PageHero from "@/components/PageHero"
 import PageClose from "@/components/PageClose"
-import CaseStudies from "@/components/CaseStudies";
 import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
+import SelectedWork from "@/components/SelectedWork";
 
 export const metadata: Metadata = {
   title: "Web Design & Development Services",
@@ -449,7 +449,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <CaseStudies />
+      <SelectedWork />
 
       <FounderByline />
 

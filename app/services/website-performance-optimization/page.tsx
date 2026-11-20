@@ -8,6 +8,7 @@ import JsonLd from "@/components/JsonLd";
 import FaqSection from "@/components/FaqSection";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
+import SelectedWork from "@/components/SelectedWork";
 
 export const metadata: Metadata = {
   title: "Website Speed & Core Web Vitals Optimization",
@@ -339,6 +340,8 @@ export default function WebsitePerformanceOptimizationPage() {
             </p>
           </div>
         </section>
+
+        <SelectedWork slugs={["zero-gravity-performance-rebuild", "dexafit-cincinnati-squarespace-seo", "global-environmental-products-wordpress-rebuild"]} />
 
         <FaqSection
           faqs={faqSchema.mainEntity.map((faq) => ({ question: faq.name, answer: faq.acceptedAnswer.text }))}

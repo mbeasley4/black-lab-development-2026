@@ -7,6 +7,7 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import JsonLd from "@/components/JsonLd";
 import FaqSection from "@/components/FaqSection";
 import FounderByline from "@/components/FounderByline";
+import SelectedWork from "@/components/SelectedWork";
 
 export const metadata: Metadata = {
   title: "Custom Shopify Development",
@@ -516,6 +517,8 @@ export default function ShopifyDevelopmentPage() {
           </div>
         </div>
       </section>
+
+      <SelectedWork slugs={["ecommerce-website-redesign-increase-aov", "whole30-laravel-shopify-slicktext-sms", "dexafit-cincinnati-squarespace-seo"]} />
 
       <FaqSection
         faqs={faqs.map((faq) => ({ question: faq.q, answer: faq.a }))}

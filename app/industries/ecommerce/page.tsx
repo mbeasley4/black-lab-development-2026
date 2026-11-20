@@ -7,6 +7,7 @@ import FaqSection from "@/components/FaqSection";
 import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
+import SelectedWork from "@/components/SelectedWork";
 
 export const metadata: Metadata = {
   title: "Ecommerce Website Development",
@@ -247,6 +248,8 @@ export default function EcommerceIndustryPage() {
           </div>
         </div>
       </section>
+
+      <SelectedWork slugs={["ecommerce-website-redesign-increase-aov", "mona-dermatology-wordpress-woocommerce", "whole30-laravel-shopify-slicktext-sms"]} />
 
       <FaqSection faqs={faqs} headingId="ecommerce-faq" />
 

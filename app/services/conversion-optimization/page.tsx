@@ -8,6 +8,7 @@ import JsonLd from "@/components/JsonLd";
 import FaqSection from "@/components/FaqSection";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
+import SelectedWork from "@/components/SelectedWork";
 
 export const metadata: Metadata = {
   title: "Website Conversion Rate Optimization",
@@ -364,6 +365,8 @@ export default function ConversionOptimizationPage() {
       </section>
 
       <LabFramework />
+
+      <SelectedWork slugs={["ecommerce-website-redesign-increase-aov", "dexafit-cincinnati-squarespace-seo", "city-view-tavern-wordpress-block-theme"]} />
 
       <FaqSection
         headingId="cro-faq-heading"

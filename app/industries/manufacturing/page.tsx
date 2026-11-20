@@ -7,6 +7,7 @@ import FaqSection from "@/components/FaqSection";
 import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
+import SelectedWork from "@/components/SelectedWork";
 
 export const metadata: Metadata = {
   title: "Manufacturing Website Design",
@@ -220,6 +221,8 @@ export default function ManufacturingIndustryPage() {
           </div>
         </div>
       </section>
+
+      <SelectedWork slugs={["global-environmental-products-wordpress-rebuild", "globe-iron-roofing-wordpress-theme", "bishopric-industries-shop-floor-kiosk"]} />
 
       <FaqSection faqs={faqs} headingId="manufacturing-faq" />
 

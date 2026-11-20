@@ -7,6 +7,7 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import JsonLd from "@/components/JsonLd";
 import FaqSection from "@/components/FaqSection";
 import FounderByline from "@/components/FounderByline";
+import SelectedWork from "@/components/SelectedWork";
 
 export const metadata: Metadata = {
   title: "Custom Laravel Development",
@@ -508,6 +509,8 @@ export default function LaravelDevelopmentPage() {
           </div>
         </div>
       </section>
+
+      <SelectedWork slugs={["whole30-laravel-shopify-slicktext-sms", "bishopric-industries-shop-floor-kiosk", "zoo-printables-ai-seo-aeo-geo"]} />
 
       <FaqSection
         faqs={faqs.map((faq) => ({ question: faq.q, answer: faq.a }))}

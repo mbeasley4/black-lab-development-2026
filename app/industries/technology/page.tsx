@@ -7,6 +7,7 @@ import FaqSection from "@/components/FaqSection";
 import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
+import SelectedWork from "@/components/SelectedWork";
 
 export const metadata: Metadata = {
   title: "SaaS & Tech Website Development",
@@ -247,6 +248,8 @@ export default function TechnologyIndustryPage() {
           </div>
         </div>
       </section>
+
+      <SelectedWork slugs={["zoo-printables-ai-seo-aeo-geo", "blum-media-group-nextjs-website", "enduir-cybersecurity-engineering"]} />
 
       <FaqSection faqs={faqs} headingId="technology-faq" />
 
