@@ -6,6 +6,7 @@ import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 export default function ContactForm() {
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState<boolean | null>(null);
+    const [errorMessage, setErrorMessage] = useState<string | null>(null);
     const [token, setToken] = useState<string | null>(null);
     const turnstileRef = useRef<TurnstileInstance>(null);
 
@@ -14,30 +15,47 @@ export default function ContactForm() {
 
         if (!token) return;
 
+        // Capture the form now — React nulls e.currentTarget once the
+        // handler yields at the first await.
+        const form = e.currentTarget;
+        const formData = new FormData(form);
+
         setLoading(true);
         setSuccess(null);
+        setErrorMessage(null);
 
-        const formData = new FormData(e.currentTarget);
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: formData.get("name"),
+                    email: formData.get("email"),
+                    message: formData.get("message"),
+                    turnstileToken: token,
+                }),
+            });
 
-        const res = await fetch("/api/contact", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                name: formData.get("name"),
-                email: formData.get("email"),
-                message: formData.get("message"),
-                turnstileToken: token,
-            }),
-        });
-
-        setLoading(false);
-        setSuccess(res.ok);
-
-        turnstileRef.current?.reset();
-        setToken(null);
-
-        if (res.ok) {
-            e.currentTarget.reset();
+            if (res.ok) {
+                setSuccess(true);
+                form.reset();
+            } else {
+                const data = await res.json().catch(() => null);
+                setSuccess(false);
+                setErrorMessage(
+                    data?.error === "Bot check failed"
+                        ? "The verification check failed or expired. Please complete it again and resubmit."
+                        : data?.error === "Invalid fields"
+                          ? "Please check that your email address is valid and try again."
+                          : null
+                );
+            }
+        } catch {
+            setSuccess(false);
+        } finally {
+            setLoading(false);
+            turnstileRef.current?.reset();
+            setToken(null);
         }
     }
 
@@ -97,8 +115,16 @@ export default function ContactForm() {
                 </p>
             )}
             {success === false && (
-                <p className="text-red-400 text-sm">
-                    Submission failed. Please try again.
+                <p className="text-red-400 text-sm" role="alert">
+                    {errorMessage ?? (
+                        <>
+                            Your message couldn&apos;t be sent. Please try again, or call{" "}
+                            <a href="tel:+15135204362" className="underline">
+                                (513) 520-4362
+                            </a>
+                            .
+                        </>
+                    )}
                 </p>
             )}
         </form>
