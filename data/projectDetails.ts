@@ -900,6 +900,232 @@ export const projectDetails: ProjectDetail[] = [
       },
     ],
   },
+  {
+    slug: "legacy-financial-wordpress-block-theme",
+    title: "A Custom Block Theme for a Wealth Management Firm",
+    industry: "Financial Services",
+    tagline:
+      "A wealth management firm needs a site that feels as considered as its advice. This one is built from custom blocks the team can arrange themselves.",
+    excerpt:
+      "A custom WordPress block theme for Legacy Financial Advisors in Covington, KY, built in the Gutenberg site editor with Tailwind CSS, 18 custom blocks, team profiles and an Insights hub.",
+    seoTitle: "Legacy Financial: Custom WordPress Theme",
+    metaDescription:
+      "How a custom WordPress block theme with 18 custom blocks, team profiles and an Insights hub was built for Legacy Financial Advisors in Covington, KY.",
+    main: {
+      src: "/images/work/projects/legacy-home.jpg",
+      alt: "Legacy Financial Advisors homepage: Your Treasure Is Where Your Heart Is",
+    },
+    gallery: [
+      {
+        src: "/images/work/projects/legacy-page1.jpg",
+        alt: "Legacy Financial client portals page",
+        caption:
+          "Client portals page linking clients to their planning and reporting platforms",
+      },
+      {
+        src: "/images/work/projects/legacy-page2.jpg",
+        alt: "Legacy Financial get in touch page",
+        caption: "Contact page built around scheduling a meeting with the team",
+      },
+    ],
+    details: [
+      "Custom Gutenberg block theme built with the site editor and Tailwind CSS",
+      "18 custom server-rendered blocks: homepage hero, stats, service pillars, quote carousel, contact scheduler and more",
+      "12 block patterns for composing new pages without a developer",
+      "Team custom post type with member profiles",
+      "Global settings and structured content managed through ACF",
+      "Insights articles with a dedicated hero and admin tools",
+      "FAQ accordions and category schema for search",
+      "Hand-written SCSS components compiled with Tailwind into one stylesheet",
+    ],
+    metrics: [
+      {
+        value: "18",
+        label: "Custom Blocks",
+        note: "Server-rendered",
+      },
+      {
+        value: "12",
+        label: "Block Patterns",
+        note: "Ready-made layouts",
+      },
+    ],
+    body: [
+      {
+        heading: "The Brief",
+        paragraphs: [
+          "Legacy Financial Advisors is a wealth management firm in Covington, Kentucky. Its site needed to feel warm and trustworthy, introduce the team, and make it easy for both prospects and existing clients to get where they're going.",
+        ],
+      },
+      {
+        heading: "What We Built",
+        paragraphs: [
+          "A custom WordPress block theme built in the Gutenberg site editor and styled with Tailwind CSS. Eighteen custom server-rendered blocks cover the homepage hero, stats, service pillars, a quote carousel, team profiles and a contact scheduler, and twelve block patterns let the team compose new pages from proven layouts.",
+          "Team members live in their own post type with profiles, and global details are managed through ACF, so updates happen in one place.",
+        ],
+      },
+      {
+        heading: "Built for Clients and Search",
+        level: 3,
+        paragraphs: [
+          "A client portals page sends existing clients straight to their financial planning and investment reporting platforms. An Insights section publishes articles with a dedicated hero, and FAQ accordions and category schema help the firm's expertise show up in search.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "bridge-partners-wordpress-block-theme",
+    title: "A Custom Gutenberg Theme for a Tax Strategy Firm",
+    industry: "Financial Services",
+    tagline:
+      "A firm that defends high-net-worth clients from tax inefficiency needs a site with the same precision. Every block in this one was built for its brand.",
+    excerpt:
+      "A custom full-site-editing WordPress theme for Bridge Partners, built from the brand guidelines with 16 native custom blocks, no plugin dependencies, and schema for search and AI answers.",
+    seoTitle: "Bridge Partners: Custom Gutenberg Theme",
+    metaDescription:
+      "How a custom full-site-editing WordPress theme with 16 native blocks and no plugin dependencies was built from Bridge Partners' brand guidelines.",
+    main: {
+      src: "/images/work/projects/bridge-home.jpg",
+      alt: "Bridge Partners homepage: You Earned It. We Help You Take It Further.",
+    },
+    gallery: [
+      {
+        src: "/images/work/projects/bridge-page1.jpg",
+        alt: "Bridge Partners about page",
+        caption:
+          "About page: the firm's positioning in its own editorial typography",
+      },
+      {
+        src: "/images/work/projects/bridge-page2.jpg",
+        alt: "Bridge Partners services page",
+        caption: "Services page built from the same native blocks",
+      },
+    ],
+    details: [
+      "Full-site-editing theme built from the brand guidelines and homepage design",
+      "16 native custom blocks: hero, pathways, feature grids, media splits, team members, testimonials and more",
+      "No plugin dependencies for blocks or layout",
+      "Built-in contact form block and advisor profiles",
+      "Organization, FAQPage and Person schema, plus an llms.txt for AI answer engines",
+      "SCSS and Tailwind build, minified, with cache-busted assets",
+      "Content seeding script to build pages and sample articles consistently",
+      "Insights article layout with author bylines and reading time, ready to launch",
+    ],
+    metrics: [
+      {
+        value: "16",
+        label: "Native Custom Blocks",
+        note: "Built for the brand",
+      },
+      {
+        value: "0",
+        label: "Plugin Dependencies",
+        note: "For blocks and layout",
+      },
+    ],
+    body: [
+      {
+        heading: "The Brief",
+        paragraphs: [
+          "Bridge Partners specializes in advanced tax mitigation and wealth strategies for high-net-worth clients. The site had to match a precise, editorial brand and stay fast and maintainable without a stack of plugins.",
+        ],
+      },
+      {
+        heading: "What We Built",
+        paragraphs: [
+          "A custom full-site-editing theme built directly from the Brand Guidelines and homepage design. Sixteen native custom blocks, including the hero, pathways, feature grids, media splits, team members, testimonials and a contact form, give the team a consistent set of on-brand building blocks.",
+          "There are no plugin dependencies for blocks or layout. Styles compile from SCSS through Tailwind into minified, cache-busted assets.",
+        ],
+      },
+      {
+        heading: "Built to Be Found",
+        level: 3,
+        paragraphs: [
+          "The theme outputs Organization, FAQPage and Person schema and generates an llms.txt for AI answer engines. An Insights article layout with author bylines and reading time is built and ready to switch on when the firm starts publishing.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "dexafit-cincinnati-squarespace-seo",
+    title: "An SEO Overhaul for a Physician-Led Testing Clinic",
+    industry: "Healthcare",
+    tagline:
+      "The clinic offered exactly what people search for (DEXA scans, VO2 max, metabolic testing), but the site wasn't saying it the way search engines read it.",
+    excerpt:
+      "An SEO overhaul of DexaFit Cincinnati's Squarespace site: rewritten titles, meta descriptions and alt text, per-page structured data, consistent technical updates and clearer booking CTAs.",
+    seoTitle: "DexaFit Cincinnati: Squarespace SEO Overhaul",
+    metaDescription:
+      "How DexaFit Cincinnati's Squarespace site got an SEO overhaul: rewritten titles, meta and alt text, structured data, technical updates and stronger CTAs.",
+    main: {
+      src: "/images/work/projects/dexafit-home.jpg",
+      alt: "DexaFit Cincinnati homepage: Optimize your health with physician-led testing",
+    },
+    gallery: [
+      {
+        src: "/images/work/projects/dexafit-dexa.jpg",
+        alt: "DexaFit Cincinnati DEXA scan page",
+        caption:
+          "Service pages lead with the search phrase: DEXA Scan in Cincinnati, OH",
+      },
+      {
+        src: "/images/work/projects/dexafit-doctor.jpg",
+        alt: "DexaFit Cincinnati physician page for Dr. David DeMarco, MD",
+        caption: "Physician page with clear booking calls to action",
+      },
+    ],
+    details: [
+      "Page titles rewritten around each service and Cincinnati, kept under 60 characters",
+      "Meta descriptions rewritten for every key page",
+      "Descriptive alt text added across the site's images",
+      "One keyword-led H1 per page",
+      "Per-page structured data: clinic, physician, services, offers, FAQs and breadcrumbs",
+      "Clearer booking CTAs across service and physician pages",
+      "Split heroes and campaign landing pages",
+      "Ongoing technical updates through custom CSS and code injection",
+    ],
+    metrics: [
+      {
+        value: "30+",
+        label: "Pages With Structured Data",
+        note: "Clinic, services, FAQs",
+      },
+      {
+        value: "1",
+        label: "Keyword-Led H1 per Page",
+        note: "Service + Cincinnati",
+      },
+    ],
+    body: [
+      {
+        heading: "The Brief",
+        paragraphs: [
+          "DexaFit Cincinnati offers physician-led DEXA scans, VO2 max and metabolic testing. The services matched exactly what people search for, but page titles, descriptions and headings weren't consistently saying it, and the paths to booking weren't as clear as they could be.",
+        ],
+      },
+      {
+        heading: "What We Did",
+        paragraphs: [
+          "A site-wide SEO overhaul on Squarespace. Every key page got a rewritten title built around its service and Cincinnati, kept short enough to display in full, plus a rewritten meta description. Images got descriptive alt text, and each page now has a single H1 that carries its main search phrase.",
+          "Structured data was added page by page, covering the clinic, the physician, each service and its offers, FAQs and breadcrumbs, so search engines understand what the clinic does and where.",
+        ],
+      },
+      {
+        heading: "Clearer Paths to Booking",
+        level: 3,
+        paragraphs: [
+          "Calls to action were tightened across service and physician pages so every page points somewhere specific, like booking a scan or a physician-guided test. Split heroes and campaign landing pages support promotions without changing the core site.",
+        ],
+      },
+      {
+        heading: "Consistent Technical Updates",
+        level: 3,
+        paragraphs: [
+          "Because Squarespace limits what can change in the template, ongoing improvements ship through a maintained custom stylesheet and code injection, versioned outside Squarespace so every change is repeatable.",
+        ],
+      },
+    ],
+  },
 ];
 
 export const getProjectDetail = (slug: string) =>

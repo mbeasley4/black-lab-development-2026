@@ -94,6 +94,42 @@ export const projects: Project[] = [
     updated: true,
   },
   {
+    name: "Legacy Financial Advisors",
+    slug: "legacy-financial-wordpress-block-theme",
+    url: "https://legacyfinancialadvisors.com/",
+    platform: "WordPress",
+    logo: "/images/work/legacy-logo.png",
+    screenshot: "/images/work/legacy-screenshot.jpg",
+    summary:
+      "A custom WordPress block theme for a Covington, KY wealth management firm — built in the Gutenberg site editor with Tailwind CSS, custom blocks, team profiles and an Insights hub.",
+    details: [
+      "Custom Gutenberg block theme built with the site editor and Tailwind CSS",
+      "18 custom blocks: heroes, stats, quote carousel, contact scheduler and more",
+      "12 block patterns for composing new pages",
+      "Team profiles and global settings managed through ACF",
+      "Insights articles, FAQ accordions and category schema",
+    ],
+    updated: true,
+  },
+  {
+    name: "Bridge Partners",
+    slug: "bridge-partners-wordpress-block-theme",
+    url: "https://bridgepartnersusa.com/",
+    platform: "WordPress",
+    logo: "/images/work/bridge-logo.png",
+    screenshot: "/images/work/bridge-screenshot.jpg",
+    summary:
+      "A custom Gutenberg block theme for an advanced tax mitigation and wealth strategy firm — built from the brand guidelines with 16 native blocks and no plugin dependencies.",
+    details: [
+      "Full-site-editing theme built from the brand guidelines and homepage design",
+      "16 native custom blocks with no plugin dependencies",
+      "SCSS and Tailwind build with cache-busted assets",
+      "Organization, FAQPage and Person schema plus an llms.txt",
+      "Built-in contact form and advisor profiles",
+    ],
+    updated: true,
+  },
+  {
     name: "Bishopric Industries Shop Floor Kiosk",
     slug: "bishopric-industries-shop-floor-kiosk",
     platform: "Custom Next.js",
@@ -113,7 +149,6 @@ export const projects: Project[] = [
   {
     name: "Whole30 SMS Platform",
     slug: "whole30-laravel-shopify-slicktext-sms",
-    url: "https://app.whole30.com/",
     platform: "Laravel",
     logo: "/images/work/projects/whole30-logo.png",
     screenshot: "/images/work/whole30-app-screenshot.jpg",
@@ -159,6 +194,24 @@ export const projects: Project[] = [
       "Page speed and Core Web Vitals optimization",
       "Fully responsive, editor-friendly block layouts",
     ],
+  },
+  {
+    name: "DexaFit Cincinnati",
+    slug: "dexafit-cincinnati-squarespace-seo",
+    url: "https://www.cincinnati.dexafit.com/",
+    platform: "Squarespace",
+    logo: "/images/work/dexafit-logo.png",
+    screenshot: "/images/work/dexafit-screenshot.jpg",
+    summary:
+      "An SEO overhaul for a physician-led DEXA, VO2 max and metabolic testing clinic — rewritten titles, meta descriptions and alt text, structured data, consistent technical updates and stronger booking CTAs.",
+    details: [
+      "Page titles and meta descriptions rewritten around each service and Cincinnati",
+      "Image alt text and one keyword-led H1 per page",
+      "Per-page structured data: clinic, physician, services, offers, FAQs and breadcrumbs",
+      "Clearer booking CTAs, split heroes and campaign landing pages",
+      "Ongoing technical updates through custom CSS and code injection",
+    ],
+    updated: true,
   },
   {
     name: "Rev & Rinse Auto Detailing",
