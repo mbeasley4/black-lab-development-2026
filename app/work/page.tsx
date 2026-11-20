@@ -37,7 +37,7 @@ const faqs = [
   {
     question: "What platforms does Black Lab Development build websites on?",
     answer:
-      "Mostly custom WordPress, plus custom Next.js, Shopify and Drupal. WordPress builds use custom block themes and native Gutenberg blocks, like the Global Environmental Products catalog and the National Management Association platform. Next.js builds are often paired with Sanity CMS, like Rev & Rinse and Zoo Printables AI. Shopify work uses custom Liquid themes, like The Shortening Shuttle storefront.",
+      "Mostly custom WordPress, plus custom Next.js, Laravel, Shopify and Drupal. WordPress builds use custom block themes and native Gutenberg blocks, like the Global Environmental Products catalog and the National Management Association platform. Next.js builds are often paired with Sanity CMS, like Rev & Rinse and Zoo Printables AI. Laravel powers custom applications like the Whole30 SMS platform, which connects Shopify orders to SlickText. Shopify work uses custom Liquid themes, like The Shortening Shuttle storefront.",
   },
   {
     question: "Do you use page builders like Elementor or Divi?",
@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "What industries have you built websites for?",
     answer:
-      "Manufacturing and industrial supply, healthcare and medical aesthetics, restaurants and hospitality, professional associations, construction and roofing, education, solar energy, marketing agencies, publishing, cybersecurity and ecommerce. Each project above is tagged by platform, and each detail page covers the industry-specific work involved.",
+      "Manufacturing and industrial supply, healthcare and medical aesthetics, restaurants and hospitality, professional associations, construction and roofing, education, health and wellness, marketing agencies, publishing, cybersecurity and ecommerce. Each project above is tagged by platform, and each detail page covers the industry-specific work involved.",
   },
   {
     question: "Are your websites built for AI search and answer engines?",

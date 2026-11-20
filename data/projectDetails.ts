@@ -641,57 +641,6 @@ export const projectDetails: ProjectDetail[] = [
     ],
   },
   {
-    slug: "melink-solar-calculator-plugin",
-    title:
-      "A Custom Solar Savings Calculator Plugin With NREL PVWatts Integration",
-    industry: "Energy",
-    tagline:
-      "A solar feasibility estimate used to start with a phone call. Now prospects run the numbers themselves, and every estimate lands in the sales team's dashboard.",
-    excerpt:
-      "A custom WordPress plugin that estimates a facility's solar production and savings through the NREL PVWatts API, with submission logging and admin reporting for the sales team.",
-    main: {
-      src: "/images/work/projects/melink-page1.jpg",
-      alt: "Melink Solar Energy Savings Calculator",
-    },
-    gallery: [],
-    details: [
-      "Custom WordPress plugin with a guided multi-step calculator",
-      "NREL PVWatts API integration for production and savings estimates",
-      "Automatic tilt assignment, tooltips and built-in validation",
-      "Every submission logged to a custom database table",
-      "Admin reporting: sortable entries, date filtering and CSV export",
-      "WPBakery element and shortcode so the calculator can be placed anywhere",
-    ],
-    metrics: [
-      {
-        value: "4",
-        label: "Step Guided Flow",
-        note: "Array → Site → Address → Results",
-      },
-      {
-        value: "CSV",
-        label: "Lead Export",
-        note: "Filtered by date",
-      },
-    ],
-    body: [
-      {
-        heading: "The Brief",
-        paragraphs: [
-          "Melink Solar designs and builds commercial and utility-grade solar systems. Prospects wanted a quick sense of what solar could produce for their facility before talking to sales, and sales wanted to know who was asking.",
-        ],
-      },
-      {
-        heading: "What We Built",
-        paragraphs: [
-          "A custom WordPress plugin that guides users through array type, site details and address, then calls NREL's PVWatts API to estimate DC system capacity, energy production and electricity savings. Tilt is assigned automatically for certain array types, every field has a tooltip, and inputs are validated before the request goes out. Results return over AJAX without a page reload.",
-          "Every submission is stored in a custom table. In the admin, the sales team gets a Solar Entries screen with sortable columns, date filtering, pagination, bulk delete and CSV export of the full or filtered dataset.",
-          "A WPBakery element and a shortcode let the marketing team place and relabel the calculator anywhere on the site without code.",
-        ],
-      },
-    ],
-  },
-  {
     slug: "buzzworthy-seven-hills-news-site",
     title: "Buzzworthy: A Standalone News Site for Seven Hills School",
     industry: "Education",
@@ -875,6 +824,78 @@ export const projectDetails: ProjectDetail[] = [
         paragraphs: [
           "Drawings open in an in-browser PDF viewer with pinch-to-zoom, drag-to-pan, page navigation and fullscreen. If Egnyte can't be reached or a request is rate-limited, the kiosk shows a clear message instead of an error page, and a stale link falls back gracefully.",
           "A separate admin dashboard lets the team switch on maintenance mode, clear caches, run an activity sweep on demand and review recent errors — without touching the kiosks themselves.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "whole30-laravel-shopify-slicktext-sms",
+    title: "A Laravel Admin Portal Connecting Shopify Orders to SlickText SMS",
+    industry: "Health & Wellness",
+    tagline:
+      "Every Whole30 SMS purchase on Shopify becomes a subscriber, a daily message sequence and a delivery record, without anyone copying data between systems.",
+    excerpt:
+      "A custom Laravel admin portal that turns Whole30's Shopify purchases into SlickText SMS subscriptions, with automated setup, daily message sequences, delivery tracking and opt-out handling.",
+    seoTitle: "Whole30 Laravel App: Shopify + SlickText SMS",
+    metaDescription:
+      "How a custom Laravel admin portal connects Whole30's Shopify orders to SlickText SMS: automatic setup, daily messages, delivery tracking and opt-outs.",
+    main: {
+      src: "/images/work/projects/whole30-app-login.jpg",
+      alt: "Whole30 Admin Portal sign-in screen",
+    },
+    gallery: [
+      {
+        src: "/images/work/projects/whole30-app-orders.jpg",
+        alt: "Whole30 Admin Portal active orders list with SMS status, customer details redacted",
+        caption:
+          "Active orders: every subscriber currently receiving daily messages, with their program day and status (customer details redacted)",
+      },
+      {
+        src: "/images/work/projects/whole30-app-order-detail.jpg",
+        alt: "Whole30 Admin Portal order detail with SlickText and Shopify connections and sent messages, identifiers redacted",
+        caption:
+          "Order detail: the SlickText and Shopify connections side by side, with every delivered message logged (identifiers redacted)",
+      },
+    ],
+    details: [
+      "Shopify order webhooks processed by Laravel in real time",
+      "Each buyer set up as a SlickText subscriber automatically",
+      "Daily SMS sequences tied to each subscriber's program start date",
+      "Program day recalculates automatically when a start date changes",
+      "Every delivered message logged and counted per subscriber",
+      "Order views for active, completed, refunded and opted-out subscribers",
+      "Opt-out handling kept in sync with SMS delivery",
+      "Email notifications with configuration and logs, plus admin users and job settings",
+    ],
+    metrics: [],
+    body: [
+      {
+        heading: "The Brief",
+        paragraphs: [
+          "Whole30 sells SMS programs through its Shopify store: buy the product, then get a daily text that guides you through the program. Connecting those two systems by hand doesn't scale. Every purchase needs a subscriber in SlickText, the right message sequence, a start date, and a way to see what was actually delivered.",
+          "The goal was one place where the operations team can see every SMS order and trust that setup, delivery and opt-outs happen on their own.",
+        ],
+      },
+      {
+        heading: "What We Built",
+        paragraphs: [
+          "A custom Laravel application, the Whole30 Admin Portal, that sits between Shopify and SlickText. When an order comes in, Shopify's webhook hits Laravel, which records the order, sets the buyer up as a SlickText subscriber, and starts their daily message sequence.",
+        ],
+      },
+      {
+        heading: "Setup and Notifications",
+        level: 3,
+        paragraphs: [
+          "Each order carries its SlickText connection and its Shopify connection (product, order number and order ID), so the team can trace any subscriber back to the purchase. Messages go out on a daily schedule keyed to the subscriber's start date, and if a start date changes, the program day recalculates automatically.",
+          "Email notifications run alongside SMS, with their own configuration screen and logs, so the team can confirm what went out by either channel.",
+        ],
+      },
+      {
+        heading: "Tracking and Opt-Outs",
+        level: 3,
+        paragraphs: [
+          "Every message delivered through SlickText is logged against its subscriber, with a running delivered count. Orders are organized into active, completed, refunded and opt-out views, so refunds and STOP replies are visible and handled rather than lost.",
+          "An admin area covers administrator accounts, product catalog settings and scheduled job settings, so day-to-day changes don't need a developer.",
         ],
       },
     ],

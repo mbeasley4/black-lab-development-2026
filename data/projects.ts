@@ -111,6 +111,24 @@ export const projects: Project[] = [
     updated: true,
   },
   {
+    name: "Whole30 SMS Platform",
+    slug: "whole30-laravel-shopify-slicktext-sms",
+    url: "https://app.whole30.com/",
+    platform: "Laravel",
+    logo: "/images/work/projects/whole30-logo.png",
+    screenshot: "/images/work/whole30-app-screenshot.jpg",
+    summary:
+      "A custom Laravel admin portal for Whole30 that turns Shopify purchases into SlickText SMS subscriptions — automated setup, daily message sequences, delivery tracking and opt-out handling.",
+    details: [
+      "Shopify order webhooks processed in Laravel in real time",
+      "Buyers enrolled in SlickText and started on a daily SMS sequence",
+      "Every delivered message tracked per subscriber",
+      "Order views for active, completed, refunded and opted-out subscribers",
+      "Email notifications with logs, plus admin and job settings",
+    ],
+    updated: true,
+  },
+  {
     name: "Millennosphere",
     slug: "millennosphere-wordpress-editorial-theme",
     url: "https://millennosphere.com/",
@@ -262,21 +280,6 @@ export const projects: Project[] = [
     details: [
       "Drupal 11 development",
       "Performance optimization",
-      "Technical leadership and execution",
-    ],
-  },
-  {
-    name: "Melink Solar",
-    slug: "melink-solar-calculator-plugin",
-    url: "https://www.melinksolar.com/solar-calculator/",
-    platform: "WordPress",
-    logo: "/images/work/melink-logo.png",
-    screenshot: "/images/work/melink-screenshot.jpg",
-    summary:
-      "Custom plugin and API integration work for a solar energy platform focused on reliability and technical precision.",
-    details: [
-      "Custom WordPress Plugin",
-      "API Integration",
       "Technical leadership and execution",
     ],
   },
