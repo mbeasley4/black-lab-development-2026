@@ -10,13 +10,10 @@ import JsonLd from "@/components/JsonLd";
 import { portableTextComponents } from "@/components/PortableTextComponents";
 import { projects, type Project } from "@/data/projects";
 
-const PUBLISHED_SLUGS_QUERY = `*[_type == "caseStudy" && defined(slug.current)].slug.current`;
-
-// Previous / next follow the portfolio order on /case-studies, skipping
-// projects whose detail page isn't published yet, and wrap at the ends.
-function getAdjacentProjects(slug: string, publishedSlugs: string[]) {
-  const published = new Set(publishedSlugs);
-  const navigable = projects.filter((p): p is Project & { slug: string } => Boolean(p.slug && published.has(p.slug)));
+// Previous / next follow the portfolio order on /case-studies and wrap at
+// the ends. Every portfolio project with a slug has a page (see loadStudy).
+function getAdjacentProjects(slug: string) {
+  const navigable = projects.filter((p): p is Project & { slug: string } => Boolean(p.slug));
   const i = navigable.findIndex((p) => p.slug === slug);
   if (i === -1 || navigable.length < 2) return null;
   return {
@@ -50,20 +47,52 @@ const CASE_STUDY_QUERY = `*[_type == "caseStudy" && slug.current == $slug][0] {
   "metaDescription": seo.metaDescription
 }`;
 
+// Sanity content when the page is published; otherwise a page built from the
+// portfolio card in data/projects.ts, so every card has a working detail page.
+async function loadStudy(slug: string) {
+  const study = await client.fetch(CASE_STUDY_QUERY, { slug });
+  const project = projects.find((p) => p.slug === slug);
+  if (study) {
+    return {
+      ...study,
+      websiteUrl: study.websiteUrl ?? project?.url,
+      heroSrc: study.mainImage ? urlFor(study.mainImage).width(1400).url() : null,
+      heroAlt: study.mainImage?.alt ?? study.title,
+    };
+  }
+  if (!project) return null;
+  return {
+    _id: `project-${slug}`,
+    title: project.name,
+    slug: { current: slug },
+    clientName: project.name,
+    kind: "project",
+    platform: project.platform,
+    websiteUrl: project.url,
+    excerpt: project.summary,
+    tagline: project.summary,
+    details: project.details,
+    heroSrc: project.screenshot,
+    heroAlt: `${project.name} website`,
+  };
+}
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const study = await client.fetch(CASE_STUDY_QUERY, { slug });
+  const study = await loadStudy(slug);
   if (!study) return { title: "Case Study Not Found" };
   const canonical = `https://blacklabdev.com/case-studies/${slug}`;
   const title = study.seoTitle || study.title;
   const description = study.metaDescription || study.excerpt || "";
   const ogImage = study.mainImage
     ? { url: urlFor(study.mainImage).width(1200).height(630).fit("crop").url(), width: 1200, height: 630, alt: study.title }
-    : DEFAULT_OG_IMAGE;
+    : study.heroSrc
+      ? { url: study.heroSrc, alt: study.title }
+      : DEFAULT_OG_IMAGE;
 
   return {
     title,
@@ -97,20 +126,19 @@ export default async function CaseStudyPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const [study, publishedSlugs] = await Promise.all([
-    client.fetch(CASE_STUDY_QUERY, { slug }),
-    client.fetch<string[]>(PUBLISHED_SLUGS_QUERY),
-  ]);
+  const study = await loadStudy(slug);
 
   if (!study) return notFound();
 
-  const adjacent = getAdjacentProjects(slug, publishedSlugs);
+  const adjacent = getAdjacentProjects(slug);
 
   const heroMetrics = study.metrics?.slice(0, 3) ?? [];
   const isProject = study.kind === "project";
+  // Real hostname when the live URL is known; otherwise just the client name,
+  // never a guessed domain.
   const siteHost: string = study.websiteUrl
     ? new URL(study.websiteUrl).hostname
-    : `${study.clientName?.toLowerCase().replace(/\s+/g, "") ?? "client"}.com`;
+    : (study.clientName ?? study.title);
   const canonicalUrl = `https://blacklabdev.com/case-studies/${study.slug.current}`;
 
   const articleSchema = {
@@ -123,8 +151,10 @@ export default async function CaseStudyPage({
     inLanguage: "en-US",
     url: canonicalUrl,
     mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
-    ...(study.mainImage && {
-      image: urlFor(study.mainImage).width(1200).url(),
+    ...(study.heroSrc && {
+      image: study.mainImage
+        ? urlFor(study.mainImage).width(1200).url()
+        : `https://blacklabdev.com${study.heroSrc}`,
     }),
     author: {
       "@type": "Person",
@@ -165,7 +195,7 @@ export default async function CaseStudyPage({
         <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-volt-500/25 to-transparent" />
 
         <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
-          <div className={`grid gap-12 items-center py-20 md:py-24 md:min-h-[82vh] ${study.mainImage ? "grid-cols-1 lg:grid-cols-[1fr_1.1fr]" : "grid-cols-1"}`}>
+          <div className={`grid gap-12 items-center py-20 md:py-24 md:min-h-[82vh] ${study.heroSrc ? "grid-cols-1 lg:grid-cols-[1fr_1.1fr]" : "grid-cols-1"}`}>
 
             {/* ── Left: text + metrics ── */}
             <div className="flex flex-col justify-center">
@@ -228,7 +258,7 @@ export default async function CaseStudyPage({
             </div>
 
             {/* ── Right: main image screenshot ── */}
-            {study.mainImage && (
+            {study.heroSrc && (
               <div className="relative flex items-center justify-center lg:justify-end">
                 {/* Glow halo behind the frame */}
                 <div className="absolute -inset-6 bg-volt-500/10 rounded-3xl blur-3xl pointer-events-none" />
@@ -249,8 +279,8 @@ export default async function CaseStudyPage({
                   {/* Screenshot */}
                   <div className="relative aspect-16/10 w-full">
                     <Image
-                      src={urlFor(study.mainImage).width(1400).url()}
-                      alt={study.mainImage.alt ?? study.title}
+                      src={study.heroSrc}
+                      alt={study.heroAlt}
                       fill
                       priority
                       className="object-cover object-top"

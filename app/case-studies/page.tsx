@@ -4,23 +4,9 @@ import PageClose from "@/components/PageClose";
 import JsonLd from "@/components/JsonLd";
 import WorkShowcase from "@/components/WorkShowcase";
 import { projects } from "@/data/projects";
-import { readClient as client } from "@/sanity/lib/client";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 
 export const revalidate = 3600;
-
-const CASE_STUDIES_QUERY = `*[_type == "caseStudy"] | order(featured desc, publishedAt desc) {
-  _id,
-  title,
-  slug,
-  clientName,
-  industry,
-  excerpt,
-  mainImage,
-  featured,
-  metrics,
-  kind
-}`;
 
 export const metadata: Metadata = {
   title: "Website Case Studies | Real Results",
@@ -42,16 +28,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function CaseStudiesPage() {
-  const allStudies = await client.fetch(CASE_STUDIES_QUERY);
-  // "project" docs are detail pages for the portfolio cards above; only
-  // metrics-led case studies go in the "More Case Studies" grid.
-  const caseStudies = allStudies.filter((study: { kind?: string }) => study.kind !== "project");
-  // A card links to its detail page only once that page is published.
-  const publishedSlugs: string[] = allStudies
-    .map((study: { slug?: { current?: string } }) => study.slug?.current)
-    .filter(Boolean);
-
+export default function CaseStudiesPage() {
   // CollectionPage + ItemList exposes the case-study set as a structured,
   // ordered list for rich results and AI answer engines.
   const collectionSchema = {
@@ -65,11 +42,11 @@ export default async function CaseStudiesPage() {
     publisher: { "@type": "Organization", "@id": "https://blacklabdev.com/#business" },
     mainEntity: {
       "@type": "ItemList",
-      itemListElement: allStudies.map((study: any, i: number) => ({
+      itemListElement: projects.filter((p) => p.slug).map((p, i) => ({
         "@type": "ListItem",
         position: i + 1,
-        url: `https://blacklabdev.com/case-studies/${study.slug?.current}`,
-        name: study.title,
+        url: `https://blacklabdev.com/case-studies/${p.slug}`,
+        name: p.name,
       })),
     },
   };
@@ -153,7 +130,7 @@ export default async function CaseStudiesPage() {
             <div className="mt-6 h-px w-64 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
           </div>
 
-          <WorkShowcase projects={projects} linkedSlugs={publishedSlugs} />
+          <WorkShowcase projects={projects} />
         </div>
       </section>
 
@@ -278,90 +255,6 @@ export default async function CaseStudiesPage() {
           </div>
         </div>
       </section>
-
-      {/* ── Sanity Case Studies ── */}
-      {caseStudies.length > 0 && (
-        <section className="relative py-20 overflow-hidden border-b border-slate-800">
-          <div className="absolute top-0 left-1/4 w-175 h-100 bg-volt-500/5 rounded-full blur-[120px] pointer-events-none" />
-          <div className="absolute bottom-0 right-1/4 w-150 h-100 bg-volt-600/5 rounded-full blur-[120px] pointer-events-none" />
-
-          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
-
-            {/* Section header */}
-            <div className="mb-10">
-              <h2 className="text-2xl md:text-3xl font-black tracking-tight text-white">
-                More Case <span className="text-volt-500 drop-shadow-[0_0_30px_rgba(227,245,68,0.35)]">Studies</span>
-              </h2>
-              <div className="mt-4 h-px w-48 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {caseStudies.map((study: any, i: number) => {
-                const isAmber = i % 2 === 0;
-                const primaryMetric = study.metrics?.[0];
-                return (
-                  <Link key={study._id} href={`/case-studies/${study.slug?.current}`} className="group relative block">
-                    <div className={`absolute -inset-px rounded-2xl blur-lg transition-all duration-500 opacity-0 group-hover:opacity-100 ${isAmber ? "bg-linear-to-br from-volt-500/35 via-volt-500/10 to-transparent" : "bg-linear-to-br from-volt-500/35 via-volt-500/10 to-transparent"}`} />
-                    <div className={`relative h-full rounded-2xl border overflow-hidden flex flex-col transition-all duration-300 bg-neutral-950 ${isAmber ? "border-neutral-800 group-hover:border-volt-500/55" : "border-neutral-800 group-hover:border-volt-500/55"}`}>
-
-                      {/* Hero metric */}
-                      {primaryMetric && (
-                        <div className={`relative px-7 pt-7 pb-6 overflow-hidden ${isAmber ? "bg-linear-to-br from-volt-950/70 via-volt-950/25 to-neutral-950" : "bg-linear-to-br from-volt-950/70 via-volt-950/25 to-neutral-950"}`}>
-                          <div className={`absolute top-0 left-0 right-0 h-0.5 ${isAmber ? "bg-linear-to-r from-volt-600 via-volt-400 to-volt-600" : "bg-linear-to-r from-volt-600 via-volt-400 to-volt-600"}`} />
-                          <div className={`absolute right-5 top-1/2 -translate-y-1/2 text-[110px] font-black leading-none pointer-events-none select-none tabular-nums opacity-[0.04] ${isAmber ? "text-volt-400" : "text-volt-400"}`}>
-                            {primaryMetric.improvement}
-                          </div>
-                          <div className={`relative text-5xl md:text-6xl font-black tabular-nums leading-none mb-2 transition-all duration-300 ${isAmber ? "text-volt-400 drop-shadow-[0_0_24px_rgba(227,245,68,0.55)] group-hover:drop-shadow-[0_0_36px_rgba(227,245,68,0.8)]" : "text-volt-400 drop-shadow-[0_0_24px_rgba(96,165,250,0.55)] group-hover:drop-shadow-[0_0_36px_rgba(96,165,250,0.8)]"}`}>
-                            {primaryMetric.improvement}
-                          </div>
-                          <div className="text-xs text-slate-300 uppercase tracking-[0.2em] font-semibold">{primaryMetric.label}</div>
-                          {primaryMetric.note && (
-                            <div className="text-[10px] text-slate-600 mt-1">{primaryMetric.note}</div>
-                          )}
-                        </div>
-                      )}
-
-                      {/* Content */}
-                      <div className="p-7 flex flex-col flex-1 border-t border-slate-800/60">
-                        <div className="flex flex-wrap items-center gap-2 mb-3">
-                          {study.clientName && (
-                            <span className={`text-xs font-semibold uppercase tracking-widest ${isAmber ? "text-volt-500/70" : "text-volt-400/70"}`}>{study.clientName}</span>
-                          )}
-                          {study.industry && (
-                            <span className="text-xs text-slate-600 uppercase tracking-widest">· {study.industry}</span>
-                          )}
-                        </div>
-                        <h2 className={`text-lg md:text-xl font-bold text-white mb-3 leading-snug transition-colors duration-300 ${isAmber ? "group-hover:text-volt-100" : "group-hover:text-volt-100"}`}>
-                          {study.title}
-                        </h2>
-                        {study.excerpt && (
-                          <p className="text-slate-500 text-sm leading-relaxed mb-5">{study.excerpt}</p>
-                        )}
-                        {study.metrics && study.metrics.length > 1 && (
-                          <div className="flex flex-wrap gap-4 mb-5 mt-auto">
-                            {study.metrics.slice(1, 4).map((m: any) => (
-                              <div key={m.label} className="flex items-baseline gap-1.5">
-                                <span className={`text-base font-black tabular-nums ${isAmber ? "text-volt-500" : "text-volt-400"}`}>{m.improvement}</span>
-                                <span className="text-[10px] text-slate-600 uppercase tracking-wide">{m.label}</span>
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                        <div className={`inline-flex items-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all duration-200 mt-auto ${isAmber ? "text-volt-500" : "text-volt-400"}`}>
-                          <span>Read the full case study</span>
-                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-      )}
 
       <PageClose
         title="Ready to Become the Next Case Study?"

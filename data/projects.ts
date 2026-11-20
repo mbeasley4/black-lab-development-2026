@@ -7,6 +7,8 @@
 export type Project = {
   name: string;
   slug?: string;
+  /** Live site, shown in the detail page browser frame and as a "Visit" link. */
+  url?: string;
   platform: string;
   logo: string;
   screenshot: string;
@@ -21,6 +23,7 @@ export const projects: Project[] = [
     name: "Global Environmental Products",
     featured: true,
     slug: "global-environmental-products-wordpress-rebuild",
+    url: "https://www.gepltd.com/",
     platform: "WordPress",
     logo: "/images/work/gep-logo.png",
     screenshot: "/images/work/gep-screenshot.jpg",
@@ -38,6 +41,7 @@ export const projects: Project[] = [
   {
     name: "City View Tavern",
     slug: "city-view-tavern-wordpress-block-theme",
+    url: "https://cityviewtavern.com/",
     featured: true,
     platform: "WordPress",
     logo: "/images/work/cityviewtavern-logo.png",
@@ -56,6 +60,7 @@ export const projects: Project[] = [
   {
     name: "National Management Association",
     slug: "national-management-association-wordpress-platform",
+    url: "https://nma1.org/",
     featured: true,
     platform: "WordPress",
     logo: "/images/work/nma-logo.png",
@@ -74,6 +79,7 @@ export const projects: Project[] = [
   {
     name: "Millennosphere",
     slug: "millennosphere-wordpress-editorial-theme",
+    url: "https://millennosphere.com/",
     platform: "WordPress",
     logo: "/images/work/millennosphere-logo.png",
     screenshot: "/images/work/millennosphere-screenshot.png",
@@ -89,6 +95,7 @@ export const projects: Project[] = [
   {
     name: "Globe Iron Roofing",
     slug: "globe-iron-roofing-wordpress-theme",
+    url: "https://globeironroofing.com/",
     platform: "WordPress",
     logo: "/images/work/globeironroofing-logo.png",
     screenshot: "/images/work/globeironroofing-screenshot.png",
@@ -104,6 +111,7 @@ export const projects: Project[] = [
   {
     name: "Zero Gravity of Northern Kentucky",
     slug: "zero-gravity-performance-rebuild",
+    url: "https://zerogravitynky.com/",
     platform: "WordPress",
     logo: "/images/work/zerogravity-logo.png",
     screenshot: "/images/work/zerogravity-screenshot.jpg",
@@ -135,6 +143,7 @@ export const projects: Project[] = [
   {
     name: "Zoo Printables AI",
     slug: "zoo-printables-ai-seo-aeo-geo",
+    url: "https://www.zooprintablesai.com/",
     platform: "Custom Next.js",
     logo: "/images/work/zooprintablesai-logo.png",
     screenshot: "/images/work/zooprintablesai-screenshot.png",
@@ -166,6 +175,7 @@ export const projects: Project[] = [
   {
     name: "Blum Media Group",
     slug: "blum-media-group-nextjs-website",
+    url: "https://www.blummediagroup.com/",
     platform: "Custom Next.js",
     logo: "/images/work/blum-logo.png",
     screenshot: "/images/work/blum-screenshot.png",
@@ -181,6 +191,7 @@ export const projects: Project[] = [
   {
     name: "Mona Dermatology",
     slug: "mona-dermatology-wordpress-woocommerce",
+    url: "https://www.monadermatology.com/",
     platform: "WordPress",
     logo: "/images/work/mona-logo.png",
     screenshot: "/images/work/mona-screenshot.png",
@@ -195,6 +206,7 @@ export const projects: Project[] = [
   {
     name: "Buzzworthy",
     slug: "buzzworthy-seven-hills-news-site",
+    url: "https://www.7hills.org/buzzworthy/",
     platform: "WordPress",
     logo: "/images/work/buzzworthy-logo.png",
     screenshot: "/images/work/buzzworthy-screenshot.png",
@@ -209,6 +221,7 @@ export const projects: Project[] = [
   {
     name: "Frisch's Big Boy",
     slug: "frischs-big-boy-wordpress-platform",
+    url: "https://www.frischs.com/",
     platform: "WordPress",
     logo: "/images/work/frischs-logo.png",
     screenshot: "/images/work/frischs-screenshot.jpg",
@@ -238,6 +251,7 @@ export const projects: Project[] = [
   {
     name: "Melink Solar",
     slug: "melink-solar-calculator-plugin",
+    url: "https://www.melinksolar.com/solar-calculator/",
     platform: "WordPress",
     logo: "/images/work/melink-logo.png",
     screenshot: "/images/work/melink-screenshot.jpg",

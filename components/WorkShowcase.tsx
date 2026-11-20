@@ -167,16 +167,11 @@ function CompactCard({ project, linked }: { project: Project; linked: boolean })
   );
 }
 
-export default function WorkShowcase({
-  projects,
-  linkedSlugs,
-}: {
-  projects: Project[];
-  linkedSlugs: string[];
-}) {
+export default function WorkShowcase({ projects }: { projects: Project[] }) {
   const [platform, setPlatform] = useState(ALL);
-  const linked = useMemo(() => new Set(linkedSlugs), [linkedSlugs]);
-  const isLinked = (p: Project) => Boolean(p.slug && linked.has(p.slug));
+  // Every project with a slug has a detail page: Sanity content once
+  // published, otherwise a page built from its card data.
+  const isLinked = (p: Project) => Boolean(p.slug);
 
   const platforms = useMemo(() => {
     const counts = new Map<string, number>();
