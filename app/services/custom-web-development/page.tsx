@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import PageClose from "@/components/PageClose";
 import QuickAnswerBlock from "@/components/QuickAnswerBlock";
@@ -356,6 +357,68 @@ export default function CustomWebDevelopmentPage() {
                     <span className="text-sm text-neutral-300">{item}</span>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Featured custom build */}
+        <section className="bg-charcoal py-20 border-b border-neutral-800" aria-labelledby="featured-build-heading">
+          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
+            <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-12 items-center">
+              <Link
+                href="/work/bishopric-industries-shop-floor-kiosk"
+                className="group block overflow-hidden rounded-xl border border-white/10 bg-neutral-900 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.7)] transition-colors duration-300 hover:border-neutral-500"
+                aria-label="View the Bishopric Industries shop floor kiosk project"
+              >
+                <div className="flex h-6 items-center gap-1.5 border-b border-white/5 px-3" aria-hidden="true">
+                  <span className="h-2 w-2 rounded-full bg-neutral-600" />
+                  <span className="h-2 w-2 rounded-full bg-neutral-600" />
+                  <span className="h-2 w-2 rounded-full bg-neutral-600" />
+                </div>
+                <div className="relative aspect-16/10 w-full overflow-hidden">
+                  <Image
+                    src="/images/work/projects/bishopric-categories.jpg"
+                    alt="Bishopric Industries shop floor kiosk showing a project's eight document categories"
+                    fill
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    className="object-cover object-top transition-transform duration-500 motion-safe:group-hover:scale-[1.03]"
+                  />
+                </div>
+              </Link>
+
+              <div>
+                <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+                  Featured Custom Build
+                </span>
+                <h2 id="featured-build-heading" className="text-3xl md:text-4xl font-bold mb-5 text-white">
+                  Bishopric Industries Shop Floor Kiosk
+                </h2>
+                <p className="text-neutral-300 leading-relaxed mb-6">
+                  A custom Next.js touchscreen app for an industrial fabricator&apos;s Cincinnati and Natchez shop floors.
+                  Crews go from job number to the right fabrication drawing, weld procedure or inspection document in five taps,
+                  pulled from Egnyte, with newly added documents flagged on every screen.
+                </p>
+                <ul className="space-y-2.5 mb-8">
+                  {[
+                    "Touchscreen-first flow: location → project → category → drawing → viewer",
+                    "Server-side Egnyte integration, so credentials never reach the device",
+                    "Recently added documents flagged, tracked through Egnyte's audit API",
+                    "Pinch-to-zoom PDF viewer, inactivity reset and offline handling",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-neutral-300">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-400" aria-hidden="true" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/work/bishopric-industries-shop-floor-kiosk"
+                  className="inline-flex items-center gap-2 rounded-md bg-white px-6 py-3 text-sm font-bold text-black hover:bg-neutral-200 transition-colors duration-200"
+                >
+                  See the Project
+                  <span aria-hidden="true">→</span>
+                </Link>
               </div>
             </div>
           </div>

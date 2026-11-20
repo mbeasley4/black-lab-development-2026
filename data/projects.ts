@@ -77,6 +77,40 @@ export const projects: Project[] = [
     updated: true,
   },
   {
+    name: "Zero Gravity of Northern Kentucky",
+    slug: "zero-gravity-performance-rebuild",
+    url: "https://zerogravitynky.com/",
+    platform: "WordPress",
+    logo: "/images/work/zerogravity-logo.png",
+    screenshot: "/images/work/zerogravity-screenshot.jpg",
+    summary:
+      "Ongoing WordPress engineering for Zero Gravity NKY, a Northern Kentucky medical spa — WooCommerce ripped out in favor of the dedicated booking platform, booking links generalized, and page speed rebuilt from the ground up.",
+    details: [
+      "WooCommerce removed — booking handled through the dedicated platform, not a bolted-on store",
+      "Booking links generalized for consistent, maintainable linking",
+      "Significant page speed and Core Web Vitals improvements",
+      "Custom WordPress theme built for the Gutenberg block editor",
+    ],
+    updated: true,
+  },
+  {
+    name: "Bishopric Industries Shop Floor Kiosk",
+    slug: "bishopric-industries-shop-floor-kiosk",
+    platform: "Custom Next.js",
+    logo: "/images/work/bishopric-logo.png",
+    screenshot: "/images/work/bishopric-screenshot.jpg",
+    summary:
+      "A touchscreen kiosk for Bishopric Industries' Cincinnati and Natchez shop floors — fabrication drawings, weld procedures and inspection documents pulled from Egnyte in a five-tap flow, with new documents flagged at every level.",
+    details: [
+      "Touchscreen-first Next.js app: location → project → category → drawing → viewer",
+      "Server-side Egnyte integration — credentials and tokens never reach the browser",
+      "Recently added documents flagged at every level via Egnyte's audit API",
+      "In-browser PDF viewer with pinch-zoom, plus cached server-side thumbnails",
+      "Kiosk-hardened: inactivity reset, offline screens and an admin maintenance mode",
+    ],
+    updated: true,
+  },
+  {
     name: "Millennosphere",
     slug: "millennosphere-wordpress-editorial-theme",
     url: "https://millennosphere.com/",
@@ -107,23 +141,6 @@ export const projects: Project[] = [
       "Page speed and Core Web Vitals optimization",
       "Fully responsive, editor-friendly block layouts",
     ],
-  },
-  {
-    name: "Zero Gravity of Northern Kentucky",
-    slug: "zero-gravity-performance-rebuild",
-    url: "https://zerogravitynky.com/",
-    platform: "WordPress",
-    logo: "/images/work/zerogravity-logo.png",
-    screenshot: "/images/work/zerogravity-screenshot.jpg",
-    summary:
-      "Ongoing WordPress engineering for Zero Gravity NKY, a Northern Kentucky medical spa — WooCommerce ripped out in favor of the dedicated booking platform, booking links generalized, and page speed rebuilt from the ground up.",
-    details: [
-      "WooCommerce removed — booking handled through the dedicated platform, not a bolted-on store",
-      "Booking links generalized for consistent, maintainable linking",
-      "Significant page speed and Core Web Vitals improvements",
-      "Custom WordPress theme built for the Gutenberg block editor",
-    ],
-    updated: true,
   },
   {
     name: "Rev & Rinse Auto Detailing",

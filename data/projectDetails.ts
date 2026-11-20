@@ -773,6 +773,112 @@ export const projectDetails: ProjectDetail[] = [
       },
     ],
   },
+  {
+    slug: "bishopric-industries-shop-floor-kiosk",
+    title: "A Touchscreen Shop Floor Kiosk for an Industrial Fabricator",
+    industry: "Manufacturing",
+    tagline:
+      "Shop floor crews needed the right drawing in seconds, not a hunt through shared folders. The kiosk gets them there in five taps and shows what changed since their last shift.",
+    excerpt:
+      "A custom Next.js touchscreen kiosk for Bishopric Industries' Cincinnati and Natchez shop floors that puts fabrication drawings, weld procedures and inspection documents a few taps away, with new documents flagged.",
+    seoTitle: "Shop Floor Kiosk for Bishopric Industries",
+    metaDescription:
+      "How a custom Next.js touchscreen kiosk gives Bishopric Industries' shop floors fast access to drawings, weld procedures and inspection documents from Egnyte.",
+    main: {
+      src: "/images/work/projects/bishopric-home.jpg",
+      alt: "Bishopric Industries Shop Floor Kiosk home screen with Cincinnati and Natchez locations",
+    },
+    gallery: [
+      {
+        src: "/images/work/projects/bishopric-projects.jpg",
+        alt: "Kiosk project selection screen with a project number filter",
+        caption:
+          "Project selection: large touch targets and a filter by project number",
+      },
+      {
+        src: "/images/work/projects/bishopric-categories.jpg",
+        alt: "Kiosk project screen with eight document category tiles",
+        caption: "Each project opens to the same eight document categories",
+      },
+      {
+        src: "/images/work/projects/bishopric-drawings.jpg",
+        alt: "Kiosk drawing list with recently added documents outlined in red",
+        caption:
+          "Recently added drawings are outlined in red, with the date they were added",
+      },
+    ],
+    details: [
+      "Touchscreen-first Next.js app with a five-screen flow: location, project, category, drawing, viewer",
+      "Locations discovered automatically from the Egnyte folder structure, so adding a site needs no code change",
+      "Server-side Egnyte integration: the service account and tokens never reach the browser",
+      "Recently added documents flagged on every screen, tracked by an hourly sweep of Egnyte's audit API",
+      "In-browser PDF viewer with pinch-zoom, pan, page navigation and fullscreen",
+      "Page-one thumbnails rendered once on the server and cached, so kiosks don't redo the work",
+      "Inactivity reset, offline and rate-limit screens, and graceful handling of missing documents",
+      "Admin dashboard for maintenance mode, cache clearing, on-demand sweeps and error logs",
+    ],
+    metrics: [
+      {
+        value: "5",
+        label: "Taps to Any Drawing",
+        note: "Location → viewer",
+      },
+      {
+        value: "2",
+        label: "Shop Floor Locations",
+        note: "Cincinnati & Natchez",
+      },
+      {
+        value: "8",
+        label: "Document Categories",
+        note: "Per project",
+      },
+      {
+        value: "1",
+        label: "Egnyte Call per Document",
+        note: "Request budget by design",
+      },
+    ],
+    body: [
+      {
+        heading: "The Brief",
+        paragraphs: [
+          "Bishopric Industries keeps its fabrication drawings, weld procedures, specifications and inspection documents in Egnyte. On the shop floor, finding the current drawing for a job meant navigating folder trees on a shared computer — slow, error-prone, and easy to land on an outdated revision.",
+          'The goal: a touchscreen kiosk at each location that gets a crew member from "which job?" to the right document in a few taps, and makes it obvious when something has changed.',
+        ],
+      },
+      {
+        heading: "What We Built",
+        paragraphs: [
+          "A custom Next.js application designed for a touchscreen first. The flow is five screens: pick a location, pick a project number, pick one of eight standard document categories, pick a drawing, and view it. Every control is a large touch target, and the kiosk returns itself to the home screen after a few minutes without input.",
+          "Locations are read straight from the Egnyte folder structure, so adding a new site is a matter of creating its folder, not changing code. Category folders can be empty when a project doesn't have that kind of document, and near-variant folder names are matched automatically.",
+        ],
+      },
+      {
+        heading: "Built Around Egnyte",
+        level: 3,
+        paragraphs: [
+          "Every Egnyte call happens on the server. The kiosk authenticates as a dedicated service account, and its credentials and access tokens never reach the browser.",
+          'Egnyte meters requests, so the integration is designed around a request budget: a document view is a single call, page-one thumbnails are rendered once on the server and cached, and "recently added" activity comes from an hourly sweep of Egnyte\'s audit API instead of live scans on every screen.',
+        ],
+      },
+      {
+        heading: "Showing What Changed",
+        level: 3,
+        paragraphs: [
+          "A document counts as recent when it was uploaded or copied in during the last two business days, so weekends never hide Friday's changes. Recent drawings get a red outline and their date added, and projects and categories show a count of new documents, so crews can see at a glance where something changed.",
+        ],
+      },
+      {
+        heading: "Built for the Shop Floor",
+        level: 3,
+        paragraphs: [
+          "Drawings open in an in-browser PDF viewer with pinch-to-zoom, drag-to-pan, page navigation and fullscreen. If Egnyte can't be reached or a request is rate-limited, the kiosk shows a clear message instead of an error page, and a stale link falls back gracefully.",
+          "A separate admin dashboard lets the team switch on maintenance mode, clear caches, run an activity sweep on demand and review recent errors — without touching the kiosks themselves.",
+        ],
+      },
+    ],
+  },
 ];
 
 export const getProjectDetail = (slug: string) =>
