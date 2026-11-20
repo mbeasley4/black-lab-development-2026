@@ -9,6 +9,7 @@ import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import JsonLd from "@/components/JsonLd";
 import { portableTextComponents } from "@/components/PortableTextComponents";
 import { projects, type Project } from "@/data/projects";
+import { getProjectDetail, type DetailSection } from "@/data/projectDetails";
 
 // Previous / next follow the portfolio order on /case-studies and wrap at
 // the ends. Every portfolio project with a slug has a page (see loadStudy).
@@ -47,8 +48,15 @@ const CASE_STUDY_QUERY = `*[_type == "caseStudy" && slug.current == $slug][0] {
   "metaDescription": seo.metaDescription
 }`;
 
-// Sanity content when the page is published; otherwise a page built from the
-// portfolio card in data/projects.ts, so every card has a working detail page.
+type GalleryItem = { key: string; src: string; alt: string; caption?: string };
+type SanityImage = { _key?: string; alt?: string; caption?: string };
+
+// Page content comes from, in order:
+//   1. a published Sanity caseStudy with this slug,
+//   2. the full write-up in data/projectDetails.ts,
+//   3. the portfolio card in data/projects.ts.
+// Every source is normalized to the same shape so the template renders them
+// identically, and every portfolio card has a working detail page.
 async function loadStudy(slug: string) {
   const study = await client.fetch(CASE_STUDY_QUERY, { slug });
   const project = projects.find((p) => p.slug === slug);
@@ -58,22 +66,41 @@ async function loadStudy(slug: string) {
       websiteUrl: study.websiteUrl ?? project?.url,
       heroSrc: study.mainImage ? urlFor(study.mainImage).width(1400).url() : null,
       heroAlt: study.mainImage?.alt ?? study.title,
+      beforeSrc: study.beforeImage ? urlFor(study.beforeImage).width(1400).url() : null,
+      beforeAlt: study.beforeImage?.alt,
+      galleryItems: (study.gallery ?? []).map((image: SanityImage, i: number) => ({
+        key: image._key ?? String(i),
+        src: urlFor(image).width(1000).url(),
+        alt: image.alt ?? image.caption ?? study.title,
+        caption: image.caption,
+      })) as GalleryItem[],
+      sections: null as DetailSection[] | null,
     };
   }
   if (!project) return null;
+  const detail = getProjectDetail(slug);
   return {
     _id: `project-${slug}`,
-    title: project.name,
+    title: detail?.title ?? project.name,
     slug: { current: slug },
     clientName: project.name,
+    industry: detail?.industry,
     kind: "project",
     platform: project.platform,
     websiteUrl: project.url,
-    excerpt: project.summary,
-    tagline: project.summary,
-    details: project.details,
-    heroSrc: project.screenshot,
-    heroAlt: `${project.name} website`,
+    excerpt: detail?.excerpt ?? project.summary,
+    tagline: detail?.tagline ?? project.summary,
+    seoTitle: detail?.seoTitle,
+    metaDescription: detail?.metaDescription,
+    details: detail?.details ?? project.details,
+    metrics: detail?.metrics.map((m) => ({ improvement: m.value, label: m.label, note: m.note })) ?? [],
+    heroSrc: detail?.main.src ?? project.screenshot,
+    heroAlt: detail?.main.alt ?? `${project.name} website`,
+    beforeSrc: detail?.before?.src ?? null,
+    beforeAlt: detail?.before?.alt,
+    galleryItems: (detail?.gallery ?? []).map((image, i) => ({ key: String(i), ...image })) as GalleryItem[],
+    body: null,
+    sections: detail?.body ?? null,
   };
 }
 
@@ -334,7 +361,7 @@ export default async function CaseStudyPage({
               <span className="inline-block mb-4 text-xs tracking-[0.3em] uppercase text-volt-500 font-semibold">
                 The Build
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-white">What We Built</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Project Highlights</h2>
               <div className="mt-4 h-px w-32 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
             </div>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -350,7 +377,7 @@ export default async function CaseStudyPage({
       )}
 
       {/* ─── BEFORE / AFTER ───────────────────────────── */}
-      {study.beforeImage && study.mainImage && (
+      {study.beforeSrc && study.heroSrc && (
         <section className="py-20 border-b border-slate-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-10">
@@ -362,14 +389,14 @@ export default async function CaseStudyPage({
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {[
-                { label: "Before", image: study.beforeImage, accent: "text-slate-400 border-slate-700" },
-                { label: "After", image: study.mainImage, accent: "text-volt-400 border-volt-500/40" },
-              ].map(({ label, image, accent }) => (
+                { label: "Before", src: study.beforeSrc as string, alt: study.beforeAlt, accent: "text-slate-400 border-slate-700" },
+                { label: "After", src: study.heroSrc as string, alt: study.heroAlt, accent: "text-volt-400 border-volt-500/40" },
+              ].map(({ label, src, alt, accent }) => (
                 <figure key={label} className="rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950">
                   <div className="relative aspect-16/10 w-full">
                     <Image
-                      src={urlFor(image).width(1400).url()}
-                      alt={image.alt ?? `${study.clientName ?? study.title} — ${label.toLowerCase()}`}
+                      src={src}
+                      alt={alt ?? `${study.clientName ?? study.title} — ${label.toLowerCase()}`}
                       fill
                       sizes="(min-width: 1024px) 50vw, 100vw"
                       className="object-cover object-top"
@@ -388,18 +415,29 @@ export default async function CaseStudyPage({
       )}
 
       {/* ─── BODY ─────────────────────────────────────── */}
-      {study.body && (
+      {(study.body || study.sections) && (
         <section className="py-20 border-b border-slate-800">
           <div className="mx-auto max-w-225 px-6">
             <article className="prose prose-invert prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h3:text-xl prose-h2:mt-12 prose-h2:mb-4 prose-h3:mt-8 prose-h3:mb-3 prose-p:text-slate-300 prose-p:leading-relaxed prose-li:text-slate-300 prose-ul:space-y-1 prose-strong:text-white">
-              <PortableText value={study.body} components={portableTextComponents} />
+              {study.body ? (
+                <PortableText value={study.body} components={portableTextComponents} />
+              ) : (
+                study.sections?.map((section: DetailSection) => (
+                  <div key={section.heading}>
+                    {section.level === 3 ? <h3>{section.heading}</h3> : <h2>{section.heading}</h2>}
+                    {section.paragraphs.map((p: string) => (
+                      <p key={p.slice(0, 40)}>{p}</p>
+                    ))}
+                  </div>
+                ))
+              )}
             </article>
           </div>
         </section>
       )}
 
       {/* ─── GALLERY ──────────────────────────────────── */}
-      {study.gallery && study.gallery.length > 0 && (
+      {study.galleryItems.length > 0 && (
         <section className="py-20 border-b border-slate-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-10">
@@ -410,12 +448,12 @@ export default async function CaseStudyPage({
               <div className="mt-4 h-px w-32 bg-linear-to-r from-volt-500/60 via-volt-500/25 to-transparent" />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-              {study.gallery.map((image: { _key: string; alt?: string; caption?: string }) => (
-                <figure key={image._key} className="rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950">
+              {study.galleryItems.map((image: GalleryItem) => (
+                <figure key={image.key} className="rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950">
                   <div className="relative aspect-16/10 w-full">
                     <Image
-                      src={urlFor(image).width(1000).url()}
-                      alt={image.alt ?? image.caption ?? study.title}
+                      src={image.src}
+                      alt={image.alt}
                       fill
                       sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
                       className="object-cover object-top"
@@ -502,7 +540,7 @@ export default async function CaseStudyPage({
             Ready to Build on a Better Foundation?
           </h2>
           <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Start with a performance and conversion audit. I'll identify what's limiting your site — and what it would take to fix it.
+            Start with a performance and conversion audit. I&apos;ll identify what&apos;s limiting your site — and what it would take to fix it.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <Link
