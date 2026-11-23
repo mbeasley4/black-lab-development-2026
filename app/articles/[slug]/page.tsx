@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PortableText } from "next-sanity";
 import type { Metadata } from "next";
-import { client } from "@/sanity/lib/client";
+import { readClient as client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import HeroImage from "@/components/HeroImage";
 import ReadingProgressBar from "@/components/ReadingProgressBar";
