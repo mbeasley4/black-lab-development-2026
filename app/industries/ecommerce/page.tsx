@@ -147,10 +147,6 @@ const clients = [
     name: "Epoxies, Etc.",
     detail: "WooCommerce optimization and performance improvements for an industrial chemical ecommerce platform with complex product catalogs.",
   },
-  {
-    name: "Zero Gravity Fitness",
-    detail: "Custom Shopify build and conversion architecture for a fitness equipment DTC brand scaling from startup to growth stage.",
-  },
 ];
 
 export default function EcommerceIndustryPage() {
@@ -164,6 +160,7 @@ export default function EcommerceIndustryPage() {
         titleHighlight="for Faster, Higher-Converting Stores"
         description="A slow ecommerce page doesn't just frustrate visitors — it costs you sales in real time. Performance, conversion architecture, and checkout flow are revenue levers, not technical footnotes."
         backgroundImage="/images/industries-ecommerce-hero-bg.jpg"
+        imagePosition="58% 60%"
         badges={["Shopify & WooCommerce", "AOV optimization", "Core Web Vitals"]}
       />
 
@@ -198,7 +195,7 @@ export default function EcommerceIndustryPage() {
             <span className="eyebrow inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">Client Proof</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Ecommerce Brands Worked With</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {clients.map((c) => (
               <div key={c.name} className="p-6 rounded-xl border border-neutral-800/60 bg-neutral-900/30">
                 <p className="text-sm font-semibold text-white mb-2">{c.name}</p>

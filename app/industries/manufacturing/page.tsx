@@ -155,6 +155,7 @@ export default function ManufacturingIndustryPage() {
         titleHighlight="for Engineers Who Read Spec Sheets"
         description="Manufacturing buyers don't fill out generic contact forms. They evaluate specs, compare capabilities, and submit RFQs. Your website needs to support that process — or they'll find a competitor's that does."
         backgroundImage="/images/industries-manufacturing-hero-bg.jpg"
+        imagePosition="47% 40%"
         badges={["RFQ generation", "Product catalog architecture", "Technical SEO"]}
       />
 

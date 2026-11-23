@@ -1,10 +1,11 @@
-# Homepage photo credits
+# Photo credits
 
 All photos are from Unsplash under the Unsplash License (free for commercial
 use, no attribution required). Attribution kept here for reference.
 
 | File | Source |
 | --- | --- |
+| hero-wireframes.jpg | https://unsplash.com/photos/assorted-color-comic-script-D-_zRKxP9Rw (Hal Gatewood) |
 | hero-code.jpg | https://unsplash.com/photos/dccba630e2f6 (photo-1461749280684-dccba630e2f6) |
 | performance-dashboard.jpg | https://images.unsplash.com/photo-1551288049-bebda4e38f71 |
 | small-business.jpg | https://images.unsplash.com/photo-1556742049-0cfed4f6a45d |
@@ -16,3 +17,4 @@ use, no attribution required). Attribution kept here for reference.
 | audience-ecommerce.jpg | https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da |
 | working-directly.jpg | https://images.unsplash.com/photo-1531482615713-2afd69097998 |
 | testimonial-bg.jpg | https://images.unsplash.com/photo-1556740758-90de374c12ad |
+| ../insights-hero-desk.jpg | https://unsplash.com/photos/macbook-pro-near-white-open-book-FHnnjk1Yj7Y (Nick Morrison) |

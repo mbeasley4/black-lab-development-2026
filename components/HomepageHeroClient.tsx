@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import HeroImage from "./HeroImage";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 
 // Bezier typed as the 4-tuple Framer Motion requires
@@ -113,11 +113,11 @@ function HeroVisual() {
         <span aria-hidden="true" className="absolute inset-x-0 top-0 z-10 h-1 bg-volt-500" />
         <div className="relative rounded-2xl bg-surface/90 backdrop-blur-xl">
           {/* Browser chrome */}
-          <div className="flex items-center gap-2 border-b border-white/5 px-4 py-3">
+          <div className="band-navy flex items-center gap-2 px-4 py-3">
             <span className="h-2.5 w-2.5 rounded-full bg-red-500/70" />
             <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/70" />
             <span className="h-2.5 w-2.5 rounded-full bg-green-500/70" />
-            <span className="ml-3 flex-1 truncate rounded-md bg-white/5 px-3 py-1 text-[11px] text-neutral-400 font-mono">
+            <span className="ml-3 flex-1 truncate rounded-md bg-[#ffffff]/10 px-3 py-1 text-[11px] text-neutral-300 font-mono">
               yourbusiness.com
             </span>
           </div>
@@ -184,29 +184,17 @@ const HomepageHeroClient = () => {
       {/* Background base */}
       <div className="absolute inset-0 bg-linear-to-br from-[#ffffff] via-[#f8fafc] to-[#eef2f7] z-0" aria-hidden="true" />
 
-      {/* Photo layer — slow Ken Burns drift, faded in from the right so the headline stays legible */}
+      {/* Photo layer — fades in on load and is masked from the right */}
       <div
-        className="absolute inset-0 z-0 overflow-hidden [mask-image:linear-gradient(to_right,transparent_0%,black_45%)] max-lg:[mask-image:linear-gradient(to_bottom,black_0%,transparent_85%)]"
+        className="absolute inset-x-0 bottom-0 top-[calc(var(--header-h)-4px)] lg:left-[35%] z-0 overflow-hidden lg:[mask-image:linear-gradient(to_right,transparent_0%,black_45%)] max-lg:[mask-image:linear-gradient(to_bottom,black_0%,transparent_85%)]"
         aria-hidden="true"
       >
-        <Image
-          src="/images/home/hero-code.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center opacity-[0.14] grayscale invert"
-        />
+        <HeroImage src="/images/home/hero-wireframes.jpg" opacity={0.75} className="brightness-105" />
       </div>
 
-
-
-
-      {/* Dark overlay + headline contrast mask */}
-      <div className="absolute inset-0 bg-black/40 z-10 pointer-events-none" aria-hidden="true" />
+      {/* White wash behind the copy so the headline keeps full contrast */}
       <div
-        className="absolute inset-0 z-10 pointer-events-none"
-        style={{ background: "radial-gradient(ellipse 70% 65% at 25% 40%, rgba(255,255,255,0.9) 0%, transparent 65%)" }}
+        className="absolute inset-0 z-10 pointer-events-none bg-linear-to-r from-[#ffffff]/95 from-30% via-[#ffffff]/70 via-55% to-[#ffffff]/5 max-lg:bg-none max-lg:bg-[#ffffff]/80"
         aria-hidden="true"
       />
       {/* Subtle pop: lime wash on the right, fine dot grid, lime base rule */}
@@ -256,7 +244,7 @@ const HomepageHeroClient = () => {
 
               <motion.p
                 variants={fadeIn(0.5)}
-                className="text-lg md:text-xl text-[#24344b]/80 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-9"
+                className="text-lg md:text-xl text-[#24344b] leading-relaxed max-w-xl mx-auto lg:mx-0 mb-9"
               >
                 You work directly with the senior engineer building your site —
                 not a sales rep, a PM, and a junior dev learning on your dime.
@@ -277,7 +265,7 @@ const HomepageHeroClient = () => {
                 </Link>
                 <Link
                   href="/partners"
-                  className="inline-flex items-center justify-center rounded-md border-2 border-neutral-800 px-8 py-4 text-base font-semibold text-white transition-colors duration-200 hover:bg-white/5 hover:border-neutral-500"
+                  className="inline-flex items-center justify-center rounded-md border-2 border-white/80 px-8 py-4 text-base font-semibold text-white transition-colors duration-200 hover:bg-white hover:text-black"
                 >
                   Agency? Partner With Me
                 </Link>

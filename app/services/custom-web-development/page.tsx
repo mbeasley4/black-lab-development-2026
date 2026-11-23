@@ -217,7 +217,8 @@ export default function CustomWebDevelopmentPage() {
           title="Custom Web Development for Businesses That Outgrew Templates"
           titleHighlight="for Businesses That Outgrew Templates"
           description="Bespoke builds in Next.js, headless CMS, and WordPress — architected for businesses that need more than a theme can deliver."
-          backgroundImage="/images/services-custom-web-development-hero-bg.jpg"
+          backgroundImage="/images/nextjs-hero-code.jpg"
+          imagePosition="0% 10%"
           badges={["No page builders", "Clean architecture", "Built to hand off"]}
         />
 

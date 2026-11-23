@@ -171,6 +171,7 @@ export default function IndustriesPage() {
         titleHighlight="by Industry"
         description="I've built and fixed websites across industries where performance and reliability aren't optional — regulated fields, high-traffic platforms, and systems nobody else wanted to touch."
         backgroundImage="/images/industries-hero-bg.jpg"
+        imagePosition="85% 50%"
         badges={["Regulated environments", "High-traffic systems", "Legacy nightmares survived"]}
       />
 

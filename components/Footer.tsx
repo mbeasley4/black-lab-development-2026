@@ -112,7 +112,7 @@ export default function Footer() {
             </div>
 
             {/* Bottom */}
-            <div className="pb-10 flex flex-col items-center justify-center gap-3 text-center text-[11px] tracking-widest uppercase text-neutral-500 sm:flex-row sm:gap-4">
+            <div className="band-navy px-6 py-5 flex flex-col items-center justify-center gap-3 text-center text-[11px] tracking-widest uppercase text-neutral-400 sm:flex-row sm:gap-4">
                 <p>© {new Date().getFullYear()} Black Lab Development</p>
                 <span className="hidden text-neutral-700 sm:inline">•</span>
                 <Link href="/privacy" className="hover:text-neutral-300 transition-colors">Privacy Policy</Link>

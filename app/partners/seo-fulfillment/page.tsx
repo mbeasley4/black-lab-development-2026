@@ -215,6 +215,7 @@ export default function SeoFulfillmentPage() {
         titleHighlight="Implemented in the Code"
         description="You sell the strategy. I write the code that makes it real — Core Web Vitals, structured data, crawlability, and migrations, implemented in your client's codebase under your brand."
         backgroundImage="/images/services-hero-bg.png"
+        imagePosition="66% 70%"
         badges={["Implementation only", "White-label reporting", "Works in any stack"]}
       />
 

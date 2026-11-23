@@ -209,7 +209,8 @@ export default function ShopifyDevelopmentPage() {
         title="Custom Shopify Development Without the App Bloat"
         titleHighlight="Without the App Bloat"
         description="Most Shopify stores are slow from a bloated theme wrapped in a dozen apps — not Shopify's fault. I build custom in Liquid: clean code, resilient integrations, zero app sprawl."
-        backgroundImage="/images/shopify-hero-bg.jpg"
+        backgroundImage="/images/shopify-hero-code.jpg"
+        imagePosition="0% 10%"
         badges={["Custom Liquid themes", "App & integration engineering", "Core Web Vitals on Shopify"]}
       />
 

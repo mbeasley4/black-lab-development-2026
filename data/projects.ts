@@ -77,14 +77,14 @@ export const projects: Project[] = [
     updated: true,
   },
   {
-    name: "Zero Gravity of Northern Kentucky",
+    name: "Zero Gravity Aesthetics",
     slug: "zero-gravity-performance-rebuild",
     url: "https://zerogravitynky.com/",
     platform: "WordPress",
     logo: "/images/work/zerogravity-logo-ink.png",
     screenshot: "/images/work/zerogravity-screenshot.jpg",
     summary:
-      "Ongoing WordPress engineering for Zero Gravity NKY, a Northern Kentucky medical spa — WooCommerce ripped out in favor of the dedicated booking platform, booking links generalized, and page speed rebuilt from the ground up.",
+      "Ongoing WordPress engineering for Zero Gravity Aesthetics, a Northern Kentucky medical spa — WooCommerce ripped out in favor of the dedicated booking platform, booking links generalized, and page speed rebuilt from the ground up.",
     details: [
       "WooCommerce removed — booking handled through the dedicated platform, not a bolted-on store",
       "Booking links generalized for consistent, maintainable linking",

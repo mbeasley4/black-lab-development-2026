@@ -62,7 +62,7 @@ export default function CoreServices() {
                         >
 
                             <div className="flex items-start justify-between mb-6">
-                                <div className="w-10 h-10 rounded-lg bg-white/[0.04] border border-neutral-800 flex items-center justify-center text-white group-hover:bg-white/20 group-hover:border-neutral-500 transition-all duration-300">
+                                <div className="w-10 h-10 rounded-lg bg-[#0f2138] flex items-center justify-center text-volt-500 group-hover:bg-neutral-200 transition-colors duration-300">
                                     {edge.icon}
                                 </div>
                                 <span className="text-xs font-mono text-neutral-500 group-hover:text-white transition-colors duration-300">

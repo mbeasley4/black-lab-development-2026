@@ -216,6 +216,7 @@ export default function SmallBusinessWebsiteDesignPage() {
         titleHighlight="That Brings In Customers"
         description="Small businesses get one shot at looking credible online. I build professional, fast, custom websites for growing businesses — designed around how your customers actually decide to call you."
         backgroundImage="/images/services-small-business-website-design-hero-bg.jpg"
+        imagePosition="40% 40%"
         badges={["Built by a senior engineer", "No templates", "You can update it yourself"]}
       />
 

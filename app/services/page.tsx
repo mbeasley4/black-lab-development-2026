@@ -208,6 +208,7 @@ export default function ServicesPage() {
         titleHighlight="That Hold Up"
         description="I build things that hold up in production, under real traffic, with real users — not just in a polished walkthrough. Senior-led, hands-on, and allergic to solutions that look great until they don't."
         backgroundImage="/images/services-hero-bg.jpg"
+        imagePosition="48% 50%"
         badges={["No templates", "No offshore handoffs", "No 40-slide decks"]}
       />
 

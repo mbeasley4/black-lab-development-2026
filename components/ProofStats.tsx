@@ -15,7 +15,7 @@ const logos = [
     { src: "/images/work/frischs-logo-ink.png", alt: "Frisch's" },
     { src: "/images/work/mona-logo-ink.png", alt: "Mona" },
     { src: "/images/work/seven-logo-ink.png", alt: "Seven" },
-    { src: "/images/work/zerogravity-logo-ink.png", alt: "Zero Gravity" },
+    { src: "/images/work/zerogravity-logo-ink.png", alt: "Zero Gravity Aesthetics" },
     { src: "/images/work/zooprintablesai-logo-ink.png", alt: "Zoo Printables" },
 ];
 

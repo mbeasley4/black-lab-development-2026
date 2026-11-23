@@ -180,6 +180,7 @@ export default function CincinnatiWebDeveloperPage() {
           titleHighlight="Small Businesses"
           description="Michael Beasley — senior web developer based in Cincinnati, Ohio. 15+ years building revenue-focused websites for small and mid-sized businesses across the Tri-State area."
           backgroundImage="/images/services-hero-bg.png"
+          imagePosition="66% 70%"
           badges={["Based in Cincinnati, OH", "In-person available", "Direct access to the engineer"]}
         />
 

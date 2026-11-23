@@ -179,6 +179,7 @@ export default function WebsitePerformanceOptimizationPage() {
           titleHighlight="for Faster Pages and Better Rankings"
           description="I fix the root causes of slow load times, failing Core Web Vitals, and technical SEO issues that cost you rankings and revenue — measured before and after, not guessed at."
           backgroundImage="/images/services-website-performance-optimization-hero-bg.jpg"
+          imagePosition="50% 46%"
           badges={["Core Web Vitals", "Real-user performance", "Not Lighthouse theater"]}
         />
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import HeroSplit from "@/components/HeroSplit";
 import Link from "next/link";
 import PageClose from "@/components/PageClose";
 import JsonLd from "@/components/JsonLd";
@@ -67,7 +68,7 @@ const faqs = [
   {
     question: "Do you offer ongoing website support?",
     answer:
-      "Yes. Several engagements above are ongoing, including Mona Dermatology, Zero Gravity of Northern Kentucky and Frisch's Big Boy, covering performance, security, updates and new features after launch.",
+      "Yes. Several engagements above are ongoing, including Mona Dermatology, Zero Gravity Aesthetics and Frisch's Big Boy, covering performance, security, updates and new features after launch.",
   },
   {
     question: "Do you work with agencies as a white-label development partner?",
@@ -140,48 +141,35 @@ export default function CaseStudiesPage() {
       <JsonLd data={[collectionSchema, breadcrumbSchema, faqSchema]} />
 
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden border-b border-neutral-800">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/case-studies-hero-bg.jpg')" }}
-        />
-        <div className="absolute inset-0 bg-linear-to-r from-[#0f2138]/25 via-[#0f2138]/5 to-transparent" />
+      <HeroSplit image="/images/work-hero-sites.jpg">
+        <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+          My Work
+        </span>
 
-        <div className="hero-frame relative z-10">
-        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 w-full">
-        <div className="relative max-w-3xl overflow-hidden rounded-2xl bg-[#ffffff]/95 p-7 shadow-[0_30px_80px_-30px_rgba(15,33,56,0.45)] ring-1 ring-[#0f2138]/10 backdrop-blur-md sm:p-10 md:p-12">
-          <span aria-hidden="true" className="absolute inset-y-0 left-0 w-1.5 bg-volt-500" />
-          <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
-            My Work
-          </span>
+        <h1 className="text-[1.75rem] sm:text-4xl lg:text-[2.1rem] xl:text-[2.75rem] font-bold tracking-tight leading-[1.1] mb-6">
+          <span className="block text-white">Web Design Portfolio.</span>
+          <span className="block text-neutral-400">Real Work. Real Outcomes.</span>
+        </h1>
 
-          <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold tracking-tight leading-[1.1] mb-6">
-            <span className="block text-white">Web Design Portfolio.</span>
-            <span className="block text-neutral-400">Real Work. Real Outcomes.</span>
-          </h1>
+        <p className="text-lg md:text-xl text-neutral-300 leading-relaxed mb-8">
+          If a website doesn&apos;t generate leads, bookings, or pipeline — it&apos;s not doing its job. Here&apos;s what building it right actually produces.
+        </p>
 
-          <p className="text-lg md:text-xl text-neutral-300 leading-relaxed mb-8">
-            If a website doesn&apos;t generate leads, bookings, or pipeline — it&apos;s not doing its job. Here&apos;s what building it right actually produces.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-volt-500 text-neutral-100 px-8 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg"
-            >
-              Schedule a Call
-            </Link>
-            <a
-              href="#portfolio"
-              className="inline-flex items-center justify-center rounded-md border border-neutral-700 px-8 py-3.5 text-sm font-semibold text-neutral-300 hover:border-neutral-500 hover:text-white transition-all duration-200"
-            >
-              Browse the Work
-            </a>
-          </div>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center rounded-md bg-volt-500 text-neutral-100 whitespace-nowrap px-8 lg:px-5 xl:px-8 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg"
+          >
+            Schedule a Call
+          </Link>
+          <a
+            href="#portfolio"
+            className="inline-flex items-center justify-center rounded-md border border-neutral-700 whitespace-nowrap px-8 lg:px-5 xl:px-8 py-3.5 text-sm font-semibold text-neutral-300 hover:border-neutral-500 hover:text-white transition-all duration-200"
+          >
+            Browse the Work
+          </a>
         </div>
-        </div>
-        </div>
-      </section>
+      </HeroSplit>
 
       <QuickAnswerBlock
         question="What kind of websites does Black Lab Development build?"
