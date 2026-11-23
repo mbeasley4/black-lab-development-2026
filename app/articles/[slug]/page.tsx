@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PortableText } from "next-sanity";
-import { ChevronDown } from "lucide-react";
 import type { Metadata } from "next";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
+import HeroImage from "@/components/HeroImage";
 import ReadingProgressBar from "@/components/ReadingProgressBar";
 import AnimatedCard from "@/components/AnimatedCard";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
@@ -217,80 +217,78 @@ export default async function ArticlePage({
         },
     ];
 
+    // Sanity asset refs end in "-<width>x<height>-<format>"
+    const [, heroWidth, heroHeight] =
+        article.mainImage?.asset?._ref?.match(/-(\d+)x(\d+)-/) ?? ["", "16", "9"];
+
     return (
         <main className="bg-black text-white">
             <JsonLd data={jsonLd} />
             <ReadingProgressBar />
 
-            {/* ================= CINEMATIC HERO ================= */}
+            {/* ================= HERO =================
+                The whole image shows at its own aspect ratio beside the title,
+                so nothing in it (faces, text) is cropped or covered. */}
             {article.mainImage && (
-                <section className="relative min-h-screen w-full overflow-hidden">
-                    <Image
-                        src={urlFor(article.mainImage).width(1920).url()}
-                        alt={article.mainImage.alt ?? article.title}
-                        fill
-                        priority
-                        className="object-cover"
-                    />
+                <section className="hero-split watermark watermark-left watermark-light">
+                    <div className="hero-split-body hero-split-body--framed">
+                        <div className="mx-auto grid w-full max-w-375 grid-cols-1 items-center gap-8 px-6 sm:px-10 md:px-14 lg:grid-cols-2 lg:gap-12 lg:px-20">
+                            <div
+                                className="relative order-first w-full overflow-hidden rounded-2xl shadow-[0_30px_80px_-30px_rgba(0,0,0,0.6)] ring-4 ring-volt-500 lg:order-last"
+                                style={{ aspectRatio: `${heroWidth} / ${heroHeight}` }}
+                            >
+                                <HeroImage
+                                    src={urlFor(article.mainImage).width(1920).url()}
+                                    alt={article.mainImage.alt ?? article.title}
+                                    sizes="(min-width: 1024px) 50vw, 100vw"
+                                />
+                            </div>
 
-                    {/* Gradient overlay matching site style */}
-                    <div className="absolute inset-0 bg-linear-to-br from-white/10 via-neutral-900/85 to-black/90" />
+                            <div className="relative overflow-hidden rounded-2xl bg-[#ffffff] p-7 shadow-[0_30px_80px_-30px_rgba(15,33,56,0.45)] sm:p-10">
+                                <span aria-hidden="true" className="absolute inset-y-0 left-0 w-1.5 bg-volt-500" />
+                                <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+                                    Article
+                                </span>
 
-                    {/* Ambient glow orbs */}
+                                <h1 className="text-[1.75rem] sm:text-4xl lg:text-[2.1rem] xl:text-[2.75rem] font-bold tracking-tight leading-[1.1] mb-6 text-balance">
+                                    {article.title}
+                                </h1>
 
-                    {/* Hero content — vertically centered */}
-                    <div className="relative z-10 flex min-h-screen items-center">
-                        <div className="mx-auto max-w-225 w-full px-6 pb-20 pt-32">
-                            <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
-                                Article
-                            </span>
-
-                            <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-8 max-w-4xl">
-                                {article.title}
-                            </h1>
-
-                            {/* Metadata strip */}
-                            <div className="flex flex-wrap items-center gap-2 text-sm text-neutral-400">
-                                {article.publishedAt && (
-                                    <span>
-                                        {new Date(article.publishedAt).toLocaleDateString("en-US", {
-                                            year: "numeric",
-                                            month: "long",
-                                            day: "numeric",
-                                        })}
-                                    </span>
-                                )}
-                                {article.author?.name && (
-                                    <>
-                                        <span className="text-neutral-500">·</span>
+                                {/* Metadata strip */}
+                                <div className="flex flex-wrap items-center gap-2 text-sm text-neutral-400">
+                                    {article.publishedAt && (
                                         <span>
-                                            by{" "}
-                                            <Link
-                                                href={authorHref}
-                                                className="rounded-sm underline decoration-transparent underline-offset-2 transition-colors duration-200 hover:text-neutral-200 hover:decoration-current focus-visible:text-neutral-200 focus-visible:decoration-current focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
-                                            >
-                                                {article.author.name}
-                                            </Link>
+                                            {new Date(article.publishedAt).toLocaleDateString("en-US", {
+                                                year: "numeric",
+                                                month: "long",
+                                                day: "numeric",
+                                            })}
                                         </span>
-                                    </>
-                                )}
-                                {readTime > 0 && (
-                                    <>
-                                        <span className="text-neutral-500">·</span>
-                                        <span>{readTime} min read</span>
-                                    </>
-                                )}
+                                    )}
+                                    {article.author?.name && (
+                                        <>
+                                            <span className="text-neutral-500">·</span>
+                                            <span>
+                                                by{" "}
+                                                <Link
+                                                    href={authorHref}
+                                                    className="rounded-sm underline decoration-transparent underline-offset-2 transition-colors duration-200 hover:text-neutral-200 hover:decoration-current focus-visible:text-neutral-200 focus-visible:decoration-current focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+                                                >
+                                                    {article.author.name}
+                                                </Link>
+                                            </span>
+                                        </>
+                                    )}
+                                    {readTime > 0 && (
+                                        <>
+                                            <span className="text-neutral-500">·</span>
+                                            <span>{readTime} min read</span>
+                                        </>
+                                    )}
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    {/* Scroll indicator */}
-                    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
-                        <ChevronDown className="w-6 h-6 text-white opacity-70" />
-                    </div>
-
-                    {/* Bottom accent line */}
-                    <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
                 </section>
             )}
 

@@ -212,6 +212,7 @@ export default function ConversionOptimizationPage() {
         titleHighlight="That Turns Visitors Into Leads"
         description="I find the exact reasons your B2B website isn't turning visitors into qualified leads, then fix them systematically — with data, not guesswork."
         backgroundImage="/images/services-conversion-optimization-hero-bg.jpg"
+        imagePosition="88% 50%"
         badges={["Audit-first approach", "Measured before & after", "No vanity metrics"]}
       />
 

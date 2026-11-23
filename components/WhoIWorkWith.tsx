@@ -31,7 +31,7 @@ const audiences: Audience[] = [
         related: [
             { label: "City View Tavern", href: "/work/city-view-tavern-wordpress-block-theme" },
             { label: "Globe Iron Roofing", href: "/work/globe-iron-roofing-wordpress-theme" },
-            { label: "Zero Gravity NKY", href: "/work/zero-gravity-performance-rebuild" },
+            { label: "Zero Gravity Aesthetics", href: "/work/zero-gravity-performance-rebuild" },
         ],
     },
     {
@@ -81,7 +81,7 @@ export default function WhoIWorkWith() {
                                 className="flex flex-col rounded-2xl bg-neutral-950 p-8 md:p-10 text-white shadow-[0_24px_50px_-24px_rgba(15,33,56,0.14)] ring-1 ring-black/5"
                             >
                                 <div className="mb-6 flex items-center gap-3">
-                                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/[0.08] text-white" aria-hidden="true">
+                                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#0f2138] text-[#a8b522]" aria-hidden="true">
                                         <Icon className="h-5 w-5" strokeWidth={1.75} />
                                     </span>
                                     <span className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-400">{a.eyebrow}</span>

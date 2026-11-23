@@ -160,6 +160,7 @@ export default function ProfessionalServicesIndustryPage() {
         titleHighlight="for Complex Sales Cycles"
         description="B2B buyers don't convert on first visit. They evaluate, compare, and bring in stakeholders before a decision is made. Your website needs to build trust at each stage — not just look professional."
         backgroundImage="/images/industries-professional-services-hero-bg.jpg"
+        imagePosition="75% 45%"
         badges={["Multi-stakeholder trust", "Pipeline generation", "CRM integration"]}
       />
 

@@ -4,12 +4,12 @@ import Image from "next/image";
 // Every stat is named and links to the project it came from.
 const caseStudies = [
     {
-        client: "Mona Dermatology",
-        industry: "Healthcare",
-        metric: "312%",
-        outcome: "More appointment bookings",
-        detail: "Cincinnati practice, 6 months post-launch",
-        href: "/work/mona-dermatology-wordpress-woocommerce",
+        client: "City View Tavern",
+        industry: "Hospitality",
+        metric: "21×",
+        outcome: "Clicks from Google search",
+        detail: "408 vs. 19 before launch, in equal 38-day windows",
+        href: "/work/city-view-tavern-wordpress-block-theme",
     },
     {
         client: "The Shortening Shuttle",
@@ -20,11 +20,11 @@ const caseStudies = [
         href: "/work/ecommerce-website-redesign-increase-aov",
     },
     {
-        client: "Zero Gravity NKY",
+        client: "Zero Gravity Aesthetics",
         industry: "Medical Spa",
-        metric: "80ms",
-        outcome: "Total blocking time",
-        detail: "Down from 400ms after the performance rebuild",
+        metric: "98",
+        outcome: "PageSpeed performance",
+        detail: "Desktop score, plus 100 for accessibility and SEO",
         href: "/work/zero-gravity-performance-rebuild",
     },
     {
@@ -79,7 +79,7 @@ export default function Results() {
                             <div className="h-8 w-36 relative opacity-90">
                                 <Image
                                     src="/images/work/zerogravity-logo-ink.png"
-                                    alt="Zero Gravity of Northern Kentucky"
+                                    alt="Zero Gravity Aesthetics"
                                     fill
                                     className="object-contain object-left"
                                 />
@@ -90,13 +90,13 @@ export default function Results() {
 
                         <div className="flex-1 min-w-0">
                             <h3 className="text-xl md:text-2xl font-bold text-white leading-snug mb-2 group-hover:text-white transition-colors duration-200">
-                                Zero Gravity of Northern Kentucky
+                                Zero Gravity Aesthetics
                             </h3>
                             <p className="text-sm md:text-base text-neutral-300 leading-relaxed mb-4 max-w-2xl">
                                 A Northern Kentucky medical spa&apos;s WordPress site, rebuilt for speed — WooCommerce ripped out, booking links generalized, and page load times cut dramatically.
                             </p>
                             <div className="flex flex-wrap gap-2">
-                                {["WooCommerce removed", "Booking links generalized", "Major page speed gains"].map((tag) => (
+                                {["WooCommerce removed", "Booking links generalized", "98 PageSpeed on desktop"].map((tag) => (
                                     <span key={tag} className="text-xs font-medium text-white bg-white/[0.04] border border-neutral-800 rounded-full px-3 py-1">
                                         {tag}
                                     </span>
@@ -105,7 +105,7 @@ export default function Results() {
                         </div>
 
                         <div className="shrink-0 self-start md:self-center">
-                            <span className="inline-flex items-center gap-2 rounded-md bg-volt-500 text-neutral-100 px-5 py-3 text-sm font-bold group-hover:bg-neutral-200 group-hover:gap-3 transition-all duration-200 shadow-lg whitespace-nowrap">
+                            <span className="inline-flex items-center gap-2 rounded-md bg-volt-500 text-neutral-100 px-5 py-3 text-sm font-bold group-hover:bg-volt-400 group-hover:gap-3 transition-all duration-200 shadow-lg whitespace-nowrap">
                                 See the Project
                                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />

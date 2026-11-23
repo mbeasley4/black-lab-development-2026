@@ -544,7 +544,7 @@ export default function Header() {
             <header className={`fixed top-0 z-50 w-full bg-surface text-[#24344b] border-b transition-colors duration-200 ${openMega ? "border-transparent" : "border-neutral-800"}`}>
                 {/* Announcement bar */}
                 <div
-                    className={`w-full overflow-hidden bg-charcoal text-neutral-300 transition-[height,opacity] duration-300 ease-out motion-reduce:transition-none ${
+                    className={`w-full band-navy overflow-hidden text-neutral-300 transition-[height,opacity] duration-300 ease-out motion-reduce:transition-none ${
                         barHidden ? "opacity-0" : "border-b border-neutral-800 opacity-100"
                     }`}
                     style={{ height: barHidden ? 0 : ANNOUNCEMENT_HEIGHT }}
@@ -552,7 +552,7 @@ export default function Header() {
                     aria-hidden={barHidden}
                 >
                     <div className="mx-auto flex h-full max-w-375 items-center justify-center gap-3 px-6 sm:px-10 md:px-14 lg:px-20 text-[13px]">
-                        <span className="inline-flex items-center gap-1.5 rounded-full border border-volt-600/50 bg-volt-500/15 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-[#4f5a10]">
+                        <span className="inline-flex items-center gap-1.5 rounded-full border border-volt-500/50 bg-volt-500/15 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-[#d3de5c]">
                             <span className="relative flex h-1.5 w-1.5" aria-hidden>
                                 <span className="absolute inline-flex h-full w-full rounded-full bg-volt-500 opacity-75 motion-safe:animate-ping" />
                                 <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-volt-600" />

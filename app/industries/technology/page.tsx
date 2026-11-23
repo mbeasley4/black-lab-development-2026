@@ -164,6 +164,7 @@ export default function TechnologyIndustryPage() {
         titleHighlight="That Drives Signups"
         description="SaaS websites have one job: convert the right traffic into trials, demos, and qualified pipeline. Every design decision, every integration, every performance trade-off should serve that goal."
         backgroundImage="/images/industries-technology-hero-bg.jpg"
+        imagePosition="25% 35%"
         badges={["Product-led growth", "Sub-2s load times", "CRM & analytics integration"]}
       />
 

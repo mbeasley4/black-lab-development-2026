@@ -13,7 +13,6 @@ import { getProjectDetail } from "@/data/projectDetails";
 // than data/projectDetails.ts. Keep these in sync with the project pages.
 const STAT_OVERRIDES: Record<string, { value: string; label: string }> = {
     "ecommerce-website-redesign-increase-aov": { value: "+164%", label: "Average order value" },
-    "zero-gravity-performance-rebuild": { value: "80ms", label: "Total blocking time, down from 400ms" },
 };
 
 const DEFAULT_SLUGS = [

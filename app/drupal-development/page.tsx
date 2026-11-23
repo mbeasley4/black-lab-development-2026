@@ -160,7 +160,8 @@ export default function DrupalDevelopmentPage() {
         title="Custom Drupal Development for Complex Content"
         titleHighlight="for Complex Content"
         description="Most Drupal sites drown in contrib modules before anyone touches content architecture. I build custom — clean entity design, purpose-built modules, no maintenance nightmares."
-        backgroundImage="/images/drupal-hero-bg.jpg"
+        backgroundImage="/images/drupal-hero-code.jpg"
+        imagePosition="0% 10%"
         badges={["No contrib bloat", "Structured content modeling", "Clean, maintainable code"]}
       />
 

@@ -57,13 +57,17 @@ const metricGridCols = (count: number) =>
 type SanityImage = { _key?: string; alt?: string; caption?: string };
 
 // Page content comes from, in order:
-//   1. a published Sanity caseStudy with this slug,
+//   1. a published Sanity caseStudy with this slug (unless the write-up in
+//      data/projectDetails.ts sets overridesSanity),
 //   2. the full write-up in data/projectDetails.ts,
 //   3. the portfolio card in data/projects.ts.
 // Every source is normalized to the same shape so the template renders them
 // identically, and every portfolio card has a working detail page.
 async function loadStudy(slug: string) {
-  const study = await client.fetch(CASE_STUDY_QUERY, { slug });
+  const detail = getProjectDetail(slug);
+  const study = detail?.overridesSanity
+    ? null
+    : await client.fetch(CASE_STUDY_QUERY, { slug });
   const project = projects.find((p) => p.slug === slug);
   if (study) {
     return {
@@ -85,7 +89,6 @@ async function loadStudy(slug: string) {
     };
   }
   if (!project) return null;
-  const detail = getProjectDetail(slug);
   return {
     _id: `project-${slug}`,
     title: detail?.title ?? project.name,

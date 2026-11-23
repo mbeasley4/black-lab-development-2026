@@ -231,6 +231,7 @@ export default function WhiteLabelWebDevelopmentPage() {
         titleHighlight="Shipped Under Your Brand"
         description="The delivery model in detail: how handoff works, what your client sees, what you actually receive, who owns the code, and how long it takes. No mystery, no surprises in front of your client."
         backgroundImage="/images/services-hero-bg.png"
+        imagePosition="66% 70%"
         badges={["Full IP assignment", "Zero attribution", "Fixed scope and dates"]}
       />
 

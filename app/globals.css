@@ -599,3 +599,79 @@ section.bg-charcoal :is(.bg-neutral-950, .bg-neutral-900\/50, .bg-neutral-950\/5
 .band-accent :is(.bg-neutral-900\/50, .bg-neutral-950, .bg-neutral-900) {
   background-color: #ffffff;
 }
+
+/* =========================================================
+   Split hero (inner pages)
+   Photo and copy panel sit side by side on large screens and stack below
+   that, so the panel never covers the photo's subject. The photo starts
+   under the fixed header rather than behind it. On large screens the panel
+   overlaps the photo's left edge by --hero-overlap only.
+   ========================================================= */
+.hero-split {
+  --hero-split: 46vw;
+  --hero-overlap: 1.5rem;
+  /* Tuck 4px under the header so no background shows between them */
+  --hero-top: calc(var(--header-h) - 4px);
+  position: relative;
+  overflow: hidden;
+  padding-top: var(--hero-top);
+  /* Navy field behind the panel: lime glow by the photo, faint diagonals.
+     Set as a plain background (not band-navy) so the white panel keeps its
+     light-theme colour tokens. */
+  background:
+    radial-gradient(45% 70% at 46% 100%, rgba(168, 181, 34, 0.3), transparent 70%),
+    radial-gradient(40% 60% at 0% 0%, rgba(70, 120, 190, 0.28), transparent 70%),
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 14px),
+    #0f2138;
+}
+.hero-split-media {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: #16304f;
+  border-bottom: 4px solid #a8b522;
+}
+.hero-split-body {
+  position: relative;
+  z-index: 10;
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+@media (min-width: 640px) {
+  .hero-split-media {
+    aspect-ratio: 16 / 9;
+  }
+}
+@media (min-width: 1024px) {
+  .hero-split {
+    padding-top: 0;
+  }
+  .hero-split-media {
+    position: absolute;
+    inset: var(--hero-top) 0 0 var(--hero-split);
+    aspect-ratio: auto;
+    border-bottom: 0;
+    border-left: 4px solid #a8b522;
+  }
+  .hero-split-body {
+    display: flex;
+    align-items: center;
+    min-height: 720px;
+    padding-top: calc(var(--header-h) + 3rem);
+    padding-bottom: 3rem;
+  }
+  /* Right edge lands at the split + overlap, whatever the container gutter is */
+  .hero-split-panel {
+    width: calc(var(--hero-split) + var(--hero-overlap) - max(5rem, (100vw - 93.75rem) / 2 + 5rem));
+  }
+}
+
+/* Article variant: image sits in a frame inside the body, no media layer */
+.hero-split-body--framed {
+  padding-top: 2.5rem;
+}
+@media (min-width: 1024px) {
+  .hero-split-body--framed {
+    padding-top: calc(var(--header-h) + 3rem);
+  }
+}

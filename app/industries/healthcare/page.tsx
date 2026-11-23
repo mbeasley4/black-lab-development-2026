@@ -84,7 +84,7 @@ const faqSchema = {
       name: "How do you increase patient appointment bookings through a website?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The highest-impact levers are: (1) reducing friction in the booking flow — one click from homepage to booking, (2) mobile optimization since most patients search on phone, (3) local SEO for the specific services and location patients search for, and (4) social proof placement near booking CTAs. For Mona Dermatology, these changes produced a 312% increase in appointment bookings.",
+        text: "The highest-impact levers are: (1) reducing friction in the booking flow — one click from homepage to booking, (2) mobile optimization since most patients search on phone, (3) local SEO for the specific services and location patients search for, and (4) social proof placement near booking CTAs. For DexaFit Cincinnati, an SEO overhaul moved the average Google position for “DEXA scan near me” from #14.5 to #3.7 in the first six weeks.",
       },
     },
     {
@@ -140,12 +140,12 @@ const deliverables = [
 
 const clients = [
   {
-    name: "Mona Dermatology",
-    detail: "312% increase in appointment bookings after rebuilding their patient-facing website with a friction-free booking flow and local SEO optimization.",
+    name: "DexaFit Cincinnati",
+    detail: "Average Google position for “DEXA scan near me” rose from #14.5 to #3.7 in the six weeks after an SEO overhaul with per-page structured data and clearer booking CTAs.",
   },
   {
-    name: "Zero Gravity of Northern Kentucky",
-    detail: "Ongoing WordPress engineering for a medical spa — WooCommerce replaced with a dedicated booking platform and page speed rebuilt from the ground up.",
+    name: "Zero Gravity Aesthetics",
+    detail: "Ongoing WordPress engineering for a Northern Kentucky medical spa — WooCommerce replaced with a dedicated booking platform and page speed rebuilt from the ground up.",
   },
 ];
 
@@ -160,12 +160,13 @@ export default function HealthcareIndustryPage() {
         titleHighlight="That Turns Searches Into Appointments"
         description="Healthcare searches happen on phones, in moments of need. Your website needs to be fast, accessible, and remove every obstacle between a patient finding you and scheduling a visit."
         backgroundImage="/images/industries-healthcare-hero-bg.jpg"
+        imagePosition="72% 50%"
         badges={["Patient acquisition", "WCAG 2.1 AA accessibility", "Local SEO"]}
       />
 
       <QuickAnswerBlock
         question="What should a healthcare website include?"
-        answer="A healthcare website needs fast load times, frictionless appointment booking, mobile-first design, WCAG 2.1 AA accessibility, and local SEO signals for each clinic location. For Mona Dermatology, these improvements produced a 312% increase in appointment bookings. Black Lab Development builds healthcare sites in Cincinnati and for practices across the U.S."
+        answer="A healthcare website needs fast load times, frictionless appointment booking, mobile-first design, WCAG 2.1 AA accessibility, and local SEO signals for each clinic location. For DexaFit Cincinnati, an SEO overhaul moved the average Google position for “DEXA scan near me” from #14.5 to #3.7 in the first six weeks. Black Lab Development builds healthcare sites in Cincinnati and for practices across the U.S."
       />
 
       {/* What We Deliver */}

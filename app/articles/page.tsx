@@ -204,7 +204,8 @@ export default async function ArticlesPage({
         title="Web Development & SEO Articles From the Codebase"
         titleHighlight="From the Codebase"
         description="Articles documenting technical decisions, tradeoffs, and lessons learned while building systems that run under real-world conditions."
-        backgroundImage="/images/articles-hero-bg.png"
+        backgroundImage="/images/insights-hero-desk.jpg"
+        imagePosition="5% 60%"
         badges={["Senior-led execution", "Production systems", "Direct collaboration"]}
       />
 

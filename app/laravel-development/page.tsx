@@ -201,7 +201,8 @@ export default function LaravelDevelopmentPage() {
         title="Custom Laravel Development for APIs and Web Apps"
         titleHighlight="for APIs and Web Apps"
         description="Most Laravel apps rot into fat controllers and silent queue failures nobody monitors. I build custom — service architecture, integration resilience, zero spaghetti code."
-        backgroundImage="/images/laravel-hero-bg.jpg"
+        backgroundImage="/images/laravel-hero-code.jpg"
+        imagePosition="0% 10%"
         badges={["Clean architecture", "Production-grade integrations", "Full-stack Laravel"]}
       />
 

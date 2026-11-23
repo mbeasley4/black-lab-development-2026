@@ -242,6 +242,7 @@ export default function PartnersPage() {
         titleHighlight="I Build It. You Brand It."
         description="Senior engineering for agencies and strategy firms that don't want another full-time dev hire. No subcontractor pool, no offshore relay — you brief me, I build it, you ship it."
         backgroundImage="/images/partners-hero-bg.jpg"
+        imagePosition="65% 60%"
         badges={["White-label delivery", "NDA-friendly", "Direct to a senior engineer"]}
       />
 

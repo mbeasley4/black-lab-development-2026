@@ -151,7 +151,8 @@ export default function WordPressDevelopmentPage() {
         title="Custom WordPress Development Without Page-Builder Bloat"
         titleHighlight="Without Page-Builder Bloat"
         description="Most WordPress sites are built on templates, stacked with plugins, and slow before they finish loading. I build custom — clean code, no page builders, no plugin roulette."
-        backgroundImage="/images/wordpress-hero-bg.jpg"
+        backgroundImage="/images/wordpress-hero-code.jpg"
+        imagePosition="0% 10%"
         badges={["No page builders", "Performance-first architecture", "Clean, maintainable code"]}
       />
 
