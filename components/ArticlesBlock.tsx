@@ -41,7 +41,7 @@ export default async function ArticlesBlock() {
         {/* Header: matches the other homepage sections */}
         <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
-            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+            <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               Insights
             </span>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] text-white">
@@ -66,7 +66,7 @@ export default async function ArticlesBlock() {
             <AnimatedCard key={a._id} delay={index * 100}>
               <Link
                 href={`/articles/${a.slug.current}`}
-                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-950 transition-all duration-300 hover:border-neutral-600 hover:shadow-xl hover:shadow-black/40 motion-safe:hover:-translate-y-1"
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-950 transition-all duration-300 hover:border-neutral-600 hover:shadow-xl hover:shadow-slate-900/40 motion-safe:hover:-translate-y-1"
               >
                 <div className="relative aspect-16/10 w-full overflow-hidden bg-neutral-900">
                   <Image

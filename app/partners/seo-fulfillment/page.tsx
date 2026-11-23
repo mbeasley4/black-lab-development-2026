@@ -227,7 +227,7 @@ export default function SeoFulfillmentPage() {
       <section className="py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+            <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               The Gap
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -241,7 +241,7 @@ export default function SeoFulfillmentPage() {
             {gaps.map((item) => (
               <div key={item.title} className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-8">
                 <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center mb-4">
-                  <svg className="w-4 h-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-4 h-4 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                   </svg>
                 </div>
@@ -254,10 +254,10 @@ export default function SeoFulfillmentPage() {
       </section>
 
       {/* Scope */}
-      <section className="py-20 bg-neutral-950/50 border-b border-neutral-800">
+      <section className="bg-charcoal py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+            <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               What I Implement
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -291,10 +291,10 @@ export default function SeoFulfillmentPage() {
       </section>
 
       {/* Process */}
-      <section className="bg-charcoal py-20 border-b border-neutral-800">
+      <section className="band-navy py-20">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+            <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               How It Works
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -304,7 +304,7 @@ export default function SeoFulfillmentPage() {
           <div className="space-y-12">
             {process.map((item) => (
               <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
-                <div className="text-5xl font-black font-mono text-white/10 leading-none">{item.step}</div>
+                <div aria-hidden="true" className="text-5xl font-black font-mono text-white/10 leading-none">{item.step}</div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                   <p className="text-neutral-400 leading-relaxed">{item.body}</p>

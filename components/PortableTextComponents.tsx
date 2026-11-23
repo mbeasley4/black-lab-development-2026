@@ -28,7 +28,7 @@ function PortableTextTable({ value }: { value: TableValue }) {
                                     key={i}
                                     className={`border-b border-neutral-800 px-3 py-2.5 font-semibold text-white ${
                                         i === 0
-                                            ? "sticky left-0 z-10 bg-neutral-900 text-left shadow-[2px_0_4px_rgba(0,0,0,0.3)]"
+                                            ? "sticky left-0 z-10 bg-neutral-900 text-left shadow-[2px_0_4px_rgba(15,33,56,0.09)]"
                                             : "text-center"
                                     }`}
                                 >
@@ -45,7 +45,7 @@ function PortableTextTable({ value }: { value: TableValue }) {
                                         key={j}
                                         className={`border-b border-neutral-800/60 px-3 py-2.5 text-neutral-300 ${
                                             j === 0
-                                                ? "sticky left-0 z-10 bg-surface text-left font-medium text-white shadow-[2px_0_4px_rgba(0,0,0,0.3)] group-even:bg-neutral-900/30"
+                                                ? "sticky left-0 z-10 bg-surface text-left font-medium text-white shadow-[2px_0_4px_rgba(15,33,56,0.09)] group-even:bg-neutral-900/30"
                                                 : "text-center"
                                         }`}
                                     >

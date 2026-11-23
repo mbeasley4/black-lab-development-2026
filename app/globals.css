@@ -1,8 +1,37 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0b0b0c;
-  --foreground: #e5e7eb;
+  --background: #ffffff;
+  --foreground: #1e293b;
+}
+
+/* =========================================================
+   LIGHT THEME
+   The components were written for a dark UI (text-white on
+   neutral-950, borders in neutral-800, etc.). Rather than rewrite
+   every class, the neutral scale plus white/black are remapped
+   here so each class keeps its *role* but renders light:
+     text-white        -> navy ink (headings)
+     text-neutral-300/400 -> slate body copy (high contrast)
+     bg-neutral-950/900   -> white / cool off-white cards
+     border-neutral-800   -> hairline slate border
+     bg-white + text-black buttons -> navy button, white label
+     bg-neutral-100 "light" bands  -> deep navy contrast bands
+   ========================================================= */
+@theme {
+  --color-white: #0f2138;
+  --color-black: #ffffff;
+  --color-neutral-50: #0b1a2e;
+  --color-neutral-100: #0f2138;
+  --color-neutral-200: #1c3150;
+  --color-neutral-300: #24344b;
+  --color-neutral-400: #3e4c61;
+  --color-neutral-500: #5b6779;
+  --color-neutral-600: #94a0b2;
+  --color-neutral-700: #c9d2de;
+  --color-neutral-800: #e1e6ee;
+  --color-neutral-900: #f1f4f8;
+  --color-neutral-950: #f8fafc;
 }
 
 @keyframes marquee {
@@ -21,23 +50,23 @@
   --color-volt-100: #f5fac3;
   --color-volt-200: #eef88a;
   --color-volt-300: #eef88a;
-  --color-volt-400: #e9f76a; /* hover state for volt-500 surfaces */
-  --color-volt-500: #E3F544; /* brand accent */
+  --color-volt-400: #96a21c; /* hover state for volt-500 surfaces */
+  --color-volt-500: #a8b522; /* brand accent — a step deeper than the logo lime (#c3d128) */
   --color-volt-600: #c2d435;
   --color-volt-700: #96a429;
   --color-volt-800: #78841f;
   --color-volt-900: #4a5216;
   --color-volt-950: #282d0c;
-  --color-volt: #E3F544;
+  --color-volt: #a8b522;
   /* Surfaces: one set of near-blacks for the whole site.
      surface = page background, raised = alternate bands and cards,
      sunken = the deepest wells (footer, inset panels). */
-  --color-surface: #0b0b0c;
-  --color-surface-raised: #121214;
-  --color-surface-sunken: #08080a;
-  /* Section rhythm: rotate surface (near-black), charcoal, and light
-     (neutral-100) so adjacent blocks read as distinct. */
-  --color-charcoal: #1a1a1e;
+  --color-surface: #ffffff;
+  --color-surface-raised: #eef2f7;
+  --color-surface-sunken: #e6ebf2;
+  /* Section rhythm: rotate surface (white), charcoal (cool blue-grey with a
+     dot texture) and neutral-100 (navy) so adjacent blocks read as distinct. */
+  --color-charcoal: #e8edf4;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -185,18 +214,15 @@ article.prose {
 
 /* --- Typography tuning for long-form reading --- */
 .prose {
-  --tw-prose-body: #d1d5db;
-  /* neutral-300 */
-  --tw-prose-headings: #ffffff;
-  --tw-prose-links: #f5f5f5;
-  /* volt-500 */
-  --tw-prose-bold: #ffffff;
-  --tw-prose-quotes: #e5e7eb;
-  --tw-prose-code: #e5e7eb;
-  --tw-prose-pre-code: #e5e7eb;
-  --tw-prose-pre-bg: #020617;
-  /* near-black */
-  --tw-prose-hr: #1f2937;
+  --tw-prose-body: #24344b;
+  --tw-prose-headings: #0f2138;
+  --tw-prose-links: #0f2138;
+  --tw-prose-bold: #0f2138;
+  --tw-prose-quotes: #24344b;
+  --tw-prose-code: #0f2138;
+  --tw-prose-pre-code: #e2e8f0;
+  --tw-prose-pre-bg: #0f2138;
+  --tw-prose-hr: #e1e6ee;
 }
 
 /* --- Headings --- */
@@ -232,8 +258,7 @@ article.prose {
 }
 
 .prose a:hover {
-  color: #eef88a;
-  /* volt-200 */
+  color: #5f6b0f;
 }
 
 /* --- Lists --- */
@@ -257,10 +282,10 @@ article.prose {
 
 /* --- Blockquotes --- */
 .prose blockquote {
-  border-left: 3px solid #374151;
+  border-left: 3px solid #c2d435;
   padding-left: 1.25rem;
   font-style: normal;
-  color: #d1d5db;
+  color: #24344b;
 }
 
 /* --- Images inside articles --- */
@@ -273,7 +298,7 @@ article.prose {
 .prose pre {
   border-radius: 0.75rem;
   padding: 1.25rem 1.5rem;
-  border: 1px solid #1f2937;
+  border: 1px solid #e1e6ee;
   overflow-x: auto;
 }
 
@@ -283,7 +308,7 @@ article.prose {
 
 /* --- Inline code --- */
 .prose :not(pre)>code {
-  background-color: #020617;
+  background-color: #eef2f7;
   padding: 0.15rem 0.35rem;
   border-radius: 0.375rem;
 }
@@ -342,19 +367,14 @@ article.prose {
   100% { background-position: -200% 50%; }
 }
 .text-volt-shimmer {
-  background-image: linear-gradient(110deg,
-      #E3F544 0%, #E3F544 40%, #fbfde8 50%, #E3F544 60%, #E3F544 100%);
-  background-size: 250% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: volt-shimmer 5s linear infinite;
-  filter: drop-shadow(0 0 28px rgba(227, 245, 68, 0.35));
+  color: #0f2138;
+  background-image: linear-gradient(transparent 62%, rgba(168, 181, 34, 0.6) 62%, rgba(168, 181, 34, 0.6) 92%, transparent 92%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-ken-burns,
-  .text-volt-shimmer {
+  .animate-ken-burns {
     animation: none;
   }
 }
@@ -384,4 +404,198 @@ article.prose {
   .animate-scan-beam {
     animation: none;
   }
+}
+
+/* =========================================================
+   Accent system (light theme)
+   Brand lime from the logo, used as a fill/marker — never as
+   small text on white, where it can't meet contrast.
+   ========================================================= */
+:root {
+  --accent: #a8b522;
+  --accent-strong: #a8b522;
+}
+
+/* Section eyebrows get a short lime rule before the label text */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+.eyebrow::before {
+  content: "";
+  width: 1.75rem;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--accent-strong);
+}
+
+/* Two-tone headings: the secondary phrase gets a lime underline on light
+   sections... */
+:where(h1, h2) :is(.text-neutral-400, .text-neutral-500) {
+  color: var(--color-neutral-200);
+  text-decoration-line: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 0.14em;
+  text-underline-offset: 0.12em;
+  text-decoration-skip-ink: none;
+}
+/* Inline phrases become inline-block so a leading space at a line wrap
+   doesn't leave a stray underline stub on the previous line. */
+:where(h1, h2) :is(.text-neutral-400, .text-neutral-500):not(.block) {
+  display: inline-block;
+}
+
+/* ...and turns lime on the navy bands */
+:is(.bg-neutral-100, .bg-white, .band-navy) :where(h1, h2) :is(.text-neutral-400, .text-neutral-500),
+:is(.bg-neutral-100, .bg-white, .band-navy) .eyebrow {
+  color: #a8b522;
+  text-decoration-line: none;
+}
+:is(.bg-neutral-100, .bg-white, .band-navy) .eyebrow::before {
+  background: #a8b522;
+}
+/* band-light restores normal light styling inside a section that would
+   otherwise read as a navy band (see "Section bands" below) */
+.band-light .eyebrow {
+  color: var(--color-neutral-600);
+}
+.band-light :where(h1, h2) :is(.text-neutral-400, .text-neutral-500, .text-neutral-600) {
+  color: var(--color-neutral-900);
+  text-decoration-line: underline;
+}
+
+/* =========================================================
+   Section separation
+   Tinted bands get a faint dot grid and hairline edges so they
+   read as distinct from the white sections around them.
+   ========================================================= */
+section.bg-charcoal,
+section.bg-surface-raised,
+section.bg-neutral-950\/50 {
+  background-color: var(--color-charcoal);
+  background-image: radial-gradient(rgba(15, 33, 56, 0.09) 1px, transparent 1px);
+  background-size: 22px 22px;
+  box-shadow: inset 0 1px 0 rgba(15, 33, 56, 0.07), inset 0 -1px 0 rgba(15, 33, 56, 0.07);
+}
+/* Cards sitting on a tinted band lift to pure white */
+section.bg-charcoal :is(.bg-neutral-950, .bg-neutral-900\/50, .bg-neutral-950\/50) {
+  background-color: #ffffff;
+}
+
+/* =========================================================
+   Brand watermark
+   Add `watermark` (right) or `watermark watermark-left` to a
+   relative, overflow-hidden section. `watermark-light` swaps in
+   the light logo for navy bands.
+   ========================================================= */
+.watermark {
+  isolation: isolate;
+}
+.watermark::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: -4rem;
+  bottom: -5rem;
+  width: clamp(260px, 32vw, 460px);
+  aspect-ratio: 900 / 1234;
+  background: url("/images/blacklabdevelopment-dark.png") center / contain no-repeat;
+  opacity: 0.06;
+  pointer-events: none;
+}
+.watermark-left::before {
+  right: auto;
+  left: -4rem;
+}
+/* =========================================================
+   Hero frame
+   One height for every hero. The fixed header overlaps the top of
+   the hero, so top padding clears it and the content is centred in
+   the space that remains. Content taller than the frame grows it.
+   ========================================================= */
+:root {
+  --header-h: 76px;
+}
+.hero-frame {
+  display: flex;
+  align-items: center;
+  min-height: 600px;
+  padding-top: calc(var(--header-h) + 2.5rem);
+  padding-bottom: 2.5rem;
+}
+@media (min-width: 768px) {
+  .hero-frame {
+    min-height: 720px;
+    padding-top: calc(var(--header-h) + 3.5rem);
+    padding-bottom: 3.5rem;
+  }
+}
+
+.watermark-light::before {
+  background-image: url("/images/blacklabdevelopment.png");
+  opacity: 0.07;
+}
+
+/* =========================================================
+   Section bands
+   Pages rotate white / bg-charcoal (tint) / band-navy / band-accent
+   so consecutive blocks never look alike.
+
+   band-navy and band-light work by re-scoping the colour tokens: the
+   utilities read var(--color-*), so inside the band the same classes
+   resolve to dark-on-navy (band-navy) or normal light (band-light)
+   meanings, with no markup changes.
+   ========================================================= */
+.band-navy {
+  --color-white: #ffffff;
+  --color-black: #0b1a2e;
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #f1f4f8;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-300: #d3dbe5;
+  --color-neutral-400: #b4c0cf;
+  --color-neutral-500: #8b9bb0;
+  --color-neutral-600: #5f7290;
+  --color-neutral-700: #3a4f6c;
+  --color-neutral-800: #253a56;
+  --color-neutral-900: #172b45;
+  --color-neutral-950: #0b1a2e;
+  position: relative;
+  isolation: isolate;
+  background-color: #0f2138;
+  background-image: radial-gradient(60% 80% at 100% 0%, rgba(168, 181, 34, 0.12), transparent 70%);
+  color: var(--color-neutral-300);
+}
+/* Lime buttons keep navy labels inside the band */
+.band-navy :is(.bg-volt-500, .bg-volt) {
+  color: #0f2138;
+}
+.band-navy .text-volt-700 {
+  color: #a8b522;
+}
+
+.band-light {
+  --color-white: #ffffff;
+  --color-black: #0f2138;
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #eef2f7;
+  --color-neutral-200: #dde3ec;
+  --color-neutral-300: #c9d2de;
+  --color-neutral-400: #94a0b2;
+  --color-neutral-500: #5b6779;
+  --color-neutral-600: #3e4c61;
+  --color-neutral-700: #2b3a50;
+  --color-neutral-800: #1c3150;
+  --color-neutral-900: #13263f;
+  --color-neutral-950: #0f2138;
+}
+
+.band-accent {
+  background-color: #f6f8e8;
+  background-image: linear-gradient(180deg, rgba(168, 181, 34, 0.1), transparent 55%);
+  box-shadow: inset 0 3px 0 #a8b522;
+}
+.band-accent :is(.bg-neutral-900\/50, .bg-neutral-950, .bg-neutral-900) {
+  background-color: #ffffff;
 }

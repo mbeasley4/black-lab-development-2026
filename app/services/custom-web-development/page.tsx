@@ -231,7 +231,7 @@ export default function CustomWebDevelopmentPage() {
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-white text-black px-7 py-3.5 text-sm font-semibold hover:bg-neutral-200 transition-colors duration-200 shadow-lg"
+              className="inline-flex items-center justify-center rounded-md bg-volt-500 text-neutral-100 px-7 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg"
             >
               Start a Project →
             </Link>
@@ -249,7 +249,7 @@ export default function CustomWebDevelopmentPage() {
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
-                <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+                <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                   Why Custom
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -267,7 +267,7 @@ export default function CustomWebDevelopmentPage() {
                   <div key={item.problem} className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-6">
                     <div className="flex items-start gap-3">
                       <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center shrink-0 mt-0.5">
-                        <svg className="w-3 h-3 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg className="w-3 h-3 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
                         </svg>
                       </div>
@@ -284,10 +284,10 @@ export default function CustomWebDevelopmentPage() {
         </section>
 
         {/* Tech stack */}
-        <section className="py-20 bg-neutral-950/50 border-b border-neutral-800">
+        <section className="bg-charcoal py-20 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-14">
-              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+              <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Technology
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -309,10 +309,10 @@ export default function CustomWebDevelopmentPage() {
         </section>
 
         {/* Process */}
-        <section className="bg-charcoal py-20 border-b border-neutral-800">
+        <section className="band-navy py-20">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-14">
-              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+              <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Process
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -325,7 +325,7 @@ export default function CustomWebDevelopmentPage() {
             <div className="space-y-12">
               {process.map((item) => (
                 <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
-                  <div className="text-5xl font-black font-mono text-white/10 leading-none">{item.step}</div>
+                  <div aria-hidden="true" className="text-5xl font-black font-mono text-white/10 leading-none">{item.step}</div>
                   <div className="border-b border-neutral-800 pb-12 last:border-0 last:pb-0">
                     <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                     <p className="text-neutral-400 leading-relaxed">{item.body}</p>
@@ -337,11 +337,11 @@ export default function CustomWebDevelopmentPage() {
         </section>
 
         {/* Use cases */}
-        <section className="py-20 bg-neutral-950/50 border-b border-neutral-800">
+        <section className="band-accent py-20 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
-                <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+                <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                   Is It Right For You?
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -364,12 +364,12 @@ export default function CustomWebDevelopmentPage() {
         </section>
 
         {/* Featured custom build */}
-        <section className="bg-charcoal py-20 border-b border-neutral-800" aria-labelledby="featured-build-heading">
+        <section className="band-navy py-20" aria-labelledby="featured-build-heading">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-12 items-center">
               <Link
                 href="/work/bishopric-industries-shop-floor-kiosk"
-                className="group block overflow-hidden rounded-xl border border-white/10 bg-neutral-900 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.7)] transition-colors duration-300 hover:border-neutral-500"
+                className="group block overflow-hidden rounded-xl border border-white/10 bg-neutral-900 shadow-[0_24px_60px_-20px_rgba(15,33,56,0.16)] transition-colors duration-300 hover:border-neutral-500"
                 aria-label="View the Bishopric Industries shop floor kiosk project"
               >
                 <div className="flex h-6 items-center gap-1.5 border-b border-white/5 px-3" aria-hidden="true">
@@ -389,7 +389,7 @@ export default function CustomWebDevelopmentPage() {
               </Link>
 
               <div>
-                <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+                <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                   Featured Custom Build
                 </span>
                 <h2 id="featured-build-heading" className="text-3xl md:text-4xl font-bold mb-5 text-white">
@@ -415,7 +415,7 @@ export default function CustomWebDevelopmentPage() {
                 </ul>
                 <Link
                   href="/work/bishopric-industries-shop-floor-kiosk"
-                  className="inline-flex items-center gap-2 rounded-md bg-white px-6 py-3 text-sm font-bold text-black hover:bg-neutral-200 transition-colors duration-200"
+                  className="inline-flex items-center gap-2 rounded-md bg-volt-500 px-6 py-3 text-sm font-bold text-neutral-100 hover:bg-volt-400 transition-colors duration-200"
                 >
                   See the Project
                   <span aria-hidden="true">→</span>

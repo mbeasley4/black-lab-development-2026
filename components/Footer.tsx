@@ -12,7 +12,7 @@ export default function Footer() {
                     <Link href="/" className="inline-flex items-center gap-3 mb-6 group">
                         <div className="relative shrink-0">
                             <Image
-                                src="/images/blacklabdevelopment.png"
+                                src="/images/blacklabdevelopment-dark.png"
                                 alt="Black Lab Development"
                                 width={36}
                                 height={36}

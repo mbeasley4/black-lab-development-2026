@@ -60,7 +60,7 @@ export default function WhoIWorkWith() {
         <section className="w-full bg-neutral-100 text-neutral-950 py-28 relative overflow-hidden">
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
                 <div className="mb-14 max-w-2xl">
-                    <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-500 font-semibold">
+                    <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-500 font-semibold">
                         Who It&apos;s For
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]">
@@ -78,7 +78,7 @@ export default function WhoIWorkWith() {
                         return (
                             <article
                                 key={a.href}
-                                className="flex flex-col rounded-2xl bg-neutral-950 p-8 md:p-10 text-white shadow-[0_24px_50px_-24px_rgba(0,0,0,0.45)] ring-1 ring-black/5"
+                                className="flex flex-col rounded-2xl bg-neutral-950 p-8 md:p-10 text-white shadow-[0_24px_50px_-24px_rgba(15,33,56,0.14)] ring-1 ring-black/5"
                             >
                                 <div className="mb-6 flex items-center gap-3">
                                     <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/[0.08] text-white" aria-hidden="true">
@@ -102,7 +102,7 @@ export default function WhoIWorkWith() {
                                 <div className="mt-auto flex flex-col gap-5">
                                     <Link
                                         href={a.href}
-                                        className="group inline-flex w-fit items-center gap-2 rounded-md bg-white px-5 py-3 text-sm font-bold text-black hover:bg-neutral-200 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                                        className="group inline-flex w-fit items-center gap-2 rounded-md bg-volt-500 px-5 py-3 text-sm font-bold text-neutral-100 hover:bg-volt-400 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                                     >
                                         {a.cta}
                                         <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>

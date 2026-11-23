@@ -45,7 +45,7 @@ export default function Results() {
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
                 <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
                     <div>
-                        <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+                        <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                             Selected Work
                         </span>
                         <h2 className="text-5xl md:text-6xl font-bold tracking-tight text-white leading-tight">
@@ -72,13 +72,13 @@ export default function Results() {
 
                     <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-8">
                         <div className="shrink-0 flex flex-row md:flex-col items-center md:items-start justify-between md:justify-start gap-4">
-                            <span className="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase px-3 py-1.5 rounded-full bg-white text-black shadow-lg">
+                            <span className="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase px-3 py-1.5 rounded-full bg-volt-500 text-neutral-100 shadow-lg">
                                 <span className="w-1.5 h-1.5 rounded-full bg-black animate-pulse" />
                                 Latest Win
                             </span>
                             <div className="h-8 w-36 relative opacity-90">
                                 <Image
-                                    src="/images/work/zerogravity-logo.png"
+                                    src="/images/work/zerogravity-logo-ink.png"
                                     alt="Zero Gravity of Northern Kentucky"
                                     fill
                                     className="object-contain object-left"
@@ -105,7 +105,7 @@ export default function Results() {
                         </div>
 
                         <div className="shrink-0 self-start md:self-center">
-                            <span className="inline-flex items-center gap-2 rounded-md bg-white text-black px-5 py-3 text-sm font-bold group-hover:bg-neutral-200 group-hover:gap-3 transition-all duration-200 shadow-lg whitespace-nowrap">
+                            <span className="inline-flex items-center gap-2 rounded-md bg-volt-500 text-neutral-100 px-5 py-3 text-sm font-bold group-hover:bg-neutral-200 group-hover:gap-3 transition-all duration-200 shadow-lg whitespace-nowrap">
                                 See the Project
                                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
@@ -141,7 +141,7 @@ export default function Results() {
                 <div className="text-center">
                     <Link
                         href="/contact"
-                        className="inline-flex items-center justify-center rounded-md bg-white px-8 py-4 text-sm font-bold text-black hover:bg-neutral-200 transition-colors duration-200"
+                        className="inline-flex items-center justify-center rounded-md bg-volt-500 px-8 py-4 text-sm font-bold text-neutral-100 hover:bg-volt-400 transition-colors duration-200"
                     >
                         Schedule a Discovery Call →
                     </Link>

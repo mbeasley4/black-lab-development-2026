@@ -46,7 +46,7 @@ export default function LegalPageLayout({
             </ul>
           </nav>
 
-          <article className="prose prose-invert max-w-none">{children}</article>
+          <article className="prose max-w-none">{children}</article>
         </div>
       </div>
     </main>

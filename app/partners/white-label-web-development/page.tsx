@@ -243,7 +243,7 @@ export default function WhiteLabelWebDevelopmentPage() {
       <section className="py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+            <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               What Your Client Sees
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -277,10 +277,10 @@ export default function WhiteLabelWebDevelopmentPage() {
       </section>
 
       {/* Deliverables */}
-      <section className="py-20 bg-neutral-950/50 border-b border-neutral-800">
+      <section className="bg-charcoal py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+            <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               Deliverables
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -307,10 +307,10 @@ export default function WhiteLabelWebDevelopmentPage() {
       </section>
 
       {/* Timeline */}
-      <section className="bg-charcoal py-20 border-b border-neutral-800">
+      <section className="band-navy py-20">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+            <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               The Engagement
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -320,7 +320,7 @@ export default function WhiteLabelWebDevelopmentPage() {
           <div className="space-y-12">
             {timeline.map((item) => (
               <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
-                <div className="text-5xl font-black font-mono text-white/10 leading-none">{item.step}</div>
+                <div aria-hidden="true" className="text-5xl font-black font-mono text-white/10 leading-none">{item.step}</div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                   <p className="text-neutral-400 leading-relaxed">{item.body}</p>

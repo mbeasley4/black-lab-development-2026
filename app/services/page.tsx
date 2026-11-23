@@ -215,7 +215,7 @@ export default function ServicesPage() {
       <section className="py-16 border-b border-neutral-800 bg-surface-raised/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="mb-10">
-            <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+            <span className="eyebrow inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               Who I Work With
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-white">Two Ways to Work With Me</h2>
@@ -314,7 +314,7 @@ export default function ServicesPage() {
                 {/* Text */}
                 <div className={`max-w-xl relative ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                   <div className="flex items-center gap-4 mb-6">
-                    <span className="text-5xl font-black font-mono text-white/10 leading-none tracking-tighter">
+                    <span aria-hidden="true" className="text-5xl font-black font-mono text-white/10 leading-none tracking-tighter">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <div className="h-px w-14 bg-linear-to-r from-white/10 to-white/10" />
@@ -430,7 +430,7 @@ export default function ServicesPage() {
                 className="bg-surface p-8 md:p-10 group hover:bg-surface-raised transition-colors duration-300 relative"
               >
                 <div className="flex items-start gap-5 mb-5">
-                  <span className="text-4xl font-black font-mono text-white/10 leading-none tracking-tighter group-hover:text-white transition-colors duration-300 shrink-0 pt-1">
+                  <span aria-hidden="true" className="text-4xl font-black font-mono text-white/10 leading-none tracking-tighter group-hover:text-white transition-colors duration-300 shrink-0 pt-1">
                     {item.step}
                   </span>
                   <div className="h-px w-10 bg-linear-to-r from-white/10 to-white/10 mt-5 shrink-0" />

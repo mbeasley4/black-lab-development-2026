@@ -94,7 +94,7 @@ export default function ContactForm() {
                 </p>
             )}
             {success === false && (
-                <p className="text-red-400 text-sm">
+                <p className="text-red-600 text-sm">
                     Submission failed. Please try again.
                 </p>
             )}

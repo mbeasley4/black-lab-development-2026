@@ -54,7 +54,7 @@ export default function RevenueFramework() {
 
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
                 <div className="mb-14">
-                    <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+                    <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                         Who It&apos;s For
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-4">
@@ -70,7 +70,7 @@ export default function RevenueFramework() {
                     {audiences.map((item) => (
                         <div
                             key={item.label}
-                            className="group flex flex-col overflow-hidden rounded-2xl border border-neutral-800/60 bg-neutral-900/40 transition-all duration-500 hover:-translate-y-1.5 hover:border-neutral-500 hover:shadow-xl hover:shadow-black/40"
+                            className="group flex flex-col overflow-hidden rounded-2xl border border-neutral-800/60 bg-neutral-900/40 transition-all duration-500 hover:-translate-y-1.5 hover:border-neutral-500 hover:shadow-xl hover:shadow-slate-900/40"
                         >
                             <div className="relative h-44 overflow-hidden">
                                 <Image

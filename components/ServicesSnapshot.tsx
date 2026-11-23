@@ -49,7 +49,7 @@ export default function ServicesSnapshot() {
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white">
                         What I Do
                     </h2>
-                    <p className="text-lg text-[#e5e7eb]/70 leading-relaxed">
+                    <p className="text-lg text-[#24344b]/70 leading-relaxed">
                         I design, build, and optimize digital products that perform. From high-impact websites to custom software and growth-focused platforms, I work directly with teams that need results — not templates.
                     </p>
                 </div>
@@ -59,7 +59,7 @@ export default function ServicesSnapshot() {
                     {services.map((service) => (
                         <div
                             key={service.title}
-                            className="group relative rounded-2xl border border-neutral-800/50 bg-linear-to-br from-neutral-900/50 to-surface-raised/80 p-8 transition-all duration-300 hover:border-neutral-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-black/40 backdrop-blur-sm"
+                            className="group relative rounded-2xl border border-neutral-800/50 bg-linear-to-br from-neutral-900/50 to-surface-raised/80 p-8 transition-all duration-300 hover:border-neutral-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-slate-900/40 backdrop-blur-sm"
                         >
                             {/* Glow effect on hover */}
                             <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-white/10 to-white/10 group-hover:from-white/3 group-hover:to-transparent transition-all duration-300" />
@@ -67,7 +67,7 @@ export default function ServicesSnapshot() {
                             {/* Content */}
                             <div className="relative z-10">
                                 {/* Icon */}
-                                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-neutral-800/80 text-white transition-all duration-300 group-hover:bg-white group-hover:text-black group-hover:shadow-lg group-hover:shadow-black/40">
+                                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-neutral-800/80 text-white transition-all duration-300 group-hover:bg-white group-hover:text-black group-hover:shadow-lg group-hover:shadow-slate-900/40">
                                     <service.icon className="h-6 w-6" />
                                 </div>
 
@@ -77,7 +77,7 @@ export default function ServicesSnapshot() {
                                 </h3>
 
                                 {/* Description */}
-                                <p className="text-sm text-[#e5e7eb]/60 leading-relaxed mb-6 group-hover:text-[#e5e7eb]/80 transition-colors duration-300">
+                                <p className="text-sm text-[#24344b]/60 leading-relaxed mb-6 group-hover:text-[#24344b]/80 transition-colors duration-300">
                                     {service.description}
                                 </p>
                             </div>

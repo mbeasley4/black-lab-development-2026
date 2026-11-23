@@ -224,7 +224,7 @@ export default function IndustriesPage() {
                 {/* Text */}
                 <div className={`max-w-xl relative ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                   <div className="flex items-center gap-4 mb-6">
-                    <span className="text-5xl font-black font-mono text-white/10 leading-none tracking-tighter">
+                    <span aria-hidden="true" className="text-5xl font-black font-mono text-white/10 leading-none tracking-tighter">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <div className="h-px w-14 bg-linear-to-r from-white/10 to-white/10" />
