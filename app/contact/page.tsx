@@ -103,7 +103,8 @@ export default function ContactPage() {
               <li>Rebuilding or modernizing a high-traffic website</li>
               <li>Improving performance, SEO, and conversion rates</li>
               <li>Integrating CRMs, marketing automation, or third-party APIs</li>
-              <li>Building custom software or internal tools</li>
+              <li>Connecting disconnected business systems, improving organizational reporting, or developing custom internal tools</li>
+              <li>Building custom software</li>
               <li>Replacing unreliable vendors or legacy systems</li>
             </ul>
 

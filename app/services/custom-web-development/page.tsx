@@ -10,6 +10,7 @@ import FaqSection from "@/components/FaqSection";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 import SelectedWork from "@/components/SelectedWork";
+import ArticleCallout from "@/components/ArticleCallout";
 
 export const metadata: Metadata = {
   title: "Custom Web Development: Next.js & WordPress",
@@ -47,7 +48,7 @@ const serviceSchema = {
   name: "Custom Web Development",
   serviceType: "Web Development",
   description:
-    "Bespoke web development in Next.js, headless CMS, and WordPress for businesses that need more than a template.",
+    "Bespoke websites, internal business applications, and system integrations in Next.js, headless CMS, and WordPress for businesses that need more than a template.",
   provider: {
     "@type": "Organization",
     "@id": "https://blacklabdev.com/#business",
@@ -170,6 +171,17 @@ const stack = [
   },
 ];
 
+const applicationExamples = [
+  "Internal business portals",
+  "Custom reporting interfaces",
+  "Operational dashboards",
+  "Customer and employee portals",
+  "CRM and ERP integrations",
+  "Workflow automation",
+  "Data synchronization between platforms",
+  "Custom business process applications",
+];
+
 const process = [
   {
     step: "01",
@@ -216,7 +228,7 @@ export default function CustomWebDevelopmentPage() {
           label="Custom Web Development"
           title="Custom Web Development for Businesses That Outgrew Templates"
           titleHighlight="for Businesses That Outgrew Templates"
-          description="Bespoke builds in Next.js, headless CMS, and WordPress — architected for businesses that need more than a theme can deliver."
+          description="Websites, internal business applications, and system integrations built in Next.js, headless CMS, and WordPress — for businesses that need more than a theme can deliver."
           backgroundImage="/images/nextjs-hero-code.jpg"
           imagePosition="0% 10%"
           badges={["No page builders", "Clean architecture", "Built to hand off"]}
@@ -279,6 +291,54 @@ export default function CustomWebDevelopmentPage() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Custom applications */}
+        <section className="band-navy watermark watermark-light overflow-hidden py-20" aria-labelledby="custom-applications-heading">
+          <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
+            <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-start">
+              <div>
+                <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+                  Custom Applications
+                </span>
+                <h2 id="custom-applications-heading" className="text-3xl md:text-4xl font-bold mb-6 text-white">
+                  Custom Applications That Work the Way Your Business Works
+                </h2>
+                <div className="space-y-5 leading-relaxed text-neutral-300">
+                  <p>
+                    Off-the-shelf software can be an excellent starting point, but it doesn&apos;t always accommodate the way a business operates.
+                  </p>
+                  <p>
+                    When existing platforms create limitations, require inefficient workarounds, or fail to provide the functionality an organization needs, custom development can provide a better solution.
+                  </p>
+                  <p>
+                    Black Lab Development builds custom applications and tools designed around real business requirements.
+                  </p>
+                  <p>
+                    Whether you need an internal application, a custom reporting interface, an integration between existing platforms, or a solution that streamlines a complex workflow, the objective is to build technology that supports how your organization actually works.
+                  </p>
+                </div>
+                <Link
+                  href="/services#business-systems-integration"
+                  className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#d3de5c] underline decoration-transparent underline-offset-4 transition-colors duration-200 hover:decoration-current"
+                >
+                  Systems integration and reporting services <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+              <div>
+                <h3 className="mb-5 text-lg font-bold text-white">What That Can Look Like</h3>
+                <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  {applicationExamples.map((item) => (
+                    <li key={item} className="flex items-center gap-3 rounded-xl border border-neutral-700 bg-[#ffffff]/5 px-5 py-4 text-sm font-semibold text-white">
+                      <span className="h-2 w-2 shrink-0 rounded-full bg-[#a8b522]" aria-hidden="true" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <ArticleCallout slug="your-business-has-the-data-why-cant-you-get-the-answers" />
               </div>
             </div>
           </div>

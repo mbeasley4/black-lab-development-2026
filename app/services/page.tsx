@@ -7,6 +7,8 @@ import JsonLd from "@/components/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/app/lib/og";
 import FounderByline from "@/components/FounderByline";
 import SelectedWork from "@/components/SelectedWork";
+import ArticleCallout from "@/components/ArticleCallout";
+import { AppWindow, ChartColumn, Database, Network, Workflow, type LucideIcon } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Web Design & Development Services",
@@ -85,10 +87,10 @@ const serviceListSchema = {
       position: 4,
       item: {
         "@type": "Service",
-        name: "Integrations & Automation",
-        url: "https://blacklabdev.com/services",
+        name: "Business Systems Integration & Organizational Visibility",
+        url: "https://blacklabdev.com/services#business-systems-integration",
         description:
-          "HubSpot, Salesforce, Marketo, Stripe, and custom API integrations — clean connections that don't require babysitting.",
+          "System integrations, custom reporting and dashboards, data architecture, workflow automation, and custom business applications.",
         provider: { "@type": "Organization", "@id": "https://blacklabdev.com/#business" },
       },
     },
@@ -161,23 +163,6 @@ const services = [
     ),
   },
   {
-    title: "Integrations & Automation",
-    image: "/images/services/integrations.png",
-    description: (
-      <>
-        <p className="mb-4">
-          If someone on your team is copy-pasting between platforms to keep the data
-          straight, that's a technical problem with a technical solution. I build the
-          connections that make systems actually talk to each other — and stay talking.
-        </p>
-        <p className="text-neutral-500 text-sm">
-          HubSpot, Salesforce, Marketo, Stripe, and whatever else is in the stack —
-          clean integrations that don't require babysitting.
-        </p>
-      </>
-    ),
-  },
-  {
     title: "Platform Audits & Technical Leadership",
     image: "/images/services/technical-leadership.png",
     description: (
@@ -193,6 +178,38 @@ const services = [
         </p>
       </>
     ),
+  },
+];
+
+const integrationServices: { title: string; body: string; icon: LucideIcon; href?: string; linkLabel?: string }[] = [
+  {
+    title: "System Integration",
+    icon: Network,
+    body: "Connect CRM, ERP, accounting, marketing, and operational platforms to improve how information moves throughout your business. That includes HubSpot, Salesforce, Marketo, Stripe, and custom APIs.",
+  },
+  {
+    title: "Custom Reporting & Dashboards",
+    icon: ChartColumn,
+    body: "Bring relevant business information together in clear, accessible views designed around stakeholder responsibilities.",
+  },
+  {
+    title: "Data Architecture",
+    icon: Database,
+    body: "Structure and organize information to support reliable reporting, consistency, and future growth.",
+  },
+  {
+    title: "Workflow Automation",
+    icon: Workflow,
+    body: "Reduce manual processes and ensure important information reaches the right people at the right time.",
+    href: "/laravel-development",
+    linkLabel: "Laravel APIs and automation",
+  },
+  {
+    title: "Custom Business Applications",
+    icon: AppWindow,
+    body: "Build internal tools and applications when existing software doesn't adequately support your processes or reporting needs.",
+    href: "/services/custom-web-development",
+    linkLabel: "Custom web development",
   },
 ];
 
@@ -374,6 +391,63 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+      {/* ================= INTEGRATION & VISIBILITY ================= */}
+      <section
+        id="business-systems-integration"
+        aria-labelledby="integration-heading"
+        className="band-navy watermark watermark-light scroll-mt-24 overflow-hidden py-20 md:py-24"
+      >
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-16 lg:items-end">
+            <div>
+              <span className="eyebrow mb-4 text-xs tracking-[0.2em] uppercase font-semibold">Connected Systems</span>
+              <h2 id="integration-heading" className="text-3xl md:text-5xl font-bold tracking-tight text-white">
+                Business Systems Integration <span className="text-neutral-400">&amp; Organizational Visibility</span>
+              </h2>
+            </div>
+            <div className="space-y-4 leading-relaxed text-neutral-300">
+              <p>
+                Your business relies on multiple systems to operate. But when those systems don&apos;t communicate
+                effectively, important information becomes fragmented, reporting becomes difficult, and decision-makers
+                lose visibility into what&apos;s happening across the organization.
+              </p>
+              <p>
+                Black Lab Development helps businesses connect their technology, streamline information flow, and make
+                critical business data more accessible. From integrating existing platforms to developing custom
+                applications and reporting solutions, Black Lab builds technology that helps organizations see the
+                bigger picture.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-6">
+            {integrationServices.map(({ title, body, icon: Icon, href, linkLabel }, i) => (
+              <div
+                key={title}
+                className={`flex flex-col rounded-xl border border-neutral-700 bg-[#ffffff]/5 p-7 ${i < 3 ? "lg:col-span-2" : "lg:col-span-3"} ${i === 4 ? "md:col-span-2" : ""}`}
+              >
+                <span className="mb-5 flex h-11 w-11 items-center justify-center rounded-lg bg-[#a8b522] text-[#0f2138]" aria-hidden="true">
+                  <Icon className="h-5 w-5" strokeWidth={1.75} />
+                </span>
+                <h3 className="mb-2 text-xl font-bold text-white">{title}</h3>
+                <p className="grow text-sm leading-relaxed text-neutral-300">{body}</p>
+                {href && (
+                  <Link href={href} className="mt-5 inline-flex w-fit items-center gap-2 text-sm font-semibold text-[#d3de5c] underline decoration-transparent underline-offset-4 transition-colors duration-200 hover:decoration-current">
+                    {linkLabel} <span aria-hidden="true">→</span>
+                  </Link>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-12 max-w-4xl border-l-4 border-volt-500 pl-6 text-xl md:text-2xl font-semibold leading-snug text-white">
+            The goal isn&apos;t more software or more reports. It&apos;s giving your organization the visibility it needs to operate
+            effectively and make informed decisions.
+          </p>
+          <ArticleCallout slug="your-business-has-the-data-why-cant-you-get-the-answers" />
+        </div>
+      </section>
+
       {/* ================= PROCESS ================= */}
       <section className="bg-charcoal py-16 md:py-24 border-t border-neutral-800 relative overflow-hidden">
         {/* Ambient glow */}

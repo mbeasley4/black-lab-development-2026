@@ -1,4 +1,5 @@
 import type { PortableTextComponents } from "next-sanity";
+import OrganizationalVisibilityDiagram from "./OrganizationalVisibilityDiagram";
 
 type TableValue = {
     rows?: { cells?: string[] }[];
@@ -61,8 +62,16 @@ function PortableTextTable({ value }: { value: TableValue }) {
     );
 }
 
+function PortableTextDiagram({ value }: { value: { diagram?: string; alt?: string } }) {
+    if (value?.diagram === "organizational-visibility") {
+        return <OrganizationalVisibilityDiagram alt={value.alt || undefined} />;
+    }
+    return null;
+}
+
 export const portableTextComponents: PortableTextComponents = {
     types: {
         table: PortableTextTable,
+        diagram: PortableTextDiagram,
     },
 };
