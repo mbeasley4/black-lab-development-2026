@@ -18,10 +18,10 @@ export default function FaqSection({ faqs, headingId = "faq-heading" }: FaqSecti
   // Light section: the one deliberate break in the dark page rhythm. Volt has
   // poor contrast on light backgrounds, so accents here are black/neutral.
   return (
-    <section className="w-full bg-neutral-100 text-neutral-900 py-24 md:py-28" aria-labelledby={headingId}>
+    <section className="watermark watermark-light relative overflow-hidden w-full bg-neutral-100 text-neutral-900 py-24 md:py-28" aria-labelledby={headingId}>
       <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-12 lg:gap-20">
         <div className="lg:sticky lg:top-36 lg:self-start">
-          <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase font-semibold text-neutral-500">
+          <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase font-semibold text-neutral-500">
             Common Questions
           </span>
           <h2 id={headingId} className="text-3xl md:text-5xl font-bold tracking-tight text-neutral-950">

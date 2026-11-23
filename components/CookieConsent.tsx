@@ -149,7 +149,7 @@ export default function CookieConsent() {
               ref={acceptButtonRef}
               type="button"
               onClick={() => decide(ALL_GRANTED)}
-              className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-black transition-all duration-200 hover:brightness-110 hover:shadow-lg hover:shadow-black/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.98]"
+              className="inline-flex items-center justify-center rounded-lg bg-volt-500 px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-neutral-100 transition-all duration-200 hover:brightness-110 hover:shadow-lg hover:shadow-slate-900/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.98]"
             >
               Accept All
             </button>
@@ -219,7 +219,7 @@ export default function CookieConsent() {
             <button
               type="button"
               onClick={() => decide(draft)}
-              className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-black transition-all duration-200 hover:brightness-110 hover:shadow-lg hover:shadow-black/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.98]"
+              className="inline-flex items-center justify-center rounded-lg bg-volt-500 px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-neutral-100 transition-all duration-200 hover:brightness-110 hover:shadow-lg hover:shadow-slate-900/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.98]"
             >
               Save Preferences
             </button>

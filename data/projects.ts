@@ -25,7 +25,7 @@ export const projects: Project[] = [
     slug: "global-environmental-products-wordpress-rebuild",
     url: "https://www.gepltd.com/",
     platform: "WordPress",
-    logo: "/images/work/gep-logo.png",
+    logo: "/images/work/gep-logo-ink.png",
     screenshot: "/images/work/gep-screenshot.jpg",
     summary:
       "Replaced a 2011-era site for a Middletown, Ohio absorbents converter and spill-kit supplier with a custom WordPress block theme — a searchable product catalog, a quote-list workflow, and a site built to turn industrial buyers into quote requests.",
@@ -44,7 +44,7 @@ export const projects: Project[] = [
     url: "https://cityviewtavern.com/",
     featured: true,
     platform: "WordPress",
-    logo: "/images/work/cityviewtavern-logo.png",
+    logo: "/images/work/cityviewtavern-logo-ink.png",
     screenshot: "/images/work/cityviewtavern-screenshot.png",
     summary:
       "Built a custom WordPress block theme for a Mount Adams bar pouring drinks since 1875 — designed around the best skyline view in Cincinnati and engineered to win local search for hours, menu, and directions.",
@@ -63,7 +63,7 @@ export const projects: Project[] = [
     url: "https://nma1.org/",
     featured: true,
     platform: "WordPress",
-    logo: "/images/work/nma-logo.png",
+    logo: "/images/work/nma-logo-ink.png",
     screenshot: "/images/work/nma-screenshot.png",
     summary:
       "Rebuilt the web platform for a 100-year-old leadership development network with 7,700+ members and 29 chapters — a custom WordPress theme and block library wired into the association's events, courses, and member systems.",
@@ -81,7 +81,7 @@ export const projects: Project[] = [
     slug: "zero-gravity-performance-rebuild",
     url: "https://zerogravitynky.com/",
     platform: "WordPress",
-    logo: "/images/work/zerogravity-logo.png",
+    logo: "/images/work/zerogravity-logo-ink.png",
     screenshot: "/images/work/zerogravity-screenshot.jpg",
     summary:
       "Ongoing WordPress engineering for Zero Gravity NKY, a Northern Kentucky medical spa — WooCommerce ripped out in favor of the dedicated booking platform, booking links generalized, and page speed rebuilt from the ground up.",
@@ -98,7 +98,7 @@ export const projects: Project[] = [
     slug: "legacy-financial-wordpress-block-theme",
     url: "https://legacyfinancialadvisors.com/",
     platform: "WordPress",
-    logo: "/images/work/legacy-logo.png",
+    logo: "/images/work/legacy-logo-ink.png",
     screenshot: "/images/work/legacy-screenshot.jpg",
     summary:
       "A custom WordPress block theme for a Covington, KY wealth management firm — built in the Gutenberg site editor with Tailwind CSS, custom blocks, team profiles and an Insights hub.",
@@ -116,7 +116,7 @@ export const projects: Project[] = [
     slug: "bridge-partners-wordpress-block-theme",
     url: "https://bridgepartnersusa.com/",
     platform: "WordPress",
-    logo: "/images/work/bridge-logo.png",
+    logo: "/images/work/bridge-logo-ink.png",
     screenshot: "/images/work/bridge-screenshot.jpg",
     summary:
       "A custom Gutenberg block theme for an advanced tax mitigation and wealth strategy firm — built from the brand guidelines with 16 native blocks and no plugin dependencies.",
@@ -133,7 +133,7 @@ export const projects: Project[] = [
     name: "Bishopric Industries Shop Floor Kiosk",
     slug: "bishopric-industries-shop-floor-kiosk",
     platform: "Custom Next.js",
-    logo: "/images/work/bishopric-logo.png",
+    logo: "/images/work/bishopric-logo-ink.png",
     screenshot: "/images/work/bishopric-screenshot.jpg",
     summary:
       "A touchscreen kiosk for Bishopric Industries' Cincinnati and Natchez shop floors — fabrication drawings, weld procedures and inspection documents pulled from Egnyte in a five-tap flow, with new documents flagged at every level.",
@@ -150,7 +150,7 @@ export const projects: Project[] = [
     name: "Whole30 SMS Platform",
     slug: "whole30-laravel-shopify-slicktext-sms",
     platform: "Laravel",
-    logo: "/images/work/projects/whole30-logo.png",
+    logo: "/images/work/projects/whole30-logo-ink.png",
     screenshot: "/images/work/whole30-app-screenshot.jpg",
     summary:
       "A custom Laravel admin portal for Whole30 that turns Shopify purchases into SlickText SMS subscriptions — automated setup, daily message sequences, delivery tracking and opt-out handling.",
@@ -168,7 +168,7 @@ export const projects: Project[] = [
     slug: "millennosphere-wordpress-editorial-theme",
     url: "https://millennosphere.com/",
     platform: "WordPress",
-    logo: "/images/work/millennosphere-logo.png",
+    logo: "/images/work/millennosphere-logo-ink.png",
     screenshot: "/images/work/millennosphere-screenshot.png",
     summary:
       "Built a custom WordPress theme and custom Gutenberg blocks from scratch for a millennial culture and lifestyle publication — editorial layouts designed for a distinct voice, not bent out of a stock theme.",
@@ -184,7 +184,7 @@ export const projects: Project[] = [
     slug: "globe-iron-roofing-wordpress-theme",
     url: "https://globeironroofing.com/",
     platform: "WordPress",
-    logo: "/images/work/globeironroofing-logo.png",
+    logo: "/images/work/globeironroofing-logo-ink.png",
     screenshot: "/images/work/globeironroofing-screenshot.png",
     summary:
       "Built a custom WordPress theme for the Gutenberg block editor from the ground up — engineered for technical SEO, AEO, and GEO discoverability alongside top-tier page speed performance.",
@@ -200,7 +200,7 @@ export const projects: Project[] = [
     slug: "dexafit-cincinnati-squarespace-seo",
     url: "https://www.cincinnati.dexafit.com/",
     platform: "Squarespace",
-    logo: "/images/work/dexafit-logo.png",
+    logo: "/images/work/dexafit-logo-ink.png",
     screenshot: "/images/work/dexafit-screenshot.jpg",
     summary:
       "An SEO overhaul for a physician-led DEXA, VO2 max and metabolic testing clinic — rewritten titles, meta descriptions and alt text, structured data, consistent technical updates and stronger booking CTAs.",
@@ -217,7 +217,7 @@ export const projects: Project[] = [
     name: "Rev & Rinse Auto Detailing",
     slug: "rev-and-rinse-nextjs-sanity",
     platform: "Custom Next.js",
-    logo: "/images/work/revandrinse-logo.png",
+    logo: "/images/work/revandrinse-logo-ink.png",
     screenshot: "/images/work/revandrinse-screenshot.png",
     summary:
       "Brochure site for a local auto detailing business — built with Next.js and Sanity.io CMS for fast performance and easy content management.",
@@ -233,7 +233,7 @@ export const projects: Project[] = [
     slug: "zoo-printables-ai-seo-aeo-geo",
     url: "https://www.zooprintablesai.com/",
     platform: "Custom Next.js",
-    logo: "/images/work/zooprintablesai-logo.png",
+    logo: "/images/work/zooprintablesai-logo-ink.png",
     screenshot: "/images/work/zooprintablesai-screenshot.png",
     summary:
       "Built a free wildlife education platform from the ground up with SEO, AEO, and GEO architecture baked in — clean crawlable URLs, fact-verified content structured for direct AI-answer extraction, and explicit crawler access for GPTBot, ClaudeBot, and PerplexityBot.",
@@ -248,7 +248,7 @@ export const projects: Project[] = [
     name: "The Shortening Shuttle",
     slug: "ecommerce-website-redesign-increase-aov",
     platform: "Shopify",
-    logo: "/images/work/shortening-shuttle-logo.png",
+    logo: "/images/work/shortening-shuttle-logo-ink.png",
     screenshot: "/images/work/shortening-shuttle-screenshot.png",
     summary:
       "Built a custom Shopify storefront for a specialty food brand using Liquid templating and Tailwind CSS, featuring a dynamic oil savings calculator to drive customer engagement and conversions.",
@@ -265,7 +265,7 @@ export const projects: Project[] = [
     slug: "blum-media-group-nextjs-website",
     url: "https://www.blummediagroup.com/",
     platform: "Custom Next.js",
-    logo: "/images/work/blum-logo.png",
+    logo: "/images/work/blum-logo-ink.png",
     screenshot: "/images/work/blum-screenshot.png",
     summary:
       "Designed and developed a modern, high-performance marketing website using Next.js and Vercel for fast load times, scalability, and streamlined content delivery.",
@@ -281,7 +281,7 @@ export const projects: Project[] = [
     slug: "mona-dermatology-wordpress-woocommerce",
     url: "https://www.monadermatology.com/",
     platform: "WordPress",
-    logo: "/images/work/mona-logo.png",
+    logo: "/images/work/mona-logo-ink.png",
     screenshot: "/images/work/mona-screenshot.png",
     summary:
       "Ongoing WordPress engineering and WooCommerce support to maintain a reliable, high-performing patient and product experience.",
@@ -296,7 +296,7 @@ export const projects: Project[] = [
     slug: "buzzworthy-seven-hills-news-site",
     url: "https://www.7hills.org/buzzworthy/",
     platform: "WordPress",
-    logo: "/images/work/buzzworthy-logo.png",
+    logo: "/images/work/buzzworthy-logo-ink.png",
     screenshot: "/images/work/buzzworthy-screenshot.png",
     summary:
       "Designed and developed Buzzworthy, the standalone news and storytelling site for Seven Hills School — showcasing student achievements, faculty insights, and school events.",
@@ -311,7 +311,7 @@ export const projects: Project[] = [
     slug: "frischs-big-boy-wordpress-platform",
     url: "https://www.frischs.com/",
     platform: "WordPress",
-    logo: "/images/work/frischs-logo.png",
+    logo: "/images/work/frischs-logo-ink.png",
     screenshot: "/images/work/frischs-screenshot.jpg",
     summary:
       "Modernization and long-term support of a multi-location restaurant platform with legacy constraints and ongoing operational needs.",
@@ -326,7 +326,7 @@ export const projects: Project[] = [
     name: "Enduir Cybersecurity",
     slug: "enduir-cybersecurity-engineering",
     platform: "Drupal",
-    logo: "/images/work/enduir-logo.png",
+    logo: "/images/work/enduir-logo-ink.png",
     screenshot: "/images/work/enduir-screenshot.jpg",
     summary:
       "Engineering support for a cybersecurity firm requiring reliability, scalability, and clean integration between systems.",

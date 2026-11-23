@@ -241,7 +241,7 @@ export default async function ArticlePage({
                     {/* Hero content — vertically centered */}
                     <div className="relative z-10 flex min-h-screen items-center">
                         <div className="mx-auto max-w-225 w-full px-6 pb-20 pt-32">
-                            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+                            <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                                 Article
                             </span>
 
@@ -304,7 +304,7 @@ export default async function ArticlePage({
                         Articles
                     </Link> &gt; <span className="text-sm text-neutral-400">{article.title}</span>
                 </div>
-                <article className="prose prose-invert max-w-none">
+                <article className="prose max-w-none">
                     {article.body && <PortableText value={article.body} components={portableTextComponents} />}
                 </article>
 
@@ -349,7 +349,7 @@ export default async function ArticlePage({
                 <div className="relative mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
                   {/* Section heading */}
                   <div className="mb-12 flex flex-col items-center text-center">
-                    <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+                    <span className="eyebrow inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                       Continue Reading
                     </span>
                     <h2 className="text-3xl md:text-4xl font-bold tracking-tight">

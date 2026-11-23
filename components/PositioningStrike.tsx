@@ -24,7 +24,7 @@ export default function PositioningStrike() {
 
                     {/* Performance + SEO */}
                     <div>
-                        <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+                        <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                             Performance &amp; SEO
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight mb-8">
@@ -47,7 +47,7 @@ export default function PositioningStrike() {
 
                     {/* Local SEO */}
                     <div>
-                        <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+                        <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                             Local &amp; Nationwide
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight mb-8">

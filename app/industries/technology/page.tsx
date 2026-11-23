@@ -176,7 +176,7 @@ export default function TechnologyIndustryPage() {
       <section className="py-20 border-b border-neutral-800/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="mb-12">
-            <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">What I Build</span>
+            <span className="eyebrow inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">What I Build</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Built for Product-Led Growth</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -192,10 +192,10 @@ export default function TechnologyIndustryPage() {
       </section>
 
       {/* Client Proof */}
-      <section className="py-20 border-b border-neutral-800/50 bg-neutral-950/50">
+      <section className="bg-charcoal py-20 border-b border-neutral-800/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="mb-12">
-            <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">Client Proof</span>
+            <span className="eyebrow inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">Client Proof</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Technology Companies Worked With</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -210,7 +210,7 @@ export default function TechnologyIndustryPage() {
       </section>
 
       {/* Cross-links */}
-      <section className="bg-charcoal py-16 border-b border-neutral-800/50">
+      <section className="band-navy py-16">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex flex-col justify-between gap-4 p-8 rounded-xl border border-neutral-800 bg-white/[0.04]">

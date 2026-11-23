@@ -95,7 +95,7 @@ const colorClasses = {
         iconText: "text-white",
         iconHoverBg: "group-hover:bg-white/15",
         border: "group-hover:border-neutral-500",
-        glow: "group-hover:shadow-black/40",
+        glow: "group-hover:shadow-slate-900/40",
         gradient: "group-hover:from-white/3 group-hover:to-transparent",
         accent: "group-hover:via-white/20",
         titleHover: "group-hover:text-white",
@@ -106,7 +106,7 @@ const colorClasses = {
         iconText: "text-neutral-300",
         iconHoverBg: "group-hover:bg-white/15",
         border: "group-hover:border-neutral-500",
-        glow: "group-hover:shadow-black/40",
+        glow: "group-hover:shadow-slate-900/40",
         gradient: "group-hover:from-white/3 group-hover:to-transparent",
         accent: "group-hover:via-white/20",
         titleHover: "group-hover:text-white",
@@ -125,7 +125,7 @@ export default function TechnologiesExperience() {
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white pb-1">
                         Technologies & Experience
                     </h2>
-                    <p className="text-lg text-[#e5e7eb]/70 leading-relaxed">
+                    <p className="text-lg text-[#24344b]/70 leading-relaxed">
                         15+ years of senior-level engineering — building scalable, high-traffic
                         platforms for growing businesses and organizations that
                         can&apos;t afford to wing it. Architecture, development, integration,
@@ -175,19 +175,19 @@ export default function TechnologiesExperience() {
 
                 {/* Certifications & Credibility */}
                 <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div className="group rounded-2xl border-2 border-neutral-800/50 bg-linear-to-br from-neutral-900/50 to-surface-raised/80 p-10 transition-all duration-500 hover:border-neutral-500 hover:shadow-xl hover:shadow-black/40 backdrop-blur-sm relative overflow-hidden">
+                    <div className="group rounded-2xl border-2 border-neutral-800/50 bg-linear-to-br from-neutral-900/50 to-surface-raised/80 p-10 transition-all duration-500 hover:border-neutral-500 hover:shadow-xl hover:shadow-slate-900/40 backdrop-blur-sm relative overflow-hidden">
                         <div className="absolute inset-0 bg-linear-to-br from-white/10 to-white/10 group-hover:from-white/3 group-hover:to-transparent transition-all duration-500" />
 
                         <div className="relative z-10">
                             <div className="flex items-center gap-4 mb-4">
-                                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-white/[0.04] text-white transition-all duration-500 group-hover:bg-white group-hover:text-black group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-black/40">
+                                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-white/[0.04] text-white transition-all duration-500 group-hover:bg-white group-hover:text-black group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-slate-900/40">
                                     <Award className="h-7 w-7" strokeWidth={2.5} />
                                 </div>
                                 <h3 className="text-2xl font-semibold text-white group-hover:text-white transition-colors duration-300">
                                     Security-Focused Engineering
                                 </h3>
                             </div>
-                            <p className="text-[#e5e7eb]/70 leading-relaxed group-hover:text-[#e5e7eb]/90 transition-colors duration-300">
+                            <p className="text-[#24344b]/70 leading-relaxed group-hover:text-[#24344b]/90 transition-colors duration-300">
                                 My approach to development is grounded in modern security
                                 principles, risk awareness, and long-term maintainability —
                                 especially important for healthcare, regulated, and
@@ -196,7 +196,7 @@ export default function TechnologiesExperience() {
                         </div>
                     </div>
 
-                    <div className="group rounded-2xl border-2 border-neutral-800/50 bg-neutral-900/50 p-10 flex items-center gap-6 transition-all duration-500 hover:border-neutral-500 hover:shadow-xl hover:shadow-black/40 backdrop-blur-sm relative overflow-hidden">
+                    <div className="group rounded-2xl border-2 border-neutral-800/50 bg-neutral-900/50 p-10 flex items-center gap-6 transition-all duration-500 hover:border-neutral-500 hover:shadow-xl hover:shadow-slate-900/40 backdrop-blur-sm relative overflow-hidden">
                         <div className="absolute inset-0 bg-linear-to-br from-white/10 to-white/10 group-hover:from-white/3 group-hover:to-transparent transition-all duration-500" />
 
                         <div className="relative z-10 flex items-center gap-6">

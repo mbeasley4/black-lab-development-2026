@@ -145,28 +145,29 @@ export default function CaseStudiesPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/images/case-studies-hero-bg.jpg')" }}
         />
-        <div className="absolute inset-0 bg-linear-to-br from-surface/95 via-surface/88 to-surface/80" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-r from-[#0f2138]/25 via-[#0f2138]/5 to-transparent" />
 
-        <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-20 md:py-28">
-          <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-neutral-300 mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
+        <div className="hero-frame relative z-10">
+        <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 w-full">
+        <div className="relative max-w-3xl overflow-hidden rounded-2xl bg-[#ffffff]/95 p-7 shadow-[0_30px_80px_-30px_rgba(15,33,56,0.45)] ring-1 ring-[#0f2138]/10 backdrop-blur-md sm:p-10 md:p-12">
+          <span aria-hidden="true" className="absolute inset-y-0 left-0 w-1.5 bg-volt-500" />
+          <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
             My Work
           </span>
 
-          <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold tracking-tight leading-[1.1] mb-8">
+          <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold tracking-tight leading-[1.1] mb-6">
             <span className="block text-white">Web Design Portfolio.</span>
             <span className="block text-neutral-400">Real Work. Real Outcomes.</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-neutral-400 leading-relaxed max-w-2xl mb-8">
+          <p className="text-lg md:text-xl text-neutral-300 leading-relaxed mb-8">
             If a website doesn&apos;t generate leads, bookings, or pipeline — it&apos;s not doing its job. Here&apos;s what building it right actually produces.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-white text-black px-8 py-3.5 text-sm font-semibold hover:bg-neutral-200 transition-colors duration-200 shadow-lg"
+              className="inline-flex items-center justify-center rounded-md bg-volt-500 text-neutral-100 px-8 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg"
             >
               Schedule a Call
             </Link>
@@ -178,8 +179,8 @@ export default function CaseStudiesPage() {
             </a>
           </div>
         </div>
-
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
+        </div>
+        </div>
       </section>
 
       <QuickAnswerBlock
@@ -324,7 +325,7 @@ export default function CaseStudiesPage() {
                   <p className="text-[11px] text-neutral-500 leading-relaxed mb-6">Health &amp; Wellness · eCommerce · High-Traffic Content</p>
                   <Link
                     href="/contact"
-                    className="flex items-center justify-center gap-2 rounded-md bg-white text-black px-6 py-3 text-sm font-semibold hover:bg-neutral-200 transition-colors duration-200 shadow-lg hover:shadow-black/40"
+                    className="flex items-center justify-center gap-2 rounded-md bg-volt-500 text-neutral-100 px-6 py-3 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg hover:shadow-slate-900/40"
                   >
                     Discuss Your Project
                     <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

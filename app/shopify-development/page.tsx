@@ -218,7 +218,7 @@ export default function ShopifyDevelopmentPage() {
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-8 flex flex-wrap gap-4">
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center rounded-md bg-white text-black px-7 py-3.5 text-sm font-semibold hover:bg-neutral-200 transition-colors duration-200 shadow-lg"
+            className="inline-flex items-center justify-center rounded-md bg-volt-500 text-neutral-100 px-7 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg"
           >
             Start a Project →
           </Link>
@@ -236,7 +236,7 @@ export default function ShopifyDevelopmentPage() {
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+              <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 The Problem
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -262,7 +262,7 @@ export default function ShopifyDevelopmentPage() {
                 <div key={item.problem} className="rounded-xl border border-neutral-800 bg-neutral-950 p-6">
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center shrink-0 mt-0.5">
-                      <svg className="w-3 h-3 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-3 h-3 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
                       </svg>
                     </div>
@@ -282,7 +282,7 @@ export default function ShopifyDevelopmentPage() {
       <section className="py-20 bg-surface-raised border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+            <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               What I Build
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -311,11 +311,11 @@ export default function ShopifyDevelopmentPage() {
       </section>
 
       {/* Why I'm different */}
-      <section className="bg-charcoal py-20 border-b border-neutral-800">
+      <section className="band-navy py-20">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+              <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Why I&apos;m Different
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -357,7 +357,7 @@ export default function ShopifyDevelopmentPage() {
       <section className="py-20 bg-surface-raised border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+            <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               My Approach
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -370,7 +370,7 @@ export default function ShopifyDevelopmentPage() {
           <div className="space-y-10">
             {processSteps.map((item) => (
               <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
-                <div className="text-5xl font-black font-mono text-white/10 leading-none">{item.step}</div>
+                <div aria-hidden="true" className="text-5xl font-black font-mono text-white/10 leading-none">{item.step}</div>
                 <div className="border-b border-neutral-800 pb-10 last:border-0 last:pb-0">
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                   <p className="text-neutral-400 leading-relaxed">{item.body}</p>
@@ -382,11 +382,11 @@ export default function ShopifyDevelopmentPage() {
       </section>
 
       {/* Performance */}
-      <section className="bg-charcoal py-20 border-b border-neutral-800">
+      <section className="band-accent py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+              <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Performance
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -421,7 +421,7 @@ export default function ShopifyDevelopmentPage() {
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+              <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Use Cases
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -444,7 +444,7 @@ export default function ShopifyDevelopmentPage() {
       </section>
 
       {/* Work */}
-      <section className="bg-charcoal py-20 border-b border-neutral-800">
+      <section className="band-navy py-20">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
             <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-neutral-300 mb-5">

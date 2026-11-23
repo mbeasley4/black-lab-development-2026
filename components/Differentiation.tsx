@@ -10,7 +10,7 @@ const failPoints = [
 
 export default function Differentiation() {
     return (
-        <section className="w-full bg-charcoal text-white py-28 relative overflow-hidden">
+        <section className="watermark w-full bg-charcoal text-white py-28 relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">
@@ -18,7 +18,7 @@ export default function Differentiation() {
 
                     {/* Left */}
                     <div className="lg:sticky lg:top-36">
-                        <span className="inline-block mb-5 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+                        <span className="eyebrow inline-block mb-5 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                             The Problem
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white leading-[1.1]">
@@ -51,8 +51,8 @@ export default function Differentiation() {
                     {/* Right: problem cards */}
                     <div className="flex flex-col gap-4">
                         {failPoints.map((item) => (
-                            <div key={item} className="group flex items-center gap-4 p-5 rounded-xl border border-neutral-800/50 bg-neutral-900/30 hover:border-neutral-500 hover:bg-white/5 transition-all duration-300">
-                                <span className="shrink-0 w-2 h-2 rounded-full bg-white/[0.04] group-hover:bg-white/15 transition-colors duration-300" />
+                            <div key={item} className="group flex items-center gap-4 p-5 rounded-xl border border-neutral-800 border-l-4 border-l-neutral-700 bg-[#ffffff] shadow-[0_1px_2px_rgba(15,33,56,0.06)] transition-all duration-300 hover:border-l-volt-500 hover:shadow-[0_14px_30px_-14px_rgba(15,33,56,0.35)] motion-safe:hover:-translate-y-0.5">
+                                <span aria-hidden="true" className="shrink-0 w-2.5 h-2.5 rounded-full border-2 border-volt-500 group-hover:bg-volt-500 transition-colors duration-300" />
                                 <p className="text-lg md:text-xl text-neutral-300 leading-snug font-medium group-hover:text-white transition-colors duration-300">
                                     {item}
                                 </p>

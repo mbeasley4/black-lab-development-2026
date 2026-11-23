@@ -172,7 +172,7 @@ export default function HealthcareIndustryPage() {
       <section className="py-20 border-b border-neutral-800/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="mb-12">
-            <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">What I Build</span>
+            <span className="eyebrow inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">What I Build</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Built for Patient Acquisition</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -188,10 +188,10 @@ export default function HealthcareIndustryPage() {
       </section>
 
       {/* Client Proof */}
-      <section className="py-20 border-b border-neutral-800/50 bg-neutral-950/50">
+      <section className="bg-charcoal py-20 border-b border-neutral-800/50">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="mb-12">
-            <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">Client Proof</span>
+            <span className="eyebrow inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">Client Proof</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Healthcare Organizations Worked With</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -206,7 +206,7 @@ export default function HealthcareIndustryPage() {
       </section>
 
       {/* Cross-link */}
-      <section className="bg-charcoal py-16 border-b border-neutral-800/50">
+      <section className="band-navy py-16">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 p-8 rounded-xl border border-neutral-800 bg-white/[0.04]">
             <div>
@@ -216,7 +216,7 @@ export default function HealthcareIndustryPage() {
             </div>
             <Link
               href="/services/conversion-optimization"
-              className="shrink-0 inline-flex items-center gap-2 rounded-md bg-white text-black px-6 py-3 text-sm font-bold hover:brightness-110 transition-all duration-200"
+              className="shrink-0 inline-flex items-center gap-2 rounded-md bg-volt-500 text-neutral-100 px-6 py-3 text-sm font-bold hover:brightness-110 transition-all duration-200"
             >
               View Service Page
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -1,22 +1,22 @@
 import Image from "next/image";
 
 const logos = [
-    { src: "/images/work/gep-logo.png", alt: "Global Environmental Products" },
-    { src: "/images/work/globeironroofing-logo.png", alt: "Globe Iron Roofing" },
-    { src: "/images/work/millennosphere-logo.png", alt: "Millennosphere" },
-    { src: "/images/work/delcam-logo.svg", alt: "Delcam Capital" },
-    { src: "/images/work/faztek-logo.png", alt: "Faztek" },
-    { src: "/images/work/melink-logo.png", alt: "Melink" },
-    { src: "/images/work/shortening-shuttle-logo.png", alt: "The Shortening Shuttle" },
-    { src: "/images/work/providence-logo-w.png", alt: "Providence" },
-    { src: "/images/work/blum-logo.png", alt: "Blum" },
-    { src: "/images/work/buzzworthy-logo.png", alt: "Buzzworthy" },
-    { src: "/images/work/epoxies-logo.png", alt: "Epoxies" },
-    { src: "/images/work/frischs-logo.png", alt: "Frisch's" },
-    { src: "/images/work/mona-logo.png", alt: "Mona" },
-    { src: "/images/work/seven-logo.png", alt: "Seven" },
-    { src: "/images/work/zerogravity-logo.png", alt: "Zero Gravity" },
-    { src: "/images/work/zooprintablesai-logo.png", alt: "Zoo Printables" },
+    { src: "/images/work/gep-logo-ink.png", alt: "Global Environmental Products" },
+    { src: "/images/work/globeironroofing-logo-ink.png", alt: "Globe Iron Roofing" },
+    { src: "/images/work/millennosphere-logo-ink.png", alt: "Millennosphere" },
+    { src: "/images/work/delcam-logo-ink.svg", alt: "Delcam Capital" },
+    { src: "/images/work/faztek-logo-ink.png", alt: "Faztek" },
+    { src: "/images/work/melink-logo-ink.png", alt: "Melink" },
+    { src: "/images/work/shortening-shuttle-logo-ink.png", alt: "The Shortening Shuttle" },
+    { src: "/images/work/providence-logo-w-ink.png", alt: "Providence" },
+    { src: "/images/work/blum-logo-ink.png", alt: "Blum" },
+    { src: "/images/work/buzzworthy-logo-ink.png", alt: "Buzzworthy" },
+    { src: "/images/work/epoxies-logo-ink.png", alt: "Epoxies" },
+    { src: "/images/work/frischs-logo-ink.png", alt: "Frisch's" },
+    { src: "/images/work/mona-logo-ink.png", alt: "Mona" },
+    { src: "/images/work/seven-logo-ink.png", alt: "Seven" },
+    { src: "/images/work/zerogravity-logo-ink.png", alt: "Zero Gravity" },
+    { src: "/images/work/zooprintablesai-logo-ink.png", alt: "Zoo Printables" },
 ];
 
 function LogoSet() {

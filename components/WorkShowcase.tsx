@@ -42,7 +42,7 @@ function BrowserFrame({
   className?: string;
 }) {
   return (
-    <div className={`overflow-hidden rounded-lg border border-white/10 bg-neutral-900 shadow-[0_12px_32px_rgba(0,0,0,0.45)] transition-colors duration-300 group-hover:border-neutral-500 ${className}`}>
+    <div className={`overflow-hidden rounded-lg border border-white/10 bg-neutral-900 shadow-[0_12px_32px_rgba(15,33,56,0.14)] transition-colors duration-300 group-hover:border-neutral-500 ${className}`}>
       <div className="flex h-5 items-center gap-1 border-b border-white/5 bg-neutral-900 px-2.5" aria-hidden="true">
         <span className="h-1.5 w-1.5 rounded-full bg-neutral-600" />
         <span className="h-1.5 w-1.5 rounded-full bg-neutral-600" />
@@ -83,7 +83,7 @@ function FeaturedRow({ project, flip, linked }: { project: Project; flip: boolea
   return (
     <article
       id={anchorId(project.name)}
-      className={`group relative grid grid-cols-1 ${flip ? "lg:grid-cols-[1fr_1.25fr]" : "lg:grid-cols-[1.25fr_1fr]"} rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-300 ease-out will-change-transform ${linked ? "hover:border-neutral-500 hover:bg-neutral-900/60 hover:shadow-[0_24px_60px_-12px_rgba(0,0,0,0.7),0_0_0_1px_rgba(255,255,255,0.18),0_0_70px_rgba(255,255,255,0.06)] motion-safe:hover:-translate-y-1.5 focus-within:border-neutral-500" : ""} scroll-mt-36`}
+      className={`group relative grid grid-cols-1 ${flip ? "lg:grid-cols-[1fr_1.25fr]" : "lg:grid-cols-[1.25fr_1fr]"} rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-300 ease-out will-change-transform ${linked ? "hover:border-neutral-500 hover:bg-neutral-900/60 hover:shadow-[0_24px_60px_-12px_rgba(15,33,56,0.16),0_0_0_1px_rgba(255,255,255,0.18),0_0_70px_rgba(255,255,255,0.06)] motion-safe:hover:-translate-y-1.5 focus-within:border-neutral-500" : ""} scroll-mt-36`}
     >
       <div
         className={`flex items-center bg-linear-to-br from-neutral-900 via-neutral-950 to-neutral-950 p-4 sm:p-6 lg:p-8 ${
@@ -132,7 +132,7 @@ function CompactCard({ project, linked }: { project: Project; linked: boolean })
   return (
     <article
       id={anchorId(project.name)}
-      className={`group relative flex flex-col rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-300 ease-out will-change-transform ${linked ? "hover:border-neutral-500 hover:bg-neutral-900/60 hover:shadow-[0_24px_50px_-12px_rgba(0,0,0,0.7),0_0_0_1px_rgba(255,255,255,0.18),0_0_50px_rgba(255,255,255,0.06)] motion-safe:hover:-translate-y-2 focus-within:border-neutral-500" : ""} scroll-mt-36`}
+      className={`group relative flex flex-col rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 transition-all duration-300 ease-out will-change-transform ${linked ? "hover:border-neutral-500 hover:bg-neutral-900/60 hover:shadow-[0_24px_50px_-12px_rgba(15,33,56,0.16),0_0_0_1px_rgba(255,255,255,0.18),0_0_50px_rgba(255,255,255,0.06)] motion-safe:hover:-translate-y-2 focus-within:border-neutral-500" : ""} scroll-mt-36`}
     >
       <div className="bg-linear-to-br from-neutral-900 to-neutral-950 p-3 border-b border-neutral-800">
         <BrowserFrame
@@ -197,12 +197,12 @@ export default function WorkShowcase({ projects }: { projects: Project[] }) {
               onClick={() => setPlatform(name)}
               className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold tracking-wide transition-colors duration-200 ${
                 active
-                  ? "border-white bg-white text-black"
+                  ? "border-white bg-volt-500 text-neutral-100"
                   : "border-neutral-700 text-neutral-300 hover:border-neutral-500 hover:text-white"
               }`}
             >
               {name}
-              <span className={active ? "text-black/60" : "text-neutral-500"}>{count}</span>
+              <span className={active ? "text-neutral-100" : "text-neutral-500"}>{count}</span>
             </button>
           );
         })}

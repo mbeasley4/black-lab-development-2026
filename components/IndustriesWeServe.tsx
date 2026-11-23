@@ -77,7 +77,7 @@ const colorClasses = {
         iconText: "text-white",
         iconHoverBg: "group-hover:bg-white/15",
         border: "group-hover:border-neutral-500",
-        glow: "group-hover:shadow-black/40",
+        glow: "group-hover:shadow-slate-900/40",
         gradient: "group-hover:from-white/5 group-hover:to-transparent",
         accent: "group-hover:via-white/20",
         ctaText: "text-white group-hover:text-neutral-300",
@@ -88,7 +88,7 @@ const colorClasses = {
         iconText: "text-neutral-300",
         iconHoverBg: "group-hover:bg-white/15",
         border: "group-hover:border-neutral-500",
-        glow: "group-hover:shadow-black/40",
+        glow: "group-hover:shadow-slate-900/40",
         gradient: "group-hover:from-white/5 group-hover:to-transparent",
         accent: "group-hover:via-white/20",
         ctaText: "text-white group-hover:text-neutral-300",
@@ -98,7 +98,7 @@ const colorClasses = {
 
 export default function IndustriesWeServe() {
     return (
-        <section className="w-full bg-linear-to-b from-[#1f2328] via-surface-raised to-surface text-white py-24 relative overflow-hidden">
+        <section className="w-full bg-linear-to-b from-[#eef2f7] via-surface-raised to-surface text-white py-24 relative overflow-hidden">
             {/* Ambient glow effects */}
 
             <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 relative z-10">

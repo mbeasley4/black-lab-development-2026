@@ -308,7 +308,7 @@ export default function Header() {
                             >
                                 <div className="relative">
                                     <Image
-                                        src="/images/blacklabdevelopment.png"
+                                        src="/images/blacklabdevelopment-dark.png"
                                         alt="Black Lab Development"
                                         width={36}
                                         height={36}
@@ -318,7 +318,7 @@ export default function Header() {
                                     <div className="absolute inset-0 bg-white/[0.04] blur-xl rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
                                 </div>
                                 <div className="flex flex-col gap-1 uppercase leading-none whitespace-nowrap">
-                                    <span className="text-[14px] font-bold tracking-tight text-[#e5e7eb]">Black Lab</span>
+                                    <span className="text-[14px] font-bold tracking-tight text-[#24344b]">Black Lab</span>
                                     <span className="text-[8px] font-semibold tracking-[0.3em] text-white">Development</span>
                                 </div>
                             </Link>
@@ -354,7 +354,7 @@ export default function Header() {
                                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 rounded-sm
                                         ${servicesActive
                                             ? "text-white"
-                                            : "text-[#c8c8c8] hover:text-white"
+                                            : "text-[#24344b] hover:text-white"
                                         }`}
                                 >
                                     <span className="flex items-center gap-3">
@@ -380,7 +380,7 @@ export default function Header() {
                                                     onClick={closeDrawer}
                                                     className={`py-2 text-[14px] tracking-normal transition-colors duration-200 rounded-sm
                                                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70
-                                                        ${active ? "text-white" : "text-[#a8a8a8] hover:text-white"}`}
+                                                        ${active ? "text-white" : "text-[#3e4c61] hover:text-white"}`}
                                                 >
                                                     {s.label}
                                                 </Link>
@@ -409,7 +409,7 @@ export default function Header() {
                                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 rounded-sm
                                         ${industriesActive
                                             ? "text-white"
-                                            : "text-[#c8c8c8] hover:text-white"
+                                            : "text-[#24344b] hover:text-white"
                                         }`}
                                 >
                                     <span className="flex items-center gap-3">
@@ -435,7 +435,7 @@ export default function Header() {
                                                     onClick={closeDrawer}
                                                     className={`py-2 text-[14px] tracking-normal transition-colors duration-200 rounded-sm
                                                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70
-                                                        ${active ? "text-white" : "text-[#a8a8a8] hover:text-white"}`}
+                                                        ${active ? "text-white" : "text-[#3e4c61] hover:text-white"}`}
                                                 >
                                                     {s.label}
                                                 </Link>
@@ -446,7 +446,7 @@ export default function Header() {
                                             onClick={closeDrawer}
                                             className={`py-2 text-[14px] tracking-normal transition-colors duration-200 rounded-sm
                                                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70
-                                                ${pathname === "/industries" ? "text-white" : "text-[#a8a8a8] hover:text-white"}`}
+                                                ${pathname === "/industries" ? "text-white" : "text-[#3e4c61] hover:text-white"}`}
                                         >
                                             All industries
                                         </Link>
@@ -475,7 +475,7 @@ export default function Header() {
                                                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 rounded-sm
                                                 ${active
                                                     ? "text-white"
-                                                    : "text-[#c8c8c8] hover:text-white hover:"
+                                                    : "text-[#24344b] hover:text-white hover:"
                                                 }`}
                                         >
                                             <span className={`shrink-0 w-0.5 h-4 rounded-full transition-all duration-300
@@ -499,7 +499,7 @@ export default function Header() {
                                 <Link
                                     href="/cincinnati-web-developer"
                                     onClick={closeDrawer}
-                                    className="flex items-center gap-2 py-3 text-[13px] tracking-normal text-[#8a8a8a] hover:text-neutral-300 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                                    className="flex items-center gap-2 py-3 text-[13px] tracking-normal text-[#5b6779] hover:text-neutral-300 transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                                 >
                                     <span aria-hidden className="text-neutral-500">◆</span>
                                     Cincinnati web developer
@@ -519,8 +519,8 @@ export default function Header() {
                                 href="/contact"
                                 onClick={closeDrawer}
                                 className="relative z-10 mt-4 block text-center py-2.5 px-6 tracking-wide text-[13px] font-bold
-                                    text-black bg-white rounded-sm
-                                    hover:bg-neutral-200
+                                    text-neutral-100 bg-volt-500 rounded-sm
+                                    hover:bg-volt-400
                                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70
                                     transition-all duration-300"
                             >
@@ -541,7 +541,7 @@ export default function Header() {
             />
 
             {/* ===================== HEADER ===================== */}
-            <header className={`fixed top-0 z-50 w-full bg-surface text-[#e5e7eb] border-b transition-colors duration-200 ${openMega ? "border-transparent" : "border-neutral-800"}`}>
+            <header className={`fixed top-0 z-50 w-full bg-surface text-[#24344b] border-b transition-colors duration-200 ${openMega ? "border-transparent" : "border-neutral-800"}`}>
                 {/* Announcement bar */}
                 <div
                     className={`w-full overflow-hidden bg-charcoal text-neutral-300 transition-[height,opacity] duration-300 ease-out motion-reduce:transition-none ${
@@ -552,10 +552,10 @@ export default function Header() {
                     aria-hidden={barHidden}
                 >
                     <div className="mx-auto flex h-full max-w-375 items-center justify-center gap-3 px-6 sm:px-10 md:px-14 lg:px-20 text-[13px]">
-                        <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-emerald-300">
+                        <span className="inline-flex items-center gap-1.5 rounded-full border border-volt-600/50 bg-volt-500/15 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-[#4f5a10]">
                             <span className="relative flex h-1.5 w-1.5" aria-hidden>
-                                <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 motion-safe:animate-ping" />
-                                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                                <span className="absolute inline-flex h-full w-full rounded-full bg-volt-500 opacity-75 motion-safe:animate-ping" />
+                                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-volt-600" />
                             </span>
                             {ANNOUNCEMENT.badge}
                         </span>
@@ -563,7 +563,7 @@ export default function Header() {
                         <Link
                             href={ANNOUNCEMENT.href}
                             onClick={closeDrawer}
-                            className="group inline-flex items-center gap-1 rounded-full bg-white px-3 py-0.5 text-[12px] font-bold text-black hover:bg-neutral-200 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                            className="group inline-flex items-center gap-1 rounded-full bg-volt-500 px-3 py-0.5 text-[12px] font-bold text-neutral-100 hover:bg-volt-400 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                         >
                             {ANNOUNCEMENT.linkLabel}
                             <span aria-hidden className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
@@ -583,7 +583,7 @@ export default function Header() {
                     >
                         <div className="relative">
                             <Image
-                                src="/images/blacklabdevelopment.png"
+                                src="/images/blacklabdevelopment-dark.png"
                                 alt="Black Lab Development"
                                 width={45}
                                 height={45}
@@ -602,7 +602,7 @@ export default function Header() {
                             </span>
                             <span
                                 className={`
-                                    relative text-volt-500 text-[9px] sm:text-[11px] font-semibold tracking-[0.3em]
+                                    relative text-[#66711a] text-[9px] sm:text-[11px] font-semibold tracking-[0.3em]
                                     transition-all duration-700
                                     ${boot ? "opacity-100" : "opacity-0"}
                                 `}
@@ -761,8 +761,8 @@ export default function Header() {
                             className={`ml-3 px-3.5 py-1.5 tracking-[0.02em] text-[12px] font-bold rounded-sm transition-all duration-300
                                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70
                                 ${isActive("/contact")
-                                    ? "bg-white text-black"
-                                    : "bg-white text-black hover:bg-neutral-200"
+                                    ? "bg-volt-500 text-neutral-100"
+                                    : "bg-volt-500 text-neutral-100 hover:bg-volt-400"
                                 }`}
                         >
                             Schedule a call
@@ -814,7 +814,7 @@ function MegaPanel({
     children: React.ReactNode;
 }) {
     return (
-        <div className="w-full border-b border-neutral-800 bg-surface shadow-[0_30px_60px_-20px_rgba(0,0,0,0.7)]">
+        <div className="w-full border-b border-neutral-800 bg-surface shadow-[0_30px_60px_-20px_rgba(15,33,56,0.16)]">
             <div className="mx-auto grid max-w-375 grid-cols-[240px_1fr] gap-8 px-6 sm:px-10 md:px-14 lg:px-20">
                 <div className="flex flex-col border-r border-neutral-800 py-7 pr-8">
                     <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-neutral-500">{eyebrow}</p>
@@ -842,7 +842,7 @@ function MegaPanel({
                     <Link
                         href="/contact"
                         onClick={onNavigate}
-                        className="rounded-md bg-white px-3 py-1 text-[12px] font-bold text-black hover:bg-neutral-200 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                        className="rounded-md bg-volt-500 px-3 py-1 text-[12px] font-bold text-neutral-100 hover:bg-volt-400 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
                     >
                         Schedule a call
                     </Link>

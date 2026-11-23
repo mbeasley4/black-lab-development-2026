@@ -48,7 +48,7 @@ export default function SelectedWork({
     if (items.length === 0) return null;
 
     return (
-        <section className="relative w-full overflow-hidden border-y border-neutral-200 bg-neutral-100 py-24 text-neutral-950 md:py-28">
+        <section className="band-light relative w-full overflow-hidden border-y border-neutral-200 bg-neutral-100 py-24 text-neutral-950 md:py-28">
             {/* Diagonal line texture, matching the "More Work" band on project pages */}
             <div
                 aria-hidden="true"
@@ -59,11 +59,11 @@ export default function SelectedWork({
             <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
                 <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
                     <div className="max-w-2xl">
-                        <span className="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500">
+                        <span className="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.2em] text-neutral-600">
                             Selected Work
                         </span>
                         <h2 className="text-4xl font-bold leading-[1.1] tracking-tight md:text-5xl">
-                            {title} <span className="text-neutral-500">{titleHighlight}</span>
+                            {title} <span className="text-neutral-600">{titleHighlight}</span>
                         </h2>
                         <p className="mt-4 text-lg leading-relaxed text-neutral-600">{intro}</p>
                     </div>
@@ -83,7 +83,7 @@ export default function SelectedWork({
                             <Link
                                 key={p.slug}
                                 href={`/work/${p.slug}`}
-                                className="group flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-all duration-300 hover:border-neutral-300 hover:shadow-[0_24px_50px_-24px_rgba(0,0,0,0.3)] motion-safe:hover:-translate-y-1"
+                                className="group flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-[0_1px_2px_rgba(15,33,56,0.01)] transition-all duration-300 hover:border-neutral-300 hover:shadow-[0_24px_50px_-24px_rgba(15,33,56,0.09)] motion-safe:hover:-translate-y-1"
                             >
                                 <div className="relative aspect-16/10 w-full overflow-hidden border-b border-neutral-200 bg-neutral-100">
                                     <Image
@@ -97,7 +97,7 @@ export default function SelectedWork({
                                 <div className="flex grow flex-col p-6 md:p-7">
                                     <div className="mb-4 flex items-center justify-between gap-3">
                                         <span className="text-sm font-semibold text-neutral-950">{p.name}</span>
-                                        <span className="shrink-0 rounded-full border border-neutral-200 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-neutral-500">
+                                        <span className="shrink-0 rounded-full border border-neutral-200 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-neutral-600">
                                             {p.platform}
                                         </span>
                                     </div>

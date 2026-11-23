@@ -9,7 +9,7 @@ const credentials = [
 
 export default function FounderStrip() {
   return (
-    <section className="w-full bg-charcoal text-white py-28 relative overflow-hidden">
+    <section className="watermark watermark-left w-full bg-charcoal text-white py-28 relative overflow-hidden">
       <div className="absolute inset-0 bg-linear-to-br from-surface via-surface-raised to-neutral-950" />
       <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
@@ -30,7 +30,7 @@ export default function FounderStrip() {
 
           {/* Content */}
           <div className="text-center lg:text-left">
-            <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+            <span className="eyebrow inline-block mb-3 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               Who You&apos;ll Work With
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">

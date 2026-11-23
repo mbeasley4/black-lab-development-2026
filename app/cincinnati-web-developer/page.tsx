@@ -188,7 +188,7 @@ export default function CincinnatiWebDeveloperPage() {
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20 py-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-white text-black px-7 py-3.5 text-sm font-semibold hover:bg-neutral-200 transition-colors duration-200 shadow-lg"
+              className="inline-flex items-center justify-center rounded-md bg-volt-500 text-neutral-100 px-7 py-3.5 text-sm font-semibold hover:bg-volt-400 transition-colors duration-200 shadow-lg"
             >
               Start a Conversation →
             </Link>
@@ -206,7 +206,7 @@ export default function CincinnatiWebDeveloperPage() {
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
-                <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+                <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                   Based in Cincinnati
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -244,7 +244,7 @@ export default function CincinnatiWebDeveloperPage() {
         <section className="py-20 bg-surface-raised border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-14">
-              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+              <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Services
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -276,11 +276,11 @@ export default function CincinnatiWebDeveloperPage() {
         </section>
 
         {/* Why local */}
-        <section className="bg-charcoal py-20 border-b border-neutral-800">
+        <section className="band-navy py-20">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
-                <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+                <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                   Why Local Matters
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -323,7 +323,7 @@ export default function CincinnatiWebDeveloperPage() {
         <section className="py-20 bg-surface-raised border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-14">
-              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+              <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 Cincinnati Work
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">

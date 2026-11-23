@@ -52,8 +52,8 @@ export const metadata: Metadata = {
 // Drives the <meta name="theme-color"> tag — controls mobile browser chrome
 // color to match the site's near-black background for a cohesive brand feel.
 export const viewport: Viewport = {
-  themeColor: "#0b0b0c",
-  colorScheme: "dark",
+  themeColor: "#ffffff",
+  colorScheme: "light",
 };
 
 export default function RootLayout({
@@ -68,7 +68,7 @@ export default function RootLayout({
         <ConsentModeBootstrap />
         <JsonLd data={localBusinessSchema} />
       </head>
-      <body className={`${inter.variable} ${spaceGrotesk.variable} bg-surface text-[#e5e7eb] antialiased`}>
+      <body className={`${inter.variable} ${spaceGrotesk.variable} bg-surface text-[#24344b] antialiased`}>
         {/* GTM container + noscript fallback */}
         <GoogleTagManager />
         <AptabaseClientProvider>

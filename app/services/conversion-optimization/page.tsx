@@ -225,7 +225,7 @@ export default function ConversionOptimizationPage() {
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+              <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 The Real Problem
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -253,7 +253,7 @@ export default function ConversionOptimizationPage() {
                   "Trust signals buried 3 scrolls below the fold",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-neutral-400">
-                    <svg className="w-5 h-5 text-red-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-5 h-5 text-red-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
                     {item}
@@ -266,10 +266,10 @@ export default function ConversionOptimizationPage() {
       </section>
 
       {/* Symptom → Cause */}
-      <section className="py-20 bg-neutral-950/50 border-b border-neutral-800">
+      <section className="bg-charcoal py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+            <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               Diagnose First
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -294,10 +294,10 @@ export default function ConversionOptimizationPage() {
       </section>
 
       {/* Process */}
-      <section className="bg-charcoal py-20 border-b border-neutral-800">
+      <section className="band-navy py-20">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+            <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               My Process
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -307,7 +307,7 @@ export default function ConversionOptimizationPage() {
           <div className="space-y-12">
             {process.map((item) => (
               <div key={item.step} className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-6 items-start">
-                <div className="text-5xl font-black font-mono text-white/10 leading-none">{item.step}</div>
+                <div aria-hidden="true" className="text-5xl font-black font-mono text-white/10 leading-none">{item.step}</div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                   <p className="text-neutral-400 leading-relaxed">{item.body}</p>
@@ -319,10 +319,10 @@ export default function ConversionOptimizationPage() {
       </section>
 
       {/* Before / After */}
-      <section className="py-20 bg-neutral-950/50 border-b border-neutral-800">
+      <section className="band-accent py-20 border-b border-neutral-800">
         <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
           <div className="max-w-2xl mb-14">
-            <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+            <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
               Before &amp; After
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -335,7 +335,7 @@ export default function ConversionOptimizationPage() {
                 <div className="grid grid-cols-3 divide-x divide-neutral-800">
                   <div className="p-6 text-center">
                     <div className="text-xs uppercase tracking-widest text-neutral-400 mb-2">Before</div>
-                    <div className="text-3xl font-black text-red-400">{item.before}</div>
+                    <div className="text-3xl font-black text-red-600">{item.before}</div>
                   </div>
                   <div className="p-6 text-center">
                     <div className="text-xs uppercase tracking-widest text-neutral-400 mb-2">Metric</div>

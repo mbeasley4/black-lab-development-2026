@@ -230,8 +230,8 @@ export default async function CaseStudyPage({
         {/* Ambient glows */}
         <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
-        <div className="relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
-          <div className={`grid gap-12 items-center py-20 md:py-24 md:min-h-[82vh] ${study.heroSrc ? "grid-cols-1 lg:grid-cols-[1fr_1.1fr]" : "grid-cols-1"}`}>
+        <div className="hero-frame relative z-10 mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
+          <div className={`grid w-full gap-12 items-center ${study.heroSrc ? "grid-cols-1 lg:grid-cols-[1fr_1.1fr]" : "grid-cols-1"}`}>
 
             {/* ── Left: text + metrics ── */}
             <div className="flex flex-col justify-center">
@@ -339,7 +339,7 @@ export default async function CaseStudyPage({
         <section className="py-20 border-b border-neutral-800" aria-labelledby="results-heading">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-10">
-              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+              <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 The Results
               </span>
               <h2 id="results-heading" className="text-3xl md:text-4xl font-bold text-white">Key Metrics</h2>
@@ -363,7 +363,7 @@ export default async function CaseStudyPage({
         <section className="py-20 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-10">
-              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+              <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 The Build
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Project Highlights</h2>
@@ -386,7 +386,7 @@ export default async function CaseStudyPage({
         <section className="py-20 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-10">
-              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+              <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 The Transformation
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Before &amp; After</h2>
@@ -423,7 +423,7 @@ export default async function CaseStudyPage({
       {(study.body || study.sections) && (
         <section className="py-20 border-b border-neutral-800">
           <div className="mx-auto max-w-225 px-6">
-            <article className="prose prose-invert prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h3:text-xl prose-h2:mt-12 prose-h2:mb-4 prose-h3:mt-8 prose-h3:mb-3 prose-p:text-neutral-300 prose-p:leading-relaxed prose-li:text-neutral-300 prose-ul:space-y-1 prose-strong:text-white">
+            <article className="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h3:text-xl prose-h2:mt-12 prose-h2:mb-4 prose-h3:mt-8 prose-h3:mb-3 prose-p:text-neutral-300 prose-p:leading-relaxed prose-li:text-neutral-300 prose-ul:space-y-1 prose-strong:text-white">
               {study.body ? (
                 <PortableText value={study.body} components={portableTextComponents} />
               ) : (
@@ -446,7 +446,7 @@ export default async function CaseStudyPage({
         <section className="py-20 border-b border-neutral-800">
           <div className="mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="max-w-2xl mb-10">
-              <span className="inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
+              <span className="eyebrow inline-block mb-4 text-xs tracking-[0.2em] uppercase text-neutral-400 font-semibold">
                 The Finished Site
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Gallery</h2>
@@ -488,7 +488,7 @@ export default async function CaseStudyPage({
           <div className="relative mx-auto max-w-375 px-6 sm:px-10 md:px-14 lg:px-20">
             <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
               <div>
-                <span className="inline-block mb-3 text-xs tracking-[0.2em] uppercase font-semibold text-neutral-500">Keep Exploring</span>
+                <span className="eyebrow inline-block mb-3 text-xs tracking-[0.2em] uppercase font-semibold text-neutral-500">Keep Exploring</span>
                 <h2 id="more-work-heading" className="text-3xl md:text-4xl font-bold tracking-tight text-neutral-950">
                   More Work
                 </h2>
@@ -509,7 +509,7 @@ export default async function CaseStudyPage({
                 <Link
                   key={project.slug}
                   href={`/work/${project.slug}`}
-                  className="group flex flex-col overflow-hidden rounded-2xl bg-neutral-950 shadow-[0_18px_40px_-16px_rgba(0,0,0,0.55)] ring-1 ring-black/5 transition-all duration-300 ease-out hover:shadow-[0_28px_60px_-14px_rgba(0,0,0,0.7)] motion-safe:hover:-translate-y-2 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black"
+                  className="group flex flex-col overflow-hidden rounded-2xl bg-neutral-950 shadow-[0_18px_40px_-16px_rgba(15,33,56,0.16)] ring-1 ring-black/5 transition-all duration-300 ease-out hover:shadow-[0_28px_60px_-14px_rgba(15,33,56,0.16)] motion-safe:hover:-translate-y-2 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-black"
                 >
                   <div className="bg-linear-to-br from-neutral-900 to-neutral-950 p-3 border-b border-neutral-800">
                     <div className="overflow-hidden rounded-lg border border-white/10 bg-neutral-900 transition-colors duration-300 group-hover:border-neutral-500">

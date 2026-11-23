@@ -71,13 +71,13 @@ function ScoreRing({ label, score, delay }: { label: string; score: number; dela
     <div className="flex flex-col items-center gap-2">
       <div className="relative h-16 w-16">
         <svg viewBox="0 0 64 64" className="h-full w-full -rotate-90" aria-hidden="true">
-          <circle cx="32" cy="32" r={RING_R} fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="5" />
+          <circle cx="32" cy="32" r={RING_R} fill="none" stroke="rgba(15,33,56,0.08)" strokeWidth="5" />
           <circle
             cx="32"
             cy="32"
             r={RING_R}
             fill="none"
-            stroke="#d4d4d4"
+            stroke="#a8b522"
             strokeWidth="5"
             strokeLinecap="round"
             strokeDasharray={RING_C}
@@ -107,7 +107,10 @@ const scores = [
 function HeroVisual() {
   return (
     <div className="relative mx-auto w-full max-w-md">
-      <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-black/60">
+      {/* Soft lime halo behind the card */}
+      <div aria-hidden="true" className="pointer-events-none absolute -inset-10 -z-10 rounded-[3rem] bg-[radial-gradient(closest-side,rgba(168,181,34,0.28),transparent)] blur-2xl" />
+      <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-[0_40px_90px_-30px_rgba(15,33,56,0.45)] ring-1 ring-volt-500/30">
+        <span aria-hidden="true" className="absolute inset-x-0 top-0 z-10 h-1 bg-volt-500" />
         <div className="relative rounded-2xl bg-surface/90 backdrop-blur-xl">
           {/* Browser chrome */}
           <div className="flex items-center gap-2 border-b border-white/5 px-4 py-3">
@@ -125,7 +128,7 @@ function HeroVisual() {
                 Launch-day target
               </span>
               <span className="flex items-center gap-1.5 text-[11px] font-semibold text-neutral-300">
-                <span className="inline-flex h-2 w-2 rounded-full bg-neutral-400" />
+                <span className="relative inline-flex h-2 w-2"><span className="absolute inline-flex h-full w-full rounded-full bg-volt-500 opacity-75 motion-safe:animate-ping" /><span className="relative inline-flex h-2 w-2 rounded-full bg-volt-500" /></span>
                 Live
               </span>
             </div>
@@ -139,20 +142,20 @@ function HeroVisual() {
             <div className="mt-6 rounded-xl border border-white/5 bg-white/[0.02] p-4">
               <div className="mb-2 flex items-baseline justify-between">
                 <span className="text-xs text-neutral-400">Leads / month</span>
-                <span className="text-xs font-semibold text-neutral-300">↑ trending up</span>
+                <span className="text-xs font-semibold text-[#5f6a16]">↑ trending up</span>
               </div>
               <svg viewBox="0 0 200 48" className="h-12 w-full" aria-hidden="true">
                 <defs>
                   <linearGradient id="hero-spark" x1="0" x2="0" y1="0" y2="1">
-                    <stop offset="0%" stopColor="#d4d4d4" stopOpacity="0.35" />
-                    <stop offset="100%" stopColor="#d4d4d4" stopOpacity="0" />
+                    <stop offset="0%" stopColor="#a8b522" stopOpacity="0.35" />
+                    <stop offset="100%" stopColor="#a8b522" stopOpacity="0" />
                   </linearGradient>
                 </defs>
                 <path d="M0 42 L25 38 L50 40 L75 30 L100 32 L125 22 L150 18 L175 10 L200 4 L200 48 L0 48 Z" fill="url(#hero-spark)" />
                 <motion.path
                   d="M0 42 L25 38 L50 40 L75 30 L100 32 L125 22 L150 18 L175 10 L200 4"
                   fill="none"
-                  stroke="#d4d4d4"
+                  stroke="#8f9b1c"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -179,7 +182,7 @@ const HomepageHeroClient = () => {
   return (
     <section className="relative w-full overflow-hidden">
       {/* Background base */}
-      <div className="absolute inset-0 bg-linear-to-br from-black via-[#050506] to-black z-0" aria-hidden="true" />
+      <div className="absolute inset-0 bg-linear-to-br from-[#ffffff] via-[#f8fafc] to-[#eef2f7] z-0" aria-hidden="true" />
 
       {/* Photo layer — slow Ken Burns drift, faded in from the right so the headline stays legible */}
       <div
@@ -192,7 +195,7 @@ const HomepageHeroClient = () => {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center opacity-35 saturate-[0.4]"
+          className="object-cover object-center opacity-[0.14] grayscale invert"
         />
       </div>
 
@@ -200,17 +203,27 @@ const HomepageHeroClient = () => {
 
 
       {/* Dark overlay + headline contrast mask */}
-      <div className="absolute inset-0 bg-black/55 z-10 pointer-events-none" aria-hidden="true" />
+      <div className="absolute inset-0 bg-black/40 z-10 pointer-events-none" aria-hidden="true" />
       <div
         className="absolute inset-0 z-10 pointer-events-none"
-        style={{ background: "radial-gradient(ellipse 70% 65% at 25% 40%, rgba(0,0,0,0.8) 0%, transparent 65%)" }}
+        style={{ background: "radial-gradient(ellipse 70% 65% at 25% 40%, rgba(255,255,255,0.9) 0%, transparent 65%)" }}
         aria-hidden="true"
       />
+      {/* Subtle pop: lime wash on the right, fine dot grid, lime base rule */}
+      <div
+        className="absolute inset-0 z-10 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(40% 55% at 78% 45%, rgba(168,181,34,0.14), transparent 70%), radial-gradient(rgba(15,33,56,0.07) 1px, transparent 1px) 0 0 / 22px 22px",
+        }}
+        aria-hidden="true"
+      />
+      <div className="absolute inset-x-0 bottom-0 z-10 h-1 bg-linear-to-r from-transparent via-volt-500/70 to-transparent pointer-events-none" aria-hidden="true" />
 
 
       {/* ── Content ── */}
       <motion.div
-        className="relative z-20 pt-28 pb-16 md:pt-32 md:pb-20 lg:min-h-[640px] lg:flex lg:items-center"
+        className="hero-frame relative z-20"
         initial="visible"
         animate={animState}
       >
@@ -221,9 +234,9 @@ const HomepageHeroClient = () => {
             <div className="text-center lg:text-left">
               <motion.span
                 variants={fadeIn(0, 0)}
-                className="inline-flex items-center gap-2 mb-5 rounded-full border border-neutral-800 bg-white/[0.04] px-4 py-1.5 text-[11px] md:text-xs tracking-[0.2em] uppercase text-neutral-300 font-semibold"
+                className="inline-flex items-center gap-2 mb-5 rounded-full border border-volt-500/40 bg-volt-500/10 px-4 py-1.5 text-[11px] md:text-xs tracking-[0.2em] uppercase text-neutral-300 font-semibold"
               >
-                <span className="inline-flex h-2 w-2 rounded-full bg-neutral-400" />
+                <span className="inline-flex h-2 w-2 rounded-full bg-volt-500" />
                 Skip the middlemen<span className="hidden sm:inline"> · Work directly with the developer</span>
               </motion.span>
 
@@ -243,7 +256,7 @@ const HomepageHeroClient = () => {
 
               <motion.p
                 variants={fadeIn(0.5)}
-                className="text-lg md:text-xl text-[#e5e7eb]/80 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-9"
+                className="text-lg md:text-xl text-[#24344b]/80 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-9"
               >
                 You work directly with the senior engineer building your site —
                 not a sales rep, a PM, and a junior dev learning on your dime.
@@ -255,7 +268,7 @@ const HomepageHeroClient = () => {
               >
                 <Link
                   href="/contact"
-                  className="group inline-flex items-center justify-center gap-2 rounded-md bg-white text-black px-8 py-4 text-base font-bold transition-colors duration-200 hover:bg-neutral-200"
+                  className="group inline-flex items-center justify-center gap-2 rounded-md bg-volt-500 text-neutral-100 px-8 py-4 text-base font-bold transition-colors duration-200 hover:bg-volt-400"
                 >
                   <span className="relative">Schedule a Call</span>
                   <svg className="relative w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
