@@ -4,6 +4,9 @@ import { projects } from "@/data/projects";
 
 const BASE_URL = "https://blacklabdev.com";
 
+// Refresh hourly so newly published articles appear without a deploy.
+export const revalidate = 3600;
+
 async function getArticleSlugs(): Promise<string[]> {
   return client.fetch<string[]>(
     `*[_type == "post" && defined(slug.current)]{ "slug": slug.current }.slug`
